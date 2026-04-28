@@ -31,7 +31,7 @@ elif [ -n "$staged_files" ]; then
       [ -z "$file" ] && continue
       [ "$file" = ".dtp/scrub-patterns.txt" ] && continue
       [ "$file" = ".gitleaks.toml" ] && continue
-      if git show ":$file" 2>/dev/null | grep -Eq "$pattern"; then
+      if git show ":$file" 2>/dev/null | grep -Eq -- "$pattern"; then
         echo "blocked potential secret in staged file: $file" >&2
         blocked=1
       fi
