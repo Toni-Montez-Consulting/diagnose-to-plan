@@ -5,7 +5,7 @@
 __pycache__/
 *.py[cod]
 .mypy_cache/
-.dtp/
+.dtp/audit.log
 inputs/*
 !inputs/README.md
 outputs/*
