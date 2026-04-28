@@ -34,3 +34,23 @@ def test_skills_validate_command() -> None:
 
     assert result.exit_code == 0
     assert "validated 3 skills" in result.output
+
+
+def test_draft_accepts_output_alias(repo_root: Path) -> None:
+    destination = repo_root / "outputs" / "cli-output-alias.md"
+    if destination.exists():
+        destination.unlink()
+
+    result = CliRunner().invoke(
+        app,
+        [
+            "draft",
+            str(repo_root / "inputs" / "fixture-diagnose.md"),
+            "--output",
+            str(destination),
+        ],
+    )
+
+    assert result.exit_code == 0
+    assert destination.exists()
+    assert "wrote outputs" in result.output

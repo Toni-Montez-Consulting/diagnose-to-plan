@@ -29,7 +29,7 @@ def draft_command(
     ] = False,
     out: Annotated[
         Path | None,
-        typer.Option("--out", help="Output path inside this repo."),
+        typer.Option("--out", "--output", help="Output path inside this repo."),
     ] = None,
 ) -> None:
     config = load_config()
