@@ -2,7 +2,11 @@ from __future__ import annotations
 
 from collections.abc import Callable
 from dataclasses import dataclass
+from pathlib import Path
 
+from claude_agent_sdk import ClaudeAgentOptions
+
+from dtp.git_safety import make_repo_boundary_check
 from dtp.skills_loader import Skill
 
 
@@ -12,6 +16,8 @@ class AgentRequest:
     input_text: str
     model: str
     skills: tuple[Skill, ...]
+    repo_root: Path
+    add_dirs: tuple[Path, ...] = ()
 
 
 AgentRunner = Callable[[AgentRequest], str]
@@ -20,13 +26,22 @@ AgentRunner = Callable[[AgentRequest], str]
 def run(request: AgentRequest, runner: AgentRunner | None = None) -> str:
     """Run the single harness agent loop.
 
-    Phase 1 keeps a deterministic local fallback so the harness can be tested before Toni
-    authors the real skills or connects an API key.
+    The harness keeps a deterministic local fallback so tests do not need API access.
     """
 
     if runner is not None:
         return runner(request)
     return _phase1_draft_fallback(request)
+
+
+def build_agent_options(request: AgentRequest) -> ClaudeAgentOptions:
+    return ClaudeAgentOptions(
+        cwd=request.repo_root,
+        add_dirs=list(request.add_dirs),
+        model=request.model,
+        skills=[skill.name for skill in request.skills],
+        can_use_tool=make_repo_boundary_check(request.repo_root),
+    )
 
 
 def _phase1_draft_fallback(request: AgentRequest) -> str:
