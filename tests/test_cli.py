@@ -14,6 +14,9 @@ def test_cli_help() -> None:
 
     assert result.exit_code == 0
     assert "draft" in result.output
+    assert "note" in result.output
+    assert "story" in result.output
+    assert "mentor" in result.output
 
 
 def test_python_module_help(repo_root: Path) -> None:
@@ -54,3 +57,17 @@ def test_draft_accepts_output_alias(repo_root: Path) -> None:
     assert result.exit_code == 0
     assert destination.exists()
     assert "wrote outputs" in result.output
+
+
+def test_note_command_writes_under_dtp_home(tmp_path: Path, monkeypatch) -> None:
+    monkeypatch.setenv("DTP_HOME", str(tmp_path))
+
+    result = CliRunner().invoke(app, ["note", "Capture the sales call.", "--tag", "sales"])
+
+    assert result.exit_code == 0
+    assert "wrote journal/" in result.output
+    journal_files = list((tmp_path / "journal").rglob("*.md"))
+    assert len(journal_files) == 1
+    assert "Capture the sales call. [tags: sales]" in journal_files[0].read_text(
+        encoding="utf-8"
+    )
