@@ -1,0 +1,14 @@
+.env
+.venv/
+.pytest_cache/
+.ruff_cache/
+__pycache__/
+*.py[cod]
+.mypy_cache/
+.dtp/
+inputs/*
+!inputs/README.md
+outputs/*
+!outputs/README.md
+evals/results/*
+!evals/results/.gitkeep
