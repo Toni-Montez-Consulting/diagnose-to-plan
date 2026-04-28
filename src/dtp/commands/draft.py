@@ -1,15 +1,17 @@
 from __future__ import annotations
 
 import re
+import sys
 from collections.abc import Callable
 from datetime import UTC, datetime
 from pathlib import Path
+from typing import TextIO
 
 from dtp.agent import AgentRequest, AgentRunner, run
 from dtp.config import DtpConfig
 from dtp.git_safety import SafetyAbort, resolve_inside_repo
 from dtp.models import DEEP_DRAFT_MODEL, DEFAULT_MODEL, PHASE1_DRAFT_SKILLS
-from dtp.skills_loader import SkillValidationError, load_required_skills
+from dtp.skills_loader import SkillValidationError, load_required_skills, warn_if_todo_skills_loaded
 
 Clock = Callable[[], datetime]
 
@@ -24,12 +26,19 @@ def run_draft(
     out: Path | None = None,
     runner: AgentRunner | None = None,
     clock: Clock | None = None,
+    stderr: TextIO | None = None,
 ) -> Path:
     source_path = resolve_inside_repo(input_path, config.repo_root)
     if not source_path.exists():
         raise FileNotFoundError(source_path)
 
     skills = load_required_skills(config.skills_dir, PHASE1_DRAFT_SKILLS)
+    warn_if_todo_skills_loaded(
+        skills,
+        input_path=source_path,
+        repo_root=config.repo_root,
+        stderr=stderr or sys.stderr,
+    )
     model = DEEP_DRAFT_MODEL if deep else DEFAULT_MODEL
     request = AgentRequest(
         command="draft",

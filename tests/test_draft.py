@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from datetime import UTC, datetime
+from io import StringIO
 from pathlib import Path
 
 from dtp.commands.draft import run_draft
@@ -46,3 +47,45 @@ def test_run_draft_supports_skip_coi(repo_root: Path) -> None:
     )
 
     assert "coi_verdict: skipped" in destination.read_text(encoding="utf-8")
+
+
+def test_run_draft_warns_when_real_input_loads_todo_skills(repo_root: Path) -> None:
+    config = load_config(repo_root)
+    source = repo_root / "inputs" / "warning-real.md"
+    destination = repo_root / "outputs" / "warning-real.md"
+    stderr = StringIO()
+    source.write_text("# Diagnose\n\nA real client note.", encoding="utf-8")
+    if destination.exists():
+        destination.unlink()
+
+    try:
+        run_draft(
+            source,
+            config,
+            out=destination,
+            stderr=stderr,
+        )
+    finally:
+        source.unlink(missing_ok=True)
+
+    assert stderr.getvalue() == (
+        "WARNING: skills with TODO bodies were loaded — output will lack practice-specific "
+        "voice/pricing/structure. Author skill bodies before using output for client work.\n"
+    )
+
+
+def test_run_draft_suppresses_todo_warning_for_fixture(repo_root: Path) -> None:
+    config = load_config(repo_root)
+    destination = repo_root / "outputs" / "fixture-warning-check.md"
+    stderr = StringIO()
+    if destination.exists():
+        destination.unlink()
+
+    run_draft(
+        repo_root / "inputs" / "fixture-diagnose.md",
+        config,
+        out=destination,
+        stderr=stderr,
+    )
+
+    assert stderr.getvalue() == ""
