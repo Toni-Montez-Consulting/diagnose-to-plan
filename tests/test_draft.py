@@ -4,6 +4,8 @@ from datetime import UTC, datetime
 from io import StringIO
 from pathlib import Path
 
+import frontmatter
+
 from dtp.commands.draft import run_draft
 from dtp.config import load_config
 
@@ -22,12 +24,15 @@ def test_run_draft_writes_sow_with_frontmatter(repo_root: Path) -> None:
     )
 
     text = result.read_text(encoding="utf-8")
+    post = frontmatter.loads(text)
     assert result == destination
-    assert "coi_verdict: not_run_phase1" in text
-    assert "model: claude-sonnet-4-6" in text
-    assert "  - voice" in text
-    assert "  - pricing" in text
-    assert "  - sow" in text
+    assert post["created"] == "2026-04-28T12:00:00Z"
+    assert post["command"] == "draft"
+    assert post["inputs"] == ["inputs/fixture-diagnose.md"]
+    assert post["coi_verdict"] == "not_run_phase1"
+    assert post["model"] == "claude-sonnet-4-6"
+    assert post["skills_loaded"] == ["voice", "pricing", "sow"]
+    assert post["confidential"] is False
     assert "## Scope" in text
     assert "## Deliverables" in text
     assert "## Pricing" in text
@@ -46,7 +51,8 @@ def test_run_draft_supports_skip_coi(repo_root: Path) -> None:
         out=destination,
     )
 
-    assert "coi_verdict: skipped" in destination.read_text(encoding="utf-8")
+    post = frontmatter.load(destination)
+    assert post["coi_verdict"] == "skipped"
 
 
 def test_run_draft_warns_when_real_input_loads_todo_skills(repo_root: Path) -> None:

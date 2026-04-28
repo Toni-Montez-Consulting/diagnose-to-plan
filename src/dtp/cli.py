@@ -6,6 +6,7 @@ from typing import Annotated
 import typer
 from rich.console import Console
 
+from dtp.commands.capture_cmd import run_mentor, run_note, run_story
 from dtp.commands.draft import run_draft, user_facing_error
 from dtp.commands.skills_cmd import run_validate
 from dtp.config import load_config
@@ -48,6 +49,64 @@ def draft_command(
         raise typer.Exit(code=code) from error
 
     console.print(f"[green]wrote[/green] {destination.relative_to(config.repo_root)}")
+
+
+@app.command("note")
+def note_command(
+    text: Annotated[str, typer.Argument(help="Journal note text.")],
+    tag: Annotated[
+        list[str] | None,
+        typer.Option("--tag", help="Repeatable tag for the note."),
+    ] = None,
+) -> None:
+    config = load_config()
+    try:
+        result = run_note(text, config, tags=tuple(tag or ()))
+    except Exception as error:
+        message, code = user_facing_error(error)
+        console.print(f"[red]{message}[/red]")
+        raise typer.Exit(code=code) from error
+    console.print(f"[green]wrote[/green] {result.relative_path}")
+
+
+@app.command("story")
+def story_command(
+    title: Annotated[str, typer.Argument(help="Omnexus story title.")],
+    source: Annotated[
+        Path | None,
+        typer.Option("--from", help="Optional source file inside this repo."),
+    ] = None,
+) -> None:
+    config = load_config()
+    try:
+        result = run_story(title, config, source=source)
+    except Exception as error:
+        message, code = user_facing_error(error)
+        console.print(f"[red]{message}[/red]")
+        raise typer.Exit(code=code) from error
+    console.print(f"[green]wrote[/green] {result.relative_path}")
+
+
+@app.command("mentor")
+def mentor_command(
+    what: Annotated[str, typer.Argument(help="Decision or question for the mentor log.")],
+    mentor: Annotated[
+        str | None,
+        typer.Option("--mentor", help="Mentor name to record."),
+    ] = None,
+    source: Annotated[
+        Path | None,
+        typer.Option("--from", help="Optional source file inside this repo."),
+    ] = None,
+) -> None:
+    config = load_config()
+    try:
+        result = run_mentor(what, config, mentor=mentor, source=source)
+    except Exception as error:
+        message, code = user_facing_error(error)
+        console.print(f"[red]{message}[/red]")
+        raise typer.Exit(code=code) from error
+    console.print(f"[green]wrote[/green] {result.relative_path}")
 
 
 @app.command("skills")

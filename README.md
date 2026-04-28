@@ -4,12 +4,12 @@
 
 Current branch target: `v2/harness`.
 
-Phase 1 scope:
+Current scope:
 
-- scaffold the repo structure from `docs/build-spec-v2.md`
-- expose `dtp draft`
-- expose `dtp skills --validate`
-- keep `voice`, `pricing`, and `sow` as valid placeholder skills for Toni to author
+- `dtp draft` turns diagnose notes into draft SOW markdown
+- `dtp skills --validate` validates local skills
+- `dtp note`, `dtp story`, and `dtp mentor` capture practice context without an agent call
+- `voice`, `pricing`, and `sow` stay valid placeholder skills for Toni to author
 
 Run the local checks:
 
@@ -19,5 +19,3 @@ Run the local checks:
 .\.venv\Scripts\python.exe -m dtp skills --validate
 .\.venv\Scripts\python.exe -m dtp draft inputs/fixture-diagnose.md --output outputs/fixture-review.md
 ```
-
-Do not build Phase 2 commands until Phase 1 is merged into `v2/harness` and Toni confirms the next move.

@@ -1,0 +1,10 @@
+# High-signal local secret scans for staged files.
+sk-ant-[A-Za-z0-9_-]+
+AKIA[0-9A-Z]{16}
+-----BEGIN (RSA |EC |OPENSSH |DSA )?PRIVATE KEY-----
+gh[pousr]_[A-Za-z0-9_]{36,}
+github_pat_[A-Za-z0-9_]{22,}_[A-Za-z0-9_]{59,}
+sk-proj-[A-Za-z0-9_-]+
+sk-[A-Za-z0-9]{32,}
+(sk|pk)_(live|test)_[A-Za-z0-9]{16,}
+[A-Za-z0-9_]*(SECRET|TOKEN|PASSWORD|API_KEY|PRIVATE_KEY)[A-Za-z0-9_]*[[:space:]]*=[[:space:]]*['\"][^'\"]{12,}['\"]
