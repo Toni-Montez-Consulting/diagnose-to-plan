@@ -1,8 +1,15 @@
 from __future__ import annotations
 
 from pathlib import Path
+from typing import TextIO
 
 from pydantic import BaseModel, ConfigDict
+
+TODO_SKILL_BODY = "# TODO: Toni authors this skill"
+TODO_SKILL_WARNING = (
+    "WARNING: skills with TODO bodies were loaded — output will lack practice-specific "
+    "voice/pricing/structure. Author skill bodies before using output for client work."
+)
 
 
 class Skill(BaseModel):
@@ -57,6 +64,24 @@ def validate_skills(skills_dir: Path) -> tuple[Skill, ...]:
     return discover_skills(skills_dir)
 
 
+def skills_with_todo_bodies(skills: tuple[Skill, ...]) -> tuple[Skill, ...]:
+    return tuple(skill for skill in skills if skill.body.strip() == TODO_SKILL_BODY)
+
+
+def warn_if_todo_skills_loaded(
+    skills: tuple[Skill, ...],
+    *,
+    input_path: Path,
+    repo_root: Path,
+    stderr: TextIO,
+) -> None:
+    if not skills_with_todo_bodies(skills):
+        return
+    if _is_fixture_input(input_path=input_path, repo_root=repo_root):
+        return
+    stderr.write(f"{TODO_SKILL_WARNING}\n")
+
+
 def _split_frontmatter(path: Path) -> tuple[dict[str, str], str]:
     text = path.read_text(encoding="utf-8")
     if not text.startswith("---\n"):
@@ -77,3 +102,11 @@ def _split_frontmatter(path: Path) -> tuple[dict[str, str], str]:
         key, value = line.split(":", 1)
         metadata[key.strip()] = value.strip().strip('"')
     return metadata, body
+
+
+def _is_fixture_input(*, input_path: Path, repo_root: Path) -> bool:
+    try:
+        relative = input_path.resolve().relative_to(repo_root.resolve())
+    except ValueError:
+        return False
+    return relative.as_posix() == "inputs/fixture-diagnose.md"
