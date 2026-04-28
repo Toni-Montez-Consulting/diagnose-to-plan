@@ -1,19 +1,19 @@
 repos:
   - name: consulting
-    path: ../consulting
+    path: ../../consulting
     access: read
   - name: hub
-    path: ../hub
+    path: ../../hub
     access: read
   - name: engineering-playbook
-    path: ../engineering-playbook
+    path: ../../engineering-playbook
     access: read
   - name: hub-registry
-    path: ../hub-registry
+    path: ../../hub-registry
     access: read
   - name: demario-pickleball-1
-    path: ../demario-pickleball-1
+    path: ../../demario-pickleball-1
     access: read
   - name: fitness-app
-    path: ../fitness-app
+    path: ../../fitness-app
     access: read

@@ -10,3 +10,5 @@ def test_load_workspace(repo_root: Path) -> None:
 
     assert [repo.name for repo in workspace.repos][:2] == ["consulting", "hub"]
     assert workspace.repos[0].access == "read"
+    assert workspace.repos[0].path == repo_root.parent.parent / "consulting"
+    assert workspace.repos[0].path.exists()
