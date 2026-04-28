@@ -14,10 +14,10 @@ Phase 1 scope:
 Run the local checks:
 
 ```powershell
-python -m pytest
-python -m ruff check .
-python -m dtp skills --validate
-python -m dtp draft inputs/fixture-diagnose.md
+.\.venv\Scripts\python.exe -m pytest
+.\.venv\Scripts\python.exe -m ruff check .
+.\.venv\Scripts\python.exe -m dtp skills --validate
+.\.venv\Scripts\python.exe -m dtp draft inputs/fixture-diagnose.md --output outputs/fixture-review.md
 ```
 
 Do not build Phase 2 commands until Phase 1 is merged into `v2/harness` and Toni confirms the next move.
