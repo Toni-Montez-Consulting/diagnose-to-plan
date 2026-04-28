@@ -4,8 +4,9 @@
 .ruff_cache/
 __pycache__/
 *.py[cod]
+*.egg-info/
 .mypy_cache/
-.dtp/
+.dtp/audit.log
 inputs/*
 !inputs/README.md
 outputs/*
