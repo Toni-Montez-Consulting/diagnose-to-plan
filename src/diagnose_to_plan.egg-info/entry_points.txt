@@ -1,2 +1,0 @@
-[console_scripts]
-dtp = dtp.cli:main
