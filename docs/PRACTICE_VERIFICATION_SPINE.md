@@ -17,8 +17,11 @@ DTP owns the contract. Each repo owns its local implementation. Evidence should 
 | Repo | Owns | Local gate | Release/support gate | Evidence path |
 |---|---|---|---|---|
 | `diagnose-to-plan` | Practice OS, verification contract, redaction, COI, templates | `pytest`, `ruff check .`, `dtp skills --validate`, `dtp practice doctor` | `dtp index --all`, `dtp synthesize --no-confirm`, redaction checks when evidence moves toward proof | `artifacts/verification/dtp/` or engagement-local private evidence |
-| `consulting` | Public storefront, `/start`, `/admin`, visual QA, public proof shell | `npm run build`, route smoke, `/admin` noindex, sitemap exclusion | Hub intake endpoint/CORS, visual QA, public/private markup scan | `artifacts/verification/consulting/` |
+| `consulting` | Public storefront, `/start`, `/admin`, visual QA, public proof shell | `npm run build`, `npm run security:secrets`; route smoke remains advisory until browser CI is intentionally expanded | Hub intake endpoint/CORS, visual QA, public/private markup scan | `artifacts/verification/consulting/` |
 | `hub` | Runtime intake, private console, Supabase/Vercel support | `pnpm verify`, `pnpm test`, `hub doctor` | health route, protected console, intake CORS, Supabase migration/status, Vercel deployment checks | `artifacts/verification/hub/` |
+| `tm-skills` | Cross-repo SDLC behavior and global skill activation | `doctor.ps1`, `freshness-check.ps1`, `install.ps1 -WhatIf` | install approval, tool reloads, Codex/Claude/Copilot discovery smoke tests | `artifacts/verification/tm-skills/` or GitHub Actions logs |
+| `hub-prompts` | Prompt catalogue consumed by Hub | `npm test` | prompt eval/golden checks when added | `artifacts/verification/hub-prompts/` or GitHub Actions logs |
+| `hub-registry` | Hub automation target routing | `npm test` | cross-repo prompt id validation against `hub-prompts` when implemented | `artifacts/verification/hub-registry/` or GitHub Actions logs |
 
 ## Reference Implementation
 
@@ -43,6 +46,8 @@ Reusable pieces:
 - CI artifact upload for verification reports.
 
 This should guide DTP, consulting, Hub, and `tm-skills`, but it should not be copied blindly. Each repo still owns its own local, release, support, manual, and proof gates.
+
+Story 3 uses the "core plus map" version of this pattern: core repos get thin CI now, adjacent project repos get an explicit benefit lane and keep their existing owner-specific gates until a real project need calls for changes.
 
 ## Tool Phasing
 

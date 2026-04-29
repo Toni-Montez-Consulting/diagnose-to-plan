@@ -84,6 +84,7 @@ The reusable verification/support automation concept is captured as the CLI Veri
 - Write verification evidence to durable markdown/JSON artifacts.
 - Keep hard gates hard: redaction, COI, secret scans, auth boundaries, and production-data safety must not be hidden by advisory modes.
 - Feed evidence into hosted DTP and Client Command Rooms only after the CLI spine is reliable.
+- Thin CI is now installed or reviewed for the core lane: DTP, consulting, Hub, `tm-skills`, `hub-prompts`, and `hub-registry`.
 - Add Sprint 1 tools in phases: evidence templates, Gitleaks, consulting Playwright/axe, advisory Knip, and repo doctor/matrix coverage now; Lighthouse CI, Semgrep, dependency automation, and shared GitHub Actions soon; dashboards, Storybook/Chromatic, Percy/Applitools, OpenTelemetry, k6, and PostHog-for-consulting later only when proven useful.
 
 ### Practice OS
@@ -289,6 +290,7 @@ Do not build these into the near-term practice.
 | `demario-pickleball-1` | Brother/local business launch proof track, client project delivery, Client Command Room reference implementation | Practice-wide roadmap |
 | `fitness-app` / Omnexus | Founder/product/operator proof, app launch evidence, reference CLI verification toolkit shape | Practice OS source of truth |
 | `FamilyTrips` | Private family trip planning app, data validation, privacy-bound trip coordination | Practice-wide roadmap, public proof, consulting runtime |
+| `dse-content` | Internal Azure Apps/AI content, readiness/workflow surfaces, MSX/DSE automation, Microsoft-adjacent proof candidates | Public consulting proof without COI, permission, and redaction review |
 | Cam/Greg repos | Project-specific launch/operator proof tracks once created or clarified | Practice-wide roadmap |
 
 For workspace-wide prioritization, missing-item sweeps, and current agentic-AI research additions, see `docs/WORKSPACE_PORTFOLIO_ROADMAP.md`.

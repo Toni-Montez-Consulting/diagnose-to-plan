@@ -119,6 +119,8 @@ Acceptance:
 
 ### Story 3: Add Thin CI For Stable Local Gates
 
+Status: implemented for the core-plus-map scope. DTP, consulting, and `tm-skills` now have thin CI workflows; `hub-prompts` and `hub-registry` workflows run their full local `npm test` gates; Hub's existing CI/security workflows already cover the stable lane and were left in place.
+
 Value: makes the existing local gates repeatable before hosted dashboards or support automation display them.
 
 Updated input from Omnexus: PR `https://github.com/toniomon96/Omnexus/pull/553` proves the fuller version of this pattern with a shared toolkit registry, lock file, Docker-backed specialty tools, ignored `artifacts/verification/`, GitHub evidence upload, and Supabase migration drift/fresh-replay repair guard. For Sprint 2, use that as the reference implementation, but keep DTP/consulting/Hub CI thin until their local gates are stable.
@@ -126,8 +128,8 @@ Updated input from Omnexus: PR `https://github.com/toniomon96/Omnexus/pull/553` 
 First CI targets:
 
 - DTP: `pytest`, `ruff check .`, `dtp skills --validate`, `dtp practice doctor`.
-- Consulting: `npm run build`, `npm run test:routes` when browser dependencies are available, `npm run security:secrets`.
-- Hub: `pnpm verify`, `pnpm security:secrets`.
+- Consulting: `npm run build`, `npm run security:secrets`; route tests remain advisory until browser CI setup is intentionally expanded.
+- Hub: existing CI/security workflows cover format, lint, build, typecheck, tests, CLI smoke, audit, and secret scanning.
 - `tm-skills`: `.\scripts\doctor.ps1`, `.\scripts\freshness-check.ps1`.
 - `hub-prompts`: `npm test`.
 - `hub-registry`: `npm test`.
@@ -140,6 +142,24 @@ Keep it thin:
 - Mark browser, external-service, or dashboard checks as manual/advisory unless credentials are guaranteed.
 - Add a registry/lock/artifact convention only when a repo has enough tools to justify it.
 - Promote specialty Docker scanners from advisory to hard only after the baseline is stable and false positives are understood.
+
+### Workspace Benefit Matrix
+
+Every workspace repo benefits, but not every repo needs a CI change in this story.
+
+| Repo | Improvement lane | Story 3 touch | Next gate |
+|---|---|---|---|
+| `diagnose-to-plan` | Practice OS, evidence contracts, redaction, hosted-DTP planning | Thin Python/Practice OS CI plus roadmap alignment | Hosted DTP Phase 0 schema/app boundary |
+| `consulting` | Public storefront, proof surface, Hub intake path | Thin build and secret-scan CI | Proof/redaction queue and optional route CI expansion |
+| `hub` | Runtime intake, console records, health, prompts/runs | Existing CI/security reviewed; no churn | Prompt/registry cross-validation and v0.4 hardening |
+| `tm-skills` | Global agent SDLC behavior across all repos | Thin Windows CI for doctor/freshness/install preview | Explicit install approval, tool reloads, discovery smoke tests |
+| `engineering-playbook` | Doctrine, portfolio schemas, secret-management references | Alignment only; no duplicated roadmap ownership | Update only when general doctrine changes |
+| `hub-prompts` | Prompt catalogue consumed by Hub | Workflow now runs full `npm test` | Add/evolve eval fixtures for high-value prompts |
+| `hub-registry` | Hub automation target routing | Workflow now runs full `npm test` | Cross-validate referenced prompt ids against `hub-prompts` |
+| `fitness-app` / Omnexus | Reference verification cockpit and product proof track | No mutation because active branch has uncommitted work | Finish/review PR #553 and promote patterns only after permission/redaction |
+| `demario-pickleball-1` | Client Command Room reference and local-business proof track | Alignment only; existing CI remains owner | Manual launch gates, venue rules, Node 24 maintenance |
+| `FamilyTrips` | Private family planning app | Alignment only | Privacy-first `validate:data`, build, and tests before feature work |
+| `dse-content` | Microsoft/internal readiness and workflow proof track | Alignment only | COI-aware internal proof and live-branch verification before any public reuse |
 
 ### Story 4: Hosted DTP Phase 0 Schema And App Boundary
 
@@ -227,8 +247,6 @@ Owns: cross-repo SDLC behavior for agents.
 
 Next:
 
-- Add remote/push.
-- Add workspace folder.
 - Install/smoke only after explicit approval.
 - Add one project-pinned canary after global discovery works.
 - Add stack overlays only after base skills prove useful.
@@ -538,9 +556,9 @@ Source:
 
 ## Recommended Next Execution Order From Here
 
-1. Add thin CI for DTP, consulting, Hub, `tm-skills`, `hub-prompts`, and `hub-registry`.
-2. Draft hosted DTP Phase 0 schema/app-boundary doc.
-3. Add proof packet and redaction queue templates.
-4. Run Mom nonprofit as the first Client Operating Kit pilot and use the Command Room fit assessment before deciding on a portal.
+1. Draft hosted DTP Phase 0 schema/app-boundary doc.
+2. Add proof packet and redaction queue templates.
+3. Run Mom nonprofit as the first Client Operating Kit pilot and use the Command Room fit assessment before deciding on a portal.
+4. Add prompt id cross-validation between `hub-prompts` and `hub-registry`.
 5. Use DeMario command room and Omnexus verification toolkit as proof/reference material only after permission/redaction review.
 6. Start hosted DTP implementation only after the schema, evidence contract, and redaction/proof queue are accepted.
