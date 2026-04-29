@@ -28,6 +28,7 @@ Command-room templates:
 Roadmap stewardship template:
 
 - `templates/roadmap-steward-review.md` keeps roadmap execution, repo coverage, active-next decisions, idea capture, and process compliance out of chat memory and inside reviewable artifacts.
+- `steward/` stores live Roadmap Steward receipts created from the activation map and steward review template.
 
 Proof and redaction templates:
 
