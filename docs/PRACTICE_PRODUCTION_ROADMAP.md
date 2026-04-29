@@ -12,6 +12,8 @@ The reusable verification/support automation concept is captured as the CLI Veri
 
 The Future Intelligence Layer is captured in `docs/WORKSPACE_PORTFOLIO_ROADMAP.md`. It adds supervised learning loops, research radar, agent flight records, portfolio scorecards, context engineering, AI red-team planning, release trust, feature flags, and protocol watchlists without changing the current build order.
 
+The Workspace Efficiency Layer is also captured in `docs/WORKSPACE_PORTFOLIO_ROADMAP.md`. It adds workspace command-center planning, repo manifests, affected-only checks, shared CI later, dependency maintenance, toolchain pinning, evidence indexes, decision logs, starter-factory templates, and CI cache hygiene without forcing the repos into one platform or monorepo.
+
 ## Current Implemented State
 
 ### DTP
@@ -21,6 +23,7 @@ The Future Intelligence Layer is captured in `docs/WORKSPACE_PORTFOLIO_ROADMAP.m
 - `practice-os/` contains reusable policies, templates, operator Skills, and reviewed Bottleneck Patterns.
 - Practice OS includes Client Command Room fit/spec templates so future engagements can decide between a command room, a handoff checklist, no private surface, or a deferred revisit before building portal UI.
 - Practice OS includes optional Future Intelligence templates for lessons, research radar items, research spikes, portfolio scorecards, agent session records, AI red-team plans, feature flag/kill switch plans, and supply-chain baselines.
+- Practice OS includes optional Workspace Efficiency templates for repo manifests, evidence indexes, decision records, workspace command-center planning, dependency maintenance, toolchain pinning, CI cache planning, and project starter baselines.
 - `engagements/` is the gitignored private work area for Client Operating Kits.
 - `dtp kit new`, `dtp kit status`, `dtp redact check`, and `dtp practice doctor` support local Client Operating Kit workflows.
 - `dtp web` provides a local browser Workbench over the same markdown contracts.
@@ -95,6 +98,7 @@ The Future Intelligence Layer is captured in `docs/WORKSPACE_PORTFOLIO_ROADMAP.m
 - Keep policies current: data classification, COI, redaction, kill switch, no-secrets-in-git, and client consent.
 - Add or strengthen templates for proposal/SOW, case-study proof packet, Work Item Spec, and hosted-DTP import/export.
 - Use the Future Intelligence templates opportunistically after real delivery/research sessions; do not make them required gates until they have proven useful.
+- Use the Workspace Efficiency templates opportunistically when touching a repo; do not make manifests or command-center output required until at least one pilot proves the shape.
 - Add tiny fixtures/evals for high-value Skills: COI, redact, diagnose, proposal, handoff, and case-study capture.
 - Promote only reviewed redacted patterns from `extracts/` into `practice-os/patterns/`.
 
@@ -201,6 +205,13 @@ Complete these before treating the practice as ready for soft launch.
    - Keep self-learning supervised: lessons may propose evals, checklist updates, or skill updates, but humans approve the change.
    - Do not adopt AG-UI, A2A, MCP recall, OpenAI Agents SDK, Google ADK, Temporal, or heavier observability until a real DTP/Hub workflow justifies a spike.
 
+10. Capture the Workspace Efficiency Layer.
+   - Keep this as roadmap and template work while hosted DTP Phase 0 and proof/redaction stay first in line.
+   - Use `practice-os/templates/repo-manifest.md` and `evidence-index.md` on the next repo touch pass.
+   - Draft `workspace-command-center-spec.md` before writing any cross-repo command runner.
+   - Keep affected-only checks advisory until repo manifests, hard gates, and release/proof boundaries are clear.
+   - Do not add shared CI, dependency bots, or toolchain pinning everywhere until the pilot proves the value.
+
 ## Mid Term
 
 Build these after the near-term documentation and pilot path are stable.
@@ -266,6 +277,14 @@ Build these after the near-term documentation and pilot path are stable.
    - Use AI red-team plans before any public AI workflow, write-enabled automation, or agentic client communication.
    - Introduce feature flags, kill switches, and supply-chain evidence first in higher-risk repos: Omnexus, Hub, hosted DTP, consulting intake/proof, and client launch surfaces.
 
+10. Workspace Efficiency pilot.
+   - Add repo manifests for DTP, consulting, Hub, and `tm-skills` first.
+   - Add evidence indexes only where verification receipts already exist.
+   - Add a decision record for the first real cross-repo automation boundary.
+   - Evaluate Renovate or Dependabot grouping before enabling dependency PRs broadly.
+   - Tune CI caching only where workflow time or repeated installs are becoming real friction.
+   - Use project-starter baselines after Mom nonprofit or the next client pilot confirms what every new repo should start with.
+
 ## Long Term
 
 Build these only after repeated usage proves the need.
@@ -285,6 +304,11 @@ Build these only after repeated usage proves the need.
 - OpenAI Agents SDK, Google ADK, Temporal, LangGraph, or similar frameworks only after simple workflows/state machines become the bottleneck.
 - SLSA/OpenSSF Scorecard, CycloneDX SBOMs, signed attestations, and broader supply-chain evidence where repo risk and release cadence justify the ceremony.
 - OpenFeature-style feature flag standardization after flags become a recurring cross-repo pattern.
+- Workspace Command Center implementation after repo manifests and evidence indexes prove useful.
+- Affected-only verification after hard gates are reliably encoded per repo.
+- Shared GitHub Actions after repeated stable workflow patterns exist across at least three repos.
+- Dependency maintenance automation after grouping, schedule, and approval rules are accepted.
+- Dev environment pinning where tool drift has caused real failures or onboarding friction.
 - Optional plugin packaging only if the skills need to be distributed beyond Toni's local environment.
 - Heavier customer portals after the lightweight Client Command Room pattern proves value across multiple engagements.
 
@@ -300,6 +324,10 @@ Do not build these into the near-term practice.
 - Autonomous self-learning or self-modifying skills.
 - Research automation that creates implementation work without human acceptance.
 - Protocol adoption just because the protocol is interesting.
+- Forced monorepo migration.
+- Cross-repo command runners that mutate repos without repo-local gates.
+- Shared CI abstractions before the duplicated pattern is stable.
+- Dependency-bot noise without grouping and review rules.
 - CRM replacement.
 - Billing or e-signature integration.
 - Auto-publishing case studies.

@@ -12,6 +12,7 @@ The practical thesis is:
 4. Build hosted/private surfaces only when they connect to real artifacts.
 5. Add deeper agent automation only after permissions, evals, evidence, and human-review gates exist.
 6. Turn delivery, research, failures, and agent-session receipts into compounding practice knowledge.
+7. Reduce repeated discovery, setup drift, CI waste, and handoff friction across the whole workspace.
 
 ## Scope
 
@@ -63,6 +64,7 @@ An item stays on the roadmap only if it creates at least one of these forms of v
 - Better security, redaction, COI, or permission control.
 - More repeatable revenue motion.
 - Stronger research-to-implementation signal, agent performance, or release trust.
+- Less repeated setup, rediscovery, verification runtime, or dependency-maintenance noise.
 
 An item should be delayed or cut if it mostly creates:
 
@@ -72,6 +74,7 @@ An item should be delayed or cut if it mostly creates:
 - Duplicate state between DTP, Hub, and project repos.
 - New framework complexity before a workflow has proven pain.
 - Research novelty that does not improve delivery speed, proof quality, risk control, agent performance, or business leverage.
+- Efficiency tooling that hides repo boundaries or makes agents skip required local evidence.
 
 ## Future Intelligence Layer
 
@@ -120,6 +123,54 @@ Initial sources:
 - CycloneDX SBOMs: https://cyclonedx.org/specification/overview/
 - OpenAlex API: https://developers.openalex.org/api-reference/introduction
 - Hugging Face Papers: https://huggingface.co/papers
+
+## Workspace Efficiency Layer
+
+Status: roadmap expansion, not a priority reset. This layer reduces operational drag across the workspace, but it must not turn the workspace into a forced monorepo or hide repo-specific safety gates.
+
+Purpose: make future work faster by giving humans and agents a consistent way to discover repo purpose, run the right checks, avoid unnecessary CI work, capture decisions, and start new projects with the correct baseline.
+
+Operating rules:
+
+- Keep repo boundaries explicit: each repo still owns its own app, gates, deploy target, data rules, and proof lane.
+- Prefer manifests, wrappers, and docs before a hosted dashboard.
+- Use affected-only checks for speed, but keep full hard gates before release, proof promotion, or risky production changes.
+- Do not centralize secrets, private client data, or production write credentials in workspace-level tooling.
+- Optimize for fewer repeated decisions, not more ceremony.
+
+Components:
+
+- Workspace Command Center: a root-level command or script that answers what changed, which repos need checks, what to run next, and where the latest evidence lives.
+- Repo Manifest Standard: a tiny `.repo.yml` or `repo.toml` per repo with purpose, owner lane, local gates, CI gates, evidence paths, deploy target, data sensitivity, and proof rules.
+- Affected-Only Verification: run fast checks only for changed repos/files during normal development, while preserving full gates before release.
+- Shared GitHub Actions, Later: extract repeated setup/cache/secret-scan/build patterns into reusable workflows only after thin CI stabilizes.
+- Dependency Maintenance Lane: add Renovate or Dependabot with grouped updates, dashboard issue, and repo-specific approval rules.
+- Dev Environment Pinning: standardize tool versions with `.tool-versions`, devcontainer/devbox notes, or equivalent repo-local setup docs.
+- Evidence Index: keep a lightweight per-repo index of latest verification receipts, proof packets, redaction state, CI runs, and deploys.
+- Decision Log Automation: make important tradeoffs easy to record so future agents do not relitigate the same choices.
+- Project Starter Factory: create a Practice OS baseline for new client/project repos with README, CI, launch checklist, proof packet, privacy/COI notes, and command-room decision template.
+- CI Cache Hygiene: tune GitHub Actions cache/setup-node/setup-python/pnpm/pip patterns per repo, and consider Turborepo/Nx-style remote or affected caching only when the repo shape justifies it.
+
+Suggested priority:
+
+1. Add repo manifest and evidence-index templates.
+2. Draft the Workspace Command Center spec.
+3. Add a decision-record template and use it on the next real architecture choice.
+4. Add dependency-maintenance policy to the roadmap for each repo before enabling bots everywhere.
+5. Pilot affected-only verification in DTP or Hub after the repo manifest shape is stable.
+6. Extract shared CI only after at least three repos repeat the same reliable workflow pattern.
+7. Add starter-factory templates after the Mom nonprofit or next client pilot clarifies the baseline.
+
+Initial sources:
+
+- GitHub reusable workflows: https://docs.github.com/actions/concepts/workflows-and-actions/reusing-workflow-configurations
+- GitHub dependency caching: https://docs.github.com/en/actions/concepts/workflows-and-actions/dependency-caching
+- Renovate Dependency Dashboard: https://docs.renovatebot.com/key-concepts/dashboard/
+- Dependabot version updates: https://docs.github.com/en/code-security/supply-chain-security/keeping-your-dependencies-updated-automatically/about-dependabot-version-updates
+- Turborepo remote caching: https://turborepo.com/repo/docs/core-concepts/remote-caching
+- Nx affected/CI waste reduction: https://nx.dev/docs/concepts/ci-concepts/reduce-waste
+- asdf tool version manager: https://asdf-vm.com/guide/introduction.html
+- Dev Containers: https://containers.dev/
 
 ## Sprint 2: Practice Platform Foundations
 
@@ -471,6 +522,7 @@ Priority:
 - Public proof has a strong shell but needs asset/redaction/permission queue discipline.
 - Agent-security research is now represented here; promote specific gates into implementation docs before any deeper autonomous workflows.
 - Future Intelligence templates now exist as optional Practice OS assets, but they still need first real use before becoming required gates.
+- Workspace Efficiency templates now exist as optional Practice OS assets, but they still need a first repo-manifest/command-center pilot before becoming standards.
 
 ## Research Additions To Roadmap
 
@@ -708,6 +760,66 @@ Sources:
 - https://huggingface.co/papers
 - https://developers.openalex.org/api-reference/introduction
 
+### 16. Workspace Command Center And Repo Manifests
+
+Cross-repo work gets slower when every session has to rediscover repo purpose, local gates, CI shape, deploy target, and proof rules. A workspace command center plus repo manifests can make future sessions start from known truth.
+
+Roadmap impact:
+
+- Add a small manifest per repo before building workspace automation.
+- Use the manifest to drive "what changed, what should run, what evidence exists" summaries.
+- Keep implementation repo-local first; the command center should orchestrate, not own, each repo's rules.
+
+Sources:
+
+- https://docs.github.com/actions/concepts/workflows-and-actions/reusing-workflow-configurations
+- https://docs.github.com/en/actions/concepts/workflows-and-actions/dependency-caching
+
+### 17. Affected-Only Checks And Cache Hygiene
+
+Nx and Turborepo both show the core efficiency pattern: use change detection and caching to avoid rerunning work that cannot be affected by the current change.
+
+Roadmap impact:
+
+- Start with explicit repo manifests and simple changed-file detection before adopting a framework.
+- Keep full hard gates before release, proof promotion, or production-sensitive changes.
+- Consider remote caching only for repos with repeated slow deterministic tasks.
+
+Sources:
+
+- https://nx.dev/docs/concepts/ci-concepts/reduce-waste
+- https://turborepo.com/repo/docs/core-concepts/remote-caching
+
+### 18. Dependency Maintenance And Toolchain Pinning
+
+Dependency and toolchain drift can become silent drag. Renovate/Dependabot can group updates and create dashboards; `.tool-versions`, devcontainer/devbox notes, or equivalent setup docs can make new machines and CI less surprising.
+
+Roadmap impact:
+
+- Add dependency update policy before enabling broad automation.
+- Use grouped updates and approval rules so maintenance does not flood the workspace.
+- Pin tool versions where mismatches cause real failures: Node, Python, pnpm/npm, Supabase CLI, Vercel, and mobile/native tools.
+
+Sources:
+
+- https://docs.renovatebot.com/key-concepts/dashboard/
+- https://docs.github.com/en/code-security/supply-chain-security/keeping-your-dependencies-updated-automatically/about-dependabot-version-updates
+- https://asdf-vm.com/guide/introduction.html
+
+### 19. Project Starter Factory And Decision Logs
+
+New projects should begin with the right operating baseline instead of rediscovering README, CI, launch checklist, proof, privacy, COI, and handoff structure each time.
+
+Roadmap impact:
+
+- Create starter templates after the Mom nonprofit/client pilot clarifies the baseline.
+- Use lightweight decision records for architecture, security, public proof, dependency automation, and workflow choices.
+- Keep starters modular so a private family app, public consulting surface, local-business client site, and AI product do not inherit the same unnecessary machinery.
+
+Source:
+
+- https://containers.dev/
+
 ## Parked Or Explicitly Later
 
 - Multi-user SaaS.
@@ -726,6 +838,10 @@ Sources:
 - Research automation that creates implementation work without acceptance.
 - A2A/AG-UI/MCP protocol adoption before a real workflow needs it.
 - Supply-chain ceremony in low-risk repos before the value is clear.
+- Workspace command center that mutates repos before repo manifests and gates are trustworthy.
+- Shared CI abstractions before at least three repos repeat the same stable pattern.
+- Dependency bots without grouping, schedule, and human approval rules.
+- Forced monorepo migration for repos that are intentionally separate.
 
 ## Recommended Next Execution Order From Here
 
@@ -738,3 +854,5 @@ Sources:
 7. Start hosted DTP implementation only after the schema, evidence contract, and redaction/proof queue are accepted.
 
 Non-blocking intelligence track: use the optional Future Intelligence templates during the next real delivery/research sessions, but do not insert them ahead of hosted DTP Phase 0 or proof/redaction work.
+
+Non-blocking efficiency track: pilot repo manifests and evidence indexes alongside the next DTP/Hub/consulting work, then draft the Workspace Command Center only after the manifest shape proves useful.

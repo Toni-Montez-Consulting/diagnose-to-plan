@@ -33,3 +33,16 @@ Future Intelligence templates:
 - `templates/supply-chain-baseline.md` captures release trust and dependency evidence.
 
 These are optional until real usage proves they should become gates.
+
+Workspace Efficiency templates:
+
+- `templates/repo-manifest.md` records repo purpose, owner lane, gates, deploy target, evidence paths, and sensitivity rules.
+- `templates/evidence-index.md` indexes latest verification receipts, proof packets, redaction state, CI runs, and deploys.
+- `templates/decision-record.md` captures architecture, workflow, proof, dependency, and automation decisions.
+- `templates/workspace-command-center-spec.md` scopes a future cross-repo command center before implementation.
+- `templates/dependency-maintenance-plan.md` records Renovate/Dependabot grouping, schedule, and approval rules.
+- `templates/dev-environment-baseline.md` records tool-version and setup expectations.
+- `templates/ci-cache-plan.md` records cache keys, dependency paths, affected-only checks, and invalidation rules.
+- `templates/project-starter-baseline.md` records the minimum baseline for new client/project repos.
+
+These are optional until a real repo-manifest/evidence-index pilot proves they should become standards.

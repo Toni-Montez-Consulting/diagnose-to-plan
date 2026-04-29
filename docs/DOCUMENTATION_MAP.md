@@ -16,12 +16,12 @@ When another repo's docs conflict with this roadmap, treat the other doc as loca
 - `docs/03-skills.md`: current skill layout and validation boundary.
 - `docs/04-multi-repo.md`: sibling repo read/write boundaries.
 - `docs/PRACTICE_VERIFICATION_SPINE.md`: Sprint 1 gate matrix, evidence contract, tool phasing, and no-slop quality gate for DTP, consulting, and Hub.
-- `docs/WORKSPACE_PORTFOLIO_ROADMAP.md`: cross-workspace prioritized plan across consulting, DTP, Hub, `tm-skills`, prompt/registry repos, Omnexus, DeMario, FamilyTrips, and DSE, including value checks, current agentic-AI research additions, and the Future Intelligence Layer.
+- `docs/WORKSPACE_PORTFOLIO_ROADMAP.md`: cross-workspace prioritized plan across consulting, DTP, Hub, `tm-skills`, prompt/registry repos, Omnexus, DeMario, FamilyTrips, and DSE, including value checks, current agentic-AI research additions, the Future Intelligence Layer, and the Workspace Efficiency Layer.
 - `docs/CLIENT_COMMAND_ROOM_PATTERN.md`: reusable admin/customer portal pattern inspired by `demario-pickleball-1`; use when planning owner-facing operating rooms.
 - `docs/CLI_VERIFICATION_AUTOMATION_PATTERN.md`: reusable CLI doctor/matrix/verification/evidence pattern inspired by Omnexus; use when planning infrastructure-first automation across repos.
 - `docs/TM_SKILLS_IMPLEMENTATION_ROADMAP.md`: implementation handoff and shipped-status note for the separate `tm-skills` SDLC skills repo. Use this when building or activating reusable coding-agent skills.
 - `docs/build-spec-v2.md`: historical implementation spec for the V2 harness. Preserve for context, but prefer the current roadmap when it conflicts with implemented reality.
-- `practice-os/`: reusable policies, templates, Skills, and reviewed Bottleneck Patterns. Command-room planning now starts with `practice-os/templates/client-command-room-fit-assessment.md` and, only when justified, `practice-os/templates/client-command-room-spec.md`. Future Intelligence templates are optional assets for lessons, research, scorecards, flight records, red-team plans, feature flags, and supply-chain baselines.
+- `practice-os/`: reusable policies, templates, Skills, and reviewed Bottleneck Patterns. Command-room planning now starts with `practice-os/templates/client-command-room-fit-assessment.md` and, only when justified, `practice-os/templates/client-command-room-spec.md`. Future Intelligence templates are optional assets for lessons, research, scorecards, flight records, red-team plans, feature flags, and supply-chain baselines. Workspace Efficiency templates are optional assets for repo manifests, evidence indexes, decision records, command-center planning, dependency maintenance, toolchain pinning, CI cache hygiene, and project starter baselines.
 - `extracts/`: raw extraction, detector output, lessons, decisions, and synthesis. Promote only reviewed redacted material to `practice-os/patterns/`.
 - `engagements/`: private client work, gitignored from the DTP code repo except for its README.
 
@@ -86,4 +86,5 @@ Do not update `hub-prompts` or `hub-registry` just because the roadmap changes. 
 - Public proof must be redacted, permissioned, and evidence-backed before moving into consulting.
 - Verification evidence templates live in `practice-os/templates/verification-evidence.md` and `practice-os/templates/verification-evidence.json`; private run artifacts should live in ignored/private evidence paths unless they are intentionally redacted.
 - Future Intelligence templates are optional until repeated usage proves they should become doctor-enforced Practice OS gates.
+- Workspace Efficiency templates are optional until a repo-manifest/evidence-index pilot proves they should become doctor-enforced Practice OS gates or repo-local standards.
 - Historical docs should be labeled or cross-linked when their assumptions are superseded.
