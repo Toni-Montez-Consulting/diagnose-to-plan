@@ -19,6 +19,7 @@ Rules:
 Activation routing:
 
 - `templates/activation-routing-map.md` maps prompt shapes to the right `tm-skills` skill, DTP Practice OS skill, template, roadmap lane, proof gate, COI gate, research/eval artifact, repo touch pass, or parked automation path.
+- `../docs/CONTEXTUAL_ACTIVATION_PLAYBOOK.md` and `templates/contextual-idea-intake.md` progressively classify new ideas, designs, development enhancements, project work, business moves, proof candidates, research items, and automation concepts before they become stories or implementation.
 - `../docs/ROADMAP_STORY_ACTIVATION_INDEX.md` maps roadmap epics/stories to the skills, templates, suggested agent roles, and gates that should activate when that story is in play.
 - `templates/story-activation-contract.md` captures a one-off story activation record when a backlog item needs a more explicit skill/agent/gate contract.
 

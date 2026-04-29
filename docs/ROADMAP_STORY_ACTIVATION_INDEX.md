@@ -13,6 +13,7 @@ human gates.
 ## Rules
 
 - Use `practice-os/templates/activation-routing-map.md` first when prompt intent is ambiguous.
+- Use `docs/CONTEXTUAL_ACTIVATION_PLAYBOOK.md` and `practice-os/templates/contextual-idea-intake.md` when Toni submits a new idea, design, development enhancement, business move, project request, or automation concept.
 - Use `practice-os/templates/roadmap-steward-review.md` before or after major roadmap sessions.
 - Use `practice-os/templates/story-activation-contract.md` when a story needs a one-off activation record.
 - Skills auto-trigger only after the relevant skill layer is installed and available in the tool. Until then, this index is the human/agent routing contract.
@@ -53,6 +54,21 @@ human gates.
 | First proof/redaction packet | "can this become proof", "case study", "baseline screenshots" | proof packet, asset inventory, evidence checklist, redaction queue, permission checklist | `local-codex`; `reviewer` only if asked | evidence, caveat, permission, redaction, reviewer before public proof |
 | Expand repo manifests | "make every repo covered", "what does this repo own", "which gates run" | repo manifest, evidence index, portfolio scorecard | `local-codex`; `explorer` only if asked | manifest names purpose, gates, proof/privacy lane, deploy/data boundaries |
 | Hub prompt/registry validation | "Hub prompts", "registry cross-validation", "prompt ids" | `testing-ladder`, Hub prompt/registry validation story | `local-codex`; `worker` only if asked and write scopes are split | local gates pass in both repos; CI-safe path does not require private siblings unless configured |
+
+## Idea-To-Story Activation
+
+Use this when the prompt is not yet a backlog story but should be captured.
+
+| Idea shape | First activation | Then attach to | Typical next artifact |
+|---|---|---|---|
+| Development enhancement | contextual idea intake, repo manifest, `testing-ladder` or `delivery-baseline` | Verification/CI, Workspace Efficiency, or repo-specific lane | work item spec or implementation plan |
+| Development implementation | contextual idea intake, story activation index, repo-local gates | owning repo story or new backlog candidate | direct implementation if scoped; otherwise work item spec |
+| Product/design | contextual idea intake, `frontend-craft`, Command Room fit if owner-facing | project lane or Client Command Room lane | design spec, visual QA checklist, or implementation |
+| Project/client work | contextual idea intake, Client Operating Kit, COI/consent | Client Operating Kit pilot or adjacent project lane | private kit, handoff, proof packet |
+| Business/offer | contextual idea intake, Practice Production Roadmap | consulting/proof/business-ops lane | decision record or roadmap story |
+| Proof/case study | contextual idea intake, proof/redaction templates | Proof And Redaction Governance | proof packet, asset inventory, claim review |
+| Research/tooling | contextual idea intake, research radar/spike | Future Intelligence Layer | Adopt/Pilot/Watch/Reject item |
+| Agent/automation | contextual idea intake, activation map, red-team/eval path | Roadmap Steward, Future Intelligence, or `tm-skills` | skill update, eval, guardrail plan, parked automation |
 
 ## Story-Level Update Contract
 

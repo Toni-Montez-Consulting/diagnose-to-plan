@@ -18,6 +18,7 @@ Use this before or after a major roadmap, planning, or implementation session. T
 - Roadmap files reviewed:
 - Backlog files reviewed:
 - Story activation files reviewed:
+- Contextual intake files reviewed:
 
 ## Source Of Truth Check
 
@@ -60,9 +61,13 @@ Confirm every workspace repo still has a lane, trigger, and next action.
 
 Classify each new idea so it becomes an artifact instead of living in chat memory.
 
-| Idea | Classification | Owning repo | Action | Gate |
-|---|---|---|---|---|
-|  | story |  |  |  |
+Use `practice-os/templates/contextual-idea-intake.md` for any idea that could
+affect multiple repos, business strategy, public proof, client work, agent behavior,
+automation, or future roadmap priority.
+
+| Idea | Classification | Owning repo | Activation | Action | Gate |
+|---|---|---|---|---|---|
+|  | story |  |  |  |  |
 
 Allowed classifications: `story`, `template`, `eval`, `proof item`, `research radar item`, `decision record`, `repo touch pass`, `parked`.
 

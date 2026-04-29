@@ -16,6 +16,7 @@ REQUIRED_POLICIES = (
 )
 REQUIRED_TEMPLATES = (
     "activation-routing-map.md",
+    "contextual-idea-intake.md",
     "diagnose-memo.md",
     "plan-roadmap.md",
     "roadmap-steward-review.md",

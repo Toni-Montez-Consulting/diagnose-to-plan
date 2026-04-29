@@ -35,6 +35,8 @@ Use `docs/ROADMAP_STORY_ACTIVATION_INDEX.md` before starting or advancing a stor
 
 Use `practice-os/templates/story-activation-contract.md` when a story needs a dedicated one-off activation record.
 
+Use `docs/CONTEXTUAL_ACTIVATION_PLAYBOOK.md` and `practice-os/templates/contextual-idea-intake.md` before promoting a new idea, design, business move, project request, development enhancement, or automation concept into a story.
+
 Agent roles in the activation index are recommendations, not permission. Subagents, autonomous managers, global installs, hosted implementation, public proof, and write-enabled automation still require their explicit gates.
 
 ## Epic 1: Reusable Agent SDLC Layer

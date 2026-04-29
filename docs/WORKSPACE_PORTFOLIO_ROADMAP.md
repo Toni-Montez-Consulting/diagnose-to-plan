@@ -16,6 +16,7 @@ The practical thesis is:
 8. Keep roadmap execution, idea capture, gates, and repo coverage in stewarded artifacts instead of Toni's memory.
 9. Route relevant prompts to the right skill, template, process, or gate without needing Toni to remember the activation rules.
 10. Tie roadmap/Kanban stories to the right skill, template, suggested agent role, and gate so execution can start from the story instead of from memory.
+11. Progressively classify new ideas/designs/work prompts into the right repo lane, roadmap story, skill/template, and gate before they become implementation.
 
 ## Scope
 
@@ -49,7 +50,7 @@ Roadmap invariant: every repo in the workspace stays on this roadmap. Some repos
 
 Execution invariant: roadmap items are tracked as epics/stories in `docs/ROADMAP_EXECUTION_BACKLOG.md`. Not every story is active today, but each item should have a status, Done gate, and next action before implementation begins.
 
-Stewardship invariant: major roadmap sessions should run the Activation Routing Map, Story Activation Index, and Roadmap Steward review before or after execution. The activation map chooses the right skill, template, process, or gate; the story activation index ties Kanban epics/stories to suggested skills, templates, agent roles, and gates; the steward loop checks the active queue, repo coverage, gates, blockers, uncaptured ideas, proof/redaction requirements, and no-touch boundaries so execution does not depend on chat memory.
+Stewardship invariant: major roadmap sessions should run the Activation Routing Map, Contextual Activation Playbook, Story Activation Index, and Roadmap Steward review before or after execution. The activation map chooses the right skill, template, process, or gate; the contextual playbook classifies new ideas/designs/work prompts before they become implementation; the story activation index ties Kanban epics/stories to suggested skills, templates, agent roles, and gates; the steward loop checks the active queue, repo coverage, gates, blockers, uncaptured ideas, proof/redaction requirements, and no-touch boundaries so execution does not depend on chat memory.
 
 Still later:
 

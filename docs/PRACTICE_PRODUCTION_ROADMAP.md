@@ -22,6 +22,8 @@ The AI Activation Map is the prompt-to-process routing layer. It uses `practice-
 
 The Roadmap Story Activation Index is the story-to-skill/agent routing layer. It uses `docs/ROADMAP_STORY_ACTIVATION_INDEX.md` and `practice-os/templates/story-activation-contract.md` to tie Kanban epics/stories to the right skills, templates, suggested agent roles, and gates. It guides the steward, but it does not authorize autonomous agents, global installs, public proof, hosted implementation, or repo mutation.
 
+The Contextual Activation Playbook is the idea-to-roadmap routing layer. It uses `docs/CONTEXTUAL_ACTIVATION_PLAYBOOK.md` and `practice-os/templates/contextual-idea-intake.md` so new ideas, designs, development enhancements, project work, business moves, proof candidates, research items, and automation concepts are classified before they become stories or implementation.
+
 ## Current Implemented State
 
 ### DTP
@@ -33,6 +35,7 @@ The Roadmap Story Activation Index is the story-to-skill/agent routing layer. It
 - Practice OS includes optional Future Intelligence templates for lessons, research radar items, research spikes, portfolio scorecards, agent session records, AI red-team plans, feature flag/kill switch plans, and supply-chain baselines.
 - Practice OS includes optional Workspace Efficiency templates for repo manifests, evidence indexes, decision records, workspace command-center planning, dependency maintenance, toolchain pinning, CI cache planning, and project starter baselines.
 - Practice OS includes an AI Activation Map template for routing prompt shapes to the right skill, template, gate, roadmap lane, or parked automation path.
+- Practice OS includes a Contextual Idea Intake template for progressively turning new ideas/designs/work prompts into the right story, repo lane, template, skill, gate, or parked item.
 - Practice OS includes a Story Activation Contract template, and DTP includes a Roadmap Story Activation Index so every active Kanban lane can point to the right skill/template/agent-role suggestion and gate.
 - Practice OS includes a Roadmap Steward review template for major roadmap sessions; it is enforced by `dtp practice doctor` because it protects roadmap continuity across repos.
 - Hosted DTP Phase 0 now has an accepted design-boundary doc at `docs/HOSTED_DTP_PHASE_0.md`; hosted implementation remains gated until a separate implementation request and real records exist.
