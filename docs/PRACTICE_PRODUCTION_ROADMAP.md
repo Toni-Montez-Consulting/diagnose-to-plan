@@ -66,6 +66,7 @@ The reusable verification/support automation concept is captured as the CLI Veri
 - Reference shape: CLI doctor, tool matrix, local verification, release verification, support/runtime checks, and evidence artifacts.
 - Intended use: make infrastructure observable and repeatable before building more UI.
 - The pattern is infrastructure first: each repo should explain its own gates before hosted DTP tries to persist or display them.
+- Sprint 1 verification contract lives in `docs/PRACTICE_VERIFICATION_SPINE.md`.
 - Implementation details live in `docs/CLI_VERIFICATION_AUTOMATION_PATTERN.md`.
 
 ## Outstanding Work
@@ -79,6 +80,7 @@ The reusable verification/support automation concept is captured as the CLI Veri
 - Write verification evidence to durable markdown/JSON artifacts.
 - Keep hard gates hard: redaction, COI, secret scans, auth boundaries, and production-data safety must not be hidden by advisory modes.
 - Feed evidence into hosted DTP and Client Command Rooms only after the CLI spine is reliable.
+- Add Sprint 1 tools in phases: evidence templates, Gitleaks, consulting Playwright/axe, advisory Knip, and repo doctor/matrix coverage now; Lighthouse CI, Semgrep, dependency automation, and shared GitHub Actions soon; dashboards, Storybook/Chromatic, Percy/Applitools, OpenTelemetry, k6, and PostHog-for-consulting later only when proven useful.
 
 ### Practice OS
 
@@ -129,10 +131,12 @@ The reusable verification/support automation concept is captured as the CLI Veri
 Complete these before treating the practice as ready for soft launch.
 
 1. Build the infrastructure-first verification spine.
+   - Use `docs/PRACTICE_VERIFICATION_SPINE.md` as the Sprint 1 contract.
    - Use `docs/CLI_VERIFICATION_AUTOMATION_PATTERN.md` as the implementation handoff.
    - Inventory the CLI tools available for DTP, consulting, Hub, `tm-skills`, Brother/DeMario, Omnexus, Mom nonprofit, Cam, and Greg.
    - For each repo, name the local gate, release gate, support gate, manual gates, and evidence artifact path.
    - Classify each gate as hard, advisory, or manual.
+   - Add the no-slop quality gate for public/proof-facing work: real evidence, operator voice, Steel Ledger preservation, no fake dashboards or booking links, and no unreviewed proof or AI feature without source material and eval path.
    - Keep this as docs/contract work first. Do not build hosted dashboards before the CLI gates are clear.
 
 2. Stabilize current verification.
@@ -294,7 +298,10 @@ Run these when roadmap or docs change.
 .\.venv\Scripts\python.exe -m dtp index --all
 .\.venv\Scripts\python.exe -m dtp synthesize --no-confirm
 .\.venv\Scripts\python.exe -m dtp redact check practice-os --profile practice
+gitleaks detect --no-git --source . --config .gitleaks.toml --redact --verbose
 ```
+
+If `gitleaks` is not installed locally, record that as a missing hard-gate tool in the evidence artifact instead of treating the secret scan as passed.
 
 ### tm-skills
 

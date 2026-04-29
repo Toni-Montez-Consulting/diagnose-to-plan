@@ -82,11 +82,43 @@ Prefer existing CLI tools and hosted APIs before inventing app surfaces:
 - `npm` / `pnpm`: package scripts, workspace tests, lint, typecheck, build.
 - `python`, `pytest`, `ruff`: DTP checks.
 - `playwright`: visual and flow QA where a browser matters.
+- `@axe-core/playwright`: advisory accessibility evidence alongside browser smoke tests.
+- `gitleaks`: hard secret-scanning gate; missing local binary should be reported clearly by doctor/matrix until CI or Docker fallback is added.
+- `knip`: advisory unused dependency/export/file detection; use findings as hypotheses, not deletion orders.
+- `lighthouse` / Lighthouse CI: advisory public-site performance/accessibility evidence after the route smoke baseline is stable.
+- `semgrep`: advisory static analysis until the rules are tuned for the repo.
+- Renovate or Dependabot: dependency hygiene after the local verification lanes are reliable.
 - `docker`: optional scanner/runtime fallback when local global tools are missing.
 - `az`: Azure checks when a Microsoft/Azure engagement actually needs them.
 - `stripe`, `sentry-cli`, Apple/native tooling: only in repos that own billing, observability, or mobile release responsibilities.
 
 The first version should use the CLIs already present in the repo or available through `npx`. Missing optional tools should be reported by the doctor, not turned into a new installation project.
+
+## Tooling Roadmap
+
+### Add Now
+
+- Evidence writer/templates so every meaningful run leaves a receipt.
+- Gitleaks as a hard gate across DTP, consulting, Hub, and future client-kit repos.
+- Playwright plus axe for consulting route smoke, visual QA evidence, form action checks, `/admin` noindex, and sitemap exclusion.
+- Knip as advisory cleanup evidence for consulting and Hub.
+- Doctor/matrix scripts or docs so each repo can explain its gates.
+
+### Add Soon
+
+- Lighthouse CI as advisory public-site evidence.
+- Semgrep as advisory static analysis.
+- Renovate or grouped Dependabot after local gates are stable.
+- Shared GitHub Actions workflows after repo-local commands stop shifting.
+
+### Table
+
+- Dashboards that do not display real evidence.
+- Storybook/Chromatic until components become a maintained design system.
+- Percy/Applitools until visual regression pain is real.
+- OpenTelemetry until hosted DTP/runtime complexity warrants it.
+- k6/load testing until Hub or a client runtime has meaningful load.
+- PostHog for consulting until Plausible plus intake evidence is insufficient.
 
 ## Repo Fit
 
@@ -220,9 +252,13 @@ manual_gates:
 commands:
 artifacts:
 redaction_status:
+reviewer:
+next_action:
 ```
 
 Client-facing proof packets should not include raw scanner logs, secrets, private URLs, environment values, customer data, or internal notes. Public proof should receive a redacted summary with evidence source, baseline, after-state, caveat, permission level, and reviewer.
+
+Use `practice-os/templates/verification-evidence.md` and `practice-os/templates/verification-evidence.json` as the first reusable artifact shape. If a repo writes raw scanner output, keep it internal/private unless it has been intentionally redacted.
 
 ## Value
 
