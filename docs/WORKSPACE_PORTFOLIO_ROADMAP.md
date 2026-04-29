@@ -42,7 +42,7 @@ The recommended order from the previous discussion is still valid and now more s
 4. Hosted private DTP Phase 0
 5. Public proof upgrades
 
-The first four items are now implemented to the intended boundary: `tm-skills` is activated through remote/push/dry-run checks, the Client Command Room templates exist in Practice OS, the core-plus-map CI pass is in place, and hosted private DTP Phase 0 has an accepted schema/app-boundary design. The next active item is first proof/redaction use through a real pilot.
+The first four items are now implemented to the intended boundary: `tm-skills` is activated through remote/push/dry-run checks, the Client Command Room templates exist in Practice OS, the core-plus-map CI pass is in place, and hosted private DTP Phase 0 has an accepted schema/app-boundary design. The Mom nonprofit private kit now exists locally as the first pilot; the next active work is filling it with real facts, completing the Command Room fit assessment, and capturing reviewed proof/redaction evidence.
 
 Roadmap invariant: every repo in the workspace stays on this roadmap. Some repos are core infrastructure and get touched immediately; other repos are project/product tracks and get touched when the relevant verification, proof, launch, privacy, or COI lane is ready. Nothing falls off the map just because it is not part of the current sprint.
 
@@ -553,14 +553,14 @@ Priority:
 - `tm-skills` global install and cross-tool smoke tests are still pending explicit approval.
 - Prompt id cross-validation between `hub-prompts` and `hub-registry` is a small but valuable gap.
 - `hub-registry` portfolio manifest validation still depends on sibling repo manifests that are available locally but not safely available to repo-scoped CI without explicit private-repo access.
-- The Client Command Room templates now exist, but they still need a first pilot against Mom nonprofit, Greg, Cam, or another operator workflow.
+- The Client Command Room templates now exist and the private Mom nonprofit kit includes a draft fit assessment; the assessment still needs real owner workflow facts before any portal decision.
 - Hosted DTP Phase 0 now has an accepted schema/app boundary; hosted implementation should still wait for a separate implementation request and real pilot records.
-- Public proof now has asset/redaction/permission templates; it still needs first real use and reviewed source material.
+- Public proof now has asset/redaction/permission templates and the private Mom nonprofit kit includes the first proof/redaction draft; it still needs a real claim, source evidence, permission, redaction, reviewer approval, and caveat.
 - Agent-security research is now represented here; promote specific gates into implementation docs before any deeper autonomous workflows.
 - Future Intelligence templates now exist as optional Practice OS assets, but they still need first real use before becoming required gates.
-- Workspace Efficiency templates now exist as optional Practice OS assets, and DTP has the first repo-manifest/evidence-index pilot; the shape still needs review before expanding to other repos.
-- Roadmap Steward V0 now exists as a required Practice OS template and backlog lane; it still needs a first live review during the next major roadmap execution.
-- AI Activation Map V0 now exists as a required Practice OS template; it still needs first live use to confirm that prompt routing catches the right `tm-skills`, DTP Practice OS, proof, COI, research, and repo-touch lanes.
+- Workspace Efficiency templates now exist as optional Practice OS assets, and DTP has the first accepted repo-manifest/evidence-index pilot; expand the shape to consulting, Hub, and `tm-skills` as those lanes are touched.
+- Roadmap Steward V0 now exists as a required Practice OS template and backlog lane; live steward receipts now capture hosted-DTP acceptance and the Mom nonprofit pilot kickoff.
+- AI Activation Map V0 now exists as a required Practice OS template and has been used for the roadmap/steward and Mom pilot routing; keep using it when prompt intent spans multiple lanes.
 - The roadmap now has a Kanban-style execution backlog; keep story status, Done gates, and next actions current as work moves.
 
 ## Research Additions To Roadmap
@@ -886,8 +886,8 @@ Source:
 
 Standing preflight/postflight: run the Activation Routing Map plus the Roadmap Steward review template around major roadmap sessions so the right skill/template/process activates and active stories, blockers, new ideas, proof gates, and no-touch boundaries are captured.
 
-1. Run Mom nonprofit as the first Client Operating Kit pilot and use the Command Room fit assessment before deciding on a portal.
-2. Use the proof/redaction templates on that pilot before anything moves to consulting proof.
+1. Fill the Mom nonprofit private Client Operating Kit with real context, consent, diagnose, plan, and metrics.
+2. Complete the Command Room fit assessment and proof/redaction packet before any portal or consulting proof decision.
 3. Expand repo manifests to consulting, Hub, and `tm-skills` as their lanes are touched.
 4. Add prompt id cross-validation between `hub-prompts` and `hub-registry`.
 5. Run the first adjacent-project touch pass: pick the repo whose trigger is ready first (`fitness-app`, `demario-pickleball-1`, `FamilyTrips`, or `dse-content`) and execute only its matching lane.

@@ -21,6 +21,6 @@ Current command surface:
 - `dtp vault status`
 - `dtp vault snapshot [-m MESSAGE] [--push]`
 
-`kit`, `redact`, `practice doctor`, `web`, and `vault` support the Practice OS + Client Operating Kit workflow. They stay local-first and markdown-first. `dtp web` is the local UI. `dtp vault` gives private engagement artifacts a separate git durability path without committing client records to the DTP code repo.
+`kit`, `redact`, `practice doctor`, `web`, and `vault` support the Practice OS + Client Operating Kit workflow. They stay local-first and markdown-first. `dtp kit new` creates the core kit docs plus a Command Room fit assessment and proof/redaction governance starter so every pilot begins with consent, evidence, permission, and public-proof gates. `dtp web` is the local UI. `dtp vault` gives private engagement artifacts a separate git durability path without committing client records to the DTP code repo.
 
 The production roadmap now adds a future hosted private DTP app. These commands remain the local fallback, verification, and import/export surface. See `docs/PRACTICE_PRODUCTION_ROADMAP.md`.

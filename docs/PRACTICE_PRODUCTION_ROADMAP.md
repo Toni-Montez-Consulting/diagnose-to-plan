@@ -38,6 +38,7 @@ The AI Activation Map is the prompt-to-process routing layer. It uses `practice-
 - `docs/ROADMAP_EXECUTION_BACKLOG.md` maps roadmap items into epics, stories, statuses, Done gates, and next actions.
 - `engagements/` is the gitignored private work area for Client Operating Kits.
 - `dtp kit new`, `dtp kit status`, `dtp redact check`, and `dtp practice doctor` support local Client Operating Kit workflows.
+- `dtp kit new` now scaffolds Command Room fit and proof/redaction governance docs inside each private engagement kit.
 - `dtp web` provides a local browser Workbench over the same markdown contracts.
 - `dtp vault` can initialize a separate private git repo inside `engagements/` for private engagement durability.
 
@@ -129,7 +130,7 @@ The AI Activation Map is the prompt-to-process routing layer. It uses `practice-
 
 ### Client Operating Kits
 
-- Create the Mom nonprofit kit first.
+- The private Mom nonprofit kit exists locally under `engagements/mom-nonprofit/site-rebuild/`.
 - Use Brother site, Omnexus, Cam, and Greg as structured proof tracks.
 - Capture one primary metric and one secondary metric for full kits.
 - Run redaction before any proof moves into consulting or reusable Practice OS assets.
@@ -185,16 +186,17 @@ Complete these before treating the practice as ready for soft launch.
 
 4. Start Mom nonprofit pilot.
    - Run COI and consent first.
-   - Create `mom-nonprofit/site-rebuild` kit.
-   - Fill `client-context.md`, `data-inventory.md`, `consent.md`, `diagnose.md`, and `plan.md`.
+   - `mom-nonprofit/site-rebuild` kit now exists locally in gitignored `engagements/`.
+   - Fill `client-context.md`, `data-inventory.md`, `consent.md`, `diagnose.md`, and `plan.md` with real private context.
    - Define primary and secondary metrics before building.
-   - Decide early whether Mom needs a lightweight handoff checklist or a real command room.
+   - Complete `command-room/fit-assessment.md` before deciding whether Mom needs a lightweight handoff checklist or a real command room.
    - Define support/verification evidence before launch: build status, form/intake status, owner access, handoff checklist, and uptime/manual checks.
 
 5. Define the proof packet format.
    - Use a receipt-style case-study template, not a long enterprise essay.
    - Use `practice-os/templates/proof-packet.md`, `redaction-queue-item.md`, `permission-reviewer-checklist.md`, `evidence-source-checklist.md`, `public-claim-review.md`, and `asset-inventory.md`.
    - Use this format for Mom nonprofit first, then backfill Brother/Omnexus/Cam/Greg.
+   - The private Mom kit already includes proof/redaction starter docs; fill them only with reviewed evidence and keep them internal until approved.
    - Include verification artifacts as proof sources where useful, but publish only redacted summaries.
 
 6. Keep consulting aligned.

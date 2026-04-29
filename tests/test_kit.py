@@ -26,12 +26,41 @@ def test_kit_new_creates_private_engagement_skeleton(tmp_path: Path) -> None:
     assert (
         tmp_path / "engagements" / "mom-nonprofit" / "site-rebuild" / "handoff" / "checklist.md"
     ).exists()
+    assert (
+        tmp_path
+        / "engagements"
+        / "mom-nonprofit"
+        / "site-rebuild"
+        / "command-room"
+        / "fit-assessment.md"
+    ).exists()
+    assert (
+        tmp_path
+        / "engagements"
+        / "mom-nonprofit"
+        / "site-rebuild"
+        / "proof"
+        / "proof-packet.md"
+    ).exists()
+    assert (
+        tmp_path
+        / "engagements"
+        / "mom-nonprofit"
+        / "site-rebuild"
+        / "proof"
+        / "redaction-queue-item.md"
+    ).exists()
     post = frontmatter.load(
         tmp_path / "engagements" / "mom-nonprofit" / "site-rebuild" / "diagnose.md"
     )
     assert post["data_class"] == "P2"
     assert post["confidential"] is True
     assert post["permission_level"] == "internal_only"
+    proof = frontmatter.load(
+        tmp_path / "engagements" / "mom-nonprofit" / "site-rebuild" / "proof" / "proof-packet.md"
+    )
+    assert proof["permission_level"] == "internal_only"
+    assert "No public claim approved." in proof.content
 
 
 def test_kit_status_reports_missing_readiness(tmp_path: Path) -> None:

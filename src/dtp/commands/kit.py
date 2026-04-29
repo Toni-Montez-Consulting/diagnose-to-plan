@@ -79,8 +79,25 @@ def run_kit_new(
         engagement / "plan.md": _plan(),
         engagement / "build-log.md": _build_log(),
         engagement / "decision-log.md": _decision_log(),
+        engagement / "command-room" / "fit-assessment.md": _command_room_fit_assessment(
+            client_id, engagement_id
+        ),
         engagement / "evals" / "log.md": _eval_log(),
         engagement / "handoff" / "checklist.md": _handoff_checklist(),
+        engagement / "proof" / "asset-inventory.md": _asset_inventory(client_id, engagement_id),
+        engagement / "proof" / "evidence-source-checklist.md": _evidence_source_checklist(
+            client_id, engagement_id
+        ),
+        engagement / "proof" / "permission-reviewer-checklist.md": (
+            _permission_reviewer_checklist(client_id, engagement_id)
+        ),
+        engagement / "proof" / "proof-packet.md": _proof_packet(client_id, engagement_id),
+        engagement / "proof" / "public-claim-review.md": _public_claim_review(
+            client_id, engagement_id
+        ),
+        engagement / "proof" / "redaction-queue-item.md": _redaction_queue_item(
+            client_id, engagement_id
+        ),
         engagement / "case-study" / "internal.md": _case_study_internal(),
         engagement / "case-study" / "redacted.md": _case_study_redacted(),
     }
@@ -140,8 +157,15 @@ def _status_for_client(root: Path) -> KitStatus:
                 "plan.md",
                 "build-log.md",
                 "decision-log.md",
+                "command-room/fit-assessment.md",
                 "evals/log.md",
                 "handoff/checklist.md",
+                "proof/asset-inventory.md",
+                "proof/evidence-source-checklist.md",
+                "proof/permission-reviewer-checklist.md",
+                "proof/proof-packet.md",
+                "proof/public-claim-review.md",
+                "proof/redaction-queue-item.md",
                 "case-study/internal.md",
                 "case-study/redacted.md",
             )
@@ -258,6 +282,14 @@ def _consent() -> str:
             "",
             "- not approved",
             "",
+            "## COI / Conflict Screen",
+            "",
+            "- not reviewed",
+            "",
+            "## Proof Promotion Gate",
+            "",
+            "- no public proof until permission, redaction, reviewer, evidence, and caveat pass",
+            "",
         ]
     )
 
@@ -308,6 +340,91 @@ def _decision_log() -> str:
     return "# Decision Log\n\n| Date | Decision | Why | Revisit trigger |\n|---|---|---|---|\n"
 
 
+def _command_room_fit_assessment(client_id: str, engagement_id: str) -> str:
+    return "\n".join(
+        [
+            "# Client Command Room Fit Assessment",
+            "",
+            (
+                "Use this before proposing or building a private owner surface. The default is "
+                "the smallest operating surface that helps the owner run the workflow after "
+                "delivery."
+            ),
+            "",
+            "## Project",
+            "",
+            f"- Client/project: {client_id}",
+            f"- Engagement: {engagement_id}",
+            "- Date: TBD",
+            "- Assessor: TBD",
+            "- Related pattern: docs/CLIENT_COMMAND_ROOM_PATTERN.md",
+            "",
+            "## Workflow Pain",
+            "",
+            "| Workflow | Current home | Frequency | Owner pain | Business risk | Evidence |",
+            "|---|---|---:|---|---|---|",
+            "| TBD | memory / text / email / sheet / app | TBD | TBD | TBD | TBD |",
+            "",
+            "## Recurring Operating Decisions",
+            "",
+            "| Decision | Who decides | Inputs needed | Output | Deadline or cadence |",
+            "|---|---|---|---|---|",
+            "| TBD | TBD | TBD | TBD | TBD |",
+            "",
+            "## Existing Tool Check",
+            "",
+            "| Existing tool | Already used? | Gap | Keep / replace / augment |",
+            "|---|---|---|---|",
+            "| Notion/Airtable/Sheets | TBD | TBD | TBD |",
+            "| Existing CRM/admin | TBD | TBD | TBD |",
+            "| Email or form inbox | TBD | TBD | TBD |",
+            "| Calendar/scheduler | TBD | TBD | TBD |",
+            "| Payment processor dashboard | TBD | TBD | TBD |",
+            "",
+            "## Decision",
+            "",
+            "- [ ] Build a Client Command Room",
+            "- [ ] Create a handoff checklist instead",
+            "- [ ] No private surface",
+            "- [x] Defer until the workflow pain is proven",
+            "",
+            "## Support And Verification Readiness",
+            "",
+            "| Evidence source | Exists? | Artifact path or command | Hard / advisory / manual |",
+            "|---|---|---|---|",
+            "| Build/deploy status | TBD | TBD | hard |",
+            "| Intake/form health | TBD | TBD | hard |",
+            "| Auth/owner access | TBD | TBD | manual |",
+            "| Redaction/permission status | yes | proof/ | hard |",
+            "",
+            "## Proof Potential",
+            "",
+            "- Baseline: TBD",
+            "- After-state: TBD",
+            "- Useful screenshot or walkthrough: TBD",
+            "- Metric: TBD",
+            "- Caveat: TBD",
+            "- Permission level: internal_only",
+            "- Redaction reviewer: TBD",
+            "",
+            "## Recommendation",
+            "",
+            "- Recommended path: decide after diagnose and owner workflow evidence",
+            "- Why: avoid building a portal before there is recurring operational pain",
+            (
+                "- Smallest useful first version: handoff checklist unless the assessment "
+                "proves otherwise"
+            ),
+            (
+                "- What stays manual on purpose: permission, redaction, proof approval, and "
+                "owner account access"
+            ),
+            "- Next review date: TBD",
+            "",
+        ]
+    )
+
+
 def _eval_log() -> str:
     return "\n".join(
         [
@@ -343,6 +460,285 @@ def _handoff_checklist() -> str:
             "- [ ] Client knows how to disable automations or routines.",
             "- [ ] Client knows who owns each account and subscription.",
             "- [ ] Handoff recording captured.",
+            "",
+        ]
+    )
+
+
+def _asset_inventory(client_id: str, engagement_id: str) -> str:
+    return "\n".join(
+        [
+            "# Asset Inventory",
+            "",
+            "## Engagement / Project",
+            "",
+            f"- Name: {client_id}/{engagement_id}",
+            "- Owner: TBD",
+            "- Reviewer: TBD",
+            "- Last updated: TBD",
+            "",
+            "## Assets",
+            "",
+            "| Asset | Type | Source | Sensitivity | Permission | Redaction | Proof use |",
+            "|---|---|---|---|---|---|---|",
+            (
+                "| TBD | screenshot / document / walkthrough / report | TBD | P2 | "
+                "internal_only | not_reviewed | candidate |"
+            ),
+            "",
+            "## Missing Assets",
+            "",
+            "- Baseline screenshot or walkthrough.",
+            "- After-state screenshot or walkthrough.",
+            "- Verification receipt.",
+            "",
+            "## Restricted Assets",
+            "",
+            "- None recorded.",
+            "",
+            "## Public-Safe Assets",
+            "",
+            "- None recorded.",
+            "",
+            "## Next Action",
+            "",
+            (
+                "Do not move an asset into public proof until permission, redaction, "
+                "reviewer, evidence source, and caveat are recorded."
+            ),
+            "",
+        ]
+    )
+
+
+def _evidence_source_checklist(client_id: str, engagement_id: str) -> str:
+    return "\n".join(
+        [
+            "# Evidence Source Checklist",
+            "",
+            "## Evidence",
+            "",
+            f"- Engagement/project: {client_id}/{engagement_id}",
+            "- Repo: TBD",
+            "- Branch: TBD",
+            "- Commit: TBD",
+            "- Artifact path: TBD",
+            "- CI/run link: TBD",
+            "- Reviewer: TBD",
+            "",
+            "## Source Quality",
+            "",
+            "- Local gate result: TBD",
+            "- CI gate result: TBD",
+            "- Release/support gate result: TBD",
+            "- Manual gate result: TBD",
+            "- Reproducible command: TBD",
+            "- Date captured: TBD",
+            "",
+            "## Proof Fitness",
+            "",
+            "- Supports which claim: TBD",
+            "- Baseline present: no",
+            "- After-state present: no",
+            "- Metric present: no",
+            "- Caveat present: no",
+            "- Screenshot/walkthrough present: no",
+            "- Redaction status: not_reviewed",
+            "- Permission status: internal_only",
+            "",
+            "## Decision",
+            "",
+            "- Use as proof source: later",
+            "- Reason: evidence has not been captured or reviewed yet",
+            "- Next action: capture baseline, after-state, verification receipt, and caveat",
+            "",
+        ]
+    )
+
+
+def _permission_reviewer_checklist(client_id: str, engagement_id: str) -> str:
+    return "\n".join(
+        [
+            "# Permission / Reviewer Checklist",
+            "",
+            "## Item",
+            "",
+            f"- Engagement/project: {client_id}/{engagement_id}",
+            "- Artifact or claim: TBD",
+            "- Intended use: internal",
+            "- Reviewer: TBD",
+            "",
+            "## Permission",
+            "",
+            "- Owner permission: not_requested",
+            "- Client/customer permission: not_requested",
+            "- Platform/store permission: not_applicable",
+            "- Microsoft/COI screen: not_reviewed",
+            "- Family/private data approval: not_applicable",
+            "",
+            "## Reviewer Checks",
+            "",
+            "- [ ] Evidence source is named.",
+            "- [ ] Baseline and after-state are accurate.",
+            "- [ ] Caveat is included.",
+            "- [ ] Redaction status is acceptable.",
+            "- [ ] Public claim does not overstate the result.",
+            "- [ ] Sensitive data is removed or intentionally restricted.",
+            "- [ ] Screenshots/walkthroughs are approved for intended use.",
+            "",
+            "## Decision",
+            "",
+            "- Status: parked",
+            "- Notes: keep internal until the evidence and permission gates are complete",
+            "- Next action: complete the evidence source checklist and redaction queue item",
+            "",
+        ]
+    )
+
+
+def _proof_packet(client_id: str, engagement_id: str) -> str:
+    return "\n".join(
+        [
+            "# Proof Packet",
+            "",
+            "## Proof Candidate",
+            "",
+            f"- Engagement/project: {client_id}/{engagement_id}",
+            "- Public-safe title: TBD",
+            "- Claim: TBD",
+            "- Audience: internal",
+            "- Reviewer: TBD",
+            "",
+            "## Baseline",
+            "",
+            "TBD",
+            "",
+            "## After-State",
+            "",
+            "TBD",
+            "",
+            "## Evidence",
+            "",
+            "- Source artifact: TBD",
+            "- Verification receipt: TBD",
+            "- Screenshot/walkthrough: TBD",
+            "- Metric: TBD",
+            "- Caveat: TBD",
+            "",
+            "## Permission",
+            "",
+            "- Permission level: internal_only",
+            "- Permission source: not_requested",
+            "- Reviewer: TBD",
+            "- Review date: TBD",
+            "",
+            "## Redaction",
+            "",
+            "- Redaction status: not_reviewed",
+            "- Redacted assets: none",
+            "- Remaining private material: TBD",
+            "",
+            "## Public Claim Draft",
+            "",
+            "No public claim approved.",
+            "",
+            "## What Stayed Manual On Purpose",
+            "",
+            "- Permission review.",
+            "- Redaction review.",
+            "- Reviewer approval.",
+            "",
+            "## Publish Decision",
+            "",
+            "- Status: parked",
+            "- Next action: collect source evidence before drafting public proof",
+            "",
+        ]
+    )
+
+
+def _public_claim_review(client_id: str, engagement_id: str) -> str:
+    return "\n".join(
+        [
+            "# Public Claim Review",
+            "",
+            "## Claim",
+            "",
+            "- Draft claim: TBD",
+            "- Public surface: consulting",
+            "- Audience: TBD",
+            "- Reviewer: TBD",
+            "",
+            "## Evidence",
+            "",
+            f"- Proof packet: engagements/{client_id}/{engagement_id}/proof/proof-packet.md",
+            "- Evidence source: TBD",
+            "- Baseline: TBD",
+            "- After-state: TBD",
+            "- Caveat: TBD",
+            "",
+            "## Risk Checks",
+            "",
+            "- Overclaim risk: unknown",
+            "- Private/client data risk: yes until redacted",
+            "- COI/Microsoft-adjacent risk: not_reviewed",
+            "- Revenue/customer metric risk: unknown",
+            "- App Store/platform claim risk: not_applicable",
+            "- Security/privacy claim risk: unknown",
+            "",
+            "## Approved Wording",
+            "",
+            "None.",
+            "",
+            "## Decision",
+            "",
+            "- Status: parked",
+            (
+                "- Notes: public wording requires evidence, caveat, permission, redaction, "
+                "and reviewer approval"
+            ),
+            "- Next action: complete proof packet and permission/reviewer checklist",
+            "",
+        ]
+    )
+
+
+def _redaction_queue_item(client_id: str, engagement_id: str) -> str:
+    return "\n".join(
+        [
+            "# Redaction Queue Item",
+            "",
+            "## Target",
+            "",
+            f"- Engagement/project: {client_id}/{engagement_id}",
+            "- Target type: proof_candidate",
+            "- Target pointer: proof/proof-packet.md",
+            "- Reviewer: TBD",
+            "",
+            "## Sensitivity",
+            "",
+            "- Data class: P2",
+            "- Contains client/private data: unknown",
+            "- Contains customer data: unknown",
+            "- Contains Microsoft/customer-adjacent material: unknown",
+            "- Contains secrets or credentials: unknown",
+            "",
+            "## Review",
+            "",
+            "- Status: not_started",
+            "- Permission level: internal_only",
+            "- Required changes: identify private details, remove identifiers, record caveats",
+            "",
+            "## Replacement / Redacted Version",
+            "",
+            "- Redacted pointer: case-study/redacted.md",
+            "- Summary safe to reuse: none yet",
+            "",
+            "## Decision",
+            "",
+            "- Reviewer: TBD",
+            "- Review date: TBD",
+            "- Next action: complete evidence checklist before public claim review",
             "",
         ]
     )
