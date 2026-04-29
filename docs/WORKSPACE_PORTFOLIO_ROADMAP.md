@@ -17,6 +17,7 @@ The practical thesis is:
 9. Route relevant prompts to the right skill, template, process, or gate without needing Toni to remember the activation rules.
 10. Tie roadmap/Kanban stories to the right skill, template, suggested agent role, and gate so execution can start from the story instead of from memory.
 11. Progressively classify new ideas/designs/work prompts into the right repo lane, roadmap story, skill/template, and gate before they become implementation.
+12. Keep current architecture, future state, audits, and optimization plans documented in DTP so future agents can execute without rebuilding context from chat.
 
 ## Scope
 
@@ -51,6 +52,8 @@ Roadmap invariant: every repo in the workspace stays on this roadmap. Some repos
 Execution invariant: roadmap items are tracked as epics/stories in `docs/ROADMAP_EXECUTION_BACKLOG.md`. Not every story is active today, but each item should have a status, Done gate, and next action before implementation begins.
 
 Stewardship invariant: major roadmap sessions should run the Activation Routing Map, Contextual Activation Playbook, Story Activation Index, and Roadmap Steward review before or after execution. The activation map chooses the right skill, template, process, or gate; the contextual playbook classifies new ideas/designs/work prompts before they become implementation; the story activation index ties Kanban epics/stories to suggested skills, templates, agent roles, and gates; the steward loop checks the active queue, repo coverage, gates, blockers, uncaptured ideas, proof/redaction requirements, and no-touch boundaries so execution does not depend on chat memory.
+
+Architecture invariant: DTP owns the Practice System Documentation Pack. `docs/PRACTICE_SYSTEM_ARCHITECTURE.md`, `docs/PRACTICE_SYSTEM_FUTURE_STATE.md`, `docs/PRACTICE_SYSTEM_AUDIT_AND_GAP_REVIEW.md`, and `docs/PRACTICE_SYSTEM_OPTIMIZATION_PLAN.md` describe the current system, target system, hard scrutiny, and improvement path for the whole consulting operating model. Other repos should receive local pointers later through repo touch passes, not duplicate the source-of-truth roadmap.
 
 Still later:
 
@@ -564,6 +567,8 @@ Priority:
 - Roadmap Steward V0 now exists as a required Practice OS template and backlog lane; live steward receipts now capture hosted-DTP acceptance and the Mom nonprofit pilot kickoff.
 - AI Activation Map V0 now exists as a required Practice OS template and has been used for the roadmap/steward and Mom pilot routing; keep using it when prompt intent spans multiple lanes.
 - The roadmap now has a Kanban-style execution backlog; keep story status, Done gates, and next actions current as work moves.
+- The Practice System Documentation Pack now exists in DTP; keep it synced as architecture, future-state assumptions, audit findings, and optimization priorities change.
+- Local documentation propagation is still future work: consulting, Hub, `tm-skills`, Omnexus, DeMario, FamilyTrips, DSE, engineering-playbook, `hub-prompts`, and `hub-registry` should get lightweight pointers only when their specific lanes are touched.
 
 ## Research Additions To Roadmap
 
@@ -887,6 +892,8 @@ Source:
 ## Recommended Next Execution Order From Here
 
 Standing preflight/postflight: run the Activation Routing Map plus the Roadmap Steward review template around major roadmap sessions so the right skill/template/process activates and active stories, blockers, new ideas, proof gates, and no-touch boundaries are captured.
+
+Preflight: use the Practice System Documentation Pack as the current/future/audit/optimization reference before adding major new platform, proof, agent, or cross-repo behavior.
 
 1. Fill the Mom nonprofit private Client Operating Kit with real context, consent, diagnose, plan, and metrics.
 2. Complete the Command Room fit assessment and proof/redaction packet before any portal or consulting proof decision.

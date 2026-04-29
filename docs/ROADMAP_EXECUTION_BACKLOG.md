@@ -28,6 +28,7 @@ Story rules:
 - Roadmap Steward review is a standing preflight/postflight for major roadmap sessions; it keeps ideas, gates, blockers, and repo coverage out of chat memory.
 - Activation routing is the standing prompt-to-process map; it tells future agents which skill, template, gate, or roadmap lane to use without creating autonomy.
 - Story activation is the standing story-to-skill/template/agent-role map; `docs/ROADMAP_STORY_ACTIVATION_INDEX.md` ties each epic/story family to the right assets and gates.
+- The Practice System Documentation Pack is the standing architecture/audit/optimization layer. Use it to understand the current system, target state, highest-risk gaps, and next optimization stories before creating more platform surface.
 
 ## Story Activation Contract
 
@@ -164,6 +165,18 @@ Goal: ensure every workspace repo benefits without unnecessary churn.
 | FamilyTrips privacy maintenance pass | `FamilyTrips` | Later | data validation/build/test and privacy notes complete | before new features or AI/public sharing |
 | DSE COI-aware proof pass | `dse-content` | Later | COI screen and live branch verification complete | internal/professional only |
 | Engineering playbook pointer audit | `engineering-playbook` | Later | doctrine points to DTP without duplicating roadmap ownership | after DTP contracts settle |
+
+## Epic 11: Practice System Documentation And Audit
+
+Goal: document, scrutinize, and optimize the whole consulting operating system without duplicating roadmap ownership across repos.
+
+| Story | Repo | Status | Done gate | Next action |
+|---|---|---|---|---|
+| Current architecture master doc | `diagnose-to-plan` | Done | `docs/PRACTICE_SYSTEM_ARCHITECTURE.md` names repos, flows, gates, and boundaries | keep synced with roadmap changes |
+| Future-state master doc | `diagnose-to-plan` | Done | `docs/PRACTICE_SYSTEM_FUTURE_STATE.md` defines hosted DTP, steward, self-learning, research, manifest, and agent target state | read before future platform work |
+| System audit and gap review | `diagnose-to-plan` | Done | severity-ranked findings map to follow-up stories | revisit after Mom pilot |
+| Optimization plan | `diagnose-to-plan` | Done | findings convert to epics/stories/gates/owners/sequencing | use to choose next refinements |
+| Documentation propagation lane | all workspace repos | Ready | each repo gets a lightweight pointer or local doc when its lane is touched | do not bulk-edit repos now |
 
 ## Current Active Next Queue
 

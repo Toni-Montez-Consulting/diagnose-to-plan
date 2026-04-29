@@ -24,6 +24,8 @@ The Roadmap Story Activation Index is the story-to-skill/agent routing layer. It
 
 The Contextual Activation Playbook is the idea-to-roadmap routing layer. It uses `docs/CONTEXTUAL_ACTIVATION_PLAYBOOK.md` and `practice-os/templates/contextual-idea-intake.md` so new ideas, designs, development enhancements, project work, business moves, proof candidates, research items, and automation concepts are classified before they become stories or implementation.
 
+The Practice System Documentation Pack is the architecture and audit layer for the whole consulting operating system. `docs/PRACTICE_SYSTEM_ARCHITECTURE.md` documents the current multi-repo/agent/process architecture. `docs/PRACTICE_SYSTEM_FUTURE_STATE.md` documents the hosted/steward/self-learning/research target state. `docs/PRACTICE_SYSTEM_AUDIT_AND_GAP_REVIEW.md` scrutinizes gaps and risks. `docs/PRACTICE_SYSTEM_OPTIMIZATION_PLAN.md` converts the audit into epics, stories, owners, gates, and sequencing.
+
 ## Current Implemented State
 
 ### DTP
@@ -42,6 +44,7 @@ The Contextual Activation Playbook is the idea-to-roadmap routing layer. It uses
 - Practice OS now includes proof/redaction templates for proof packets, redaction queue items, permission review, evidence-source review, public claim review, and asset inventory.
 - The first DTP repo manifest/evidence-index pilot lives in `practice-os/efficiency/`.
 - `docs/ROADMAP_EXECUTION_BACKLOG.md` maps roadmap items into epics, stories, statuses, Done gates, and next actions.
+- `docs/PRACTICE_SYSTEM_ARCHITECTURE.md`, `docs/PRACTICE_SYSTEM_FUTURE_STATE.md`, `docs/PRACTICE_SYSTEM_AUDIT_AND_GAP_REVIEW.md`, and `docs/PRACTICE_SYSTEM_OPTIMIZATION_PLAN.md` document the current system, future system, gap review, and optimization path for the whole consulting operating model.
 - `engagements/` is the gitignored private work area for Client Operating Kits.
 - `dtp kit new`, `dtp kit status`, `dtp redact check`, and `dtp practice doctor` support local Client Operating Kit workflows.
 - `dtp kit new` now scaffolds Command Room fit and proof/redaction governance docs inside each private engagement kit.
@@ -118,6 +121,7 @@ The Contextual Activation Playbook is the idea-to-roadmap routing layer. It uses
 - Keep `docs/ROADMAP_EXECUTION_BACKLOG.md` current when a roadmap story changes status.
 - Use `practice-os/templates/activation-routing-map.md` when a prompt could route to more than one skill, template, gate, or roadmap lane.
 - Use `practice-os/templates/roadmap-steward-review.md` before or after major roadmap sessions so new ideas become stories, templates, evals, proof items, research radar items, decision records, repo touch passes, or parked items.
+- Keep the Practice System Documentation Pack current when architecture, repo ownership, activation, steward loops, proof governance, or optimization priorities change.
 - Add or strengthen templates for proposal/SOW, case-study proof packet, Work Item Spec, and hosted-DTP import/export.
 - Use the Future Intelligence templates opportunistically after real delivery/research sessions; do not make them required gates until they have proven useful.
 - Use the Workspace Efficiency templates opportunistically when touching a repo; do not make manifests or command-center output required until at least one pilot proves the shape.
@@ -245,6 +249,13 @@ Complete these before treating the practice as ready for soft launch.
    - Treat the steward as a process role: it identifies the correct next story, owning repo, gates, blockers, uncaptured ideas, and no-touch boundaries.
    - Do not build `dtp steward review`, a hosted steward queue, or an agent-assisted roadmap manager until the markdown loop proves useful.
 
+12. Keep the Practice System Documentation Pack authoritative.
+   - Use `docs/PRACTICE_SYSTEM_ARCHITECTURE.md` for current-state architecture and repo boundaries.
+   - Use `docs/PRACTICE_SYSTEM_FUTURE_STATE.md` before hosted DTP, steward automation, research automation, repo manifest expansion, or agent protocol work.
+   - Use `docs/PRACTICE_SYSTEM_AUDIT_AND_GAP_REVIEW.md` to identify the highest-risk gaps before adding platform surface.
+   - Use `docs/PRACTICE_SYSTEM_OPTIMIZATION_PLAN.md` to convert findings into epics, stories, Done gates, and repo-specific execution.
+   - Propagate lightweight local pointers into other repos only when their touch lane is active.
+
 ## Mid Term
 
 Build these after the near-term documentation and pilot path are stable.
@@ -347,6 +358,7 @@ Build these only after repeated usage proves the need.
 - Dev environment pinning where tool drift has caused real failures or onboarding friction.
 - Optional plugin packaging only if the skills need to be distributed beyond Toni's local environment.
 - Heavier customer portals after the lightweight Client Command Room pattern proves value across multiple engagements.
+- Secondary repo-local documentation after the DTP master system docs settle and the relevant repo lane is touched.
 
 ## Parked
 

@@ -16,6 +16,10 @@ When another repo's docs conflict with this roadmap, treat the other doc as loca
 - `docs/03-skills.md`: current skill layout and validation boundary.
 - `docs/04-multi-repo.md`: sibling repo read/write boundaries.
 - `docs/PRACTICE_VERIFICATION_SPINE.md`: Sprint 1 gate matrix, evidence contract, tool phasing, and no-slop quality gate for DTP, consulting, and Hub.
+- `docs/PRACTICE_SYSTEM_ARCHITECTURE.md`: current-state master architecture for the consulting operating system, including repo ownership, prompt/story activation, intake, proof/redaction, verification, and agent/skill boundaries.
+- `docs/PRACTICE_SYSTEM_FUTURE_STATE.md`: future-state architecture for hosted DTP, steward automation, supervised learning, research radar, repo manifests, command-center planning, and gated agent activation.
+- `docs/PRACTICE_SYSTEM_AUDIT_AND_GAP_REVIEW.md`: severity-ranked audit of the current practice system, including proof, private durability, hosted-DTP, prompt/registry, skill-install, documentation propagation, and adjacent-repo gaps.
+- `docs/PRACTICE_SYSTEM_OPTIMIZATION_PLAN.md`: audit-to-execution plan that turns system findings into epics, stories, gates, owners, and sequencing.
 - `docs/WORKSPACE_PORTFOLIO_ROADMAP.md`: cross-workspace prioritized plan across consulting, DTP, Hub, `tm-skills`, prompt/registry repos, Omnexus, DeMario, FamilyTrips, and DSE, including value checks, current agentic-AI research additions, the Future Intelligence Layer, and the Workspace Efficiency Layer.
 - `docs/CONTEXTUAL_ACTIVATION_PLAYBOOK.md`: idea-to-roadmap routing contract for classifying new ideas, designs, development enhancements, project work, business moves, proof candidates, research items, and automation concepts.
 - `docs/ROADMAP_EXECUTION_BACKLOG.md`: Kanban-style epic/story execution view for the roadmap, with status, Done gates, and next actions.
@@ -83,6 +87,7 @@ Do not update `hub-prompts` or `hub-registry` just because the roadmap changes. 
 ## Update Rules
 
 - Practice-wide sequencing goes in DTP's `PRACTICE_PRODUCTION_ROADMAP.md`.
+- Practice system architecture, future-state design, gap audits, and optimization plans go in the `docs/PRACTICE_SYSTEM_*` pack. Keep these docs synchronized with the roadmap/backlog when the operating model changes.
 - Cross-workspace prioritization, missing-item sweeps, and research-driven additions go in `WORKSPACE_PORTFOLIO_ROADMAP.md`, then promoted into the narrower owning docs when implementation starts.
 - Cross-repo verification, support automation, and evidence contracts go in `PRACTICE_VERIFICATION_SPINE.md` for the current sprint contract and `CLI_VERIFICATION_AUTOMATION_PATTERN.md` for the reusable long-lived pattern, then repo-specific docs when implementation starts.
 - Cross-repo SDLC skill implementation goes in `TM_SKILLS_IMPLEMENTATION_ROADMAP.md` until the separate `tm-skills` repo exists, then in `tm-skills` docs.
@@ -98,4 +103,5 @@ Do not update `hub-prompts` or `hub-registry` just because the roadmap changes. 
 - Future Intelligence templates are optional until repeated usage proves they should become doctor-enforced Practice OS gates.
 - Workspace Efficiency templates are optional until a repo-manifest/evidence-index pilot proves they should become doctor-enforced Practice OS gates or repo-local standards.
 - Hosted DTP implementation must start from `docs/HOSTED_DTP_PHASE_0.md`; do not infer schema or app boundaries from chat-only context.
+- Secondary repo-local documentation should propagate later through repo touch passes. Do not bulk-update consulting, Hub, `tm-skills`, Omnexus, DeMario, FamilyTrips, DSE, engineering-playbook, `hub-prompts`, or `hub-registry` just because the DTP master system docs changed.
 - Historical docs should be labeled or cross-linked when their assumptions are superseded.
