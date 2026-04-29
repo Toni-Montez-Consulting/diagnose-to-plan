@@ -13,6 +13,8 @@ The practical thesis is:
 5. Add deeper agent automation only after permissions, evals, evidence, and human-review gates exist.
 6. Turn delivery, research, failures, and agent-session receipts into compounding practice knowledge.
 7. Reduce repeated discovery, setup drift, CI waste, and handoff friction across the whole workspace.
+8. Keep roadmap execution, idea capture, gates, and repo coverage in stewarded artifacts instead of Toni's memory.
+9. Route relevant prompts to the right skill, template, process, or gate without needing Toni to remember the activation rules.
 
 ## Scope
 
@@ -45,6 +47,8 @@ The first four items are now implemented to the intended boundary: `tm-skills` i
 Roadmap invariant: every repo in the workspace stays on this roadmap. Some repos are core infrastructure and get touched immediately; other repos are project/product tracks and get touched when the relevant verification, proof, launch, privacy, or COI lane is ready. Nothing falls off the map just because it is not part of the current sprint.
 
 Execution invariant: roadmap items are tracked as epics/stories in `docs/ROADMAP_EXECUTION_BACKLOG.md`. Not every story is active today, but each item should have a status, Done gate, and next action before implementation begins.
+
+Stewardship invariant: major roadmap sessions should run the Activation Routing Map and Roadmap Steward review before or after execution. The activation map chooses the right skill, template, process, or gate; the steward loop checks the active queue, repo coverage, gates, blockers, uncaptured ideas, proof/redaction requirements, and no-touch boundaries so execution does not depend on chat memory.
 
 Still later:
 
@@ -173,6 +177,29 @@ Initial sources:
 - Nx affected/CI waste reduction: https://nx.dev/docs/concepts/ci-concepts/reduce-waste
 - asdf tool version manager: https://asdf-vm.com/guide/introduction.html
 - Dev Containers: https://containers.dev/
+
+## Roadmap Steward Loop
+
+Status: lightweight Practice OS workflow, not an autonomous agent.
+
+Purpose: reduce Toni's memory burden by making a repeatable steward role responsible for keeping roadmap execution aligned across repos, gates, ideas, proof requirements, and follow-up records.
+
+Operating rules:
+
+- DTP remains the source of truth for practice roadmap execution.
+- `practice-os/templates/activation-routing-map.md` is the prompt-to-process map that decides which skill, template, gate, or roadmap lane should activate.
+- `docs/ROADMAP_EXECUTION_BACKLOG.md` remains the Kanban surface for epics, stories, statuses, Done gates, and next actions.
+- Repo manifests and evidence indexes help the steward avoid rediscovering repo purpose and verification commands.
+- The steward may propose stories, templates, evals, proof items, research radar items, decision records, repo touch passes, or parked items.
+- The steward may not perform autonomous repo edits, global skill installs, public proof promotion, hosted app implementation, or write-enabled agent work without the existing gates.
+
+Implementation ladder:
+
+1. V0: markdown template and roadmap/backlog lane.
+2. V0.5: activation routing map for prompt-to-skill/template/process decisions.
+3. V1: `dtp steward review` command that reads workspace/backlog docs and reports coverage or drift without mutating repos.
+4. V2: optional hosted DTP steward queue after hosted DTP Phase 0 exists.
+5. V3: agent-assisted roadmap manager only after manual steward reviews, evals, guardrails, and human approval prove the workflow.
 
 ## Sprint 2: Practice Platform Foundations
 
@@ -532,6 +559,8 @@ Priority:
 - Agent-security research is now represented here; promote specific gates into implementation docs before any deeper autonomous workflows.
 - Future Intelligence templates now exist as optional Practice OS assets, but they still need first real use before becoming required gates.
 - Workspace Efficiency templates now exist as optional Practice OS assets, and DTP has the first repo-manifest/evidence-index pilot; the shape still needs review before expanding to other repos.
+- Roadmap Steward V0 now exists as a required Practice OS template and backlog lane; it still needs a first live review during the next major roadmap execution.
+- AI Activation Map V0 now exists as a required Practice OS template; it still needs first live use to confirm that prompt routing catches the right `tm-skills`, DTP Practice OS, proof, COI, research, and repo-touch lanes.
 - The roadmap now has a Kanban-style execution backlog; keep story status, Done gates, and next actions current as work moves.
 
 ## Research Additions To Roadmap
@@ -854,6 +883,8 @@ Source:
 - Forced monorepo migration for repos that are intentionally separate.
 
 ## Recommended Next Execution Order From Here
+
+Standing preflight/postflight: run the Activation Routing Map plus the Roadmap Steward review template around major roadmap sessions so the right skill/template/process activates and active stories, blockers, new ideas, proof gates, and no-touch boundaries are captured.
 
 1. Review and accept `docs/HOSTED_DTP_PHASE_0.md`, the proof/redaction templates, and the DTP repo-manifest/evidence-index pilot.
 2. Run Mom nonprofit as the first Client Operating Kit pilot and use the Command Room fit assessment before deciding on a portal.

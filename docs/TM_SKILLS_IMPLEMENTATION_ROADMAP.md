@@ -280,6 +280,8 @@ skills/<skill>/evals/output.md
 
 `trigger.json` should include prompts that should trigger the skill and prompts that should not. `output.md` should describe the expected behavior, not a brittle exact transcript.
 
+When a skill trigger, trigger eval, or expected behavior changes, update DTP's `practice-os/templates/activation-routing-map.md` or record in the handoff why the activation map did not need a change. The `tm-skills` descriptions remain the actual tool trigger source after install; the DTP map is the cross-system routing catalog.
+
 `MISFIRES.md` records real misses:
 
 ```markdown

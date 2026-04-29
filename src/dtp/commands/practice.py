@@ -15,8 +15,10 @@ REQUIRED_POLICIES = (
     "client-consent-checklist.md",
 )
 REQUIRED_TEMPLATES = (
+    "activation-routing-map.md",
     "diagnose-memo.md",
     "plan-roadmap.md",
+    "roadmap-steward-review.md",
     "work-item-spec.md",
     "client-operating-kit.md",
     "client-command-room-fit-assessment.md",

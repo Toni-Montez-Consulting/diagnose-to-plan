@@ -25,6 +25,8 @@ Story rules:
 - Docs/templates/design-boundary work counts as implementation when the roadmap calls for a design or governance artifact.
 - Hosted app, agent automation, public proof, and cross-repo command runners require accepted boundary docs before code.
 - Project repos stay separate. A story can touch a repo only when its lane is ready.
+- Roadmap Steward review is a standing preflight/postflight for major roadmap sessions; it keeps ideas, gates, blockers, and repo coverage out of chat memory.
+- Activation routing is the standing prompt-to-process map; it tells future agents which skill, template, gate, or roadmap lane to use without creating autonomy.
 
 ## Epic 1: Reusable Agent SDLC Layer
 
@@ -103,7 +105,20 @@ Goal: reduce rediscovery, setup drift, CI waste, and handoff friction.
 | Affected-only verification | DTP/Hub first | Later | hard gates are reliably encoded per repo | keep advisory until proven |
 | Dependency maintenance policy | each repo | Later | grouping/schedule/approval rules accepted | do not enable bots broadly yet |
 
-## Epic 7: Future Intelligence Layer
+## Epic 7: Roadmap Steward Loop
+
+Goal: make roadmap execution reliable without relying on Toni's memory or a fully autonomous manager.
+
+| Story | Repo | Status | Done gate | Next action |
+|---|---|---|---|---|
+| Roadmap Steward V0 template and lane | `diagnose-to-plan` | Done | steward template exists, practice doctor enforces it, roadmap/backlog explain the loop | use as standing preflight/postflight |
+| AI Activation Map V0 | `diagnose-to-plan` | Done | activation map exists, practice doctor enforces it, and docs explain prompt routing | use with Roadmap Steward reviews |
+| First live Roadmap Steward review | `diagnose-to-plan` | Active next | one review records current next story, repo lane, gates, blockers, uncaptured ideas, and no-touch boundaries | run before or after the next major roadmap execution |
+| `dtp steward review` command | `diagnose-to-plan` | Later | command reads workspace/backlog docs and reports coverage or drift without mutating repos | implement only after manual template proves useful |
+| Hosted steward queue | hosted DTP | Later | accepted hosted DTP can track steward review items, blockers, and follow-ups | wait for hosted DTP Phase 0 implementation |
+| Agent-assisted roadmap manager | DTP/Hub future | Parked | evals, guardrails, proof gates, and human approval exist | no autonomous edits or status changes |
+
+## Epic 8: Future Intelligence Layer
 
 Goal: turn delivery, failures, research, and agent sessions into supervised learning.
 
@@ -115,7 +130,7 @@ Goal: turn delivery, failures, research, and agent sessions into supervised lear
 | Eval garden | `hub-prompts`, `tm-skills`, DTP | Later | real misfires become fixtures | wait for misfire history |
 | Red-team lab | Hub/DTP future agent workflows | Later | adversarial tests exist before write-enabled automation | keep before autonomy |
 
-## Epic 8: First Client Operating Kit Pilot
+## Epic 9: First Client Operating Kit Pilot
 
 Goal: run one real engagement through the Practice OS before building more platform surface.
 
@@ -127,7 +142,7 @@ Goal: run one real engagement through the Practice OS before building more platf
 | Handoff/runbook | `diagnose-to-plan` plus project repo | Ready | owner-safe handoff exists | after build scope is known |
 | Public proof promotion | `consulting` | Blocked | permission, redaction, reviewer, evidence, and caveat all approved | no auto-publish |
 
-## Epic 9: Adjacent Project Touch Lanes
+## Epic 10: Adjacent Project Touch Lanes
 
 Goal: ensure every workspace repo benefits without unnecessary churn.
 
@@ -140,6 +155,8 @@ Goal: ensure every workspace repo benefits without unnecessary churn.
 | Engineering playbook pointer audit | `engineering-playbook` | Later | doctrine points to DTP without duplicating roadmap ownership | after DTP contracts settle |
 
 ## Current Active Next Queue
+
+Standing preflight/postflight: use `practice-os/templates/activation-routing-map.md` and `practice-os/templates/roadmap-steward-review.md` for major roadmap sessions so the right skill/template/process is selected and new ideas, blockers, repo lanes, gates, and no-touch boundaries are captured before memory drift.
 
 1. Review and accept `docs/HOSTED_DTP_PHASE_0.md` and the DTP efficiency pilot.
 2. Run the Mom nonprofit Client Operating Kit pilot privately.

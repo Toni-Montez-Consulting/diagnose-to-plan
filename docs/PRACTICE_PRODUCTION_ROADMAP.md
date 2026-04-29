@@ -16,6 +16,10 @@ The Workspace Efficiency Layer is also captured in `docs/WORKSPACE_PORTFOLIO_ROA
 
 The Kanban execution view is captured in `docs/ROADMAP_EXECUTION_BACKLOG.md`. The roadmap owns priority and strategy; the backlog owns epic/story status, Done gates, and next actions.
 
+The Roadmap Steward loop is the lightweight manager for this system. It uses `practice-os/templates/roadmap-steward-review.md` to keep active stories, repo lanes, gates, blockers, new ideas, and no-touch boundaries in artifacts instead of Toni's memory. It is a supervised workflow, not an autonomous agent.
+
+The AI Activation Map is the prompt-to-process routing layer. It uses `practice-os/templates/activation-routing-map.md` to decide whether a prompt should activate a `tm-skills` skill, DTP Practice OS skill, Practice OS template, roadmap/backlog story, proof/redaction gate, COI/privacy gate, research/eval/lesson artifact, repo touch pass, or parked automation path.
+
 ## Current Implemented State
 
 ### DTP
@@ -26,6 +30,8 @@ The Kanban execution view is captured in `docs/ROADMAP_EXECUTION_BACKLOG.md`. Th
 - Practice OS includes Client Command Room fit/spec templates so future engagements can decide between a command room, a handoff checklist, no private surface, or a deferred revisit before building portal UI.
 - Practice OS includes optional Future Intelligence templates for lessons, research radar items, research spikes, portfolio scorecards, agent session records, AI red-team plans, feature flag/kill switch plans, and supply-chain baselines.
 - Practice OS includes optional Workspace Efficiency templates for repo manifests, evidence indexes, decision records, workspace command-center planning, dependency maintenance, toolchain pinning, CI cache planning, and project starter baselines.
+- Practice OS includes an AI Activation Map template for routing prompt shapes to the right skill, template, gate, roadmap lane, or parked automation path.
+- Practice OS includes a Roadmap Steward review template for major roadmap sessions; it is enforced by `dtp practice doctor` because it protects roadmap continuity across repos.
 - Hosted DTP Phase 0 now has a design-boundary doc at `docs/HOSTED_DTP_PHASE_0.md`; hosted implementation remains gated.
 - Practice OS now includes proof/redaction templates for proof packets, redaction queue items, permission review, evidence-source review, public claim review, and asset inventory.
 - The first DTP repo manifest/evidence-index pilot lives in `practice-os/efficiency/`.
@@ -103,6 +109,8 @@ The Kanban execution view is captured in `docs/ROADMAP_EXECUTION_BACKLOG.md`. Th
 
 - Keep policies current: data classification, COI, redaction, kill switch, no-secrets-in-git, and client consent.
 - Keep `docs/ROADMAP_EXECUTION_BACKLOG.md` current when a roadmap story changes status.
+- Use `practice-os/templates/activation-routing-map.md` when a prompt could route to more than one skill, template, gate, or roadmap lane.
+- Use `practice-os/templates/roadmap-steward-review.md` before or after major roadmap sessions so new ideas become stories, templates, evals, proof items, research radar items, decision records, repo touch passes, or parked items.
 - Add or strengthen templates for proposal/SOW, case-study proof packet, Work Item Spec, and hosted-DTP import/export.
 - Use the Future Intelligence templates opportunistically after real delivery/research sessions; do not make them required gates until they have proven useful.
 - Use the Workspace Efficiency templates opportunistically when touching a repo; do not make manifests or command-center output required until at least one pilot proves the shape.
@@ -223,6 +231,12 @@ Complete these before treating the practice as ready for soft launch.
    - Keep affected-only checks advisory until repo manifests, hard gates, and release/proof boundaries are clear.
    - Do not add shared CI, dependency bots, or toolchain pinning everywhere until the pilot proves the value.
 
+11. Use Roadmap Steward V0 as the operating loop.
+   - Use the activation map first when prompt intent is ambiguous or cross-repo.
+   - Run the steward review template around major roadmap sessions.
+   - Treat the steward as a process role: it identifies the correct next story, owning repo, gates, blockers, uncaptured ideas, and no-touch boundaries.
+   - Do not build `dtp steward review`, a hosted steward queue, or an agent-assisted roadmap manager until the markdown loop proves useful.
+
 ## Mid Term
 
 Build these after the near-term documentation and pilot path are stable.
@@ -317,6 +331,8 @@ Build these only after repeated usage proves the need.
 - SLSA/OpenSSF Scorecard, CycloneDX SBOMs, signed attestations, and broader supply-chain evidence where repo risk and release cadence justify the ceremony.
 - OpenFeature-style feature flag standardization after flags become a recurring cross-repo pattern.
 - Workspace Command Center implementation after repo manifests and evidence indexes prove useful.
+- `dtp steward review` after the markdown Roadmap Steward template has been used enough to prove the checks and outputs.
+- Hosted steward queue or agent-assisted roadmap manager after hosted DTP, evals, guardrails, and human approval gates exist.
 - Affected-only verification after hard gates are reliably encoded per repo.
 - Shared GitHub Actions after repeated stable workflow patterns exist across at least three repos.
 - Dependency maintenance automation after grouping, schedule, and approval rules are accepted.

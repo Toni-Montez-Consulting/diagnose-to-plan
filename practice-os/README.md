@@ -16,10 +16,18 @@ Rules:
 - Use `extracts/` for raw DTP pattern extraction and `practice-os/patterns/` for reusable judgment.
 - No credentials, client financial specifics, raw intake, Microsoft confidential information, or unreviewed case-study claims.
 
+Activation routing:
+
+- `templates/activation-routing-map.md` maps prompt shapes to the right `tm-skills` skill, DTP Practice OS skill, template, roadmap lane, proof gate, COI gate, research/eval artifact, repo touch pass, or parked automation path.
+
 Command-room templates:
 
 - `templates/client-command-room-fit-assessment.md` decides whether to build a command room, use a handoff checklist, skip the private surface, or defer.
 - `templates/client-command-room-spec.md` defines owner dashboard, owner tasks, business roadmap, developer roadmap, handoff/rules, and placeholder-only support/verification surfaces.
+
+Roadmap stewardship template:
+
+- `templates/roadmap-steward-review.md` keeps roadmap execution, repo coverage, active-next decisions, idea capture, and process compliance out of chat memory and inside reviewable artifacts.
 
 Proof and redaction templates:
 
