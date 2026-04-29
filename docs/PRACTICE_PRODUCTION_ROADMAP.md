@@ -139,7 +139,7 @@ Complete these before treating the practice as ready for soft launch.
 1. Build the infrastructure-first verification spine.
    - Use `docs/PRACTICE_VERIFICATION_SPINE.md` as the Sprint 1 contract.
    - Use `docs/CLI_VERIFICATION_AUTOMATION_PATTERN.md` as the implementation handoff.
-   - Inventory the CLI tools available for DTP, consulting, Hub, `tm-skills`, Brother/DeMario, Omnexus, Mom nonprofit, Cam, and Greg.
+   - Inventory the CLI tools available for DTP, consulting, Hub, `tm-skills`, `engineering-playbook`, `hub-prompts`, `hub-registry`, Brother/DeMario, Omnexus, FamilyTrips, DSE, Mom nonprofit, Cam, and Greg.
    - For each repo, name the local gate, release gate, support gate, manual gates, and evidence artifact path.
    - Classify each gate as hard, advisory, or manual.
    - Add the no-slop quality gate for public/proof-facing work: real evidence, operator voice, Steel Ledger preservation, no fake dashboards or booking links, and no unreviewed proof or AI feature without source material and eval path.
@@ -216,26 +216,33 @@ Build these after the near-term documentation and pilot path are stable.
 4. Project proof tracks.
    - Brother site: local business launch proof and handoff pattern.
    - Omnexus: founder/product/operator proof and App Store/product hardening evidence.
+   - FamilyTrips: private product maintenance and privacy-first verification; not public proof unless explicit permission and purpose exist.
+   - DSE content: internal/professional proof candidate only after COI, permission, and redaction review.
    - Cam app: Builder Launch Sprint proof with decision clarity and scope control.
    - Greg app/site: second builder/operator pilot once scope is clearer.
    - Consulting site: public proof layer that receives only reviewed redacted packets.
    - Hub: intake/runtime support, not Client Operating Kit storage.
    - Each project should identify its own CLI verification/support lane before its proof packet is finalized.
 
-5. Business ops.
+5. Workspace coverage pass.
+   - Every workspace repo gets an eventual touch: verification, roadmap alignment, CI maintenance, proof review, privacy review, COI review, or scoped feature planning.
+   - Do not force product work into a repo just because it is listed.
+   - Use `docs/WORKSPACE_PORTFOLIO_ROADMAP.md` as the master coverage queue.
+
+6. Business ops.
    - Finalize offer architecture: AI Upgrade Audit, Launch Sprint, Assistant/Workflow Kit, Operating System install.
    - Finalize proposal/SOW template and pricing discipline.
    - Add "what I will not build" filters to reduce bad-fit leads.
    - Add scheduling only when the real booking path exists.
 
-6. `tm-skills` canary and overlays.
+7. `tm-skills` canary and overlays.
    - Pin `tm-skills` into one low-risk repo after global discovery works.
    - Use consulting or `demario-pickleball-1` as the first canary only if duplicate-skill behavior is clear.
    - Add stack overlays after Phase 1 proves useful: `stack-astro`, `stack-nextjs`, `stack-swift-ios`, `architecture-doc`, and `codebase-audit`.
    - Keep stack overlays thin. They should compose with the five base skills, not duplicate them.
    - Add a `verification-toolkit` or `release-evidence` overlay only after the DTP CLI pattern has been used in at least two repos.
 
-7. Client Command Room pilot.
+8. Client Command Room pilot.
    - Use the DeMario admin portal pattern plus the Practice OS fit/spec templates.
    - Use the Mom nonprofit pilot to test whether the command-room model helps a non-technical operator.
    - Add command-room proof to consulting only after screenshots/walkthroughs are redacted and permissioned.

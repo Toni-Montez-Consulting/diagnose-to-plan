@@ -38,7 +38,9 @@ The recommended order from the previous discussion is still valid and now more s
 4. Hosted private DTP Phase 0
 5. Public proof upgrades
 
-The first two items are now implemented to the intended boundary: `tm-skills` is activated through remote/push/dry-run checks, and the Client Command Room templates exist in Practice OS. The next active item is thin CI.
+The first three items are now implemented to the intended boundary: `tm-skills` is activated through remote/push/dry-run checks, the Client Command Room templates exist in Practice OS, and the core-plus-map CI pass is in place. The next active item is hosted private DTP Phase 0.
+
+Roadmap invariant: every repo in the workspace stays on this roadmap. Some repos are core infrastructure and get touched immediately; other repos are project/product tracks and get touched when the relevant verification, proof, launch, privacy, or COI lane is ready. Nothing falls off the map just because it is not part of the current sprint.
 
 Still later:
 
@@ -160,6 +162,26 @@ Every workspace repo benefits, but not every repo needs a CI change in this stor
 | `demario-pickleball-1` | Client Command Room reference and local-business proof track | Alignment only; existing CI remains owner | Manual launch gates, venue rules, Node 24 maintenance |
 | `FamilyTrips` | Private family planning app | Alignment only | Privacy-first `validate:data`, build, and tests before feature work |
 | `dse-content` | Microsoft/internal readiness and workflow proof track | Alignment only | COI-aware internal proof and live-branch verification before any public reuse |
+
+### Eventual Touch Roadmap By Repo
+
+This is the master coverage queue. Each repo gets at least one explicit future pass, but the pass should match the repo's role.
+
+| Repo | Eventual touch pass | Trigger | Output |
+|---|---|---|---|
+| `diagnose-to-plan` | Hosted DTP Phase 0 and proof/redaction governance | Current Sprint 2 sequence | Schema/app-boundary doc, proof queue templates, later private app shell |
+| `consulting` | Public proof upgrade and route/visual verification expansion | Proof packet and redaction queue exist | Receipt-style proof pages, noindex/admin checks, optional route CI |
+| `hub` | Runtime hardening and prompt/registry consistency | After core CI is stable | v0.4 hardening notes, prompt id cross-validation, support checks |
+| `tm-skills` | Global install and discovery smoke test | Explicit approval to run install | Installed/reloaded skills, discovery evidence, one canary decision |
+| `engineering-playbook` | Doctrine refresh and pointer audit | After DTP Phase 0/proof contracts settle | Updated general doctrine only where DTP decisions should become reusable principles |
+| `hub-prompts` | Prompt eval/golden fixture pass | After Hub cross-validation design | High-value prompt fixtures and versioning rules |
+| `hub-registry` | Cross-repo prompt id and manifest validation pass | After private sibling-repo CI access is decided | Prompt id validation and safe manifest validation lane |
+| `fitness-app` / Omnexus | Verification cockpit review and launch-stability pass | After active PR/branch work is human-reviewed | Merge/readiness decision, reusable verification lessons, redacted proof candidates |
+| `demario-pickleball-1` | Launch/Command Room proof pass | After manual launch gates and permission are handled | Owner-safe proof packet, venue-routing maintenance, Node 24 CI maintenance |
+| `FamilyTrips` | Privacy-first maintenance pass | Before adding features or AI/public sharing | Data validation/build/test status, privacy/data ownership notes, lightweight CI decision |
+| `dse-content` | COI-aware internal proof and workflow maintenance pass | Before any DSE material is reused publicly or professionally | COI screen, redaction/permission notes, live-branch verification |
+
+No repo should receive a platform-style build just to satisfy this table. A "touch" can be a verification pass, roadmap/doc alignment, CI maintenance, privacy review, proof packet, launch gate, or scoped feature plan.
 
 ### Story 4: Hosted DTP Phase 0 Schema And App Boundary
 
@@ -561,5 +583,6 @@ Source:
 2. Add proof packet and redaction queue templates.
 3. Run Mom nonprofit as the first Client Operating Kit pilot and use the Command Room fit assessment before deciding on a portal.
 4. Add prompt id cross-validation between `hub-prompts` and `hub-registry`.
-5. Use DeMario command room and Omnexus verification toolkit as proof/reference material only after permission/redaction review.
-6. Start hosted DTP implementation only after the schema, evidence contract, and redaction/proof queue are accepted.
+5. Run the first adjacent-project touch pass: pick the repo whose trigger is ready first (`fitness-app`, `demario-pickleball-1`, `FamilyTrips`, or `dse-content`) and execute only its matching lane.
+6. Use DeMario command room and Omnexus verification toolkit as proof/reference material only after permission/redaction review.
+7. Start hosted DTP implementation only after the schema, evidence contract, and redaction/proof queue are accepted.
