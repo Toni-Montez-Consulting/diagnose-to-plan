@@ -50,5 +50,5 @@ review_status: draft
 
 - Lane: hosted DTP Phase 0 and proof/redaction governance
 - Trigger: current Sprint 2 sequence
-- Blocker: design boundary and proof/redaction templates need review before hosted implementation
-- Next action: review `docs/HOSTED_DTP_PHASE_0.md` and use proof/redaction templates on the next pilot
+- Blocker: hosted implementation still needs a separate implementation request; public proof still needs permission/redaction/reviewer approval
+- Next action: use proof/redaction templates on the Mom nonprofit pilot, then expand manifests to consulting, Hub, and `tm-skills`

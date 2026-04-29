@@ -25,4 +25,6 @@ This keeps the practice architecture clean:
 - DTP owns Client Operating Kits, methodology, redaction/COI, proof governance, pattern promotion, and hosted engagement-state planning.
 - Project repos keep their own product/app truth.
 
-The hosted implementation remains gated until `docs/HOSTED_DTP_PHASE_0.md`, proof/redaction templates, and the first DTP repo manifest/evidence-index pilot are reviewed.
+The design boundary, proof/redaction templates, and first DTP repo manifest/evidence-index pilot were accepted on 2026-04-29 in `practice-os/steward/2026-04-29-hosted-dtp-phase-0-acceptance-review.md`.
+
+Hosted implementation remains gated until there is a separate implementation request and the Mom nonprofit or another real pilot creates records worth persisting.

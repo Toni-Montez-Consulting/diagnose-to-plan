@@ -72,9 +72,9 @@ Goal: define and later build the private app foundation for engagements, artifac
 
 | Story | Repo | Status | Done gate | Next action |
 |---|---|---|---|---|
-| Phase 0 schema/app-boundary design | `diagnose-to-plan` | Review | `docs/HOSTED_DTP_PHASE_0.md` accepted | human review/acceptance |
-| Boundary decision record | `diagnose-to-plan` | Review | `decisions/0004-hosted-dtp-private-practice-os-boundary.md` accepted | review with Phase 0 doc |
-| Hosted DTP schema/app-shell implementation | `diagnose-to-plan` | Blocked | private auth/RLS/storage shell reads real records, no dashboard theater | wait for design acceptance |
+| Phase 0 schema/app-boundary design | `diagnose-to-plan` | Done | `docs/HOSTED_DTP_PHASE_0.md` accepted | use as implementation boundary later |
+| Boundary decision record | `diagnose-to-plan` | Done | `decisions/0004-hosted-dtp-private-practice-os-boundary.md` accepted | preserve boundary |
+| Hosted DTP schema/app-shell implementation | `diagnose-to-plan` | Ready | private auth/RLS/storage shell reads real records, no dashboard theater | implement only after Mom pilot/proof workflow gives real records |
 | Import/export contract | `diagnose-to-plan` | Ready | local markdown kits can round-trip with hosted records | implement with app shell |
 | MCP recall | `diagnose-to-plan` | Later | 2-3 real engagements make manual recall painful | keep deferred |
 
@@ -97,7 +97,7 @@ Goal: reduce rediscovery, setup drift, CI waste, and handoff friction.
 
 | Story | Repo | Status | Done gate | Next action |
 |---|---|---|---|---|
-| DTP repo manifest/evidence-index pilot | `diagnose-to-plan` | Review | pilot shape accepted as useful | review after current docs settle |
+| DTP repo manifest/evidence-index pilot | `diagnose-to-plan` | Done | pilot shape accepted as useful | expand to consulting, Hub, and `tm-skills` when their lanes are touched |
 | Consulting repo manifest | `consulting` | Ready | manifest names gates, deploy target, proof lane, and data boundaries | create after DTP pilot accepted |
 | Hub repo manifest | `hub` | Ready | manifest names runtime gates, Supabase/Vercel boundaries, and prompt/run ownership | create after DTP pilot accepted |
 | `tm-skills` repo manifest | `tm-skills` | Ready | manifest names install gates and global-skill boundaries | create after DTP pilot accepted |
@@ -113,7 +113,7 @@ Goal: make roadmap execution reliable without relying on Toni's memory or a full
 |---|---|---|---|---|
 | Roadmap Steward V0 template and lane | `diagnose-to-plan` | Done | steward template exists, practice doctor enforces it, roadmap/backlog explain the loop | use as standing preflight/postflight |
 | AI Activation Map V0 | `diagnose-to-plan` | Done | activation map exists, practice doctor enforces it, and docs explain prompt routing | use with Roadmap Steward reviews |
-| First live Roadmap Steward review | `diagnose-to-plan` | Active next | one review records current next story, repo lane, gates, blockers, uncaptured ideas, and no-touch boundaries | run before or after the next major roadmap execution |
+| First live Roadmap Steward review | `diagnose-to-plan` | Done | one review records current next story, repo lane, gates, blockers, uncaptured ideas, and no-touch boundaries | repeat before Mom nonprofit private kit |
 | `dtp steward review` command | `diagnose-to-plan` | Later | command reads workspace/backlog docs and reports coverage or drift without mutating repos | implement only after manual template proves useful |
 | Hosted steward queue | hosted DTP | Later | accepted hosted DTP can track steward review items, blockers, and follow-ups | wait for hosted DTP Phase 0 implementation |
 | Agent-assisted roadmap manager | DTP/Hub future | Parked | evals, guardrails, proof gates, and human approval exist | no autonomous edits or status changes |
@@ -158,10 +158,10 @@ Goal: ensure every workspace repo benefits without unnecessary churn.
 
 Standing preflight/postflight: use `practice-os/templates/activation-routing-map.md` and `practice-os/templates/roadmap-steward-review.md` for major roadmap sessions so the right skill/template/process is selected and new ideas, blockers, repo lanes, gates, and no-touch boundaries are captured before memory drift.
 
-1. Review and accept `docs/HOSTED_DTP_PHASE_0.md` and the DTP efficiency pilot.
-2. Run the Mom nonprofit Client Operating Kit pilot privately.
-3. Use the Command Room fit assessment before deciding on any portal.
-4. Use proof/redaction templates on the first proof candidate.
+1. Run the Mom nonprofit Client Operating Kit pilot privately.
+2. Use the Command Room fit assessment before deciding on any portal.
+3. Use proof/redaction templates on the first proof candidate.
+4. Expand repo manifests to consulting, Hub, and `tm-skills` as those lanes are touched.
 5. Add Hub prompt/registry cross-validation after the pilot or when Hub resumes.
 
 ## Answer To The Kanban Question

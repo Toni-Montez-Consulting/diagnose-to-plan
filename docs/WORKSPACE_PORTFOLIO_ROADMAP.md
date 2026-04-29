@@ -42,7 +42,7 @@ The recommended order from the previous discussion is still valid and now more s
 4. Hosted private DTP Phase 0
 5. Public proof upgrades
 
-The first four items are now implemented to the intended boundary: `tm-skills` is activated through remote/push/dry-run checks, the Client Command Room templates exist in Practice OS, the core-plus-map CI pass is in place, and hosted private DTP Phase 0 has a schema/app-boundary design. The next active item is first proof/redaction use through a real pilot.
+The first four items are now implemented to the intended boundary: `tm-skills` is activated through remote/push/dry-run checks, the Client Command Room templates exist in Practice OS, the core-plus-map CI pass is in place, and hosted private DTP Phase 0 has an accepted schema/app-boundary design. The next active item is first proof/redaction use through a real pilot.
 
 Roadmap invariant: every repo in the workspace stays on this roadmap. Some repos are core infrastructure and get touched immediately; other repos are project/product tracks and get touched when the relevant verification, proof, launch, privacy, or COI lane is ready. Nothing falls off the map just because it is not part of the current sprint.
 
@@ -282,7 +282,7 @@ Every workspace repo benefits, but not every repo needs a CI change in this stor
 
 | Repo | Improvement lane | Story 3 touch | Next gate |
 |---|---|---|---|
-| `diagnose-to-plan` | Practice OS, evidence contracts, redaction, hosted-DTP planning | Thin Python/Practice OS CI plus roadmap alignment | Review Phase 0 boundary and use proof/redaction templates on first pilot |
+| `diagnose-to-plan` | Practice OS, evidence contracts, redaction, hosted-DTP planning | Thin Python/Practice OS CI plus roadmap alignment | Use proof/redaction templates on first pilot |
 | `consulting` | Public storefront, proof surface, Hub intake path | Thin build and secret-scan CI | First redacted proof packet and optional route CI expansion |
 | `hub` | Runtime intake, console records, health, prompts/runs | Existing CI/security reviewed; no churn | Prompt/registry cross-validation and v0.4 hardening |
 | `tm-skills` | Global agent SDLC behavior across all repos | Thin Windows CI for doctor/freshness/install preview | Explicit install approval, tool reloads, discovery smoke tests |
@@ -300,7 +300,7 @@ This is the master coverage queue. Each repo gets at least one explicit future p
 
 | Repo | Eventual touch pass | Trigger | Output |
 |---|---|---|---|
-| `diagnose-to-plan` | Hosted DTP Phase 0 and proof/redaction governance | Current Sprint 2 sequence | Phase 0 design exists; first proof/redaction pilot next, later private app shell |
+| `diagnose-to-plan` | Hosted DTP Phase 0 and proof/redaction governance | Current Sprint 2 sequence | Phase 0 design accepted; first proof/redaction pilot next, later private app shell |
 | `consulting` | Public proof upgrade and route/visual verification expansion | Proof packet and redaction queue exist | Receipt-style proof pages, noindex/admin checks, optional route CI |
 | `hub` | Runtime hardening and prompt/registry consistency | After core CI is stable | v0.4 hardening notes, prompt id cross-validation, support checks |
 | `tm-skills` | Global install and discovery smoke test | Explicit approval to run install | Installed/reloaded skills, discovery evidence, one canary decision |
@@ -554,7 +554,7 @@ Priority:
 - Prompt id cross-validation between `hub-prompts` and `hub-registry` is a small but valuable gap.
 - `hub-registry` portfolio manifest validation still depends on sibling repo manifests that are available locally but not safely available to repo-scoped CI without explicit private-repo access.
 - The Client Command Room templates now exist, but they still need a first pilot against Mom nonprofit, Greg, Cam, or another operator workflow.
-- Hosted DTP Phase 0 now has a written schema/app boundary; it still needs review before implementation.
+- Hosted DTP Phase 0 now has an accepted schema/app boundary; hosted implementation should still wait for a separate implementation request and real pilot records.
 - Public proof now has asset/redaction/permission templates; it still needs first real use and reviewed source material.
 - Agent-security research is now represented here; promote specific gates into implementation docs before any deeper autonomous workflows.
 - Future Intelligence templates now exist as optional Practice OS assets, but they still need first real use before becoming required gates.
@@ -886,13 +886,13 @@ Source:
 
 Standing preflight/postflight: run the Activation Routing Map plus the Roadmap Steward review template around major roadmap sessions so the right skill/template/process activates and active stories, blockers, new ideas, proof gates, and no-touch boundaries are captured.
 
-1. Review and accept `docs/HOSTED_DTP_PHASE_0.md`, the proof/redaction templates, and the DTP repo-manifest/evidence-index pilot.
-2. Run Mom nonprofit as the first Client Operating Kit pilot and use the Command Room fit assessment before deciding on a portal.
-3. Use the proof/redaction templates on that pilot before anything moves to consulting proof.
+1. Run Mom nonprofit as the first Client Operating Kit pilot and use the Command Room fit assessment before deciding on a portal.
+2. Use the proof/redaction templates on that pilot before anything moves to consulting proof.
+3. Expand repo manifests to consulting, Hub, and `tm-skills` as their lanes are touched.
 4. Add prompt id cross-validation between `hub-prompts` and `hub-registry`.
 5. Run the first adjacent-project touch pass: pick the repo whose trigger is ready first (`fitness-app`, `demario-pickleball-1`, `FamilyTrips`, or `dse-content`) and execute only its matching lane.
 6. Use DeMario command room and Omnexus verification toolkit as proof/reference material only after permission/redaction review.
-7. Start hosted DTP implementation only after the schema, evidence contract, redaction/proof queue, and DTP efficiency pilot are accepted.
+7. Start hosted DTP implementation only after the Mom pilot/proof workflow gives the app real records to persist.
 
 Non-blocking intelligence track: use the optional Future Intelligence templates during the next real delivery/research sessions, but do not insert them ahead of hosted DTP Phase 0 or proof/redaction work.
 

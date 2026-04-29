@@ -1,6 +1,8 @@
 # Hosted DTP Phase 0
 
-Status: design boundary, not implementation.
+Status: accepted design boundary, not implementation.
+
+Accepted: 2026-04-29 via `practice-os/steward/2026-04-29-hosted-dtp-phase-0-acceptance-review.md`.
 
 Hosted DTP Phase 0 is the private foundation for engagement state, artifact governance, evidence, redaction, proof review, and decisions. It should not start as a dashboard. It should start as a private data model and app boundary that can later support useful views because the records already exist.
 

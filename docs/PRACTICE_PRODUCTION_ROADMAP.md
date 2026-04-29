@@ -32,7 +32,7 @@ The AI Activation Map is the prompt-to-process routing layer. It uses `practice-
 - Practice OS includes optional Workspace Efficiency templates for repo manifests, evidence indexes, decision records, workspace command-center planning, dependency maintenance, toolchain pinning, CI cache planning, and project starter baselines.
 - Practice OS includes an AI Activation Map template for routing prompt shapes to the right skill, template, gate, roadmap lane, or parked automation path.
 - Practice OS includes a Roadmap Steward review template for major roadmap sessions; it is enforced by `dtp practice doctor` because it protects roadmap continuity across repos.
-- Hosted DTP Phase 0 now has a design-boundary doc at `docs/HOSTED_DTP_PHASE_0.md`; hosted implementation remains gated.
+- Hosted DTP Phase 0 now has an accepted design-boundary doc at `docs/HOSTED_DTP_PHASE_0.md`; hosted implementation remains gated until a separate implementation request and real records exist.
 - Practice OS now includes proof/redaction templates for proof packets, redaction queue items, permission review, evidence-source review, public claim review, and asset inventory.
 - The first DTP repo manifest/evidence-index pilot lives in `practice-os/efficiency/`.
 - `docs/ROADMAP_EXECUTION_BACKLOG.md` maps roadmap items into epics, stories, statuses, Done gates, and next actions.
@@ -125,7 +125,7 @@ The AI Activation Map is the prompt-to-process routing layer. It uses `practice-
 - Keep the Python CLI, local Workbench, markdown artifacts, and vault as fallback/import-export surfaces.
 - Do not deploy the current local Workbench as-is. It has no hosted auth model and assumes local trust.
 - Replace consulting's local `PUBLIC_DTP_WORKBENCH_URL` default with a hosted DTP URL once the private app exists.
-- Do not start implementation until the design boundary, proof/redaction templates, and DTP efficiency pilot are reviewed.
+- Do not start implementation until there is a separate hosted-app implementation request and the first pilot has real records worth persisting.
 
 ### Client Operating Kits
 
