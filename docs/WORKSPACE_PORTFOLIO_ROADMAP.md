@@ -44,6 +44,8 @@ The first four items are now implemented to the intended boundary: `tm-skills` i
 
 Roadmap invariant: every repo in the workspace stays on this roadmap. Some repos are core infrastructure and get touched immediately; other repos are project/product tracks and get touched when the relevant verification, proof, launch, privacy, or COI lane is ready. Nothing falls off the map just because it is not part of the current sprint.
 
+Execution invariant: roadmap items are tracked as epics/stories in `docs/ROADMAP_EXECUTION_BACKLOG.md`. Not every story is active today, but each item should have a status, Done gate, and next action before implementation begins.
+
 Still later:
 
 - MCP recall.
@@ -530,6 +532,7 @@ Priority:
 - Agent-security research is now represented here; promote specific gates into implementation docs before any deeper autonomous workflows.
 - Future Intelligence templates now exist as optional Practice OS assets, but they still need first real use before becoming required gates.
 - Workspace Efficiency templates now exist as optional Practice OS assets, and DTP has the first repo-manifest/evidence-index pilot; the shape still needs review before expanding to other repos.
+- The roadmap now has a Kanban-style execution backlog; keep story status, Done gates, and next actions current as work moves.
 
 ## Research Additions To Roadmap
 

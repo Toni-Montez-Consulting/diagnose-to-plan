@@ -17,6 +17,7 @@ When another repo's docs conflict with this roadmap, treat the other doc as loca
 - `docs/04-multi-repo.md`: sibling repo read/write boundaries.
 - `docs/PRACTICE_VERIFICATION_SPINE.md`: Sprint 1 gate matrix, evidence contract, tool phasing, and no-slop quality gate for DTP, consulting, and Hub.
 - `docs/WORKSPACE_PORTFOLIO_ROADMAP.md`: cross-workspace prioritized plan across consulting, DTP, Hub, `tm-skills`, prompt/registry repos, Omnexus, DeMario, FamilyTrips, and DSE, including value checks, current agentic-AI research additions, the Future Intelligence Layer, and the Workspace Efficiency Layer.
+- `docs/ROADMAP_EXECUTION_BACKLOG.md`: Kanban-style epic/story execution view for the roadmap, with status, Done gates, and next actions.
 - `docs/HOSTED_DTP_PHASE_0.md`: hosted DTP schema/app-boundary design for the private single-operator foundation; read before any hosted app, schema, or migration work.
 - `docs/CLIENT_COMMAND_ROOM_PATTERN.md`: reusable admin/customer portal pattern inspired by `demario-pickleball-1`; use when planning owner-facing operating rooms.
 - `docs/CLI_VERIFICATION_AUTOMATION_PATTERN.md`: reusable CLI doctor/matrix/verification/evidence pattern inspired by Omnexus; use when planning infrastructure-first automation across repos.

@@ -14,6 +14,8 @@ The Future Intelligence Layer is captured in `docs/WORKSPACE_PORTFOLIO_ROADMAP.m
 
 The Workspace Efficiency Layer is also captured in `docs/WORKSPACE_PORTFOLIO_ROADMAP.md`. It adds workspace command-center planning, repo manifests, affected-only checks, shared CI later, dependency maintenance, toolchain pinning, evidence indexes, decision logs, starter-factory templates, and CI cache hygiene without forcing the repos into one platform or monorepo.
 
+The Kanban execution view is captured in `docs/ROADMAP_EXECUTION_BACKLOG.md`. The roadmap owns priority and strategy; the backlog owns epic/story status, Done gates, and next actions.
+
 ## Current Implemented State
 
 ### DTP
@@ -27,6 +29,7 @@ The Workspace Efficiency Layer is also captured in `docs/WORKSPACE_PORTFOLIO_ROA
 - Hosted DTP Phase 0 now has a design-boundary doc at `docs/HOSTED_DTP_PHASE_0.md`; hosted implementation remains gated.
 - Practice OS now includes proof/redaction templates for proof packets, redaction queue items, permission review, evidence-source review, public claim review, and asset inventory.
 - The first DTP repo manifest/evidence-index pilot lives in `practice-os/efficiency/`.
+- `docs/ROADMAP_EXECUTION_BACKLOG.md` maps roadmap items into epics, stories, statuses, Done gates, and next actions.
 - `engagements/` is the gitignored private work area for Client Operating Kits.
 - `dtp kit new`, `dtp kit status`, `dtp redact check`, and `dtp practice doctor` support local Client Operating Kit workflows.
 - `dtp web` provides a local browser Workbench over the same markdown contracts.
@@ -99,6 +102,7 @@ The Workspace Efficiency Layer is also captured in `docs/WORKSPACE_PORTFOLIO_ROA
 ### Practice OS
 
 - Keep policies current: data classification, COI, redaction, kill switch, no-secrets-in-git, and client consent.
+- Keep `docs/ROADMAP_EXECUTION_BACKLOG.md` current when a roadmap story changes status.
 - Add or strengthen templates for proposal/SOW, case-study proof packet, Work Item Spec, and hosted-DTP import/export.
 - Use the Future Intelligence templates opportunistically after real delivery/research sessions; do not make them required gates until they have proven useful.
 - Use the Workspace Efficiency templates opportunistically when touching a repo; do not make manifests or command-center output required until at least one pilot proves the shape.
