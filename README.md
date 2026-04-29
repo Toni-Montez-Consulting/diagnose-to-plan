@@ -4,6 +4,13 @@
 
 Current branch target: `v2/harness`.
 
+Canonical roadmap:
+
+- `docs/PRACTICE_PRODUCTION_ROADMAP.md` is the source of truth for practice production work: hosted DTP, Practice OS, Client Operating Kits, redaction, COI, proof promotion, pilot sequencing, and parked ideas.
+- `docs/DOCUMENTATION_MAP.md` explains which docs in DTP, consulting, and Hub own which decisions.
+- `docs/CLIENT_COMMAND_ROOM_PATTERN.md` captures the reusable admin/customer portal concept from the DeMario pickleball admin portal for Toni and future client engagements.
+- `docs/TM_SKILLS_IMPLEMENTATION_ROADMAP.md` is the implementation handoff for the separate `tm-skills` repo, which will own reusable cross-repo software-development Skills.
+
 Current scope:
 
 - `dtp draft` turns diagnose notes into draft SOW markdown
@@ -17,13 +24,13 @@ Current scope:
 
 ## Local Workbench And Private Vault
 
-DTP can have a UI without becoming a hosted SaaS. The first full-stack move is a local browser workbench backed by the existing markdown contracts:
+DTP currently has a local UI backed by the existing markdown contracts. The production roadmap now points toward a hosted private DTP app with Supabase Auth/RLS/storage, while this local Workbench remains the fallback, prototype, and import/export surface:
 
 ```powershell
 .\.venv\Scripts\python.exe -m dtp web
 ```
 
-The workbench runs on `http://127.0.0.1:8765`, creates kits, shows readiness, runs redaction checks, and displays Practice OS health. It does not expose private client material to the public consulting site.
+The workbench runs on `http://127.0.0.1:8765`, creates kits, shows readiness, runs redaction checks, and displays Practice OS health. It does not expose private client material to the public consulting site and should not be deployed as-is without hosted auth/storage work.
 
 For permanent private artifacts, initialize a separate git vault inside the ignored `engagements/` directory:
 
