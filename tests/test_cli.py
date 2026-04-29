@@ -25,6 +25,8 @@ def test_cli_help() -> None:
     assert "kit" in result.output
     assert "redact" in result.output
     assert "practice" in result.output
+    assert "vault" in result.output
+    assert "web" in result.output
 
 
 def test_python_module_help(repo_root: Path) -> None:

@@ -17,6 +17,14 @@ from dtp.commands.recall import run_recall
 from dtp.commands.redact import REDACT_PROFILES, RedactionError, run_redact_check
 from dtp.commands.skills_cmd import run_validate
 from dtp.commands.synthesize import run_synthesize
+from dtp.commands.vault import (
+    VaultError,
+    render_vault_status,
+    run_vault_init,
+    run_vault_snapshot,
+    run_vault_status,
+)
+from dtp.commands.web import run_workbench_server
 from dtp.config import load_config
 from dtp.extract.indexer import ExtractError
 from dtp.extract.recall import RecallResult
@@ -26,10 +34,12 @@ app = typer.Typer(no_args_is_help=True, add_completion=False)
 kit_app = typer.Typer(no_args_is_help=True, add_completion=False)
 redact_app = typer.Typer(no_args_is_help=True, add_completion=False)
 practice_app = typer.Typer(no_args_is_help=True, add_completion=False)
+vault_app = typer.Typer(no_args_is_help=True, add_completion=False)
 console = Console()
 app.add_typer(kit_app, name="kit")
 app.add_typer(redact_app, name="redact")
 app.add_typer(practice_app, name="practice")
+app.add_typer(vault_app, name="vault")
 
 
 @app.command("draft")
@@ -402,6 +412,76 @@ def practice_doctor_command() -> None:
     console.print(render_doctor(result), end="")
     if not result.ok:
         raise typer.Exit(code=1)
+
+
+@vault_app.command("init")
+def vault_init_command(
+    remote: Annotated[
+        str | None,
+        typer.Option("--remote", help="Optional private git remote for engagements/."),
+    ] = None,
+) -> None:
+    config = load_config()
+    try:
+        status = run_vault_init(config, remote=remote)
+    except VaultError as error:
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(code=1) from error
+    console.print(render_vault_status(status, config.repo_root), end="")
+
+
+@vault_app.command("status")
+def vault_status_command() -> None:
+    config = load_config()
+    status = run_vault_status(config)
+    console.print(render_vault_status(status, config.repo_root), end="")
+
+
+@vault_app.command("snapshot")
+def vault_snapshot_command(
+    message: Annotated[
+        str,
+        typer.Option("--message", "-m", help="Private vault commit message."),
+    ] = "Snapshot DTP private artifacts",
+    push: Annotated[
+        bool,
+        typer.Option("--push", help="Push to the vault origin after committing."),
+    ] = False,
+) -> None:
+    config = load_config()
+    try:
+        result = run_vault_snapshot(config, message=message, push=push)
+    except VaultError as error:
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(code=1) from error
+    if result.committed:
+        console.print("[green]vault snapshot committed[/green]")
+    else:
+        console.print("[green]vault already clean[/green]")
+    if result.pushed:
+        console.print("[green]vault snapshot pushed[/green]")
+    console.print(render_vault_status(result.status, config.repo_root), end="")
+
+
+@app.command("web")
+def web_command(
+    host: Annotated[
+        str,
+        typer.Option("--host", help="Host for the local-only workbench server."),
+    ] = "127.0.0.1",
+    port: Annotated[
+        int,
+        typer.Option("--port", help="Port for the local-only workbench server."),
+    ] = 8765,
+    open_browser: Annotated[
+        bool,
+        typer.Option("--open/--no-open", help="Open the workbench in your browser."),
+    ] = True,
+) -> None:
+    config = load_config()
+    console.print(f"[green]DTP Workbench[/green] http://{host}:{port}")
+    console.print("Press Ctrl+C to stop.")
+    run_workbench_server(config=config, host=host, port=port, open_browser=open_browser)
 
 
 def _print_recall_result(repo_root: Path, result: RecallResult) -> None:
