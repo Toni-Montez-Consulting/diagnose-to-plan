@@ -15,6 +15,7 @@ The practical thesis is:
 7. Reduce repeated discovery, setup drift, CI waste, and handoff friction across the whole workspace.
 8. Keep roadmap execution, idea capture, gates, and repo coverage in stewarded artifacts instead of Toni's memory.
 9. Route relevant prompts to the right skill, template, process, or gate without needing Toni to remember the activation rules.
+10. Tie roadmap/Kanban stories to the right skill, template, suggested agent role, and gate so execution can start from the story instead of from memory.
 
 ## Scope
 
@@ -48,7 +49,7 @@ Roadmap invariant: every repo in the workspace stays on this roadmap. Some repos
 
 Execution invariant: roadmap items are tracked as epics/stories in `docs/ROADMAP_EXECUTION_BACKLOG.md`. Not every story is active today, but each item should have a status, Done gate, and next action before implementation begins.
 
-Stewardship invariant: major roadmap sessions should run the Activation Routing Map and Roadmap Steward review before or after execution. The activation map chooses the right skill, template, process, or gate; the steward loop checks the active queue, repo coverage, gates, blockers, uncaptured ideas, proof/redaction requirements, and no-touch boundaries so execution does not depend on chat memory.
+Stewardship invariant: major roadmap sessions should run the Activation Routing Map, Story Activation Index, and Roadmap Steward review before or after execution. The activation map chooses the right skill, template, process, or gate; the story activation index ties Kanban epics/stories to suggested skills, templates, agent roles, and gates; the steward loop checks the active queue, repo coverage, gates, blockers, uncaptured ideas, proof/redaction requirements, and no-touch boundaries so execution does not depend on chat memory.
 
 Still later:
 

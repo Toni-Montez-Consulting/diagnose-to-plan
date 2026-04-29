@@ -17,6 +17,7 @@ Use this before or after a major roadmap, planning, or implementation session. T
 - Repos reviewed:
 - Roadmap files reviewed:
 - Backlog files reviewed:
+- Story activation files reviewed:
 
 ## Source Of Truth Check
 
@@ -47,6 +48,9 @@ Confirm every workspace repo still has a lane, trigger, and next action.
 - Owning repo:
 - Status:
 - Done gate:
+- Story activation:
+- Suggested skill/template:
+- Suggested agent role:
 - Local gates:
 - CI or manual gates:
 - Blockers:
@@ -67,6 +71,7 @@ Allowed classifications: `story`, `template`, `eval`, `proof item`, `research ra
 - Proof/redaction needed before public claim:
 - COI or permission review needed:
 - Agent flight record needed:
+- Story activation index update needed:
 - Research radar item needed:
 - Eval fixture candidate:
 - Decision record needed:

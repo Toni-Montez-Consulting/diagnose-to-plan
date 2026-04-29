@@ -20,6 +20,8 @@ The Roadmap Steward loop is the lightweight manager for this system. It uses `pr
 
 The AI Activation Map is the prompt-to-process routing layer. It uses `practice-os/templates/activation-routing-map.md` to decide whether a prompt should activate a `tm-skills` skill, DTP Practice OS skill, Practice OS template, roadmap/backlog story, proof/redaction gate, COI/privacy gate, research/eval/lesson artifact, repo touch pass, or parked automation path.
 
+The Roadmap Story Activation Index is the story-to-skill/agent routing layer. It uses `docs/ROADMAP_STORY_ACTIVATION_INDEX.md` and `practice-os/templates/story-activation-contract.md` to tie Kanban epics/stories to the right skills, templates, suggested agent roles, and gates. It guides the steward, but it does not authorize autonomous agents, global installs, public proof, hosted implementation, or repo mutation.
+
 ## Current Implemented State
 
 ### DTP
@@ -31,6 +33,7 @@ The AI Activation Map is the prompt-to-process routing layer. It uses `practice-
 - Practice OS includes optional Future Intelligence templates for lessons, research radar items, research spikes, portfolio scorecards, agent session records, AI red-team plans, feature flag/kill switch plans, and supply-chain baselines.
 - Practice OS includes optional Workspace Efficiency templates for repo manifests, evidence indexes, decision records, workspace command-center planning, dependency maintenance, toolchain pinning, CI cache planning, and project starter baselines.
 - Practice OS includes an AI Activation Map template for routing prompt shapes to the right skill, template, gate, roadmap lane, or parked automation path.
+- Practice OS includes a Story Activation Contract template, and DTP includes a Roadmap Story Activation Index so every active Kanban lane can point to the right skill/template/agent-role suggestion and gate.
 - Practice OS includes a Roadmap Steward review template for major roadmap sessions; it is enforced by `dtp practice doctor` because it protects roadmap continuity across repos.
 - Hosted DTP Phase 0 now has an accepted design-boundary doc at `docs/HOSTED_DTP_PHASE_0.md`; hosted implementation remains gated until a separate implementation request and real records exist.
 - Practice OS now includes proof/redaction templates for proof packets, redaction queue items, permission review, evidence-source review, public claim review, and asset inventory.

@@ -27,6 +27,15 @@ Story rules:
 - Project repos stay separate. A story can touch a repo only when its lane is ready.
 - Roadmap Steward review is a standing preflight/postflight for major roadmap sessions; it keeps ideas, gates, blockers, and repo coverage out of chat memory.
 - Activation routing is the standing prompt-to-process map; it tells future agents which skill, template, gate, or roadmap lane to use without creating autonomy.
+- Story activation is the standing story-to-skill/template/agent-role map; `docs/ROADMAP_STORY_ACTIVATION_INDEX.md` ties each epic/story family to the right assets and gates.
+
+## Story Activation Contract
+
+Use `docs/ROADMAP_STORY_ACTIVATION_INDEX.md` before starting or advancing a story when the prompt could imply a specific skill, template, agent role, proof gate, COI gate, or repo touch pass.
+
+Use `practice-os/templates/story-activation-contract.md` when a story needs a dedicated one-off activation record.
+
+Agent roles in the activation index are recommendations, not permission. Subagents, autonomous managers, global installs, hosted implementation, public proof, and write-enabled automation still require their explicit gates.
 
 ## Epic 1: Reusable Agent SDLC Layer
 

@@ -16,6 +16,7 @@ Use this map when a prompt could route to more than one skill, template, process
 - Use DTP Practice OS skills/templates for consulting practice methodology, proof, COI, redaction, command rooms, roadmap stewardship, and client operating kits.
 - Use repo manifests/evidence indexes before guessing a repo's gates.
 - Use Roadmap Steward review when the prompt changes roadmap priority, status, active-next work, blockers, repo coverage, or idea capture.
+- Use `docs/ROADMAP_STORY_ACTIVATION_INDEX.md` when a prompt maps to a specific epic/story and you need the matching skill, template, agent-role suggestion, or gate.
 - Keep all gated actions gated: global skill install, hosted DTP implementation, public proof promotion, write-enabled automation, autonomous agents, and production/client data changes.
 
 ## Prompt Activation Matrix
@@ -28,6 +29,7 @@ Use this map when a prompt could route to more than one skill, template, process
 | "what tests should run", "CI failed", "verification depth" | `tm-skills/testing-ladder` | repo manifest, evidence index, verification pattern | hard gates stay hard |
 | "validate branch", "what is left", "committed/pushed?", "prepare handoff" | `tm-skills/delivery-baseline` | evidence index, git status, CI status | do not commit/push unless requested |
 | "what is next on the roadmap", "keep everything aligned", "capture this idea" | Roadmap Steward review | `docs/ROADMAP_EXECUTION_BACKLOG.md` | update status only with real evidence |
+| "which agent/skill should this story use", "tie this to Kanban", "activate for this epic" | story activation index | `docs/ROADMAP_STORY_ACTIVATION_INDEX.md`, story activation contract | suggested agents require explicit delegation approval |
 | "can this become proof", "case study", "public claim" | proof/redaction templates | evidence source, asset inventory, claim review | permission, redaction, reviewer required |
 | "client uses Azure/Copilot/Microsoft", "DSE", "COI" | DTP COI screen | data classification and redaction policy | pause before scoping/coding |
 | "does this need a portal", "command room", "owner dashboard" | Command Room fit assessment | Command Room spec if fit passes | checklist/no surface is allowed |
@@ -59,6 +61,7 @@ Use these labels in Roadmap Steward reviews and handoffs:
 - When a `tm-skills` trigger description, trigger eval, or expected behavior changes, update this map or record why no map update is needed.
 - When a DTP Practice OS template becomes required by `dtp practice doctor`, add it to this map if a future prompt should route to it.
 - When a new repo lane is added to the workspace roadmap, add or update the relevant routing row.
+- When a backlog story changes status or ownership, check whether `docs/ROADMAP_STORY_ACTIVATION_INDEX.md` needs a matching activation update.
 - When a prompt repeatedly misroutes, capture the miss in a lesson, eval, `tm-skills/MISFIRES.md`, or Roadmap Steward review.
 
 ## Safety Notes

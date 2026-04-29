@@ -19,6 +19,7 @@ REQUIRED_TEMPLATES = (
     "diagnose-memo.md",
     "plan-roadmap.md",
     "roadmap-steward-review.md",
+    "story-activation-contract.md",
     "work-item-spec.md",
     "client-operating-kit.md",
     "client-command-room-fit-assessment.md",
