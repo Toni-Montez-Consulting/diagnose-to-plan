@@ -21,6 +21,15 @@ Command-room templates:
 - `templates/client-command-room-fit-assessment.md` decides whether to build a command room, use a handoff checklist, skip the private surface, or defer.
 - `templates/client-command-room-spec.md` defines owner dashboard, owner tasks, business roadmap, developer roadmap, handoff/rules, and placeholder-only support/verification surfaces.
 
+Proof and redaction templates:
+
+- `templates/proof-packet.md` captures baseline, after-state, evidence, caveat, permission, redaction, reviewer, and publish decision.
+- `templates/redaction-queue-item.md` captures a review item before private material can move toward proof.
+- `templates/permission-reviewer-checklist.md` records permission and reviewer gates.
+- `templates/evidence-source-checklist.md` checks whether evidence is good enough to support a proof claim.
+- `templates/public-claim-review.md` keeps public wording evidence-backed and caveated.
+- `templates/asset-inventory.md` tracks screenshots, documents, walkthroughs, and other proof assets.
+
 Future Intelligence templates:
 
 - `templates/lesson-capture.md` turns delivery outcomes and failures into reusable lessons.
@@ -46,3 +55,10 @@ Workspace Efficiency templates:
 - `templates/project-starter-baseline.md` records the minimum baseline for new client/project repos.
 
 These are optional until a real repo-manifest/evidence-index pilot proves they should become standards.
+
+Workspace Efficiency pilots:
+
+- `efficiency/diagnose-to-plan-repo-manifest.md` is the first repo manifest pilot.
+- `efficiency/diagnose-to-plan-evidence-index.md` is the first evidence index pilot.
+
+These are planning receipts, not runtime configuration.

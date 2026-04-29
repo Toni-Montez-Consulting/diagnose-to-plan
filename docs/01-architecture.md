@@ -22,4 +22,6 @@ The hosted DTP app should be private and single-user first. It should persist en
 - Hub remains runtime support for intake, private console rows, Supabase-backed operational records, webhooks, captures, runs, and prompts.
 - DTP owns Client Operating Kits, redaction/COI gates, pattern promotion, and the canonical practice roadmap.
 
+The Phase 0 schema/app boundary lives in `docs/HOSTED_DTP_PHASE_0.md`. That doc is the starting point for any future hosted schema, migration, or app-shell implementation.
+
 See `docs/PRACTICE_PRODUCTION_ROADMAP.md` and `docs/DOCUMENTATION_MAP.md`.

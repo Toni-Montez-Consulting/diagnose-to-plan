@@ -24,6 +24,9 @@ The Workspace Efficiency Layer is also captured in `docs/WORKSPACE_PORTFOLIO_ROA
 - Practice OS includes Client Command Room fit/spec templates so future engagements can decide between a command room, a handoff checklist, no private surface, or a deferred revisit before building portal UI.
 - Practice OS includes optional Future Intelligence templates for lessons, research radar items, research spikes, portfolio scorecards, agent session records, AI red-team plans, feature flag/kill switch plans, and supply-chain baselines.
 - Practice OS includes optional Workspace Efficiency templates for repo manifests, evidence indexes, decision records, workspace command-center planning, dependency maintenance, toolchain pinning, CI cache planning, and project starter baselines.
+- Hosted DTP Phase 0 now has a design-boundary doc at `docs/HOSTED_DTP_PHASE_0.md`; hosted implementation remains gated.
+- Practice OS now includes proof/redaction templates for proof packets, redaction queue items, permission review, evidence-source review, public claim review, and asset inventory.
+- The first DTP repo manifest/evidence-index pilot lives in `practice-os/efficiency/`.
 - `engagements/` is the gitignored private work area for Client Operating Kits.
 - `dtp kit new`, `dtp kit status`, `dtp redact check`, and `dtp practice doctor` support local Client Operating Kit workflows.
 - `dtp web` provides a local browser Workbench over the same markdown contracts.
@@ -104,10 +107,13 @@ The Workspace Efficiency Layer is also captured in `docs/WORKSPACE_PORTFOLIO_ROA
 
 ### Hosted DTP
 
+- Phase 0 design is captured in `docs/HOSTED_DTP_PHASE_0.md`.
+- Boundary decision is captured in `decisions/0004-hosted-dtp-private-practice-os-boundary.md`.
 - Build a private single-user DTP app with Supabase Auth, Postgres, Storage, and RLS.
 - Keep the Python CLI, local Workbench, markdown artifacts, and vault as fallback/import-export surfaces.
 - Do not deploy the current local Workbench as-is. It has no hosted auth model and assumes local trust.
 - Replace consulting's local `PUBLIC_DTP_WORKBENCH_URL` default with a hosted DTP URL once the private app exists.
+- Do not start implementation until the design boundary, proof/redaction templates, and DTP efficiency pilot are reviewed.
 
 ### Client Operating Kits
 
@@ -118,6 +124,7 @@ The Workspace Efficiency Layer is also captured in `docs/WORKSPACE_PORTFOLIO_ROA
 
 ### Public Proof
 
+- Reusable proof/redaction templates now exist in `practice-os/templates/`.
 - Replace generic/public-safe frames with real or redacted source material.
 - Use receipt-style case studies: before/after screenshots, metric card, walkthrough, system map, decision log, runbook sample, caveats, and permission level.
 - Do not publish case-study claims without evidence source, baseline, after-state, measurement caveat, permission level, redaction status, and reviewer.
@@ -174,7 +181,7 @@ Complete these before treating the practice as ready for soft launch.
 
 5. Define the proof packet format.
    - Use a receipt-style case-study template, not a long enterprise essay.
-   - Add baseline, after-state, evidence, caveats, permission, redaction, reviewer, and public/private asset rules.
+   - Use `practice-os/templates/proof-packet.md`, `redaction-queue-item.md`, `permission-reviewer-checklist.md`, `evidence-source-checklist.md`, `public-claim-review.md`, and `asset-inventory.md`.
    - Use this format for Mom nonprofit first, then backfill Brother/Omnexus/Cam/Greg.
    - Include verification artifacts as proof sources where useful, but publish only redacted summaries.
 
@@ -207,7 +214,7 @@ Complete these before treating the practice as ready for soft launch.
 
 10. Capture the Workspace Efficiency Layer.
    - Keep this as roadmap and template work while hosted DTP Phase 0 and proof/redaction stay first in line.
-   - Use `practice-os/templates/repo-manifest.md` and `evidence-index.md` on the next repo touch pass.
+   - Use `practice-os/efficiency/diagnose-to-plan-repo-manifest.md` and `diagnose-to-plan-evidence-index.md` as the first pilot.
    - Draft `workspace-command-center-spec.md` before writing any cross-repo command runner.
    - Keep affected-only checks advisory until repo manifests, hard gates, and release/proof boundaries are clear.
    - Do not add shared CI, dependency bots, or toolchain pinning everywhere until the pilot proves the value.
@@ -222,6 +229,7 @@ Build these after the near-term documentation and pilot path are stable.
    - Persist engagements, artifacts, artifact versions, metrics, redaction reviews, pattern candidates, and decisions.
    - Add import/export so local markdown kits and hosted records can round-trip.
    - Persist verification evidence only after the CLI evidence contract is stable.
+   - Start this only after `docs/HOSTED_DTP_PHASE_0.md` is accepted.
 
 2. Hosted verification and support evidence.
    - Add a durable evidence model for local, release, support, and proof runs.
