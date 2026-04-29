@@ -6,7 +6,16 @@ The goal is not to copy Omnexus scripts into every repo. The goal is to make eac
 
 ## Source Pattern
 
-The current reference implementation is `fitness-app`:
+The current reference implementation is `fitness-app` / Omnexus.
+
+As of 2026-04-29, the concrete reference branch is:
+
+- PR: `https://github.com/toniomon96/Omnexus/pull/553`
+- Branch: `feat/verification-toolkit-supabase-cockpit`
+- Status verified from GitHub CLI: open draft, mergeable, checks green
+- Commits: `52f56097 chore: add verification toolkit cockpit`, `2ffd3088 fix: align verification gates with baseline repair`
+
+The Omnexus implementation is useful because it proves the cockpit pattern against a real production app, not just a doc sketch:
 
 - `npm run tools:doctor`: reports installed tools, version drift, missing hard-gate tools, and next commands.
 - `npm run tools:matrix`: prints phase, tool, failure policy, output path, and command.
@@ -15,6 +24,10 @@ The current reference implementation is `fitness-app`:
 - `npm run ops:release:evidence`: writes release evidence artifacts.
 - `artifacts/verification/`: stores scanner reports, logs, and release evidence.
 - `docs/engineering/production-verification-cli-stack.md`: explains the verification stack.
+- `scripts/ops/toolkit-registry.js`: shared source of truth for tool ids, install source, version expectation, command, env names, report path, docs link, and failure policy.
+- `scripts/ops/toolkit-lock.json`: pinned Docker image and CLI expectations.
+- `.github/workflows/verification-toolkit.yml`: CI evidence upload for `artifacts/verification/`.
+- `scripts/ci/check-migration-drift.js`: Supabase migration drift gate with a one-time, hash-pinned repair exception for the repaired first migration.
 
 Useful design details:
 
@@ -25,6 +38,11 @@ Useful design details:
 - Secret values are never printed.
 - Hard-gate tools are separated from advisory tools.
 - Evidence artifacts are written to disk so release/proof decisions do not depend on chat memory.
+- Docker carries the specialty scanners and load/security tools so local machines do not become magical.
+- Fresh local Supabase replay is treated as truth for schema viability.
+- Legacy migration edits remain blocked unless a narrow, documented hash-pinned repair exception is required for fresh replay.
+
+The GitHub checks that made this reference credible included Supabase migration drift, preview/production verification, lint, typecheck, unit tests, quality gate, secret scanning, Semgrep, accessibility, production audit, dependency review, and Vercel preview status.
 
 ## Required Guardrail
 
@@ -38,6 +56,21 @@ The reusable rule is:
 - the final summary must list advisory failures instead of quietly calling the run clean.
 
 This matters because a release runner that returns success whenever advisory failures are allowed can accidentally make a secret-scan failure look like a passing release. That is the exact class of mistake this pattern should prevent.
+
+## Supabase Replay Repair Rule
+
+Migrations should remain append-only by default. If a fresh local replay fails because an old migration was internally inconsistent, adding a later migration may not be enough: the database still has to apply the broken old migration first.
+
+If that happens:
+
+- prove the failure with Docker-backed local Supabase from a clean database;
+- make the smallest repair to the old migration needed for fresh replay;
+- add a hash-pinned exception to the drift checker for that exact repaired blob;
+- document the reason in the checker or adjacent docs;
+- keep every other old migration edit blocked;
+- add a new migration for any production-forward schema change.
+
+This is a repair path, not a general permission to edit history.
 
 ## Practice-Wide Shape
 
@@ -103,6 +136,7 @@ The first version should use the CLIs already present in the repo or available t
 - Playwright plus axe for consulting route smoke, visual QA evidence, form action checks, `/admin` noindex, and sitemap exclusion.
 - Knip as advisory cleanup evidence for consulting and Hub.
 - Doctor/matrix scripts or docs so each repo can explain its gates.
+- Tool registry and lock-file pattern for repos with more than a few verification tools.
 
 ### Add Soon
 
@@ -110,6 +144,7 @@ The first version should use the CLIs already present in the repo or available t
 - Semgrep as advisory static analysis.
 - Renovate or grouped Dependabot after local gates are stable.
 - Shared GitHub Actions workflows after repo-local commands stop shifting.
+- Prompt/registry cross-validation for Hub once the local command shape is stable.
 
 ### Table
 

@@ -123,6 +123,8 @@ Acceptance:
 
 Value: makes the existing local gates repeatable before hosted dashboards or support automation display them.
 
+Updated input from Omnexus: PR `https://github.com/toniomon96/Omnexus/pull/553` proves the fuller version of this pattern with a shared toolkit registry, lock file, Docker-backed specialty tools, ignored `artifacts/verification/`, GitHub evidence upload, and Supabase migration drift/fresh-replay repair guard. For Sprint 2, use that as the reference implementation, but keep DTP/consulting/Hub CI thin until their local gates are stable.
+
 First CI targets:
 
 - DTP: `pytest`, `ruff check .`, `dtp skills --validate`, `dtp practice doctor`.
@@ -138,6 +140,8 @@ Keep it thin:
 - Use exact local commands first.
 - Save shared/reusable workflows for later.
 - Mark browser, external-service, or dashboard checks as manual/advisory unless credentials are guaranteed.
+- Add a registry/lock/artifact convention only when a repo has enough tools to justify it.
+- Promote specialty Docker scanners from advisory to hard only after the baseline is stable and false positives are understood.
 
 ### Story 4: Hosted DTP Phase 0 Schema And App Boundary
 
@@ -316,9 +320,11 @@ Priority:
 
 - Post-launch stabilization and iOS/App Store proof.
 - Subscription/IAP/Stripe safety.
-- Supabase local migration ordering fix.
+- PR #553 verification cockpit is the concrete reference for the practice-wide CLI verification pattern: `tools:doctor`, `tools:matrix`, `tools:verify:local`, registry, lock file, Docker-backed scanners, evidence artifacts, and GitHub checks.
+- Supabase local migration ordering repair is fixed on the PR branch with a narrow hash-pinned migration drift exception; keep that pattern as a one-time repair rule, not a normal migration-edit policy.
 - Expired/demo account setup from actual query output, not assumptions.
 - AI route cost/eval/entitlement controls.
+- Merge PR #553 only after human review decides the draft is ready.
 
 Do not:
 

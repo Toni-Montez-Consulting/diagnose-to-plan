@@ -20,6 +20,30 @@ DTP owns the contract. Each repo owns its local implementation. Evidence should 
 | `consulting` | Public storefront, `/start`, `/admin`, visual QA, public proof shell | `npm run build`, route smoke, `/admin` noindex, sitemap exclusion | Hub intake endpoint/CORS, visual QA, public/private markup scan | `artifacts/verification/consulting/` |
 | `hub` | Runtime intake, private console, Supabase/Vercel support | `pnpm verify`, `pnpm test`, `hub doctor` | health route, protected console, intake CORS, Supabase migration/status, Vercel deployment checks | `artifacts/verification/hub/` |
 
+## Reference Implementation
+
+Omnexus / `fitness-app` now has the strongest concrete version of the verification cockpit pattern.
+
+Verified on 2026-04-29:
+
+- PR: `https://github.com/toniomon96/Omnexus/pull/553`
+- Branch: `feat/verification-toolkit-supabase-cockpit`
+- State: open draft, mergeable, GitHub checks green
+- Commits: `52f56097 chore: add verification toolkit cockpit`, `2ffd3088 fix: align verification gates with baseline repair`
+
+Reusable pieces:
+
+- shared tool registry;
+- lock file for Docker images and important CLI versions;
+- `tools:doctor`, `tools:matrix`, `tools:verify:local`, and release evidence commands;
+- ignored `artifacts/verification/` output convention;
+- Docker-backed specialty tools;
+- Supabase fresh-replay contract and migration drift guard;
+- split hard gates from advisory evidence;
+- CI artifact upload for verification reports.
+
+This should guide DTP, consulting, Hub, and `tm-skills`, but it should not be copied blindly. Each repo still owns its own local, release, support, manual, and proof gates.
+
 ## Tool Phasing
 
 ### Add Now
@@ -29,6 +53,7 @@ DTP owns the contract. Each repo owns its local implementation. Evidence should 
 - Playwright + axe for consulting: advisory route smoke, mobile/desktop checks, `/admin` noindex, sitemap exclusion, form action, and accessibility evidence.
 - Knip for consulting and Hub: advisory traversal-noise detection only; no blind deletion.
 - Repo doctor/matrix coverage: every repo should explain its gates before hosted evidence UI exists.
+- Thin GitHub Actions that run stable local gates exactly as developers run them.
 
 ### Add Soon
 
@@ -36,6 +61,7 @@ DTP owns the contract. Each repo owns its local implementation. Evidence should 
 - Semgrep as advisory static analysis until rules are tuned.
 - Renovate or grouped Dependabot for dependency hygiene.
 - Shared GitHub Actions only after local commands are stable.
+- Docker-backed specialty scanners/load tools after the repo has a registry, lock file, and artifact convention.
 
 ### Table
 

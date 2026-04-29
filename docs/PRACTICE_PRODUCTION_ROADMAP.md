@@ -62,8 +62,9 @@ The reusable verification/support automation concept is captured as the CLI Veri
 
 ### CLI Verification And Automation Pattern
 
-- Build concept reviewed from Omnexus / `fitness-app`.
+- Build concept reviewed from Omnexus / `fitness-app`, now backed by PR `https://github.com/toniomon96/Omnexus/pull/553` on branch `feat/verification-toolkit-supabase-cockpit`.
 - Reference shape: CLI doctor, tool matrix, local verification, release verification, support/runtime checks, and evidence artifacts.
+- Concrete shape: shared tool registry, lock file, Docker-backed specialty tools, ignored `artifacts/verification/`, CI evidence upload, and Supabase migration drift/fresh-replay repair guard.
 - Intended use: make infrastructure observable and repeatable before building more UI.
 - The pattern is infrastructure first: each repo should explain its own gates before hosted DTP tries to persist or display them.
 - Sprint 1 verification contract lives in `docs/PRACTICE_VERIFICATION_SPINE.md`.
@@ -143,7 +144,7 @@ Complete these before treating the practice as ready for soft launch.
    - DTP: `pytest`, `ruff check .`, `dtp skills --validate`, `dtp practice doctor`, `dtp index --all`, `dtp synthesize --no-confirm`.
    - Consulting: `npm run build`, visual QA, `/admin` noindex check, sitemap exclusion check.
    - Hub: health check, protected console check, and one real consulting intake submission when practical.
-   - Omnexus reference: study `tools:doctor`, `tools:matrix`, `tools:verify:local`, `tools:verify:release`, and `ops:release:evidence` for reusable shape, not direct copying.
+   - Omnexus reference: study PR `https://github.com/toniomon96/Omnexus/pull/553`, `tools:doctor`, `tools:matrix`, `tools:verify:local`, `tools:verify:release`, `ops:release:evidence`, `scripts/ops/toolkit-registry.js`, `scripts/ops/toolkit-lock.json`, and `scripts/ci/check-migration-drift.js` for reusable shape, not direct copying.
 
 3. Clean up private durability.
    - Decide whether to keep or remove any local fake engagement kits.
