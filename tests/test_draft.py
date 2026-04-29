@@ -31,7 +31,7 @@ def test_run_draft_writes_sow_with_frontmatter(repo_root: Path) -> None:
     assert post["inputs"] == ["inputs/fixture-diagnose.md"]
     assert post["coi_verdict"] == "not_run_phase1"
     assert post["model"] == "claude-sonnet-4-6"
-    assert post["skills_loaded"] == ["voice", "pricing", "sow"]
+    assert post["skills_loaded"] == ["voice", "pricing", "sow", "build-patterns"]
     assert post["confidential"] is False
     assert "## Scope" in text
     assert "## Deliverables" in text
@@ -95,3 +95,20 @@ def test_run_draft_suppresses_todo_warning_for_fixture(repo_root: Path) -> None:
     )
 
     assert stderr.getvalue() == ""
+
+
+def test_run_draft_references_relevant_synthesis_doc(repo_root: Path) -> None:
+    config = load_config(repo_root)
+    destination = repo_root / "outputs" / "test-draft-pattern-reference.md"
+    if destination.exists():
+        destination.unlink()
+
+    result = run_draft(
+        repo_root / "inputs" / "fixture-diagnose.md",
+        config,
+        out=destination,
+    )
+
+    text = result.read_text(encoding="utf-8")
+    assert "## Pattern References" in text
+    assert "extracts/synthesis/admin-surface.md" in text

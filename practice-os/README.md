@@ -1,0 +1,17 @@
+---
+data_class: P0
+confidential: false
+permission_level: internal_only
+review_status: reviewed
+---
+
+# Practice OS
+
+Reusable operating assets for the consulting practice. This folder is the Practice Brain: policies, templates, Skills, and reviewed Bottleneck Patterns that can be reused without carrying client-private context.
+
+Rules:
+
+- Keep client-sensitive work in `engagements/`.
+- Promote only redacted, reviewed lessons into `practice-os/`.
+- Use `extracts/` for raw DTP pattern extraction and `practice-os/patterns/` for reusable judgment.
+- No credentials, client financial specifics, raw intake, Microsoft confidential information, or unreviewed case-study claims.

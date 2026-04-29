@@ -16,6 +16,9 @@ class DtpConfig(BaseModel):
     inputs_dir: Path = Field()
     outputs_dir: Path = Field()
     skills_dir: Path = Field()
+    extracts_dir: Path = Field()
+    practice_os_dir: Path = Field()
+    engagements_dir: Path = Field()
     workspace_file: Path = Field()
     agent_enabled: bool = False
 
@@ -28,6 +31,9 @@ def load_config(repo_root: Path | None = None) -> DtpConfig:
         inputs_dir=root / "inputs",
         outputs_dir=root / "outputs",
         skills_dir=root / "skills",
+        extracts_dir=root / "extracts",
+        practice_os_dir=root / "practice-os",
+        engagements_dir=root / "engagements",
         workspace_file=root / ".dtp" / "workspace.yaml",
         agent_enabled=agent_enabled,
     )

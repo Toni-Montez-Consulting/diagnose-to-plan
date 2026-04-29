@@ -17,6 +17,14 @@ def test_cli_help() -> None:
     assert "note" in result.output
     assert "story" in result.output
     assert "mentor" in result.output
+    assert "index" in result.output
+    assert "detect" in result.output
+    assert "lesson" in result.output
+    assert "recall" in result.output
+    assert "synthesize" in result.output
+    assert "kit" in result.output
+    assert "redact" in result.output
+    assert "practice" in result.output
 
 
 def test_python_module_help(repo_root: Path) -> None:
@@ -36,7 +44,7 @@ def test_skills_validate_command() -> None:
     result = CliRunner().invoke(app, ["skills", "--validate"])
 
     assert result.exit_code == 0
-    assert "validated 3 skills" in result.output
+    assert "validated 4 skills" in result.output
 
 
 def test_draft_accepts_output_alias(repo_root: Path) -> None:
@@ -71,3 +79,14 @@ def test_note_command_writes_under_dtp_home(tmp_path: Path, monkeypatch) -> None
     assert "Capture the sales call. [tags: sales]" in journal_files[0].read_text(
         encoding="utf-8"
     )
+
+
+def test_index_invalid_repo_exits_1(tmp_path: Path, monkeypatch) -> None:
+    monkeypatch.setenv("DTP_HOME", str(tmp_path))
+    (tmp_path / ".dtp").mkdir()
+    (tmp_path / ".dtp" / "workspace.yaml").write_text("repos:\n", encoding="utf-8")
+
+    result = CliRunner().invoke(app, ["index", "missing-repo"])
+
+    assert result.exit_code == 1
+    assert "unknown repo" in result.output

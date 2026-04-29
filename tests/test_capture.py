@@ -74,5 +74,8 @@ def _config(root: Path) -> DtpConfig:
         inputs_dir=root / "inputs",
         outputs_dir=root / "outputs",
         skills_dir=root / "skills",
+        extracts_dir=root / "extracts",
+        practice_os_dir=root / "practice-os",
+        engagements_dir=root / "engagements",
         workspace_file=root / ".dtp" / "workspace.yaml",
     )
