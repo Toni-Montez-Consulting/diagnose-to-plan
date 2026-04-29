@@ -10,6 +10,8 @@ The reusable admin/customer portal concept is captured as the Client Command Roo
 
 The reusable verification/support automation concept is captured as the CLI Verification And Automation pattern. It is inspired by the Omnexus / `fitness-app` toolkit and should guide infrastructure-first doctor, matrix, local gate, release gate, support gate, and evidence artifacts before heavier hosted product work. See `docs/CLI_VERIFICATION_AUTOMATION_PATTERN.md`.
 
+The Future Intelligence Layer is captured in `docs/WORKSPACE_PORTFOLIO_ROADMAP.md`. It adds supervised learning loops, research radar, agent flight records, portfolio scorecards, context engineering, AI red-team planning, release trust, feature flags, and protocol watchlists without changing the current build order.
+
 ## Current Implemented State
 
 ### DTP
@@ -18,6 +20,7 @@ The reusable verification/support automation concept is captured as the CLI Veri
 - `dtp index`, `detect`, `lesson`, `recall`, and `synthesize` support Extract Through Synthesis.
 - `practice-os/` contains reusable policies, templates, operator Skills, and reviewed Bottleneck Patterns.
 - Practice OS includes Client Command Room fit/spec templates so future engagements can decide between a command room, a handoff checklist, no private surface, or a deferred revisit before building portal UI.
+- Practice OS includes optional Future Intelligence templates for lessons, research radar items, research spikes, portfolio scorecards, agent session records, AI red-team plans, feature flag/kill switch plans, and supply-chain baselines.
 - `engagements/` is the gitignored private work area for Client Operating Kits.
 - `dtp kit new`, `dtp kit status`, `dtp redact check`, and `dtp practice doctor` support local Client Operating Kit workflows.
 - `dtp web` provides a local browser Workbench over the same markdown contracts.
@@ -91,6 +94,7 @@ The reusable verification/support automation concept is captured as the CLI Veri
 
 - Keep policies current: data classification, COI, redaction, kill switch, no-secrets-in-git, and client consent.
 - Add or strengthen templates for proposal/SOW, case-study proof packet, Work Item Spec, and hosted-DTP import/export.
+- Use the Future Intelligence templates opportunistically after real delivery/research sessions; do not make them required gates until they have proven useful.
 - Add tiny fixtures/evals for high-value Skills: COI, redact, diagnose, proposal, handoff, and case-study capture.
 - Promote only reviewed redacted patterns from `extracts/` into `practice-os/patterns/`.
 
@@ -191,6 +195,12 @@ Complete these before treating the practice as ready for soft launch.
    - Use Mom nonprofit to decide whether the pattern should be a full portal or a lighter handoff checklist.
    - Keep the optional support/verification surface tied to real CLI evidence.
 
+9. Capture the Future Intelligence Layer.
+   - Keep this as roadmap and template work while hosted DTP Phase 0 and proof/redaction stay first in line.
+   - Use `practice-os/templates/lesson-capture.md`, `research-radar-item.md`, `portfolio-scorecard.md`, and `agent-session-record.md` after real work sessions.
+   - Keep self-learning supervised: lessons may propose evals, checklist updates, or skill updates, but humans approve the change.
+   - Do not adopt AG-UI, A2A, MCP recall, OpenAI Agents SDK, Google ADK, Temporal, or heavier observability until a real DTP/Hub workflow justifies a spike.
+
 ## Mid Term
 
 Build these after the near-term documentation and pilot path are stable.
@@ -249,6 +259,13 @@ Build these after the near-term documentation and pilot path are stable.
    - Keep client portals optional until repeated handoff/support pain proves the need.
    - Add support/verification widgets only after evidence artifacts exist.
 
+9. Future Intelligence pilot.
+   - Convert real misfires from Hub, DTP, and `tm-skills` into small eval fixtures.
+   - Start a lightweight Research Radar with `Adopt`, `Pilot`, `Watch`, and `Reject` decisions.
+   - Maintain portfolio scorecards before building dashboards.
+   - Use AI red-team plans before any public AI workflow, write-enabled automation, or agentic client communication.
+   - Introduce feature flags, kill switches, and supply-chain evidence first in higher-risk repos: Omnexus, Hub, hosted DTP, consulting intake/proof, and client launch surfaces.
+
 ## Long Term
 
 Build these only after repeated usage proves the need.
@@ -261,6 +278,13 @@ Build these only after repeated usage proves the need.
 - Client portal only after handoff/support pain is real.
 - Deeper Hub/DTP integration only after manual tracking becomes the bottleneck.
 - `tm-skills` keeper automation after skills have real misfire history and repeated update needs.
+- Supervised self-learning automation after enough lessons/evals exist to justify the loop.
+- Research radar automation after the markdown process proves it changes roadmap quality.
+- AG-UI agent frontends only after DTP/Hub needs real-time agent state, approvals, and tool progress.
+- A2A only after multiple independent agents or vendors need interoperability.
+- OpenAI Agents SDK, Google ADK, Temporal, LangGraph, or similar frameworks only after simple workflows/state machines become the bottleneck.
+- SLSA/OpenSSF Scorecard, CycloneDX SBOMs, signed attestations, and broader supply-chain evidence where repo risk and release cadence justify the ceremony.
+- OpenFeature-style feature flag standardization after flags become a recurring cross-repo pattern.
 - Optional plugin packaging only if the skills need to be distributed beyond Toni's local environment.
 - Heavier customer portals after the lightweight Client Command Room pattern proves value across multiple engagements.
 
@@ -273,6 +297,9 @@ Do not build these into the near-term practice.
 - `tm-skills` public distribution or marketplace.
 - Self-rewriting skills.
 - Skill telemetry beyond local evals and `MISFIRES.md`.
+- Autonomous self-learning or self-modifying skills.
+- Research automation that creates implementation work without human acceptance.
+- Protocol adoption just because the protocol is interesting.
 - CRM replacement.
 - Billing or e-signature integration.
 - Auto-publishing case studies.

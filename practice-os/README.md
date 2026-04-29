@@ -20,3 +20,16 @@ Command-room templates:
 
 - `templates/client-command-room-fit-assessment.md` decides whether to build a command room, use a handoff checklist, skip the private surface, or defer.
 - `templates/client-command-room-spec.md` defines owner dashboard, owner tasks, business roadmap, developer roadmap, handoff/rules, and placeholder-only support/verification surfaces.
+
+Future Intelligence templates:
+
+- `templates/lesson-capture.md` turns delivery outcomes and failures into reusable lessons.
+- `templates/research-radar-item.md` tracks AI/dev signals as `Adopt`, `Pilot`, `Watch`, or `Reject`.
+- `templates/research-spike.md` scopes a bounded tool/protocol/framework investigation.
+- `templates/portfolio-scorecard.md` summarizes repo health, proof readiness, and next touch lane.
+- `templates/agent-session-record.md` leaves a receipt for major agent sessions.
+- `templates/ai-red-team-plan.md` plans adversarial checks before risky AI workflows.
+- `templates/feature-flag-kill-switch-plan.md` records rollout and rollback controls.
+- `templates/supply-chain-baseline.md` captures release trust and dependency evidence.
+
+These are optional until real usage proves they should become gates.

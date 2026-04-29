@@ -11,6 +11,7 @@ The practical thesis is:
 3. Turn real delivery evidence into proof.
 4. Build hosted/private surfaces only when they connect to real artifacts.
 5. Add deeper agent automation only after permissions, evals, evidence, and human-review gates exist.
+6. Turn delivery, research, failures, and agent-session receipts into compounding practice knowledge.
 
 ## Scope
 
@@ -61,6 +62,7 @@ An item stays on the roadmap only if it creates at least one of these forms of v
 - Clearer owner/client handoff.
 - Better security, redaction, COI, or permission control.
 - More repeatable revenue motion.
+- Stronger research-to-implementation signal, agent performance, or release trust.
 
 An item should be delayed or cut if it mostly creates:
 
@@ -69,6 +71,55 @@ An item should be delayed or cut if it mostly creates:
 - Agent autonomy before consent, logging, and rollback.
 - Duplicate state between DTP, Hub, and project repos.
 - New framework complexity before a workflow has proven pain.
+- Research novelty that does not improve delivery speed, proof quality, risk control, agent performance, or business leverage.
+
+## Future Intelligence Layer
+
+Status: roadmap expansion, not a priority reset. The current next order stays intact: hosted DTP Phase 0, proof/redaction queues, first Client Operating Kit pilot, prompt/registry validation, then repo-specific touch passes.
+
+Purpose: make the practice compound. Every delivery, failure, proof packet, research finding, and agent session should be able to become reusable knowledge, an eval, a checklist, a skill update, a gate, or operating doctrine.
+
+Operating rules:
+
+- Keep the learning loop supervised. No self-rewriting skills, autonomous repo edits, auto-published proof, or client-facing automation without explicit approval.
+- Start as curated markdown, templates, eval fixtures, and review queues; build hosted automation only after repeated usage proves the workflow.
+- Prefer primary sources, official docs, and real repo evidence over AI trend summaries.
+- Every new intelligence asset must point back to a repo, engagement, proof packet, eval, or decision it improves.
+
+Components:
+
+- Supervised Self-Learning Loop: work produces evidence, evidence produces lessons, lessons produce evals/checklists/skills, and future work improves.
+- Research Arm / Research Radar: track AI/dev trends as `Adopt`, `Pilot`, `Watch`, or `Reject`, with source, relevance, risk, and next review date.
+- Agent Flight Recorder: leave a compact receipt for major agent sessions: goal, repos touched, commands, files changed, failures, lessons, follow-ups, and eval candidates.
+- Portfolio Scorecard: one health card per repo covering CI, last verified date, proof readiness, privacy/COI risk, next touch lane, and blocker.
+- Context Engineering Lane: formalize repo context packs, compact handoffs, structured notes, and just-in-time retrieval patterns for long sessions.
+- AI Red-Team / Guardrail Lab: run prompt/agent evals, Promptfoo-style red teams, NIST/OWASP checks, and OpenAI guardrail thinking before write-enabled automation or public AI workflows.
+- Release Trust / Supply Chain Spine: layer in SLSA/OpenSSF Scorecard, CycloneDX SBOMs, dependency review, CodeQL/Semgrep, and signed/evidence-backed release artifacts when a repo's risk justifies it.
+- Feature Flag / Kill Switch Standard: use explicit flags and rollback paths for AI, billing, intake, client-facing, and automation features; watch OpenFeature as a future standard.
+- Agent Protocol Watchlist: keep MCP later as planned; add AG-UI for future agent frontends and A2A as watch-only until multi-agent interoperability is a real need.
+
+Suggested priority:
+
+1. Roadmap-only capture now.
+2. Low-cost Practice OS templates next: lesson capture, research radar item, research spike, portfolio scorecard, agent session record, AI red-team plan, feature flag/kill switch plan, and supply-chain baseline.
+3. Eval garden after that: convert real misfires from Hub, DTP, and `tm-skills` into small fixtures.
+4. Red-team lab before autonomy: add guardrail/red-team tests before any write-enabled agent workflow.
+5. Protocol/tool spikes later: AG-UI, A2A, OpenAI Agents SDK, Google ADK, Temporal, and deeper MCP only after DTP/Hub have real workflows that justify them.
+
+Initial sources:
+
+- OpenAI Agents SDK, evals, tracing, and guardrails: https://developers.openai.com/api/docs/guides/agents
+- OpenAI agent evals: https://developers.openai.com/api/docs/guides/agent-evals
+- Anthropic context engineering: https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents
+- Google ADK evaluation: https://adk.dev/evaluate/
+- AG-UI protocol: https://docs.ag-ui.com/introduction
+- A2A specification: https://google-a2a.github.io/A2A/specification/
+- Promptfoo red teaming: https://www.promptfoo.dev/docs/red-team/
+- DORA metrics: https://dora.dev/guides/dora-metrics/
+- OpenFeature: https://openfeature.dev/docs/reference/intro/
+- CycloneDX SBOMs: https://cyclonedx.org/specification/overview/
+- OpenAlex API: https://developers.openalex.org/api-reference/introduction
+- Hugging Face Papers: https://huggingface.co/papers
 
 ## Sprint 2: Practice Platform Foundations
 
@@ -419,6 +470,7 @@ Priority:
 - Hosted DTP Phase 0 needs a written schema/app boundary before code.
 - Public proof has a strong shell but needs asset/redaction/permission queue discipline.
 - Agent-security research is now represented here; promote specific gates into implementation docs before any deeper autonomous workflows.
+- Future Intelligence templates now exist as optional Practice OS assets, but they still need first real use before becoming required gates.
 
 ## Research Additions To Roadmap
 
@@ -562,6 +614,100 @@ Source:
 
 - https://opensource.microsoft.com/blog/2026/04/02/introducing-the-agent-governance-toolkit-open-source-runtime-security-for-ai-agents/
 
+### 10. OpenAI Agents SDK And Google ADK: Watch/Pilot Later
+
+OpenAI Agents SDK has first-class concepts for agents, tools, handoffs, tracing, guardrails, and agent workflow evaluation. Google ADK similarly emphasizes building, evaluating, and deploying agents with multi-agent and graph-based workflows.
+
+Roadmap impact:
+
+- Keep current DTP/Hub flows as explicit workflows and state machines first.
+- Add a small research spike only after hosted DTP has a real proof/redaction assistant or Hub has a real support/intake agent workflow.
+- Require trace ids, eval cases, guardrail expectations, and rollback before any write-enabled agent runs.
+
+Sources:
+
+- https://developers.openai.com/api/docs/guides/agents
+- https://developers.openai.com/api/docs/guides/agent-evals
+- https://adk.dev/evaluate/
+
+### 11. Context Engineering As Operating Discipline
+
+Context engineering is the practice of curating the right information, tools, examples, state, and history for an agent at each step. It matters more as sessions become long-running and cross-repo.
+
+Roadmap impact:
+
+- Add repo context packs, compact handoffs, and agent session records before building recall automation.
+- Treat context as a finite resource: prefer high-signal file paths, commands, receipts, and decisions over dumping everything into prompts.
+- Use structured notes and just-in-time retrieval before persistent MCP recall.
+
+Sources:
+
+- https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents
+- https://docs.langchain.com/oss/python/langchain/context-engineering
+
+### 12. AG-UI And A2A Protocol Watchlist
+
+AG-UI standardizes event-based interaction between agent backends and user-facing applications. A2A standardizes agent-to-agent communication. Both are useful to watch, but neither should drive Sprint 2 implementation.
+
+Roadmap impact:
+
+- Keep hosted DTP Phase 0 as a private app/data foundation, not an agent frontend experiment.
+- Consider AG-UI only if DTP or Hub needs a real-time agent UI with state, tool progress, approvals, and resumable interactions.
+- Keep A2A watch-only until there are multiple independent agents or vendors that genuinely need interoperability.
+
+Sources:
+
+- https://docs.ag-ui.com/introduction
+- https://google-a2a.github.io/A2A/specification/
+
+### 13. Red-Team And Guardrail Lab
+
+Promptfoo, OpenAI guardrails/evals, OWASP, and NIST AI RMF point to the same practical rule: adversarial testing should exist before agentic systems touch sensitive data, external tools, or public user flows.
+
+Roadmap impact:
+
+- Add AI red-team plans before public AI workflows, write-enabled agents, support automation, or agentic client communication.
+- Convert actual failures into eval fixtures and policy checks.
+- Keep red-team reports internal unless sanitized and intentionally promoted into proof.
+
+Sources:
+
+- https://www.promptfoo.dev/docs/red-team/
+- https://openai.github.io/openai-agents-python/guardrails/
+- https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence
+
+### 14. Delivery Metrics, Release Trust, And Feature Flags
+
+DORA metrics help assess delivery performance. OpenFeature provides a vendor-neutral feature-flag API. CycloneDX supports machine-readable supply-chain evidence. SLSA/OpenSSF-style release trust belongs on the roadmap, but only where repo risk justifies the overhead.
+
+Roadmap impact:
+
+- Add portfolio scorecards before dashboards.
+- Use feature flags and kill switches for AI, billing, intake, client-facing, and automation features.
+- Add SBOM/release-trust evidence first to higher-risk repos such as Omnexus, Hub, hosted DTP, and client-facing launch surfaces.
+
+Sources:
+
+- https://dora.dev/guides/dora-metrics/
+- https://openfeature.dev/docs/reference/intro/
+- https://cyclonedx.org/specification/overview/
+- https://openssf.org/projects/slsa/
+
+### 15. Research Radar Sources
+
+A small research arm can stay lightweight by using curated, high-signal sources rather than building another platform.
+
+Roadmap impact:
+
+- Start with markdown research radar items and a weekly/monthly review rhythm.
+- Use Hugging Face Papers for AI research discovery, OpenAlex for broader scholarly metadata, and official vendor/spec docs for implementation decisions.
+- Classify each item as `Adopt`, `Pilot`, `Watch`, or `Reject`; anything marked `Adopt` still needs a repo-specific implementation plan.
+
+Sources:
+
+- https://huggingface.co/papers
+- https://developers.openalex.org/api-reference/introduction
+
 ## Parked Or Explicitly Later
 
 - Multi-user SaaS.
@@ -576,6 +722,10 @@ Source:
 - Client-side autonomous routines.
 - Heavy load testing before load exists.
 - Visual-regression SaaS before visual-regression pain exists.
+- Self-learning without human review.
+- Research automation that creates implementation work without acceptance.
+- A2A/AG-UI/MCP protocol adoption before a real workflow needs it.
+- Supply-chain ceremony in low-risk repos before the value is clear.
 
 ## Recommended Next Execution Order From Here
 
@@ -586,3 +736,5 @@ Source:
 5. Run the first adjacent-project touch pass: pick the repo whose trigger is ready first (`fitness-app`, `demario-pickleball-1`, `FamilyTrips`, or `dse-content`) and execute only its matching lane.
 6. Use DeMario command room and Omnexus verification toolkit as proof/reference material only after permission/redaction review.
 7. Start hosted DTP implementation only after the schema, evidence contract, and redaction/proof queue are accepted.
+
+Non-blocking intelligence track: use the optional Future Intelligence templates during the next real delivery/research sessions, but do not insert them ahead of hosted DTP Phase 0 or proof/redaction work.
