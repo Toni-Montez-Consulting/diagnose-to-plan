@@ -9,6 +9,7 @@ Canonical roadmap:
 - `docs/PRACTICE_PRODUCTION_ROADMAP.md` is the source of truth for practice production work: hosted DTP, Practice OS, Client Operating Kits, redaction, COI, proof promotion, pilot sequencing, and parked ideas.
 - `docs/DOCUMENTATION_MAP.md` explains which docs in DTP, consulting, and Hub own which decisions.
 - `docs/CLIENT_COMMAND_ROOM_PATTERN.md` captures the reusable admin/customer portal concept from the DeMario pickleball admin portal for Toni and future client engagements.
+- `docs/CLI_VERIFICATION_AUTOMATION_PATTERN.md` captures the Omnexus-style CLI verification, support, and evidence pattern that should come before heavier hosted product work.
 - `docs/TM_SKILLS_IMPLEMENTATION_ROADMAP.md` is the implementation handoff for the separate `tm-skills` repo, which will own reusable cross-repo software-development Skills.
 
 Current scope:

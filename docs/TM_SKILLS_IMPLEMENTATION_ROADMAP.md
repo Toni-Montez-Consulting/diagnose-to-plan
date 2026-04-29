@@ -14,7 +14,7 @@ It should make future agent sessions better at:
 - building frontend surfaces with craft and domain fit;
 - drawing backend boundaries before adding persistence or services;
 - choosing test coverage proportional to risk;
-- finishing work with validation, repo hygiene, and handoff quality.
+- finishing work with validation, repo hygiene, handoff quality, and evidence-producing CLI gates.
 
 It is not a consulting CRM, client vault, DTP replacement, or public product.
 
@@ -33,6 +33,7 @@ The clean boundary is:
 - DTP teaches the practice what to do with clients.
 - `tm-skills` teaches coding agents how to build software with Toni's standards.
 - Project repos consume both when relevant.
+- `docs/CLI_VERIFICATION_AUTOMATION_PATTERN.md` teaches the shared infrastructure shape for doctor, matrix, verification, support, and release evidence.
 
 ## Current Local State
 
@@ -184,13 +185,15 @@ Default behavior:
 - match test depth to risk;
 - prefer deterministic tests before broad E2E;
 - name manual gates when automation cannot cover them;
-- keep Windows/local constraints visible.
+- keep Windows/local constraints visible;
+- identify whether the repo has a doctor, matrix, local gate, release gate, support gate, or evidence writer.
 
 Expected output:
 
 - test choices and rationale;
 - commands to run;
-- what remains manual.
+- what remains manual;
+- evidence artifact paths when a gate writes durable output.
 
 ### delivery-baseline
 
@@ -201,14 +204,16 @@ Default behavior:
 - verify before calling work done;
 - do not revert unrelated changes;
 - keep dirty-worktree state explicit;
-- produce a clear handoff with commands run and remaining gates.
+- produce a clear handoff with commands run, evidence artifacts, advisory failures, hard failures, and remaining gates.
 
 Expected output:
 
 - validation summary;
+- hard versus advisory gate status;
 - files changed;
 - commit/push/deploy state;
-- next manual gates.
+- next manual gates;
+- links or paths to release/support/proof evidence.
 
 ## Always-On Instruction Floor
 
@@ -336,8 +341,9 @@ This makes the skills iterate on real usage instead of becoming frozen commandme
 12. Install global symlinks only when the doctor confirms the target state.
 13. Restart or reload each tool as needed.
 14. Run discovery smoke tests in Codex, Claude Code, and GitHub Copilot.
-15. Add one project-pinned canary only after global discovery works.
-16. Commit and push the repo.
+15. Add guidance in `testing-ladder` and `delivery-baseline` that points to DTP's CLI verification pattern.
+16. Add one project-pinned canary only after global discovery works.
+17. Commit and push the repo.
 17. Update this roadmap with what actually shipped.
 
 ## Smoke Tests
@@ -414,5 +420,5 @@ Expected behavior: the agent should pause and route to the DTP COI screen before
 Paste this into a fresh chat from the DTP repo:
 
 ```text
-Please implement the tm-skills roadmap. Start by reading diagnose-to-plan/docs/PRACTICE_PRODUCTION_ROADMAP.md, diagnose-to-plan/docs/DOCUMENTATION_MAP.md, and diagnose-to-plan/docs/TM_SKILLS_IMPLEMENTATION_ROADMAP.md. Then create the separate tm-skills repo, scaffold the five Phase 1 skills, add evals, MISFIRES.md, manifest.json, PowerShell doctor/install/freshness scripts, and run the doctor before any global install. Do not overwrite existing global instruction files or legacy skill folders. Keep DTP as the consulting Practice OS and tm-skills as the cross-repo SDLC skills layer. After implementation, summarize validation, repo state, and any manual install steps that remain.
+Please implement the tm-skills roadmap. Start by reading diagnose-to-plan/docs/PRACTICE_PRODUCTION_ROADMAP.md, diagnose-to-plan/docs/DOCUMENTATION_MAP.md, diagnose-to-plan/docs/CLI_VERIFICATION_AUTOMATION_PATTERN.md, and diagnose-to-plan/docs/TM_SKILLS_IMPLEMENTATION_ROADMAP.md. Then create the separate tm-skills repo, scaffold the five Phase 1 skills, add evals, MISFIRES.md, manifest.json, PowerShell doctor/install/freshness scripts, and run the doctor before any global install. Do not overwrite existing global instruction files or legacy skill folders. Keep DTP as the consulting Practice OS and tm-skills as the cross-repo SDLC skills layer. Make testing-ladder and delivery-baseline aware of repo-local doctor/matrix/verification/evidence gates. After implementation, summarize validation, repo state, evidence artifacts, advisory failures, hard failures, and any manual install steps that remain.
 ```

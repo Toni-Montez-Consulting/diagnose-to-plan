@@ -47,6 +47,13 @@ A Client Command Room should usually have five surfaces:
    - "Do not touch" list for risky surfaces: environment variables, database settings, secrets, OAuth apps, code, payment processor config.
    - Domain rules that prevent future confusion, such as venue-routing rules, cancellation rules, payment matching, permission proof, or redaction rules.
 
+Some command rooms should add a sixth surface only after there is enough operational signal:
+
+6. **Support / Verification**
+   - Last deploy, last health check, last verification run, open support tasks, and connected-system status.
+   - Evidence links from CLI runners rather than manually updated status cards.
+   - Manual gates the owner still controls, written in owner language.
+
 ## Why It Works
 
 The pattern gives the client a way to operate the system without learning the stack.
@@ -94,10 +101,10 @@ The current consulting `/admin` is a noindex public-safe command room. It is use
 
 The future hosted private DTP app can borrow this pattern:
 
-- Dashboard: active engagements, missing kit artifacts, proof queue, redaction queue, open COI items.
-- Tasks: near-term practice actions, client follow-ups, proof capture, launch checks.
+- Dashboard: active engagements, missing kit artifacts, proof queue, redaction queue, open COI items, and recent verification evidence.
+- Tasks: near-term practice actions, client follow-ups, proof capture, launch checks, and support checks.
 - Business: practice roadmap and offer/proof gates.
-- Developer: hosted DTP build, Hub integration, `tm-skills`, tooling, deploy gates.
+- Developer: hosted DTP build, Hub integration, `tm-skills`, tooling, deploy gates, and CLI automation work.
 - Handoff/Rules: Microsoft kill switch, COI, redaction, public/private boundary, client consent.
 
 ### For Clients
@@ -179,6 +186,7 @@ Only add domain tables when the workflow demands them: bookings, inquiries, volu
 - Making Toni manage the client's routine tasks forever.
 - Adding a database because the UI looks better with live state.
 - Turning every small website into a portal.
+- Showing verification widgets that do not connect to real commands or evidence.
 
 ## Case Study Angle
 

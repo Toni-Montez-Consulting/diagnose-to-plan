@@ -8,6 +8,8 @@ DTP owns this roadmap because DTP is the private Practice OS: the place where cl
 
 The reusable admin/customer portal concept is captured as the Client Command Room pattern. It is inspired by the `demario-pickleball-1` admin portal and should guide future owner-facing operating rooms for Toni, clients, and selected engagements. See `docs/CLIENT_COMMAND_ROOM_PATTERN.md`.
 
+The reusable verification/support automation concept is captured as the CLI Verification And Automation pattern. It is inspired by the Omnexus / `fitness-app` toolkit and should guide infrastructure-first doctor, matrix, local gate, release gate, support gate, and evidence artifacts before heavier hosted product work. See `docs/CLI_VERIFICATION_AUTOMATION_PATTERN.md`.
+
 ## Current Implemented State
 
 ### DTP
@@ -58,7 +60,25 @@ The reusable admin/customer portal concept is captured as the Client Command Roo
 - Do not turn every site into a portal. Use the pattern only when there is a real recurring workflow.
 - Implementation details live in `docs/CLIENT_COMMAND_ROOM_PATTERN.md`.
 
+### CLI Verification And Automation Pattern
+
+- Build concept reviewed from Omnexus / `fitness-app`.
+- Reference shape: CLI doctor, tool matrix, local verification, release verification, support/runtime checks, and evidence artifacts.
+- Intended use: make infrastructure observable and repeatable before building more UI.
+- The pattern is infrastructure first: each repo should explain its own gates before hosted DTP tries to persist or display them.
+- Implementation details live in `docs/CLI_VERIFICATION_AUTOMATION_PATTERN.md`.
+
 ## Outstanding Work
+
+### Infrastructure-First Verification And Automation
+
+- Inventory CLI tools and verification lanes per repo before building more hosted product surface.
+- Define hard, advisory, and manual gates for DTP, consulting, Hub, `tm-skills`, and each project repo.
+- Add or document repo-local doctor/matrix commands where they do not exist yet.
+- Preserve current reliable commands while planning future wrapper commands.
+- Write verification evidence to durable markdown/JSON artifacts.
+- Keep hard gates hard: redaction, COI, secret scans, auth boundaries, and production-data safety must not be hidden by advisory modes.
+- Feed evidence into hosted DTP and Client Command Rooms only after the CLI spine is reliable.
 
 ### Practice OS
 
@@ -101,49 +121,64 @@ The reusable admin/customer portal concept is captured as the Client Command Roo
 - Add a Client Command Room template to Practice OS after the pattern is reviewed.
 - Decide per engagement whether the client needs a command room, a simple handoff checklist, or no private surface at all.
 - Keep owner-facing tasks and developer/system roadmaps separate.
+- Add support/verification panels only when they connect to real CLI evidence.
 - Treat command room screenshots and walkthroughs as future proof-packet evidence after redaction/permission review.
 
 ## Near Term
 
 Complete these before treating the practice as ready for soft launch.
 
-1. Stabilize verification.
+1. Build the infrastructure-first verification spine.
+   - Use `docs/CLI_VERIFICATION_AUTOMATION_PATTERN.md` as the implementation handoff.
+   - Inventory the CLI tools available for DTP, consulting, Hub, `tm-skills`, Brother/DeMario, Omnexus, Mom nonprofit, Cam, and Greg.
+   - For each repo, name the local gate, release gate, support gate, manual gates, and evidence artifact path.
+   - Classify each gate as hard, advisory, or manual.
+   - Keep this as docs/contract work first. Do not build hosted dashboards before the CLI gates are clear.
+
+2. Stabilize current verification.
    - DTP: `pytest`, `ruff check .`, `dtp skills --validate`, `dtp practice doctor`, `dtp index --all`, `dtp synthesize --no-confirm`.
    - Consulting: `npm run build`, visual QA, `/admin` noindex check, sitemap exclusion check.
    - Hub: health check, protected console check, and one real consulting intake submission when practical.
+   - Omnexus reference: study `tools:doctor`, `tools:matrix`, `tools:verify:local`, `tools:verify:release`, and `ops:release:evidence` for reusable shape, not direct copying.
 
-2. Clean up private durability.
+3. Clean up private durability.
    - Decide whether to keep or remove any local fake engagement kits.
    - Initialize `dtp vault` only when there is private engagement material worth preserving.
    - Add a private remote before relying on the vault for durable off-laptop storage.
 
-3. Start Mom nonprofit pilot.
+4. Start Mom nonprofit pilot.
    - Run COI and consent first.
    - Create `mom-nonprofit/site-rebuild` kit.
    - Fill `client-context.md`, `data-inventory.md`, `consent.md`, `diagnose.md`, and `plan.md`.
    - Define primary and secondary metrics before building.
+   - Decide early whether Mom needs a lightweight handoff checklist or a real command room.
+   - Define support/verification evidence before launch: build status, form/intake status, owner access, handoff checklist, and uptime/manual checks.
 
-4. Define the proof packet format.
+5. Define the proof packet format.
    - Use a receipt-style case-study template, not a long enterprise essay.
    - Add baseline, after-state, evidence, caveats, permission, redaction, reviewer, and public/private asset rules.
    - Use this format for Mom nonprofit first, then backfill Brother/Omnexus/Cam/Greg.
+   - Include verification artifacts as proof sources where useful, but publish only redacted summaries.
 
-5. Keep consulting aligned.
+6. Keep consulting aligned.
    - Keep `/admin` as command room/launcher only.
    - Keep Hub intake primary and Formspree fallback.
    - Add source-material assets only after redaction review.
+   - Add hosted DTP and verification links later only when they are private-safe.
 
-6. Prepare `tm-skills` Phase 1.
+7. Prepare `tm-skills` Phase 1.
    - Use `docs/TM_SKILLS_IMPLEMENTATION_ROADMAP.md` as the implementation handoff.
    - Scaffold `tm-skills` as a separate repo.
    - Build the five Phase 1 skills and smoke-test discovery in Codex first.
    - Do not overwrite existing global instructions or legacy skill folders.
+   - Make `testing-ladder` and `delivery-baseline` aware of doctor/matrix/local/release/support/evidence gates.
 
-7. Capture the Client Command Room pattern.
+8. Capture the Client Command Room pattern.
    - Use `docs/CLIENT_COMMAND_ROOM_PATTERN.md` as the implementation handoff.
    - Treat Brother/DeMario as the reference implementation.
    - Add a future Practice OS template for owner dashboard, tasks, business roadmap, developer roadmap, and handoff/rules.
    - Use Mom nonprofit to decide whether the pattern should be a full portal or a lighter handoff checklist.
+   - Keep the optional support/verification surface tied to real CLI evidence.
 
 ## Mid Term
 
@@ -154,37 +189,47 @@ Build these after the near-term documentation and pilot path are stable.
    - Use Supabase Auth, RLS, and Storage.
    - Persist engagements, artifacts, artifact versions, metrics, redaction reviews, pattern candidates, and decisions.
    - Add import/export so local markdown kits and hosted records can round-trip.
+   - Persist verification evidence only after the CLI evidence contract is stable.
 
-2. Client Operating Kit pilot.
+2. Hosted verification and support evidence.
+   - Add a durable evidence model for local, release, support, and proof runs.
+   - Store command summaries, artifact paths, commit/branch, hard failures, advisory failures, manual gates, and redaction status.
+   - Link evidence to engagements, proof packets, support events, and command-room surfaces.
+   - Keep raw sensitive logs out of hosted DTP unless there is a clear private-storage reason.
+
+3. Client Operating Kit pilot.
    - Run the Mom nonprofit engagement through diagnose, plan, build, handoff, eval, and redacted proof.
    - Produce a real runbook and walkthrough.
    - Promote one reviewed Bottleneck Pattern.
 
-3. Project proof tracks.
+4. Project proof tracks.
    - Brother site: local business launch proof and handoff pattern.
    - Omnexus: founder/product/operator proof and App Store/product hardening evidence.
    - Cam app: Builder Launch Sprint proof with decision clarity and scope control.
    - Greg app/site: second builder/operator pilot once scope is clearer.
    - Consulting site: public proof layer that receives only reviewed redacted packets.
    - Hub: intake/runtime support, not Client Operating Kit storage.
+   - Each project should identify its own CLI verification/support lane before its proof packet is finalized.
 
-4. Business ops.
+5. Business ops.
    - Finalize offer architecture: AI Upgrade Audit, Launch Sprint, Assistant/Workflow Kit, Operating System install.
    - Finalize proposal/SOW template and pricing discipline.
    - Add "what I will not build" filters to reduce bad-fit leads.
    - Add scheduling only when the real booking path exists.
 
-5. `tm-skills` canary and overlays.
+6. `tm-skills` canary and overlays.
    - Pin `tm-skills` into one low-risk repo after global discovery works.
    - Use consulting or `demario-pickleball-1` as the first canary only if duplicate-skill behavior is clear.
    - Add stack overlays after Phase 1 proves useful: `stack-astro`, `stack-nextjs`, `stack-swift-ios`, `architecture-doc`, and `codebase-audit`.
    - Keep stack overlays thin. They should compose with the five base skills, not duplicate them.
+   - Add a `verification-toolkit` or `release-evidence` overlay only after the DTP CLI pattern has been used in at least two repos.
 
-6. Client Command Room pilot.
+7. Client Command Room pilot.
    - Convert the DeMario admin portal into a reusable pattern note and template.
    - Use the Mom nonprofit pilot to test whether the command-room model helps a non-technical operator.
    - Add command-room proof to consulting only after screenshots/walkthroughs are redacted and permissioned.
    - Keep client portals optional until repeated handoff/support pain proves the need.
+   - Add support/verification widgets only after evidence artifacts exist.
 
 ## Long Term
 
@@ -193,6 +238,7 @@ Build these only after repeated usage proves the need.
 - MCP recall across engagements after 2-3 real engagements make manual recall painful.
 - Operator routines after the workflow is stable and draft-only checks are enough.
 - Client-side routines only when the workflow is proven, low-risk, and easy to disable.
+- Release train and support automation after repo-local gates produce trustworthy evidence.
 - Vertical bundles only after repeated Bottleneck Patterns exist across multiple engagements.
 - Client portal only after handoff/support pain is real.
 - Deeper Hub/DTP integration only after manual tracking becomes the bottleneck.
@@ -213,6 +259,7 @@ Do not build these into the near-term practice.
 - Billing or e-signature integration.
 - Auto-publishing case studies.
 - Auto-send client/customer communications.
+- Auto-remediation that changes production, databases, billing, or client data without explicit review.
 - Client-side autonomous routines.
 - Regulated-data verticals.
 - Microsoft-conflict-prone offers.
@@ -222,15 +269,15 @@ Do not build these into the near-term practice.
 
 | Repo | Owns | Does Not Own |
 |---|---|---|
-| `diagnose-to-plan` | Practice OS, Client Operating Kits, redaction, COI, patterns, hosted DTP roadmap, private engagement methodology | Public marketing site, Hub runtime records |
+| `diagnose-to-plan` | Practice OS, Client Operating Kits, redaction, COI, patterns, hosted DTP roadmap, private engagement methodology, CLI verification/evidence pattern | Public marketing site, Hub runtime records |
 | `consulting` | Public storefront, `/start`, public proof, `/admin` command room, launch/design docs | Private client kits, source-of-truth practice roadmap, runtime intake store |
 | `hub` | Runtime intake, private console, Supabase operational tables, webhook/capture/runs support | DTP engagement kits, public proof pages, CRM replacement |
-| `tm-skills` | Cross-repo SDLC skills, global coding-agent instructions, trigger evals, skill install/doctor scripts | Client engagement records, consulting-practice memory, public proof |
+| `tm-skills` | Cross-repo SDLC skills, global coding-agent instructions, trigger evals, skill install/doctor scripts, agent behavior for verification gates | Client engagement records, consulting-practice memory, public proof |
 | `engineering-playbook` | Portfolio schemas, templates, historical decisions, general operating doctrine, secret-management references | Source-of-truth practice production roadmap |
 | `hub-prompts` | Hub prompt catalogue, prompt schemas, prompt validation fixtures | Practice roadmap, SDLC skills repo, Hub automation target routing |
 | `hub-registry` | Hub automation targets and routing config | Consulting knowledge registry, DTP engagement kits, case-study planning |
 | `demario-pickleball-1` | Brother/local business launch proof track, client project delivery, Client Command Room reference implementation | Practice-wide roadmap |
-| `fitness-app` / Omnexus | Founder/product/operator proof and app launch evidence | Practice OS infrastructure |
+| `fitness-app` / Omnexus | Founder/product/operator proof, app launch evidence, reference CLI verification toolkit shape | Practice OS source of truth |
 | Cam/Greg repos | Project-specific launch/operator proof tracks once created or clarified | Practice-wide roadmap |
 
 ## Validation Commands

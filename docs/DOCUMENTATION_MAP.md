@@ -16,6 +16,7 @@ When another repo's docs conflict with this roadmap, treat the other doc as loca
 - `docs/03-skills.md`: current skill layout and validation boundary.
 - `docs/04-multi-repo.md`: sibling repo read/write boundaries.
 - `docs/CLIENT_COMMAND_ROOM_PATTERN.md`: reusable admin/customer portal pattern inspired by `demario-pickleball-1`; use when planning owner-facing operating rooms.
+- `docs/CLI_VERIFICATION_AUTOMATION_PATTERN.md`: reusable CLI doctor/matrix/verification/evidence pattern inspired by Omnexus; use when planning infrastructure-first automation across repos.
 - `docs/TM_SKILLS_IMPLEMENTATION_ROADMAP.md`: implementation handoff for the separate `tm-skills` SDLC skills repo. Use this when building reusable coding-agent skills.
 - `docs/build-spec-v2.md`: historical implementation spec for the V2 harness. Preserve for context, but prefer the current roadmap when it conflicts with implemented reality.
 - `practice-os/`: reusable policies, templates, Skills, and reviewed Bottleneck Patterns.
@@ -74,6 +75,7 @@ Do not update `hub-prompts` or `hub-registry` just because the roadmap changes. 
 ## Update Rules
 
 - Practice-wide sequencing goes in DTP's `PRACTICE_PRODUCTION_ROADMAP.md`.
+- Cross-repo verification, support automation, and evidence contracts go in `CLI_VERIFICATION_AUTOMATION_PATTERN.md` first, then repo-specific docs when implementation starts.
 - Cross-repo SDLC skill implementation goes in `TM_SKILLS_IMPLEMENTATION_ROADMAP.md` until the separate `tm-skills` repo exists, then in `tm-skills` docs.
 - Public-site polish, proof layout, and visual QA go in consulting docs.
 - Intake/runtime/Supabase/Vercel support goes in Hub docs.
