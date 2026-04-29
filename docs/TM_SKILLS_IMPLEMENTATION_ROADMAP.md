@@ -417,7 +417,10 @@ Updated on 2026-04-29:
 - Added `manifest.json`, `MISFIRES.md`, trigger evals, expected-output evals, and PowerShell `doctor`, `install`, and `freshness-check` scripts.
 - Ran `.\scripts\doctor.ps1`, `.\scripts\freshness-check.ps1`, and `.\scripts\install.ps1 -WhatIf`; all completed successfully after one local PowerShell string interpolation fix.
 - Made the initial local repo commit: `d6cdb6a` (`Scaffold tm skills library`).
-- Global install, tool reloads, Codex/Claude/Copilot discovery smoke tests, remote creation, and push remain manual follow-up gates.
+- Added `tm-skills` to `C:\Users\tonimontez\toni-consulting-ops.code-workspace`.
+- Created private GitHub remote `https://github.com/toniomon96/tm-skills` and pushed `main`.
+- Re-ran `.\scripts\doctor.ps1`, `.\scripts\freshness-check.ps1`, and `.\scripts\install.ps1 -WhatIf`; all completed successfully.
+- Global install, tool reloads, and Codex/Claude/Copilot discovery smoke tests remain manual follow-up gates.
 
 ## Deferred
 

@@ -19,6 +19,8 @@ REQUIRED_TEMPLATES = (
     "plan-roadmap.md",
     "work-item-spec.md",
     "client-operating-kit.md",
+    "client-command-room-fit-assessment.md",
+    "client-command-room-spec.md",
     "connector-map.md",
     "runbook.md",
     "case-study-capture.md",

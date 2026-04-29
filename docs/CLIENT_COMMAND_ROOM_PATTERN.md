@@ -4,6 +4,15 @@ This pattern captures the reusable concepts from the `demario-pickleball-1` admi
 
 The goal is not to clone the pickleball admin UI into every project. The goal is to reuse the operating shape: a small protected room where the owner can run the thing after the build ships.
 
+## Practice OS Templates
+
+Use the Practice OS templates before building any new command-room surface:
+
+- `practice-os/templates/client-command-room-fit-assessment.md`: decides whether the engagement needs a command room, a handoff checklist, no private surface, or a deferred revisit.
+- `practice-os/templates/client-command-room-spec.md`: defines the smallest owner-safe room after the fit assessment says to build one.
+
+This keeps the pattern useful without turning every project into a portal.
+
 ## Source Pattern
 
 The current reference implementation is `demario-pickleball-1`:

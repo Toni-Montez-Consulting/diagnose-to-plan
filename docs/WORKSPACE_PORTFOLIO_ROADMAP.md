@@ -26,9 +26,6 @@ Workspace folders currently listed in `C:\Users\tonimontez\toni-consulting-ops.c
 - `FamilyTrips`
 - `demario-pickleball-1`
 - `dse-content`
-
-Adjacent repo now created and should be added to the workspace:
-
 - `tm-skills`
 
 ## Priority Decision
@@ -40,6 +37,8 @@ The recommended order from the previous discussion is still valid and now more s
 3. Light GitHub Actions / CI
 4. Hosted private DTP Phase 0
 5. Public proof upgrades
+
+The first two items are now implemented to the intended boundary: `tm-skills` is activated through remote/push/dry-run checks, and the Client Command Room templates exist in Practice OS. The next active item is thin CI.
 
 Still later:
 
@@ -73,15 +72,12 @@ An item should be delayed or cut if it mostly creates:
 
 ### Story 1: Finish `tm-skills` Activation
 
-Status: repo created and locally committed.
+Status: activated to the approved dry-run boundary. The repo is in the VS Code workspace, private GitHub remote `toniomon96/tm-skills` exists, `main` is pushed and tracking `origin/main`, and the safe checks pass. Global install remains gated.
 
 Value: immediately improves every future repo session by making review, frontend craft, backend boundaries, testing judgment, and delivery hygiene reusable across tools.
 
 Remaining work:
 
-- Add `tm-skills` to the VS Code workspace.
-- Create a remote repository and push `C:\Users\tonimontez\tm-skills`.
-- Run `.\scripts\install.ps1 -WhatIf` again and review output.
 - If safe, run `.\scripts\install.ps1 -Apply` only after explicitly approving global links/files.
 - Reload Codex, Claude Code, and GitHub Copilot.
 - Smoke-test discovery with the prompts in `tm-skills/README.md`.
@@ -99,6 +95,8 @@ git status --short --branch
 ```
 
 ### Story 2: Add Client Command Room Template To DTP
+
+Status: implemented in Practice OS as `practice-os/templates/client-command-room-fit-assessment.md` and `practice-os/templates/client-command-room-spec.md`, and enforced by `dtp practice doctor`.
 
 Value: converts the DeMario admin portal learning into a reusable pattern without prematurely building a client portal product.
 
@@ -211,7 +209,7 @@ Owns: practice OS, Client Operating Kits, COI, redaction, proof governance, veri
 
 Next:
 
-- Add Client Command Room template.
+- Pilot the Client Command Room fit template on Mom nonprofit, Greg, Cam, or a local-business engagement before building a new portal surface.
 - Add hosted DTP Phase 0 schema/design.
 - Add proof/redaction queue templates.
 - Add evidence import/export design.
@@ -372,18 +370,14 @@ Priority:
 - Treat DSE content as internal/professional proof only after permission and redaction.
 - Do not fold this into public consulting offers without a DTP COI screen.
 
-## What Was Missing
+## What Still Needs Attention
 
-- `tm-skills` is not yet in the VS Code workspace.
-- `tm-skills` has a local commit but no remote/push.
-- `tm-skills` global install and cross-tool smoke tests are still pending.
+- `tm-skills` global install and cross-tool smoke tests are still pending explicit approval.
 - Prompt id cross-validation between `hub-prompts` and `hub-registry` is a small but valuable gap.
-- The Client Command Room pattern exists, but the Practice OS template does not yet.
+- The Client Command Room templates now exist, but they still need a first pilot against Mom nonprofit, Greg, Cam, or another operator workflow.
 - Hosted DTP Phase 0 needs a written schema/app boundary before code.
 - Public proof has a strong shell but needs asset/redaction/permission queue discipline.
-- DTP's roadmap should explicitly include current agent-security research before any deeper autonomous workflows.
-- FamilyTrips is in the workspace but was not represented in the DTP ownership map.
-- `tm-skills` should be added to the DTP ownership map now that it exists.
+- Agent-security research is now represented here; promote specific gates into implementation docs before any deeper autonomous workflows.
 
 ## Research Additions To Roadmap
 
@@ -542,13 +536,11 @@ Source:
 - Heavy load testing before load exists.
 - Visual-regression SaaS before visual-regression pain exists.
 
-## Recommended Next Execution Order
+## Recommended Next Execution Order From Here
 
-1. Add `tm-skills` to the workspace, create remote, push, and run cross-tool smoke tests.
-2. Add the Client Command Room Practice OS template.
-3. Add thin CI for DTP, consulting, Hub, `tm-skills`, `hub-prompts`, and `hub-registry`.
-4. Draft hosted DTP Phase 0 schema/app-boundary doc.
-5. Add proof packet and redaction queue templates.
-6. Run Mom nonprofit as the first Client Operating Kit pilot.
-7. Use DeMario command room and Omnexus verification toolkit as proof/reference material only after permission/redaction review.
-8. Start hosted DTP implementation only after the schema, evidence contract, and redaction/proof queue are accepted.
+1. Add thin CI for DTP, consulting, Hub, `tm-skills`, `hub-prompts`, and `hub-registry`.
+2. Draft hosted DTP Phase 0 schema/app-boundary doc.
+3. Add proof packet and redaction queue templates.
+4. Run Mom nonprofit as the first Client Operating Kit pilot and use the Command Room fit assessment before deciding on a portal.
+5. Use DeMario command room and Omnexus verification toolkit as proof/reference material only after permission/redaction review.
+6. Start hosted DTP implementation only after the schema, evidence contract, and redaction/proof queue are accepted.

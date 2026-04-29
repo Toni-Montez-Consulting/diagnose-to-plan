@@ -21,7 +21,7 @@ When another repo's docs conflict with this roadmap, treat the other doc as loca
 - `docs/CLI_VERIFICATION_AUTOMATION_PATTERN.md`: reusable CLI doctor/matrix/verification/evidence pattern inspired by Omnexus; use when planning infrastructure-first automation across repos.
 - `docs/TM_SKILLS_IMPLEMENTATION_ROADMAP.md`: implementation handoff and shipped-status note for the separate `tm-skills` SDLC skills repo. Use this when building or activating reusable coding-agent skills.
 - `docs/build-spec-v2.md`: historical implementation spec for the V2 harness. Preserve for context, but prefer the current roadmap when it conflicts with implemented reality.
-- `practice-os/`: reusable policies, templates, Skills, and reviewed Bottleneck Patterns.
+- `practice-os/`: reusable policies, templates, Skills, and reviewed Bottleneck Patterns. Command-room planning now starts with `practice-os/templates/client-command-room-fit-assessment.md` and, only when justified, `practice-os/templates/client-command-room-spec.md`.
 - `extracts/`: raw extraction, detector output, lessons, decisions, and synthesis. Promote only reviewed redacted material to `practice-os/patterns/`.
 - `engagements/`: private client work, gitignored from the DTP code repo except for its README.
 
@@ -29,7 +29,7 @@ When another repo's docs conflict with this roadmap, treat the other doc as loca
 
 `tm-skills` is a separate repo, not a DTP subdirectory. DTP's `docs/TM_SKILLS_IMPLEMENTATION_ROADMAP.md` preserves the implementation handoff and shipped-status notes; the `tm-skills` repo owns active skill files and install scripts.
 
-Once the repo exists, it should own:
+The repo now owns:
 
 - root `README.md`: repo purpose, install modes, and smoke tests.
 - root `AGENTS.md`: instructions for editing the skills repo itself.

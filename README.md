@@ -22,6 +22,7 @@ Current scope:
 - `dtp web` opens a local DTP Workbench UI over the same markdown artifacts
 - `dtp vault` gives private `engagements/` artifacts their own git-backed durability path
 - `voice`, `pricing`, and `sow` stay valid placeholder skills for Toni to author
+- Client Command Room fit/spec templates live in `practice-os/templates/` for owner operating rooms that are justified by recurring workflow pain
 
 ## Local Workbench And Private Vault
 

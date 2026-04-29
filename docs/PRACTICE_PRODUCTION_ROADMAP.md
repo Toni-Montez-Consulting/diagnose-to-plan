@@ -6,7 +6,7 @@ DTP owns this roadmap because DTP is the private Practice OS: the place where cl
 
 `tm-skills` is a separate sibling layer for Toni's reusable software-development skills. It does not replace DTP. DTP owns consulting practice memory and client operating methodology. `tm-skills` owns cross-repo SDLC behavior for coding agents: review discipline, frontend craft, backend boundaries, testing judgment, and delivery hygiene. See `docs/TM_SKILLS_IMPLEMENTATION_ROADMAP.md`.
 
-The reusable admin/customer portal concept is captured as the Client Command Room pattern. It is inspired by the `demario-pickleball-1` admin portal and should guide future owner-facing operating rooms for Toni, clients, and selected engagements. See `docs/CLIENT_COMMAND_ROOM_PATTERN.md`.
+The reusable admin/customer portal concept is captured as the Client Command Room pattern. It is inspired by the `demario-pickleball-1` admin portal and should guide future owner-facing operating rooms for Toni, clients, and selected engagements. Start with `practice-os/templates/client-command-room-fit-assessment.md`, then use `practice-os/templates/client-command-room-spec.md` only when the fit assessment says to build. See `docs/CLIENT_COMMAND_ROOM_PATTERN.md`.
 
 The reusable verification/support automation concept is captured as the CLI Verification And Automation pattern. It is inspired by the Omnexus / `fitness-app` toolkit and should guide infrastructure-first doctor, matrix, local gate, release gate, support gate, and evidence artifacts before heavier hosted product work. See `docs/CLI_VERIFICATION_AUTOMATION_PATTERN.md`.
 
@@ -17,6 +17,7 @@ The reusable verification/support automation concept is captured as the CLI Veri
 - `dtp draft`, `skills`, `note`, `story`, and `mentor` support the original diagnose-to-plan harness.
 - `dtp index`, `detect`, `lesson`, `recall`, and `synthesize` support Extract Through Synthesis.
 - `practice-os/` contains reusable policies, templates, operator Skills, and reviewed Bottleneck Patterns.
+- Practice OS includes Client Command Room fit/spec templates so future engagements can decide between a command room, a handoff checklist, no private surface, or a deferred revisit before building portal UI.
 - `engagements/` is the gitignored private work area for Client Operating Kits.
 - `dtp kit new`, `dtp kit status`, `dtp redact check`, and `dtp practice doctor` support local Client Operating Kit workflows.
 - `dtp web` provides a local browser Workbench over the same markdown contracts.
@@ -39,9 +40,10 @@ The reusable verification/support automation concept is captured as the CLI Veri
 
 ### tm-skills
 
-- Build spec reviewed and accepted as valuable.
-- Intended shape: a separate version-controlled skills repo, not a DTP subdirectory.
+- Separate version-controlled skills repo exists at `C:\Users\tonimontez\tm-skills` with private GitHub remote `toniomon96/tm-skills`.
 - Phase 1 scope is five SDLC skills: `review-checklist`, `frontend-craft`, `backend-design`, `testing-ladder`, and `delivery-baseline`.
+- Safe activation checks pass: doctor, freshness, and install dry-run.
+- Global install remains gated until explicitly approved; do not run `install.ps1 -Apply` by default.
 - COI/Microsoft boundaries stay always-on and point back to DTP's COI screen. Do not create a Phase 1 `compliance-coi` skill.
 - Implementation details, install paths, local-state notes, and smoke tests live in `docs/TM_SKILLS_IMPLEMENTATION_ROADMAP.md`.
 
@@ -56,6 +58,7 @@ The reusable verification/support automation concept is captured as the CLI Veri
 
 - Build concept reviewed from `demario-pickleball-1`.
 - Reference shape: protected owner dashboard, tasks, business roadmap, developer roadmap, handoff/rules docs, and domain-specific operating records.
+- Practice OS templates now cover fit assessment and first-room spec.
 - Intended use: Toni's private hosted DTP cockpit and selected client engagements that need ongoing operations after launch.
 - Do not turn every site into a portal. Use the pattern only when there is a real recurring workflow.
 - Implementation details live in `docs/CLIENT_COMMAND_ROOM_PATTERN.md`.
@@ -112,16 +115,17 @@ The reusable verification/support automation concept is captured as the CLI Veri
 
 ### SDLC Skills Library
 
-- Create the separate `tm-skills` repo.
-- Add the five Phase 1 skills, eval fixtures, misfire log, manifest, doctor script, and install script.
-- Keep the repo tool-neutral and Windows-friendly.
-- Install globally only after the doctor confirms existing local skill directories and instruction files will not be overwritten.
+- Keep the separate `tm-skills` repo tool-neutral and Windows-friendly.
+- Install globally only after explicit approval and after reviewing the dry-run output.
+- Reload Codex, Claude Code, and GitHub Copilot after install approval.
+- Smoke-test discovery using the prompts in `tm-skills/README.md`.
 - Use one project-pinned canary only after global discovery works.
 
 ### Client Command Rooms
 
-- Promote the DeMario admin portal into a reviewed reusable pattern.
-- Add a Client Command Room template to Practice OS after the pattern is reviewed.
+- Use the DeMario admin portal as the reviewed reusable pattern source.
+- Start each candidate with `practice-os/templates/client-command-room-fit-assessment.md`.
+- Use `practice-os/templates/client-command-room-spec.md` only when the assessment says to build.
 - Decide per engagement whether the client needs a command room, a simple handoff checklist, or no private surface at all.
 - Keep owner-facing tasks and developer/system roadmaps separate.
 - Add support/verification panels only when they connect to real CLI evidence.
@@ -173,15 +177,16 @@ Complete these before treating the practice as ready for soft launch.
 
 7. Prepare `tm-skills` Phase 1.
    - Use `docs/TM_SKILLS_IMPLEMENTATION_ROADMAP.md` as the implementation handoff.
-   - Scaffold `tm-skills` as a separate repo.
-   - Build the five Phase 1 skills and smoke-test discovery in Codex first.
+   - Keep `tm-skills` as the separate pushed repo and do not fold it into DTP.
+   - Run global install only after explicit approval.
+   - After install approval, smoke-test discovery in Codex first, then Claude Code and GitHub Copilot.
    - Do not overwrite existing global instructions or legacy skill folders.
    - Make `testing-ladder` and `delivery-baseline` aware of doctor/matrix/local/release/support/evidence gates.
 
 8. Capture the Client Command Room pattern.
    - Use `docs/CLIENT_COMMAND_ROOM_PATTERN.md` as the implementation handoff.
    - Treat Brother/DeMario as the reference implementation.
-   - Add a future Practice OS template for owner dashboard, tasks, business roadmap, developer roadmap, and handoff/rules.
+   - Use the Practice OS fit/spec templates for owner dashboard, tasks, business roadmap, developer roadmap, and handoff/rules.
    - Use Mom nonprofit to decide whether the pattern should be a full portal or a lighter handoff checklist.
    - Keep the optional support/verification surface tied to real CLI evidence.
 
@@ -230,7 +235,7 @@ Build these after the near-term documentation and pilot path are stable.
    - Add a `verification-toolkit` or `release-evidence` overlay only after the DTP CLI pattern has been used in at least two repos.
 
 7. Client Command Room pilot.
-   - Convert the DeMario admin portal into a reusable pattern note and template.
+   - Use the DeMario admin portal pattern plus the Practice OS fit/spec templates.
    - Use the Mom nonprofit pilot to test whether the command-room model helps a non-technical operator.
    - Add command-room proof to consulting only after screenshots/walkthroughs are redacted and permissioned.
    - Keep client portals optional until repeated handoff/support pain proves the need.
