@@ -16,9 +16,10 @@ When another repo's docs conflict with this roadmap, treat the other doc as loca
 - `docs/03-skills.md`: current skill layout and validation boundary.
 - `docs/04-multi-repo.md`: sibling repo read/write boundaries.
 - `docs/PRACTICE_VERIFICATION_SPINE.md`: Sprint 1 gate matrix, evidence contract, tool phasing, and no-slop quality gate for DTP, consulting, and Hub.
+- `docs/WORKSPACE_PORTFOLIO_ROADMAP.md`: cross-workspace prioritized plan across consulting, DTP, Hub, `tm-skills`, prompt/registry repos, Omnexus, DeMario, FamilyTrips, and DSE, including value checks and current agentic-AI research additions.
 - `docs/CLIENT_COMMAND_ROOM_PATTERN.md`: reusable admin/customer portal pattern inspired by `demario-pickleball-1`; use when planning owner-facing operating rooms.
 - `docs/CLI_VERIFICATION_AUTOMATION_PATTERN.md`: reusable CLI doctor/matrix/verification/evidence pattern inspired by Omnexus; use when planning infrastructure-first automation across repos.
-- `docs/TM_SKILLS_IMPLEMENTATION_ROADMAP.md`: implementation handoff for the separate `tm-skills` SDLC skills repo. Use this when building reusable coding-agent skills.
+- `docs/TM_SKILLS_IMPLEMENTATION_ROADMAP.md`: implementation handoff and shipped-status note for the separate `tm-skills` SDLC skills repo. Use this when building or activating reusable coding-agent skills.
 - `docs/build-spec-v2.md`: historical implementation spec for the V2 harness. Preserve for context, but prefer the current roadmap when it conflicts with implemented reality.
 - `practice-os/`: reusable policies, templates, Skills, and reviewed Bottleneck Patterns.
 - `extracts/`: raw extraction, detector output, lessons, decisions, and synthesis. Promote only reviewed redacted material to `practice-os/patterns/`.
@@ -26,7 +27,7 @@ When another repo's docs conflict with this roadmap, treat the other doc as loca
 
 ## tm-skills Docs
 
-`tm-skills` will be a separate repo, not a DTP subdirectory. Until it exists, DTP's `docs/TM_SKILLS_IMPLEMENTATION_ROADMAP.md` is the source of truth for the build.
+`tm-skills` is a separate repo, not a DTP subdirectory. DTP's `docs/TM_SKILLS_IMPLEMENTATION_ROADMAP.md` preserves the implementation handoff and shipped-status notes; the `tm-skills` repo owns active skill files and install scripts.
 
 Once the repo exists, it should own:
 
@@ -76,6 +77,7 @@ Do not update `hub-prompts` or `hub-registry` just because the roadmap changes. 
 ## Update Rules
 
 - Practice-wide sequencing goes in DTP's `PRACTICE_PRODUCTION_ROADMAP.md`.
+- Cross-workspace prioritization, missing-item sweeps, and research-driven additions go in `WORKSPACE_PORTFOLIO_ROADMAP.md`, then promoted into the narrower owning docs when implementation starts.
 - Cross-repo verification, support automation, and evidence contracts go in `PRACTICE_VERIFICATION_SPINE.md` for the current sprint contract and `CLI_VERIFICATION_AUTOMATION_PATTERN.md` for the reusable long-lived pattern, then repo-specific docs when implementation starts.
 - Cross-repo SDLC skill implementation goes in `TM_SKILLS_IMPLEMENTATION_ROADMAP.md` until the separate `tm-skills` repo exists, then in `tm-skills` docs.
 - Public-site polish, proof layout, and visual QA go in consulting docs.

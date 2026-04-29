@@ -282,7 +282,10 @@ Do not build these into the near-term practice.
 | `hub-registry` | Hub automation targets and routing config | Consulting knowledge registry, DTP engagement kits, case-study planning |
 | `demario-pickleball-1` | Brother/local business launch proof track, client project delivery, Client Command Room reference implementation | Practice-wide roadmap |
 | `fitness-app` / Omnexus | Founder/product/operator proof, app launch evidence, reference CLI verification toolkit shape | Practice OS source of truth |
+| `FamilyTrips` | Private family trip planning app, data validation, privacy-bound trip coordination | Practice-wide roadmap, public proof, consulting runtime |
 | Cam/Greg repos | Project-specific launch/operator proof tracks once created or clarified | Practice-wide roadmap |
+
+For workspace-wide prioritization, missing-item sweeps, and current agentic-AI research additions, see `docs/WORKSPACE_PORTFOLIO_ROADMAP.md`.
 
 ## Validation Commands
 
