@@ -62,6 +62,7 @@ Result: Hub local checkout is no longer stranded on a deleted org-migration bran
 - Branch: `dependabot/npm_and_yarn/prod-minor-patch-7dd19ef87c`
 - Dependency group: Supabase, Hono, PostCSS, TypeScript ESLint, Anthropic SDK packages.
 - Branch update: `gh pr update-branch 59` succeeded so the PR now includes the org-safe Hub security workflow from `main`.
+- Remote status after branch update: all GitHub checks passed and merge state is clean.
 
 Local evidence:
 
@@ -84,7 +85,7 @@ Strict audit findings:
 | `apps/server > node-cron > uuid` | `uuid` buffer bounds advisory | requires a `node-cron` major-version review or other package resolution strategy |
 | `packages/agent-runtime > @anthropic-ai/claude-agent-sdk > @anthropic-ai/sdk` | insecure default file permission advisory | direct SDK is patched, but the Claude Agent SDK still resolves a vulnerable transitive SDK version under PNPM |
 
-Decision: do not merge PR #59 under the stricter local gate from this plan. It is close to green, but it needs either an accepted audit threshold decision or a scoped Hub dependency-security fix.
+Decision: do not merge PR #59 under the stricter local gate from this plan. The remote PR is green and merge-clean, but it still needs either an accepted audit threshold decision or a scoped Hub dependency-security fix.
 
 ## Other Hub Dependency PRs
 
@@ -108,6 +109,5 @@ Decision: do not merge PR #59 under the stricter local gate from this plan. It i
 1. Human-review and merge Omnexus #559, then prune local Omnexus org-migration branches.
 2. Decide Hub audit policy: strict zero-vulnerability `pnpm audit --prod` versus CI's `--audit-level=high`.
 3. If strict audit stays required, create a Hub dependency-security story for `node-cron` v4 compatibility and PNPM override/upstream handling for `@anthropic-ai/claude-agent-sdk`.
-4. Recheck PR #59 remote checks after the branch update completes; merge only if the accepted local and remote gates are clean.
+4. Merge PR #59 only after the accepted local audit policy is clear; remote checks are already green after the branch update.
 5. Leave #52/#54/#55/#56 parked until explicitly selected.
-

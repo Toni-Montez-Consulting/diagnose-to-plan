@@ -936,7 +936,7 @@ Standing preflight/postflight: run the Activation Routing Map plus the Roadmap S
 Preflight: use the Practice System Documentation Pack as the current/future/audit/optimization reference before adding major new platform, proof, agent, or cross-repo behavior.
 
 1. Finish the GitHub Enterprise org-migration closeout: Omnexus PR #559 needs required human review before merge; Hub's stale local org branch is already cleaned.
-2. Resolve Hub Dependabot PR #59 policy: either accept CI's high-severity audit threshold for this patch group or run a scoped dependency-security pass for the moderate `node-cron`/Anthropic SDK audit findings before merge.
+2. Resolve Hub Dependabot PR #59 policy: the PR is remote-green and merge-clean, so either accept CI's high-severity audit threshold for this patch group or run a scoped dependency-security pass for the moderate `node-cron`/Anthropic SDK audit findings before merge.
 3. Collect Mom nonprofit owner-confirmed facts, permission, screenshot approval, proof reviewer, and meeting/form/payment source-of-truth decisions.
 4. Decide the Mom site execution path: Wix cleanup, rebuild, or migration.
 5. Keep Hub prompt/registry cross-validation local-first; decide private sibling-repo CI access only if it becomes worth the operational cost.
