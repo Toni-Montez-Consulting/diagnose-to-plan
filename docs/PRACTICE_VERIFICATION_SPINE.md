@@ -31,7 +31,9 @@ Verified on 2026-04-29:
 
 - PR: `https://github.com/toniomon96/Omnexus/pull/553`
 - Branch: `feat/verification-toolkit-supabase-cockpit`
-- State: open draft, mergeable, GitHub checks green
+- State: merged on 2026-04-29, GitHub checks green
+- Merge commit: `1347368a01480110e3816e2f4b067102891bde23`
+- Post-merge evidence: Verification Toolkit workflow run `25137681778` passed on `main`
 - Commits: `52f56097 chore: add verification toolkit cockpit`, `2ffd3088 fix: align verification gates with baseline repair`
 
 Reusable pieces:
@@ -46,6 +48,8 @@ Reusable pieces:
 - CI artifact upload for verification reports.
 
 This should guide DTP, consulting, Hub, and `tm-skills`, but it should not be copied blindly. Each repo still owns its own local, release, support, manual, and proof gates.
+
+DTP-owned extraction receipts now live in `practice-os/efficiency/fitness-app-repo-manifest.md`, `practice-os/efficiency/fitness-app-evidence-index.md`, and `practice-os/steward/2026-04-30-omnexus-verification-cockpit-extraction.md`. These are planning receipts, not Omnexus runtime configuration.
 
 Story 3 uses the "core plus map" version of this pattern: core repos get thin CI now, adjacent project repos get an explicit benefit lane and keep their existing owner-specific gates until a real project need calls for changes.
 

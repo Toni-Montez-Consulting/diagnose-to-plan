@@ -93,5 +93,5 @@ When a backlog story changes status, also check whether one of these needs an up
 - Do not start hosted DTP app implementation from a routing/steward prompt alone.
 - Do not implement the raw FAOS Phase 0 prompt or create a `faos` repo before the FAOS readiness review is accepted.
 - Do not publish or prepare public proof without permission/redaction/reviewer gates.
-- Do not mutate `fitness-app`/Omnexus while its active branch is not intentionally reopened.
+- Do not mutate `fitness-app`/Omnexus unless its app lane is intentionally reopened.
 - Do not fold Hub, consulting, DTP, and project repos into one ownership surface.

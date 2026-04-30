@@ -48,10 +48,10 @@ Goal: make every future coding session safer and more consistent.
 
 | Story | Repo | Status | Done gate | Next action |
 |---|---|---|---|---|
-| Create `tm-skills` repo and Phase 1 skills | `tm-skills` | Done | repo pushed, doctor/freshness/install dry-run pass, CI green | install only after explicit approval |
+| Create `tm-skills` repo and Phase 1 skills | `tm-skills` | Done | repo pushed, doctor/freshness/install dry-run pass, CI green | global install is applied; external smoke remains manual |
 | Add `tm-skills` thin CI | `tm-skills` | Done | GitHub Actions green | keep workflow thin |
 | Global install apply | `tm-skills` | Done | `install.ps1 -Apply` succeeds without `-Force` and post-install doctor passes | record smoke status |
-| Tool reload smoke test | `tm-skills` plus tools | Review | Codex/Claude/Copilot discover skills after reload | Codex discovery verified; Claude Code and GitHub Copilot reloads remain manual |
+| Tool reload smoke test | `tm-skills` plus tools | Later | Codex/Claude/Copilot discover skills after reload | Codex discovery verified; Claude Code and GitHub Copilot reloads remain manual/back-burner |
 | Project-pinned canary | `tm-skills` plus one repo | Later | one low-risk repo confirms no duplicate-skill confusion | choose after global install works |
 | Stack overlays | `tm-skills` | Later | base skills prove useful across real work | design overlays only after canary |
 
@@ -74,7 +74,7 @@ Goal: make every repo's delivery state observable before dashboards or automatio
 |---|---|---|---|---|
 | Thin CI for DTP | `diagnose-to-plan` | Done | DTP CI green | preserve local/CI parity |
 | Thin CI for consulting | `consulting` | Done | build and secret scan CI green | expand route CI only when browser setup is stable |
-| Thin CI for `tm-skills` | `tm-skills` | Done | doctor/freshness/install preview CI green | keep global install gated |
+| Thin CI for `tm-skills` | `tm-skills` | Done | doctor/freshness/install preview CI green | keep workflow thin; external smoke remains manual |
 | Hub workflow review | `hub` | Done | existing CI/security reviewed with no churn | v0.4 hardening later |
 | `hub-prompts` full local prompt gate in CI | `hub-prompts` | Done | `npm test` CI green | add eval fixtures later |
 | `hub-registry` CI-safe validation | `hub-registry` | Done | `npm run validate` CI green | local `npm test` stays sibling-manifest gate |
@@ -102,7 +102,7 @@ Goal: make public proof evidence-backed, permissioned, caveated, and reviewable.
 | Proof/redaction templates | `diagnose-to-plan` | Done | proof packet, redaction item, permission, evidence, public claim, and asset templates exist | use on first pilot |
 | First proof/redaction pilot | `diagnose-to-plan` plus pilot repo | Done | one real project uses proof packet and redaction queue before public proof | internal Mom candidate exists; public proof stays blocked until permission, redaction, reviewer, evidence, and caveat pass |
 | Consulting proof backlog | `consulting` | Ready | proof candidates mapped to real source material and redaction state | start after first pilot |
-| Omnexus proof candidates | `fitness-app` | Later | PR/work is human-reviewed and proof is permissioned/redacted | do not disturb active app work |
+| Omnexus proof candidates | `fitness-app` | Later | claim is permissioned, redacted, reviewed, caveated, and backed by evidence | PR #553 is merged and extracted as an internal reference; do not publish proof without proof packet gates |
 | DeMario proof packet | `demario-pickleball-1` | Later | launch gates and permission are complete | keep owner-safe |
 | DSE internal proof lane | `dse-content` | Later | COI, permission, and redaction review complete | internal/professional only |
 
@@ -112,13 +112,14 @@ Goal: reduce rediscovery, setup drift, CI waste, and handoff friction.
 
 | Story | Repo | Status | Done gate | Next action |
 |---|---|---|---|---|
-| DTP repo manifest/evidence-index pilot | `diagnose-to-plan` | Done | pilot shape accepted as useful | core manifests plus DeMario, FamilyTrips, and engineering-playbook adjacent passes now exist |
+| DTP repo manifest/evidence-index pilot | `diagnose-to-plan` | Done | pilot shape accepted as useful | core manifests plus DeMario, FamilyTrips, engineering-playbook, and Omnexus adjacent passes now exist |
 | Consulting repo manifest | `consulting` | Done | manifest names gates, deploy target, proof lane, and data boundaries | keep current during consulting proof/intake work |
 | Hub repo manifest | `hub` | Done | manifest names runtime gates, Supabase/Vercel boundaries, and prompt/run ownership | keep current during Hub runtime and prompt/registry work |
 | `tm-skills` repo manifest | `tm-skills` | Done | manifest names install gates and global-skill boundaries | keep current during skill smoke/canary work |
 | DeMario repo manifest/evidence index | `diagnose-to-plan`, `demario-pickleball-1` | Done | manifest and evidence index capture launch gates, proof blockers, command-room role, and local/CI evidence without mutating app code | use for future command-room proof pass |
 | FamilyTrips repo manifest/evidence index | `diagnose-to-plan`, `FamilyTrips` | Done | manifest and evidence index capture privacy model, local/CI gates, release smoke, and no-auth/no-AI boundary | use before future FamilyTrips feature, AI, or public-sharing work |
 | Engineering playbook repo manifest/evidence index | `diagnose-to-plan`, `engineering-playbook` | Done | manifest and evidence index capture doctrine/reference boundary, local evidence gates, and DTP source-of-truth pointer | revisit only when general doctrine or portfolio policy changes |
+| Omnexus repo manifest/evidence index | `diagnose-to-plan`, `fitness-app` | Done | manifest and evidence index capture verification cockpit reference, release evidence, proof gates, and app-data boundaries without mutating app code | use as reference pattern; no public proof without permission/redaction/reviewer/caveat |
 | Workspace Command Center spec | `diagnose-to-plan` | Done | `docs/WORKSPACE_COMMAND_CENTER_V0.md` defines read-only inputs, outputs, gates, and safety boundaries | no command runner yet |
 | Workspace Command Center implementation | `diagnose-to-plan` | Later | read-only report proves value and no mutation boundary remains intact | implement only after another touch pass confirms the report shape |
 | Affected-only verification | DTP/Hub first | Later | hard gates are reliably encoded per repo | keep advisory until proven |
@@ -168,7 +169,7 @@ Goal: ensure every workspace repo benefits without unnecessary churn.
 
 | Story | Repo | Status | Done gate | Next action |
 |---|---|---|---|---|
-| Omnexus verification cockpit review | `fitness-app` | Later | active PR/branch human-reviewed, reusable lessons extracted | do not mutate until reopened |
+| Omnexus verification cockpit review | `fitness-app` | Done | merged PR #553 reviewed read-only, reusable lessons extracted into DTP receipts and pattern docs | keep as reference; do not mutate app code unless lane is reopened |
 | DeMario launch/proof pass | `demario-pickleball-1` | Later | manual launch/venue/permission gates complete | manifest/evidence index exists; owner-safe proof only |
 | FamilyTrips privacy maintenance pass | `FamilyTrips` | Done | data validation/build/test and privacy notes complete | manifest/evidence index exists; revisit before new features, AI, or public sharing |
 | DSE COI-aware proof pass | `dse-content` | Later | COI screen and live branch verification complete | internal/professional only |
@@ -214,8 +215,9 @@ Standing preflight/postflight: use `practice-os/templates/activation-routing-map
 3. Capture owner-approved baseline/after-state evidence for the first proof candidate and run redaction/permission review.
 4. Keep Claude Code and GitHub Copilot `tm-skills` discovery smoke testing on the manual back burner; runbook exists, links are healthy, and Codex discovery is verified, but external reload checks remain manual and non-blocking.
 5. Keep Hub prompt/registry cross-validation local-first; decide private sibling-repo CI access only if it becomes worth the operational cost.
-6. Keep repo manifests current as lanes are touched; DTP, consulting, Hub, `tm-skills`, DeMario, FamilyTrips, and engineering-playbook now have DTP-owned manifests/evidence indexes.
-7. Run FAOS Phase 0 readiness review only after the current pilot/proof/smoke/Hub-validation path; do not build FAOS from the raw Phase 0 prompt yet.
+6. Keep repo manifests current as lanes are touched; DTP, consulting, Hub, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus now have DTP-owned manifests/evidence indexes.
+7. Keep DSE blocked until its active branch is clean or explicitly selected with COI-aware scope.
+8. Run FAOS Phase 0 readiness review only after the current pilot/proof/smoke/Hub-validation path; do not build FAOS from the raw Phase 0 prompt yet.
 
 ## Answer To The Kanban Question
 

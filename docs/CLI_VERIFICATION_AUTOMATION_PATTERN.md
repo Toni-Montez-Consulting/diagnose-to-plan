@@ -8,11 +8,13 @@ The goal is not to copy Omnexus scripts into every repo. The goal is to make eac
 
 The current reference implementation is `fitness-app` / Omnexus.
 
-As of 2026-04-29, the concrete reference branch is:
+As of 2026-04-30, the concrete reference is merged and available as practice evidence:
 
 - PR: `https://github.com/toniomon96/Omnexus/pull/553`
 - Branch: `feat/verification-toolkit-supabase-cockpit`
-- Status verified from GitHub CLI: open draft, mergeable, checks green
+- Status verified from GitHub CLI: merged on 2026-04-29 with green checks
+- Merge commit: `1347368a01480110e3816e2f4b067102891bde23`
+- Post-merge evidence: Verification Toolkit workflow run `25137681778` passed on `main`
 - Commits: `52f56097 chore: add verification toolkit cockpit`, `2ffd3088 fix: align verification gates with baseline repair`
 
 The Omnexus implementation is useful because it proves the cockpit pattern against a real production app, not just a doc sketch:
@@ -42,7 +44,7 @@ Useful design details:
 - Fresh local Supabase replay is treated as truth for schema viability.
 - Legacy migration edits remain blocked unless a narrow, documented hash-pinned repair exception is required for fresh replay.
 
-The GitHub checks that made this reference credible included Supabase migration drift, preview/production verification, lint, typecheck, unit tests, quality gate, secret scanning, Semgrep, accessibility, production audit, dependency review, and Vercel preview status.
+The GitHub checks that made this reference credible included Supabase migration drift, preview/production verification, lint, typecheck, unit tests, quality gate, secret scanning, Semgrep, accessibility, production audit, dependency review, and Vercel preview status. DTP now tracks the reference through `practice-os/efficiency/fitness-app-repo-manifest.md`, `practice-os/efficiency/fitness-app-evidence-index.md`, and the Omnexus steward receipt.
 
 ## Required Guardrail
 

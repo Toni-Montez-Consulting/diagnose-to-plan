@@ -13,7 +13,7 @@ Rules:
 
 - Start with DTP, then expand only to touched/core lanes.
 - Current core manifests: DTP, consulting, Hub, and `tm-skills`.
-- Current adjacent manifests: `demario-pickleball-1`, `FamilyTrips`.
+- Current adjacent manifests: `demario-pickleball-1`, `FamilyTrips`, `engineering-playbook`, and `fitness-app` / Omnexus.
 - Use pilots to prove the shape before applying it to more adjacent projects.
 - Keep repo-local gates authoritative.
 - Do not centralize secrets, private client data, or production write credentials here.

@@ -100,7 +100,7 @@ The Practice System Documentation Pack is the architecture and audit layer for t
 
 ### CLI Verification And Automation Pattern
 
-- Build concept reviewed from Omnexus / `fitness-app`, now backed by PR `https://github.com/toniomon96/Omnexus/pull/553` on branch `feat/verification-toolkit-supabase-cockpit`.
+- Build concept reviewed from Omnexus / `fitness-app`, now backed by merged PR `https://github.com/toniomon96/Omnexus/pull/553` on branch `feat/verification-toolkit-supabase-cockpit`.
 - Reference shape: CLI doctor, tool matrix, local verification, release verification, support/runtime checks, and evidence artifacts.
 - Concrete shape: shared tool registry, lock file, Docker-backed specialty tools, ignored `artifacts/verification/`, CI evidence upload, and Supabase migration drift/fresh-replay repair guard.
 - Intended use: make infrastructure observable and repeatable before building more UI.
@@ -342,7 +342,7 @@ Build these after the near-term documentation and pilot path are stable.
    - Introduce feature flags, kill switches, and supply-chain evidence first in higher-risk repos: Omnexus, Hub, hosted DTP, consulting intake/proof, and client launch surfaces.
 
 10. Workspace Efficiency pilot.
-   - Add repo manifests for DTP, consulting, Hub, and `tm-skills` first; DeMario, FamilyTrips, and engineering-playbook are now adjacent-project touch passes.
+- Add repo manifests for DTP, consulting, Hub, and `tm-skills` first; DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus are now adjacent-project touch passes.
    - Add evidence indexes only where verification receipts already exist.
    - Use `docs/WORKSPACE_COMMAND_CENTER_V0.md` as the read-only command-center spec; do not implement a runner yet.
    - Add a decision record for the first real cross-repo automation boundary.

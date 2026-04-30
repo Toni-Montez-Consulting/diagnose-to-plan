@@ -98,6 +98,7 @@ Goal: make future agents stop rediscovering repo purpose, gates, proof lanes, an
 | `tm-skills` manifest | `tm-skills` | Done | install gates, global skill boundaries, smoke tests named | keep current during skill smoke/canary work |
 | DeMario manifest/evidence index | `demario-pickleball-1` | Done | launch gates, command-room role, proof blockers, and local/CI evidence named | use for future command-room proof pass |
 | FamilyTrips manifest/evidence index | `FamilyTrips` | Done | privacy model, local gates, deploy smoke, and no-auth/no-AI boundary named | use before future FamilyTrips feature or sharing work |
+| Omnexus manifest/evidence index | `fitness-app` | Done | verification cockpit reference, release evidence, proof gates, and app-data boundaries named without mutating app code | use as reference pattern and proof input only after gates |
 | Workspace Command Center V0 spec | `diagnose-to-plan` | Done | read-only inputs, outputs, safety boundaries, and pilot acceptance named | no runner yet |
 | Remaining adjacent repo manifests | project repos | Later | each repo gets manifest when touched | use touch-pass trigger |
 
@@ -151,7 +152,7 @@ Goal: every workspace repo benefits eventually without unnecessary churn.
 
 | Repo | Trigger | First Touch |
 |---|---|---|
-| `fitness-app` | active branch reviewed or proof request opens | extract verification lessons, do not disturb live app work |
+| `fitness-app` | PR #553 merged; future proof or release-support request opens | manifest/evidence index exists; verification lessons extracted without disturbing live app work |
 | `demario-pickleball-1` | launch/proof permission is ready | manifest/evidence index exists; next pass is command-room proof and launch gate pass |
 | `FamilyTrips` | new feature, AI, public sharing, or maintenance request | manifest/evidence index exists; next pass should update privacy review and gates |
 | `dse-content` | proof or Microsoft-adjacent reuse request | COI-aware proof review |
@@ -180,10 +181,10 @@ Gate: FAOS work may plan and review now, but implementation is parked until the 
 2. Run the Agentic Performance Gap Review when a session exposes a missed routing, memory, verification, research, safety, or learning-loop behavior.
 3. Keep the active queue centered on the Mom nonprofit private kit.
 4. Use the proof/redaction templates on the first real claim.
-5. Expand repo manifests to consulting, Hub, and `tm-skills` as those lanes are touched.
-6. Add Hub prompt/registry cross-validation.
-7. Decide whether to approve global `tm-skills` install and smoke tests.
-8. Run adjacent repo touch passes only when their triggers are ready.
+5. Keep repo manifests current for DTP, consulting, Hub, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus as those lanes are touched.
+6. Keep Hub prompt/registry cross-validation local-first unless private sibling-repo CI access becomes worth the cost.
+7. Keep external `tm-skills` Claude Code/GitHub Copilot smoke tests manual until they can be observed.
+8. Run adjacent repo touch passes only when their triggers are ready and the target repo is clean or explicitly selected.
 9. Revisit hosted DTP implementation after real pilot records exist.
 10. Run FAOS Phase 0 readiness review after the current active path; do not implement the raw FAOS prompt until the corrections are accepted.
 

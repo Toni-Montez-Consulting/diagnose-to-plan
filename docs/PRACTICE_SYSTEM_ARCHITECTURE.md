@@ -34,7 +34,7 @@ The current system is designed to reduce reliance on memory:
 | `engineering-playbook` | General doctrine, portfolio templates, decisions, secret-management references | portfolio checks and repo-local scripts | Does not duplicate DTP roadmap ownership |
 | `hub-prompts` | Hub prompt catalog, prompt schemas, validation fixtures | `npm test`, prompt validation | Does not own Hub runtime routing or DTP roadmap |
 | `hub-registry` | Hub automation target registry and routing config | `npm run validate`, local portfolio manifest checks | Does not own prompt content or practice roadmap |
-| `fitness-app` / Omnexus | Product app, verification cockpit reference, founder/product proof candidate | app local gates, toolkit registry, CI evidence, Supabase drift gates | Do not disturb active branch work without explicit lane |
+| `fitness-app` / Omnexus | Product app, verification cockpit reference, founder/product proof candidate | app local gates, toolkit registry, CI evidence, Supabase drift gates, DTP extraction receipts | Do not disturb app code without explicit lane |
 | `demario-pickleball-1` | Local-business launch track and command-room reference | `npm run ci`, venue/routing/manual launch gates | Reference pattern, not practice roadmap owner |
 | `FamilyTrips` | Private family trip app and privacy-first maintenance lane | data validation, build, tests, privacy checks | Not public proof by default |
 | `dse-content` | Internal Azure Apps/AI content and Microsoft-adjacent proof candidate | branch-specific app gates, COI, permission, redaction | Internal/professional proof only unless explicitly cleared |
@@ -258,7 +258,7 @@ DTP owns the master system documentation. Other repos should receive lightweight
 - Consulting: public proof, launch, Hub intake, site/admin boundary.
 - Hub: runtime, Supabase, prompt/run ownership, Hub/DTP boundary.
 - `tm-skills`: skill trigger alignment and install/smoke-test gates.
-- Omnexus: verification cockpit lessons and proof candidates after branch review.
+- Omnexus: verification cockpit lessons are extracted; proof candidates still require permission/redaction/reviewer/caveat gates.
 - DeMario: command-room proof and launch/venue gates.
 - FamilyTrips: privacy-first build/test/data lane.
 - DSE: Microsoft/COI-aware internal proof lane.

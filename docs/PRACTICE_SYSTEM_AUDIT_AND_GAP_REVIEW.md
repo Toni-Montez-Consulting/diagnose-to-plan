@@ -178,15 +178,15 @@ Follow-up story: DSE COI-aware proof pass.
 
 ### P2-1: Omnexus Verification Cockpit Is A Reference, Not A Shared Platform
 
-Evidence: Omnexus has a fuller toolkit registry/evidence pattern than the rest of the workspace.
+Evidence: Omnexus has a fuller toolkit registry/evidence pattern than the rest of the workspace. PR #553 is merged, and DTP now tracks the reference through a `fitness-app` manifest, evidence index, steward receipt, and updated verification-pattern docs.
 
 Impact: copying it wholesale into every repo would create unnecessary overhead, but ignoring it would waste a proven pattern.
 
-Fix: extract only the pattern into DTP docs and use thin repo-local gates until a repo needs a cockpit.
+Fix: keep the extracted pattern in DTP docs and use thin repo-local gates until a repo needs a cockpit.
 
 Owner: `fitness-app` as reference; DTP as pattern owner.
 
-Follow-up story: Omnexus verification cockpit review.
+Follow-up story: Omnexus verification cockpit review is complete to the DTP extraction boundary; public proof remains gated.
 
 ### P2-2: DeMario Command Room Needs Permissioned Proof Before Public Use
 
@@ -246,7 +246,7 @@ Follow-up story: protocol/tool spike later.
 | `engineering-playbook` | yes | pointer audit |
 | `hub-prompts` | yes | prompt eval/cross-validation |
 | `hub-registry` | yes | registry cross-validation |
-| `fitness-app` | yes | reference extraction/proof after branch review |
+| `fitness-app` | yes | reference extraction complete; proof remains gated |
 | `FamilyTrips` | yes | manifest/evidence index done; privacy maintenance pass repeats before new features, AI, or public sharing |
 | `demario-pickleball-1` | yes | manifest/evidence index done; command-room proof pass still later |
 | `dse-content` | yes | COI-aware proof pass |

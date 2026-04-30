@@ -235,7 +235,7 @@ DTP remains the master source. Other repos get local pointers when their lane is
 | `consulting` | public proof and Hub intake boundary pointer to DTP system docs |
 | `hub` | Hub/DTP/consulting boundary pointer and prompt/registry validation runbook |
 | `tm-skills` | skill-trigger alignment note pointing back to DTP activation map |
-| `fitness-app` | verification cockpit extraction note and permissioned proof lane |
+| `fitness-app` | verification cockpit extraction receipts and permissioned proof lane |
 | `demario-pickleball-1` | command-room reference and proof/launch permission lane |
 | `FamilyTrips` | privacy-first validation and private-data boundary note |
 | `dse-content` | COI-aware proof and Microsoft-adjacent usage note |
