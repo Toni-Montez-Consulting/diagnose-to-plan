@@ -30,7 +30,7 @@ Toni asked to finish the GitHub Enterprise organization migration closeout befor
 
 | Repo | Action | Status |
 |---|---|---|
-| `fitness-app` / Omnexus | Rechecked PR #559 | Checks are green, but required review still blocks merge |
+| `fitness-app` / Omnexus | Rechecked and closed PR #559 | PR merged; local `main` aligned to `origin/main`; represented org-migration branches deleted |
 | `hub` | Cleaned stale local org-migration branch; triaged/fixed/merged PR #59 | Local `main` aligned to `origin/main`; PR #59 merged and local PR branch removed after tree-equivalence check |
 | `diagnose-to-plan` | Updated source-of-truth evidence and backlog surfaces | This receipt plus Hub evidence/backlog updates |
 | `dse-content` | Read-only status check only | Untouched and still excluded |
@@ -40,12 +40,12 @@ Toni asked to finish the GitHub Enterprise organization migration closeout befor
 - PR: `https://github.com/Toni-Montez-Consulting/Omnexus/pull/559`
 - Head: `fix/org-repo-references`
 - Base: `main`
-- State: open
-- Merge state: blocked
-- Review decision: required
-- Decision: do not bypass the required review gate.
+- State: merged
+- Merge commit: `974f1cca`
+- Merged: 2026-04-30
+- Decision: ruleset deadlock was resolved before merge; no app-code changes were made outside the merged PR.
 
-Next action: Toni or another authorized reviewer approves PR #559. After it merges, fetch/prune `fitness-app`, align local `main` to `origin/main`, and delete only represented local PR branches.
+Post-merge local cleanup: fetched/pruned `fitness-app`, aligned local `main` to `origin/main`, and deleted represented local org-migration branches `fix/org-repo-references` and `chore/org-repo-references`.
 
 ## Hub Local Cleanup
 
@@ -101,14 +101,12 @@ Decision: keep the stricter local gate for this pass. PR #59 was merged only aft
 
 ## Blockers
 
-- Omnexus #559 cannot close until required review is complete.
 - DSE remains excluded.
 - Mom nonprofit facts remain pending owner confirmation.
 - FAOS remains parked.
 
 ## Follow-Ups
 
-1. Human-review and merge Omnexus #559, then prune local Omnexus org-migration branches.
-2. Leave Hub PRs #52/#54/#55/#56 parked until explicitly selected; do not merge major or failing dependency work blindly.
-3. Keep Hub dependency policy strict for production audit findings unless a future decision record explicitly accepts a different severity threshold.
-4. Continue Mom nonprofit only after owner facts and permission decisions are captured.
+1. Leave Hub PRs #52/#54/#55/#56 parked until explicitly selected; do not merge major or failing dependency work blindly.
+2. Keep Hub dependency policy strict for production audit findings unless a future decision record explicitly accepts a different severity threshold.
+3. Continue Mom nonprofit only after owner facts and permission decisions are captured.

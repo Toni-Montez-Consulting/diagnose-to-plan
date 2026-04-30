@@ -216,17 +216,18 @@ Goal: capture and eventually implement the Frontier Agentic Operating System ide
 
 Standing preflight/postflight: use `practice-os/templates/activation-routing-map.md`, `practice-os/templates/agentic-performance-gap-review.md`, and `practice-os/templates/roadmap-steward-review.md` for major roadmap sessions so the right skill/template/process is selected, agentic performance gaps are caught, and new ideas, blockers, repo lanes, gates, and no-touch boundaries are captured before memory drift.
 
-1. Finish Omnexus org-migration closeout: PR #559 is green but still blocked by required human review; do not bypass the review gate, and prune local `fitness-app` PR branches only after merge.
-2. Keep Hub dependency PRs #52/#54/#55/#56 parked until one is explicitly selected with a migration/security plan; PR #59 is merged and no longer blocks the queue.
-3. Collect Mom nonprofit owner-confirmed facts: site owner, backup owner, meeting source of truth, form/payment routing, update workflow, proof reviewer, and screenshot permissions; private intake fields are prepared, but answers are still pending owner confirmation.
-4. Decide the Mom site execution path after owner facts: Wix cleanup, rebuild, or migration.
-5. Capture owner-approved baseline/after-state evidence for the first proof candidate and run redaction/permission review.
-6. Keep Claude Code and GitHub Copilot `tm-skills` discovery smoke testing on the manual back burner; runbook exists, links are healthy, and Codex discovery is verified, but external reload checks remain manual and non-blocking.
-7. Keep Hub prompt/registry cross-validation local-first; decide private sibling-repo CI access only if it becomes worth the operational cost.
-8. Use `dtp workspace report` as a read-only steward preflight when checking repo coverage, recorded evidence, suggested gates, blockers, and missing manifest/evidence coverage; missing repo rows may carry explicit Active Next Queue blockers without guessing gates.
-9. Keep repo manifests current as lanes are touched; DTP, consulting, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus now have DTP-owned manifests/evidence indexes.
-10. Keep DSE blocked until its active branch is clean or explicitly selected with COI-aware scope.
-11. Run FAOS Phase 0 readiness review only after the current pilot/proof/smoke/Hub-validation path; do not build FAOS from the raw Phase 0 prompt yet.
+1. Keep Hub dependency PRs #52/#54/#55/#56 parked until one is explicitly selected with a migration/security plan; PR #59 is merged and no longer blocks the queue.
+2. Collect Mom nonprofit owner-confirmed facts: site owner, backup owner, meeting source of truth, form/payment routing, update workflow, proof reviewer, and screenshot permissions; private intake fields are prepared, but answers are still pending owner confirmation.
+3. Decide the Mom site execution path after owner facts: Wix cleanup, rebuild, or migration.
+4. Capture owner-approved baseline/after-state evidence for the first proof candidate and run redaction/permission review.
+5. Keep Claude Code and GitHub Copilot `tm-skills` discovery smoke testing on the manual back burner; runbook exists, links are healthy, and Codex discovery is verified, but external reload checks remain manual and non-blocking.
+6. Keep Hub prompt/registry cross-validation local-first; decide private sibling-repo CI access only if it becomes worth the operational cost.
+7. Use `dtp workspace report` as a read-only steward preflight when checking repo coverage, recorded evidence, suggested gates, blockers, and missing manifest/evidence coverage; missing repo rows may carry explicit Active Next Queue blockers without guessing gates.
+8. Keep repo manifests current as lanes are touched; DTP, consulting, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus now have DTP-owned manifests/evidence indexes.
+9. Keep DSE blocked until its active branch is clean or explicitly selected with COI-aware scope.
+10. Run FAOS Phase 0 readiness review only after the current pilot/proof/smoke/Hub-validation path; do not build FAOS from the raw Phase 0 prompt yet.
+
+Closed on 2026-04-30: GitHub Enterprise org-migration closeout for Omnexus PR #559. The PR merged, local `fitness-app/main` was aligned to `origin/main`, and represented local org-migration branches were deleted.
 
 ## Answer To The Kanban Question
 

@@ -64,7 +64,7 @@ Update current operational references so future agents, registry checks, and rep
 - Non-DSE local `origin` remotes now point at `Toni-Montez-Consulting`; `dse-content` remains on the personal/Microsoft-linked remote.
 - DTP, consulting, Hub prompts, Hub registry, FamilyTrips, DeMario, engineering-playbook, and tm-skills org-alignment changes were pushed.
 - Hub protected-branch work landed through PR #60 after replacing the org-blocked Gitleaks Action with a pinned Gitleaks CLI scan.
-- Omnexus protected-branch work is ready in PR #559 with green checks, but merge is blocked by the required-review policy.
+- Omnexus protected-branch work landed through PR #559 after the one-person-org ruleset deadlock was resolved.
 - The old Omnexus PR #558 was closed because its `chore/*` branch name intentionally failed the main-branch gate.
 - GitHub org ownership changes made hosted action licensing a real infrastructure concern: repo secret scans should prefer pinned local CLI/script gates unless a paid action license is intentionally configured.
 - Hub current-tree secret scanning passes. Full-history scanning surfaced an old redacted historical finding, so any future "scan all history" policy should be handled as a separate baseline/rotation/history-cleanup story rather than mixed into org URL hygiene.
@@ -76,6 +76,13 @@ Update current operational references so future agents, registry checks, and rep
 - Hub PR #59 was updated from `main` so the org-safe secret scan workflow can rerun on the dependency branch.
 - Hub PR #59 later passed the strict local production audit after a scoped dependency-security fix, passed remote CI/security/CodeQL, and merged via squash commit `8717e8e`; details are tracked in `practice-os/steward/2026-04-30-org-migration-closeout-and-hub-dependency-triage.md`.
 
+## 2026-04-30 Omnexus Merge Closeout
+
+- Omnexus PR #559 merged on 2026-04-30 with merge commit `974f1cca`.
+- Local `fitness-app/main` was fetched, fast-forwarded to `origin/main`, and left clean.
+- Local represented org-migration branches `fix/org-repo-references` and `chore/org-repo-references` were deleted after merge confirmation.
+- No app code was changed locally outside the merged PR closeout.
+
 ## Next Action
 
-Merge Omnexus PR #559 after human review, then prune or resync local protected-repo PR branches. Keep `dse-content` excluded unless explicitly selected with a COI-aware scope.
+GitHub Enterprise org-migration closeout is complete for the non-DSE workspace repos. Keep `dse-content` excluded unless explicitly selected with a COI-aware scope.

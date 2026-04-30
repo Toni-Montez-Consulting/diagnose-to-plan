@@ -23,6 +23,7 @@ review_status: draft
 | release | 2026-04-29 | pass | `ea6c1dca` | Workflow-dispatched Verification Toolkit run `25137681778` passed on `main` after the cockpit work was merged |
 | support | 2026-04-30 | manual_pending | `ea6c1dca` | Scheduled Health Report runs are currently skipped; live support review was not part of this extraction pass |
 | proof | 2026-04-30 | internal_only | `1347368a` | Verification cockpit is a reference implementation; public proof requires permission, redaction, reviewer, evidence source, and caveat |
+| org-migration | 2026-04-30 | pass | `974f1cca` | PR #559 merged org-reference and secret-scan workflow updates; local `main` aligned to `origin/main`; represented org-migration branches deleted |
 
 ## Proof Candidates
 
@@ -37,6 +38,7 @@ review_status: draft
 - This extraction did not rerun Omnexus local gates; it used read-only repo/GitHub evidence to avoid disturbing the app repo.
 - External App Store/TestFlight and production-data checks remain manual, repo-owned gates.
 - DSE remains a separate COI-aware lane and was intentionally not touched.
+- GitHub Enterprise org-migration closeout is complete for Omnexus as of PR #559; future Omnexus work should start from `main`.
 
 ## Notes
 

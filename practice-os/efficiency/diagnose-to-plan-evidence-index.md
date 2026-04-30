@@ -18,7 +18,7 @@ review_status: draft
 
 | Lane | Date | Result | Commit | Artifact |
 |---|---|---|---|---|
-| local | 2026-04-30 | pass | current branch | `hub-prompts npm test`; `hub-registry npm run validate`, `npm run validate:manifests`, `npm run validate:prompt-ids`, `npm test`; DTP `pytest`, `ruff check .`, `dtp skills --validate`, `dtp practice doctor`, `dtp workspace report`, `dtp workspace report --json`; Workspace Command Center blocker carry-forward test/report, including Omnexus review gate, parked Hub dependency PRs, Mom owner facts, DSE no-touch, and FAOS parked |
+| local | 2026-04-30 | pass | current branch | `hub-prompts npm test`; `hub-registry npm run validate`, `npm run validate:manifests`, `npm run validate:prompt-ids`, `npm test`; DTP `pytest`, `ruff check .`, `dtp skills --validate`, `dtp practice doctor`, `dtp workspace report`, `dtp workspace report --json`; Workspace Command Center blocker carry-forward test/report, including Omnexus org-migration closeout, parked Hub dependency PRs, Mom owner facts, DSE no-touch, and FAOS parked |
 | private kit | 2026-04-30 | pass_with_manual_gates | vault `2b9e6ca` | Mom nonprofit owner-facts intake, handoff checklist, proof packet, redaction item, decision log, plan, and eval notes updated for owner conversation readiness; private vault snapshot committed locally; no public proof or hosted implementation approved |
 | local | 2026-04-30 | pass | current branch | GitHub organization ownership alignment: local remotes, manifests, roadmap surfaces, and `hub-registry` targets updated for `Toni-Montez-Consulting`; `dse-content` intentionally excluded; targeted redaction and DTP validation passed |
 | CI | 2026-04-29 | pass | `dd359db` | GitHub Actions DTP CI before this workspace-report batch |
@@ -38,6 +38,7 @@ review_status: draft
 - Hosted DTP app implementation is intentionally not started.
 - Mom nonprofit owner facts and permissions still need to be captured before build/migration, public proof, or hosted persistence planning.
 - Public proof still needs permission, redaction, reviewer, evidence, and caveat gates.
+- GitHub Enterprise org-migration closeout is complete for Omnexus PR #559; Hub PR #59 is already merged; non-DSE org alignment is no longer the active blocker.
 - Workspace Command Center V0 reports recorded artifacts only; live git/CI reads and command execution remain later. Missing repo rows may carry explicit Active Next Queue blockers without inferring gates.
 - Repo manifest/evidence index shape now covers DTP, consulting, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus. `dse-content` remains missing until its lane is clean or explicitly selected with COI-aware scope.
 
