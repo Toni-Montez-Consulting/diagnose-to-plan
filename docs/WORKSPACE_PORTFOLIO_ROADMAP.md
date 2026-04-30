@@ -935,13 +935,15 @@ Standing preflight/postflight: run the Activation Routing Map plus the Roadmap S
 
 Preflight: use the Practice System Documentation Pack as the current/future/audit/optimization reference before adding major new platform, proof, agent, or cross-repo behavior.
 
-1. Collect Mom nonprofit owner-confirmed facts, permission, screenshot approval, proof reviewer, and meeting/form/payment source-of-truth decisions.
-2. Decide the Mom site execution path: Wix cleanup, rebuild, or migration.
-3. Keep Hub prompt/registry cross-validation local-first; decide private sibling-repo CI access only if it becomes worth the operational cost.
-4. Keep repo manifests current as touched lanes change; DTP, consulting, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus now have manifests/evidence indexes; FamilyTrips also has thin CI.
-5. Run the next adjacent-project touch pass only when its trigger is ready; `dse-content` is blocked while its active branch is dirty unless explicitly selected with COI-aware scope.
-6. Use DeMario command room and Omnexus verification toolkit as proof/reference material only after permission/redaction review.
-7. Start hosted DTP implementation only after the Mom pilot/proof workflow gives the app real records to persist.
+1. Finish the GitHub Enterprise org-migration closeout: Omnexus PR #559 needs required human review before merge; Hub's stale local org branch is already cleaned.
+2. Resolve Hub Dependabot PR #59 policy: either accept CI's high-severity audit threshold for this patch group or run a scoped dependency-security pass for the moderate `node-cron`/Anthropic SDK audit findings before merge.
+3. Collect Mom nonprofit owner-confirmed facts, permission, screenshot approval, proof reviewer, and meeting/form/payment source-of-truth decisions.
+4. Decide the Mom site execution path: Wix cleanup, rebuild, or migration.
+5. Keep Hub prompt/registry cross-validation local-first; decide private sibling-repo CI access only if it becomes worth the operational cost.
+6. Keep repo manifests current as touched lanes change; DTP, consulting, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus now have manifests/evidence indexes; FamilyTrips also has thin CI.
+7. Run the next adjacent-project touch pass only when its trigger is ready; `dse-content` remains excluded unless explicitly selected with COI-aware scope.
+8. Use DeMario command room and Omnexus verification toolkit as proof/reference material only after permission/redaction review.
+9. Start hosted DTP implementation only after the Mom pilot/proof workflow gives the app real records to persist.
 
 Non-blocking intelligence track: use the optional Future Intelligence templates during the next real delivery/research sessions, but do not insert them ahead of hosted DTP Phase 0 or proof/redaction work.
 

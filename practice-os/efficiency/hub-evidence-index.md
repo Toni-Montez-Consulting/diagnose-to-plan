@@ -19,7 +19,8 @@ review_status: draft
 | Lane | Date | Result | Commit | Artifact |
 |---|---|---|---|---|
 | local | 2026-04-30 | pass | cross-repo prompt lane | `hub-prompts npm test`; `hub-registry npm run validate`, `npm run validate:manifests`, `npm run validate:prompt-ids`, `npm test`; negative missing-id check failed as expected |
-| CI | 2026-04-29 | pass | `1215995` | `ci` run `25125856104`; `security` run `25125856081` |
+| CI | 2026-04-30 | pass | `ded15ad` | `ci` run `25167610722`; `security` run `25167610677`; `CodeQL` run `25167609842` |
+| dependency | 2026-04-30 | blocked | PR #59 | `pnpm install --frozen-lockfile`, `pnpm lint`, `pnpm build`, `pnpm typecheck`, `pnpm test`, `pnpm security:secrets`, and `pnpm audit --prod --audit-level=high` passed; strict `pnpm audit --prod` still reports two moderate findings, so PR #59 was updated from `main` but not merged |
 | release | 2026-04-30 | manual_pending | `1215995` | Vercel/Supabase live runtime checks not run in this batch |
 | support | 2026-04-30 | manual_pending | `1215995` | `/health`, `/api/intake`, `/console`, and webhook smoke need live environment |
 | proof | 2026-04-30 | internal_only | current branch | runtime evidence can support proof only after DTP redaction/permission review |
@@ -35,6 +36,7 @@ review_status: draft
 
 - Prompt id cross-validation is implemented as a local workspace gate in `hub-registry`; repo-scoped CI remains intentionally thin.
 - Full portfolio manifest and prompt-id validation are local-only until CI has explicit safe access to private sibling repos.
+- Dependabot PR #59 is close to green but blocked under the strict local audit command by moderate `uuid` via `node-cron` and transitive `@anthropic-ai/sdk` via `@anthropic-ai/claude-agent-sdk`; decide audit policy or run a scoped dependency-security story before merge.
 - Live runtime checks need a controlled environment, credentials, test row cleanup, and no secret/log leakage.
 
 ## Notes

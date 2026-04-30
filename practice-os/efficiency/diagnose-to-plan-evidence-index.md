@@ -18,7 +18,7 @@ review_status: draft
 
 | Lane | Date | Result | Commit | Artifact |
 |---|---|---|---|---|
-| local | 2026-04-30 | pass | current branch | `hub-prompts npm test`; `hub-registry npm run validate`, `npm run validate:manifests`, `npm run validate:prompt-ids`, `npm test`; DTP `pytest`, `ruff check .`, `dtp skills --validate`, `dtp practice doctor`, `dtp workspace report`, `dtp workspace report --json`; Workspace Command Center blocker carry-forward test/report |
+| local | 2026-04-30 | pass | current branch | `hub-prompts npm test`; `hub-registry npm run validate`, `npm run validate:manifests`, `npm run validate:prompt-ids`, `npm test`; DTP `pytest`, `ruff check .`, `dtp skills --validate`, `dtp practice doctor`, `dtp workspace report`, `dtp workspace report --json`; Workspace Command Center blocker carry-forward test/report, including Omnexus and Hub active blockers |
 | local | 2026-04-30 | pass | current branch | GitHub organization ownership alignment: local remotes, manifests, roadmap surfaces, and `hub-registry` targets updated for `Toni-Montez-Consulting`; `dse-content` intentionally excluded; targeted redaction and DTP validation passed |
 | CI | 2026-04-29 | pass | `dd359db` | GitHub Actions DTP CI before this workspace-report batch |
 | release | 2026-04-30 | pass_with_note | current branch | targeted redaction checks passed for changed docs/templates; broad `docs/` scan still has a pre-existing `docs/build-spec-v2.md` email finding |

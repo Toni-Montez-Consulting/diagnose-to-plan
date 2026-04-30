@@ -59,8 +59,6 @@ Update current operational references so future agents, registry checks, and rep
 - Do not treat organization ownership as proof permission.
 - Do not publish consulting proof or weaken redaction, consent, reviewer, caveat, or COI gates.
 
-## Next Action
-
 ## Postflight Results
 
 - Non-DSE local `origin` remotes now point at `Toni-Montez-Consulting`; `dse-content` remains on the personal/Microsoft-linked remote.
@@ -71,6 +69,13 @@ Update current operational references so future agents, registry checks, and rep
 - GitHub org ownership changes made hosted action licensing a real infrastructure concern: repo secret scans should prefer pinned local CLI/script gates unless a paid action license is intentionally configured.
 - Hub current-tree secret scanning passes. Full-history scanning surfaced an old redacted historical finding, so any future "scan all history" policy should be handled as a separate baseline/rotation/history-cleanup story rather than mixed into org URL hygiene.
 
+## 2026-04-30 Closeout Follow-Up
+
+- Omnexus PR #559 was rechecked and remains blocked by required review; this gate was not bypassed.
+- Hub local `main` is aligned to `origin/main`; stale local branch `chore/org-repo-references` was deleted after content-equivalence review against the squash-merged PR #60.
+- Hub PR #59 was updated from `main` so the org-safe secret scan workflow can rerun on the dependency branch.
+- Hub dependency triage is now tracked in `practice-os/steward/2026-04-30-org-migration-closeout-and-hub-dependency-triage.md`.
+
 ## Next Action
 
-Merge Omnexus PR #559 after human review, then prune or resync local protected-repo PR branches. Keep `dse-content` excluded until its active work is clean or explicitly selected.
+Merge Omnexus PR #559 after human review, then prune or resync local protected-repo PR branches. Keep `dse-content` excluded unless explicitly selected with a COI-aware scope.

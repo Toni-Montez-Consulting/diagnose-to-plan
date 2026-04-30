@@ -48,6 +48,7 @@ def test_workspace_report_discovers_artifacts_and_missing_coverage(tmp_path: Pat
     )
     assert any("Mom nonprofit" in blocker for blocker in report.blockers)
     assert any("DSE" in blocker for blocker in report.blockers)
+    assert any("Omnexus" in blocker for blocker in report.blockers)
 
 
 def test_workspace_report_render_includes_boundary_and_missing_items(tmp_path: Path) -> None:
@@ -157,6 +158,7 @@ def _write_backlog(root: Path) -> None:
                 "",
                 "## Current Active Next Queue",
                 "",
+                "1. Finish Omnexus org-migration closeout.",
                 "1. Collect Mom nonprofit owner-confirmed facts.",
                 "2. Keep DSE blocked until the active branch is clean.",
                 "3. Park routine maintenance.",

@@ -275,7 +275,7 @@ def _extract_active_queue_blockers(path: Path) -> tuple[str, ...]:
             break
         if in_section and re.match(r"^\d+\.", stripped):
             lines.append(re.sub(r"^\d+\.\s*", "", stripped))
-    keywords = ("Mom", "DSE", "tm-skills", "proof", "FAOS", "Hub", "smoke")
+    keywords = ("Mom", "DSE", "tm-skills", "proof", "FAOS", "Hub", "Omnexus", "smoke")
     return tuple(line for line in lines if any(keyword in line for keyword in keywords))
 
 
