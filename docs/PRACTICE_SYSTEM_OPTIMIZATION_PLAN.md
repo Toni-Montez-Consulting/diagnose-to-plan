@@ -96,6 +96,8 @@ Goal: make future agents stop rediscovering repo purpose, gates, proof lanes, an
 | Consulting manifest | `consulting` | Done | purpose, routes, gates, deploy target, proof lane, Hub boundary named | keep current during consulting work |
 | Hub manifest | `hub` | Done | runtime gates, Supabase/Vercel boundaries, prompts/runs ownership named | keep current during prompt/registry work |
 | `tm-skills` manifest | `tm-skills` | Done | install gates, global skill boundaries, smoke tests named | keep current during skill smoke/canary work |
+| `hub-prompts` manifest/evidence index | `hub-prompts` | Done | prompt catalogue ownership, prompt validation gates, eval lane, and Hub runtime boundary named | add eval/golden fixtures only after real prompt misfires or high-value workflows justify them |
+| `hub-registry` manifest/evidence index | `hub-registry` | Done | target/routing ownership, local registry gates, prompt-id cross-validation, and deferred sibling CI access named | keep repo-scoped CI thin unless local-first validation becomes a bottleneck |
 | DeMario manifest/evidence index | `demario-pickleball-1` | Done | launch gates, command-room role, proof blockers, and local/CI evidence named | use for future command-room proof pass |
 | FamilyTrips manifest/evidence index | `FamilyTrips` | Done | privacy model, local gates, deploy smoke, and no-auth/no-AI boundary named | use before future FamilyTrips feature or sharing work |
 | Omnexus manifest/evidence index | `fitness-app` | Done | verification cockpit reference, release evidence, proof gates, and app-data boundaries named without mutating app code | use as reference pattern and proof input only after gates |
@@ -182,7 +184,7 @@ Gate: FAOS work may plan and review now, but implementation is parked until the 
 2. Run the Agentic Performance Gap Review when a session exposes a missed routing, memory, verification, research, safety, or learning-loop behavior.
 3. Keep the active queue centered on the Mom nonprofit private kit.
 4. Use the proof/redaction templates on the first real claim.
-5. Keep repo manifests current for DTP, consulting, Hub, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus as those lanes are touched.
+5. Keep repo manifests current for DTP, consulting, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus as those lanes are touched.
 6. Keep Hub prompt/registry cross-validation local-first unless private sibling-repo CI access becomes worth the cost.
 7. Keep external `tm-skills` Claude Code/GitHub Copilot smoke tests manual until they can be observed.
 8. Run adjacent repo touch passes only when their triggers are ready and the target repo is clean or explicitly selected.

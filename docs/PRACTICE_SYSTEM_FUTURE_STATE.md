@@ -251,7 +251,7 @@ DTP remains the master source. Other repos get local pointers when their lane is
 | hosted proof dashboard | real proof packets and redaction reviews |
 | hosted steward queue | repeated manual steward receipts |
 | `dtp steward review` CLI | manual template proves useful and checks are stable |
-| repo manifests beyond DTP | DTP pilot accepted, then consulting/Hub/`tm-skills` lanes touched |
+| repo manifests beyond DTP | DTP, consulting, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus covered; add DSE only when COI-aware scope is active |
 | global `tm-skills` install | explicit approval, dry-run review, reload, smoke tests |
 | project-pinned skill canary | global discovery works without duplicate confusion |
 | Hub prompt/registry automation | prompt ids and registry targets cross-validate |

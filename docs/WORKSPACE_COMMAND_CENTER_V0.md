@@ -9,7 +9,7 @@ review_status: draft
 
 Status: implemented to the V0 read-only report boundary as `dtp workspace report`.
 
-Purpose: define and run the first useful shape for a workspace command center after repo manifests and evidence indexes proved useful across DTP, consulting, Hub, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus.
+Purpose: define and run the first useful shape for a workspace command center after repo manifests and evidence indexes proved useful across DTP, consulting, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus.
 
 ## Boundary
 
@@ -71,6 +71,8 @@ The V0 report produces:
 | `diagnose-to-plan` | Practice OS | manifest/evidence ok | DTP CI or local validation from evidence index | pytest/ruff/skills/doctor | varies | current roadmap story |
 | `consulting` | public proof/storefront | manifest/evidence ok | build/secret scan/proof packet from evidence index | build/secrets/route smoke | proof gates | public-safe updates only |
 | `hub` | runtime/intake | manifest/evidence ok | CI/security/local verify from evidence index | pnpm verify or targeted gates | production secrets | runtime/support work |
+| `hub-prompts` | prompt catalog | manifest/evidence ok | prompt validation from evidence index | npm test | eval/golden fixtures | prompt quality work |
+| `hub-registry` | prompt routing registry | manifest/evidence ok | registry and prompt-id validation from evidence index | npm test locally; CI-safe validate in GitHub | sibling CI access deferred | registry validation work |
 | `tm-skills` | global SDLC skills | manifest/evidence ok | doctor/freshness/install preview from evidence index | doctor/freshness/WhatIf | external smoke | skill canary/misfires |
 | `engineering-playbook` | doctrine/reference | manifest/evidence ok | local ops status from evidence index | script parse/status-only/diff hygiene | roadmap ownership drift | doctrine/policy maintenance |
 | `fitness-app` / Omnexus | app release and verification cockpit reference | manifest/evidence ok | Omnexus evidence index | tools doctor/matrix, CI, Verification Toolkit, release runbooks | user/billing/App Store/proof privacy | verification pattern extraction or app-release lane |

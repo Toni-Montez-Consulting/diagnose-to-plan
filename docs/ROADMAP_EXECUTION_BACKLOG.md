@@ -112,9 +112,11 @@ Goal: reduce rediscovery, setup drift, CI waste, and handoff friction.
 
 | Story | Repo | Status | Done gate | Next action |
 |---|---|---|---|---|
-| DTP repo manifest/evidence-index pilot | `diagnose-to-plan` | Done | pilot shape accepted as useful | core manifests plus DeMario, FamilyTrips, engineering-playbook, and Omnexus adjacent passes now exist |
+| DTP repo manifest/evidence-index pilot | `diagnose-to-plan` | Done | pilot shape accepted as useful | core manifests plus prompt/registry, DeMario, FamilyTrips, engineering-playbook, and Omnexus adjacent passes now exist |
 | Consulting repo manifest | `consulting` | Done | manifest names gates, deploy target, proof lane, and data boundaries | keep current during consulting proof/intake work |
 | Hub repo manifest | `hub` | Done | manifest names runtime gates, Supabase/Vercel boundaries, and prompt/run ownership | keep current during Hub runtime and prompt/registry work |
+| `hub-prompts` repo manifest/evidence index | `diagnose-to-plan`, `hub-prompts` | Done | manifest and evidence index capture prompt catalogue ownership, prompt validation gates, eval lane, and Hub runtime boundary without mutating prompt content | add eval/golden fixtures only when real prompt misfires or high-value workflows justify them |
+| `hub-registry` repo manifest/evidence index | `diagnose-to-plan`, `hub-registry` | Done | manifest and evidence index capture target/routing ownership, local registry gates, prompt-id cross-validation, and deferred sibling CI access without mutating targets | keep repo-scoped CI thin; decide sibling CI access only if local-first validation becomes a bottleneck |
 | `tm-skills` repo manifest | `tm-skills` | Done | manifest names install gates and global-skill boundaries | keep current during skill smoke/canary work |
 | DeMario repo manifest/evidence index | `diagnose-to-plan`, `demario-pickleball-1` | Done | manifest and evidence index capture launch gates, proof blockers, command-room role, and local/CI evidence without mutating app code | use for future command-room proof pass |
 | FamilyTrips repo manifest/evidence index | `diagnose-to-plan`, `FamilyTrips` | Done | manifest and evidence index capture privacy model, local/CI gates, release smoke, and no-auth/no-AI boundary | use before future FamilyTrips feature, AI, or public-sharing work |
@@ -217,7 +219,7 @@ Standing preflight/postflight: use `practice-os/templates/activation-routing-map
 4. Keep Claude Code and GitHub Copilot `tm-skills` discovery smoke testing on the manual back burner; runbook exists, links are healthy, and Codex discovery is verified, but external reload checks remain manual and non-blocking.
 5. Keep Hub prompt/registry cross-validation local-first; decide private sibling-repo CI access only if it becomes worth the operational cost.
 6. Use `dtp workspace report` as a read-only steward preflight when checking repo coverage, recorded evidence, suggested gates, blockers, and missing manifest/evidence coverage.
-7. Keep repo manifests current as lanes are touched; DTP, consulting, Hub, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus now have DTP-owned manifests/evidence indexes.
+7. Keep repo manifests current as lanes are touched; DTP, consulting, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus now have DTP-owned manifests/evidence indexes.
 8. Keep DSE blocked until its active branch is clean or explicitly selected with COI-aware scope.
 9. Run FAOS Phase 0 readiness review only after the current pilot/proof/smoke/Hub-validation path; do not build FAOS from the raw Phase 0 prompt yet.
 

@@ -343,7 +343,7 @@ Build these after the near-term documentation and pilot path are stable.
    - Introduce feature flags, kill switches, and supply-chain evidence first in higher-risk repos: Omnexus, Hub, hosted DTP, consulting intake/proof, and client launch surfaces.
 
 10. Workspace Efficiency pilot.
-- Add repo manifests for DTP, consulting, Hub, and `tm-skills` first; DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus are now adjacent-project touch passes.
+   - Add repo manifests for DTP, consulting, Hub, `hub-prompts`, `hub-registry`, and `tm-skills` first; DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus are now adjacent-project touch passes.
    - Add evidence indexes only where verification receipts already exist.
    - Use `docs/WORKSPACE_COMMAND_CENTER_V0.md` and `dtp workspace report` as the read-only command-center boundary; do not implement live git/CI reads or a command runner yet.
    - Add a decision record for the first real cross-repo automation boundary.

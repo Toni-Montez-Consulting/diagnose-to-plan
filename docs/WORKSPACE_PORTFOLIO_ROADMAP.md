@@ -316,8 +316,8 @@ This is the master coverage queue. Each repo gets at least one explicit future p
 | `hub` | Runtime hardening and prompt/registry consistency | After core CI is stable | v0.4 hardening notes and support checks; prompt id cross-validation is local-first in `hub-registry` |
 | `tm-skills` | Global install and discovery smoke test | Explicit approval to run install | Installed/reloaded skills, discovery evidence, one canary decision |
 | `engineering-playbook` | Doctrine refresh and pointer audit | Pointer/doctrine lane touched on 2026-04-30 | DTP source-of-truth pointer and FamilyTrips CI policy are aligned; future updates only when reusable doctrine or portfolio policy changes |
-| `hub-prompts` | Prompt eval/golden fixture pass | After Hub cross-validation design | High-value prompt fixtures and versioning rules |
-| `hub-registry` | Cross-repo prompt id and manifest validation pass | Local-first validation now exists | Decide later whether CI should receive private sibling-repo access |
+| `hub-prompts` | Prompt eval/golden fixture pass | DTP-owned manifest/evidence index exists; future prompt quality work reopens lane | High-value prompt fixtures and versioning rules |
+| `hub-registry` | Cross-repo prompt id and manifest validation pass | DTP-owned manifest/evidence index exists and local-first validation now exists | Decide later whether CI should receive private sibling-repo access |
 | `fitness-app` / Omnexus | Verification cockpit review and launch-stability pass | PR #553 merged; DTP extraction complete on 2026-04-30 | DTP-owned manifest/evidence index exists; next output is permissioned proof or release/support follow-up only when the lane reopens |
 | `demario-pickleball-1` | Launch/Command Room proof pass | After manual launch gates and permission are handled | DTP-owned manifest/evidence index exists; next output is owner-safe proof packet, venue-routing maintenance, or Node 24 CI maintenance |
 | `FamilyTrips` | Privacy-first maintenance pass | Before adding features or AI/public sharing | DTP-owned manifest/evidence index and thin CI exist; next pass should revisit privacy and deploy smoke |
@@ -569,7 +569,7 @@ Priority:
 - Public proof now has asset/redaction/permission templates and the private Mom nonprofit kit includes the first proof/redaction draft; it still needs a real claim, source evidence, permission, redaction, reviewer approval, and caveat.
 - Agent-security research is now represented here; promote specific gates into implementation docs before any deeper autonomous workflows.
 - Future Intelligence templates now exist as optional Practice OS assets, but they still need first real use before becoming required gates.
-- Workspace Efficiency templates now exist as optional Practice OS assets. DTP, consulting, Hub, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus now have DTP-owned repo manifests/evidence indexes; remaining adjacent repos should get the same treatment only when their lanes are touched.
+- Workspace Efficiency templates now exist as optional Practice OS assets. DTP, consulting, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus now have DTP-owned repo manifests/evidence indexes; remaining adjacent repos should get the same treatment only when their lanes are touched.
 - Roadmap Steward V0 now exists as a required Practice OS template and backlog lane; live steward receipts now capture hosted-DTP acceptance and the Mom nonprofit pilot kickoff.
 - AI Activation Map V0 now exists as a required Practice OS template and has been used for the roadmap/steward and Mom pilot routing; keep using it when prompt intent spans multiple lanes.
 - Agentic Performance Gap Review V0 now exists as a required Practice OS template; use it whenever agent behavior, skill routing, research adoption, validation, or learning-loop conversion looks weak.
@@ -577,7 +577,7 @@ Priority:
 - FAOS orchestration is now captured as a gated future substrate in `docs/FAOS_ORCHESTRATION_ROADMAP.md`; Phase 0 implementation still needs readiness review and technical corrections before any repo or service work.
 - The roadmap now has a Kanban-style execution backlog; keep story status, Done gates, and next actions current as work moves.
 - The Practice System Documentation Pack now exists in DTP; keep it synced as architecture, future-state assumptions, audit findings, and optimization priorities change.
-- Local documentation propagation is still touched-lane work: engineering-playbook now has its pointer audit; consulting, Hub, `tm-skills`, Omnexus, DeMario, FamilyTrips, DSE, `hub-prompts`, and `hub-registry` should get additional lightweight pointers only when their specific lanes are touched.
+- Local documentation propagation is still touched-lane work: engineering-playbook now has its pointer audit; consulting, Hub, `tm-skills`, Omnexus, DeMario, FamilyTrips, DSE, `hub-prompts`, and `hub-registry` should get additional lightweight pointers only when their specific lanes are touched beyond manifest/evidence coverage.
 
 ## Research Additions To Roadmap
 
@@ -936,13 +936,13 @@ Preflight: use the Practice System Documentation Pack as the current/future/audi
 1. Collect Mom nonprofit owner-confirmed facts, permission, screenshot approval, proof reviewer, and meeting/form/payment source-of-truth decisions.
 2. Decide the Mom site execution path: Wix cleanup, rebuild, or migration.
 3. Keep Hub prompt/registry cross-validation local-first; decide private sibling-repo CI access only if it becomes worth the operational cost.
-4. Keep repo manifests current as touched lanes change; DTP, consulting, Hub, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus now have manifests/evidence indexes; FamilyTrips also has thin CI.
+4. Keep repo manifests current as touched lanes change; DTP, consulting, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus now have manifests/evidence indexes; FamilyTrips also has thin CI.
 5. Run the next adjacent-project touch pass only when its trigger is ready; `dse-content` is blocked while its active branch is dirty unless explicitly selected with COI-aware scope.
 6. Use DeMario command room and Omnexus verification toolkit as proof/reference material only after permission/redaction review.
 7. Start hosted DTP implementation only after the Mom pilot/proof workflow gives the app real records to persist.
 
 Non-blocking intelligence track: use the optional Future Intelligence templates during the next real delivery/research sessions, but do not insert them ahead of hosted DTP Phase 0 or proof/redaction work.
 
-Non-blocking efficiency track: keep the DTP, consulting, Hub, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus manifests/evidence indexes current during touched-lane work. The Workspace Command Center V0 report exists as `dtp workspace report`; do not implement live git/CI reads or a runner until the read-only report proves value.
+Non-blocking efficiency track: keep the DTP, consulting, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus manifests/evidence indexes current during touched-lane work. The Workspace Command Center V0 report exists as `dtp workspace report`; do not implement live git/CI reads or a runner until the read-only report proves value.
 
 Non-blocking orchestration track: run the FAOS Phase 0 readiness review after the current pilot/proof/smoke/Hub-validation path. Do not create a `faos` repo, add tracing/memory services, or mutate DTP/tm-skills from the raw Phase 0 prompt until that readiness gate is accepted.

@@ -12,7 +12,7 @@ This folder holds optional pilot artifacts for the Workspace Efficiency Layer. T
 Rules:
 
 - Start with DTP, then expand only to touched/core lanes.
-- Current core manifests: DTP, consulting, Hub, and `tm-skills`.
+- Current core manifests: DTP, consulting, Hub, `hub-prompts`, `hub-registry`, and `tm-skills`.
 - Current adjacent manifests: `demario-pickleball-1`, `FamilyTrips`, `engineering-playbook`, and `fitness-app` / Omnexus.
 - Use pilots to prove the shape before applying it to more adjacent projects.
 - Keep repo-local gates authoritative.

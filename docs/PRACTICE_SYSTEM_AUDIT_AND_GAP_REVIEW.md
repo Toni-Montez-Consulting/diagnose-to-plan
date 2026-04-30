@@ -116,13 +116,13 @@ Owner: `tm-skills`.
 
 Follow-up story: Tool reload smoke test.
 
-### P1-3: Repo Manifests And Evidence Indexes Exist Only As A DTP Pilot
+### P1-3: Repo Manifests And Evidence Indexes Need Ongoing Coverage
 
-Evidence: DTP has the first manifest/evidence-index pilot, while consulting, Hub, and `tm-skills` are ready but not yet expanded.
+Evidence: DTP now has manifest/evidence-index coverage for DTP, consulting, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus. `dse-content` remains intentionally missing until its lane is clean or explicitly selected with COI-aware scope.
 
-Impact: future agents still need to rediscover repo purpose and gates outside DTP unless their repo lanes have local manifests.
+Impact: future agents now have broad recorded coverage, but stale manifests can become false confidence unless touched lanes keep them current.
 
-Fix: expand manifests to consulting, Hub, and `tm-skills` when those lanes are touched.
+Fix: keep manifests and evidence indexes current during touched-lane work, add `dse-content` only when COI-aware scope is active, and do not treat manifests as runtime configuration.
 
 Owner: each repo, coordinated by DTP.
 
@@ -244,8 +244,8 @@ Follow-up story: protocol/tool spike later.
 | `diagnose-to-plan` | yes | ongoing source of truth |
 | `hub` | yes | prompt/registry validation and local pointer |
 | `engineering-playbook` | yes | pointer audit |
-| `hub-prompts` | yes | prompt eval/cross-validation |
-| `hub-registry` | yes | registry cross-validation |
+| `hub-prompts` | yes | manifest/evidence index done; prompt eval/golden fixtures later |
+| `hub-registry` | yes | manifest/evidence index done; sibling CI access remains deferred |
 | `fitness-app` | yes | reference extraction complete; proof remains gated |
 | `FamilyTrips` | yes | manifest/evidence index done; privacy maintenance pass repeats before new features, AI, or public sharing |
 | `demario-pickleball-1` | yes | manifest/evidence index done; command-room proof pass still later |

@@ -18,7 +18,7 @@ review_status: draft
 
 | Lane | Date | Result | Commit | Artifact |
 |---|---|---|---|---|
-| local | 2026-04-30 | pass | current branch | `pytest`, `ruff check .`, `dtp skills --validate`, `dtp practice doctor`, `dtp workspace report`, `dtp workspace report --json` |
+| local | 2026-04-30 | pass | current branch | `hub-prompts npm test`; `hub-registry npm run validate`, `npm run validate:manifests`, `npm run validate:prompt-ids`, `npm test`; DTP `pytest`, `ruff check .`, `dtp skills --validate`, `dtp practice doctor`, `dtp workspace report`, `dtp workspace report --json` |
 | CI | 2026-04-29 | pass | `dd359db` | GitHub Actions DTP CI before this workspace-report batch |
 | release | 2026-04-30 | pass_with_note | current branch | targeted redaction checks passed for changed docs/templates; broad `docs/` scan still has a pre-existing `docs/build-spec-v2.md` email finding |
 | support | 2026-04-30 | not_applicable | current branch | hosted DTP not implemented; Workspace Command Center V0 is recorded-artifact-only |
@@ -36,7 +36,7 @@ review_status: draft
 - Hosted DTP app implementation is intentionally not started.
 - Public proof still needs permission, redaction, reviewer, evidence, and caveat gates.
 - Workspace Command Center V0 reports recorded artifacts only; live git/CI reads and command execution remain later.
-- Repo manifest/evidence index shape now covers DTP, consulting, Hub, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus. `hub-prompts`, `hub-registry`, and `dse-content` remain missing until their lanes are touched.
+- Repo manifest/evidence index shape now covers DTP, consulting, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus. `dse-content` remains missing until its lane is clean or explicitly selected with COI-aware scope.
 
 ## Notes
 

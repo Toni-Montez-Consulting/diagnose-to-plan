@@ -33,7 +33,7 @@ The current system is designed to reduce reliance on memory:
 | `tm-skills` | Reusable global SDLC skills and install/doctor scripts | `doctor.ps1`, `freshness-check.ps1`, `install.ps1 -WhatIf` | Global install remains explicit-approval only |
 | `engineering-playbook` | General doctrine, portfolio templates, decisions, secret-management references | portfolio checks and repo-local scripts | Does not duplicate DTP roadmap ownership |
 | `hub-prompts` | Hub prompt catalog, prompt schemas, validation fixtures | `npm test`, prompt validation | Does not own Hub runtime routing or DTP roadmap |
-| `hub-registry` | Hub automation target registry and routing config | `npm run validate`, local portfolio manifest checks | Does not own prompt content or practice roadmap |
+| `hub-registry` | Hub automation target registry and routing config | `npm run validate`, local portfolio manifest checks, local prompt-id cross-validation | Does not own prompt content or practice roadmap |
 | `fitness-app` / Omnexus | Product app, verification cockpit reference, founder/product proof candidate | app local gates, toolkit registry, CI evidence, Supabase drift gates, DTP extraction receipts | Do not disturb app code without explicit lane |
 | `demario-pickleball-1` | Local-business launch track and command-room reference | `npm run ci`, venue/routing/manual launch gates | Reference pattern, not practice roadmap owner |
 | `FamilyTrips` | Private family trip app and privacy-first maintenance lane | data validation, build, tests, privacy checks | Not public proof by default |
@@ -207,7 +207,7 @@ The current verification model is intentionally thin and repo-local:
 | Hub | existing CI/security workflows, runtime health/intake checks when credentials exist |
 | `tm-skills` | doctor, freshness, install dry-run; no apply without approval |
 | `hub-prompts` | prompt validation through `npm test` |
-| `hub-registry` | CI-safe registry validation; sibling-manifest checks stay local until access is explicit |
+| `hub-registry` | CI-safe registry validation; sibling-manifest and prompt-id checks stay local until access is explicit |
 | Omnexus | reference verification cockpit with registry, lock file, Docker-backed tools, evidence artifacts |
 | Adjacent repos | add gates only when their lane is touched |
 
