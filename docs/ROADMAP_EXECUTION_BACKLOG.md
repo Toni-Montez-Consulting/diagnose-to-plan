@@ -78,7 +78,7 @@ Goal: make every repo's delivery state observable before dashboards or automatio
 | Hub workflow review | `hub` | Done | existing CI/security reviewed with no churn | v0.4 hardening later |
 | `hub-prompts` full local prompt gate in CI | `hub-prompts` | Done | `npm test` CI green | add eval fixtures later |
 | `hub-registry` CI-safe validation | `hub-registry` | Done | `npm run validate` CI green | local `npm test` stays sibling-manifest gate |
-| Prompt id cross-validation | `hub-prompts`, `hub-registry` | Ready | registry references resolve to prompt ids without requiring private sibling access in repo-scoped CI | implement after Mom pilot or if Hub work resumes |
+| Prompt id cross-validation | `hub-prompts`, `hub-registry` | Done | local `npm test` confirms registry references resolve to sibling prompt ids | keep repo-scoped CI thin until private sibling access is approved |
 | Shared reusable workflows | core repos | Later | at least three repos repeat the same stable workflow | do not abstract early |
 
 ## Epic 4: Hosted DTP Phase 0
@@ -209,7 +209,7 @@ Standing preflight/postflight: use `practice-os/templates/activation-routing-map
 2. Decide the Mom site execution path after owner facts: Wix cleanup, rebuild, or migration.
 3. Capture owner-approved baseline/after-state evidence for the first proof candidate and run redaction/permission review.
 4. Finish `tm-skills` discovery smoke testing in Claude Code and GitHub Copilot; Codex discovery is verified.
-5. Add Hub prompt/registry cross-validation after the pilot or when Hub resumes.
+5. Keep Hub prompt/registry cross-validation local-first; decide private sibling-repo CI access only if it becomes worth the operational cost.
 6. Keep repo manifests current as lanes are touched; DTP, consulting, Hub, and `tm-skills` now have DTP-owned manifests/evidence indexes.
 7. Run FAOS Phase 0 readiness review only after the current pilot/proof/smoke/Hub-validation path; do not build FAOS from the raw Phase 0 prompt yet.
 

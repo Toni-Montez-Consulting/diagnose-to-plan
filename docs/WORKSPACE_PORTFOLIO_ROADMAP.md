@@ -263,7 +263,7 @@ Acceptance:
 
 ### Story 3: Add Thin CI For Stable Local Gates
 
-Status: implemented for the core-plus-map scope. DTP, consulting, and `tm-skills` now have thin CI workflows; `hub-prompts` runs its full local `npm test` gate; `hub-registry` runs CI-safe registry validation while full portfolio manifest validation remains a local gate until CI has explicit private sibling-repo access; Hub's existing CI/security workflows already cover the stable lane and were left in place.
+Status: implemented for the core-plus-map scope. DTP, consulting, and `tm-skills` now have thin CI workflows; `hub-prompts` runs its full local `npm test` gate; `hub-registry` runs CI-safe registry validation while local `npm test` now also covers sibling manifests and prompt id cross-validation against `hub-prompts`. Full cross-repo CI remains deferred until CI has explicit private sibling-repo access. Hub's existing CI/security workflows already cover the stable lane and were left in place.
 
 Value: makes the existing local gates repeatable before hosted dashboards or support automation display them.
 
@@ -276,7 +276,7 @@ First CI targets:
 - Hub: existing CI/security workflows cover format, lint, build, typecheck, tests, CLI smoke, audit, and secret scanning.
 - `tm-skills`: `.\scripts\doctor.ps1`, `.\scripts\freshness-check.ps1`.
 - `hub-prompts`: `npm test`.
-- `hub-registry`: CI runs `npm run validate`; local portfolio validation remains `npm test`.
+- `hub-registry`: CI runs `npm run validate`; local portfolio and prompt-id validation run through `npm test`.
 
 Keep it thin:
 
@@ -299,7 +299,7 @@ Every workspace repo benefits, but not every repo needs a CI change in this stor
 | `tm-skills` | Global agent SDLC behavior across all repos | Thin Windows CI for doctor/freshness/install preview | Explicit install approval, tool reloads, discovery smoke tests |
 | `engineering-playbook` | Doctrine, portfolio schemas, secret-management references | Alignment only; no duplicated roadmap ownership | Update only when general doctrine changes |
 | `hub-prompts` | Prompt catalogue consumed by Hub | Workflow now runs full `npm test` | Add/evolve eval fixtures for high-value prompts |
-| `hub-registry` | Hub automation target routing | Workflow keeps CI-safe registry validation; local `npm test` still validates sibling manifests | Cross-validate referenced prompt ids against `hub-prompts` and design private sibling-repo access for CI manifest checks |
+| `hub-registry` | Hub automation target routing | Workflow keeps CI-safe registry validation; local `npm test` validates sibling manifests and prompt ids | Design private sibling-repo access for CI only if local-only validation becomes a bottleneck |
 | `fitness-app` / Omnexus | Reference verification cockpit and product proof track | No mutation because active branch has uncommitted work | Finish/review PR #553 and promote patterns only after permission/redaction |
 | `demario-pickleball-1` | Client Command Room reference and local-business proof track | Alignment only; existing CI remains owner | Manual launch gates, venue rules, Node 24 maintenance |
 | `FamilyTrips` | Private family planning app | Alignment only | Privacy-first `validate:data`, build, and tests before feature work |
@@ -313,11 +313,11 @@ This is the master coverage queue. Each repo gets at least one explicit future p
 |---|---|---|---|
 | `diagnose-to-plan` | Hosted DTP Phase 0 and proof/redaction governance | Current Sprint 2 sequence | Phase 0 design accepted; first proof/redaction pilot next, later private app shell |
 | `consulting` | Public proof upgrade and route/visual verification expansion | Proof packet and redaction queue exist | Receipt-style proof pages, noindex/admin checks, optional route CI |
-| `hub` | Runtime hardening and prompt/registry consistency | After core CI is stable | v0.4 hardening notes, prompt id cross-validation, support checks |
+| `hub` | Runtime hardening and prompt/registry consistency | After core CI is stable | v0.4 hardening notes and support checks; prompt id cross-validation is local-first in `hub-registry` |
 | `tm-skills` | Global install and discovery smoke test | Explicit approval to run install | Installed/reloaded skills, discovery evidence, one canary decision |
 | `engineering-playbook` | Doctrine refresh and pointer audit | After DTP Phase 0/proof contracts settle | Updated general doctrine only where DTP decisions should become reusable principles |
 | `hub-prompts` | Prompt eval/golden fixture pass | After Hub cross-validation design | High-value prompt fixtures and versioning rules |
-| `hub-registry` | Cross-repo prompt id and manifest validation pass | After private sibling-repo CI access is decided | Prompt id validation and safe manifest validation lane |
+| `hub-registry` | Cross-repo prompt id and manifest validation pass | Local-first validation now exists | Decide later whether CI should receive private sibling-repo access |
 | `fitness-app` / Omnexus | Verification cockpit review and launch-stability pass | After active PR/branch work is human-reviewed | Merge/readiness decision, reusable verification lessons, redacted proof candidates |
 | `demario-pickleball-1` | Launch/Command Room proof pass | After manual launch gates and permission are handled | Owner-safe proof packet, venue-routing maintenance, Node 24 CI maintenance |
 | `FamilyTrips` | Privacy-first maintenance pass | Before adding features or AI/public sharing | Data validation/build/test status, privacy/data ownership notes, lightweight CI decision |
@@ -482,7 +482,7 @@ Owns: prompt target routing.
 
 Next:
 
-- Add cross-repo validation that every referenced prompt id exists in `hub-prompts`.
+- Preserve local cross-repo validation that every referenced prompt id exists in `hub-prompts`.
 - Keep sensitivity inheritance explicit.
 - Avoid new scheduled automations until Hub runtime gates are trustworthy.
 
@@ -562,7 +562,7 @@ Priority:
 ## What Still Needs Attention
 
 - `tm-skills` global install is applied; Codex discovery smoke passed, while Claude Code and GitHub Copilot reload/smoke tests are still pending manual verification.
-- Prompt id cross-validation between `hub-prompts` and `hub-registry` is a small but valuable gap.
+- `hub-registry` prompt id cross-validation now exists as a local workspace gate; repo-scoped CI still runs only safe registry validation until private sibling-repo access is explicitly approved.
 - `hub-registry` portfolio manifest validation still depends on sibling repo manifests that are available locally but not safely available to repo-scoped CI without explicit private-repo access.
 - The Client Command Room templates now exist and the private Mom nonprofit kit includes a draft fit assessment; the assessment still needs real owner workflow facts before any portal decision.
 - Hosted DTP Phase 0 now has an accepted schema/app boundary; hosted implementation should still wait for a separate implementation request and real pilot records.
@@ -934,7 +934,7 @@ Preflight: use the Practice System Documentation Pack as the current/future/audi
 
 1. Collect Mom nonprofit owner-confirmed facts, permission, screenshot approval, proof reviewer, and meeting/form/payment source-of-truth decisions.
 2. Decide the Mom site execution path: Wix cleanup, rebuild, or migration.
-3. Add prompt id cross-validation between `hub-prompts` and `hub-registry`.
+3. Keep Hub prompt/registry cross-validation local-first; decide private sibling-repo CI access only if it becomes worth the operational cost.
 4. Keep repo manifests current as touched lanes change; DTP, consulting, Hub, and `tm-skills` now have core manifests/evidence indexes.
 5. Run the first adjacent-project touch pass: pick the repo whose trigger is ready first (`fitness-app`, `demario-pickleball-1`, `FamilyTrips`, or `dse-content`) and execute only its matching lane.
 6. Use DeMario command room and Omnexus verification toolkit as proof/reference material only after permission/redaction review.

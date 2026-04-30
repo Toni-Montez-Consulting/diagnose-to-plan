@@ -50,5 +50,5 @@ review_status: draft
 
 - Lane: Hub prompt/registry cross-validation
 - Trigger: after Mom/proof smoke path or when Hub prompt/registry work resumes
-- Blocker: sibling repo access in CI is not yet safely configured for full portfolio manifest validation
-- Next action: add prompt id cross-validation between `hub-prompts` and `hub-registry` without turning Hub into DTP
+- Blocker: sibling repo access in CI is not yet safely configured for full portfolio manifest or prompt-id validation
+- Next action: keep `hub-registry` local `npm test` as the cross-validation gate; decide CI sibling access only if local-only validation becomes a bottleneck

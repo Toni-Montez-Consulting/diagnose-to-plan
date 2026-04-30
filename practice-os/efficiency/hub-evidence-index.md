@@ -18,7 +18,7 @@ review_status: draft
 
 | Lane | Date | Result | Commit | Artifact |
 |---|---|---|---|---|
-| local | 2026-04-30 | not_rerun | `1215995` | manifest pass observed scripts only: `pnpm verify`, `pnpm hub doctor`, `pnpm security:secrets` |
+| local | 2026-04-30 | pass | cross-repo prompt lane | `hub-prompts npm test`; `hub-registry npm run validate`, `npm run validate:manifests`, `npm run validate:prompt-ids`, `npm test`; negative missing-id check failed as expected |
 | CI | 2026-04-29 | pass | `1215995` | `ci` run `25125856104`; `security` run `25125856081` |
 | release | 2026-04-30 | manual_pending | `1215995` | Vercel/Supabase live runtime checks not run in this batch |
 | support | 2026-04-30 | manual_pending | `1215995` | `/health`, `/api/intake`, `/console`, and webhook smoke need live environment |
@@ -29,12 +29,12 @@ review_status: draft
 | Claim | Evidence | Permission | Redaction | Reviewer |
 |---|---|---|---|---|
 | Hub owns runtime support for consulting intake and console records without becoming DTP | `docs/CONSULTING_CONSOLE_FULL_STACK.md`, CI evidence | internal_only | public-safe summary only | pending |
-| Hub prompt/registry dispatch needs cross-validation | roadmap/backlog references | internal_only | not a public proof item | pending |
+| Hub prompt/registry dispatch has local prompt-id cross-validation | `hub-registry/scripts/validate-prompt-ids.mjs`, local validation output | internal_only | not a public proof item | reviewed for operating use |
 
 ## Open Gaps
 
-- Prompt id cross-validation between `hub-prompts` and `hub-registry` is still the next small technical gap.
-- Full portfolio manifest validation is local-only until CI has explicit safe access to private sibling repos.
+- Prompt id cross-validation is implemented as a local workspace gate in `hub-registry`; repo-scoped CI remains intentionally thin.
+- Full portfolio manifest and prompt-id validation are local-only until CI has explicit safe access to private sibling repos.
 - Live runtime checks need a controlled environment, credentials, test row cleanup, and no secret/log leakage.
 
 ## Notes

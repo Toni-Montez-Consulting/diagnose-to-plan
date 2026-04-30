@@ -21,7 +21,7 @@ DTP owns the contract. Each repo owns its local implementation. Evidence should 
 | `hub` | Runtime intake, private console, Supabase/Vercel support | `pnpm verify`, `pnpm test`, `hub doctor` | health route, protected console, intake CORS, Supabase migration/status, Vercel deployment checks | `artifacts/verification/hub/` |
 | `tm-skills` | Cross-repo SDLC behavior and global skill activation | `doctor.ps1`, `freshness-check.ps1`, `install.ps1 -WhatIf` | install approval, tool reloads, Codex/Claude/Copilot discovery smoke tests | `artifacts/verification/tm-skills/` or GitHub Actions logs |
 | `hub-prompts` | Prompt catalogue consumed by Hub | `npm test` | prompt eval/golden checks when added | `artifacts/verification/hub-prompts/` or GitHub Actions logs |
-| `hub-registry` | Hub automation target routing | `npm run validate` in CI; `npm test` locally when sibling repo manifests are present | cross-repo prompt id validation and private sibling-repo access for CI manifest checks when implemented | `artifacts/verification/hub-registry/` or GitHub Actions logs |
+| `hub-registry` | Hub automation target routing | `npm run validate` in CI; local `npm test` validates registry shape, sibling manifests, and prompt ids against `hub-prompts` | private sibling-repo access for CI manifest/prompt checks only if explicitly approved later | `artifacts/verification/hub-registry/` or GitHub Actions logs |
 
 ## Reference Implementation
 
