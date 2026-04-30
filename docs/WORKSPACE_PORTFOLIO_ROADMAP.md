@@ -47,7 +47,7 @@ The recommended order from the previous discussion is still valid and now more s
 4. Hosted private DTP Phase 0
 5. Public proof upgrades
 
-The first four items are now implemented to the intended boundary: `tm-skills` is activated through remote/push/dry-run checks, the Client Command Room templates exist in Practice OS, the core-plus-map CI pass is in place, and hosted private DTP Phase 0 has an accepted schema/app-boundary design. The Mom nonprofit private kit now exists locally as the first pilot; the next active work is filling it with real facts, completing the Command Room fit assessment, and capturing reviewed proof/redaction evidence.
+The first four items are now implemented to the intended boundary: `tm-skills` is activated through remote/push/dry-run checks, the Client Command Room templates exist in Practice OS, the core-plus-map CI pass is in place, and hosted private DTP Phase 0 has an accepted schema/app-boundary design. The Mom nonprofit private kit now exists locally as the first pilot; its public-source refresh, handoff-first Command Room decision, and internal proof/redaction candidate are captured. The next active work is owner-confirmed facts, permission, after-state evidence, and proof review.
 
 Roadmap invariant: every repo in the workspace stays on this roadmap. Some repos are core infrastructure and get touched immediately; other repos are project/product tracks and get touched when the relevant verification, proof, launch, privacy, or COI lane is ready. Nothing falls off the map just because it is not part of the current sprint.
 
@@ -932,8 +932,8 @@ Standing preflight/postflight: run the Activation Routing Map plus the Roadmap S
 
 Preflight: use the Practice System Documentation Pack as the current/future/audit/optimization reference before adding major new platform, proof, agent, or cross-repo behavior.
 
-1. Fill the Mom nonprofit private Client Operating Kit with real context, consent, diagnose, plan, and metrics.
-2. Complete the Command Room fit assessment and proof/redaction packet before any portal or consulting proof decision.
+1. Collect Mom nonprofit owner-confirmed facts, permission, screenshot approval, proof reviewer, and meeting/form/payment source-of-truth decisions.
+2. Decide the Mom site execution path: Wix cleanup, rebuild, or migration.
 3. Expand repo manifests to consulting, Hub, and `tm-skills` as their lanes are touched.
 4. Add prompt id cross-validation between `hub-prompts` and `hub-registry`.
 5. Run the first adjacent-project touch pass: pick the repo whose trigger is ready first (`fitness-app`, `demario-pickleball-1`, `FamilyTrips`, or `dse-content`) and execute only its matching lane.

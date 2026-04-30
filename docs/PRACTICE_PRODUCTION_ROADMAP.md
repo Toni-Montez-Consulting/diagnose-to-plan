@@ -150,6 +150,7 @@ The Practice System Documentation Pack is the architecture and audit layer for t
 ### Client Operating Kits
 
 - The private Mom nonprofit kit exists locally under `engagements/mom-nonprofit/site-rebuild/`.
+- Public-source refresh, handoff-first Command Room fit decision, and first internal proof/redaction candidate are captured in the private kit.
 - Use Brother site, Omnexus, Cam, and Greg as structured proof tracks.
 - Capture one primary metric and one secondary metric for full kits.
 - Run redaction before any proof moves into consulting or reusable Practice OS assets.
@@ -206,16 +207,16 @@ Complete these before treating the practice as ready for soft launch.
 4. Start Mom nonprofit pilot.
    - Run COI and consent first.
    - `mom-nonprofit/site-rebuild` kit now exists locally in gitignored `engagements/`.
-   - Fill `client-context.md`, `data-inventory.md`, `consent.md`, `diagnose.md`, and `plan.md` with real private context.
-   - Define primary and secondary metrics before building.
-   - Complete `command-room/fit-assessment.md` before deciding whether Mom needs a lightweight handoff checklist or a real command room.
+   - Public-source kit refresh is complete; next collect owner-confirmed facts for site owner, backup owner, meeting source of truth, form/payment routing, update workflow, proof reviewer, and screenshot permissions.
+   - Primary and secondary operational metrics are drafted: visitor action clarity and content freshness/owner maintainability.
+   - `command-room/fit-assessment.md` is complete to the V0 boundary: handoff checklist first, no portal unless owner workflow proves recurring private-surface pain.
    - Define support/verification evidence before launch: build status, form/intake status, owner access, handoff checklist, and uptime/manual checks.
 
 5. Define the proof packet format.
    - Use a receipt-style case-study template, not a long enterprise essay.
    - Use `practice-os/templates/proof-packet.md`, `redaction-queue-item.md`, `permission-reviewer-checklist.md`, `evidence-source-checklist.md`, `public-claim-review.md`, and `asset-inventory.md`.
    - Use this format for Mom nonprofit first, then backfill Brother/Omnexus/Cam/Greg.
-   - The private Mom kit already includes proof/redaction starter docs; fill them only with reviewed evidence and keep them internal until approved.
+   - The private Mom kit now includes an internal proof candidate and redaction queue; keep them internal until permission, redaction, reviewer, after-state evidence, and caveat are complete.
    - Include verification artifacts as proof sources where useful, but publish only redacted summaries.
 
 6. Keep consulting aligned.

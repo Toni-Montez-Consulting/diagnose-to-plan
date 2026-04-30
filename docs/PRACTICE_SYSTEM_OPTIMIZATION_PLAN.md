@@ -66,9 +66,9 @@ Goal: use one real pilot to prove the Practice OS loop end to end.
 
 | Story | Repo | Status | Done Gate | Next Action |
 |---|---|---|---|---|
-| Fill Mom private kit | `diagnose-to-plan` ignored `engagements/` | Active next | real context, consent, data inventory, diagnose, plan, and metrics exist privately | use citizensandparents.org as source context, plus owner facts |
-| Complete command-room fit assessment | `diagnose-to-plan` ignored `engagements/` | Review | portal vs checklist vs no private surface decision is evidence-backed | finish before building any portal |
-| First proof candidate | `diagnose-to-plan` plus `consulting` later | Review | one claim has evidence, caveat, permission, redaction, and reviewer state | do not publish until approved |
+| Fill Mom private kit | `diagnose-to-plan` ignored `engagements/` | Review | real context, consent, data inventory, diagnose, plan, and metrics exist privately | public-source refresh done; collect owner facts next |
+| Complete command-room fit assessment | `diagnose-to-plan` ignored `engagements/` | Done | portal vs checklist vs no private surface decision is evidence-backed | handoff checklist first; no portal unless owner workflow proves need |
+| First proof candidate | `diagnose-to-plan` plus `consulting` later | Done | one claim has evidence, caveat, permission, redaction, and reviewer state | internal candidate exists; do not publish until approved |
 | Handoff/runbook | pilot repo | Ready | owner-safe launch/handoff checklist exists | after build scope is known |
 
 Gate: proof does not move to consulting until permission/redaction/reviewer gates pass.

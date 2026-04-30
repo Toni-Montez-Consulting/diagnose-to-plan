@@ -62,7 +62,7 @@ Goal: make owner/operator command-room decisions repeatable without building por
 | Story | Repo | Status | Done gate | Next action |
 |---|---|---|---|---|
 | Capture Client Command Room pattern | `diagnose-to-plan` | Done | pattern doc plus fit/spec templates exist and practice doctor passes | use on first pilot |
-| First Command Room fit assessment | `diagnose-to-plan` | Review | Mom nonprofit or another pilot has a completed fit assessment | draft exists in private Mom kit; fill owner workflow facts before any portal UI |
+| First Command Room fit assessment | `diagnose-to-plan` | Done | Mom nonprofit private kit has a completed fit assessment | handoff checklist first; revisit portal only if owner workflow pain is proven |
 | Client Command Room implementation | candidate project repo | Later | fit assessment says build, owner workflow is real, support/evidence exists | keep optional |
 | Command-room proof packet | `consulting` plus source repo | Later | screenshots/walkthroughs redacted and permissioned | wait for real pilot |
 
@@ -100,7 +100,7 @@ Goal: make public proof evidence-backed, permissioned, caveated, and reviewable.
 | Story | Repo | Status | Done gate | Next action |
 |---|---|---|---|---|
 | Proof/redaction templates | `diagnose-to-plan` | Done | proof packet, redaction item, permission, evidence, public claim, and asset templates exist | use on first pilot |
-| First proof/redaction pilot | `diagnose-to-plan` plus pilot repo | Review | one real project uses proof packet and redaction queue before public proof | draft exists in private Mom kit; capture real claim/evidence before consulting proof |
+| First proof/redaction pilot | `diagnose-to-plan` plus pilot repo | Done | one real project uses proof packet and redaction queue before public proof | internal Mom candidate exists; public proof stays blocked until permission, redaction, reviewer, evidence, and caveat pass |
 | Consulting proof backlog | `consulting` | Ready | proof candidates mapped to real source material and redaction state | start after first pilot |
 | Omnexus proof candidates | `fitness-app` | Later | PR/work is human-reviewed and proof is permissioned/redacted | do not disturb active app work |
 | DeMario proof packet | `demario-pickleball-1` | Later | launch gates and permission are complete | keep owner-safe |
@@ -152,9 +152,9 @@ Goal: run one real engagement through the Practice OS before building more platf
 
 | Story | Repo | Status | Done gate | Next action |
 |---|---|---|---|---|
-| Mom nonprofit kit creation | `diagnose-to-plan` private `engagements/` | Done | kit created with COI, consent, diagnose, plan, and metrics placeholders | fill private context next |
-| Command Room fit assessment | `diagnose-to-plan` | Review | assessment decides portal vs checklist vs no private surface | complete private facts before UI |
-| Proof/redaction use | `diagnose-to-plan` | Review | proof packet and redaction queue item created for one claim candidate | keep internal until reviewed |
+| Mom nonprofit kit creation | `diagnose-to-plan` private `engagements/` | Done | kit created with COI, consent, diagnose, plan, and metrics placeholders | public-source refresh complete; collect owner facts next |
+| Command Room fit assessment | `diagnose-to-plan` | Done | assessment decides portal vs checklist vs no private surface | handoff checklist first; no UI unless owner workflow proves portal need |
+| Proof/redaction use | `diagnose-to-plan` | Done | proof packet and redaction queue item created for one claim candidate | keep internal until reviewed |
 | Handoff/runbook | `diagnose-to-plan` plus project repo | Ready | owner-safe handoff exists | after build scope is known |
 | Public proof promotion | `consulting` | Blocked | permission, redaction, reviewer, evidence, and caveat all approved | no auto-publish |
 
@@ -205,9 +205,9 @@ Goal: capture and eventually implement the Frontier Agentic Operating System ide
 
 Standing preflight/postflight: use `practice-os/templates/activation-routing-map.md`, `practice-os/templates/agentic-performance-gap-review.md`, and `practice-os/templates/roadmap-steward-review.md` for major roadmap sessions so the right skill/template/process is selected, agentic performance gaps are caught, and new ideas, blockers, repo lanes, gates, and no-touch boundaries are captured before memory drift.
 
-1. Fill the Mom nonprofit private kit with owner-confirmed context, data inventory, consent, diagnose, plan, and metrics.
-2. Complete the Command Room fit assessment before deciding on any portal.
-3. Capture baseline/after-state evidence for the first proof candidate and run redaction/permission review.
+1. Collect Mom nonprofit owner-confirmed facts: site owner, backup owner, meeting source of truth, form/payment routing, update workflow, proof reviewer, and screenshot permissions.
+2. Decide the Mom site execution path after owner facts: Wix cleanup, rebuild, or migration.
+3. Capture owner-approved baseline/after-state evidence for the first proof candidate and run redaction/permission review.
 4. Smoke-test `tm-skills` discovery after external tool reloads.
 5. Expand repo manifests to consulting, Hub, and `tm-skills` as those lanes are touched.
 6. Add Hub prompt/registry cross-validation after the pilot or when Hub resumes.
