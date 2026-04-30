@@ -80,7 +80,7 @@ The V0 report produces:
 
 ## Suggested Gates
 
-Gate suggestions must come from manifests first, then repo-local docs. If no manifest exists, the report should say `manifest_missing` rather than guessing.
+Gate suggestions must come from manifests first, then repo-local docs. If no manifest exists, the report should say `manifest_missing` rather than guessing. If the Active Next Queue explicitly names a blocker for a missing repo, the report may carry that blocker forward so missing coverage does not appear unblocked.
 
 Gate classes:
 

@@ -20,6 +20,10 @@ CANONICAL_REPOS = (
     "tm-skills",
 )
 
+REPO_BLOCKER_ALIASES = {
+    "dse-content": ("DSE", "dse-content"),
+}
+
 
 @dataclass(frozen=True)
 class VerificationRow:
@@ -100,6 +104,7 @@ def run_workspace_report(config: DtpConfig) -> WorkspaceReport:
     command_center_spec = _read_optional(docs_dir / "WORKSPACE_COMMAND_CENTER_V0.md")
     manifests = _read_artifacts(efficiency_dir, "-repo-manifest.md")
     evidence_indexes = _read_artifacts(efficiency_dir, "-evidence-index.md")
+    blockers = _extract_active_queue_blockers(docs_dir / "ROADMAP_EXECUTION_BACKLOG.md")
     canonical_by_slug = {_slug(repo): repo for repo in CANONICAL_REPOS}
     repo_slugs = [*_slugged(CANONICAL_REPOS)]
     extra_slugs = sorted((set(manifests) | set(evidence_indexes)) - set(repo_slugs))
@@ -108,6 +113,7 @@ def run_workspace_report(config: DtpConfig) -> WorkspaceReport:
             repo=canonical_by_slug.get(slug, slug),
             manifest=manifests.get(slug),
             evidence=evidence_indexes.get(slug),
+            active_blockers=blockers,
         )
         for slug in [*repo_slugs, *extra_slugs]
     ]
@@ -116,7 +122,7 @@ def run_workspace_report(config: DtpConfig) -> WorkspaceReport:
         live_status="not_checked_v0_no_repo_commands_or_github_calls",
         command_center_spec_present=bool(command_center_spec.strip()),
         repos=tuple(repos),
-        blockers=_extract_active_queue_blockers(docs_dir / "ROADMAP_EXECUTION_BACKLOG.md"),
+        blockers=blockers,
     )
 
 
@@ -170,7 +176,14 @@ def _build_repo_report(
     repo: str,
     manifest: str | None,
     evidence: str | None,
+    active_blockers: tuple[str, ...],
 ) -> RepoReport:
+    blocker = _bullet_value(manifest, "Blocker") or _fallback_missing_blocker(
+        repo,
+        manifest=manifest,
+        evidence=evidence,
+        active_blockers=active_blockers,
+    )
     return RepoReport(
         repo=_repo_label(repo, manifest),
         manifest_status="ok" if manifest is not None else "manifest_missing",
@@ -179,8 +192,9 @@ def _build_repo_report(
         local_gate=_bullet_value(manifest, "Local gate"),
         ci_gate=_bullet_value(manifest, "CI gate"),
         manual_gate=_bullet_value(manifest, "Manual gate"),
-        next_action=_bullet_value(manifest, "Next action"),
-        blocker=_bullet_value(manifest, "Blocker"),
+        next_action=_bullet_value(manifest, "Next action")
+        or _fallback_missing_next_action(manifest, evidence, blocker),
+        blocker=blocker,
         latest_verification=_latest_verification(evidence),
     )
 
@@ -263,6 +277,34 @@ def _extract_active_queue_blockers(path: Path) -> tuple[str, ...]:
             lines.append(re.sub(r"^\d+\.\s*", "", stripped))
     keywords = ("Mom", "DSE", "tm-skills", "proof", "FAOS", "Hub", "smoke")
     return tuple(line for line in lines if any(keyword in line for keyword in keywords))
+
+
+def _fallback_missing_blocker(
+    repo: str,
+    *,
+    manifest: str | None,
+    evidence: str | None,
+    active_blockers: tuple[str, ...],
+) -> str:
+    if manifest is not None and evidence is not None:
+        return ""
+    repo_slug = _slug(repo)
+    aliases = REPO_BLOCKER_ALIASES.get(repo_slug, (repo,))
+    for blocker in active_blockers:
+        blocker_lower = blocker.lower()
+        if any(alias.lower() in blocker_lower for alias in aliases):
+            return blocker
+    return ""
+
+
+def _fallback_missing_next_action(
+    manifest: str | None,
+    evidence: str | None,
+    blocker: str,
+) -> str:
+    if blocker and (manifest is None or evidence is None):
+        return "resolve active blocker before adding DTP-owned manifest/evidence coverage"
+    return ""
 
 
 def _summarize_verification(rows: tuple[VerificationRow, ...]) -> str:

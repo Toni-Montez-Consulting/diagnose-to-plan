@@ -38,6 +38,14 @@ def test_workspace_report_discovers_artifacts_and_missing_coverage(tmp_path: Pat
     hub_prompts = _repo(report, "hub-prompts")
     assert hub_prompts.manifest_status == "manifest_missing"
     assert hub_prompts.evidence_status == "evidence_missing"
+    dse = _repo(report, "dse-content")
+    assert dse.manifest_status == "manifest_missing"
+    assert dse.evidence_status == "evidence_missing"
+    assert dse.blocker == "Keep DSE blocked until the active branch is clean."
+    assert (
+        dse.next_action
+        == "resolve active blocker before adding DTP-owned manifest/evidence coverage"
+    )
     assert any("Mom nonprofit" in blocker for blocker in report.blockers)
     assert any("DSE" in blocker for blocker in report.blockers)
 
