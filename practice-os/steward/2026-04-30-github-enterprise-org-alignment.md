@@ -61,4 +61,16 @@ Update current operational references so future agents, registry checks, and rep
 
 ## Next Action
 
-Finish validation, commit/push each touched non-DSE repo, and update the DTP evidence index result from `pending` to `pass` or `blocked` based on the actual gates.
+## Postflight Results
+
+- Non-DSE local `origin` remotes now point at `Toni-Montez-Consulting`; `dse-content` remains on the personal/Microsoft-linked remote.
+- DTP, consulting, Hub prompts, Hub registry, FamilyTrips, DeMario, engineering-playbook, and tm-skills org-alignment changes were pushed.
+- Hub protected-branch work landed through PR #60 after replacing the org-blocked Gitleaks Action with a pinned Gitleaks CLI scan.
+- Omnexus protected-branch work is ready in PR #559 with green checks, but merge is blocked by the required-review policy.
+- The old Omnexus PR #558 was closed because its `chore/*` branch name intentionally failed the main-branch gate.
+- GitHub org ownership changes made hosted action licensing a real infrastructure concern: repo secret scans should prefer pinned local CLI/script gates unless a paid action license is intentionally configured.
+- Hub current-tree secret scanning passes. Full-history scanning surfaced an old redacted historical finding, so any future "scan all history" policy should be handled as a separate baseline/rotation/history-cleanup story rather than mixed into org URL hygiene.
+
+## Next Action
+
+Merge Omnexus PR #559 after human review, then prune or resync local protected-repo PR branches. Keep `dse-content` excluded until its active work is clean or explicitly selected.
