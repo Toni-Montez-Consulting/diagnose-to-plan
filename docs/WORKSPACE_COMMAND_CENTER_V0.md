@@ -9,7 +9,7 @@ review_status: draft
 
 Status: spec-only, read-only, not implemented.
 
-Purpose: define the first useful shape for a workspace command center after repo manifests and evidence indexes proved useful across DTP, consulting, Hub, `tm-skills`, DeMario, and FamilyTrips.
+Purpose: define the first useful shape for a workspace command center after repo manifests and evidence indexes proved useful across DTP, consulting, Hub, `tm-skills`, DeMario, FamilyTrips, and engineering-playbook.
 
 ## Boundary
 
@@ -68,6 +68,7 @@ The V0 report should produce:
 | `consulting` | public proof/storefront | clean/dirty | build/secret scan/proof packet | build/secrets/route smoke | proof gates | public-safe updates only |
 | `hub` | runtime/intake | clean/dirty | CI/security/local verify | pnpm verify or targeted gates | production secrets | runtime/support work |
 | `tm-skills` | global SDLC skills | clean/dirty | doctor/freshness/install preview | doctor/freshness/WhatIf | external smoke | skill canary/misfires |
+| `engineering-playbook` | doctrine/reference | clean/dirty | local ops status | script parse/status-only/diff hygiene | roadmap ownership drift | doctrine/policy maintenance |
 | project repos | app-specific lane | clean/dirty | repo-local index | manifest gate | privacy/proof/launch | one scoped touch pass |
 
 ## Suggested Gates

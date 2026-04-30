@@ -342,7 +342,7 @@ Build these after the near-term documentation and pilot path are stable.
    - Introduce feature flags, kill switches, and supply-chain evidence first in higher-risk repos: Omnexus, Hub, hosted DTP, consulting intake/proof, and client launch surfaces.
 
 10. Workspace Efficiency pilot.
-   - Add repo manifests for DTP, consulting, Hub, and `tm-skills` first; DeMario and FamilyTrips are now adjacent-project touch passes.
+   - Add repo manifests for DTP, consulting, Hub, and `tm-skills` first; DeMario, FamilyTrips, and engineering-playbook are now adjacent-project touch passes.
    - Add evidence indexes only where verification receipts already exist.
    - Use `docs/WORKSPACE_COMMAND_CENTER_V0.md` as the read-only command-center spec; do not implement a runner yet.
    - Add a decision record for the first real cross-repo automation boundary.
@@ -457,7 +457,7 @@ Run the repo's own doctor and smoke tests. The implementation roadmap defines th
 .\scripts\install.ps1 -WhatIf
 ```
 
-Then ask Codex, Claude Code, and GitHub Copilot what skills they can see and run the trigger prompts in `skills/*/evals/trigger.json`.
+Codex discovery is verified. Claude Code and GitHub Copilot reload/smoke prompts remain manual and are parked until those tools can be observed directly; do not mark them passed from DTP alone.
 
 ### Consulting
 
