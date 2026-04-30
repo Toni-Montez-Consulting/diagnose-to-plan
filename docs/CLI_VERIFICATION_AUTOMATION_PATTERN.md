@@ -10,7 +10,7 @@ The current reference implementation is `fitness-app` / Omnexus.
 
 As of 2026-04-30, the concrete reference is merged and available as practice evidence:
 
-- PR: `https://github.com/toniomon96/Omnexus/pull/553`
+- PR: `https://github.com/Toni-Montez-Consulting/Omnexus/pull/553`
 - Branch: `feat/verification-toolkit-supabase-cockpit`
 - Status verified from GitHub CLI: merged on 2026-04-29 with green checks
 - Merge commit: `1347368a01480110e3816e2f4b067102891bde23`

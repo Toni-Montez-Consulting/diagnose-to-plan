@@ -10,6 +10,7 @@ review_status: draft
 ## Identity
 
 - Repo: `engineering-playbook`
+- GitHub repo: `Toni-Montez-Consulting/engineering-playbook`
 - Local path: `engineering-playbook`
 - Primary role: cross-project engineering doctrine, repo schemas, templates, historical decisions, secret-management references, and operating playbook material
 - Owner lane: adjacent reference/doctrine maintenance

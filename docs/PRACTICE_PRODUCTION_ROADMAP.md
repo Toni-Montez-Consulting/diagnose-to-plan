@@ -75,7 +75,7 @@ The Practice System Documentation Pack is the architecture and audit layer for t
 
 ### tm-skills
 
-- Separate version-controlled skills repo exists at `C:\Users\tonimontez\tm-skills` with private GitHub remote `toniomon96/tm-skills`.
+- Separate version-controlled skills repo exists at `C:\Users\tonimontez\tm-skills` with private GitHub remote `Toni-Montez-Consulting/tm-skills`.
 - Phase 1 scope is five SDLC skills: `review-checklist`, `frontend-craft`, `backend-design`, `testing-ladder`, and `delivery-baseline`.
 - Safe activation checks pass: doctor, freshness, install dry-run, and post-install doctor.
 - Global install was explicitly approved and applied on 2026-04-30 without `-Force`. Windows skill paths use directory junctions because symbolic links required elevation in this environment.
@@ -101,7 +101,7 @@ The Practice System Documentation Pack is the architecture and audit layer for t
 
 ### CLI Verification And Automation Pattern
 
-- Build concept reviewed from Omnexus / `fitness-app`, now backed by merged PR `https://github.com/toniomon96/Omnexus/pull/553` on branch `feat/verification-toolkit-supabase-cockpit`.
+- Build concept reviewed from Omnexus / `fitness-app`, now backed by merged PR `https://github.com/Toni-Montez-Consulting/Omnexus/pull/553` on branch `feat/verification-toolkit-supabase-cockpit`.
 - Reference shape: CLI doctor, tool matrix, local verification, release verification, support/runtime checks, and evidence artifacts.
 - Concrete shape: shared tool registry, lock file, Docker-backed specialty tools, ignored `artifacts/verification/`, CI evidence upload, and Supabase migration drift/fresh-replay repair guard.
 - Intended use: make infrastructure observable and repeatable before building more UI.
@@ -198,7 +198,7 @@ Complete these before treating the practice as ready for soft launch.
    - DTP: `pytest`, `ruff check .`, `dtp skills --validate`, `dtp practice doctor`, `dtp index --all`, `dtp synthesize --no-confirm`.
    - Consulting: `npm run build`, visual QA, `/admin` noindex check, sitemap exclusion check.
    - Hub: health check, protected console check, and one real consulting intake submission when practical.
-   - Omnexus reference: study PR `https://github.com/toniomon96/Omnexus/pull/553`, `tools:doctor`, `tools:matrix`, `tools:verify:local`, `tools:verify:release`, `ops:release:evidence`, `scripts/ops/toolkit-registry.js`, `scripts/ops/toolkit-lock.json`, and `scripts/ci/check-migration-drift.js` for reusable shape, not direct copying.
+   - Omnexus reference: study PR `https://github.com/Toni-Montez-Consulting/Omnexus/pull/553`, `tools:doctor`, `tools:matrix`, `tools:verify:local`, `tools:verify:release`, `ops:release:evidence`, `scripts/ops/toolkit-registry.js`, `scripts/ops/toolkit-lock.json`, and `scripts/ci/check-migration-drift.js` for reusable shape, not direct copying.
 
 3. Clean up private durability.
    - Decide whether to keep or remove any local fake engagement kits.
@@ -410,6 +410,8 @@ Do not build these into the near-term practice.
 - Public claims that depend on private client material without written permission.
 
 ## Repo Ownership Map
+
+DTP treats `Toni-Montez-Consulting` as the canonical GitHub organization for consulting/practice portfolio repos as of 2026-04-30. `dse-content` is intentionally excluded because it remains in Toni's personal/Microsoft-linked namespace and must stay COI-gated before any reuse or public/professional proof.
 
 | Repo | Owns | Does Not Own |
 |---|---|---|

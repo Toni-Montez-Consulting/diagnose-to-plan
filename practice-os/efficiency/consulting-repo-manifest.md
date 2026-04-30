@@ -10,6 +10,7 @@ review_status: draft
 ## Identity
 
 - Repo: `consulting`
+- GitHub repo: `Toni-Montez-Consulting/consulting`
 - Local path: `consulting`
 - Primary role: public consulting storefront, public-safe proof surface, Hub-first intake path, and noindex admin command room
 - Owner lane: public proof and storefront

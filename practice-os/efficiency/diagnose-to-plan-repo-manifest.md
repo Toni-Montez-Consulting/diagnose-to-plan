@@ -10,6 +10,7 @@ review_status: draft
 ## Identity
 
 - Repo: `diagnose-to-plan`
+- GitHub repo: `Toni-Montez-Consulting/diagnose-to-plan`
 - Local path: `Projects/diagnose-to-plan`
 - Primary role: private Practice OS, Client Operating Kits, redaction, COI, proof governance, and hosted-DTP roadmap
 - Owner lane: core infrastructure

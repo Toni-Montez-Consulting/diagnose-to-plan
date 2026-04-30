@@ -25,6 +25,8 @@ The current system is designed to reduce reliance on memory:
 
 ## Current Repo Ownership Map
 
+GitHub ownership boundary: as of 2026-04-30, the consulting/practice portfolio repos use the `Toni-Montez-Consulting` organization namespace. `dse-content` stays outside that organization in Toni's personal/Microsoft-linked namespace and remains COI-gated until explicitly selected with a clean, scoped pass.
+
 | Repo | Current Role | Primary Gates | Boundary |
 |---|---|---|---|
 | `diagnose-to-plan` | Practice OS, roadmap, engagement kits, redaction, COI, templates, hosted DTP design, steward loop | `pytest`, `ruff`, `dtp skills --validate`, `dtp practice doctor`, redaction checks | Does not own public storefront or Hub runtime records |

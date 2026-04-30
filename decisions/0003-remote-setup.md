@@ -9,7 +9,7 @@ status: accepted
 
 ## Decision
 
-Configure `diagnose-to-plan` with a private GitHub remote at `toniomon96/diagnose-to-plan` and push the Phase 1 branch history before opening Phase 2.
+Configure `diagnose-to-plan` with a private GitHub remote at `Toni-Montez-Consulting/diagnose-to-plan` and push the Phase 1 branch history before opening Phase 2.
 
 ## Rationale
 

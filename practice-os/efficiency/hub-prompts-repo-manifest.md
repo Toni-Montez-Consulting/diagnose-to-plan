@@ -10,6 +10,7 @@ review_status: draft
 ## Identity
 
 - Repo: `hub-prompts`
+- GitHub repo: `Toni-Montez-Consulting/hub-prompts`
 - Local path: `hub-prompts`
 - Primary role: Hub prompt catalog with versioned Markdown prompt definitions, prompt schemas, validation scripts, and future eval/golden-test fixtures
 - Owner lane: prompt catalog and prompt-quality infrastructure

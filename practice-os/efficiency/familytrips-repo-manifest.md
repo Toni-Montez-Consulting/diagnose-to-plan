@@ -10,6 +10,7 @@ review_status: draft
 ## Identity
 
 - Repo: `FamilyTrips`
+- GitHub repo: `Toni-Montez-Consulting/FamilyTrips`
 - Local path: `FamilyTrips`
 - Primary role: private family trip and event planning hub with static trip data, copyable group-chat helpers, and optional Supabase-backed checklist sync
 - Owner lane: adjacent project privacy-first maintenance

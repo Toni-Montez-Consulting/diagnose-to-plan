@@ -10,6 +10,7 @@ review_status: draft
 ## Identity
 
 - Repo: `hub-registry`
+- GitHub repo: `Toni-Montez-Consulting/hub-registry`
 - Local path: `hub-registry`
 - Primary role: Hub automation target registry that maps repos, prompt ids, triggers, sensitivity, and dispatch settings
 - Owner lane: prompt routing and automation-target governance

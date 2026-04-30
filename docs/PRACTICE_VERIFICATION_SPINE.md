@@ -29,7 +29,7 @@ Omnexus / `fitness-app` now has the strongest concrete version of the verificati
 
 Verified on 2026-04-29:
 
-- PR: `https://github.com/toniomon96/Omnexus/pull/553`
+- PR: `https://github.com/Toni-Montez-Consulting/Omnexus/pull/553`
 - Branch: `feat/verification-toolkit-supabase-cockpit`
 - State: merged on 2026-04-29, GitHub checks green
 - Merge commit: `1347368a01480110e3816e2f4b067102891bde23`

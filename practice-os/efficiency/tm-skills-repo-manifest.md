@@ -10,6 +10,7 @@ review_status: draft
 ## Identity
 
 - Repo: `tm-skills`
+- GitHub repo: `Toni-Montez-Consulting/tm-skills`
 - Local path: `tm-skills`
 - Primary role: reusable SDLC skill library for coding agents across repos
 - Owner lane: global agent skill behavior

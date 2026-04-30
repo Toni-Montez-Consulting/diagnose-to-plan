@@ -37,6 +37,8 @@ Workspace folders currently listed in `C:\Users\tonimontez\toni-consulting-ops.c
 - `dse-content`
 - `tm-skills`
 
+GitHub ownership boundary: consulting/practice repos now live under `Toni-Montez-Consulting` where available. `dse-content` remains outside that organization in the personal/Microsoft-linked namespace, stays on the COI-aware lane, and should not be updated or moved unless explicitly selected.
+
 ## Priority Decision
 
 The recommended order from the previous discussion is still valid and now more strongly supported:
@@ -216,7 +218,7 @@ Implementation ladder:
 
 ### Story 1: Finish `tm-skills` Activation
 
-Status: installed to the approved V0 boundary. The repo is in the VS Code workspace, private GitHub remote `toniomon96/tm-skills` exists, `main` is pushed and tracking `origin/main`, the safe checks pass, and `install.ps1 -Apply` has been run without `-Force`. External tool reload and smoke prompts remain manual follow-up gates.
+Status: installed to the approved V0 boundary. The repo is in the VS Code workspace, private GitHub remote `Toni-Montez-Consulting/tm-skills` exists, `main` is pushed and tracking `origin/main`, the safe checks pass, and `install.ps1 -Apply` has been run without `-Force`. External tool reload and smoke prompts remain manual follow-up gates.
 
 Value: immediately improves every future repo session by making review, frontend craft, backend boundaries, testing judgment, and delivery hygiene reusable across tools.
 
@@ -267,7 +269,7 @@ Status: implemented for the core-plus-map scope. DTP, consulting, and `tm-skills
 
 Value: makes the existing local gates repeatable before hosted dashboards or support automation display them.
 
-Updated input from Omnexus: PR `https://github.com/toniomon96/Omnexus/pull/553` is merged and proves the fuller version of this pattern with a shared toolkit registry, lock file, Docker-backed specialty tools, ignored `artifacts/verification/`, GitHub evidence upload, and Supabase migration drift/fresh-replay repair guard. DTP now has a `fitness-app` / Omnexus manifest, evidence index, and steward receipt for this reference. Use it as a pattern, but keep DTP/consulting/Hub CI thin until their local gates are stable.
+Updated input from Omnexus: PR `https://github.com/Toni-Montez-Consulting/Omnexus/pull/553` is merged and proves the fuller version of this pattern with a shared toolkit registry, lock file, Docker-backed specialty tools, ignored `artifacts/verification/`, GitHub evidence upload, and Supabase migration drift/fresh-replay repair guard. DTP now has a `fitness-app` / Omnexus manifest, evidence index, and steward receipt for this reference. Use it as a pattern, but keep DTP/consulting/Hub CI thin until their local gates are stable.
 
 First CI targets:
 

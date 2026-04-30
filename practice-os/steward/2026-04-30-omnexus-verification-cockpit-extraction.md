@@ -77,7 +77,7 @@ review_status: draft
 ## Evidence Observed
 
 - `fitness-app` local branch: `main`, clean.
-- PR #553: `https://github.com/toniomon96/Omnexus/pull/553`, merged 2026-04-29, merge commit `1347368a01480110e3816e2f4b067102891bde23`.
+- PR #553: `https://github.com/Toni-Montez-Consulting/Omnexus/pull/553`, merged 2026-04-29, merge commit `1347368a01480110e3816e2f4b067102891bde23`.
 - PR #553 title: `chore: add verification toolkit cockpit`.
 - Post-merge current local commit: `ea6c1dca Merge pull request #557 from toniomon96/fix/zap-dast-docker-user`.
 - Post-merge Verification Toolkit run: GitHub Actions run `25137681778`, success on `main`.

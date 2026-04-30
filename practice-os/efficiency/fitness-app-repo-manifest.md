@@ -10,6 +10,7 @@ review_status: draft
 ## Identity
 
 - Repo: `fitness-app` / Omnexus
+- GitHub repo: `Toni-Montez-Consulting/Omnexus`
 - Local path: `fitness-app`
 - Primary role: founder/product/operator app with mobile release, billing, entitlements, Supabase contracts, verification cockpit, and public-proof potential
 - Owner lane: adjacent project verification cockpit reference and app-release evidence

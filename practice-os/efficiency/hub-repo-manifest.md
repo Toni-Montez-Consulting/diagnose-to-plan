@@ -10,6 +10,7 @@ review_status: draft
 ## Identity
 
 - Repo: `hub`
+- GitHub repo: `Toni-Montez-Consulting/hub`
 - Local path: `hub`
 - Primary role: private runtime support for intake, console records, Supabase-backed operations, webhooks, captures, runs, prompts, and registry dispatch
 - Owner lane: runtime/intake infrastructure

@@ -10,6 +10,7 @@ review_status: draft
 ## Identity
 
 - Repo: `demario-pickleball-1`
+- GitHub repo: `Toni-Montez-Consulting/demario-pickleball`
 - Local path: `demario-pickleball-1`
 - Primary role: DeMario Pickleball public site, booking flow, admin command room, owner tasks, owner roadmap, and local-business launch track
 - Owner lane: adjacent project launch, proof, and Client Command Room reference
