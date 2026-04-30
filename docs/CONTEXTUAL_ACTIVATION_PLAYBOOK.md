@@ -62,6 +62,7 @@ public proof, client work, agent behavior, or automation.
 - Steward review: `practice-os/templates/roadmap-steward-review.md`
 - One-off story activation: `practice-os/templates/story-activation-contract.md`
 - Idea intake template: `practice-os/templates/contextual-idea-intake.md`
+- Owner call extraction: `practice-os/templates/owner-call-to-action-extraction.md`
 - Kanban backlog: `docs/ROADMAP_EXECUTION_BACKLOG.md`
 
 ## No-Touch Defaults

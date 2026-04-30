@@ -51,6 +51,7 @@ human gates.
 | Active story | Trigger examples | Activation | Agent role | Done gate |
 |---|---|---|---|---|
 | Fill Mom nonprofit private kit | "use my mom's website", "scope nonprofit rebuild", "fill the Mom kit" | Client Operating Kit, public-source inventory, consent, diagnose, plan, metrics | `local-codex` | private kit updated, redaction check passes, no private data committed |
+| Extract owner call actions | "give my mom action items", "turn the call into next steps", "extract the process from the notes" | Owner call-to-action extraction template, owner action packet, facts intake, handoff checklist | `local-codex` | action packet and extraction ledger updated; implementation waits on owner-approved values |
 | Complete Command Room fit assessment | "does Mom need a portal", "owner dashboard", "command room" | Command Room fit assessment, no-portal/checklist decision path | `local-codex` | real owner workflow facts decide portal vs checklist vs defer |
 | First proof/redaction packet | "can this become proof", "case study", "baseline screenshots" | proof packet, asset inventory, evidence checklist, redaction queue, permission checklist | `local-codex`; `reviewer` only if asked | evidence, caveat, permission, redaction, reviewer before public proof |
 | Expand repo manifests | "make every repo covered", "what does this repo own", "which gates run" | repo manifest, evidence index, portfolio scorecard | `local-codex`; `explorer` only if asked | manifest names purpose, gates, proof/privacy lane, deploy/data boundaries |

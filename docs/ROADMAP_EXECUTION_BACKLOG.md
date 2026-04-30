@@ -64,6 +64,7 @@ Goal: make owner/operator command-room decisions repeatable without building por
 |---|---|---|---|---|
 | Capture Client Command Room pattern | `diagnose-to-plan` | Done | pattern doc plus fit/spec templates exist and practice doctor passes | use on first pilot |
 | First Command Room fit assessment | `diagnose-to-plan` | Done | Mom nonprofit private kit has a completed fit assessment | handoff checklist first; revisit portal only if owner workflow pain is proven |
+| Owner call-to-action extraction | `diagnose-to-plan` | Done | reusable template plus Mom action packet and extraction ledger exist | use after owner calls before mutating project repos |
 | Client Command Room implementation | candidate project repo | Later | fit assessment says build, owner workflow is real, support/evidence exists | keep optional |
 | Command-room proof packet | `consulting` plus source repo | Later | screenshots/walkthroughs redacted and permissioned | wait for real pilot |
 

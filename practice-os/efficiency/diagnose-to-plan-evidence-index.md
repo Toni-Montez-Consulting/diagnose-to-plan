@@ -18,6 +18,7 @@ review_status: draft
 
 | Lane | Date | Result | Commit | Artifact |
 |---|---|---|---|---|
+| private kit | 2026-04-30 | pass_with_manual_gates | current branch | CCAAP owner action packet, call-to-action extraction ledger, reusable owner-call extraction template, and raw pattern candidate added; PayPal/contact/meeting/assets/DNS/proof remain owner-input gates |
 | local | 2026-04-30 | pass | current branch | Notion/CCAAP memory-capture pass: targeted redaction checks, `pytest`, `ruff check .`, `dtp skills --validate`, `dtp practice doctor`, `dtp workspace report`, and `dtp workspace report --json`; `ccaap-site` now appears as manifest=ok/evidence=ok |
 | setup | 2026-04-30 | pass | local Codex user config plus Notion workspace | Notion MCP endpoint is configured; OAuth completed; refreshed Codex session exposed Notion tools; smoke page, V0 databases, safe seed rows, and phone-friendly views were created; DTP remains source of truth |
 | planning | 2026-04-30 | pass | current branch | Notion Mirror V0 docs/templates/steward receipt added; Notion remains a mirror/inbox and DTP remains source of truth; manual Notion setup was completed later after OAuth/tool reload |
