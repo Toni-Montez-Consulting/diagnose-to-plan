@@ -33,8 +33,9 @@ Toni wants the current consulting operating system, roadmap, CCAAP launch work, 
 | Codex Notion MCP endpoint | done_local_config | `C:\Users\tonimontez\.codex\config.toml` includes `[mcp_servers.notion]` with `https://mcp.notion.com/mcp` |
 | MCP discovery | pass | `codex mcp list` shows `notion` enabled |
 | OAuth login | pass | `codex mcp login notion` completed successfully and `codex mcp list` now shows `notion` as `OAuth` |
-| Current-session Notion tools | blocked | Tool discovery in this already-running session still returns no Notion tools, so page/database writes cannot be performed yet |
-| Notion databases | blocked | Cannot safely create or seed databases until a restarted/new Codex session exposes the authenticated Notion tools and the intended workspace is confirmed |
+| Current-session Notion tools | pass | A refreshed Codex session exposes authenticated Notion tools and can create/fetch pages |
+| Smoke page | pass | `DTP Notion MCP Smoke Test` was created and fetched successfully |
+| Notion databases | pass | V0 databases, safe seed records, and phone-friendly views were created under the smoke page |
 | Notion as source of truth | rejected | DTP remains authoritative; Notion can capture ideas and mirror status only |
 
 ## CCAAP Setup Status
@@ -52,28 +53,30 @@ Toni wants the current consulting operating system, roadmap, CCAAP launch work, 
 | Owner review | blocked | Leah plus Dad approval required before production launch |
 | Public proof | blocked | Permission, redaction, reviewer, evidence, and caveat gates are not complete |
 
-## Notion Seed Plan After OAuth
+## Notion V0 Created After OAuth
 
-Create or confirm these areas:
+Created areas:
 
-- `Practice Home`
-- `Ideas`
-- `Roadmap Stories`
-- `Repo Health`
-- `Proof Queue`
-- `Research Radar`
-- `Decisions`
-- `Meeting Notes`
+- `DTP Notion MCP Smoke Test`
+- `DTP Mirror - Ideas`
+- `DTP Mirror - Roadmap Stories`
+- `DTP Mirror - Repo Health`
+- `DTP Mirror - Proof Queue`
+- `DTP Mirror - Research Radar`
+- `DTP Mirror - Client Pilot Snapshots`
+- `DTP Mirror - Decision Log`
+- `DTP Mirror - Meeting Notes`
 
-Initial seed records should include:
+Initial safe seed records include:
 
-- Active next queue from `docs/ROADMAP_EXECUTION_BACKLOG.md`
-- Repo health summary from `dtp workspace report`
-- CCAAP launch blockers
-- Hub parked PRs
-- DSE no-touch status
-- FAOS parked status
-- Manual `tm-skills` smoke-test backlog
+- Notion mirror setup status from `docs/NOTION_MIRROR_V0.md`
+- Roadmap story status for Notion MCP/manual mirror setup
+- DTP repo-health mirror record
+- Internal proof record for the Notion setup smoke
+- Research watch item for future Notion MCP/API sync
+- Client/pilot placeholder that blocks raw private material
+- Decision record that DTP remains source of truth
+- Setup note for the Notion Mirror V0 pass
 
 ## Safety Notes
 
@@ -81,8 +84,7 @@ Do not mirror raw transcripts, private emails, form submissions, payment records
 
 ## Follow-Ups
 
-1. Restart or open a fresh Codex session so the authenticated Notion MCP tools are loaded.
-2. Create a small Notion smoke-test page and confirm the session can read/write the intended workspace.
-3. Create the V0 Notion databases and views from `docs/NOTION_MIRROR_V0.md`.
-4. Seed public-safe/internal-safe summaries only.
-5. Run Roadmap Steward triage before promoting any Notion idea into DTP roadmap/backlog artifacts.
+1. Use Notion from the phone for lightweight capture and daily review.
+2. Seed additional public-safe/internal-safe summaries only after DTP review.
+3. Run Roadmap Steward triage before promoting any Notion idea into DTP roadmap/backlog artifacts.
+4. Keep future MCP/API sync behind a DTP dry-run export, redaction review, and steward approval.

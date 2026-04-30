@@ -52,4 +52,4 @@ review_status: draft
 - Lane: hosted DTP Phase 0 and proof/redaction governance
 - Trigger: current Sprint 2 sequence and Notion mirror setup
 - Blocker: hosted implementation still needs a separate implementation request; public proof still needs permission/redaction/reviewer approval
-- Next action: complete remaining CCAAP gates: PayPal links, contact routing, domain/DNS, authentic photos/resources, owner review, and proof permissions; optionally set up Notion Mirror V0 for phone-first tracking
+- Next action: complete remaining CCAAP gates: PayPal links, contact routing, domain/DNS, authentic photos/resources, owner review, and proof permissions; use Notion Mirror V0 for phone-first capture/review with steward triage before DTP changes

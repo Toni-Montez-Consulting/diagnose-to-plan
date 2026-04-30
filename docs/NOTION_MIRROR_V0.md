@@ -263,18 +263,21 @@ As of 2026-04-30:
 - Codex user config includes the Notion MCP endpoint.
 - `codex mcp login notion` completed successfully after Toni finished the OAuth browser flow.
 - `codex mcp list` shows `notion` enabled with `OAuth`.
-- The current already-running Codex session still does not expose Notion tools through tool discovery.
-- Notion database creation and seeding remain blocked until a restarted/new Codex session exposes the authenticated Notion tools and confirms read/write access.
+- A refreshed Codex session exposes authenticated Notion tools.
+- The smoke page `DTP Notion MCP Smoke Test` was created and fetched successfully.
+- V0 child databases were created under the smoke page: Ideas, Roadmap Stories, Repo Health, Proof Queue, Research Radar, Client Pilot Snapshots, Decision Log, and Meeting Notes.
+- One safe seed row was added to each database to prove write access without mirroring raw private material.
+- Phone-friendly views were added for inbox/triage, roadmap, repo health, proof, research, pilots, decisions, and notes.
 
-First authenticated smoke test:
+Completed authenticated smoke test:
 
 1. Confirm `codex mcp list` shows `notion` as `OAuth`.
 2. Restart the Codex session if the Notion tools are not visible immediately.
-3. Ask Codex to create a small test page named `DTP Notion MCP Smoke Test`.
-4. Delete or archive the smoke-test page after read/write access is confirmed.
-5. Create the V0 mirror databases only after the smoke test proves the authenticated workspace is the intended one.
+3. Create a small test page named `DTP Notion MCP Smoke Test`.
+4. Fetch the smoke page and confirm the intended workspace accepts reads/writes.
+5. Create the V0 mirror databases, safe seed rows, and phone-friendly views.
 
-Do not create production mirror databases until the smoke test proves the authenticated workspace is the intended one.
+Future automation should still start from a DTP-owned dry run and redaction review before any write-enabled Notion sync.
 
 ## Good Extra Ideas
 
