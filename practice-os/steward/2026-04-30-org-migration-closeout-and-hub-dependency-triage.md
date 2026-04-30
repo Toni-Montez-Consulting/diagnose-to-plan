@@ -23,7 +23,7 @@ Toni asked to finish the GitHub Enterprise organization migration closeout befor
 | Prompt intent | Activated asset | Result |
 |---|---|---|
 | "Close org migration" | Roadmap Steward plus Workspace Efficiency lane | Rechecked Omnexus #559 and Hub local branch state |
-| "Triage Hub dependency PRs" | Hub repo manifest/evidence index, testing ladder, delivery baseline | Started with Hub PR #59 and did not merge because the strict local audit gate is not clean |
+| "Triage Hub dependency PRs" | Hub repo manifest/evidence index, testing ladder, delivery baseline | Started with Hub PR #59, fixed strict-audit blockers, merged after local and remote gates passed |
 | "Do not miss anything" | Agentic performance gap review posture | Captured blocked review, stale branch cleanup, audit nuance, and deferred unsafe PRs |
 
 ## Repos
@@ -31,7 +31,7 @@ Toni asked to finish the GitHub Enterprise organization migration closeout befor
 | Repo | Action | Status |
 |---|---|---|
 | `fitness-app` / Omnexus | Rechecked PR #559 | Checks are green, but required review still blocks merge |
-| `hub` | Cleaned stale local org-migration branch; triaged PR #59; updated PR #59 from `main` | Local `main` aligned to `origin/main`; PR #59 not merged |
+| `hub` | Cleaned stale local org-migration branch; triaged/fixed/merged PR #59 | Local `main` aligned to `origin/main`; PR #59 merged and local PR branch removed after tree-equivalence check |
 | `diagnose-to-plan` | Updated source-of-truth evidence and backlog surfaces | This receipt plus Hub evidence/backlog updates |
 | `dse-content` | Read-only status check only | Untouched and still excluded |
 
@@ -62,13 +62,16 @@ Result: Hub local checkout is no longer stranded on a deleted org-migration bran
 - Branch: `dependabot/npm_and_yarn/prod-minor-patch-7dd19ef87c`
 - Dependency group: Supabase, Hono, PostCSS, TypeScript ESLint, Anthropic SDK packages.
 - Branch update: `gh pr update-branch 59` succeeded so the PR now includes the org-safe Hub security workflow from `main`.
-- Remote status after branch update: all GitHub checks passed and merge state is clean.
+- Dependency-security fix commit: `088899f`
+- Merge commit: `8717e8e`
+- Merged: 2026-04-30
+- Remote status after fix: all GitHub checks passed and merge state was clean before squash merge.
 
 Local evidence:
 
 | Gate | Result | Notes |
 |---|---|---|
-| `pnpm install --frozen-lockfile` | pass | lockfile was current |
+| `pnpm install --frozen-lockfile` | pass | lockfile was current after the scoped dependency-security fix |
 | `pnpm verify` | blocked by local noise | stopped on ignored `supabase/.temp/linked-project.json` Prettier finding, not on dependency code |
 | `pnpm lint` | pass | direct local gate passed |
 | `pnpm build` | pass | workspace build passed |
@@ -76,16 +79,16 @@ Local evidence:
 | `pnpm test` | pass | workspace tests passed |
 | `pnpm security:secrets` | pass | Gitleaks CLI scan found no leaks |
 | `pnpm audit --prod --audit-level=high` | pass | matches CI security threshold |
-| `pnpm audit --prod` | fail | two moderate findings remain |
+| `pnpm audit --prod` | pass | strict production audit now reports no known vulnerabilities |
 
-Strict audit findings:
+Strict audit disposition:
 
-| Package path | Advisory | Current read |
+| Package path | Advisory | Resolution |
 |---|---|---|
-| `apps/server > node-cron > uuid` | `uuid` buffer bounds advisory | requires a `node-cron` major-version review or other package resolution strategy |
-| `packages/agent-runtime > @anthropic-ai/claude-agent-sdk > @anthropic-ai/sdk` | insecure default file permission advisory | direct SDK is patched, but the Claude Agent SDK still resolves a vulnerable transitive SDK version under PNPM |
+| `apps/server > node-cron > uuid` and `packages/prompts > node-cron > uuid` | `uuid` buffer bounds advisory | upgraded `node-cron` to `4.2.1` and removed now-unneeded `@types/node-cron`; typecheck/build/test passed |
+| `packages/agent-runtime > @anthropic-ai/claude-agent-sdk > @anthropic-ai/sdk` | insecure default file permission advisory | added a scoped PNPM override for `@anthropic-ai/claude-agent-sdk>@anthropic-ai/sdk` to resolve `0.91.1`; strict audit passed |
 
-Decision: do not merge PR #59 under the stricter local gate from this plan. The remote PR is green and merge-clean, but it still needs either an accepted audit threshold decision or a scoped Hub dependency-security fix.
+Decision: keep the stricter local gate for this pass. PR #59 was merged only after the scoped dependency-security fix made `pnpm audit --prod` pass locally and all remote CI/security checks passed.
 
 ## Other Hub Dependency PRs
 
@@ -99,7 +102,6 @@ Decision: do not merge PR #59 under the stricter local gate from this plan. The 
 ## Blockers
 
 - Omnexus #559 cannot close until required review is complete.
-- Hub PR #59 cannot merge under strict `pnpm audit --prod` until moderate findings are resolved or policy explicitly accepts CI's high-severity threshold.
 - DSE remains excluded.
 - Mom nonprofit facts remain pending owner confirmation.
 - FAOS remains parked.
@@ -107,7 +109,6 @@ Decision: do not merge PR #59 under the stricter local gate from this plan. The 
 ## Follow-Ups
 
 1. Human-review and merge Omnexus #559, then prune local Omnexus org-migration branches.
-2. Decide Hub audit policy: strict zero-vulnerability `pnpm audit --prod` versus CI's `--audit-level=high`.
-3. If strict audit stays required, create a Hub dependency-security story for `node-cron` v4 compatibility and PNPM override/upstream handling for `@anthropic-ai/claude-agent-sdk`.
-4. Merge PR #59 only after the accepted local audit policy is clear; remote checks are already green after the branch update.
-5. Leave #52/#54/#55/#56 parked until explicitly selected.
+2. Leave Hub PRs #52/#54/#55/#56 parked until explicitly selected; do not merge major or failing dependency work blindly.
+3. Keep Hub dependency policy strict for production audit findings unless a future decision record explicitly accepts a different severity threshold.
+4. Continue Mom nonprofit only after owner facts and permission decisions are captured.

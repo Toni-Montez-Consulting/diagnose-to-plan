@@ -74,7 +74,7 @@ Update current operational references so future agents, registry checks, and rep
 - Omnexus PR #559 was rechecked and remains blocked by required review; this gate was not bypassed.
 - Hub local `main` is aligned to `origin/main`; stale local branch `chore/org-repo-references` was deleted after content-equivalence review against the squash-merged PR #60.
 - Hub PR #59 was updated from `main` so the org-safe secret scan workflow can rerun on the dependency branch.
-- Hub dependency triage is now tracked in `practice-os/steward/2026-04-30-org-migration-closeout-and-hub-dependency-triage.md`.
+- Hub PR #59 later passed the strict local production audit after a scoped dependency-security fix, passed remote CI/security/CodeQL, and merged via squash commit `8717e8e`; details are tracked in `practice-os/steward/2026-04-30-org-migration-closeout-and-hub-dependency-triage.md`.
 
 ## Next Action
 
