@@ -342,8 +342,9 @@ Build these after the near-term documentation and pilot path are stable.
    - Introduce feature flags, kill switches, and supply-chain evidence first in higher-risk repos: Omnexus, Hub, hosted DTP, consulting intake/proof, and client launch surfaces.
 
 10. Workspace Efficiency pilot.
-   - Add repo manifests for DTP, consulting, Hub, and `tm-skills` first; DeMario is now the first adjacent-project touch pass.
+   - Add repo manifests for DTP, consulting, Hub, and `tm-skills` first; DeMario and FamilyTrips are now adjacent-project touch passes.
    - Add evidence indexes only where verification receipts already exist.
+   - Use `docs/WORKSPACE_COMMAND_CENTER_V0.md` as the read-only command-center spec; do not implement a runner yet.
    - Add a decision record for the first real cross-repo automation boundary.
    - Evaluate Renovate or Dependabot grouping before enabling dependency PRs broadly.
    - Tune CI caching only where workflow time or repeated installs are becoming real friction.
@@ -368,7 +369,7 @@ Build these only after repeated usage proves the need.
 - OpenAI Agents SDK, Google ADK, Temporal, LangGraph, or similar frameworks only after simple workflows/state machines become the bottleneck.
 - SLSA/OpenSSF Scorecard, CycloneDX SBOMs, signed attestations, and broader supply-chain evidence where repo risk and release cadence justify the ceremony.
 - OpenFeature-style feature flag standardization after flags become a recurring cross-repo pattern.
-- Workspace Command Center implementation after repo manifests and evidence indexes prove useful.
+- Workspace Command Center implementation after the V0 read-only spec proves useful across another touch pass.
 - `dtp steward review` after the markdown Roadmap Steward template has been used enough to prove the checks and outputs.
 - Hosted steward queue or agent-assisted roadmap manager after hosted DTP, evals, guardrails, and human approval gates exist.
 - Affected-only verification after hard gates are reliably encoded per repo.

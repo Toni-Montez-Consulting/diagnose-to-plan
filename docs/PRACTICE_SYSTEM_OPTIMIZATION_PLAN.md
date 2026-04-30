@@ -97,6 +97,8 @@ Goal: make future agents stop rediscovering repo purpose, gates, proof lanes, an
 | Hub manifest | `hub` | Done | runtime gates, Supabase/Vercel boundaries, prompts/runs ownership named | keep current during prompt/registry work |
 | `tm-skills` manifest | `tm-skills` | Done | install gates, global skill boundaries, smoke tests named | keep current during skill smoke/canary work |
 | DeMario manifest/evidence index | `demario-pickleball-1` | Done | launch gates, command-room role, proof blockers, and local/CI evidence named | use for future command-room proof pass |
+| FamilyTrips manifest/evidence index | `FamilyTrips` | Done | privacy model, local gates, deploy smoke, and no-auth/no-AI boundary named | use before future FamilyTrips feature or sharing work |
+| Workspace Command Center V0 spec | `diagnose-to-plan` | Done | read-only inputs, outputs, safety boundaries, and pilot acceptance named | no runner yet |
 | Remaining adjacent repo manifests | project repos | Later | each repo gets manifest when touched | use touch-pass trigger |
 
 Gate: manifests are advisory until proven useful in at least two repos.
@@ -151,7 +153,7 @@ Goal: every workspace repo benefits eventually without unnecessary churn.
 |---|---|---|
 | `fitness-app` | active branch reviewed or proof request opens | extract verification lessons, do not disturb live app work |
 | `demario-pickleball-1` | launch/proof permission is ready | manifest/evidence index exists; next pass is command-room proof and launch gate pass |
-| `FamilyTrips` | new feature, AI, public sharing, or maintenance request | privacy-first validation/build/test pass |
+| `FamilyTrips` | new feature, AI, public sharing, or maintenance request | manifest/evidence index exists; next pass should update privacy review and gates |
 | `dse-content` | proof or Microsoft-adjacent reuse request | COI-aware proof review |
 | `engineering-playbook` | doctrine or template change | pointer audit to DTP source of truth |
 | `hub-prompts` | prompt/schema/eval change | validation and prompt id alignment |
