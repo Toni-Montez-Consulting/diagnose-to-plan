@@ -30,6 +30,7 @@ Story rules:
 - Story activation is the standing story-to-skill/template/agent-role map; `docs/ROADMAP_STORY_ACTIVATION_INDEX.md` ties each epic/story family to the right assets and gates.
 - Agentic performance gap review is the standing audit for whether prompts routed correctly, context was sufficient, skills triggered correctly, verification/research/safety gates happened, and misses became durable learning.
 - The Practice System Documentation Pack is the standing architecture/audit/optimization layer. Use it to understand the current system, target state, highest-risk gaps, and next optimization stories before creating more platform surface.
+- Notion Mirror is a mobile capture and daily-cockpit layer. Use `docs/NOTION_MIRROR_V0.md` before connecting Notion MCP, creating Notion databases, or mirroring roadmap/proof/repo-health records. Notion may capture ideas, but DTP remains the source of truth after steward triage.
 - FAOS orchestration is a gated future substrate lane. Use `docs/FAOS_ORCHESTRATION_ROADMAP.md` and `practice-os/templates/faos-phase-readiness-review.md` before any `faos` repo, `op` wrapper, tracing/memory substrate, Spec-Kit rollout, MCP server, subagent roster, hook, durable workflow, or business-agent automation is implemented.
 
 ## Story Activation Contract
@@ -127,6 +128,8 @@ Goal: reduce rediscovery, setup drift, CI waste, and handoff friction.
 | GitHub Enterprise org alignment | non-DSE portfolio repos | Done | local remotes, repo manifests, current docs, and `hub-registry` targets use `Toni-Montez-Consulting`; `dse-content` remains personal/Microsoft-linked and COI-gated | keep future repo references on the org namespace; do not move DSE without explicit COI-aware scope |
 | GitHub Enterprise org migration closeout | Omnexus, Hub, DTP | Done | Omnexus PR #559 is merged after required review, local protected-repo PR branches are pruned safely, and DTP closeout receipt reflects final state | Closed on 2026-04-30; keep future repo references on the org namespace |
 | Hub Dependabot triage V0 | `hub` | Done | selected dependency PRs pass accepted local and remote gates before merge | PR #59 merged after strict audit fix; PR #55 merged after React 19 peer alignment; #54/#56/#61 remain parked for separate review |
+| Notion Mirror V0 spec | `diagnose-to-plan` | Done | Notion mirror contract, mirror item template, steward receipt, and roadmap pointers exist without moving source-of-truth ownership | connect Notion MCP and create databases only after Toni completes OAuth/setup |
+| Notion MCP/manual mirror setup | `diagnose-to-plan`, Notion | Ready | Notion workspace has Practice Home, Ideas, Roadmap, Repo Health, Proof Queue, Research Radar, Decisions, and Meeting Notes surfaces; no private data is mirrored without gates | Toni runs Notion OAuth; future agent can create/update pages only when authenticated |
 | Workspace Command Center live status/runner | `diagnose-to-plan` | Later | separate boundary decision accepts live git/CI reads or command execution without weakening repo-local gates | do not implement from the V0 report |
 | Affected-only verification | DTP/Hub first | Later | hard gates are reliably encoded per repo | keep advisory until proven |
 | Dependency maintenance policy | each repo | Later | grouping/schedule/approval rules accepted | do not enable bots broadly yet |
@@ -163,7 +166,7 @@ Goal: run one real engagement through the Practice OS before building more platf
 
 | Story | Repo | Status | Done gate | Next action |
 |---|---|---|---|---|
-| Mom nonprofit kit creation | `diagnose-to-plan` private `engagements/` | Done | kit created with COI, consent, diagnose, plan, and metrics placeholders | public-source refresh complete; collect owner facts next |
+| Mom nonprofit kit creation | `diagnose-to-plan` private `engagements/` | Done | kit created with COI, consent, diagnose, plan, and metrics placeholders | owner direction and off-Wix preference captured; finish PayPal/contact/domain/photos/review gates |
 | Command Room fit assessment | `diagnose-to-plan` | Done | assessment decides portal vs checklist vs no private surface | handoff checklist first; no UI unless owner workflow proves portal need |
 | Proof/redaction use | `diagnose-to-plan` | Done | proof packet and redaction queue item created for one claim candidate | keep internal until reviewed |
 | Handoff/runbook | `diagnose-to-plan` plus project repo | Ready | owner-safe handoff exists | after build scope is known |
@@ -216,16 +219,17 @@ Goal: capture and eventually implement the Frontier Agentic Operating System ide
 
 Standing preflight/postflight: use `practice-os/templates/activation-routing-map.md`, `practice-os/templates/agentic-performance-gap-review.md`, and `practice-os/templates/roadmap-steward-review.md` for major roadmap sessions so the right skill/template/process is selected, agentic performance gaps are caught, and new ideas, blockers, repo lanes, gates, and no-touch boundaries are captured before memory drift.
 
-1. Keep Hub dependency PRs #54/#56/#61 parked until one is explicitly selected with a migration/security plan; PRs #59 and #55 are merged and no longer block the queue. Older PR #52 is no longer in the active visible queue.
-2. Collect Mom nonprofit owner-confirmed facts: site owner, backup owner, meeting source of truth, form/payment routing, update workflow, proof reviewer, and screenshot permissions; private intake fields are prepared, but answers are still pending owner confirmation.
-3. Decide the Mom site execution path after owner facts: Wix cleanup, rebuild, or migration.
-4. Capture owner-approved baseline/after-state evidence for the first proof candidate and run redaction/permission review.
-5. Keep Claude Code and GitHub Copilot `tm-skills` discovery smoke testing on the manual back burner; runbook exists, links are healthy, and Codex discovery is verified, but external reload checks remain manual and non-blocking.
-6. Keep Hub prompt/registry cross-validation local-first; decide private sibling-repo CI access only if it becomes worth the operational cost.
-7. Use `dtp workspace report` as a read-only steward preflight when checking repo coverage, recorded evidence, suggested gates, blockers, and missing manifest/evidence coverage; missing repo rows may carry explicit Active Next Queue blockers without guessing gates.
-8. Keep repo manifests current as lanes are touched; DTP, consulting, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus now have DTP-owned manifests/evidence indexes.
-9. Keep DSE blocked until its active branch is clean or explicitly selected with COI-aware scope.
-10. Run FAOS Phase 0 readiness review only after the current pilot/proof/smoke/Hub-validation path; do not build FAOS from the raw Phase 0 prompt yet.
+1. If Toni wants phone-first tracking now, connect Notion MCP through OAuth and create the Notion Mirror V0 databases from `docs/NOTION_MIRROR_V0.md`; keep Notion as mirror/inbox, not source of truth.
+2. Keep Hub dependency PRs #54/#56/#61 parked until one is explicitly selected with a migration/security plan; PRs #59 and #55 are merged and no longer block the queue. Older PR #52 is no longer in the active visible queue.
+3. Complete remaining CCAAP inputs: exact PayPal donate/membership links, contact routing, domain/DNS access, authentic photos/resources, owner review, and proof permissions.
+4. Continue the CCAAP off-Wix custom rebuild path; keep exact launch scope gated by owner review, PayPal links, contact routing, domain/DNS, and authentic assets.
+5. Capture owner-approved baseline/after-state evidence for the first proof candidate and run redaction/permission review.
+6. Keep Claude Code and GitHub Copilot `tm-skills` discovery smoke testing on the manual back burner; runbook exists, links are healthy, and Codex discovery is verified, but external reload checks remain manual and non-blocking.
+7. Keep Hub prompt/registry cross-validation local-first; decide private sibling-repo CI access only if it becomes worth the operational cost.
+8. Use `dtp workspace report` as a read-only steward preflight when checking repo coverage, recorded evidence, suggested gates, blockers, and missing manifest/evidence coverage; missing repo rows may carry explicit Active Next Queue blockers without guessing gates.
+9. Keep repo manifests current as lanes are touched; DTP, consulting, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus now have DTP-owned manifests/evidence indexes.
+10. Keep DSE blocked until its active branch is clean or explicitly selected with COI-aware scope.
+11. Run FAOS Phase 0 readiness review only after the current pilot/proof/smoke/Hub-validation path; do not build FAOS from the raw Phase 0 prompt yet.
 
 Closed on 2026-04-30: GitHub Enterprise org-migration closeout for Omnexus PR #559. The PR merged, local `fitness-app/main` was aligned to `origin/main`, and represented local org-migration branches were deleted.
 

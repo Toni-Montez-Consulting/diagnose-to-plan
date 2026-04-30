@@ -20,6 +20,7 @@ The practical thesis is:
 12. Keep current architecture, future state, audits, and optimization plans documented in DTP so future agents can execute without rebuilding context from chat.
 13. Audit agentic performance itself so routing, context, skill triggers, verification, research, safety, and learning gaps are caught before Toni has to remember them.
 14. Treat FAOS as a future orchestration substrate candidate that must pass readiness review before it adds Langfuse, Mem0/Letta, Spec-Kit, MCP, subagents, hooks, durable workflows, or an `op` wrapper.
+15. Mirror the practice into Notion for phone-first capture and daily review without moving source-of-truth ownership out of DTP.
 
 ## Scope
 
@@ -49,7 +50,7 @@ The recommended order from the previous discussion is still valid and now more s
 4. Hosted private DTP Phase 0
 5. Public proof upgrades
 
-The first four items are now implemented to the intended boundary: `tm-skills` is activated through remote/push/dry-run checks, the Client Command Room templates exist in Practice OS, the core-plus-map CI pass is in place, and hosted private DTP Phase 0 has an accepted schema/app-boundary design. The Mom nonprofit private kit now exists locally as the first pilot; its public-source refresh, handoff-first Command Room decision, and internal proof/redaction candidate are captured. The next active work is owner-confirmed facts, permission, after-state evidence, and proof review.
+The first four items are now implemented to the intended boundary: `tm-skills` is activated through remote/push/dry-run checks, the Client Command Room templates exist in Practice OS, the core-plus-map CI pass is in place, and hosted private DTP Phase 0 has an accepted schema/app-boundary design. The Mom nonprofit private kit now exists locally as the first pilot; its public-source refresh, handoff-first Command Room decision, owner direction, off-Wix rebuild preference, internal proof/redaction candidate, and first custom prototype are captured. The next active work is PayPal/contact/domain/photo/resource completion, owner review, permission, after-state evidence, and proof review.
 
 Roadmap invariant: every repo in the workspace stays on this roadmap. Some repos are core infrastructure and get touched immediately; other repos are project/product tracks and get touched when the relevant verification, proof, launch, privacy, or COI lane is ready. Nothing falls off the map just because it is not part of the current sprint.
 
@@ -92,6 +93,7 @@ An item should be delayed or cut if it mostly creates:
 - New framework complexity before a workflow has proven pain.
 - Research novelty that does not improve delivery speed, proof quality, risk control, agent performance, or business leverage.
 - Efficiency tooling that hides repo boundaries or makes agents skip required local evidence.
+- Notion sync that duplicates source-of-truth state or stores private/sensitive material outside approved DTP/vault boundaries.
 
 ## Future Intelligence Layer
 
@@ -160,6 +162,7 @@ Operating rules:
 Components:
 
 - Workspace Command Center: `dtp workspace report` now answers recorded coverage, suggested gates, missing manifests/evidence, blockers, next actions, and latest recorded evidence from DTP-owned artifacts; live git/CI reads and command execution remain later.
+- Notion Mirror: `docs/NOTION_MIRROR_V0.md` defines the phone-friendly mirror and idea inbox for roadmap, repo health, proof queue, research radar, decisions, and meeting notes; DTP remains authoritative.
 - Repo Manifest Standard: a tiny `.repo.yml` or `repo.toml` per repo with purpose, owner lane, local gates, CI gates, evidence paths, deploy target, data sensitivity, and proof rules.
 - Affected-Only Verification: run fast checks only for changed repos/files during normal development, while preserving full gates before release.
 - Shared GitHub Actions, Later: extract repeated setup/cache/secret-scan/build patterns into reusable workflows only after thin CI stabilizes.
@@ -174,11 +177,12 @@ Suggested priority:
 
 1. Add repo manifest and evidence-index templates.
 2. Use the Workspace Command Center V0 spec and `dtp workspace report`; defer live git/CI reads or a command runner until the read-only report proves value.
-3. Add a decision-record template and use it on the next real architecture choice.
-4. Add dependency-maintenance policy to the roadmap for each repo before enabling bots everywhere.
-5. Pilot affected-only verification in DTP or Hub after the repo manifest shape is stable.
-6. Extract shared CI only after at least three repos repeat the same reliable workflow pattern.
-7. Add starter-factory templates after the Mom nonprofit or next client pilot clarifies the baseline.
+3. Add Notion Mirror V0 as a manual daily cockpit and mobile idea inbox; connect Notion MCP only after Toni completes OAuth.
+4. Add a decision-record template and use it on the next real architecture choice.
+5. Add dependency-maintenance policy to the roadmap for each repo before enabling bots everywhere.
+6. Pilot affected-only verification in DTP or Hub after the repo manifest shape is stable.
+7. Extract shared CI only after at least three repos repeat the same reliable workflow pattern.
+8. Add starter-factory templates after the Mom nonprofit or next client pilot clarifies the baseline.
 
 Initial sources:
 
@@ -924,6 +928,7 @@ Sources:
 - A2A/AG-UI/MCP protocol adoption before a real workflow needs it.
 - Supply-chain ceremony in low-risk repos before the value is clear.
 - Workspace command center that mutates repos before repo manifests and gates are trustworthy.
+- Notion as source-of-truth roadmap, proof vault, private engagement store, or repo-validation replacement.
 - FAOS Phase 0 implementation from the raw prompt before Phase 0A readiness review, technical corrections, trace redaction, and repo-boundary acceptance.
 - Shared CI abstractions before at least three repos repeat the same stable pattern.
 - Dependency bots without grouping, schedule, and human approval rules.
@@ -936,13 +941,14 @@ Standing preflight/postflight: run the Activation Routing Map plus the Roadmap S
 Preflight: use the Practice System Documentation Pack as the current/future/audit/optimization reference before adding major new platform, proof, agent, or cross-repo behavior.
 
 1. Keep Hub dependency PRs #54/#56/#61 parked until one is explicitly selected with a migration/security plan; PRs #59 and #55 no longer block the queue. Older PR #52 is no longer in the active visible queue.
-2. Collect Mom nonprofit owner-confirmed facts, permission, screenshot approval, proof reviewer, and meeting/form/payment source-of-truth decisions; private intake fields are prepared, but answers are still pending owner confirmation.
-3. Decide the Mom site execution path: Wix cleanup, rebuild, or migration.
-4. Keep Hub prompt/registry cross-validation local-first; decide private sibling-repo CI access only if it becomes worth the operational cost.
-5. Keep repo manifests current as touched lanes change; DTP, consulting, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus now have manifests/evidence indexes; FamilyTrips also has thin CI.
-6. Run the next adjacent-project touch pass only when its trigger is ready; `dse-content` remains excluded unless explicitly selected with COI-aware scope.
-7. Use DeMario command room and Omnexus verification toolkit as proof/reference material only after permission/redaction review.
-8. Start hosted DTP implementation only after the Mom pilot/proof workflow gives the app real records to persist.
+2. If phone-first tracking is the current pain, set up Notion Mirror V0 from `docs/NOTION_MIRROR_V0.md`; keep Notion as a mirror/inbox and run steward triage before DTP changes.
+3. Complete remaining CCAAP inputs: exact PayPal donate/membership links, contact routing, domain/DNS access, authentic photos/resources, owner review, and proof permissions.
+4. Continue the CCAAP off-Wix custom rebuild path, with launch scope gated by owner review, PayPal links, contact routing, domain/DNS, and authentic assets.
+5. Keep Hub prompt/registry cross-validation local-first; decide private sibling-repo CI access only if it becomes worth the operational cost.
+6. Keep repo manifests current as touched lanes change; DTP, consulting, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus now have manifests/evidence indexes; FamilyTrips also has thin CI.
+7. Run the next adjacent-project touch pass only when its trigger is ready; `dse-content` remains excluded unless explicitly selected with COI-aware scope.
+8. Use DeMario command room and Omnexus verification toolkit as proof/reference material only after permission/redaction review.
+9. Start hosted DTP implementation only after the Mom pilot/proof workflow gives the app real records to persist.
 
 Closed on 2026-04-30: GitHub Enterprise org-migration closeout for Omnexus PR #559. Hub's stale local org branch is cleaned, Hub PRs #59 and #55 are merged, Omnexus PR #559 is merged, and local Omnexus org-migration branches were pruned after merge confirmation.
 

@@ -19,12 +19,14 @@ Use this before or after a major roadmap, planning, or implementation session. T
 - Backlog files reviewed:
 - Story activation files reviewed:
 - Contextual intake files reviewed:
+- Notion mirror/inbox reviewed:
 
 ## Source Of Truth Check
 
 - DTP remains the practice roadmap source of truth:
 - `docs/ROADMAP_EXECUTION_BACKLOG.md` reflects current story status:
 - Repo manifests/evidence indexes were checked where available:
+- Notion is being treated as a mirror/capture surface, not the source of truth:
 - No sibling repo is being treated as the practice-wide roadmap owner:
 
 ## Workspace Coverage
@@ -64,6 +66,11 @@ Classify each new idea so it becomes an artifact instead of living in chat memor
 Use `practice-os/templates/contextual-idea-intake.md` for any idea that could
 affect multiple repos, business strategy, public proof, client work, agent behavior,
 automation, or future roadmap priority.
+
+If Notion is enabled, check the Notion Idea Inbox and classify any new mobile
+captures here before promoting them into DTP. Use
+`practice-os/templates/notion-mirror-item.md` when a Notion item needs an
+explicit mirror contract.
 
 | Idea | Classification | Owning repo | Activation | Action | Gate |
 |---|---|---|---|---|---|

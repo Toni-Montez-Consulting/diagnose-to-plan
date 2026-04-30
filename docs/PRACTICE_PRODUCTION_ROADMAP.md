@@ -14,6 +14,8 @@ The Future Intelligence Layer is captured in `docs/WORKSPACE_PORTFOLIO_ROADMAP.m
 
 The Workspace Efficiency Layer is also captured in `docs/WORKSPACE_PORTFOLIO_ROADMAP.md`. It adds the read-only `dtp workspace report`, workspace command-center planning, repo manifests, affected-only checks, shared CI later, dependency maintenance, toolchain pinning, evidence indexes, decision logs, starter-factory templates, and CI cache hygiene without forcing the repos into one platform or monorepo.
 
+The Notion Mirror is captured in `docs/NOTION_MIRROR_V0.md`. It gives Toni a phone-friendly daily cockpit and idea inbox while preserving DTP as the source of truth for roadmap execution, private kits, proof/redaction, repo gates, and steward receipts.
+
 The FAOS Orchestration Roadmap is captured in `docs/FAOS_ORCHESTRATION_ROADMAP.md`. It integrates the Frontier Agentic Operating System build spec as a gated future substrate for specs, skills, subagents, MCP, memory, tracing, evals, reflection, durable execution, sandboxes, and an `op` wrapper. It does not change the current build order or authorize creating a `faos` repo yet.
 
 The Kanban execution view is captured in `docs/ROADMAP_EXECUTION_BACKLOG.md`. The roadmap owns priority and strategy; the backlog owns epic/story status, Done gates, and next actions.
@@ -46,6 +48,7 @@ The Practice System Documentation Pack is the architecture and audit layer for t
 - Practice OS includes a Contextual Idea Intake template for progressively turning new ideas/designs/work prompts into the right story, repo lane, template, skill, gate, or parked item.
 - Practice OS includes a Story Activation Contract template, and DTP includes a Roadmap Story Activation Index so every active Kanban lane can point to the right skill/template/agent-role suggestion and gate.
 - Practice OS includes a Roadmap Steward review template for major roadmap sessions; it is enforced by `dtp practice doctor` because it protects roadmap continuity across repos.
+- Practice OS includes a Notion Mirror item template, and DTP includes `docs/NOTION_MIRROR_V0.md` so phone-captured ideas and Notion roadmap views can mirror DTP without taking over source-of-truth ownership.
 - Hosted DTP Phase 0 now has an accepted design-boundary doc at `docs/HOSTED_DTP_PHASE_0.md`; hosted implementation remains gated until a separate implementation request and real records exist.
 - Practice OS now includes proof/redaction templates for proof packets, redaction queue items, permission review, evidence-source review, public claim review, and asset inventory.
 - The first DTP repo manifest/evidence-index pilot lives in `practice-os/efficiency/`.
@@ -132,6 +135,7 @@ The Practice System Documentation Pack is the architecture and audit layer for t
 - Use `practice-os/templates/roadmap-steward-review.md` before or after major roadmap sessions so new ideas become stories, templates, evals, proof items, research radar items, decision records, repo touch passes, or parked items.
 - Keep the Practice System Documentation Pack current when architecture, repo ownership, activation, steward loops, proof governance, or optimization priorities change.
 - Use `docs/FAOS_ORCHESTRATION_ROADMAP.md` and `practice-os/templates/faos-phase-readiness-review.md` before accepting any FAOS, `op` wrapper, Langfuse, Mem0/Letta, Spec-Kit, MCP, subagent, hook, durable execution, or broader agent-orchestration implementation prompt.
+- Use `docs/NOTION_MIRROR_V0.md` before connecting Notion MCP, creating Notion databases, or syncing DTP roadmap/proof/repo-health records into Notion. Notion is a mirror and capture surface; DTP remains the source of truth.
 - Add or strengthen templates for proposal/SOW, case-study proof packet, Work Item Spec, and hosted-DTP import/export.
 - Use the Future Intelligence templates opportunistically after real delivery/research sessions; do not make them required gates until they have proven useful.
 - Use the Workspace Efficiency templates opportunistically when touching a repo; use `dtp workspace report` for read-only steward preflight, but do not make live git/CI reads or command-center runner behavior required until the V0 report proves value.
@@ -208,7 +212,7 @@ Complete these before treating the practice as ready for soft launch.
 4. Start Mom nonprofit pilot.
    - Run COI and consent first.
    - `mom-nonprofit/site-rebuild` kit now exists locally in gitignored `engagements/`.
-   - Public-source kit refresh is complete; next collect owner-confirmed facts for site owner, backup owner, meeting source of truth, form/payment routing, update workflow, proof reviewer, and screenshot permissions.
+   - Public-source kit refresh, owner direction, off-Wix rebuild preference, and first custom prototype are captured; next complete PayPal links, contact routing, domain/DNS, authentic photos/resources, owner review, and proof permissions.
    - Primary and secondary operational metrics are drafted: visitor action clarity and content freshness/owner maintainability.
    - `command-room/fit-assessment.md` is complete to the V0 boundary: handoff checklist first, no portal unless owner workflow proves recurring private-surface pain.
    - Define support/verification evidence before launch: build status, form/intake status, owner access, handoff checklist, and uptime/manual checks.
@@ -261,14 +265,21 @@ Complete these before treating the practice as ready for soft launch.
    - Treat the steward as a process role: it identifies the correct next story, owning repo, gates, blockers, uncaptured ideas, and no-touch boundaries.
    - Do not build `dtp steward review`, a hosted steward queue, or an agent-assisted roadmap manager until the markdown loop proves useful.
 
-12. Use the Agentic Performance Gap Review when the agent system itself needs scrutiny.
+12. Add Notion as the mobile mirror/inbox.
+   - Use `docs/NOTION_MIRROR_V0.md` to create the Practice Home, Ideas, Roadmap, Repo Health, Proof Queue, Research Radar, Decisions, and Meeting Notes surfaces.
+   - Connect Notion MCP only after Toni completes OAuth.
+   - Treat Notion phone ideas as inbox items until Roadmap Steward triage promotes them into DTP.
+   - Do not mirror secrets, raw transcripts, private engagement data, payment/form records, DSE/Microsoft confidential material, or unsupported public proof claims.
+   - Add automation only after the manual mirror proves useful.
+
+13. Use the Agentic Performance Gap Review when the agent system itself needs scrutiny.
    - Ask whether the activation map caught the true prompt intent.
    - Check whether the right repo docs, current state, and handoff notes were loaded.
    - Check whether the right `tm-skills` or DTP skill triggered.
    - Convert confirmed misses into activation-map changes, eval fixtures, `tm-skills` misfire notes, research radar items, decision records, or backlog stories.
    - Keep this supervised. The review proposes changes; it does not authorize autonomous repo edits, public proof, hosted implementation, or self-modifying skills.
 
-13. Keep the Practice System Documentation Pack authoritative.
+14. Keep the Practice System Documentation Pack authoritative.
    - Use `docs/PRACTICE_SYSTEM_ARCHITECTURE.md` for current-state architecture and repo boundaries.
    - Use `docs/PRACTICE_SYSTEM_FUTURE_STATE.md` before hosted DTP, steward automation, research automation, repo manifest expansion, or agent protocol work.
    - Use `docs/PRACTICE_SYSTEM_AUDIT_AND_GAP_REVIEW.md` to identify the highest-risk architecture and governance gaps before adding platform surface.
@@ -380,6 +391,7 @@ Build these only after repeated usage proves the need.
 - Optional plugin packaging only if the skills need to be distributed beyond Toni's local environment.
 - FAOS orchestration substrate after Phase 0A readiness review proves the technical shape, trace redaction, memory isolation, repo boundary, and value gate.
 - Heavier customer portals after the lightweight Client Command Room pattern proves value across multiple engagements.
+- Notion MCP/API sync after the manual Notion mirror proves useful and Toni completes OAuth; start with DTP-to-Notion dry-run export before write-enabled sync.
 - Secondary repo-local documentation after the DTP master system docs settle and the relevant repo lane is touched.
 
 ## Parked
@@ -401,6 +413,7 @@ Do not build these into the near-term practice.
 - Dependency-bot noise without grouping and review rules.
 - CRM replacement.
 - Billing or e-signature integration.
+- Notion as the source-of-truth roadmap, proof vault, private engagement vault, or repo validation replacement.
 - Auto-publishing case studies.
 - Auto-send client/customer communications.
 - Auto-remediation that changes production, databases, billing, or client data without explicit review.

@@ -16,6 +16,7 @@ The future system should feel like an operating cockpit for the practice:
 - `tm-skills` becomes the reusable cross-repo SDLC behavior layer.
 - Repo manifests and evidence indexes make every repo easier for future agents to understand.
 - The Roadmap Steward becomes progressively more automated only after the manual loop proves useful.
+- Notion becomes a mobile mirror and idea inbox for daily review, while DTP remains the operating source of truth.
 - Self-learning stays supervised: lessons can propose evals, checklists, skills, and roadmap changes, but humans approve changes.
 
 ## Target Hosted DTP Architecture
@@ -163,6 +164,38 @@ flowchart TD
 
 Current V0 command-center rule: `dtp workspace report` may summarize recorded DTP manifests, evidence indexes, backlog blockers, and missing coverage only. Future live command-center behavior should orchestrate and explain. It should not own repo rules, centralize secrets, or mutate repos before repo-local gates are encoded.
 
+## Future Notion Mirror Flow
+
+```mermaid
+flowchart TD
+    Phone["Phone idea or meeting note"]
+    Notion["Notion mirror / inbox"]
+    Steward["Roadmap Steward triage"]
+    DTP["DTP source of truth"]
+    Backlog["Roadmap/backlog"]
+    Proof["Proof/redaction queue"]
+    RepoHealth["Repo manifests/evidence indexes"]
+    NotionViews["Notion daily views"]
+
+    Phone --> Notion
+    Notion --> Steward
+    Steward --> DTP
+    DTP --> Backlog
+    DTP --> Proof
+    DTP --> RepoHealth
+    Backlog --> NotionViews
+    Proof --> NotionViews
+    RepoHealth --> NotionViews
+```
+
+Target behavior:
+
+- Toni can capture ideas and meeting notes from a phone.
+- The steward classifies Notion inbox items before they become DTP stories, proof items, research radar items, or parked ideas.
+- DTP mirrors public-safe/internal-safe summaries back into Notion.
+- Notion does not store secrets, raw transcripts, private payment/form/member data, DSE/Microsoft confidential material, or unsupported public proof claims.
+- Notion MCP/API automation starts only after the manual mirror proves useful and OAuth/setup is explicit.
+
 ## Future Agent Activation Model
 
 ```mermaid
@@ -253,6 +286,7 @@ DTP remains the master source. Other repos get local pointers when their lane is
 | `dtp steward review` CLI | manual template proves useful and checks are stable |
 | repo manifests beyond DTP | DTP, consulting, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus covered; add DSE only when COI-aware scope is active |
 | global `tm-skills` install | explicit approval, dry-run review, reload, smoke tests |
+| Notion MCP/API mirror | `docs/NOTION_MIRROR_V0.md` accepted, Toni completes OAuth, manual mirror proves useful, and redaction boundaries are understood |
 | project-pinned skill canary | global discovery works without duplicate confusion |
 | Hub prompt/registry automation | prompt ids and registry targets cross-validate |
 | AI red-team lab | before public AI workflows or write-enabled agents |
