@@ -35,7 +35,7 @@ review_status: draft
 
 - Hosted DTP app implementation is intentionally not started.
 - Proof/redaction templates need first live use on Mom nonprofit or another pilot.
-- Repo manifest/evidence index shape is accepted for the next expansion to consulting, Hub, and `tm-skills`.
+- Repo manifest/evidence index shape now covers DTP, consulting, Hub, and `tm-skills`; adjacent projects should be added only when their lanes are touched.
 
 ## Notes
 

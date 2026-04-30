@@ -209,8 +209,8 @@ Standing preflight/postflight: use `practice-os/templates/activation-routing-map
 2. Decide the Mom site execution path after owner facts: Wix cleanup, rebuild, or migration.
 3. Capture owner-approved baseline/after-state evidence for the first proof candidate and run redaction/permission review.
 4. Finish `tm-skills` discovery smoke testing in Claude Code and GitHub Copilot; Codex discovery is verified.
-5. Expand repo manifests to consulting, Hub, and `tm-skills` as those lanes are touched.
-6. Add Hub prompt/registry cross-validation after the pilot or when Hub resumes.
+5. Add Hub prompt/registry cross-validation after the pilot or when Hub resumes.
+6. Keep repo manifests current as lanes are touched; DTP, consulting, Hub, and `tm-skills` now have DTP-owned manifests/evidence indexes.
 7. Run FAOS Phase 0 readiness review only after the current pilot/proof/smoke/Hub-validation path; do not build FAOS from the raw Phase 0 prompt yet.
 
 ## Answer To The Kanban Question

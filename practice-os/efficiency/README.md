@@ -11,8 +11,10 @@ This folder holds optional pilot artifacts for the Workspace Efficiency Layer. T
 
 Rules:
 
-- Start with DTP only.
-- Use pilots to prove the shape before applying it to consulting, Hub, `tm-skills`, or adjacent projects.
+- Start with DTP, then expand only to touched/core lanes.
+- Current core manifests: DTP, consulting, Hub, and `tm-skills`.
+- Use pilots to prove the shape before applying it to adjacent projects.
 - Keep repo-local gates authoritative.
 - Do not centralize secrets, private client data, or production write credentials here.
 - Do not build a Workspace Command Center until repo manifests and evidence indexes prove useful.
+- Treat evidence indexes as receipts from the last review pass, not as a replacement for fresh local validation.

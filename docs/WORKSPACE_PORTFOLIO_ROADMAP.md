@@ -561,7 +561,7 @@ Priority:
 
 ## What Still Needs Attention
 
-- `tm-skills` global install is applied; cross-tool reload and smoke tests are still pending manual verification.
+- `tm-skills` global install is applied; Codex discovery smoke passed, while Claude Code and GitHub Copilot reload/smoke tests are still pending manual verification.
 - Prompt id cross-validation between `hub-prompts` and `hub-registry` is a small but valuable gap.
 - `hub-registry` portfolio manifest validation still depends on sibling repo manifests that are available locally but not safely available to repo-scoped CI without explicit private-repo access.
 - The Client Command Room templates now exist and the private Mom nonprofit kit includes a draft fit assessment; the assessment still needs real owner workflow facts before any portal decision.
@@ -569,7 +569,7 @@ Priority:
 - Public proof now has asset/redaction/permission templates and the private Mom nonprofit kit includes the first proof/redaction draft; it still needs a real claim, source evidence, permission, redaction, reviewer approval, and caveat.
 - Agent-security research is now represented here; promote specific gates into implementation docs before any deeper autonomous workflows.
 - Future Intelligence templates now exist as optional Practice OS assets, but they still need first real use before becoming required gates.
-- Workspace Efficiency templates now exist as optional Practice OS assets, and DTP has the first accepted repo-manifest/evidence-index pilot; expand the shape to consulting, Hub, and `tm-skills` as those lanes are touched.
+- Workspace Efficiency templates now exist as optional Practice OS assets. DTP, consulting, Hub, and `tm-skills` now have DTP-owned repo manifests/evidence indexes; adjacent repos should get the same treatment only when their lanes are touched.
 - Roadmap Steward V0 now exists as a required Practice OS template and backlog lane; live steward receipts now capture hosted-DTP acceptance and the Mom nonprofit pilot kickoff.
 - AI Activation Map V0 now exists as a required Practice OS template and has been used for the roadmap/steward and Mom pilot routing; keep using it when prompt intent spans multiple lanes.
 - Agentic Performance Gap Review V0 now exists as a required Practice OS template; use it whenever agent behavior, skill routing, research adoption, validation, or learning-loop conversion looks weak.
@@ -934,14 +934,14 @@ Preflight: use the Practice System Documentation Pack as the current/future/audi
 
 1. Collect Mom nonprofit owner-confirmed facts, permission, screenshot approval, proof reviewer, and meeting/form/payment source-of-truth decisions.
 2. Decide the Mom site execution path: Wix cleanup, rebuild, or migration.
-3. Expand repo manifests to consulting, Hub, and `tm-skills` as their lanes are touched.
-4. Add prompt id cross-validation between `hub-prompts` and `hub-registry`.
+3. Add prompt id cross-validation between `hub-prompts` and `hub-registry`.
+4. Keep repo manifests current as touched lanes change; DTP, consulting, Hub, and `tm-skills` now have core manifests/evidence indexes.
 5. Run the first adjacent-project touch pass: pick the repo whose trigger is ready first (`fitness-app`, `demario-pickleball-1`, `FamilyTrips`, or `dse-content`) and execute only its matching lane.
 6. Use DeMario command room and Omnexus verification toolkit as proof/reference material only after permission/redaction review.
 7. Start hosted DTP implementation only after the Mom pilot/proof workflow gives the app real records to persist.
 
 Non-blocking intelligence track: use the optional Future Intelligence templates during the next real delivery/research sessions, but do not insert them ahead of hosted DTP Phase 0 or proof/redaction work.
 
-Non-blocking efficiency track: pilot repo manifests and evidence indexes alongside the next DTP/Hub/consulting work, then draft the Workspace Command Center only after the manifest shape proves useful.
+Non-blocking efficiency track: keep the DTP, consulting, Hub, and `tm-skills` manifests/evidence indexes current during touched-lane work, then draft the Workspace Command Center only after the manifest shape proves useful across at least one adjacent-project touch pass.
 
 Non-blocking orchestration track: run the FAOS Phase 0 readiness review after the current pilot/proof/smoke/Hub-validation path. Do not create a `faos` repo, add tracing/memory services, or mutate DTP/tm-skills from the raw Phase 0 prompt until that readiness gate is accepted.

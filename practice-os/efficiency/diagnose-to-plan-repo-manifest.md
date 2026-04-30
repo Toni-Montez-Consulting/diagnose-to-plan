@@ -51,4 +51,4 @@ review_status: draft
 - Lane: hosted DTP Phase 0 and proof/redaction governance
 - Trigger: current Sprint 2 sequence
 - Blocker: hosted implementation still needs a separate implementation request; public proof still needs permission/redaction/reviewer approval
-- Next action: use proof/redaction templates on the Mom nonprofit pilot, then expand manifests to consulting, Hub, and `tm-skills`
+- Next action: collect Mom nonprofit owner facts and proof permissions; keep manifests current as touched lanes change
