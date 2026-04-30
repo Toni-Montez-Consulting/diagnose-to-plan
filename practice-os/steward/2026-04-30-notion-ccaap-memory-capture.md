@@ -32,8 +32,9 @@ Toni wants the current consulting operating system, roadmap, CCAAP launch work, 
 |---|---|---|
 | Codex Notion MCP endpoint | done_local_config | `C:\Users\tonimontez\.codex\config.toml` includes `[mcp_servers.notion]` with `https://mcp.notion.com/mcp` |
 | MCP discovery | pass | `codex mcp list` shows `notion` enabled |
-| OAuth login | blocked | `codex mcp login notion` was attempted, but Notion remains `Not logged in` |
-| Notion databases | blocked | Cannot safely create or seed databases until OAuth completes and the intended workspace is confirmed |
+| OAuth login | pass | `codex mcp login notion` completed successfully and `codex mcp list` now shows `notion` as `OAuth` |
+| Current-session Notion tools | blocked | Tool discovery in this already-running session still returns no Notion tools, so page/database writes cannot be performed yet |
+| Notion databases | blocked | Cannot safely create or seed databases until a restarted/new Codex session exposes the authenticated Notion tools and the intended workspace is confirmed |
 | Notion as source of truth | rejected | DTP remains authoritative; Notion can capture ideas and mirror status only |
 
 ## CCAAP Setup Status
@@ -80,8 +81,8 @@ Do not mirror raw transcripts, private emails, form submissions, payment records
 
 ## Follow-Ups
 
-1. Toni completes Notion OAuth with `codex mcp login notion`.
-2. A future authenticated Codex session creates a small Notion smoke-test page and confirms it can read/write the intended workspace.
+1. Restart or open a fresh Codex session so the authenticated Notion MCP tools are loaded.
+2. Create a small Notion smoke-test page and confirm the session can read/write the intended workspace.
 3. Create the V0 Notion databases and views from `docs/NOTION_MIRROR_V0.md`.
 4. Seed public-safe/internal-safe summaries only.
 5. Run Roadmap Steward triage before promoting any Notion idea into DTP roadmap/backlog artifacts.
