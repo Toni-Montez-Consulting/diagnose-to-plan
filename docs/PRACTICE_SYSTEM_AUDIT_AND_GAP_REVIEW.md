@@ -10,13 +10,14 @@ Method: static inspection of the current workspace contracts, roadmap docs, visi
 
 The system is pointed in the right direction. DTP has become the source of truth for roadmap execution, prompt routing, steward review, hosted-DTP design, proof/redaction governance, and cross-workspace coverage. The biggest remaining risk is not lack of ideas. It is operational drift: too many valuable lanes can exist as docs unless the steward loop, evidence receipts, and proof gates are used in real work.
 
-The next optimization should therefore make execution easier to continue without memory:
+The next optimization should therefore make execution easier to continue without memory and should inspect the agent system itself, not only the roadmap artifacts:
 
 1. Finish the Mom nonprofit private kit with real facts.
 2. Use the proof/redaction templates on one real claim.
 3. Expand repo manifests only when the next repo lane is touched.
 4. Cross-validate Hub prompts and registry before deeper Hub work.
 5. Keep hosted DTP implementation gated until there are real records to persist.
+6. Run agentic performance gap reviews when a session exposes a missed routing, context, skill-trigger, verification, research, safety, or learning-loop behavior.
 
 ## What Is Strong
 
@@ -25,6 +26,7 @@ The next optimization should therefore make execution easier to continue without
 | DTP source of truth is clear | Prevents consulting, Hub, and project repos from duplicating roadmap ownership |
 | Kanban backlog exists | Turns the roadmap into epics, stories, statuses, Done gates, and next actions |
 | Activation map exists | Future agents can route prompts to skills, templates, gates, and repo lanes |
+| Agentic performance gap review now exists | Future audits check whether the agent system routed, remembered, validated, researched, and learned correctly |
 | Story activation index exists | Roadmap stories can suggest the right skill, template, agent role, and gate |
 | Roadmap Steward loop exists | Reduces dependence on Toni's memory for next story, blockers, and repo coverage |
 | Hosted DTP Phase 0 boundary exists | Prevents a dashboard-first app with no real artifacts |
@@ -90,17 +92,29 @@ Owner: `hub-prompts`, `hub-registry`, and `hub`.
 
 Follow-up story: Prompt id cross-validation.
 
-### P1-2: `tm-skills` Activation Is Designed But Not Globally Installed
+### P1-1A: Agentic Performance Gaps Need A Standing Review
 
-Evidence: the skills repo exists, safe checks pass, and global install remains explicitly gated.
+Evidence: Toni identified a specific design gap: contextual awareness and skill/agent activation should happen progressively from prompt intent, roadmap stories, and new ideas. If that gap had to be caught by Toni, the system needs a repeatable review that asks what else failed to route, remember, validate, research, protect, or learn.
 
-Impact: prompt-routing docs can point to skills, but actual automatic discovery across Codex, Claude Code, and Copilot depends on approved install, reload, and smoke tests.
+Impact: without this layer, the architecture can look complete while future agent sessions still depend on Toni's memory to catch misroutes and missing process.
 
-Fix: keep install blocked until approved; then run install, reload tools, and smoke-test discovery.
+Fix: require `practice-os/templates/agentic-performance-gap-review.md`, document the lens in `docs/PRACTICE_SYSTEM_AGENTIC_PERFORMANCE_GAP_REVIEW.md`, and convert confirmed misses into activation-map updates, evals, `tm-skills` trigger fixes, research radar items, decision records, or backlog stories.
+
+Owner: `diagnose-to-plan`, with `tm-skills` owning reusable SDLC trigger/eval fixes.
+
+Follow-up story: Agentic Performance Gap Review V0.
+
+### P1-2: `tm-skills` Activation Needs Cross-Tool Smoke Verification
+
+Evidence: the skills repo exists, safe checks pass, and global install was explicitly approved and applied on 2026-04-30 without `-Force`. The current session cannot fully verify external Claude Code and GitHub Copilot reload/discovery behavior.
+
+Impact: prompt-routing docs can point to skills and the global discovery paths now exist, but cross-tool behavior still depends on reload and smoke prompts.
+
+Fix: reload Codex, Claude Code, and GitHub Copilot, run the smoke prompts, and record any misses in `tm-skills/MISFIRES.md`, trigger evals, or the DTP activation map.
 
 Owner: `tm-skills`.
 
-Follow-up story: Global install and tool reload smoke test.
+Follow-up story: Tool reload smoke test.
 
 ### P1-3: Repo Manifests And Evidence Indexes Exist Only As A DTP Pilot
 
@@ -236,7 +250,7 @@ Follow-up story: protocol/tool spike later.
 | `FamilyTrips` | yes | privacy maintenance pass |
 | `demario-pickleball-1` | yes | command-room proof pass |
 | `dse-content` | yes | COI-aware proof pass |
-| `tm-skills` | yes | install approval and smoke tests |
+| `tm-skills` | yes | cross-tool reload smoke tests |
 
 ## Audit Conclusion
 

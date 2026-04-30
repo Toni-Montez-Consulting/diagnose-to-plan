@@ -28,6 +28,7 @@ Story rules:
 - Roadmap Steward review is a standing preflight/postflight for major roadmap sessions; it keeps ideas, gates, blockers, and repo coverage out of chat memory.
 - Activation routing is the standing prompt-to-process map; it tells future agents which skill, template, gate, or roadmap lane to use without creating autonomy.
 - Story activation is the standing story-to-skill/template/agent-role map; `docs/ROADMAP_STORY_ACTIVATION_INDEX.md` ties each epic/story family to the right assets and gates.
+- Agentic performance gap review is the standing audit for whether prompts routed correctly, context was sufficient, skills triggered correctly, verification/research/safety gates happened, and misses became durable learning.
 - The Practice System Documentation Pack is the standing architecture/audit/optimization layer. Use it to understand the current system, target state, highest-risk gaps, and next optimization stories before creating more platform surface.
 
 ## Story Activation Contract
@@ -48,7 +49,8 @@ Goal: make every future coding session safer and more consistent.
 |---|---|---|---|---|
 | Create `tm-skills` repo and Phase 1 skills | `tm-skills` | Done | repo pushed, doctor/freshness/install dry-run pass, CI green | install only after explicit approval |
 | Add `tm-skills` thin CI | `tm-skills` | Done | GitHub Actions green | keep workflow thin |
-| Global install and tool reload smoke test | `tm-skills` | Blocked | Codex/Claude/Copilot discover skills after approved install | wait for explicit install approval |
+| Global install apply | `tm-skills` | Done | `install.ps1 -Apply` succeeds without `-Force` and post-install doctor passes | record smoke status |
+| Tool reload smoke test | `tm-skills` plus tools | Review | Codex/Claude/Copilot discover skills after reload | external reloads remain manual if not verifiable in-session |
 | Project-pinned canary | `tm-skills` plus one repo | Later | one low-risk repo confirms no duplicate-skill confusion | choose after global install works |
 | Stack overlays | `tm-skills` | Later | base skills prove useful across real work | design overlays only after canary |
 
@@ -137,6 +139,7 @@ Goal: turn delivery, failures, research, and agent sessions into supervised lear
 | Story | Repo | Status | Done gate | Next action |
 |---|---|---|---|---|
 | Future Intelligence templates | `diagnose-to-plan` | Done | lesson, research, scorecard, flight recorder, red-team, feature flag, and supply-chain templates exist | use opportunistically |
+| Agentic Performance Gap Review V0 | `diagnose-to-plan` | Done | performance-gap doc exists, template is required by practice doctor, activation map routes gap prompts | use after major agent-system misses |
 | First agent flight record | `diagnose-to-plan` | Ready | one major session leaves a reusable receipt | capture on next complex implementation |
 | Research Radar first item | `diagnose-to-plan` | Ready | one item classified Adopt/Pilot/Watch/Reject with source and next action | use when research changes roadmap |
 | Eval garden | `hub-prompts`, `tm-skills`, DTP | Later | real misfires become fixtures | wait for misfire history |
@@ -175,18 +178,20 @@ Goal: document, scrutinize, and optimize the whole consulting operating system w
 | Current architecture master doc | `diagnose-to-plan` | Done | `docs/PRACTICE_SYSTEM_ARCHITECTURE.md` names repos, flows, gates, and boundaries | keep synced with roadmap changes |
 | Future-state master doc | `diagnose-to-plan` | Done | `docs/PRACTICE_SYSTEM_FUTURE_STATE.md` defines hosted DTP, steward, self-learning, research, manifest, and agent target state | read before future platform work |
 | System audit and gap review | `diagnose-to-plan` | Done | severity-ranked findings map to follow-up stories | revisit after Mom pilot |
+| Agentic performance gap review | `diagnose-to-plan` | Done | required review catches prompt routing, context, skill-trigger, verification, research, safety, and learning-loop gaps | run when a miss is caught |
 | Optimization plan | `diagnose-to-plan` | Done | findings convert to epics/stories/gates/owners/sequencing | use to choose next refinements |
 | Documentation propagation lane | all workspace repos | Ready | each repo gets a lightweight pointer or local doc when its lane is touched | do not bulk-edit repos now |
 
 ## Current Active Next Queue
 
-Standing preflight/postflight: use `practice-os/templates/activation-routing-map.md` and `practice-os/templates/roadmap-steward-review.md` for major roadmap sessions so the right skill/template/process is selected and new ideas, blockers, repo lanes, gates, and no-touch boundaries are captured before memory drift.
+Standing preflight/postflight: use `practice-os/templates/activation-routing-map.md`, `practice-os/templates/agentic-performance-gap-review.md`, and `practice-os/templates/roadmap-steward-review.md` for major roadmap sessions so the right skill/template/process is selected, agentic performance gaps are caught, and new ideas, blockers, repo lanes, gates, and no-touch boundaries are captured before memory drift.
 
-1. Fill the Mom nonprofit private kit with real context, data inventory, consent, diagnose, plan, and metrics.
+1. Fill the Mom nonprofit private kit with owner-confirmed context, data inventory, consent, diagnose, plan, and metrics.
 2. Complete the Command Room fit assessment before deciding on any portal.
 3. Capture baseline/after-state evidence for the first proof candidate and run redaction/permission review.
-4. Expand repo manifests to consulting, Hub, and `tm-skills` as those lanes are touched.
-5. Add Hub prompt/registry cross-validation after the pilot or when Hub resumes.
+4. Smoke-test `tm-skills` discovery after external tool reloads.
+5. Expand repo manifests to consulting, Hub, and `tm-skills` as those lanes are touched.
+6. Add Hub prompt/registry cross-validation after the pilot or when Hub resumes.
 
 ## Answer To The Kanban Question
 

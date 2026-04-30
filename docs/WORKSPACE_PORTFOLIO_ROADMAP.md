@@ -18,6 +18,7 @@ The practical thesis is:
 10. Tie roadmap/Kanban stories to the right skill, template, suggested agent role, and gate so execution can start from the story instead of from memory.
 11. Progressively classify new ideas/designs/work prompts into the right repo lane, roadmap story, skill/template, and gate before they become implementation.
 12. Keep current architecture, future state, audits, and optimization plans documented in DTP so future agents can execute without rebuilding context from chat.
+13. Audit agentic performance itself so routing, context, skill triggers, verification, research, safety, and learning gaps are caught before Toni has to remember them.
 
 ## Scope
 
@@ -52,6 +53,8 @@ Roadmap invariant: every repo in the workspace stays on this roadmap. Some repos
 Execution invariant: roadmap items are tracked as epics/stories in `docs/ROADMAP_EXECUTION_BACKLOG.md`. Not every story is active today, but each item should have a status, Done gate, and next action before implementation begins.
 
 Stewardship invariant: major roadmap sessions should run the Activation Routing Map, Contextual Activation Playbook, Story Activation Index, and Roadmap Steward review before or after execution. The activation map chooses the right skill, template, process, or gate; the contextual playbook classifies new ideas/designs/work prompts before they become implementation; the story activation index ties Kanban epics/stories to suggested skills, templates, agent roles, and gates; the steward loop checks the active queue, repo coverage, gates, blockers, uncaptured ideas, proof/redaction requirements, and no-touch boundaries so execution does not depend on chat memory.
+
+Agentic performance invariant: when Toni catches a missing agent behavior, a prompt misroutes, a skill fails to activate, research or verification happens late, or a lesson risks staying in chat, run the Agentic Performance Gap Review and convert the miss into a durable artifact.
 
 Architecture invariant: DTP owns the Practice System Documentation Pack. `docs/PRACTICE_SYSTEM_ARCHITECTURE.md`, `docs/PRACTICE_SYSTEM_FUTURE_STATE.md`, `docs/PRACTICE_SYSTEM_AUDIT_AND_GAP_REVIEW.md`, and `docs/PRACTICE_SYSTEM_OPTIMIZATION_PLAN.md` describe the current system, target system, hard scrutiny, and improvement path for the whole consulting operating model. Other repos should receive local pointers later through repo touch passes, not duplicate the source-of-truth roadmap.
 
@@ -105,6 +108,7 @@ Components:
 - Supervised Self-Learning Loop: work produces evidence, evidence produces lessons, lessons produce evals/checklists/skills, and future work improves.
 - Research Arm / Research Radar: track AI/dev trends as `Adopt`, `Pilot`, `Watch`, or `Reject`, with source, relevance, risk, and next review date.
 - Agent Flight Recorder: leave a compact receipt for major agent sessions: goal, repos touched, commands, files changed, failures, lessons, follow-ups, and eval candidates.
+- Agentic Performance Gap Review: review prompt routing, context quality, skill trigger quality, planning continuity, verification quality, research quality, safety quality, and learning-loop conversion after major misses or agent-system changes.
 - Portfolio Scorecard: one health card per repo covering CI, last verified date, proof readiness, privacy/COI risk, next touch lane, and blocker.
 - Context Engineering Lane: formalize repo context packs, compact handoffs, structured notes, and just-in-time retrieval patterns for long sessions.
 - AI Red-Team / Guardrail Lab: run prompt/agent evals, Promptfoo-style red teams, NIST/OWASP checks, and OpenAI guardrail thinking before write-enabled automation or public AI workflows.
@@ -210,13 +214,12 @@ Implementation ladder:
 
 ### Story 1: Finish `tm-skills` Activation
 
-Status: activated to the approved dry-run boundary. The repo is in the VS Code workspace, private GitHub remote `toniomon96/tm-skills` exists, `main` is pushed and tracking `origin/main`, and the safe checks pass. Global install remains gated.
+Status: installed to the approved V0 boundary. The repo is in the VS Code workspace, private GitHub remote `toniomon96/tm-skills` exists, `main` is pushed and tracking `origin/main`, the safe checks pass, and `install.ps1 -Apply` has been run without `-Force`. External tool reload and smoke prompts remain manual follow-up gates.
 
 Value: immediately improves every future repo session by making review, frontend craft, backend boundaries, testing judgment, and delivery hygiene reusable across tools.
 
 Remaining work:
 
-- If safe, run `.\scripts\install.ps1 -Apply` only after explicitly approving global links/files.
 - Reload Codex, Claude Code, and GitHub Copilot.
 - Smoke-test discovery with the prompts in `tm-skills/README.md`.
 - Do not create `compliance-coi`; keep COI in DTP plus global instruction floor.
@@ -229,6 +232,7 @@ cd C:\Users\tonimontez\tm-skills
 .\scripts\doctor.ps1
 .\scripts\freshness-check.ps1
 .\scripts\install.ps1 -WhatIf
+.\scripts\install.ps1 -Apply
 git status --short --branch
 ```
 
@@ -555,7 +559,7 @@ Priority:
 
 ## What Still Needs Attention
 
-- `tm-skills` global install and cross-tool smoke tests are still pending explicit approval.
+- `tm-skills` global install is applied; cross-tool reload and smoke tests are still pending manual verification.
 - Prompt id cross-validation between `hub-prompts` and `hub-registry` is a small but valuable gap.
 - `hub-registry` portfolio manifest validation still depends on sibling repo manifests that are available locally but not safely available to repo-scoped CI without explicit private-repo access.
 - The Client Command Room templates now exist and the private Mom nonprofit kit includes a draft fit assessment; the assessment still needs real owner workflow facts before any portal decision.
@@ -566,6 +570,7 @@ Priority:
 - Workspace Efficiency templates now exist as optional Practice OS assets, and DTP has the first accepted repo-manifest/evidence-index pilot; expand the shape to consulting, Hub, and `tm-skills` as those lanes are touched.
 - Roadmap Steward V0 now exists as a required Practice OS template and backlog lane; live steward receipts now capture hosted-DTP acceptance and the Mom nonprofit pilot kickoff.
 - AI Activation Map V0 now exists as a required Practice OS template and has been used for the roadmap/steward and Mom pilot routing; keep using it when prompt intent spans multiple lanes.
+- Agentic Performance Gap Review V0 now exists as a required Practice OS template; use it whenever agent behavior, skill routing, research adoption, validation, or learning-loop conversion looks weak.
 - The roadmap now has a Kanban-style execution backlog; keep story status, Done gates, and next actions current as work moves.
 - The Practice System Documentation Pack now exists in DTP; keep it synced as architecture, future-state assumptions, audit findings, and optimization priorities change.
 - Local documentation propagation is still future work: consulting, Hub, `tm-skills`, Omnexus, DeMario, FamilyTrips, DSE, engineering-playbook, `hub-prompts`, and `hub-registry` should get lightweight pointers only when their specific lanes are touched.

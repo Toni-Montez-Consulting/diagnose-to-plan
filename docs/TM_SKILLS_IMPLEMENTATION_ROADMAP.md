@@ -37,7 +37,7 @@ The clean boundary is:
 
 ## Current Local State
 
-Verified on 2026-04-29:
+Verified on 2026-04-29 before install:
 
 - `C:\Users\tonimontez\.codex\skills` exists.
 - `C:\Users\tonimontez\.agents\skills` does not exist yet.
@@ -46,6 +46,16 @@ Verified on 2026-04-29:
 - `C:\Users\tonimontez\.codex\AGENTS.md` exists.
 - `C:\Users\tonimontez\.claude\CLAUDE.md` does not exist yet.
 - `C:\Users\tonimontez\.copilot\copilot-instructions.md` does not exist yet.
+
+Updated on 2026-04-30:
+
+- `C:\Users\tonimontez\.agents\skills` points to `C:\Users\tonimontez\tm-skills\skills`.
+- `C:\Users\tonimontez\.claude\skills` points to `C:\Users\tonimontez\tm-skills\skills`.
+- `C:\Users\tonimontez\.copilot\skills` points to `C:\Users\tonimontez\tm-skills\skills`.
+- `C:\Users\tonimontez\.claude\CLAUDE.md` exists.
+- `C:\Users\tonimontez\.copilot\copilot-instructions.md` exists.
+- `C:\Users\tonimontez\.codex\AGENTS.md` already existed and was intentionally skipped.
+- The skill paths are Windows directory junctions in this environment because symbolic links required elevation.
 
 Implementation rule: do not delete, move, or overwrite existing global instructions or skill folders. The installer must detect them and either preserve, merge, or require an explicit `--force`.
 
@@ -422,7 +432,17 @@ Updated on 2026-04-29:
 - Added `tm-skills` to `C:\Users\tonimontez\toni-consulting-ops.code-workspace`.
 - Created private GitHub remote `https://github.com/toniomon96/tm-skills` and pushed `main`.
 - Re-ran `.\scripts\doctor.ps1`, `.\scripts\freshness-check.ps1`, and `.\scripts\install.ps1 -WhatIf`; all completed successfully.
-- Global install, tool reloads, and Codex/Claude/Copilot discovery smoke tests remain manual follow-up gates.
+
+Updated on 2026-04-30:
+
+- Explicit approval was given to run `.\scripts\install.ps1 -Apply` without `-Force`.
+- First apply attempt exposed a Windows symbolic-link elevation requirement.
+- Updated `install.ps1` to fall back to Windows directory junctions for skill folders when symbolic links require elevation.
+- Updated `doctor.ps1` to de-duplicate scan roots that point at the same skills source so global junctions do not create noisy duplicate-skill warnings.
+- Re-ran `.\scripts\install.ps1 -Apply`; it installed `.agents`, `.claude`, and `.copilot` skill discovery paths, installed Claude/Copilot global instruction files, skipped existing Codex global instructions, and did not use `-Force`.
+- Re-ran `.\scripts\doctor.ps1` and `.\scripts\freshness-check.ps1`; both passed.
+- Added `tm-skills/docs/PRACTICE_SYSTEM_POINTER.md` and `tm-skills/docs/INSTALL_SMOKE_2026-04-30.md`.
+- Codex/Claude/Copilot reload and discovery smoke tests remain manual follow-up gates outside the current session.
 
 ## Deferred
 

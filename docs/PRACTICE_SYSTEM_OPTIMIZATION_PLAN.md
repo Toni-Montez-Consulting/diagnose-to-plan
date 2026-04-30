@@ -13,13 +13,14 @@ The strategy is not to build more surface area first. The strategy is to make ev
 Optimize in this order:
 
 1. Make the system understandable from DTP alone.
-2. Make the next real pilot produce evidence.
-3. Make public proof permissioned and receipt-backed.
-4. Expand repo manifests and local pointers only when the repo lane is touched.
-5. Cross-validate Hub prompts and registry before deeper runtime automation.
-6. Install and smoke-test global skills only after approval.
-7. Build hosted DTP only when real artifacts need persistence.
-8. Add steward automation, evals, red-team, and protocols after manual loops prove useful.
+2. Make the agentic performance loop catch routing, context, skill-trigger, validation, research, safety, and learning gaps.
+3. Make the next real pilot produce evidence.
+4. Make public proof permissioned and receipt-backed.
+5. Expand repo manifests and local pointers only when the repo lane is touched.
+6. Cross-validate Hub prompts and registry before deeper runtime automation.
+7. Install and smoke-test global skills only after approval.
+8. Build hosted DTP only when real artifacts need persistence.
+9. Add steward automation, evals, red-team, and protocols after manual loops prove useful.
 
 ## Epic A: Practice System Documentation Pack
 
@@ -30,6 +31,7 @@ Goal: a future agent can open DTP and understand the current system, future syst
 | Current system architecture doc | `diagnose-to-plan` | Done when merged | `docs/PRACTICE_SYSTEM_ARCHITECTURE.md` exists and names all repos, flows, and gates | keep linked from doc map |
 | Future system doc | `diagnose-to-plan` | Done when merged | `docs/PRACTICE_SYSTEM_FUTURE_STATE.md` exists with hosted/steward/research/repo-manifest diagrams | use before hosted implementation |
 | Audit and gap review | `diagnose-to-plan` | Done when merged | severity-ranked findings tie to follow-up stories | revisit after Mom pilot |
+| Agentic performance gap review | `diagnose-to-plan` | Done when merged | required template and doc inspect prompt routing, context, skill triggers, verification, research, safety, and learning-loop conversion | run after major agent-system misses |
 | Optimization plan | `diagnose-to-plan` | Done when merged | findings convert into epics/stories/gates | keep backlog aligned |
 
 ## Epic B: Documentation Propagation Lane
@@ -104,10 +106,10 @@ Goal: make reusable SDLC skills actually available to future sessions.
 
 | Story | Repo | Status | Done Gate | Next Action |
 |---|---|---|---|---|
-| Review dry-run output | `tm-skills` | Blocked | Toni approves global skill links/files | ask only when ready |
-| Run install apply | `tm-skills` | Blocked | `install.ps1 -Apply` succeeds | do not run without approval |
-| Reload tools | Codex/Claude/Copilot | Blocked | tools see expected skills | after install |
-| Smoke-test discovery | `tm-skills` plus tools | Blocked | trigger prompts activate correct skills | record misfires |
+| Review dry-run output | `tm-skills` | Done | Toni approves global skill links/files | preserve evidence in smoke note |
+| Run install apply | `tm-skills` | Done | `install.ps1 -Apply` succeeds without `-Force` | keep force gated |
+| Reload tools | Codex/Claude/Copilot | Review | tools see expected skills | external reloads remain manual |
+| Smoke-test discovery | `tm-skills` plus tools | Review | trigger prompts activate correct skills | record misfires |
 | Choose canary | one repo | Later | no duplicate trigger confusion | pick low-risk repo |
 
 Gate: no global install without explicit approval.
@@ -132,6 +134,7 @@ Goal: make the practice learn from work without letting automation outrun govern
 | Story | Repo | Status | Done Gate | Next Action |
 |---|---|---|---|---|
 | First agent flight record | `diagnose-to-plan` | Ready | one complex session records goal, files, commands, failures, lessons, eval candidates | use next suitable session |
+| Agentic performance gap review V0 | `diagnose-to-plan` | Done when merged | review doc exists, template is required, activation map routes performance-gap prompts | use after major roadmap/agent sessions |
 | First research radar item | `diagnose-to-plan` | Ready | item classified Adopt/Pilot/Watch/Reject with source and next review | use when research changes roadmap |
 | Eval garden seed | DTP, `tm-skills`, `hub-prompts` | Later | real misfires become fixtures | wait for evidence |
 | Red-team pilot | Hub or hosted DTP | Later | guardrail/red-team plan exists before public AI/write-enabled workflow | before autonomy |
@@ -158,13 +161,14 @@ Gate: each touch pass names one repo, one lane, and one Done gate.
 ## Recommended Next Execution Order
 
 1. Finish and validate this documentation pack.
-2. Keep the active queue centered on the Mom nonprofit private kit.
-3. Use the proof/redaction templates on the first real claim.
-4. Expand repo manifests to consulting, Hub, and `tm-skills` as those lanes are touched.
-5. Add Hub prompt/registry cross-validation.
-6. Decide whether to approve global `tm-skills` install and smoke tests.
-7. Run adjacent repo touch passes only when their triggers are ready.
-8. Revisit hosted DTP implementation after real pilot records exist.
+2. Run the Agentic Performance Gap Review when a session exposes a missed routing, memory, verification, research, safety, or learning-loop behavior.
+3. Keep the active queue centered on the Mom nonprofit private kit.
+4. Use the proof/redaction templates on the first real claim.
+5. Expand repo manifests to consulting, Hub, and `tm-skills` as those lanes are touched.
+6. Add Hub prompt/registry cross-validation.
+7. Decide whether to approve global `tm-skills` install and smoke tests.
+8. Run adjacent repo touch passes only when their triggers are ready.
+9. Revisit hosted DTP implementation after real pilot records exist.
 
 ## Optimization Done Gate
 

@@ -16,6 +16,7 @@ REQUIRED_POLICIES = (
 )
 REQUIRED_TEMPLATES = (
     "activation-routing-map.md",
+    "agentic-performance-gap-review.md",
     "contextual-idea-intake.md",
     "diagnose-memo.md",
     "plan-roadmap.md",

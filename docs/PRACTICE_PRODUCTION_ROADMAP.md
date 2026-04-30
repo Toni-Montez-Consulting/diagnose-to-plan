@@ -20,6 +20,8 @@ The Roadmap Steward loop is the lightweight manager for this system. It uses `pr
 
 The AI Activation Map is the prompt-to-process routing layer. It uses `practice-os/templates/activation-routing-map.md` to decide whether a prompt should activate a `tm-skills` skill, DTP Practice OS skill, Practice OS template, roadmap/backlog story, proof/redaction gate, COI/privacy gate, research/eval/lesson artifact, repo touch pass, or parked automation path.
 
+The Agentic Performance Gap Review is the behavior-audit layer for the agent system itself. It uses `docs/PRACTICE_SYSTEM_AGENTIC_PERFORMANCE_GAP_REVIEW.md` and `practice-os/templates/agentic-performance-gap-review.md` when a session exposes a possible failure in prompt routing, context quality, skill triggers, planning continuity, verification, research, safety, or learning-loop conversion.
+
 The Roadmap Story Activation Index is the story-to-skill/agent routing layer. It uses `docs/ROADMAP_STORY_ACTIVATION_INDEX.md` and `practice-os/templates/story-activation-contract.md` to tie Kanban epics/stories to the right skills, templates, suggested agent roles, and gates. It guides the steward, but it does not authorize autonomous agents, global installs, public proof, hosted implementation, or repo mutation.
 
 The Contextual Activation Playbook is the idea-to-roadmap routing layer. It uses `docs/CONTEXTUAL_ACTIVATION_PLAYBOOK.md` and `practice-os/templates/contextual-idea-intake.md` so new ideas, designs, development enhancements, project work, business moves, proof candidates, research items, and automation concepts are classified before they become stories or implementation.
@@ -37,6 +39,7 @@ The Practice System Documentation Pack is the architecture and audit layer for t
 - Practice OS includes optional Future Intelligence templates for lessons, research radar items, research spikes, portfolio scorecards, agent session records, AI red-team plans, feature flag/kill switch plans, and supply-chain baselines.
 - Practice OS includes optional Workspace Efficiency templates for repo manifests, evidence indexes, decision records, workspace command-center planning, dependency maintenance, toolchain pinning, CI cache planning, and project starter baselines.
 - Practice OS includes an AI Activation Map template for routing prompt shapes to the right skill, template, gate, roadmap lane, or parked automation path.
+- Practice OS includes a required Agentic Performance Gap Review template for recurring audit of prompt routing, context quality, skill triggers, planning continuity, verification, research, safety, and learning-loop conversion.
 - Practice OS includes a Contextual Idea Intake template for progressively turning new ideas/designs/work prompts into the right story, repo lane, template, skill, gate, or parked item.
 - Practice OS includes a Story Activation Contract template, and DTP includes a Roadmap Story Activation Index so every active Kanban lane can point to the right skill/template/agent-role suggestion and gate.
 - Practice OS includes a Roadmap Steward review template for major roadmap sessions; it is enforced by `dtp practice doctor` because it protects roadmap continuity across repos.
@@ -70,8 +73,9 @@ The Practice System Documentation Pack is the architecture and audit layer for t
 
 - Separate version-controlled skills repo exists at `C:\Users\tonimontez\tm-skills` with private GitHub remote `toniomon96/tm-skills`.
 - Phase 1 scope is five SDLC skills: `review-checklist`, `frontend-craft`, `backend-design`, `testing-ladder`, and `delivery-baseline`.
-- Safe activation checks pass: doctor, freshness, and install dry-run.
-- Global install remains gated until explicitly approved; do not run `install.ps1 -Apply` by default.
+- Safe activation checks pass: doctor, freshness, install dry-run, and post-install doctor.
+- Global install was explicitly approved and applied on 2026-04-30 without `-Force`. Windows skill paths use directory junctions because symbolic links required elevation in this environment.
+- External Codex/Claude/Copilot reload and smoke prompts remain manual follow-up gates.
 - COI/Microsoft boundaries stay always-on and point back to DTP's COI screen. Do not create a Phase 1 `compliance-coi` skill.
 - Implementation details, install paths, local-state notes, and smoke tests live in `docs/TM_SKILLS_IMPLEMENTATION_ROADMAP.md`.
 
@@ -120,6 +124,7 @@ The Practice System Documentation Pack is the architecture and audit layer for t
 - Keep policies current: data classification, COI, redaction, kill switch, no-secrets-in-git, and client consent.
 - Keep `docs/ROADMAP_EXECUTION_BACKLOG.md` current when a roadmap story changes status.
 - Use `practice-os/templates/activation-routing-map.md` when a prompt could route to more than one skill, template, gate, or roadmap lane.
+- Use `practice-os/templates/agentic-performance-gap-review.md` when Toni catches a missing agent behavior, a prompt misroutes, a skill trigger fails, verification/research/safety happens late, or a useful lesson needs to become a durable eval, template, decision, story, or parked item.
 - Use `practice-os/templates/roadmap-steward-review.md` before or after major roadmap sessions so new ideas become stories, templates, evals, proof items, research radar items, decision records, repo touch passes, or parked items.
 - Keep the Practice System Documentation Pack current when architecture, repo ownership, activation, steward loops, proof governance, or optimization priorities change.
 - Add or strengthen templates for proposal/SOW, case-study proof packet, Work Item Spec, and hosted-DTP import/export.
@@ -218,8 +223,8 @@ Complete these before treating the practice as ready for soft launch.
 7. Prepare `tm-skills` Phase 1.
    - Use `docs/TM_SKILLS_IMPLEMENTATION_ROADMAP.md` as the implementation handoff.
    - Keep `tm-skills` as the separate pushed repo and do not fold it into DTP.
-   - Run global install only after explicit approval.
-   - After install approval, smoke-test discovery in Codex first, then Claude Code and GitHub Copilot.
+   - Global install was approved and applied without `-Force`; keep future forced replacement gated.
+   - Smoke-test discovery in Codex first, then Claude Code and GitHub Copilot after reload.
    - Do not overwrite existing global instructions or legacy skill folders.
    - Make `testing-ladder` and `delivery-baseline` aware of doctor/matrix/local/release/support/evidence gates.
 
@@ -249,10 +254,18 @@ Complete these before treating the practice as ready for soft launch.
    - Treat the steward as a process role: it identifies the correct next story, owning repo, gates, blockers, uncaptured ideas, and no-touch boundaries.
    - Do not build `dtp steward review`, a hosted steward queue, or an agent-assisted roadmap manager until the markdown loop proves useful.
 
-12. Keep the Practice System Documentation Pack authoritative.
+12. Use the Agentic Performance Gap Review when the agent system itself needs scrutiny.
+   - Ask whether the activation map caught the true prompt intent.
+   - Check whether the right repo docs, current state, and handoff notes were loaded.
+   - Check whether the right `tm-skills` or DTP skill triggered.
+   - Convert confirmed misses into activation-map changes, eval fixtures, `tm-skills` misfire notes, research radar items, decision records, or backlog stories.
+   - Keep this supervised. The review proposes changes; it does not authorize autonomous repo edits, public proof, hosted implementation, or self-modifying skills.
+
+13. Keep the Practice System Documentation Pack authoritative.
    - Use `docs/PRACTICE_SYSTEM_ARCHITECTURE.md` for current-state architecture and repo boundaries.
    - Use `docs/PRACTICE_SYSTEM_FUTURE_STATE.md` before hosted DTP, steward automation, research automation, repo manifest expansion, or agent protocol work.
-   - Use `docs/PRACTICE_SYSTEM_AUDIT_AND_GAP_REVIEW.md` to identify the highest-risk gaps before adding platform surface.
+   - Use `docs/PRACTICE_SYSTEM_AUDIT_AND_GAP_REVIEW.md` to identify the highest-risk architecture and governance gaps before adding platform surface.
+   - Use `docs/PRACTICE_SYSTEM_AGENTIC_PERFORMANCE_GAP_REVIEW.md` to identify prompt routing, context, skill-trigger, verification, research, safety, and learning-loop gaps.
    - Use `docs/PRACTICE_SYSTEM_OPTIMIZATION_PLAN.md` to convert findings into epics, stories, Done gates, and repo-specific execution.
    - Propagate lightweight local pointers into other repos only when their touch lane is active.
 
@@ -426,11 +439,12 @@ If `gitleaks` is not installed locally, record that as a missing hard-gate tool 
 
 ### tm-skills
 
-After the repo exists, run the repo's own doctor and smoke tests. The implementation roadmap defines the exact commands, but the expected checks are:
+Run the repo's own doctor and smoke tests. The implementation roadmap defines the exact commands, but the expected checks are:
 
 ```powershell
 .\scripts\doctor.ps1
 .\scripts\freshness-check.ps1
+.\scripts\install.ps1 -WhatIf
 ```
 
 Then ask Codex, Claude Code, and GitHub Copilot what skills they can see and run the trigger prompts in `skills/*/evals/trigger.json`.
