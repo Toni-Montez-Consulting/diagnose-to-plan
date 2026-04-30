@@ -937,7 +937,7 @@ Preflight: use the Practice System Documentation Pack as the current/future/audi
 
 1. Finish the GitHub Enterprise org-migration closeout: Omnexus PR #559 needs required human review before merge; Hub's stale local org branch is cleaned and Hub PR #59 is merged.
 2. Keep Hub dependency PRs #52/#54/#55/#56 parked until one is explicitly selected with a migration/security plan; PR #59 no longer blocks the queue.
-3. Collect Mom nonprofit owner-confirmed facts, permission, screenshot approval, proof reviewer, and meeting/form/payment source-of-truth decisions.
+3. Collect Mom nonprofit owner-confirmed facts, permission, screenshot approval, proof reviewer, and meeting/form/payment source-of-truth decisions; private intake fields are prepared, but answers are still pending owner confirmation.
 4. Decide the Mom site execution path: Wix cleanup, rebuild, or migration.
 5. Keep Hub prompt/registry cross-validation local-first; decide private sibling-repo CI access only if it becomes worth the operational cost.
 6. Keep repo manifests current as touched lanes change; DTP, consulting, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus now have manifests/evidence indexes; FamilyTrips also has thin CI.

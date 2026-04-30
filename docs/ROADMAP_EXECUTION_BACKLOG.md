@@ -218,7 +218,7 @@ Standing preflight/postflight: use `practice-os/templates/activation-routing-map
 
 1. Finish Omnexus org-migration closeout: PR #559 is green but still blocked by required human review; do not bypass the review gate, and prune local `fitness-app` PR branches only after merge.
 2. Keep Hub dependency PRs #52/#54/#55/#56 parked until one is explicitly selected with a migration/security plan; PR #59 is merged and no longer blocks the queue.
-3. Collect Mom nonprofit owner-confirmed facts: site owner, backup owner, meeting source of truth, form/payment routing, update workflow, proof reviewer, and screenshot permissions.
+3. Collect Mom nonprofit owner-confirmed facts: site owner, backup owner, meeting source of truth, form/payment routing, update workflow, proof reviewer, and screenshot permissions; private intake fields are prepared, but answers are still pending owner confirmation.
 4. Decide the Mom site execution path after owner facts: Wix cleanup, rebuild, or migration.
 5. Capture owner-approved baseline/after-state evidence for the first proof candidate and run redaction/permission review.
 6. Keep Claude Code and GitHub Copilot `tm-skills` discovery smoke testing on the manual back burner; runbook exists, links are healthy, and Codex discovery is verified, but external reload checks remain manual and non-blocking.
