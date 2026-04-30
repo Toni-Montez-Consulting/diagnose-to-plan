@@ -1,6 +1,6 @@
 # Workspace Portfolio Roadmap
 
-Last updated: 2026-04-29
+Last updated: 2026-04-30
 
 This plan consolidates the current consulting workspace, prior direction, live repo evidence, and current agentic-AI/development research into one prioritized execution map.
 
@@ -19,6 +19,7 @@ The practical thesis is:
 11. Progressively classify new ideas/designs/work prompts into the right repo lane, roadmap story, skill/template, and gate before they become implementation.
 12. Keep current architecture, future state, audits, and optimization plans documented in DTP so future agents can execute without rebuilding context from chat.
 13. Audit agentic performance itself so routing, context, skill triggers, verification, research, safety, and learning gaps are caught before Toni has to remember them.
+14. Treat FAOS as a future orchestration substrate candidate that must pass readiness review before it adds Langfuse, Mem0/Letta, Spec-Kit, MCP, subagents, hooks, durable workflows, or an `op` wrapper.
 
 ## Scope
 
@@ -115,6 +116,7 @@ Components:
 - Release Trust / Supply Chain Spine: layer in SLSA/OpenSSF Scorecard, CycloneDX SBOMs, dependency review, CodeQL/Semgrep, and signed/evidence-backed release artifacts when a repo's risk justifies it.
 - Feature Flag / Kill Switch Standard: use explicit flags and rollback paths for AI, billing, intake, client-facing, and automation features; watch OpenFeature as a future standard.
 - Agent Protocol Watchlist: keep MCP later as planned; add AG-UI for future agent frontends and A2A as watch-only until multi-agent interoperability is a real need.
+- FAOS Orchestration Substrate: capture the Frontier Agentic Operating System as a long-term substrate candidate for specs, skills, subagents, MCP, memory, tracing, evals, reflection, durable execution, sandboxes, and an operator wrapper. Keep it behind readiness review and DTP gates.
 
 Suggested priority:
 
@@ -571,6 +573,7 @@ Priority:
 - Roadmap Steward V0 now exists as a required Practice OS template and backlog lane; live steward receipts now capture hosted-DTP acceptance and the Mom nonprofit pilot kickoff.
 - AI Activation Map V0 now exists as a required Practice OS template and has been used for the roadmap/steward and Mom pilot routing; keep using it when prompt intent spans multiple lanes.
 - Agentic Performance Gap Review V0 now exists as a required Practice OS template; use it whenever agent behavior, skill routing, research adoption, validation, or learning-loop conversion looks weak.
+- FAOS orchestration is now captured as a gated future substrate in `docs/FAOS_ORCHESTRATION_ROADMAP.md`; Phase 0 implementation still needs readiness review and technical corrections before any repo or service work.
 - The roadmap now has a Kanban-style execution backlog; keep story status, Done gates, and next actions current as work moves.
 - The Practice System Documentation Pack now exists in DTP; keep it synced as architecture, future-state assumptions, audit findings, and optimization priorities change.
 - Local documentation propagation is still future work: consulting, Hub, `tm-skills`, Omnexus, DeMario, FamilyTrips, DSE, engineering-playbook, `hub-prompts`, and `hub-registry` should get lightweight pointers only when their specific lanes are touched.
@@ -871,6 +874,34 @@ Source:
 
 - https://containers.dev/
 
+### 20. FAOS Orchestration Substrate
+
+The Frontier Agentic Operating System build spec is useful as a north-star for agent management and orchestration, but it should be absorbed into the current DTP system rather than run as a standalone build prompt immediately.
+
+Roadmap impact:
+
+- Add FAOS as a gated Epic 12 in the Kanban backlog.
+- Use `docs/FAOS_ORCHESTRATION_ROADMAP.md` as the technical review and planning source.
+- Use `practice-os/templates/faos-phase-readiness-review.md` before any FAOS phase implementation.
+- Keep DTP as the practice source of truth, `tm-skills` as the global SDLC skill layer, Hub as intake/runtime, and consulting as public proof.
+- Treat Langfuse, Mem0/Letta, Spec-Kit, MCP, subagents, hooks, DBOS/Inngest, sandboxes, and the `op` wrapper as future components that must each pass value, safety, and technical-currentness gates.
+- Correct the Phase 0 prompt before implementation: Langfuse v3 topology, `uv` package management, memory-store isolation, trace redaction, DTP tracing boundary, COI ownership, Spec-Kit CLI flags, and dependency pinning all need a preflight.
+
+Sources:
+
+- https://langfuse.com/self-hosting
+- https://langfuse.com/self-hosting/deployment/docker-compose
+- https://docs.mem0.ai/open-source/setup
+- https://docs.mem0.ai/components/vectordbs/dbs/pgvector
+- https://docs.letta.com/guides/server/docker
+- https://github.com/github/spec-kit/blob/main/docs/reference/integrations.md
+- https://docs.claude.com/en/docs/agent-sdk/python
+- https://opentelemetry.io/docs/specs/semconv/gen-ai/
+- https://modelcontextprotocol.io/specification/2025-11-25/basic
+- https://inspect.aisi.org.uk/
+- https://docs.dbos.dev/
+- https://www.inngest.com/docs/learn/how-functions-are-executed
+
 ## Parked Or Explicitly Later
 
 - Multi-user SaaS.
@@ -890,6 +921,7 @@ Source:
 - A2A/AG-UI/MCP protocol adoption before a real workflow needs it.
 - Supply-chain ceremony in low-risk repos before the value is clear.
 - Workspace command center that mutates repos before repo manifests and gates are trustworthy.
+- FAOS Phase 0 implementation from the raw prompt before Phase 0A readiness review, technical corrections, trace redaction, and repo-boundary acceptance.
 - Shared CI abstractions before at least three repos repeat the same stable pattern.
 - Dependency bots without grouping, schedule, and human approval rules.
 - Forced monorepo migration for repos that are intentionally separate.
@@ -911,3 +943,5 @@ Preflight: use the Practice System Documentation Pack as the current/future/audi
 Non-blocking intelligence track: use the optional Future Intelligence templates during the next real delivery/research sessions, but do not insert them ahead of hosted DTP Phase 0 or proof/redaction work.
 
 Non-blocking efficiency track: pilot repo manifests and evidence indexes alongside the next DTP/Hub/consulting work, then draft the Workspace Command Center only after the manifest shape proves useful.
+
+Non-blocking orchestration track: run the FAOS Phase 0 readiness review after the current pilot/proof/smoke/Hub-validation path. Do not create a `faos` repo, add tracing/memory services, or mutate DTP/tm-skills from the raw Phase 0 prompt until that readiness gate is accepted.

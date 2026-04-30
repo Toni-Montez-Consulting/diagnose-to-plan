@@ -193,6 +193,39 @@ Target behavior:
 - Actual agent delegation remains explicit.
 - Write-enabled automation remains gated.
 
+## Future FAOS Orchestration Substrate
+
+FAOS is the candidate technical substrate for the future version of this activation model. It should not replace DTP; it should make DTP's contracts easier to execute.
+
+```mermaid
+flowchart TD
+    DTP["DTP Practice OS\nroadmap, kits, proof, COI, steward"]
+    Skills["tm-skills\nSDLC skills and evals"]
+    FAOS["Future FAOS substrate\nop wrapper, traces, memory, evals"]
+    Trace["Langfuse / OTel traces"]
+    Memory["Mem0 / Letta memory"]
+    Evals["Inspect AI and skill fixtures"]
+    Durable["DBOS / Inngest workflows"]
+    Repos["Workspace repos"]
+    Human["Toni approval gates"]
+
+    DTP --> FAOS
+    Skills --> FAOS
+    FAOS --> Trace
+    FAOS --> Memory
+    FAOS --> Evals
+    FAOS --> Durable
+    FAOS --> Repos
+    Human --> FAOS
+```
+
+Rules:
+
+- FAOS must read DTP roadmap, activation, proof, COI, and stewardship contracts.
+- FAOS must not create a second source of truth for client kits, public proof, or repo ownership.
+- Tracing and memory require redaction, retention, and sensitivity policy before raw prompt/tool data is captured.
+- Phase implementation must start with `docs/FAOS_ORCHESTRATION_ROADMAP.md` and `practice-os/templates/faos-phase-readiness-review.md`.
+
 ## Future Documentation Propagation
 
 DTP remains the master source. Other repos get local pointers when their lane is touched:
@@ -226,6 +259,7 @@ DTP remains the master source. Other repos get local pointers when their lane is
 | MCP recall | 2-3 real engagements make manual recall painful |
 | AG-UI or agent frontend | real-time state, approvals, and tool progress are needed |
 | A2A or multi-agent protocol | multiple independent agents or vendors need interoperability |
+| FAOS Phase 0 implementation | Phase 0A readiness review accepted; Langfuse topology, memory isolation, trace redaction, DTP adapter boundary, `uv` package flow, COI ownership, and Spec-Kit CLI syntax corrected |
 
 ## Target End State
 

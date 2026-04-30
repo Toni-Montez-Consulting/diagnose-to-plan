@@ -30,6 +30,7 @@ Story rules:
 - Story activation is the standing story-to-skill/template/agent-role map; `docs/ROADMAP_STORY_ACTIVATION_INDEX.md` ties each epic/story family to the right assets and gates.
 - Agentic performance gap review is the standing audit for whether prompts routed correctly, context was sufficient, skills triggered correctly, verification/research/safety gates happened, and misses became durable learning.
 - The Practice System Documentation Pack is the standing architecture/audit/optimization layer. Use it to understand the current system, target state, highest-risk gaps, and next optimization stories before creating more platform surface.
+- FAOS orchestration is a gated future substrate lane. Use `docs/FAOS_ORCHESTRATION_ROADMAP.md` and `practice-os/templates/faos-phase-readiness-review.md` before any `faos` repo, `op` wrapper, tracing/memory substrate, Spec-Kit rollout, MCP server, subagent roster, hook, durable workflow, or business-agent automation is implemented.
 
 ## Story Activation Contract
 
@@ -182,6 +183,24 @@ Goal: document, scrutinize, and optimize the whole consulting operating system w
 | Optimization plan | `diagnose-to-plan` | Done | findings convert to epics/stories/gates/owners/sequencing | use to choose next refinements |
 | Documentation propagation lane | all workspace repos | Ready | each repo gets a lightweight pointer or local doc when its lane is touched | do not bulk-edit repos now |
 
+## Epic 12: FAOS Agentic Orchestration Substrate
+
+Goal: capture and eventually implement the Frontier Agentic Operating System ideas as a gated orchestration substrate, without replacing DTP, `tm-skills`, Hub, consulting, or repo-local gates.
+
+| Story | Repo | Status | Done gate | Next action |
+|---|---|---|---|---|
+| FAOS spec technical review and planning integration | `diagnose-to-plan` | Review | `docs/FAOS_ORCHESTRATION_ROADMAP.md`, activation map, backlog, and master roadmap pointers exist | accept as roadmap-only capture |
+| FAOS Phase 0 readiness review | `diagnose-to-plan` | Ready | readiness template resolves technical corrections, repo boundary, trace redaction, storage isolation, `uv` package flow, DTP adapter conflict, and COI ownership | run only after current pilot/proof/smoke priorities |
+| FAOS Phase 0 foundation implementation | future `faos` repo plus DTP adapters | Later | corrected compose/services, `op` CLI, memory surface, tracing, tests, and ADRs pass accepted Phase 0 gates | do not create repo or services until readiness accepted |
+| Spec-Kit project flow pilot | `diagnose-to-plan`, `tm-skills`, then selected repo | Later | one real work item proves Spec-Kit improves planning over existing DTP Work Item Spec | verify CLI syntax and avoid token-heavy ceremony |
+| Code agent stack: subagents, hooks, commands | future `faos`, `tm-skills`, DTP | Later | review/test/eval/trace roles have fixtures and path-scoped hooks | no autonomous write behavior before evals and gates |
+| Inspect AI eval harness | future `faos`, `tm-skills`, Hub prompts, DTP | Later | real misfires become portable eval fixtures | seed after enough trace/misfire evidence exists |
+| Supervised reflection with DSPy/GEPA | future `faos`, `tm-skills`, DTP | Later | reflection proposes changes into human review queue only | requires traces, evals, and no self-modifying skills |
+| Durable execution with DBOS/Inngest | future `faos`, hosted DTP/Hub if needed | Later | one real workflow needs crash/sleep survival or multi-day state | simple Postgres state first |
+| Cross-project skill propagation | future `faos`, `tm-skills`, project repos | Later | project-local skill promotion has evals, ADR, and human approval | keep globals tight |
+| Business agent stack and prediction calibration | future `faos`, DTP/Hub/consulting | Later | business-agent actions are draft/review only and produce scoreable predictions | no auto-send or public/client action |
+| Cloud migration | future `faos` | Later | local stack hits explicit pain threshold | local-first until pain forces cloud |
+
 ## Current Active Next Queue
 
 Standing preflight/postflight: use `practice-os/templates/activation-routing-map.md`, `practice-os/templates/agentic-performance-gap-review.md`, and `practice-os/templates/roadmap-steward-review.md` for major roadmap sessions so the right skill/template/process is selected, agentic performance gaps are caught, and new ideas, blockers, repo lanes, gates, and no-touch boundaries are captured before memory drift.
@@ -192,6 +211,7 @@ Standing preflight/postflight: use `practice-os/templates/activation-routing-map
 4. Smoke-test `tm-skills` discovery after external tool reloads.
 5. Expand repo manifests to consulting, Hub, and `tm-skills` as those lanes are touched.
 6. Add Hub prompt/registry cross-validation after the pilot or when Hub resumes.
+7. Run FAOS Phase 0 readiness review only after the current pilot/proof/smoke/Hub-validation path; do not build FAOS from the raw Phase 0 prompt yet.
 
 ## Answer To The Kanban Question
 

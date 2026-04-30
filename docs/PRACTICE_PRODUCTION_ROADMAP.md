@@ -14,6 +14,8 @@ The Future Intelligence Layer is captured in `docs/WORKSPACE_PORTFOLIO_ROADMAP.m
 
 The Workspace Efficiency Layer is also captured in `docs/WORKSPACE_PORTFOLIO_ROADMAP.md`. It adds workspace command-center planning, repo manifests, affected-only checks, shared CI later, dependency maintenance, toolchain pinning, evidence indexes, decision logs, starter-factory templates, and CI cache hygiene without forcing the repos into one platform or monorepo.
 
+The FAOS Orchestration Roadmap is captured in `docs/FAOS_ORCHESTRATION_ROADMAP.md`. It integrates the Frontier Agentic Operating System build spec as a gated future substrate for specs, skills, subagents, MCP, memory, tracing, evals, reflection, durable execution, sandboxes, and an `op` wrapper. It does not change the current build order or authorize creating a `faos` repo yet.
+
 The Kanban execution view is captured in `docs/ROADMAP_EXECUTION_BACKLOG.md`. The roadmap owns priority and strategy; the backlog owns epic/story status, Done gates, and next actions.
 
 The Roadmap Steward loop is the lightweight manager for this system. It uses `practice-os/templates/roadmap-steward-review.md` to keep active stories, repo lanes, gates, blockers, new ideas, and no-touch boundaries in artifacts instead of Toni's memory. It is a supervised workflow, not an autonomous agent.
@@ -38,6 +40,7 @@ The Practice System Documentation Pack is the architecture and audit layer for t
 - Practice OS includes Client Command Room fit/spec templates so future engagements can decide between a command room, a handoff checklist, no private surface, or a deferred revisit before building portal UI.
 - Practice OS includes optional Future Intelligence templates for lessons, research radar items, research spikes, portfolio scorecards, agent session records, AI red-team plans, feature flag/kill switch plans, and supply-chain baselines.
 - Practice OS includes optional Workspace Efficiency templates for repo manifests, evidence indexes, decision records, workspace command-center planning, dependency maintenance, toolchain pinning, CI cache planning, and project starter baselines.
+- Practice OS includes an optional FAOS Phase Readiness Review template for checking orchestration-substrate phases before any FAOS repo, `op` wrapper, tracing/memory service, Spec-Kit rollout, MCP server, subagent, hook, durable workflow, or business-agent automation is built.
 - Practice OS includes an AI Activation Map template for routing prompt shapes to the right skill, template, gate, roadmap lane, or parked automation path.
 - Practice OS includes a required Agentic Performance Gap Review template for recurring audit of prompt routing, context quality, skill triggers, planning continuity, verification, research, safety, and learning-loop conversion.
 - Practice OS includes a Contextual Idea Intake template for progressively turning new ideas/designs/work prompts into the right story, repo lane, template, skill, gate, or parked item.
@@ -127,6 +130,7 @@ The Practice System Documentation Pack is the architecture and audit layer for t
 - Use `practice-os/templates/agentic-performance-gap-review.md` when Toni catches a missing agent behavior, a prompt misroutes, a skill trigger fails, verification/research/safety happens late, or a useful lesson needs to become a durable eval, template, decision, story, or parked item.
 - Use `practice-os/templates/roadmap-steward-review.md` before or after major roadmap sessions so new ideas become stories, templates, evals, proof items, research radar items, decision records, repo touch passes, or parked items.
 - Keep the Practice System Documentation Pack current when architecture, repo ownership, activation, steward loops, proof governance, or optimization priorities change.
+- Use `docs/FAOS_ORCHESTRATION_ROADMAP.md` and `practice-os/templates/faos-phase-readiness-review.md` before accepting any FAOS, `op` wrapper, Langfuse, Mem0/Letta, Spec-Kit, MCP, subagent, hook, durable execution, or broader agent-orchestration implementation prompt.
 - Add or strengthen templates for proposal/SOW, case-study proof packet, Work Item Spec, and hosted-DTP import/export.
 - Use the Future Intelligence templates opportunistically after real delivery/research sessions; do not make them required gates until they have proven useful.
 - Use the Workspace Efficiency templates opportunistically when touching a repo; do not make manifests or command-center output required until at least one pilot proves the shape.
@@ -240,6 +244,7 @@ Complete these before treating the practice as ready for soft launch.
    - Use `practice-os/templates/lesson-capture.md`, `research-radar-item.md`, `portfolio-scorecard.md`, and `agent-session-record.md` after real work sessions.
    - Keep self-learning supervised: lessons may propose evals, checklist updates, or skill updates, but humans approve the change.
    - Do not adopt AG-UI, A2A, MCP recall, OpenAI Agents SDK, Google ADK, Temporal, or heavier observability until a real DTP/Hub workflow justifies a spike.
+   - Treat FAOS as the broader orchestration-substrate candidate for those future components, but run the FAOS Phase 0 readiness review before any implementation.
 
 10. Capture the Workspace Efficiency Layer.
    - Keep this as roadmap and template work while hosted DTP Phase 0 and proof/redaction stay first in line.
@@ -370,6 +375,7 @@ Build these only after repeated usage proves the need.
 - Dependency maintenance automation after grouping, schedule, and approval rules are accepted.
 - Dev environment pinning where tool drift has caused real failures or onboarding friction.
 - Optional plugin packaging only if the skills need to be distributed beyond Toni's local environment.
+- FAOS orchestration substrate after Phase 0A readiness review proves the technical shape, trace redaction, memory isolation, repo boundary, and value gate.
 - Heavier customer portals after the lightweight Client Command Room pattern proves value across multiple engagements.
 - Secondary repo-local documentation after the DTP master system docs settle and the relevant repo lane is touched.
 
@@ -385,6 +391,7 @@ Do not build these into the near-term practice.
 - Autonomous self-learning or self-modifying skills.
 - Research automation that creates implementation work without human acceptance.
 - Protocol adoption just because the protocol is interesting.
+- FAOS Phase 0 implementation from the raw prompt before readiness review and technical corrections.
 - Forced monorepo migration.
 - Cross-repo command runners that mutate repos without repo-local gates.
 - Shared CI abstractions before the duplicated pattern is stable.
@@ -407,6 +414,7 @@ Do not build these into the near-term practice.
 | `consulting` | Public storefront, `/start`, public proof, `/admin` command room, launch/design docs | Private client kits, source-of-truth practice roadmap, runtime intake store |
 | `hub` | Runtime intake, private console, Supabase operational tables, webhook/capture/runs support | DTP engagement kits, public proof pages, CRM replacement |
 | `tm-skills` | Cross-repo SDLC skills, global coding-agent instructions, trigger evals, skill install/doctor scripts, agent behavior for verification gates | Client engagement records, consulting-practice memory, public proof |
+| future `faos` repo | Agentic orchestration substrate if approved later: `op` wrapper, traces, memory MCP, eval harness, durable workflows, subagent/hook packaging | Practice source of truth, public proof, Hub runtime, or project repo ownership |
 | `engineering-playbook` | Portfolio schemas, templates, historical decisions, general operating doctrine, secret-management references | Source-of-truth practice production roadmap |
 | `hub-prompts` | Hub prompt catalogue, prompt schemas, prompt validation fixtures | Practice roadmap, SDLC skills repo, Hub automation target routing |
 | `hub-registry` | Hub automation targets and routing config | Consulting knowledge registry, DTP engagement kits, case-study planning |

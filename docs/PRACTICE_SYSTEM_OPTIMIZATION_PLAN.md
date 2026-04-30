@@ -158,6 +158,19 @@ Goal: every workspace repo benefits eventually without unnecessary churn.
 
 Gate: each touch pass names one repo, one lane, and one Done gate.
 
+## Epic K: FAOS Orchestration Substrate Readiness
+
+Goal: absorb the FAOS build spec into the practice system as a technically sound, gated orchestration substrate instead of a parallel platform.
+
+| Story | Repo | Status | Done Gate | Next Action |
+|---|---|---|---|---|
+| FAOS roadmap integration | `diagnose-to-plan` | Review | roadmap doc, backlog epic, activation row, steward receipt, and future-state pointer exist | accept as roadmap-only capture |
+| Phase 0 readiness review | `diagnose-to-plan` | Ready | readiness template resolves Langfuse topology, `uv` flow, memory isolation, DTP tracing conflict, trace redaction, Spec-Kit CLI syntax, and COI ownership | run after current pilot/proof/smoke/Hub-validation priorities |
+| FAOS implementation prompt rewrite | future `faos` repo | Later | raw Phase 0 prompt is corrected into an executable spec with impossible/conflicting gates removed | only after readiness review |
+| FAOS substrate implementation | future `faos` repo plus DTP adapter stories | Later | corrected foundation passes tests, ADRs, redaction, and accepted tracing/memory gates | no repo creation yet |
+
+Gate: FAOS work may plan and review now, but implementation is parked until the readiness review is accepted.
+
 ## Recommended Next Execution Order
 
 1. Finish and validate this documentation pack.
@@ -169,6 +182,7 @@ Gate: each touch pass names one repo, one lane, and one Done gate.
 7. Decide whether to approve global `tm-skills` install and smoke tests.
 8. Run adjacent repo touch passes only when their triggers are ready.
 9. Revisit hosted DTP implementation after real pilot records exist.
+10. Run FAOS Phase 0 readiness review after the current active path; do not implement the raw FAOS prompt until the corrections are accepted.
 
 ## Optimization Done Gate
 

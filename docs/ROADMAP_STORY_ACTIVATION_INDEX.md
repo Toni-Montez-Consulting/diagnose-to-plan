@@ -44,6 +44,7 @@ human gates.
 | Future Intelligence Layer | flight records, research radar, eval garden, red-team lab | lesson capture, research radar, agent session record, red-team plan | `local-codex`; `reviewer` for red-team only if asked | human-approved learning; evals before autonomy; primary sources for research |
 | First Client Operating Kit Pilot | Mom kit, fit assessment, proof/redaction, handoff/runbook, public proof | Client Operating Kit, Command Room fit, proof/redaction templates, handoff/runbook | `local-codex`; `explorer` only for public/source discovery if asked | private kit stays private; consent/COI first; public proof blocked until review |
 | Adjacent Project Touch Lanes | Omnexus, DeMario, FamilyTrips, DSE, engineering-playbook | repo manifest, portfolio scorecard, proof/COI/privacy lane, repo-specific gates | `local-codex`; `explorer` for scoped repo discovery only if asked | do not disturb active branches; touch only when trigger is ready |
+| FAOS Agentic Orchestration Substrate | FAOS spec review, Phase 0 readiness, `op` wrapper, traces, memory, MCP, subagents, hooks, evals, durable workflows | FAOS orchestration roadmap, FAOS phase readiness review, Agentic Performance Gap Review, Roadmap Steward | `local-codex`; `parked-autonomy` for future orchestration | readiness review before implementation; no raw Phase 0 prompt execution; no trace/memory capture before redaction policy |
 
 ## Current Active Story Activation
 
@@ -69,6 +70,7 @@ Use this when the prompt is not yet a backlog story but should be captured.
 | Proof/case study | contextual idea intake, proof/redaction templates | Proof And Redaction Governance | proof packet, asset inventory, claim review |
 | Research/tooling | contextual idea intake, research radar/spike | Future Intelligence Layer | Adopt/Pilot/Watch/Reject item |
 | Agent/automation | contextual idea intake, activation map, red-team/eval path | Roadmap Steward, Future Intelligence, or `tm-skills` | skill update, eval, guardrail plan, parked automation |
+| Agent operating system / FAOS substrate | activation map, FAOS orchestration roadmap, FAOS phase readiness review | FAOS Agentic Orchestration Substrate | readiness review, corrected build prompt, ADR, or parked implementation |
 
 ## Story-Level Update Contract
 
@@ -80,6 +82,7 @@ When a backlog story changes status, also check whether one of these needs an up
 - repo manifest or evidence index;
 - proof/redaction template;
 - `tm-skills` trigger description or eval;
+- FAOS orchestration roadmap or readiness review when agent substrate prompts change;
 - research radar item;
 - lesson/eval/agent-session record.
 
@@ -88,6 +91,7 @@ When a backlog story changes status, also check whether one of these needs an up
 - Do not globally install `tm-skills` unless explicitly approved.
 - Do not spawn agents unless Toni explicitly asks for agents, delegation, or parallel agent work.
 - Do not start hosted DTP app implementation from a routing/steward prompt alone.
+- Do not implement the raw FAOS Phase 0 prompt or create a `faos` repo before the FAOS readiness review is accepted.
 - Do not publish or prepare public proof without permission/redaction/reviewer gates.
 - Do not mutate `fitness-app`/Omnexus while its active branch is not intentionally reopened.
 - Do not fold Hub, consulting, DTP, and project repos into one ownership surface.

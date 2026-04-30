@@ -39,6 +39,7 @@ Use this map when a prompt could route to more than one skill, template, process
 | "new client kit", "Mom nonprofit", "engagement plan" | Client Operating Kit | diagnose, plan, consent, data inventory | private engagement material stays private |
 | "research this tool/protocol", "should we adopt X" | research radar or research spike | Future Intelligence layer | classify Adopt/Pilot/Watch/Reject |
 | "agent failed", "lesson learned", "make this self-learning" | lesson capture and eval candidate | agent session record | human approves skill/eval updates |
+| "FAOS", "Frontier Agentic Operating System", "agent operating system", "agent orchestration substrate", "op wrapper", "Langfuse/Mem0/Letta", "Spec-Kit Phase 0" | FAOS orchestration roadmap | `practice-os/templates/faos-phase-readiness-review.md`, Agentic Performance Gap Review, Roadmap Steward review | roadmap/research only unless Phase 0A readiness review is accepted; do not create `faos` repo or mutate DTP/skills automatically |
 | "red-team this AI flow", "guardrails", "prompt injection" | AI red-team plan | OWASP/NIST/OpenAI guardrail references | before public/write-enabled AI |
 | "feature flag", "kill switch", "rollback plan" | feature flag/kill switch plan | release trust/supply-chain baseline | required for risky client-facing automation |
 | "which repo should this touch", "all apps covered?" | repo manifest and portfolio scorecard | workspace roadmap/backlog | do not force churn into every repo |
@@ -58,6 +59,7 @@ Use these labels in Roadmap Steward reviews and handoffs:
 - `coi_privacy_gate`
 - `research_eval_lesson`
 - `repo_touch_pass`
+- `faos_orchestration_spike`
 - `parked_gated_automation`
 
 ## Update Rules
