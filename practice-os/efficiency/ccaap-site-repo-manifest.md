@@ -28,7 +28,7 @@ review_status: draft
 
 - Local gate: `pnpm install --frozen-lockfile`, `pnpm lint`, `pnpm check`, `pnpm validate:content`, `pnpm build`
 - CI gate: GitHub Actions CI runs lint/build on `main` and pull requests
-- Release gate: Cloudflare Pages preview passes, owner review passes, PayPal links are real, contact routing is approved, DNS is ready, and authentic assets are approved
+- Release gate: Cloudflare Pages preview passes, owner review passes, PayPal links are real, contact routing is approved, DNS is ready, authentic assets are approved, and `pnpm validate:launch` passes
 - Support gate: launch checklist and deployment runbook stay current
 - Manual gate: public proof requires permission, redaction, reviewer, after-state evidence, and caveat
 
@@ -41,7 +41,7 @@ review_status: draft
 
 ## Automation
 
-- Safe read commands: `rg`, `git status`, `git diff`, `pnpm lint`, `pnpm check`, `pnpm validate:content`, `pnpm build`
+- Safe read commands: `rg`, `git status`, `git diff`, `pnpm lint`, `pnpm check`, `pnpm validate:content`, `pnpm validate:launch`, `pnpm build`
 - Safe write commands: public site docs/content/components when the CCAAP lane is active
 - Commands that need explicit approval: production DNS/domain changes, PayPal button/link changes against live accounts, contact-form routing to real inboxes, Cloudflare production deploy actions, CMS/admin setup, AI chat, and public proof publication
 - Dependency maintenance: keep lightweight; use local gates and CI before merging bumps
@@ -52,4 +52,4 @@ review_status: draft
 - Lane: CCAAP launch readiness
 - Trigger: PayPal links, contact routing, domain/DNS access, approved assets, owner review, or Cloudflare preview setup
 - Blocker: production launch waits on PayPal donation/membership links, contact routing, DNS/domain access, authentic photos/resources, Leah plus Dad review, and proof permission/internal-only decision
-- Next action: replace placeholders, connect Cloudflare preview, add authentic assets/resources, and run owner review before production
+- Next action: gather owner inputs with `docs/OWNER_LAUNCH_INPUTS.md`, replace placeholders, connect Cloudflare preview, add authentic assets/resources, and run owner review before production
