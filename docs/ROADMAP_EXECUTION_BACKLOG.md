@@ -125,8 +125,8 @@ Goal: reduce rediscovery, setup drift, CI waste, and handoff friction.
 | Workspace Command Center spec | `diagnose-to-plan` | Done | `docs/WORKSPACE_COMMAND_CENTER_V0.md` defines read-only inputs, outputs, gates, and safety boundaries | no command runner yet |
 | Workspace Command Center V0 read-only report | `diagnose-to-plan` | Done | `dtp workspace report` outputs text/JSON from DTP-owned manifests, evidence indexes, backlog, and command-center docs without executing repo commands or calling GitHub; missing repo rows can carry explicit Active Next Queue blockers | use for steward preflight; live git/CI reads remain later |
 | GitHub Enterprise org alignment | non-DSE portfolio repos | Done | local remotes, repo manifests, current docs, and `hub-registry` targets use `Toni-Montez-Consulting`; `dse-content` remains personal/Microsoft-linked and COI-gated | keep future repo references on the org namespace; do not move DSE without explicit COI-aware scope |
-| GitHub Enterprise org migration closeout | Omnexus, Hub, DTP | Active / blocked | Omnexus PR #559 is merged after required review, local protected-repo PR branches are pruned safely, and DTP closeout receipt reflects final state | Omnexus #559 is still blocked by required review; Hub stale local org branch is cleaned |
-| Hub Dependabot triage V0 | `hub` | Done | selected dependency PRs pass accepted local and remote gates before merge | PR #59 merged after strict audit fix; #52/#54/#55/#56 remain parked for separate review |
+| GitHub Enterprise org migration closeout | Omnexus, Hub, DTP | Done | Omnexus PR #559 is merged after required review, local protected-repo PR branches are pruned safely, and DTP closeout receipt reflects final state | Closed on 2026-04-30; keep future repo references on the org namespace |
+| Hub Dependabot triage V0 | `hub` | Done | selected dependency PRs pass accepted local and remote gates before merge | PR #59 merged after strict audit fix; PR #55 merged after React 19 peer alignment; #54/#56/#61 remain parked for separate review |
 | Workspace Command Center live status/runner | `diagnose-to-plan` | Later | separate boundary decision accepts live git/CI reads or command execution without weakening repo-local gates | do not implement from the V0 report |
 | Affected-only verification | DTP/Hub first | Later | hard gates are reliably encoded per repo | keep advisory until proven |
 | Dependency maintenance policy | each repo | Later | grouping/schedule/approval rules accepted | do not enable bots broadly yet |
@@ -216,7 +216,7 @@ Goal: capture and eventually implement the Frontier Agentic Operating System ide
 
 Standing preflight/postflight: use `practice-os/templates/activation-routing-map.md`, `practice-os/templates/agentic-performance-gap-review.md`, and `practice-os/templates/roadmap-steward-review.md` for major roadmap sessions so the right skill/template/process is selected, agentic performance gaps are caught, and new ideas, blockers, repo lanes, gates, and no-touch boundaries are captured before memory drift.
 
-1. Keep Hub dependency PRs #52/#54/#55/#56 parked until one is explicitly selected with a migration/security plan; PR #59 is merged and no longer blocks the queue.
+1. Keep Hub dependency PRs #54/#56/#61 parked until one is explicitly selected with a migration/security plan; PRs #59 and #55 are merged and no longer block the queue. Older PR #52 is no longer in the active visible queue.
 2. Collect Mom nonprofit owner-confirmed facts: site owner, backup owner, meeting source of truth, form/payment routing, update workflow, proof reviewer, and screenshot permissions; private intake fields are prepared, but answers are still pending owner confirmation.
 3. Decide the Mom site execution path after owner facts: Wix cleanup, rebuild, or migration.
 4. Capture owner-approved baseline/after-state evidence for the first proof candidate and run redaction/permission review.

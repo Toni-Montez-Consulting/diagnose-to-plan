@@ -96,7 +96,7 @@ Decision: keep the stricter local gate for this pass. PR #59 was merged only aft
 |---|---|---|
 | #52 dev-dependencies group | remote build-test failures | do not merge blindly |
 | #54 `@vitejs/plugin-react` 6.x | remote typecheck/deps/build/Vercel failures | separate migration/debug pass |
-| #55 `react-dom` and types | remote audit and Windows Node 24 failures | separate compatibility pass |
+| #55 `react-dom` and types | merged after compatibility pass | React 19 runtime/types aligned before merge |
 | #56 `openai` 4.x to 6.x | remote audit and Windows Node 24 failures | separate major SDK migration review |
 
 ## Blockers
@@ -107,6 +107,6 @@ Decision: keep the stricter local gate for this pass. PR #59 was merged only aft
 
 ## Follow-Ups
 
-1. Leave Hub PRs #52/#54/#55/#56 parked until explicitly selected; do not merge major or failing dependency work blindly.
+1. Leave Hub PRs #54/#56/#61 parked until explicitly selected; do not merge major or failing dependency work blindly. PR #55 is now closed.
 2. Keep Hub dependency policy strict for production audit findings unless a future decision record explicitly accepts a different severity threshold.
 3. Continue Mom nonprofit only after owner facts and permission decisions are captured.

@@ -935,7 +935,7 @@ Standing preflight/postflight: run the Activation Routing Map plus the Roadmap S
 
 Preflight: use the Practice System Documentation Pack as the current/future/audit/optimization reference before adding major new platform, proof, agent, or cross-repo behavior.
 
-1. Keep Hub dependency PRs #52/#54/#55/#56 parked until one is explicitly selected with a migration/security plan; PR #59 no longer blocks the queue.
+1. Keep Hub dependency PRs #54/#56/#61 parked until one is explicitly selected with a migration/security plan; PRs #59 and #55 no longer block the queue. Older PR #52 is no longer in the active visible queue.
 2. Collect Mom nonprofit owner-confirmed facts, permission, screenshot approval, proof reviewer, and meeting/form/payment source-of-truth decisions; private intake fields are prepared, but answers are still pending owner confirmation.
 3. Decide the Mom site execution path: Wix cleanup, rebuild, or migration.
 4. Keep Hub prompt/registry cross-validation local-first; decide private sibling-repo CI access only if it becomes worth the operational cost.
@@ -944,7 +944,7 @@ Preflight: use the Practice System Documentation Pack as the current/future/audi
 7. Use DeMario command room and Omnexus verification toolkit as proof/reference material only after permission/redaction review.
 8. Start hosted DTP implementation only after the Mom pilot/proof workflow gives the app real records to persist.
 
-Closed on 2026-04-30: GitHub Enterprise org-migration closeout for Omnexus PR #559. Hub's stale local org branch is cleaned, Hub PR #59 is merged, Omnexus PR #559 is merged, and local Omnexus org-migration branches were pruned after merge confirmation.
+Closed on 2026-04-30: GitHub Enterprise org-migration closeout for Omnexus PR #559. Hub's stale local org branch is cleaned, Hub PRs #59 and #55 are merged, Omnexus PR #559 is merged, and local Omnexus org-migration branches were pruned after merge confirmation.
 
 Non-blocking intelligence track: use the optional Future Intelligence templates during the next real delivery/research sessions, but do not insert them ahead of hosted DTP Phase 0 or proof/redaction work.
 

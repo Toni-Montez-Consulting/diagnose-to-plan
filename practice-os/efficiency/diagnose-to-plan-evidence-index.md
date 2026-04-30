@@ -38,7 +38,7 @@ review_status: draft
 - Hosted DTP app implementation is intentionally not started.
 - Mom nonprofit owner facts and permissions still need to be captured before build/migration, public proof, or hosted persistence planning.
 - Public proof still needs permission, redaction, reviewer, evidence, and caveat gates.
-- GitHub Enterprise org-migration closeout is complete for Omnexus PR #559; Hub PR #59 is already merged; non-DSE org alignment is no longer the active blocker.
+- GitHub Enterprise org-migration closeout is complete for Omnexus PR #559; Hub PRs #59 and #55 are merged; non-DSE org alignment is no longer the active blocker.
 - Workspace Command Center V0 reports recorded artifacts only; live git/CI reads and command execution remain later. Missing repo rows may carry explicit Active Next Queue blockers without inferring gates.
 - Repo manifest/evidence index shape now covers DTP, consulting, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus. `dse-content` remains missing until its lane is clean or explicitly selected with COI-aware scope.
 
