@@ -248,7 +248,7 @@ Follow-up story: protocol/tool spike later.
 | `hub-registry` | yes | registry cross-validation |
 | `fitness-app` | yes | reference extraction/proof after branch review |
 | `FamilyTrips` | yes | privacy maintenance pass |
-| `demario-pickleball-1` | yes | command-room proof pass |
+| `demario-pickleball-1` | yes | manifest/evidence index done; command-room proof pass still later |
 | `dse-content` | yes | COI-aware proof pass |
 | `tm-skills` | yes | cross-tool reload smoke tests |
 

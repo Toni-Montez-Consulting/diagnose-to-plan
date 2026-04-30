@@ -112,10 +112,11 @@ Goal: reduce rediscovery, setup drift, CI waste, and handoff friction.
 
 | Story | Repo | Status | Done gate | Next action |
 |---|---|---|---|---|
-| DTP repo manifest/evidence-index pilot | `diagnose-to-plan` | Done | pilot shape accepted as useful | expand to consulting, Hub, and `tm-skills` when their lanes are touched |
-| Consulting repo manifest | `consulting` | Ready | manifest names gates, deploy target, proof lane, and data boundaries | create after DTP pilot accepted |
-| Hub repo manifest | `hub` | Ready | manifest names runtime gates, Supabase/Vercel boundaries, and prompt/run ownership | create after DTP pilot accepted |
-| `tm-skills` repo manifest | `tm-skills` | Ready | manifest names install gates and global-skill boundaries | create after DTP pilot accepted |
+| DTP repo manifest/evidence-index pilot | `diagnose-to-plan` | Done | pilot shape accepted as useful | core manifests plus first DeMario adjacent pass now exist |
+| Consulting repo manifest | `consulting` | Done | manifest names gates, deploy target, proof lane, and data boundaries | keep current during consulting proof/intake work |
+| Hub repo manifest | `hub` | Done | manifest names runtime gates, Supabase/Vercel boundaries, and prompt/run ownership | keep current during Hub runtime and prompt/registry work |
+| `tm-skills` repo manifest | `tm-skills` | Done | manifest names install gates and global-skill boundaries | keep current during skill smoke/canary work |
+| DeMario repo manifest/evidence index | `diagnose-to-plan`, `demario-pickleball-1` | Done | manifest and evidence index capture launch gates, proof blockers, command-room role, and local/CI evidence without mutating app code | use for future command-room proof pass |
 | Workspace Command Center spec | `diagnose-to-plan` | Later | manifests/evidence indexes prove useful in at least two repos | no command runner yet |
 | Affected-only verification | DTP/Hub first | Later | hard gates are reliably encoded per repo | keep advisory until proven |
 | Dependency maintenance policy | each repo | Later | grouping/schedule/approval rules accepted | do not enable bots broadly yet |
@@ -165,7 +166,7 @@ Goal: ensure every workspace repo benefits without unnecessary churn.
 | Story | Repo | Status | Done gate | Next action |
 |---|---|---|---|---|
 | Omnexus verification cockpit review | `fitness-app` | Later | active PR/branch human-reviewed, reusable lessons extracted | do not mutate until reopened |
-| DeMario launch/proof pass | `demario-pickleball-1` | Later | manual launch/venue/permission gates complete | owner-safe proof only |
+| DeMario launch/proof pass | `demario-pickleball-1` | Later | manual launch/venue/permission gates complete | manifest/evidence index exists; owner-safe proof only |
 | FamilyTrips privacy maintenance pass | `FamilyTrips` | Later | data validation/build/test and privacy notes complete | before new features or AI/public sharing |
 | DSE COI-aware proof pass | `dse-content` | Later | COI screen and live branch verification complete | internal/professional only |
 | Engineering playbook pointer audit | `engineering-playbook` | Later | doctrine points to DTP without duplicating roadmap ownership | after DTP contracts settle |
@@ -210,7 +211,7 @@ Standing preflight/postflight: use `practice-os/templates/activation-routing-map
 3. Capture owner-approved baseline/after-state evidence for the first proof candidate and run redaction/permission review.
 4. Finish `tm-skills` discovery smoke testing in Claude Code and GitHub Copilot; Codex discovery is verified.
 5. Keep Hub prompt/registry cross-validation local-first; decide private sibling-repo CI access only if it becomes worth the operational cost.
-6. Keep repo manifests current as lanes are touched; DTP, consulting, Hub, and `tm-skills` now have DTP-owned manifests/evidence indexes.
+6. Keep repo manifests current as lanes are touched; DTP, consulting, Hub, `tm-skills`, and DeMario now have DTP-owned manifests/evidence indexes.
 7. Run FAOS Phase 0 readiness review only after the current pilot/proof/smoke/Hub-validation path; do not build FAOS from the raw Phase 0 prompt yet.
 
 ## Answer To The Kanban Question

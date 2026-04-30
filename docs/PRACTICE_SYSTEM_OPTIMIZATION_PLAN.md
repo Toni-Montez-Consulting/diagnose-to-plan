@@ -93,10 +93,11 @@ Goal: make future agents stop rediscovering repo purpose, gates, proof lanes, an
 | Story | Repo | Status | Done Gate | Next Action |
 |---|---|---|---|---|
 | DTP manifest/evidence index | `diagnose-to-plan` | Done | pilot exists | use as shape reference |
-| Consulting manifest | `consulting` | Ready | purpose, routes, gates, deploy target, proof lane, Hub boundary named | do during next consulting pass |
-| Hub manifest | `hub` | Ready | runtime gates, Supabase/Vercel boundaries, prompts/runs ownership named | do during prompt/registry pass |
-| `tm-skills` manifest | `tm-skills` | Ready | install gates, global skill boundaries, smoke tests named | do during install pass |
-| Adjacent repo manifests | project repos | Later | each repo gets manifest when touched | use touch-pass trigger |
+| Consulting manifest | `consulting` | Done | purpose, routes, gates, deploy target, proof lane, Hub boundary named | keep current during consulting work |
+| Hub manifest | `hub` | Done | runtime gates, Supabase/Vercel boundaries, prompts/runs ownership named | keep current during prompt/registry work |
+| `tm-skills` manifest | `tm-skills` | Done | install gates, global skill boundaries, smoke tests named | keep current during skill smoke/canary work |
+| DeMario manifest/evidence index | `demario-pickleball-1` | Done | launch gates, command-room role, proof blockers, and local/CI evidence named | use for future command-room proof pass |
+| Remaining adjacent repo manifests | project repos | Later | each repo gets manifest when touched | use touch-pass trigger |
 
 Gate: manifests are advisory until proven useful in at least two repos.
 
@@ -149,7 +150,7 @@ Goal: every workspace repo benefits eventually without unnecessary churn.
 | Repo | Trigger | First Touch |
 |---|---|---|
 | `fitness-app` | active branch reviewed or proof request opens | extract verification lessons, do not disturb live app work |
-| `demario-pickleball-1` | launch/proof permission is ready | command-room proof and launch gate pass |
+| `demario-pickleball-1` | launch/proof permission is ready | manifest/evidence index exists; next pass is command-room proof and launch gate pass |
 | `FamilyTrips` | new feature, AI, public sharing, or maintenance request | privacy-first validation/build/test pass |
 | `dse-content` | proof or Microsoft-adjacent reuse request | COI-aware proof review |
 | `engineering-playbook` | doctrine or template change | pointer audit to DTP source of truth |

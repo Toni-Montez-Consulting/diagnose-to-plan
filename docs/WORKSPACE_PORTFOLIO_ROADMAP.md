@@ -300,8 +300,8 @@ Every workspace repo benefits, but not every repo needs a CI change in this stor
 | `engineering-playbook` | Doctrine, portfolio schemas, secret-management references | Alignment only; no duplicated roadmap ownership | Update only when general doctrine changes |
 | `hub-prompts` | Prompt catalogue consumed by Hub | Workflow now runs full `npm test` | Add/evolve eval fixtures for high-value prompts |
 | `hub-registry` | Hub automation target routing | Workflow keeps CI-safe registry validation; local `npm test` validates sibling manifests and prompt ids | Design private sibling-repo access for CI only if local-only validation becomes a bottleneck |
-| `fitness-app` / Omnexus | Reference verification cockpit and product proof track | No mutation because active branch has uncommitted work | Finish/review PR #553 and promote patterns only after permission/redaction |
-| `demario-pickleball-1` | Client Command Room reference and local-business proof track | Alignment only; existing CI remains owner | Manual launch gates, venue rules, Node 24 maintenance |
+| `fitness-app` / Omnexus | Reference verification cockpit and product proof track | No mutation in this pass; keep active PR/work as reference until reviewed | Finish/review PR #553 and promote patterns only after permission/redaction |
+| `demario-pickleball-1` | Client Command Room reference and local-business proof track | First adjacent manifest/evidence touch pass complete; existing CI remains owner | Manual launch gates, venue rules, Node 24 maintenance, proof permission |
 | `FamilyTrips` | Private family planning app | Alignment only | Privacy-first `validate:data`, build, and tests before feature work |
 | `dse-content` | Microsoft/internal readiness and workflow proof track | Alignment only | COI-aware internal proof and live-branch verification before any public reuse |
 
@@ -319,7 +319,7 @@ This is the master coverage queue. Each repo gets at least one explicit future p
 | `hub-prompts` | Prompt eval/golden fixture pass | After Hub cross-validation design | High-value prompt fixtures and versioning rules |
 | `hub-registry` | Cross-repo prompt id and manifest validation pass | Local-first validation now exists | Decide later whether CI should receive private sibling-repo access |
 | `fitness-app` / Omnexus | Verification cockpit review and launch-stability pass | After active PR/branch work is human-reviewed | Merge/readiness decision, reusable verification lessons, redacted proof candidates |
-| `demario-pickleball-1` | Launch/Command Room proof pass | After manual launch gates and permission are handled | Owner-safe proof packet, venue-routing maintenance, Node 24 CI maintenance |
+| `demario-pickleball-1` | Launch/Command Room proof pass | After manual launch gates and permission are handled | DTP-owned manifest/evidence index exists; next output is owner-safe proof packet, venue-routing maintenance, or Node 24 CI maintenance |
 | `FamilyTrips` | Privacy-first maintenance pass | Before adding features or AI/public sharing | Data validation/build/test status, privacy/data ownership notes, lightweight CI decision |
 | `dse-content` | COI-aware internal proof and workflow maintenance pass | Before any DSE material is reused publicly or professionally | COI screen, redaction/permission notes, live-branch verification |
 
@@ -569,7 +569,7 @@ Priority:
 - Public proof now has asset/redaction/permission templates and the private Mom nonprofit kit includes the first proof/redaction draft; it still needs a real claim, source evidence, permission, redaction, reviewer approval, and caveat.
 - Agent-security research is now represented here; promote specific gates into implementation docs before any deeper autonomous workflows.
 - Future Intelligence templates now exist as optional Practice OS assets, but they still need first real use before becoming required gates.
-- Workspace Efficiency templates now exist as optional Practice OS assets. DTP, consulting, Hub, and `tm-skills` now have DTP-owned repo manifests/evidence indexes; adjacent repos should get the same treatment only when their lanes are touched.
+- Workspace Efficiency templates now exist as optional Practice OS assets. DTP, consulting, Hub, `tm-skills`, and DeMario now have DTP-owned repo manifests/evidence indexes; remaining adjacent repos should get the same treatment only when their lanes are touched.
 - Roadmap Steward V0 now exists as a required Practice OS template and backlog lane; live steward receipts now capture hosted-DTP acceptance and the Mom nonprofit pilot kickoff.
 - AI Activation Map V0 now exists as a required Practice OS template and has been used for the roadmap/steward and Mom pilot routing; keep using it when prompt intent spans multiple lanes.
 - Agentic Performance Gap Review V0 now exists as a required Practice OS template; use it whenever agent behavior, skill routing, research adoption, validation, or learning-loop conversion looks weak.
@@ -935,13 +935,13 @@ Preflight: use the Practice System Documentation Pack as the current/future/audi
 1. Collect Mom nonprofit owner-confirmed facts, permission, screenshot approval, proof reviewer, and meeting/form/payment source-of-truth decisions.
 2. Decide the Mom site execution path: Wix cleanup, rebuild, or migration.
 3. Keep Hub prompt/registry cross-validation local-first; decide private sibling-repo CI access only if it becomes worth the operational cost.
-4. Keep repo manifests current as touched lanes change; DTP, consulting, Hub, and `tm-skills` now have core manifests/evidence indexes.
-5. Run the first adjacent-project touch pass: pick the repo whose trigger is ready first (`fitness-app`, `demario-pickleball-1`, `FamilyTrips`, or `dse-content`) and execute only its matching lane.
+4. Keep repo manifests current as touched lanes change; DTP, consulting, Hub, `tm-skills`, and DeMario now have manifests/evidence indexes.
+5. Run the next adjacent-project touch pass only when its trigger is ready (`fitness-app`, `FamilyTrips`, `dse-content`, or `engineering-playbook`) and execute only its matching lane.
 6. Use DeMario command room and Omnexus verification toolkit as proof/reference material only after permission/redaction review.
 7. Start hosted DTP implementation only after the Mom pilot/proof workflow gives the app real records to persist.
 
 Non-blocking intelligence track: use the optional Future Intelligence templates during the next real delivery/research sessions, but do not insert them ahead of hosted DTP Phase 0 or proof/redaction work.
 
-Non-blocking efficiency track: keep the DTP, consulting, Hub, and `tm-skills` manifests/evidence indexes current during touched-lane work, then draft the Workspace Command Center only after the manifest shape proves useful across at least one adjacent-project touch pass.
+Non-blocking efficiency track: keep the DTP, consulting, Hub, `tm-skills`, and DeMario manifests/evidence indexes current during touched-lane work, then draft the Workspace Command Center only after the manifest shape proves useful across at least one adjacent-project touch pass.
 
 Non-blocking orchestration track: run the FAOS Phase 0 readiness review after the current pilot/proof/smoke/Hub-validation path. Do not create a `faos` repo, add tracing/memory services, or mutate DTP/tm-skills from the raw Phase 0 prompt until that readiness gate is accepted.

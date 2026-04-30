@@ -342,7 +342,7 @@ Build these after the near-term documentation and pilot path are stable.
    - Introduce feature flags, kill switches, and supply-chain evidence first in higher-risk repos: Omnexus, Hub, hosted DTP, consulting intake/proof, and client launch surfaces.
 
 10. Workspace Efficiency pilot.
-   - Add repo manifests for DTP, consulting, Hub, and `tm-skills` first.
+   - Add repo manifests for DTP, consulting, Hub, and `tm-skills` first; DeMario is now the first adjacent-project touch pass.
    - Add evidence indexes only where verification receipts already exist.
    - Add a decision record for the first real cross-repo automation boundary.
    - Evaluate Renovate or Dependabot grouping before enabling dependency PRs broadly.
@@ -419,7 +419,7 @@ Do not build these into the near-term practice.
 | `engineering-playbook` | Portfolio schemas, templates, historical decisions, general operating doctrine, secret-management references | Source-of-truth practice production roadmap |
 | `hub-prompts` | Hub prompt catalogue, prompt schemas, prompt validation fixtures | Practice roadmap, SDLC skills repo, Hub automation target routing |
 | `hub-registry` | Hub automation targets and routing config | Consulting knowledge registry, DTP engagement kits, case-study planning |
-| `demario-pickleball-1` | Brother/local business launch proof track, client project delivery, Client Command Room reference implementation | Practice-wide roadmap |
+| `demario-pickleball-1` | Brother/local business launch proof track, client project delivery, Client Command Room reference implementation | Practice-wide roadmap; DTP only owns the manifest/evidence receipt and proof-governance routing |
 | `fitness-app` / Omnexus | Founder/product/operator proof, app launch evidence, reference CLI verification toolkit shape | Practice OS source of truth |
 | `FamilyTrips` | Private family trip planning app, data validation, privacy-bound trip coordination | Practice-wide roadmap, public proof, consulting runtime |
 | `dse-content` | Internal Azure Apps/AI content, readiness/workflow surfaces, MSX/DSE automation, Microsoft-adjacent proof candidates | Public consulting proof without COI, permission, and redaction review |
