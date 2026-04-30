@@ -161,7 +161,7 @@ flowchart TD
     Receipt --> EvidenceIndex
 ```
 
-Future command-center rule: it should orchestrate and explain. It should not own repo rules, centralize secrets, or mutate repos before repo-local gates are encoded.
+Current V0 command-center rule: `dtp workspace report` may summarize recorded DTP manifests, evidence indexes, backlog blockers, and missing coverage only. Future live command-center behavior should orchestrate and explain. It should not own repo rules, centralize secrets, or mutate repos before repo-local gates are encoded.
 
 ## Future Agent Activation Model
 

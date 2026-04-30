@@ -7,25 +7,26 @@ review_status: draft
 
 # Workspace Command Center V0
 
-Status: spec-only, read-only, not implemented.
+Status: implemented to the V0 read-only report boundary as `dtp workspace report`.
 
-Purpose: define the first useful shape for a workspace command center after repo manifests and evidence indexes proved useful across DTP, consulting, Hub, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus.
+Purpose: define and run the first useful shape for a workspace command center after repo manifests and evidence indexes proved useful across DTP, consulting, Hub, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus.
 
 ## Boundary
 
 V0 is a reporting surface, not an automation runner.
 
-It may read:
+`dtp workspace report` may read DTP-owned artifacts only:
 
 - repo manifests in `practice-os/efficiency/`
 - evidence indexes in `practice-os/efficiency/`
-- DTP roadmap/backlog docs
-- local `git status` summaries
-- CI status links or manually recorded run ids
-- repo-local docs that are named by manifests
+- `docs/ROADMAP_EXECUTION_BACKLOG.md`
+- `docs/WORKSPACE_COMMAND_CENTER_V0.md`
+- manually recorded verification state inside DTP evidence indexes
 
 It must not:
 
+- execute repo-local commands
+- call GitHub or live CI APIs
 - mutate files
 - execute repo checks
 - apply fixes
@@ -35,42 +36,45 @@ It must not:
 - touch production systems, Vercel, Supabase, Google OAuth, billing, or client data
 - read or print secrets, private client records, family data, or raw logs
 
+Future versions may add live git or CI reads only after a separate boundary decision. V0 reports live state as `not_checked_v0`.
+
 ## Inputs
 
 | Input | Source | Notes |
 |---|---|---|
-| Repo coverage | `docs/WORKSPACE_PORTFOLIO_ROADMAP.md`, `docs/ROADMAP_EXECUTION_BACKLOG.md` | identifies owned lanes, blockers, and next actions |
+| Repo coverage | canonical repo list in the CLI plus `docs/ROADMAP_EXECUTION_BACKLOG.md` | identifies owned lanes, blockers, and next actions |
 | Repo manifests | `practice-os/efficiency/*-repo-manifest.md` | names owner lane, gates, sensitive data, safe commands, and next touch trigger |
 | Evidence indexes | `practice-os/efficiency/*-evidence-index.md` | names latest receipt, result, open gaps, and proof state |
-| Git status | read-only local status command | identifies dirty/clean and branch drift; does not fix |
-| CI status | GitHub Actions links or run ids | read-only summary only |
+| Git status | not checked in V0 | live git reads stay later |
+| CI status | manually recorded run ids in evidence indexes only | no live GitHub calls in V0 |
 | Proof/privacy gates | proof/redaction templates and manifest notes | highlights blocked public proof, COI, and privacy risks |
 
 ## Outputs
 
-The V0 report should produce:
+The V0 report produces:
 
-- repo health table
-- changed repos
+- repo coverage table
 - suggested local gates
-- stale evidence warnings
+- manifest/evidence status
+- latest recorded verification state
 - open blockers
 - proof/privacy/COI warnings
 - manual gates
 - next actions by repo
 - parked automation items
+- optional machine-readable JSON via `dtp workspace report --json`
 
 ## Report Shape
 
-| Repo | Lane | State | Latest evidence | Suggested gate | Blocker | Next action |
+| Repo | Lane | Recorded state | Latest evidence | Suggested gate | Blocker | Next action |
 |---|---|---|---|---|---|---|
-| `diagnose-to-plan` | Practice OS | clean/dirty | DTP CI or local validation | pytest/ruff/skills/doctor | varies | current roadmap story |
-| `consulting` | public proof/storefront | clean/dirty | build/secret scan/proof packet | build/secrets/route smoke | proof gates | public-safe updates only |
-| `hub` | runtime/intake | clean/dirty | CI/security/local verify | pnpm verify or targeted gates | production secrets | runtime/support work |
-| `tm-skills` | global SDLC skills | clean/dirty | doctor/freshness/install preview | doctor/freshness/WhatIf | external smoke | skill canary/misfires |
-| `engineering-playbook` | doctrine/reference | clean/dirty | local ops status | script parse/status-only/diff hygiene | roadmap ownership drift | doctrine/policy maintenance |
-| `fitness-app` / Omnexus | app release and verification cockpit reference | clean/dirty | Omnexus evidence index | tools doctor/matrix, CI, Verification Toolkit, release runbooks | user/billing/App Store/proof privacy | verification pattern extraction or app-release lane |
-| project repos | app-specific lane | clean/dirty | repo-local index | manifest gate | privacy/proof/launch | one scoped touch pass |
+| `diagnose-to-plan` | Practice OS | manifest/evidence ok | DTP CI or local validation from evidence index | pytest/ruff/skills/doctor | varies | current roadmap story |
+| `consulting` | public proof/storefront | manifest/evidence ok | build/secret scan/proof packet from evidence index | build/secrets/route smoke | proof gates | public-safe updates only |
+| `hub` | runtime/intake | manifest/evidence ok | CI/security/local verify from evidence index | pnpm verify or targeted gates | production secrets | runtime/support work |
+| `tm-skills` | global SDLC skills | manifest/evidence ok | doctor/freshness/install preview from evidence index | doctor/freshness/WhatIf | external smoke | skill canary/misfires |
+| `engineering-playbook` | doctrine/reference | manifest/evidence ok | local ops status from evidence index | script parse/status-only/diff hygiene | roadmap ownership drift | doctrine/policy maintenance |
+| `fitness-app` / Omnexus | app release and verification cockpit reference | manifest/evidence ok | Omnexus evidence index | tools doctor/matrix, CI, Verification Toolkit, release runbooks | user/billing/App Store/proof privacy | verification pattern extraction or app-release lane |
+| project repos | app-specific lane | manifest/evidence may be missing | repo-local index when touched | manifest gate | privacy/proof/launch | one scoped touch pass |
 
 ## Suggested Gates
 
@@ -85,7 +89,7 @@ Gate classes:
 
 ## Safety Rules
 
-- If a repo is dirty and not owned by the current story, report it and do not touch it.
+- If a future live version reports a repo as dirty and it is not owned by the current story, report it and do not touch it.
 - If a repo contains private/client/family data, summarize the risk without copying details.
 - If proof is requested, require evidence, permission, redaction, reviewer, and caveat.
 - If DSE/Microsoft/customer-adjacent material appears, route to COI review.
@@ -93,14 +97,14 @@ Gate classes:
 
 ## Pilot Acceptance
 
-The V0 spec is accepted when a future manual or CLI report can answer:
+The V0 report is accepted when `dtp workspace report` can answer:
 
-- Which repos changed?
 - Which repo owns the next story?
 - Which checks should run?
-- Which evidence is stale?
+- Which repos still need DTP-owned manifest/evidence coverage?
+- Which verification evidence is recorded?
 - Which proof/privacy/COI gates block publication?
 - Which automation is parked?
 - What should happen next?
 
-Implementation stays later until at least one more adjacent repo touch pass confirms this report shape reduces rediscovery.
+The live runner stays later until the read-only report proves value and a separate boundary decision accepts any live git, CI, or command-execution behavior.

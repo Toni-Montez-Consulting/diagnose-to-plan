@@ -121,7 +121,8 @@ Goal: reduce rediscovery, setup drift, CI waste, and handoff friction.
 | Engineering playbook repo manifest/evidence index | `diagnose-to-plan`, `engineering-playbook` | Done | manifest and evidence index capture doctrine/reference boundary, local evidence gates, and DTP source-of-truth pointer | revisit only when general doctrine or portfolio policy changes |
 | Omnexus repo manifest/evidence index | `diagnose-to-plan`, `fitness-app` | Done | manifest and evidence index capture verification cockpit reference, release evidence, proof gates, and app-data boundaries without mutating app code | use as reference pattern; no public proof without permission/redaction/reviewer/caveat |
 | Workspace Command Center spec | `diagnose-to-plan` | Done | `docs/WORKSPACE_COMMAND_CENTER_V0.md` defines read-only inputs, outputs, gates, and safety boundaries | no command runner yet |
-| Workspace Command Center implementation | `diagnose-to-plan` | Later | read-only report proves value and no mutation boundary remains intact | implement only after another touch pass confirms the report shape |
+| Workspace Command Center V0 read-only report | `diagnose-to-plan` | Done | `dtp workspace report` outputs text/JSON from DTP-owned manifests, evidence indexes, backlog, and command-center docs without executing repo commands or calling GitHub | use for steward preflight; live git/CI reads remain later |
+| Workspace Command Center live status/runner | `diagnose-to-plan` | Later | separate boundary decision accepts live git/CI reads or command execution without weakening repo-local gates | do not implement from the V0 report |
 | Affected-only verification | DTP/Hub first | Later | hard gates are reliably encoded per repo | keep advisory until proven |
 | Dependency maintenance policy | each repo | Later | grouping/schedule/approval rules accepted | do not enable bots broadly yet |
 
@@ -215,9 +216,10 @@ Standing preflight/postflight: use `practice-os/templates/activation-routing-map
 3. Capture owner-approved baseline/after-state evidence for the first proof candidate and run redaction/permission review.
 4. Keep Claude Code and GitHub Copilot `tm-skills` discovery smoke testing on the manual back burner; runbook exists, links are healthy, and Codex discovery is verified, but external reload checks remain manual and non-blocking.
 5. Keep Hub prompt/registry cross-validation local-first; decide private sibling-repo CI access only if it becomes worth the operational cost.
-6. Keep repo manifests current as lanes are touched; DTP, consulting, Hub, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus now have DTP-owned manifests/evidence indexes.
-7. Keep DSE blocked until its active branch is clean or explicitly selected with COI-aware scope.
-8. Run FAOS Phase 0 readiness review only after the current pilot/proof/smoke/Hub-validation path; do not build FAOS from the raw Phase 0 prompt yet.
+6. Use `dtp workspace report` as a read-only steward preflight when checking repo coverage, recorded evidence, suggested gates, blockers, and missing manifest/evidence coverage.
+7. Keep repo manifests current as lanes are touched; DTP, consulting, Hub, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus now have DTP-owned manifests/evidence indexes.
+8. Keep DSE blocked until its active branch is clean or explicitly selected with COI-aware scope.
+9. Run FAOS Phase 0 readiness review only after the current pilot/proof/smoke/Hub-validation path; do not build FAOS from the raw Phase 0 prompt yet.
 
 ## Answer To The Kanban Question
 

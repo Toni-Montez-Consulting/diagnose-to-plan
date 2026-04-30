@@ -99,7 +99,8 @@ Goal: make future agents stop rediscovering repo purpose, gates, proof lanes, an
 | DeMario manifest/evidence index | `demario-pickleball-1` | Done | launch gates, command-room role, proof blockers, and local/CI evidence named | use for future command-room proof pass |
 | FamilyTrips manifest/evidence index | `FamilyTrips` | Done | privacy model, local gates, deploy smoke, and no-auth/no-AI boundary named | use before future FamilyTrips feature or sharing work |
 | Omnexus manifest/evidence index | `fitness-app` | Done | verification cockpit reference, release evidence, proof gates, and app-data boundaries named without mutating app code | use as reference pattern and proof input only after gates |
-| Workspace Command Center V0 spec | `diagnose-to-plan` | Done | read-only inputs, outputs, safety boundaries, and pilot acceptance named | no runner yet |
+| Workspace Command Center V0 spec | `diagnose-to-plan` | Done | read-only inputs, outputs, safety boundaries, and pilot acceptance named | pair with `dtp workspace report` |
+| Workspace Command Center V0 read-only report | `diagnose-to-plan` | Done | `dtp workspace report` outputs text/JSON from DTP-owned manifests, evidence indexes, backlog, and command-center docs without repo commands or GitHub calls | use for steward preflight; live runner remains later |
 | Remaining adjacent repo manifests | project repos | Later | each repo gets manifest when touched | use touch-pass trigger |
 
 Gate: manifests are advisory until proven useful in at least two repos.

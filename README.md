@@ -19,6 +19,7 @@ Current scope:
 - `dtp note`, `dtp story`, and `dtp mentor` capture practice context without an agent call
 - `dtp index`, `dtp detect`, `dtp lesson`, `dtp recall`, and `dtp synthesize` power Extract Through Synthesis
 - `dtp kit`, `dtp redact`, and `dtp practice doctor` power the Practice OS + Client Operating Kit workflow
+- `dtp workspace report` powers the read-only Workspace Command Center V0 report from DTP-owned manifests, evidence indexes, backlog docs, and blockers
 - `dtp web` opens a local DTP Workbench UI over the same markdown artifacts
 - `dtp vault` gives private `engagements/` artifacts their own git-backed durability path
 - `voice`, `pricing`, and `sow` stay valid placeholder skills for Toni to author
@@ -92,6 +93,7 @@ Run the local checks:
 .\.venv\Scripts\python.exe -m ruff check .
 .\.venv\Scripts\python.exe -m dtp skills --validate
 .\.venv\Scripts\python.exe -m dtp draft inputs/fixture-diagnose.md --output outputs/fixture-review.md
+.\.venv\Scripts\python.exe -m dtp workspace report
 .\.venv\Scripts\python.exe -m dtp index --all
 .\.venv\Scripts\python.exe -m dtp synthesize --no-confirm
 .\.venv\Scripts\python.exe -m dtp practice doctor

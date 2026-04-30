@@ -157,7 +157,7 @@ Operating rules:
 
 Components:
 
-- Workspace Command Center: a root-level command or script that answers what changed, which repos need checks, what to run next, and where the latest evidence lives.
+- Workspace Command Center: `dtp workspace report` now answers recorded coverage, suggested gates, missing manifests/evidence, blockers, next actions, and latest recorded evidence from DTP-owned artifacts; live git/CI reads and command execution remain later.
 - Repo Manifest Standard: a tiny `.repo.yml` or `repo.toml` per repo with purpose, owner lane, local gates, CI gates, evidence paths, deploy target, data sensitivity, and proof rules.
 - Affected-Only Verification: run fast checks only for changed repos/files during normal development, while preserving full gates before release.
 - Shared GitHub Actions, Later: extract repeated setup/cache/secret-scan/build patterns into reusable workflows only after thin CI stabilizes.
@@ -171,7 +171,7 @@ Components:
 Suggested priority:
 
 1. Add repo manifest and evidence-index templates.
-2. Draft the Workspace Command Center spec.
+2. Use the Workspace Command Center V0 spec and `dtp workspace report`; defer live git/CI reads or a command runner until the read-only report proves value.
 3. Add a decision-record template and use it on the next real architecture choice.
 4. Add dependency-maintenance policy to the roadmap for each repo before enabling bots everywhere.
 5. Pilot affected-only verification in DTP or Hub after the repo manifest shape is stable.
@@ -573,7 +573,7 @@ Priority:
 - Roadmap Steward V0 now exists as a required Practice OS template and backlog lane; live steward receipts now capture hosted-DTP acceptance and the Mom nonprofit pilot kickoff.
 - AI Activation Map V0 now exists as a required Practice OS template and has been used for the roadmap/steward and Mom pilot routing; keep using it when prompt intent spans multiple lanes.
 - Agentic Performance Gap Review V0 now exists as a required Practice OS template; use it whenever agent behavior, skill routing, research adoption, validation, or learning-loop conversion looks weak.
-- Workspace Command Center V0 is now captured as a read-only spec in `docs/WORKSPACE_COMMAND_CENTER_V0.md`; implementation remains later and must not become a cross-repo command runner yet.
+- Workspace Command Center V0 is now implemented as the read-only `dtp workspace report` boundary described in `docs/WORKSPACE_COMMAND_CENTER_V0.md`; live git/CI reads and command-runner behavior remain later.
 - FAOS orchestration is now captured as a gated future substrate in `docs/FAOS_ORCHESTRATION_ROADMAP.md`; Phase 0 implementation still needs readiness review and technical corrections before any repo or service work.
 - The roadmap now has a Kanban-style execution backlog; keep story status, Done gates, and next actions current as work moves.
 - The Practice System Documentation Pack now exists in DTP; keep it synced as architecture, future-state assumptions, audit findings, and optimization priorities change.
@@ -943,6 +943,6 @@ Preflight: use the Practice System Documentation Pack as the current/future/audi
 
 Non-blocking intelligence track: use the optional Future Intelligence templates during the next real delivery/research sessions, but do not insert them ahead of hosted DTP Phase 0 or proof/redaction work.
 
-Non-blocking efficiency track: keep the DTP, consulting, Hub, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus manifests/evidence indexes current during touched-lane work. The Workspace Command Center V0 spec is drafted; do not implement a runner until another touch pass confirms the report shape.
+Non-blocking efficiency track: keep the DTP, consulting, Hub, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus manifests/evidence indexes current during touched-lane work. The Workspace Command Center V0 report exists as `dtp workspace report`; do not implement live git/CI reads or a runner until the read-only report proves value.
 
 Non-blocking orchestration track: run the FAOS Phase 0 readiness review after the current pilot/proof/smoke/Hub-validation path. Do not create a `faos` repo, add tracing/memory services, or mutate DTP/tm-skills from the raw Phase 0 prompt until that readiness gate is accepted.

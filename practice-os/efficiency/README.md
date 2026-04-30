@@ -17,5 +17,5 @@ Rules:
 - Use pilots to prove the shape before applying it to more adjacent projects.
 - Keep repo-local gates authoritative.
 - Do not centralize secrets, private client data, or production write credentials here.
-- Do not implement a Workspace Command Center runner until repo manifests and evidence indexes prove useful; the V0 spec is docs-only.
+- Use `dtp workspace report` for read-only coverage/evidence/blocker checks; do not implement live git/CI reads or a Workspace Command Center runner until the V0 report proves useful.
 - Treat evidence indexes as receipts from the last review pass, not as a replacement for fresh local validation.

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 from pathlib import Path
 from typing import Annotated
 
@@ -25,6 +26,7 @@ from dtp.commands.vault import (
     run_vault_status,
 )
 from dtp.commands.web import run_workbench_server
+from dtp.commands.workspace_report import render_workspace_report, run_workspace_report
 from dtp.config import load_config
 from dtp.extract.indexer import ExtractError
 from dtp.extract.recall import RecallResult
@@ -35,11 +37,13 @@ kit_app = typer.Typer(no_args_is_help=True, add_completion=False)
 redact_app = typer.Typer(no_args_is_help=True, add_completion=False)
 practice_app = typer.Typer(no_args_is_help=True, add_completion=False)
 vault_app = typer.Typer(no_args_is_help=True, add_completion=False)
+workspace_app = typer.Typer(no_args_is_help=True, add_completion=False)
 console = Console()
 app.add_typer(kit_app, name="kit")
 app.add_typer(redact_app, name="redact")
 app.add_typer(practice_app, name="practice")
 app.add_typer(vault_app, name="vault")
+app.add_typer(workspace_app, name="workspace")
 
 
 @app.command("draft")
@@ -461,6 +465,21 @@ def vault_snapshot_command(
     if result.pushed:
         console.print("[green]vault snapshot pushed[/green]")
     console.print(render_vault_status(result.status, config.repo_root), end="")
+
+
+@workspace_app.command("report")
+def workspace_report_command(
+    json_output: Annotated[
+        bool,
+        typer.Option("--json", help="Print a machine-readable Workspace Command Center report."),
+    ] = False,
+) -> None:
+    config = load_config()
+    report = run_workspace_report(config)
+    if json_output:
+        typer.echo(json.dumps(report.to_dict(), indent=2))
+        return
+    typer.echo(render_workspace_report(report), nl=False)
 
 
 @app.command("web")

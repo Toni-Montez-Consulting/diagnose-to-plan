@@ -12,7 +12,7 @@ The reusable verification/support automation concept is captured as the CLI Veri
 
 The Future Intelligence Layer is captured in `docs/WORKSPACE_PORTFOLIO_ROADMAP.md`. It adds supervised learning loops, research radar, agent flight records, portfolio scorecards, context engineering, AI red-team planning, release trust, feature flags, and protocol watchlists without changing the current build order.
 
-The Workspace Efficiency Layer is also captured in `docs/WORKSPACE_PORTFOLIO_ROADMAP.md`. It adds workspace command-center planning, repo manifests, affected-only checks, shared CI later, dependency maintenance, toolchain pinning, evidence indexes, decision logs, starter-factory templates, and CI cache hygiene without forcing the repos into one platform or monorepo.
+The Workspace Efficiency Layer is also captured in `docs/WORKSPACE_PORTFOLIO_ROADMAP.md`. It adds the read-only `dtp workspace report`, workspace command-center planning, repo manifests, affected-only checks, shared CI later, dependency maintenance, toolchain pinning, evidence indexes, decision logs, starter-factory templates, and CI cache hygiene without forcing the repos into one platform or monorepo.
 
 The FAOS Orchestration Roadmap is captured in `docs/FAOS_ORCHESTRATION_ROADMAP.md`. It integrates the Frontier Agentic Operating System build spec as a gated future substrate for specs, skills, subagents, MCP, memory, tracing, evals, reflection, durable execution, sandboxes, and an `op` wrapper. It does not change the current build order or authorize creating a `faos` repo yet.
 
@@ -54,6 +54,7 @@ The Practice System Documentation Pack is the architecture and audit layer for t
 - `engagements/` is the gitignored private work area for Client Operating Kits.
 - `dtp kit new`, `dtp kit status`, `dtp redact check`, and `dtp practice doctor` support local Client Operating Kit workflows.
 - `dtp kit new` now scaffolds Command Room fit and proof/redaction governance docs inside each private engagement kit.
+- `dtp workspace report` is the Workspace Command Center V0 read-only report. It summarizes DTP-owned repo manifests, evidence indexes, backlog blockers, missing coverage, recorded verification state, and suggested gates without executing repo commands, calling GitHub, mutating files, installing skills, publishing proof, touching DSE, or building FAOS.
 - `dtp web` provides a local browser Workbench over the same markdown contracts.
 - `dtp vault` can initialize a separate private git repo inside `engagements/` for private engagement durability.
 
@@ -133,7 +134,7 @@ The Practice System Documentation Pack is the architecture and audit layer for t
 - Use `docs/FAOS_ORCHESTRATION_ROADMAP.md` and `practice-os/templates/faos-phase-readiness-review.md` before accepting any FAOS, `op` wrapper, Langfuse, Mem0/Letta, Spec-Kit, MCP, subagent, hook, durable execution, or broader agent-orchestration implementation prompt.
 - Add or strengthen templates for proposal/SOW, case-study proof packet, Work Item Spec, and hosted-DTP import/export.
 - Use the Future Intelligence templates opportunistically after real delivery/research sessions; do not make them required gates until they have proven useful.
-- Use the Workspace Efficiency templates opportunistically when touching a repo; do not make manifests or command-center output required until at least one pilot proves the shape.
+- Use the Workspace Efficiency templates opportunistically when touching a repo; use `dtp workspace report` for read-only steward preflight, but do not make live git/CI reads or command-center runner behavior required until the V0 report proves value.
 - Add tiny fixtures/evals for high-value Skills: COI, redact, diagnose, proposal, handoff, and case-study capture.
 - Promote only reviewed redacted patterns from `extracts/` into `practice-os/patterns/`.
 
@@ -250,7 +251,7 @@ Complete these before treating the practice as ready for soft launch.
 10. Capture the Workspace Efficiency Layer.
    - Keep this as roadmap and template work while hosted DTP Phase 0 and proof/redaction stay first in line.
    - Use `practice-os/efficiency/diagnose-to-plan-repo-manifest.md` and `diagnose-to-plan-evidence-index.md` as the first pilot.
-   - Draft `workspace-command-center-spec.md` before writing any cross-repo command runner.
+   - Use `docs/WORKSPACE_COMMAND_CENTER_V0.md` and `dtp workspace report` for read-only coverage/evidence/blocker checks before writing any cross-repo command runner.
    - Keep affected-only checks advisory until repo manifests, hard gates, and release/proof boundaries are clear.
    - Do not add shared CI, dependency bots, or toolchain pinning everywhere until the pilot proves the value.
 
@@ -344,7 +345,7 @@ Build these after the near-term documentation and pilot path are stable.
 10. Workspace Efficiency pilot.
 - Add repo manifests for DTP, consulting, Hub, and `tm-skills` first; DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus are now adjacent-project touch passes.
    - Add evidence indexes only where verification receipts already exist.
-   - Use `docs/WORKSPACE_COMMAND_CENTER_V0.md` as the read-only command-center spec; do not implement a runner yet.
+   - Use `docs/WORKSPACE_COMMAND_CENTER_V0.md` and `dtp workspace report` as the read-only command-center boundary; do not implement live git/CI reads or a command runner yet.
    - Add a decision record for the first real cross-repo automation boundary.
    - Evaluate Renovate or Dependabot grouping before enabling dependency PRs broadly.
    - Tune CI caching only where workflow time or repeated installs are becoming real friction.
@@ -369,7 +370,7 @@ Build these only after repeated usage proves the need.
 - OpenAI Agents SDK, Google ADK, Temporal, LangGraph, or similar frameworks only after simple workflows/state machines become the bottleneck.
 - SLSA/OpenSSF Scorecard, CycloneDX SBOMs, signed attestations, and broader supply-chain evidence where repo risk and release cadence justify the ceremony.
 - OpenFeature-style feature flag standardization after flags become a recurring cross-repo pattern.
-- Workspace Command Center implementation after the V0 read-only spec proves useful across another touch pass.
+- Workspace Command Center live status/runner after the V0 read-only report proves useful and a separate boundary decision accepts live git, CI, or command execution behavior.
 - `dtp steward review` after the markdown Roadmap Steward template has been used enough to prove the checks and outputs.
 - Hosted steward queue or agent-assisted roadmap manager after hosted DTP, evals, guardrails, and human approval gates exist.
 - Affected-only verification after hard gates are reliably encoded per repo.
