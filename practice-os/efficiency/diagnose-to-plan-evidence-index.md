@@ -18,6 +18,8 @@ review_status: draft
 
 | Lane | Date | Result | Commit | Artifact |
 |---|---|---|---|---|
+| local | 2026-04-30 | pass | current branch | Notion/CCAAP memory-capture pass: targeted redaction checks, `pytest`, `ruff check .`, `dtp skills --validate`, `dtp practice doctor`, `dtp workspace report`, and `dtp workspace report --json`; `ccaap-site` now appears as manifest=ok/evidence=ok |
+| setup | 2026-04-30 | blocked_on_manual_oauth | local Codex user config | Notion MCP endpoint added to Codex config and `codex mcp list` shows `notion` enabled; `codex mcp login notion` did not complete OAuth in-session, so Notion database creation and seeding remain manual/auth-gated |
 | planning | 2026-04-30 | pass | current branch | Notion Mirror V0 docs/templates/steward receipt added; Notion remains a mirror/inbox and DTP remains source of truth; OAuth/database setup remains manual |
 | local | 2026-04-30 | pass | current branch | `hub-prompts npm test`; `hub-registry npm run validate`, `npm run validate:manifests`, `npm run validate:prompt-ids`, `npm test`; DTP `pytest`, `ruff check .`, `dtp skills --validate`, `dtp practice doctor`, `dtp workspace report`, `dtp workspace report --json`; Workspace Command Center blocker carry-forward test/report, including Omnexus org-migration closeout, parked Hub dependency PRs, Mom owner facts, DSE no-touch, and FAOS parked |
 | private kit | 2026-04-30 | pass_with_manual_gates | vault `2b9e6ca` | Mom nonprofit owner-facts intake, handoff checklist, proof packet, redaction item, decision log, plan, and eval notes updated for owner conversation readiness; private vault snapshot committed locally; no public proof or hosted implementation approved |
@@ -38,11 +40,11 @@ review_status: draft
 
 - Hosted DTP app implementation is intentionally not started.
 - CCAAP owner direction and off-Wix rebuild preference are captured; remaining gates are exact PayPal links, contact routing, domain/DNS, authentic photos/resources, owner review, and proof permissions.
-- Notion Mirror V0 is documented; Notion OAuth, database creation, and any MCP/API sync remain manual/future setup.
+- Notion Mirror V0 is documented and the Codex MCP endpoint is configured; Notion OAuth, database creation, seeding, and any MCP/API sync remain manual/auth-gated setup.
 - Public proof still needs permission, redaction, reviewer, evidence, and caveat gates.
 - GitHub Enterprise org-migration closeout is complete for Omnexus PR #559; Hub PRs #59 and #55 are merged; non-DSE org alignment is no longer the active blocker.
 - Workspace Command Center V0 reports recorded artifacts only; live git/CI reads and command execution remain later. Missing repo rows may carry explicit Active Next Queue blockers without inferring gates.
-- Repo manifest/evidence index shape now covers DTP, consulting, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus. `dse-content` remains missing until its lane is clean or explicitly selected with COI-aware scope.
+- Repo manifest/evidence index shape now covers DTP, consulting, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, `fitness-app` / Omnexus, and `ccaap-site`. `dse-content` remains missing until its lane is clean or explicitly selected with COI-aware scope.
 
 ## Notes
 

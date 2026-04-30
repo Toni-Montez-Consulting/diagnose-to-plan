@@ -256,6 +256,26 @@ codex mcp login notion
 
 This requires a human OAuth login. Do not commit user-level auth, OAuth state, Notion tokens, or workspace IDs unless they are intentionally non-secret references.
 
+## Current Setup Status
+
+As of 2026-04-30:
+
+- Codex user config includes the Notion MCP endpoint.
+- `codex mcp list` shows `notion` enabled.
+- Notion still shows `Not logged in`.
+- `codex mcp login notion` was attempted from this session, but OAuth did not complete inside the agent run.
+- Notion database creation and seeding remain blocked until Toni completes the browser OAuth flow and a future session confirms read/write access.
+
+First authenticated smoke test:
+
+1. Run `codex mcp login notion`.
+2. Complete the Notion browser OAuth consent flow.
+3. Restart the Codex session if the Notion tools are not visible immediately.
+4. Ask Codex to create a small test page named `DTP Notion MCP Smoke Test`.
+5. Delete or archive the smoke-test page after read/write access is confirmed.
+
+Do not create production mirror databases until the smoke test proves the authenticated workspace is the intended one.
+
 ## Good Extra Ideas
 
 - Add a pinned "Today" Notion view: active next queue, blockers, newest ideas, and CCAAP action items.
