@@ -51,7 +51,7 @@ Goal: make every future coding session safer and more consistent.
 | Create `tm-skills` repo and Phase 1 skills | `tm-skills` | Done | repo pushed, doctor/freshness/install dry-run pass, CI green | install only after explicit approval |
 | Add `tm-skills` thin CI | `tm-skills` | Done | GitHub Actions green | keep workflow thin |
 | Global install apply | `tm-skills` | Done | `install.ps1 -Apply` succeeds without `-Force` and post-install doctor passes | record smoke status |
-| Tool reload smoke test | `tm-skills` plus tools | Review | Codex/Claude/Copilot discover skills after reload | external reloads remain manual if not verifiable in-session |
+| Tool reload smoke test | `tm-skills` plus tools | Review | Codex/Claude/Copilot discover skills after reload | Codex discovery verified; Claude Code and GitHub Copilot reloads remain manual |
 | Project-pinned canary | `tm-skills` plus one repo | Later | one low-risk repo confirms no duplicate-skill confusion | choose after global install works |
 | Stack overlays | `tm-skills` | Later | base skills prove useful across real work | design overlays only after canary |
 
@@ -208,7 +208,7 @@ Standing preflight/postflight: use `practice-os/templates/activation-routing-map
 1. Collect Mom nonprofit owner-confirmed facts: site owner, backup owner, meeting source of truth, form/payment routing, update workflow, proof reviewer, and screenshot permissions.
 2. Decide the Mom site execution path after owner facts: Wix cleanup, rebuild, or migration.
 3. Capture owner-approved baseline/after-state evidence for the first proof candidate and run redaction/permission review.
-4. Smoke-test `tm-skills` discovery after external tool reloads.
+4. Finish `tm-skills` discovery smoke testing in Claude Code and GitHub Copilot; Codex discovery is verified.
 5. Expand repo manifests to consulting, Hub, and `tm-skills` as those lanes are touched.
 6. Add Hub prompt/registry cross-validation after the pilot or when Hub resumes.
 7. Run FAOS Phase 0 readiness review only after the current pilot/proof/smoke/Hub-validation path; do not build FAOS from the raw Phase 0 prompt yet.

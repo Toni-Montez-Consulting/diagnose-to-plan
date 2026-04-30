@@ -442,7 +442,8 @@ Updated on 2026-04-30:
 - Re-ran `.\scripts\install.ps1 -Apply`; it installed `.agents`, `.claude`, and `.copilot` skill discovery paths, installed Claude/Copilot global instruction files, skipped existing Codex global instructions, and did not use `-Force`.
 - Re-ran `.\scripts\doctor.ps1` and `.\scripts\freshness-check.ps1`; both passed.
 - Added `tm-skills/docs/PRACTICE_SYSTEM_POINTER.md` and `tm-skills/docs/INSTALL_SMOKE_2026-04-30.md`.
-- Codex/Claude/Copilot reload and discovery smoke tests remain manual follow-up gates outside the current session.
+- Codex discovery smoke passed in a fresh Codex session: the five Phase 1 skills were visible and the review/delivery prompt activated the expected guidance.
+- Claude Code and GitHub Copilot reload and discovery smoke tests remain manual follow-up gates outside the current session.
 
 ## Deferred
 
