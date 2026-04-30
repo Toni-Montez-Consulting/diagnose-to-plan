@@ -26,14 +26,14 @@ review_status: draft
 ## Gates
 
 - Local gate: `npm run validate:data`, `npm run lint`, `npm run test`, `npm run build`
-- CI gate: not confirmed in this touch pass; add only if repeated FamilyTrips changes need automated protection
+- CI gate: GitHub Actions `CI` runs npm install, data validation, lint, tests, and build on `main` pushes, pull requests, and manual dispatch
 - Release gate: `docs/DEPLOY_SMOKE_TEST.md` after preview/production deploys
 - Support gate: `README.md`, `ARCHITECTURE.md`, `ROADMAP.md`, `docs/SUPABASE.md`, and `docs/PLAYBOOK.md`
 - Manual gate: privacy review before adding sensitive family details, AI features, auth, public sharing, or stronger Supabase behavior
 
 ## Evidence
 
-- Evidence path: local command output, future GitHub Actions if added, `docs/DEPLOY_SMOKE_TEST.md`, and DTP evidence receipts
+- Evidence path: local command output, GitHub Actions logs, `docs/DEPLOY_SMOKE_TEST.md`, and DTP evidence receipts
 - Latest receipt: see `practice-os/efficiency/familytrips-evidence-index.md`
 - Proof eligibility: not a public proof source by default; internal pattern reference only unless family permission and redaction are explicit
 - Redaction rule: never publish raw trip data, addresses, phone numbers, budgets, reservation details, private family notes, or screenshots with family information

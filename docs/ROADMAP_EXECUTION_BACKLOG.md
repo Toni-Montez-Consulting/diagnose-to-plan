@@ -117,7 +117,7 @@ Goal: reduce rediscovery, setup drift, CI waste, and handoff friction.
 | Hub repo manifest | `hub` | Done | manifest names runtime gates, Supabase/Vercel boundaries, and prompt/run ownership | keep current during Hub runtime and prompt/registry work |
 | `tm-skills` repo manifest | `tm-skills` | Done | manifest names install gates and global-skill boundaries | keep current during skill smoke/canary work |
 | DeMario repo manifest/evidence index | `diagnose-to-plan`, `demario-pickleball-1` | Done | manifest and evidence index capture launch gates, proof blockers, command-room role, and local/CI evidence without mutating app code | use for future command-room proof pass |
-| FamilyTrips repo manifest/evidence index | `diagnose-to-plan`, `FamilyTrips` | Done | manifest and evidence index capture privacy model, local gates, release smoke, and no-auth/no-AI boundary | use before future FamilyTrips feature, AI, or public-sharing work |
+| FamilyTrips repo manifest/evidence index | `diagnose-to-plan`, `FamilyTrips` | Done | manifest and evidence index capture privacy model, local/CI gates, release smoke, and no-auth/no-AI boundary | use before future FamilyTrips feature, AI, or public-sharing work |
 | Workspace Command Center spec | `diagnose-to-plan` | Done | `docs/WORKSPACE_COMMAND_CENTER_V0.md` defines read-only inputs, outputs, gates, and safety boundaries | no command runner yet |
 | Workspace Command Center implementation | `diagnose-to-plan` | Later | read-only report proves value and no mutation boundary remains intact | implement only after another touch pass confirms the report shape |
 | Affected-only verification | DTP/Hub first | Later | hard gates are reliably encoded per repo | keep advisory until proven |
@@ -211,7 +211,7 @@ Standing preflight/postflight: use `practice-os/templates/activation-routing-map
 1. Collect Mom nonprofit owner-confirmed facts: site owner, backup owner, meeting source of truth, form/payment routing, update workflow, proof reviewer, and screenshot permissions.
 2. Decide the Mom site execution path after owner facts: Wix cleanup, rebuild, or migration.
 3. Capture owner-approved baseline/after-state evidence for the first proof candidate and run redaction/permission review.
-4. Finish `tm-skills` discovery smoke testing in Claude Code and GitHub Copilot; links are healthy and Codex discovery is verified, but external reload checks remain manual.
+4. Finish `tm-skills` discovery smoke testing in Claude Code and GitHub Copilot; runbook exists, links are healthy, and Codex discovery is verified, but external reload checks remain manual.
 5. Keep Hub prompt/registry cross-validation local-first; decide private sibling-repo CI access only if it becomes worth the operational cost.
 6. Keep repo manifests current as lanes are touched; DTP, consulting, Hub, `tm-skills`, DeMario, and FamilyTrips now have DTP-owned manifests/evidence indexes.
 7. Run FAOS Phase 0 readiness review only after the current pilot/proof/smoke/Hub-validation path; do not build FAOS from the raw Phase 0 prompt yet.

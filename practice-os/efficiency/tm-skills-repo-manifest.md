@@ -33,7 +33,7 @@ review_status: draft
 
 ## Evidence
 
-- Evidence path: `docs/INSTALL_SMOKE_2026-04-30.md`, GitHub Actions logs, `MISFIRES.md` for trigger misses
+- Evidence path: `docs/INSTALL_SMOKE_2026-04-30.md`, `docs/EXTERNAL_TOOL_SMOKE_RUNBOOK.md`, GitHub Actions logs, `MISFIRES.md` for trigger misses
 - Latest receipt: see `practice-os/efficiency/tm-skills-evidence-index.md`
 - Proof eligibility: internal operating proof only; not a client-facing proof item by itself
 - Redaction rule: do not put private client material, secrets, or day-job details into skills or trigger evals

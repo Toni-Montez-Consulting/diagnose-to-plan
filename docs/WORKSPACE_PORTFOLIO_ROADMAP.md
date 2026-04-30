@@ -302,7 +302,7 @@ Every workspace repo benefits, but not every repo needs a CI change in this stor
 | `hub-registry` | Hub automation target routing | Workflow keeps CI-safe registry validation; local `npm test` validates sibling manifests and prompt ids | Design private sibling-repo access for CI only if local-only validation becomes a bottleneck |
 | `fitness-app` / Omnexus | Reference verification cockpit and product proof track | No mutation in this pass; keep active PR/work as reference until reviewed | Finish/review PR #553 and promote patterns only after permission/redaction |
 | `demario-pickleball-1` | Client Command Room reference and local-business proof track | First adjacent manifest/evidence touch pass complete; existing CI remains owner | Manual launch gates, venue rules, Node 24 maintenance, proof permission |
-| `FamilyTrips` | Private family planning app | Privacy-first adjacent manifest/evidence pass complete | Revisit before new features, AI, auth, public sharing, or stronger Supabase behavior |
+| `FamilyTrips` | Private family planning app | Privacy-first adjacent manifest/evidence pass plus thin CI complete | Revisit before new features, AI, auth, public sharing, or stronger Supabase behavior |
 | `dse-content` | Microsoft/internal readiness and workflow proof track | Alignment only | COI-aware internal proof and live-branch verification before any public reuse |
 
 ### Eventual Touch Roadmap By Repo
@@ -320,7 +320,7 @@ This is the master coverage queue. Each repo gets at least one explicit future p
 | `hub-registry` | Cross-repo prompt id and manifest validation pass | Local-first validation now exists | Decide later whether CI should receive private sibling-repo access |
 | `fitness-app` / Omnexus | Verification cockpit review and launch-stability pass | After active PR/branch work is human-reviewed | Merge/readiness decision, reusable verification lessons, redacted proof candidates |
 | `demario-pickleball-1` | Launch/Command Room proof pass | After manual launch gates and permission are handled | DTP-owned manifest/evidence index exists; next output is owner-safe proof packet, venue-routing maintenance, or Node 24 CI maintenance |
-| `FamilyTrips` | Privacy-first maintenance pass | Before adding features or AI/public sharing | DTP-owned manifest/evidence index exists; next pass should decide lightweight CI only if repeated changes justify it |
+| `FamilyTrips` | Privacy-first maintenance pass | Before adding features or AI/public sharing | DTP-owned manifest/evidence index and thin CI exist; next pass should revisit privacy and deploy smoke |
 | `dse-content` | COI-aware internal proof and workflow maintenance pass | Before any DSE material is reused publicly or professionally | COI screen, redaction/permission notes, live-branch verification |
 
 No repo should receive a platform-style build just to satisfy this table. A "touch" can be a verification pass, roadmap/doc alignment, CI maintenance, privacy review, proof packet, launch gate, or scoped feature plan.
@@ -936,7 +936,7 @@ Preflight: use the Practice System Documentation Pack as the current/future/audi
 1. Collect Mom nonprofit owner-confirmed facts, permission, screenshot approval, proof reviewer, and meeting/form/payment source-of-truth decisions.
 2. Decide the Mom site execution path: Wix cleanup, rebuild, or migration.
 3. Keep Hub prompt/registry cross-validation local-first; decide private sibling-repo CI access only if it becomes worth the operational cost.
-4. Keep repo manifests current as touched lanes change; DTP, consulting, Hub, `tm-skills`, DeMario, and FamilyTrips now have manifests/evidence indexes.
+4. Keep repo manifests current as touched lanes change; DTP, consulting, Hub, `tm-skills`, DeMario, and FamilyTrips now have manifests/evidence indexes; FamilyTrips also has thin CI.
 5. Run the next adjacent-project touch pass only when its trigger is ready (`fitness-app`, `dse-content`, or `engineering-playbook`) and execute only its matching lane.
 6. Use DeMario command room and Omnexus verification toolkit as proof/reference material only after permission/redaction review.
 7. Start hosted DTP implementation only after the Mom pilot/proof workflow gives the app real records to persist.

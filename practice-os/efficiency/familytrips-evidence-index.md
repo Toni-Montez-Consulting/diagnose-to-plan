@@ -22,6 +22,7 @@ review_status: draft
 | static | 2026-04-30 | pass | current branch | `npm run lint` passed |
 | unit | 2026-04-30 | pass | current branch | `npm run test`: 1 test file / 11 tests passed |
 | build | 2026-04-30 | pass | current branch | `npm run build` passed with Vite production output |
+| CI | 2026-04-30 | pass_with_advisory | `fd983c8` | GitHub Actions CI run `25158714066`; advisory: Node 20 JavaScript action runtime deprecation for `actions/checkout@v4` and `actions/setup-node@v4` |
 | release | 2026-04-30 | manual_pending | current branch | `docs/DEPLOY_SMOKE_TEST.md` not rerun against a live deploy in this touch pass |
 | privacy | 2026-04-30 | documented | current branch | `docs/PLAYBOOK.md` now points to DTP and repeats the static-bundle privacy rule |
 | proof | 2026-04-30 | not_applicable | current branch | private family app; not a public proof source by default |
@@ -34,7 +35,7 @@ review_status: draft
 
 ## Open Gaps
 
-- No confirmed repo CI gate in this touch pass.
+- CI now exists and passed; GitHub emitted an advisory Node 20 JavaScript action runtime deprecation warning for `actions/checkout@v4` and `actions/setup-node@v4`.
 - Live deploy smoke was not rerun; use `docs/DEPLOY_SMOKE_TEST.md` after preview or production deploys.
 - The casual privacy model is intentional but limited: unlisted routes are not authentication.
 - Stronger privacy, auth, AI, or public sharing should be a separate architecture decision.

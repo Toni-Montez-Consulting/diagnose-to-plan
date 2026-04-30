@@ -49,6 +49,7 @@ The repo now owns:
 - `decisions/`: install-path and cross-tool design decisions.
 - `docs/PRACTICE_SYSTEM_POINTER.md`: local pointer back to DTP's practice-system source of truth and activation/performance-gap contracts.
 - `docs/INSTALL_SMOKE_2026-04-30.md`: V0 install evidence, Windows junction fallback note, and manual external-tool reload gates.
+- `docs/EXTERNAL_TOOL_SMOKE_RUNBOOK.md`: manual Claude Code and GitHub Copilot reload/smoke instructions.
 - `instructions/global/`: global always-on coding-agent instructions.
 - `skills/*/SKILL.md`: the actual reusable SDLC skills.
 - `skills/*/evals/`: trigger and expected-output fixtures.

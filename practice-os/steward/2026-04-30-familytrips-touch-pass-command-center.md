@@ -34,22 +34,22 @@ review_status: draft
 - `hub-prompts`: unchanged.
 - `hub-registry`: unchanged; local-first `npm test` passed.
 - `fitness-app`: unchanged; Omnexus remains reference verification cockpit and future proof lane.
-- `FamilyTrips`: local pointer and verification date updated; no feature/auth/AI/platform changes.
+- `FamilyTrips`: local pointer, verification date, and thin GitHub Actions CI added; no feature/auth/AI/platform changes.
 - `demario-pickleball-1`: unchanged; manifest/evidence pass already exists.
 - `dse-content`: unchanged and intentionally avoided.
-- `tm-skills`: unchanged; links and preview are healthy, but Claude Code/GitHub Copilot reload smoke remains manual.
+- `tm-skills`: external smoke runbook added; links and preview are healthy, but Claude Code/GitHub Copilot reload smoke remains manual.
 
 ## Active Next Queue
 
 - Current next story: FamilyTrips privacy-first adjacent touch pass and Workspace Command Center V0 spec
 - Owning repo: `diagnose-to-plan` for receipts/spec; `FamilyTrips` for local playbook pointer and verification date
 - Status: implemented as docs/evidence work
-- Done gate: FamilyTrips local gates pass, privacy model is recorded, DTP manifests/evidence indexes are updated, and Command Center remains read-only/spec-only
+- Done gate: FamilyTrips local and CI gates pass, privacy model is recorded, DTP manifests/evidence indexes are updated, and Command Center remains read-only/spec-only
 - Story activation: Adjacent Project Touch Lanes and Workspace Efficiency Layer
 - Suggested skill/template: `tm-skills/delivery-baseline`, `tm-skills/testing-ladder`, Roadmap Steward Review
 - Suggested agent role: local coding agent
 - Local gates: FamilyTrips `validate:data`, lint, tests, build; DTP validation after docs edits; `tm-skills` doctor/freshness/install preview; `hub-registry npm test`
-- CI or manual gates: pushed repos' CI; external Claude Code/GitHub Copilot smoke remains manual
+- CI or manual gates: FamilyTrips CI run `25158714066` passed with a Node 20 action-runtime deprecation advisory; tm-skills CI run `25158720574` passed; external Claude Code/GitHub Copilot smoke remains manual
 - Blockers: Mom owner facts; public proof permissions; external skill reload verification; FAOS readiness acceptance
 - What must not be touched yet: FAOS repo/services, Hub sibling-repo CI tokens, public proof pages, FamilyTrips auth/AI/public sharing, production Supabase/Vercel settings, and DSE active branch work
 
