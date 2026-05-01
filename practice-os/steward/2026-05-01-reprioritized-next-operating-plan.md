@@ -18,7 +18,7 @@ Toni asked to implement the reprioritized plan after adding CCAAP owner-input cl
 | Decision | Result |
 |---|---|
 | CCAAP priority | Owner-input closure remains the highest-leverage next human task. No CCAAP placeholders should be replaced until owner-approved values arrive. |
-| Architected Strength | Keep it as its own personal-brand OS, content hub, networking engine, proof lab, and first assistant-pattern candidate. Do not migrate it into consulting. |
+| Architected Strength | Keep it as its own personal-brand OS, content hub, networking engine, proof lab, and later assistant-pattern candidate after the consulting pilot. Do not migrate it into consulting. |
 | Cross-site assistants | Treat as a governed architecture/manifest lane first. Do not build CCAAP/Mario assistant code during the current launch gate. |
 | Notion | Use as phone cockpit and inbox only. DTP remains source of truth after steward triage. |
 | Parked lanes | Hosted DTP implementation, FAOS, Notion two-way sync, broad assistant rollout, Hub PR #54/#56/#61, DSE, and public proof promotion remain parked. |

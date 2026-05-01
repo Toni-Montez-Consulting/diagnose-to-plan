@@ -13,7 +13,7 @@ review_status: draft
 - GitHub repo: `Toni-Montez-Consulting/architected-strength`
 - Local path: `architected-strength`
 - Primary role: Toni's personal brand OS, content hub, networking engine, public proof lab, and personality-forward systems-thinking site
-- Owner lane: personal brand OS and first assistant-pattern candidate
+- Owner lane: personal brand OS and later assistant-pattern candidate
 - Public/private: private source repo for a future public personal-brand site
 - Deploy target: Azure-first static web/infra lane, with repo-local workflows controlling validation and deploy artifacts
 
@@ -52,4 +52,4 @@ review_status: draft
 - Lane: cross-site assistant pattern and personal-brand publishing
 - Trigger: assistant architecture acceptance, content publishing cadence, Notion docs sync, or public launch/deploy decision
 - Blocker: assistant implementation needs an accepted site manifest, approved source corpus, refusal policy, analytics/logging plan, and human handoff path
-- Next action: use `docs/CROSS_SITE_ASSISTANT_ARCHITECTURE_BRIEF.md` to scope the first public assistant pattern after CCAAP owner-input closure is moving
+- Next action: revisit public assistant scope after the consulting public assistant pilot proves useful

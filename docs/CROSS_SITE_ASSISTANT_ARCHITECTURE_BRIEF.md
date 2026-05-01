@@ -19,9 +19,9 @@ The assistant lane is real, but it does not outrank the CCAAP launch gates.
 
 Current order:
 
-1. Finish CCAAP owner-input closure and launch readiness.
-2. Keep Architected Strength merged as the personal-brand OS baseline.
-3. Use this brief to shape the first assistant implementation story.
+1. Keep CCAAP launch gates waiting on owner inputs; do not advance CCAAP assistant work.
+2. Use consulting as the first public assistant pilot because it directly reduces intake/navigation friction for the practice.
+3. Keep Architected Strength merged as the personal-brand OS baseline and later assistant-pattern candidate.
 4. Build only the first narrow assistant after source corpus, auth boundary, refusal rules, analytics, and human handoff are accepted.
 
 ## Shared Pattern
@@ -98,8 +98,8 @@ Admin V0 must not:
 
 | Order | Site | First useful assistant | Gate |
 |---|---|---|---|
-| 1 | Architected Strength | Public personal-brand guide over OS pages, builds, field notes, training systems, and collaborate route | Source private stays protected; public copy has no official Microsoft endorsement or confidential employer/client material. |
-| 2 | Consulting | Public service/intake guide for `/`, `/start`, proof, method, and collaboration paths | Hub-first intake remains the human-owned route; no private Hub rows in public assistant. |
+| 1 | Consulting | Public service/intake guide for `/`, `/start`, proof, method, and collaboration paths | Manifest and approved source corpus are accepted; Hub-first intake remains the human-owned route; no private Hub rows in public assistant. |
+| 2 | Architected Strength | Public personal-brand guide over OS pages, builds, field notes, training systems, and collaborate route | Source private stays protected; public copy has no official Microsoft endorsement or confidential employer/client material. |
 | 3 | Consulting or Hub admin | Read-only operator helper for intake status, route checks, and proof blockers | Auth boundary and private-record access must be accepted first. |
 | 4 | DeMario | Admin helper for bookings, inquiries, unpaid lessons, venue routing, and weekly owner tasks | Protected admin exists; writes, texts, cancellations, and payment state remain human-confirmed. |
 | 5 | CCAAP | Public resource/meeting/donation guide, then optional admin helper | Only after CCAAP launch inputs, owner review, DNS, contact routing, assets, and proof/privacy decisions are stable. |

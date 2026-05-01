@@ -31,7 +31,7 @@ GitHub ownership boundary: as of 2026-04-30, the consulting/practice portfolio r
 |---|---|---|---|
 | `diagnose-to-plan` | Practice OS, roadmap, engagement kits, redaction, COI, templates, hosted DTP design, steward loop | `pytest`, `ruff`, `dtp skills --validate`, `dtp practice doctor`, redaction checks | Does not own public storefront or Hub runtime records |
 | `consulting` | Public site, `/start`, proof surface, public-safe `/admin` command room | `npm run build`, secret scan, route/visual checks when expanded | Does not store private engagement kits |
-| `architected-strength` | Personal brand OS, content hub, networking engine, proof lab, and first assistant-pattern candidate | `pnpm run ci`, source/claim review, public/private boundary review | Stays separate from consulting; no official Microsoft endorsement or confidential employer/client material |
+| `architected-strength` | Personal brand OS, content hub, networking engine, proof lab, and later assistant-pattern candidate | `pnpm run ci`, source/claim review, public/private boundary review | Stays separate from consulting; no official Microsoft endorsement or confidential employer/client material |
 | `hub` | Runtime intake, private console, Supabase operational records, prompts/runs/captures | `pnpm verify`, `pnpm test`, security workflows, health/intake checks | Does not become DTP, CRM, or public proof source |
 | `tm-skills` | Reusable global SDLC skills and install/doctor scripts | `doctor.ps1`, `freshness-check.ps1`, `install.ps1 -WhatIf` | Global install remains explicit-approval only |
 | `engineering-playbook` | General doctrine, portfolio templates, decisions, secret-management references | portfolio checks and repo-local scripts | Does not duplicate DTP roadmap ownership |

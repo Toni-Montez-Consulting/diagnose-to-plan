@@ -26,6 +26,7 @@ REQUIRED_TEMPLATES = (
     "client-operating-kit.md",
     "client-command-room-fit-assessment.md",
     "client-command-room-spec.md",
+    "recurring-engagement-cadence.md",
     "custom-interface-craft-brief.md",
     "connector-map.md",
     "runbook.md",

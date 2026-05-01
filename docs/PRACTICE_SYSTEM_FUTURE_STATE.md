@@ -268,7 +268,7 @@ DTP remains the master source. Other repos get local pointers when their lane is
 | Repo | Future Local Pointer Or Doc |
 |---|---|
 | `consulting` | public proof and Hub intake boundary pointer to DTP system docs |
-| `architected-strength` | personal-brand OS and first assistant-pattern pointer to DTP assistant governance |
+| `architected-strength` | personal-brand OS and later assistant-pattern pointer to DTP assistant governance |
 | `hub` | Hub/DTP/consulting boundary pointer and prompt/registry validation runbook |
 | `tm-skills` | skill-trigger alignment note pointing back to DTP activation map |
 | `fitness-app` | verification cockpit extraction receipts and permissioned proof lane |

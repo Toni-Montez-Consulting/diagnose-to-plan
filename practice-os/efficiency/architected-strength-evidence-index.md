@@ -23,13 +23,13 @@ review_status: draft
 | CI | 2026-05-01 | pass | `d8d4e04` | GitHub Actions Validate run `25197784004` passed on `main` after merge |
 | deploy artifact | 2026-05-01 | pass | `d8d4e04` | GitHub Actions Deploy Web run `25197784010` passed; Azure login step was skipped because deployment credentials are not configured for this private baseline |
 | repo ownership | 2026-05-01 | pass | `d8d4e04` | Remote owner verified as `Toni-Montez-Consulting/architected-strength`; repo visibility verified as private |
-| assistant lane | 2026-05-01 | draft | DTP current branch | Cross-site assistant brief records Architected Strength as the first public assistant-pattern candidate after CCAAP owner-input closure is moving |
+| assistant lane | 2026-05-01 | draft | DTP current branch | Cross-site assistant brief now records Architected Strength as a later public assistant-pattern candidate after the consulting public assistant pilot proves useful |
 
 ## Proof Candidates
 
 | Claim | Evidence | Permission | Redaction | Reviewer |
 |---|---|---|---|---|
-| Architected Strength is Toni's personal brand OS and first assistant-pattern candidate | repo README, AGENTS.md, roadmap, ADR 0003, PR #1 merge, DTP assistant brief | internal_only for source repo; public site copy still requires publication review | no private employer/client material allowed | pending public launch review |
+| Architected Strength is Toni's personal brand OS and later assistant-pattern candidate | repo README, AGENTS.md, roadmap, ADR 0003, PR #1 merge, DTP assistant brief | internal_only for source repo; public site copy still requires publication review | no private employer/client material allowed | pending public launch review |
 
 ## Open Gaps
 

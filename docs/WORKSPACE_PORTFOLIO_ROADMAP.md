@@ -48,7 +48,7 @@ Workspace folders currently listed in `C:\Users\tonimontez\toni-consulting-ops.c
 
 GitHub ownership boundary: consulting/practice repos now live under `Toni-Montez-Consulting` where available. `dse-content` remains outside that organization in the personal/Microsoft-linked namespace, stays on the COI-aware lane, and should not be updated or moved unless explicitly selected.
 
-Current delta as of 2026-05-01: `architected-strength` is now tracked as Toni's personal brand OS, content hub, networking engine, proof lab, first assistant-pattern candidate, and in-progress north-star candidate for custom interface craft. `consulting` is also an in-progress north-star candidate for operator-grade proof/intake craft. Neither is a gold-standard reference until production-level operational review and DTP promotion gates pass. `ccaap-site` is tracked as the first client operating kit public-site implementation and remains blocked on owner-approved PayPal, contact, meeting, DNS, photos/resources, owner review, and proof decisions. Omnexus App Review approval is now captured as an internal mobile app review-to-launch learning pattern for future client app builds; public proof remains blocked until proof packet gates pass. The Business Brain / Consulting OS is now captured in DTP with a source map, command contracts, Controller/General Counsel/COO role specs, first Greg/Cameron/Mom-Mario fixtures, and private-first comms drafts.
+Current delta as of 2026-05-01: `consulting` is now the first public assistant pilot candidate because it directly supports service navigation and human-owned intake. `architected-strength` is tracked as Toni's personal brand OS, content hub, networking engine, proof lab, later assistant-pattern candidate, and in-progress north-star candidate for custom interface craft. Both `consulting` and `architected-strength` remain north-star candidates until production-level operational review and DTP promotion gates pass. `ccaap-site` is tracked as the first client operating kit public-site implementation and remains blocked on owner-approved PayPal, contact, meeting, DNS, photos/resources, owner review, and proof decisions. Omnexus App Review approval is now captured as an internal mobile app review-to-launch learning pattern for future client app builds; public proof remains blocked until proof packet gates pass. The Business Brain / Consulting OS is now captured in DTP with a source map, command contracts, Controller/General Counsel/COO role specs, first Greg/Cameron/Mom-Mario fixtures, private-first comms drafts, and a recurring client cadence pattern.
 
 ## Priority Decision
 
@@ -315,8 +315,8 @@ Every workspace repo benefits, but not every repo needs a CI change in this stor
 | Repo | Improvement lane | Story 3 touch | Next gate |
 |---|---|---|---|
 | `diagnose-to-plan` | Practice OS, evidence contracts, redaction, hosted-DTP planning | Thin Python/Practice OS CI plus roadmap alignment | Use proof/redaction templates on first pilot |
-| `consulting` | Public storefront, proof surface, Hub intake path | Thin build and secret-scan CI | First redacted proof packet and optional route CI expansion |
-| `architected-strength` | Personal brand OS, content hub, networking engine, proof lab, and first assistant-pattern candidate | Private org repo baseline merged; DTP manifest/evidence index added | Use as the first public assistant-pattern candidate after CCAAP owner-input closure is moving |
+| `consulting` | Public storefront, proof surface, Hub intake path, and first public assistant pilot | Thin build and secret-scan CI plus DTP public assistant manifest | Accept/revise consulting assistant manifest, then extract public source corpus and tests before code |
+| `architected-strength` | Personal brand OS, content hub, networking engine, proof lab, and later assistant-pattern candidate | Private org repo baseline merged; DTP manifest/evidence index added | Revisit after consulting public assistant pilot proves useful |
 | `hub` | Runtime intake, console records, health, prompts/runs | Existing CI/security reviewed; no churn | Prompt/registry cross-validation and v0.4 hardening |
 | `tm-skills` | Global agent SDLC behavior across all repos | Thin Windows CI for doctor/freshness/install preview | Explicit install approval, tool reloads, discovery smoke tests |
 | `engineering-playbook` | Doctrine, portfolio schemas, secret-management references | Pointer audit complete; DTP source-of-truth decision listed and FamilyTrips CI policy represented | Update only when general doctrine or portfolio policy changes |
@@ -335,8 +335,8 @@ This is the master coverage queue. Each repo gets at least one explicit future p
 | Repo | Eventual touch pass | Trigger | Output |
 |---|---|---|---|
 | `diagnose-to-plan` | Hosted DTP Phase 0 and proof/redaction governance | Current Sprint 2 sequence | Phase 0 design accepted; first proof/redaction pilot next, later private app shell |
-| `consulting` | Public proof upgrade and route/visual verification expansion | Proof packet and redaction queue exist | Receipt-style proof pages, noindex/admin checks, optional route CI |
-| `architected-strength` | Personal brand OS publishing and assistant-pattern pass | V1 baseline is merged under the org, DTP manifest/evidence coverage exists, and DTP now has a first public assistant manifest draft | Accept/revise the manifest, then add repo-local source corpus, refusal fixtures, logging review, and route/widget smoke gates before implementation |
+| `consulting` | Public proof upgrade, route/visual verification expansion, and first public assistant pilot | Proof packet/redaction queue exist, and DTP now has a consulting public assistant manifest draft | Accept/revise the manifest, then add repo-local source corpus, refusal fixtures, logging review, and route/widget smoke gates before implementation |
+| `architected-strength` | Personal brand OS publishing and later assistant-pattern pass | V1 baseline is merged under the org, DTP manifest/evidence coverage exists, and DTP has an Architected Strength public assistant manifest draft | Revisit after the consulting public assistant pilot proves useful |
 | `hub` | Runtime hardening and prompt/registry consistency | After core CI is stable | v0.4 hardening notes and support checks; prompt id cross-validation is local-first in `hub-registry` |
 | `tm-skills` | Global install and discovery smoke test | Explicit approval to run install | Installed/reloaded skills, discovery evidence, one canary decision |
 | `engineering-playbook` | Doctrine refresh and pointer audit | Pointer/doctrine lane touched on 2026-04-30 | DTP source-of-truth pointer and FamilyTrips CI policy are aligned; future updates only when reusable doctrine or portfolio policy changes |
@@ -587,8 +587,9 @@ Priority:
 ## What Still Needs Attention
 
 - CCAAP owner-input closure is the highest-leverage current human task: PayPal donation/membership links, contact routing/spam preference, meeting label/destination, DNS path, authentic photos/resources, owner review, and proof decision.
-- Architected Strength V1 is merged into the org-owned private repo. Its next value is content cadence and the first governed public assistant-pattern candidate, not migration into consulting.
-- Cross-site assistants are now a roadmap lane. Public assistants and admin assistants should share a governed manifest pattern; implementation waits for an accepted architecture brief and a first narrow site/surface.
+- Consulting is now the first governed public assistant pilot candidate; implementation waits for manifest acceptance, repo-local source corpus extraction, refusal fixtures, logging review, and route/widget smoke gates.
+- Architected Strength V1 is merged into the org-owned private repo. Its next value is content cadence and a later assistant-pattern pass, not migration into consulting.
+- Cross-site assistants are now a roadmap lane. Public assistants and admin assistants should share a governed manifest pattern; implementation waits for an accepted architecture brief and one narrow consulting public surface.
 - `tm-skills` global install is applied; Codex discovery smoke passed, while Claude Code and GitHub Copilot reload/smoke tests are parked for later manual verification.
 - `hub-registry` prompt id cross-validation now exists as a local workspace gate; repo-scoped CI still runs only safe registry validation until private sibling-repo access is explicitly approved.
 - `hub-registry` portfolio manifest validation still depends on sibling repo manifests that are available locally but not safely available to repo-scoped CI without explicit private-repo access.
@@ -1003,14 +1004,13 @@ Standing preflight/postflight: run the Activation Routing Map plus the Roadmap S
 
 Preflight: use the Practice System Documentation Pack as the current/future/audit/optimization reference before adding major new platform, proof, agent, or cross-repo behavior.
 
-1. Run the first live Business Brain artifact pass from the new Greg, Cameron,
-   and Mom/Mario fixtures, then capture lessons and eval candidates.
+1. Run the recurring client cadence loop: Cam weekly, Greg biweekly if confirmed, CCAAP monthly formal owner check-in, and Toni's weekly Business Brain reset. Update DTP private kits first, then mirror only sanitized status into Notion.
 2. Complete remaining CCAAP inputs: exact PayPal donate/membership links, contact routing and spam preference, meeting label/destination, domain/DNS access, authentic photos/resources, Leah plus Dad review, and proof decision.
 3. Continue the CCAAP off-Wix custom rebuild path only after owner-approved values arrive; production DNS waits for `pnpm validate:launch`.
 4. Use the Custom Interface Craft Standard for broad UI work. Treat `architected-strength` and `consulting` as north-star candidates until they pass reference promotion gates; do not copy them as finished templates.
 5. Use Notion Mirror V0 as the phone cockpit/inbox for CCAAP waiting-on items, but run steward triage before DTP source-of-truth changes.
-6. Use Architected Strength as the first governed assistant-pattern candidate after CCAAP owner-input closure is moving; do not migrate it into consulting.
-7. Keep the cross-site assistant lane at architecture/manifest level until the first site manifest, source corpus, refusal policy, analytics/logging plan, and handoff route are accepted.
+6. Use consulting as the first governed public assistant pilot and keep Architected Strength as a later assistant-pattern candidate; do not migrate Architected Strength into consulting.
+7. Keep the cross-site assistant lane at architecture/manifest level until the consulting public manifest, source corpus, refusal policy, analytics/logging plan, and handoff route are accepted.
 8. Keep Hub dependency PRs #54/#56/#61 parked until one is explicitly selected with a migration/security plan; PRs #59 and #55 no longer block the queue. Older PR #52 is no longer in the active visible queue.
 9. Keep Hub prompt/registry cross-validation local-first; decide private sibling-repo CI access only if it becomes worth the operational cost.
 10. Keep repo manifests current as touched lanes change; DTP, consulting, Architected Strength, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, CCAAP, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus now have manifests/evidence indexes.

@@ -64,6 +64,7 @@ The Practice System Documentation Pack is the architecture and audit layer for t
 - Practice OS includes Business Brain command contracts, first Controller/General
   Counsel/COO role specs, Greg/Cameron/Mom-Mario fixtures, and a private-first
   communications kit.
+- Practice OS includes a recurring client cadence template, and DTP includes `docs/RECURRING_CLIENT_CADENCE_OPERATING_PATTERN.md` so Cam, Greg, CCAAP, and Toni's weekly Business Brain reset follow the same prep, meeting, extraction, decision, action, and sanitized Notion mirror loop.
 - Practice OS includes a Notion Mirror item template, and DTP includes `docs/NOTION_MIRROR_V0.md` so phone-captured ideas and Notion roadmap views can mirror DTP without taking over source-of-truth ownership.
 - Hosted DTP Phase 0 now has an accepted design-boundary doc at `docs/HOSTED_DTP_PHASE_0.md`; hosted implementation remains gated until a separate implementation request and real records exist.
 - Practice OS now includes proof/redaction templates for proof packets, redaction queue items, permission review, evidence-source review, public claim review, and asset inventory.
@@ -294,14 +295,19 @@ Complete these before treating the practice as ready for soft launch.
    - Do not mirror secrets, raw transcripts, private engagement data, payment/form records, DSE/Microsoft confidential material, or unsupported public proof claims.
    - Add automation only after the manual mirror proves useful.
 
-13. Use the Agentic Performance Gap Review when the agent system itself needs scrutiny.
+13. Run recurring client cadence as the current light-infrastructure layer.
+   - Use `docs/RECURRING_CLIENT_CADENCE_OPERATING_PATTERN.md`.
+   - Keep Cam weekly, Greg biweekly if confirmed, CCAAP monthly formal owner check-in, and Toni's weekly Business Brain reset.
+   - Update private DTP kits before mirroring sanitized `next_meeting`, `waiting_on`, `next_action`, `blocked_by`, and `last_updated` fields into Notion.
+
+14. Use the Agentic Performance Gap Review when the agent system itself needs scrutiny.
    - Ask whether the activation map caught the true prompt intent.
    - Check whether the right repo docs, current state, and handoff notes were loaded.
    - Check whether the right `tm-skills` or DTP skill triggered.
    - Convert confirmed misses into activation-map changes, eval fixtures, `tm-skills` misfire notes, research radar items, decision records, or backlog stories.
    - Keep this supervised. The review proposes changes; it does not authorize autonomous repo edits, public proof, hosted implementation, or self-modifying skills.
 
-14. Keep the Practice System Documentation Pack authoritative.
+15. Keep the Practice System Documentation Pack authoritative.
    - Use `docs/PRACTICE_SYSTEM_ARCHITECTURE.md` for current-state architecture and repo boundaries.
    - Use `docs/PRACTICE_SYSTEM_FUTURE_STATE.md` before hosted DTP, steward automation, research automation, repo manifest expansion, or agent protocol work.
    - Use `docs/PRACTICE_SYSTEM_AUDIT_AND_GAP_REVIEW.md` to identify the highest-risk architecture and governance gaps before adding platform surface.
@@ -451,8 +457,8 @@ DTP treats `Toni-Montez-Consulting` as the canonical GitHub organization for con
 | Repo | Owns | Does Not Own |
 |---|---|---|
 | `diagnose-to-plan` | Practice OS, Client Operating Kits, redaction, COI, patterns, hosted DTP roadmap, private engagement methodology, CLI verification/evidence pattern | Public marketing site, Hub runtime records |
-| `consulting` | Public storefront, `/start`, public proof, `/admin` command room, launch/design docs | Private client kits, source-of-truth practice roadmap, runtime intake store |
-| `architected-strength` | Personal brand OS, content hub, networking engine, proof lab, and first public assistant-pattern candidate | Consulting service intake, official Microsoft representation, private employer/client material |
+| `consulting` | Public storefront, `/start`, public proof, `/admin` command room, launch/design docs, and first public assistant pilot manifest | Private client kits, source-of-truth practice roadmap, runtime intake store |
+| `architected-strength` | Personal brand OS, content hub, networking engine, proof lab, and later public assistant-pattern candidate | Consulting service intake, official Microsoft representation, private employer/client material |
 | `hub` | Runtime intake, private console, Supabase operational tables, webhook/capture/runs support | DTP engagement kits, public proof pages, CRM replacement |
 | `tm-skills` | Cross-repo SDLC skills, global coding-agent instructions, trigger evals, skill install/doctor scripts, agent behavior for verification gates | Client engagement records, consulting-practice memory, public proof |
 | future `faos` repo | Agentic orchestration substrate if approved later: `op` wrapper, traces, memory MCP, eval harness, durable workflows, subagent/hook packaging | Practice source of truth, public proof, Hub runtime, or project repo ownership |

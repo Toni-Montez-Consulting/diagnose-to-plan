@@ -70,7 +70,7 @@ The V0 report produces:
 |---|---|---|---|---|---|---|
 | `diagnose-to-plan` | Practice OS | manifest/evidence ok | DTP CI or local validation from evidence index | pytest/ruff/skills/doctor | varies | current roadmap story |
 | `consulting` | public proof/storefront | manifest/evidence ok | build/secret scan/proof packet from evidence index | build/secrets/route smoke | proof gates | public-safe updates only |
-| `architected-strength` | personal brand OS and assistant-pattern candidate | manifest/evidence ok | local CI and GitHub Actions from evidence index | `pnpm run ci` | assistant manifest/source/refusal gates | first assistant-pattern candidate after CCAAP owner-input closure |
+| `architected-strength` | personal brand OS and later assistant-pattern candidate | manifest/evidence ok | local CI and GitHub Actions from evidence index | `pnpm run ci` | assistant manifest/source/refusal gates | revisit after consulting public assistant pilot proves useful |
 | `hub` | runtime/intake | manifest/evidence ok | CI/security/local verify from evidence index | pnpm verify or targeted gates | production secrets | runtime/support work |
 | `hub-prompts` | prompt catalog | manifest/evidence ok | prompt validation from evidence index | npm test | eval/golden fixtures | prompt quality work |
 | `hub-registry` | prompt routing registry | manifest/evidence ok | registry and prompt-id validation from evidence index | npm test locally; CI-safe validate in GitHub | sibling CI access deferred | registry validation work |

@@ -18,6 +18,7 @@ review_status: draft
 
 | Lane | Date | Result | Commit | Artifact |
 |---|---|---|---|---|
+| client cadence + light infrastructure | 2026-05-01 | pass_with_manual_gates | current branch | Recurring client cadence pattern/template, Cam/Greg/CCAAP private cadence records, consulting public assistant manifest/source corpus, roadmap alignment, and sanitized Notion cockpit page were prepared; `git diff --check`, `dtp workspace report`, kit status checks, `dtp practice doctor`, `dtp skills --validate`, `pytest`, `ruff check .`, and Notion fetch passed |
 | client follow-up sprint | 2026-05-01 | pass_with_manual_gates | current branch | Cam and Greg send-ready packets plus CCAAP waiting state were prepared in private engagement kits; Notion mirror is sanitized; `dtp workspace report`, kit status checks, `dtp practice doctor`, `dtp skills --validate`, `pytest`, and `ruff check .` passed; next manual gate is Toni review/send and client replies before repo access, live data, public proof, or production launch |
 | steward receipt | 2026-05-01 | pass_with_manual_gates | current branch | Custom Interface Craft and CCAAP closeout recorded in `practice-os/steward/2026-05-01-custom-interface-craft-and-ccaap-closeout.md`; DTP, `tm-skills`, and `ccaap-site` dirty work is verified but still uncommitted; CCAAP launch blockers remain owner-approved PayPal/contact/meeting/asset/proof inputs |
 | CCAAP owner review | 2026-05-01 | sent_with_temp_preview | current branch | Owner review packet and temporary prototype link were sent to Leah plus Dad; DTP records local gates, temporary route smoke, and the durable Cloudflare Pages CLI blocker without treating the tunnel as production readiness |
@@ -54,7 +55,7 @@ review_status: draft
 - GitHub Enterprise org-migration closeout is complete for Omnexus PR #559; Hub PRs #59 and #55 are merged; non-DSE org alignment is no longer the active blocker.
 - Workspace Command Center V0 reports recorded artifacts only; live git/CI reads and command execution remain later. Missing repo rows may carry explicit Active Next Queue blockers without inferring gates.
 - Repo manifest/evidence index shape now covers DTP, consulting, Architected Strength, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, `ccaap-site`, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus. `dse-content` remains missing until its lane is clean or explicitly selected with COI-aware scope.
-- Cross-site assistant implementation is intentionally not started; the next gate is accepting a site manifest, source corpus, refusal policy, logging/analytics plan, and human handoff path for one narrow assistant surface.
+- Cross-site assistant implementation is intentionally not started; the consulting public assistant is the first pilot candidate and remains gated on accepting the manifest, extracting the repo-local source corpus, refusal/handoff fixtures, logging/analytics policy, and launch gate.
 
 ## Notes
 
