@@ -29,6 +29,7 @@ When another repo's docs conflict with this roadmap, treat the other doc as loca
 - `docs/ROADMAP_EXECUTION_BACKLOG.md`: Kanban-style epic/story execution view for the roadmap, with status, Done gates, and next actions.
 - `docs/ROADMAP_STORY_ACTIVATION_INDEX.md`: story-to-skill/template/agent routing index for the Kanban backlog; use it when a roadmap story needs the right activation path.
 - `docs/CROSS_SITE_ASSISTANT_ARCHITECTURE_BRIEF.md`: governed cross-site assistant pattern for public website assistants and authenticated admin/operator assistants. Read before implementing any chatbot, assistant widget, private retrieval, admin helper, or assistant gateway.
+- `docs/assistant-manifests/architected-strength-public-v0.md`: first draft public assistant manifest for Architected Strength. It names the intended public source corpus, blocked sources, handoff route, refusal rules, logging/analytics boundary, and launch gate without authorizing implementation.
 - `docs/HOSTED_DTP_PHASE_0.md`: hosted DTP schema/app-boundary design for the private single-operator foundation; read before any hosted app, schema, or migration work.
 - `docs/CLIENT_COMMAND_ROOM_PATTERN.md`: reusable admin/customer portal pattern inspired by `demario-pickleball-1`; use when planning owner-facing operating rooms.
 - `docs/CLI_VERIFICATION_AUTOMATION_PATTERN.md`: reusable CLI doctor/matrix/verification/evidence pattern inspired by Omnexus; use when planning infrastructure-first automation across repos.
@@ -117,6 +118,7 @@ Do not update `hub-prompts` or `hub-registry` just because the roadmap changes. 
 - Use `docs/FAOS_ORCHESTRATION_ROADMAP.md` and `practice-os/templates/faos-phase-readiness-review.md` before accepting any FAOS, `op` wrapper, Langfuse, Mem0/Letta, Spec-Kit, MCP, subagent, hook, durable execution, or agent-orchestration implementation prompt.
 - Use `docs/NOTION_MIRROR_V0.md` before connecting Notion MCP, creating Notion databases, or syncing DTP roadmap/proof/repo-health records into Notion. Notion is a mobile mirror and capture surface; DTP remains source of truth.
 - Use `docs/CROSS_SITE_ASSISTANT_ARCHITECTURE_BRIEF.md` before implementing public website assistants, admin assistants, assistant manifests, private retrieval, or assistant gateway/runtime behavior.
+- Use `docs/assistant-manifests/architected-strength-public-v0.md` as the first assistant-pattern candidate only after accepting the cross-site brief; implementation still needs repo-local source corpus, refusal tests, logging review, and launch gates.
 - Use `docs/MOBILE_APP_REVIEW_AND_LAUNCH_PATTERN.md` and `practice-os/templates/mobile-app-review-journey.md` before turning a mobile app launch/review journey into a client handoff, proof candidate, review-response log, or reusable checklist.
 - Verification evidence templates live in `practice-os/templates/verification-evidence.md` and `practice-os/templates/verification-evidence.json`; private run artifacts should live in ignored/private evidence paths unless they are intentionally redacted.
 - Future Intelligence templates are optional until repeated usage proves they should become doctor-enforced Practice OS gates.

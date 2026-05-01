@@ -18,6 +18,9 @@ review_status: draft
 
 | Lane | Date | Result | Commit | Artifact |
 |---|---|---|---|---|
+| owner review packet | 2026-05-01 | sent_with_temp_preview | current branch | Toni sent the owner review message and temporary prototype link to Leah plus Dad; exact owner-approved launch inputs remain pending |
+| temporary preview smoke | 2026-05-01 | pass_with_advisory | current branch | Local `pnpm lint`, `pnpm check`, `pnpm validate:content`, and `pnpm build` passed; temporary Cloudflare quick-tunnel route smoke returned 200 for `/`, `/about/`, `/meetings/`, `/join-donate/`, `/resources/`, `/updates/`, `/board/`, and `/contact/`; link is ephemeral and only valid while Toni's machine/tunnel stay running |
+| Cloudflare Pages CLI | 2026-05-01 | blocked_by_local_tooling | current branch | Direct Cloudflare Pages deploy via latest Wrangler was blocked on native Windows ARM64 because `workerd` reported unsupported platform; no Cloudflare API token was present in the shell; durable Pages setup still needs dashboard, API token, CI secret, or an x64/Linux deploy path |
 | content | 2026-05-01 | pass_with_expected_warnings | current branch | `pnpm validate:content`; PayPal/contact placeholders remain expected production blockers |
 | launch gate | 2026-05-01 | pass_with_expected_failure | current branch | `pnpm validate:launch` fails as intended on meeting link placeholders, board approval, PayPal URLs, and contact routing |
 | install | 2026-04-30 | pass_with_advisory | current branch | `pnpm install --frozen-lockfile`; pnpm reports ignored build scripts for esbuild/sharp until explicitly approved |
@@ -44,8 +47,8 @@ review_status: draft
 - Board/profile copy and media approval is still missing.
 - Domain/DNS access is still missing.
 - Authentic photos and scholarship/resource files are still missing.
-- Leah plus Dad owner review is still pending.
-- Cloudflare Pages preview is not connected yet.
+- Leah plus Dad owner feedback is now requested and still pending.
+- Durable Cloudflare Pages preview is not connected yet; the temporary tunnel review link is not a production or stable preview gate.
 - Public consulting proof remains blocked until permission, redaction, reviewer, evidence, and caveat pass.
 
 ## Notes

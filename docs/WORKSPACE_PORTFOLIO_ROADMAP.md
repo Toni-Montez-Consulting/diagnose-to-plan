@@ -328,7 +328,7 @@ This is the master coverage queue. Each repo gets at least one explicit future p
 |---|---|---|---|
 | `diagnose-to-plan` | Hosted DTP Phase 0 and proof/redaction governance | Current Sprint 2 sequence | Phase 0 design accepted; first proof/redaction pilot next, later private app shell |
 | `consulting` | Public proof upgrade and route/visual verification expansion | Proof packet and redaction queue exist | Receipt-style proof pages, noindex/admin checks, optional route CI |
-| `architected-strength` | Personal brand OS publishing and assistant-pattern pass | V1 baseline is merged under the org and DTP manifest/evidence coverage exists | First public assistant manifest, source corpus, refusal policy, and handoff path after assistant brief acceptance |
+| `architected-strength` | Personal brand OS publishing and assistant-pattern pass | V1 baseline is merged under the org, DTP manifest/evidence coverage exists, and DTP now has a first public assistant manifest draft | Accept/revise the manifest, then add repo-local source corpus, refusal fixtures, logging review, and route/widget smoke gates before implementation |
 | `hub` | Runtime hardening and prompt/registry consistency | After core CI is stable | v0.4 hardening notes and support checks; prompt id cross-validation is local-first in `hub-registry` |
 | `tm-skills` | Global install and discovery smoke test | Explicit approval to run install | Installed/reloaded skills, discovery evidence, one canary decision |
 | `engineering-playbook` | Doctrine refresh and pointer audit | Pointer/doctrine lane touched on 2026-04-30 | DTP source-of-truth pointer and FamilyTrips CI policy are aligned; future updates only when reusable doctrine or portfolio policy changes |

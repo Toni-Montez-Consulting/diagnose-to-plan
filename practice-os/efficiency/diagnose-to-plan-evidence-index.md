@@ -18,6 +18,8 @@ review_status: draft
 
 | Lane | Date | Result | Commit | Artifact |
 |---|---|---|---|---|
+| CCAAP owner review | 2026-05-01 | sent_with_temp_preview | current branch | Owner review packet and temporary prototype link were sent to Leah plus Dad; DTP records local gates, temporary route smoke, and the durable Cloudflare Pages CLI blocker without treating the tunnel as production readiness |
+| assistant manifest | 2026-05-01 | draft | current branch | Architected Strength public assistant V0 manifest added at `docs/assistant-manifests/architected-strength-public-v0.md`; implementation remains blocked until source corpus, refusal/handoff tests, analytics/logging review, and human approval are accepted |
 | steward receipt | 2026-05-01 | pass | current branch | Omnexus closeout postflight recorded with commit `65d9ea44`, live-proof checklist commit `deceade8`, local gates, CI run `25198605657`, Build iOS runs `25198605656`/`25198820004`, Security Ops runs `25198605663`/`25198820007`, Semgrep runs `25198605662`/`25198820015`, and the current CCAAP owner-input launch blockers |
 | planning | 2026-05-01 | pass | current branch | Cross-site assistant architecture brief added; DTP backlog and portfolio roadmap now track Architected Strength, CCAAP, and the governed public/admin assistant lane without starting assistant implementation |
 | workspace coverage | 2026-05-01 | pass | current branch | Architected Strength repo manifest and evidence index added; `dtp workspace report` canonical repo list now includes Architected Strength and CCAAP |
