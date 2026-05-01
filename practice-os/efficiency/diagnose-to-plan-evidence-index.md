@@ -18,6 +18,7 @@ review_status: draft
 
 | Lane | Date | Result | Commit | Artifact |
 |---|---|---|---|---|
+| steward receipt | 2026-05-01 | pass | current branch | Omnexus closeout postflight recorded with commit `65d9ea44`, local gates, CI run `25198605657`, Build iOS run `25198605656`, Security Ops run `25198605663`, Semgrep run `25198605662`, and the current CCAAP owner-input launch blockers |
 | planning | 2026-05-01 | pass | current branch | Cross-site assistant architecture brief added; DTP backlog and portfolio roadmap now track Architected Strength, CCAAP, and the governed public/admin assistant lane without starting assistant implementation |
 | workspace coverage | 2026-05-01 | pass | current branch | Architected Strength repo manifest and evidence index added; `dtp workspace report` canonical repo list now includes Architected Strength and CCAAP |
 | private kit | 2026-04-30 | pass_with_manual_gates | current branch | CCAAP owner action packet, call-to-action extraction ledger, reusable owner-call extraction template, and raw pattern candidate added; PayPal/contact/meeting/assets/DNS/proof remain owner-input gates |
