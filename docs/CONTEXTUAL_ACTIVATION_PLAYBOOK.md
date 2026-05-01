@@ -34,6 +34,7 @@ Use the lightest rung that captures the idea and protects the right gate.
 | Business/offer/pricing | "new offer", "package this", "how do I sell this" | Practice Production Roadmap and offer docs | decision record or roadmap story | public claims need proof |
 | Proof/case study | "can this become proof", "case study", "show this publicly" | proof/redaction templates | proof packet, asset inventory, claim review | evidence, caveat, permission, reviewer |
 | Research/tooling | "research this", "should we adopt X" | research radar or research spike | Adopt/Pilot/Watch/Reject item | primary/official sources |
+| Mobile app review/launch learning | "App Store approved", "store rejection", "TestFlight", "mobile launch journey" | Mobile App Review And Launch pattern and journey template | review journey, approval closeout, client launch packet | no credentials/private store evidence in git |
 | Process/infrastructure | "make this repeatable", "avoid memory", "agent manager" | Roadmap Steward, story activation, workspace efficiency | template, backlog story, decision record | no autonomy before evals/guardrails |
 | Agent/skill/automation | "trigger agents", "self-learning", "skills" | Activation Map, Story Activation Index, Future Intelligence | skill update, eval, guardrail plan | no global install/autonomy without approval |
 | COI/privacy/security | "DSE", "Microsoft", "private data", "safe to publish" | COI screen, redaction policy, AI red-team if applicable | review item or parked story | pause before implementation |
@@ -63,6 +64,7 @@ public proof, client work, agent behavior, or automation.
 - One-off story activation: `practice-os/templates/story-activation-contract.md`
 - Idea intake template: `practice-os/templates/contextual-idea-intake.md`
 - Owner call extraction: `practice-os/templates/owner-call-to-action-extraction.md`
+- Mobile app review learning: `docs/MOBILE_APP_REVIEW_AND_LAUNCH_PATTERN.md`, `practice-os/templates/mobile-app-review-journey.md`
 - Kanban backlog: `docs/ROADMAP_EXECUTION_BACKLOG.md`
 
 ## No-Touch Defaults

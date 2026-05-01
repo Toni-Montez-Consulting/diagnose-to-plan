@@ -22,6 +22,7 @@ The practical thesis is:
 14. Treat FAOS as a future orchestration substrate candidate that must pass readiness review before it adds Langfuse, Mem0/Letta, Spec-Kit, MCP, subagents, hooks, durable workflows, or an `op` wrapper.
 15. Mirror the practice into Notion for phone-first capture and daily review without moving source-of-truth ownership out of DTP.
 16. Plan site-scoped AI assistants as a governed cross-site pattern with separate public and admin surfaces, not as one generic chatbot pasted across projects.
+17. Turn mobile app review and launch journeys into reusable client-app launch packets, starting with the Omnexus App Store approval pattern.
 
 ## Scope
 
@@ -43,7 +44,7 @@ Workspace folders currently listed in `C:\Users\tonimontez\toni-consulting-ops.c
 
 GitHub ownership boundary: consulting/practice repos now live under `Toni-Montez-Consulting` where available. `dse-content` remains outside that organization in the personal/Microsoft-linked namespace, stays on the COI-aware lane, and should not be updated or moved unless explicitly selected.
 
-Current delta as of 2026-05-01: `architected-strength` is now tracked as Toni's personal brand OS, content hub, networking engine, proof lab, and first assistant-pattern candidate. `ccaap-site` is tracked as the first client operating kit public-site implementation and remains blocked on owner-approved PayPal, contact, meeting, DNS, photos/resources, owner review, and proof decisions.
+Current delta as of 2026-05-01: `architected-strength` is now tracked as Toni's personal brand OS, content hub, networking engine, proof lab, and first assistant-pattern candidate. `ccaap-site` is tracked as the first client operating kit public-site implementation and remains blocked on owner-approved PayPal, contact, meeting, DNS, photos/resources, owner review, and proof decisions. Omnexus App Review approval is now captured as an internal mobile app review-to-launch learning pattern for future client app builds; public proof remains blocked until proof packet gates pass.
 
 ## Priority Decision
 
@@ -123,6 +124,7 @@ Components:
 - Context Engineering Lane: formalize repo context packs, compact handoffs, structured notes, and just-in-time retrieval patterns for long sessions.
 - AI Red-Team / Guardrail Lab: run prompt/agent evals, Promptfoo-style red teams, NIST/OWASP checks, and OpenAI guardrail thinking before write-enabled automation or public AI workflows.
 - Release Trust / Supply Chain Spine: layer in SLSA/OpenSSF Scorecard, CycloneDX SBOMs, dependency review, CodeQL/Semgrep, and signed/evidence-backed release artifacts when a repo's risk justifies it.
+- Mobile App Review And Launch Learning Loop: turn App Store/Play Console journeys into reusable launch packets, review-note patterns, rejection-to-story repair loops, approval closeouts, and first-72-hour trust checklists.
 - Feature Flag / Kill Switch Standard: use explicit flags and rollback paths for AI, billing, intake, client-facing, and automation features; watch OpenFeature as a future standard.
 - Agent Protocol Watchlist: keep MCP later as planned; add AG-UI for future agent frontends and A2A as watch-only until multi-agent interoperability is a real need.
 - FAOS Orchestration Substrate: capture the Frontier Agentic Operating System as a long-term substrate candidate for specs, skills, subagents, MCP, memory, tracing, evals, reflection, durable execution, sandboxes, and an operator wrapper. Keep it behind readiness review and DTP gates.
@@ -130,7 +132,7 @@ Components:
 Suggested priority:
 
 1. Roadmap-only capture now.
-2. Low-cost Practice OS templates next: lesson capture, research radar item, research spike, portfolio scorecard, agent session record, AI red-team plan, feature flag/kill switch plan, and supply-chain baseline.
+2. Low-cost Practice OS templates next: lesson capture, research radar item, research spike, portfolio scorecard, agent session record, mobile app review journey, AI red-team plan, feature flag/kill switch plan, and supply-chain baseline.
 3. Eval garden after that: convert real misfires from Hub, DTP, and `tm-skills` into small fixtures.
 4. Red-team lab before autonomy: add guardrail/red-team tests before any write-enabled agent workflow.
 5. Protocol/tool spikes later: AG-UI, A2A, OpenAI Agents SDK, Google ADK, Temporal, and deeper MCP only after DTP/Hub have real workflows that justify them.

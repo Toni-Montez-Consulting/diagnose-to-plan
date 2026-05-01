@@ -10,6 +10,7 @@ Canonical roadmap:
 - `docs/DOCUMENTATION_MAP.md` explains which docs in DTP, consulting, and Hub own which decisions.
 - `docs/CLIENT_COMMAND_ROOM_PATTERN.md` captures the reusable admin/customer portal concept from the DeMario pickleball admin portal for Toni and future client engagements.
 - `docs/CLI_VERIFICATION_AUTOMATION_PATTERN.md` captures the Omnexus-style CLI verification, support, and evidence pattern that should come before heavier hosted product work.
+- `docs/MOBILE_APP_REVIEW_AND_LAUNCH_PATTERN.md` captures the Omnexus App Store approval journey as a reusable mobile app review, approval, and first-user launch pattern for future client builds.
 - `docs/TM_SKILLS_IMPLEMENTATION_ROADMAP.md` is the implementation handoff for the separate `tm-skills` repo, which will own reusable cross-repo software-development Skills.
 
 Current scope:
@@ -24,6 +25,7 @@ Current scope:
 - `dtp vault` gives private `engagements/` artifacts their own git-backed durability path
 - `voice`, `pricing`, and `sow` stay valid placeholder skills for Toni to author
 - Client Command Room fit/spec templates live in `practice-os/templates/` for owner operating rooms that are justified by recurring workflow pain
+- Mobile app review journey templates live in `practice-os/templates/` for future App Store, Play Console, approval closeout, and first-72-hour launch work
 
 ## Local Workbench And Private Vault
 

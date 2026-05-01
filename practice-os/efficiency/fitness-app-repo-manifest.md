@@ -12,14 +12,14 @@ review_status: draft
 - Repo: `fitness-app` / Omnexus
 - GitHub repo: `Toni-Montez-Consulting/Omnexus`
 - Local path: `fitness-app`
-- Primary role: founder/product/operator app with mobile release, billing, entitlements, Supabase contracts, verification cockpit, and public-proof potential
-- Owner lane: adjacent project verification cockpit reference and app-release evidence
+- Primary role: founder/product/operator app with mobile release, billing, entitlements, Supabase contracts, verification cockpit, App Store approval journey, and public-proof potential
+- Owner lane: adjacent project verification cockpit reference, app-review learning pattern, and app-release evidence
 - Public/private: app source repo with private production data, credentials, billing records, app-store state, and user data kept outside git
 - Deploy target: Vercel web app plus Capacitor/iOS/Android release surfaces
 
 ## Boundaries
 
-- Owns: Omnexus product code, app release workflow, billing/entitlements, Supabase migrations/contracts, app-store support artifacts, CI/security gates, and verification cockpit implementation
+- Owns: Omnexus product code, app release workflow, billing/entitlements, Supabase migrations/contracts, app-store support artifacts, approval/post-approval docs, CI/security gates, and verification cockpit implementation
 - Does not own: DTP practice roadmap, consulting public proof pages, Hub runtime intake, private DTP engagement kits, `tm-skills`, or workspace-wide command runners
 - Sensitive data: Supabase production data, auth users, subscriptions, Stripe/IAP records, HealthKit-related user data, App Store reviewer details, Sentry/PostHog data, env vars, and private proof screenshots
 - COI/privacy notes: Omnexus can be a strong proof/reference source, but public claims need proof packet, permission, redaction, reviewer, and caveat gates before consulting publication
@@ -34,7 +34,7 @@ review_status: draft
 
 ## Evidence
 
-- Evidence path: GitHub Actions logs, `artifacts/verification/`, `docs/engineering/ci-runbook.md`, `docs/engineering/production-verification-cli-stack.md`, and DTP evidence receipts
+- Evidence path: GitHub Actions logs, `artifacts/verification/`, `docs/engineering/ci-runbook.md`, `docs/engineering/production-verification-cli-stack.md`, `docs/HOW_OMNEXUS_WORKS.md`, `docs/store-metadata/app-store-approval-closeout-2026-05-01.md`, and DTP evidence receipts
 - Latest receipt: see `practice-os/efficiency/fitness-app-evidence-index.md`
 - Proof eligibility: internal reference and future public proof candidate only after proof/redaction gates pass
 - Redaction rule: never publish raw scanner logs with sensitive paths, production data, user records, billing records, private app-store details, unapproved screenshots, credentials, or env values
@@ -49,7 +49,7 @@ review_status: draft
 
 ## Next Touch
 
-- Lane: verification cockpit reference, app-release evidence, and proof candidate extraction
-- Trigger: verification cockpit pattern changes, release readiness work, app-store proof, public proof request, or a recurring Omnexus support/release failure
+- Lane: verification cockpit reference, mobile app review-to-launch pattern, app-release evidence, and proof candidate extraction
+- Trigger: verification cockpit pattern changes, release readiness work, App Store/public install proof, public proof request, future client mobile app launch planning, or a recurring Omnexus support/release failure
 - Blocker: public proof remains blocked until evidence, permission, redaction, reviewer, and caveat are real
-- Next action: keep DTP pattern extraction current without mutating Omnexus code unless the Omnexus lane is explicitly reopened
+- Next action: use DTP's mobile app review pattern for future client app builds while keeping Omnexus source changes repo-owned and explicitly scoped

@@ -10,6 +10,8 @@ The reusable admin/customer portal concept is captured as the Client Command Roo
 
 The reusable verification/support automation concept is captured as the CLI Verification And Automation pattern. It is inspired by the Omnexus / `fitness-app` toolkit and should guide infrastructure-first doctor, matrix, local gate, release gate, support gate, and evidence artifacts before heavier hosted product work. See `docs/CLI_VERIFICATION_AUTOMATION_PATTERN.md`.
 
+The reusable mobile app review and launch concept is captured as the Mobile App Review And Launch pattern. It is inspired by the Omnexus App Store approval journey and should guide future client-app launch packets, review-note discipline, rejection-to-story repair loops, approval closeouts, and first-72-hour trust checks. See `docs/MOBILE_APP_REVIEW_AND_LAUNCH_PATTERN.md`.
+
 The Future Intelligence Layer is captured in `docs/WORKSPACE_PORTFOLIO_ROADMAP.md`. It adds supervised learning loops, research radar, agent flight records, portfolio scorecards, context engineering, AI red-team planning, release trust, feature flags, and protocol watchlists without changing the current build order.
 
 The Workspace Efficiency Layer is also captured in `docs/WORKSPACE_PORTFOLIO_ROADMAP.md`. It adds the read-only `dtp workspace report`, workspace command-center planning, repo manifests, affected-only checks, shared CI later, dependency maintenance, toolchain pinning, evidence indexes, decision logs, starter-factory templates, and CI cache hygiene without forcing the repos into one platform or monorepo.
@@ -41,6 +43,7 @@ The Practice System Documentation Pack is the architecture and audit layer for t
 - `practice-os/` contains reusable policies, templates, operator Skills, and reviewed Bottleneck Patterns.
 - Practice OS includes Client Command Room fit/spec templates so future engagements can decide between a command room, a handoff checklist, no private surface, or a deferred revisit before building portal UI.
 - Practice OS includes optional Future Intelligence templates for lessons, research radar items, research spikes, portfolio scorecards, agent session records, AI red-team plans, feature flag/kill switch plans, and supply-chain baselines.
+- Practice OS includes a mobile app review journey template seeded from Omnexus approval learning so future app builds can capture store review, native device, billing, privacy, and launch evidence without storing private reviewer or user data.
 - Practice OS includes optional Workspace Efficiency templates for repo manifests, evidence indexes, decision records, workspace command-center planning, dependency maintenance, toolchain pinning, CI cache planning, and project starter baselines.
 - Practice OS includes an optional FAOS Phase Readiness Review template for checking orchestration-substrate phases before any FAOS repo, `op` wrapper, tracing/memory service, Spec-Kit rollout, MCP server, subagent, hook, durable workflow, or business-agent automation is built.
 - Practice OS includes an AI Activation Map template for routing prompt shapes to the right skill, template, gate, roadmap lane, or parked automation path.
@@ -91,6 +94,7 @@ The Practice System Documentation Pack is the architecture and audit layer for t
 - `engineering-playbook` remains useful for portfolio schemas, templates, historical decisions, secret management, and general operating doctrine.
 - `hub-prompts` remains the prompt catalogue consumed by Hub.
 - `hub-registry` remains the Hub automation target registry.
+- `fitness-app` / Omnexus remains the product app and mobile release/proof candidate. DTP now stores its verification cockpit and App Store approval journey as internal reference patterns; Omnexus source docs remain repo-owned.
 - These repos should not duplicate this roadmap. They should point here when the question is practice production sequencing, hosted DTP, Client Operating Kits, proof promotion, or `tm-skills` build order.
 
 ### Client Command Room Pattern
@@ -247,7 +251,8 @@ Complete these before treating the practice as ready for soft launch.
 
 9. Capture the Future Intelligence Layer.
    - Keep this as roadmap and template work while hosted DTP Phase 0 and proof/redaction stay first in line.
-   - Use `practice-os/templates/lesson-capture.md`, `research-radar-item.md`, `portfolio-scorecard.md`, and `agent-session-record.md` after real work sessions.
+   - Use `practice-os/templates/lesson-capture.md`, `research-radar-item.md`, `portfolio-scorecard.md`, `agent-session-record.md`, and `mobile-app-review-journey.md` after real work sessions.
+   - Use `docs/MOBILE_APP_REVIEW_AND_LAUNCH_PATTERN.md` when a mobile app approaches TestFlight, store review, approval closeout, public install, or first-user launch support.
    - Keep self-learning supervised: lessons may propose evals, checklist updates, or skill updates, but humans approve the change.
    - Do not adopt AG-UI, A2A, MCP recall, OpenAI Agents SDK, Google ADK, Temporal, or heavier observability until a real DTP/Hub workflow justifies a spike.
    - Treat FAOS as the broader orchestration-substrate candidate for those future components, but run the FAOS Phase 0 readiness review before any implementation.

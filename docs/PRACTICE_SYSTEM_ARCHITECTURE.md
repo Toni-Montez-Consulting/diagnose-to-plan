@@ -37,7 +37,7 @@ GitHub ownership boundary: as of 2026-04-30, the consulting/practice portfolio r
 | `engineering-playbook` | General doctrine, portfolio templates, decisions, secret-management references | portfolio checks and repo-local scripts | Does not duplicate DTP roadmap ownership |
 | `hub-prompts` | Hub prompt catalog, prompt schemas, validation fixtures | `npm test`, prompt validation | Does not own Hub runtime routing or DTP roadmap |
 | `hub-registry` | Hub automation target registry and routing config | `npm run validate`, local portfolio manifest checks, local prompt-id cross-validation | Does not own prompt content or practice roadmap |
-| `fitness-app` / Omnexus | Product app, verification cockpit reference, founder/product proof candidate | app local gates, toolkit registry, CI evidence, Supabase drift gates, DTP extraction receipts | Do not disturb app code without explicit lane |
+| `fitness-app` / Omnexus | Product app, verification cockpit reference, App Store approval learning source, founder/product proof candidate | app local gates, toolkit registry, CI evidence, Supabase drift gates, app-review journey receipts, DTP extraction receipts | Do not disturb app code without explicit lane |
 | `demario-pickleball-1` | Local-business launch track and command-room reference | `npm run ci`, venue/routing/manual launch gates | Reference pattern, not practice roadmap owner |
 | `ccaap-site` | CCAAP off-Wix public-site implementation and first client operating kit launch lane | `pnpm lint`, `pnpm check`, `pnpm validate:content`, `pnpm build`, `pnpm validate:launch` after owner inputs | No private member/payment/form/student data; production waits on owner-approved launch inputs |
 | `FamilyTrips` | Private family trip app and privacy-first maintenance lane | data validation, build, tests, privacy checks | Not public proof by default |
@@ -212,7 +212,7 @@ The current verification model is intentionally thin and repo-local:
 | `tm-skills` | doctor, freshness, install dry-run; no apply without approval |
 | `hub-prompts` | prompt validation through `npm test` |
 | `hub-registry` | CI-safe registry validation; sibling-manifest and prompt-id checks stay local until access is explicit |
-| Omnexus | reference verification cockpit with registry, lock file, Docker-backed tools, evidence artifacts |
+| Omnexus | reference verification cockpit with registry, lock file, Docker-backed tools, evidence artifacts, and mobile app review-to-launch learning pattern |
 | Adjacent repos | add gates only when their lane is touched |
 
 ## Current Agent And Skill System

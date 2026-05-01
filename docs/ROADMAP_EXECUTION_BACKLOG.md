@@ -105,6 +105,7 @@ Goal: make public proof evidence-backed, permissioned, caveated, and reviewable.
 | First proof/redaction pilot | `diagnose-to-plan` plus pilot repo | Done | one real project uses proof packet and redaction queue before public proof | internal Mom candidate exists; public proof stays blocked until permission, redaction, reviewer, evidence, and caveat pass |
 | Consulting proof backlog | `consulting` | Ready | proof candidates mapped to real source material and redaction state | start after first pilot |
 | Omnexus proof candidates | `fitness-app` | Later | claim is permissioned, redacted, reviewed, caveated, and backed by evidence | PR #553 is merged and extracted as an internal reference; do not publish proof without proof packet gates |
+| Omnexus App Store approval proof candidate | `fitness-app`, `diagnose-to-plan`, later `consulting` | Later | approval/public-install/first-user-trust claims are separated, permissioned, redacted, reviewed, caveated, and backed by evidence | use the mobile app review pattern internally; public proof waits for proof packet gates |
 | DeMario proof packet | `demario-pickleball-1` | Later | launch gates and permission are complete | keep owner-safe |
 | DSE internal proof lane | `dse-content` | Later | COI, permission, and redaction review complete | internal/professional only |
 
@@ -158,6 +159,7 @@ Goal: turn delivery, failures, research, and agent sessions into supervised lear
 | Future Intelligence templates | `diagnose-to-plan` | Done | lesson, research, scorecard, flight recorder, red-team, feature flag, and supply-chain templates exist | use opportunistically |
 | Agentic Performance Gap Review V0 | `diagnose-to-plan` | Done | performance-gap doc exists, template is required by practice doctor, activation map routes gap prompts | use after major agent-system misses |
 | First agent flight record | `diagnose-to-plan` | Ready | one major session leaves a reusable receipt | capture on next complex implementation |
+| Omnexus App Store approval learning | `diagnose-to-plan`, `fitness-app` reference | Done | mobile app review/launch pattern, journey template, lesson record, steward receipt, and evidence-index update exist without mutating Omnexus | use on future mobile client builds; keep public proof gated |
 | Research Radar first item | `diagnose-to-plan` | Ready | one item classified Adopt/Pilot/Watch/Reject with source and next action | use when research changes roadmap |
 | Eval garden | `hub-prompts`, `tm-skills`, DTP | Later | real misfires become fixtures | wait for misfire history |
 | Red-team lab | Hub/DTP future agent workflows | Later | adversarial tests exist before write-enabled automation | keep before autonomy |
@@ -181,6 +183,7 @@ Goal: ensure every workspace repo benefits without unnecessary churn.
 | Story | Repo | Status | Done gate | Next action |
 |---|---|---|---|---|
 | Omnexus verification cockpit review | `fitness-app` | Done | merged PR #553 reviewed read-only, reusable lessons extracted into DTP receipts and pattern docs | keep as reference; do not mutate app code unless lane is reopened |
+| Omnexus App Store review-to-launch extraction | `diagnose-to-plan`, `fitness-app` reference | Done | DTP captures the App Store approval journey as a mobile app review/launch pattern, template, lesson, steward receipt, and evidence-index update | use for future client mobile app builds; public proof remains gated |
 | DeMario launch/proof pass | `demario-pickleball-1` | Later | manual launch/venue/permission gates complete | manifest/evidence index exists; owner-safe proof only |
 | FamilyTrips privacy maintenance pass | `FamilyTrips` | Done | data validation/build/test and privacy notes complete | manifest/evidence index exists; revisit before new features, AI, or public sharing |
 | DSE COI-aware proof pass | `dse-content` | Later | COI screen and live branch verification complete | internal/professional only |
@@ -238,14 +241,15 @@ Standing preflight/postflight: use `practice-os/templates/activation-routing-map
 3. Use the Notion Mirror V0 phone inbox and daily views for capture/review; run Roadmap Steward triage before promoting any Notion item into DTP source-of-truth artifacts.
 4. Keep Architected Strength as its own personal-brand OS. PR #1 is merged into the org-owned private repo; use it as the first assistant-pattern candidate after CCAAP owner-input closure is moving.
 5. Keep the cross-site assistant lane at architecture/manifest level until a first site manifest, source corpus, refusal policy, logging/analytics plan, and human handoff are accepted.
-6. Capture owner-approved CCAAP baseline/after-state evidence for the first proof candidate and run redaction/permission review.
-7. Keep Claude Code and GitHub Copilot `tm-skills` discovery smoke testing on the manual back burner; runbook exists, links are healthy, and Codex discovery is verified, but external reload checks remain manual and non-blocking.
-8. Keep Hub dependency PRs #54/#56/#61 parked until one is explicitly selected with a migration/security plan; PRs #59 and #55 are merged and no longer block the queue. Older PR #52 is no longer in the active visible queue.
-9. Keep Hub prompt/registry cross-validation local-first; decide private sibling-repo CI access only if it becomes worth the operational cost.
-10. Use `dtp workspace report` as a read-only steward preflight when checking repo coverage, recorded evidence, suggested gates, blockers, and missing manifest/evidence coverage; missing repo rows may carry explicit Active Next Queue blockers without guessing gates.
-11. Keep repo manifests current as lanes are touched; DTP, consulting, Architected Strength, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, CCAAP, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus now have DTP-owned manifests/evidence indexes.
-12. Keep DSE blocked until its active branch is clean or explicitly selected with COI-aware scope.
-13. Run FAOS Phase 0 readiness review only after the current pilot/proof/smoke/Hub-validation path; do not build FAOS from the raw Phase 0 prompt yet.
+6. Treat the Omnexus App Store approval journey as the first mobile app review-to-launch learning pattern; use `docs/MOBILE_APP_REVIEW_AND_LAUNCH_PATTERN.md` for future client app builds, but do not publish Omnexus proof until proof gates pass.
+7. Capture owner-approved CCAAP baseline/after-state evidence for the first proof candidate and run redaction/permission review.
+8. Keep Claude Code and GitHub Copilot `tm-skills` discovery smoke testing on the manual back burner; runbook exists, links are healthy, and Codex discovery is verified, but external reload checks remain manual and non-blocking.
+9. Keep Hub dependency PRs #54/#56/#61 parked until one is explicitly selected with a migration/security plan; PRs #59 and #55 are merged and no longer block the queue. Older PR #52 is no longer in the active visible queue.
+10. Keep Hub prompt/registry cross-validation local-first; decide private sibling-repo CI access only if it becomes worth the operational cost.
+11. Use `dtp workspace report` as a read-only steward preflight when checking repo coverage, recorded evidence, suggested gates, blockers, and missing manifest/evidence coverage; missing repo rows may carry explicit Active Next Queue blockers without guessing gates.
+12. Keep repo manifests current as lanes are touched; DTP, consulting, Architected Strength, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, CCAAP, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus now have DTP-owned manifests/evidence indexes.
+13. Keep DSE blocked until its active branch is clean or explicitly selected with COI-aware scope.
+14. Run FAOS Phase 0 readiness review only after the current pilot/proof/smoke/Hub-validation path; do not build FAOS from the raw Phase 0 prompt yet.
 
 Closed on 2026-04-30: GitHub Enterprise org-migration closeout for Omnexus PR #559. The PR merged, local `fitness-app/main` was aligned to `origin/main`, and represented local org-migration branches were deleted.
 

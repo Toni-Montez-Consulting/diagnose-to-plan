@@ -19,6 +19,7 @@ The future system should feel like an operating cockpit for the practice:
 - Notion becomes a mobile mirror and idea inbox for daily review, while DTP remains the operating source of truth.
 - Site-scoped assistants become a governed public/admin pattern only after manifests, source corpora, privacy boundaries, refusal policies, analytics, and human handoff paths are accepted.
 - Self-learning stays supervised: lessons can propose evals, checklists, skills, and roadmap changes, but humans approve changes.
+- Mobile app review and launch journeys become reusable client-app launch packets only after source evidence is redacted and private reviewer/user data is excluded.
 
 ## Target Hosted DTP Architecture
 
