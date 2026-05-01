@@ -18,6 +18,7 @@ review_status: draft
 
 | Lane | Date | Result | Commit | Artifact |
 |---|---|---|---|---|
+| live proof checklist | 2026-05-01 | pass_with_manual_gates | `deceade8` | `docs/ops/post-approval-live-proof-checklist.md` added and linked from README, Launch Guide, ops docs, post-approval audit, and post-App-Store roadmap; Security Ops run `25198820007`, Build iOS run `25198820004`, and Semgrep run `25198820015` passed; manual proof capture starts on or after 2026-05-02 |
 | local | 2026-05-01 | pass | `65d9ea44` | `npm run typecheck`; `npx vitest run api/export-data.test.ts api/delete-account.test.ts`; `npm run ios:submission-lint:strict`; `npm run verify:local`; `npm run security:secrets`; `git diff --check` |
 | CI | 2026-05-01 | pass | `65d9ea44` | GitHub Actions CI run `25198605657` passed after push to `main`; conditional branch/preview/dev jobs were skipped by workflow rules, not failures |
 | native | 2026-05-01 | pass_with_advisory | `65d9ea44` | Build iOS run `25198605656` passed, exported/signed the IPA, uploaded artifacts, and uploaded to TestFlight; advisory remains for Node 20 action deprecation before the 2026 runner transition |
