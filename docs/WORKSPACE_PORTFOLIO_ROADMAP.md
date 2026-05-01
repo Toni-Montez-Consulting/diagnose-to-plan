@@ -1,6 +1,6 @@
 # Workspace Portfolio Roadmap
 
-Last updated: 2026-04-30
+Last updated: 2026-05-01
 
 This plan consolidates the current consulting workspace, prior direction, live repo evidence, and current agentic-AI/development research into one prioritized execution map.
 
@@ -21,12 +21,14 @@ The practical thesis is:
 13. Audit agentic performance itself so routing, context, skill triggers, verification, research, safety, and learning gaps are caught before Toni has to remember them.
 14. Treat FAOS as a future orchestration substrate candidate that must pass readiness review before it adds Langfuse, Mem0/Letta, Spec-Kit, MCP, subagents, hooks, durable workflows, or an `op` wrapper.
 15. Mirror the practice into Notion for phone-first capture and daily review without moving source-of-truth ownership out of DTP.
+16. Plan site-scoped AI assistants as a governed cross-site pattern with separate public and admin surfaces, not as one generic chatbot pasted across projects.
 
 ## Scope
 
 Workspace folders currently listed in `C:\Users\tonimontez\toni-consulting-ops.code-workspace`:
 
 - `consulting`
+- `architected-strength`
 - `Projects/diagnose-to-plan`
 - `hub`
 - `engineering-playbook`
@@ -37,8 +39,11 @@ Workspace folders currently listed in `C:\Users\tonimontez\toni-consulting-ops.c
 - `demario-pickleball-1`
 - `dse-content`
 - `tm-skills`
+- `ccaap-site`
 
 GitHub ownership boundary: consulting/practice repos now live under `Toni-Montez-Consulting` where available. `dse-content` remains outside that organization in the personal/Microsoft-linked namespace, stays on the COI-aware lane, and should not be updated or moved unless explicitly selected.
+
+Current delta as of 2026-05-01: `architected-strength` is now tracked as Toni's personal brand OS, content hub, networking engine, proof lab, and first assistant-pattern candidate. `ccaap-site` is tracked as the first client operating kit public-site implementation and remains blocked on owner-approved PayPal, contact, meeting, DNS, photos/resources, owner review, and proof decisions.
 
 ## Priority Decision
 
@@ -301,6 +306,7 @@ Every workspace repo benefits, but not every repo needs a CI change in this stor
 |---|---|---|---|
 | `diagnose-to-plan` | Practice OS, evidence contracts, redaction, hosted-DTP planning | Thin Python/Practice OS CI plus roadmap alignment | Use proof/redaction templates on first pilot |
 | `consulting` | Public storefront, proof surface, Hub intake path | Thin build and secret-scan CI | First redacted proof packet and optional route CI expansion |
+| `architected-strength` | Personal brand OS, content hub, networking engine, proof lab, and first assistant-pattern candidate | Private org repo baseline merged; DTP manifest/evidence index added | Use as the first public assistant-pattern candidate after CCAAP owner-input closure is moving |
 | `hub` | Runtime intake, console records, health, prompts/runs | Existing CI/security reviewed; no churn | Prompt/registry cross-validation and v0.4 hardening |
 | `tm-skills` | Global agent SDLC behavior across all repos | Thin Windows CI for doctor/freshness/install preview | Explicit install approval, tool reloads, discovery smoke tests |
 | `engineering-playbook` | Doctrine, portfolio schemas, secret-management references | Pointer audit complete; DTP source-of-truth decision listed and FamilyTrips CI policy represented | Update only when general doctrine or portfolio policy changes |
@@ -308,6 +314,7 @@ Every workspace repo benefits, but not every repo needs a CI change in this stor
 | `hub-registry` | Hub automation target routing | Workflow keeps CI-safe registry validation; local `npm test` validates sibling manifests and prompt ids | Design private sibling-repo access for CI only if local-only validation becomes a bottleneck |
 | `fitness-app` / Omnexus | Reference verification cockpit and product proof track | Read-only DTP extraction complete; no app mutation | Keep as reference pattern and promote public proof only after permission/redaction |
 | `demario-pickleball-1` | Client Command Room reference and local-business proof track | First adjacent manifest/evidence touch pass complete; existing CI remains owner | Manual launch gates, venue rules, Node 24 maintenance, proof permission |
+| `ccaap-site` | CCAAP off-Wix nonprofit launch track and first client operating kit public-site implementation | DTP manifest/evidence index exists; launch gate intentionally fails until owner inputs are real | Gather owner inputs, replace placeholders, connect preview, and run owner review before production |
 | `FamilyTrips` | Private family planning app | Privacy-first adjacent manifest/evidence pass plus thin CI complete | Revisit before new features, AI, auth, public sharing, or stronger Supabase behavior |
 | `dse-content` | Microsoft/internal readiness and workflow proof track | Alignment only | COI-aware internal proof and live-branch verification before any public reuse |
 
@@ -319,6 +326,7 @@ This is the master coverage queue. Each repo gets at least one explicit future p
 |---|---|---|---|
 | `diagnose-to-plan` | Hosted DTP Phase 0 and proof/redaction governance | Current Sprint 2 sequence | Phase 0 design accepted; first proof/redaction pilot next, later private app shell |
 | `consulting` | Public proof upgrade and route/visual verification expansion | Proof packet and redaction queue exist | Receipt-style proof pages, noindex/admin checks, optional route CI |
+| `architected-strength` | Personal brand OS publishing and assistant-pattern pass | V1 baseline is merged under the org and DTP manifest/evidence coverage exists | First public assistant manifest, source corpus, refusal policy, and handoff path after assistant brief acceptance |
 | `hub` | Runtime hardening and prompt/registry consistency | After core CI is stable | v0.4 hardening notes and support checks; prompt id cross-validation is local-first in `hub-registry` |
 | `tm-skills` | Global install and discovery smoke test | Explicit approval to run install | Installed/reloaded skills, discovery evidence, one canary decision |
 | `engineering-playbook` | Doctrine refresh and pointer audit | Pointer/doctrine lane touched on 2026-04-30 | DTP source-of-truth pointer and FamilyTrips CI policy are aligned; future updates only when reusable doctrine or portfolio policy changes |
@@ -326,6 +334,7 @@ This is the master coverage queue. Each repo gets at least one explicit future p
 | `hub-registry` | Cross-repo prompt id and manifest validation pass | DTP-owned manifest/evidence index exists and local-first validation now exists | Decide later whether CI should receive private sibling-repo access |
 | `fitness-app` / Omnexus | Verification cockpit review and launch-stability pass | PR #553 merged; DTP extraction complete on 2026-04-30 | DTP-owned manifest/evidence index exists; next output is permissioned proof or release/support follow-up only when the lane reopens |
 | `demario-pickleball-1` | Launch/Command Room proof pass | After manual launch gates and permission are handled | DTP-owned manifest/evidence index exists; next output is owner-safe proof packet, venue-routing maintenance, or Node 24 CI maintenance |
+| `ccaap-site` | CCAAP launch implementation and proof/readiness pass | Owner inputs arrive and Cloudflare preview path is ready | Replace placeholders, verify launch gate, review with Leah plus Dad, then connect production DNS only after approval |
 | `FamilyTrips` | Privacy-first maintenance pass | Before adding features or AI/public sharing | DTP-owned manifest/evidence index and thin CI exist; next pass should revisit privacy and deploy smoke |
 | `dse-content` | COI-aware internal proof and workflow maintenance pass | Before any DSE material is reused publicly or professionally | COI screen, redaction/permission notes, live-branch verification |
 
@@ -567,6 +576,9 @@ Priority:
 
 ## What Still Needs Attention
 
+- CCAAP owner-input closure is the highest-leverage current human task: PayPal donation/membership links, contact routing/spam preference, meeting label/destination, DNS path, authentic photos/resources, owner review, and proof decision.
+- Architected Strength V1 is merged into the org-owned private repo. Its next value is content cadence and the first governed public assistant-pattern candidate, not migration into consulting.
+- Cross-site assistants are now a roadmap lane. Public assistants and admin assistants should share a governed manifest pattern; implementation waits for an accepted architecture brief and a first narrow site/surface.
 - `tm-skills` global install is applied; Codex discovery smoke passed, while Claude Code and GitHub Copilot reload/smoke tests are parked for later manual verification.
 - `hub-registry` prompt id cross-validation now exists as a local workspace gate; repo-scoped CI still runs only safe registry validation until private sibling-repo access is explicitly approved.
 - `hub-registry` portfolio manifest validation still depends on sibling repo manifests that are available locally but not safely available to repo-scoped CI without explicit private-repo access.
@@ -575,7 +587,7 @@ Priority:
 - Public proof now has asset/redaction/permission templates and the private Mom nonprofit kit includes the first proof/redaction draft; it still needs a real claim, source evidence, permission, redaction, reviewer approval, and caveat.
 - Agent-security research is now represented here; promote specific gates into implementation docs before any deeper autonomous workflows.
 - Future Intelligence templates now exist as optional Practice OS assets, but they still need first real use before becoming required gates.
-- Workspace Efficiency templates now exist as optional Practice OS assets. DTP, consulting, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus now have DTP-owned repo manifests/evidence indexes; remaining adjacent repos should get the same treatment only when their lanes are touched.
+- Workspace Efficiency templates now exist as optional Practice OS assets. DTP, consulting, Architected Strength, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, CCAAP, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus now have DTP-owned repo manifests/evidence indexes; remaining adjacent repos should get the same treatment only when their lanes are touched.
 - Roadmap Steward V0 now exists as a required Practice OS template and backlog lane; live steward receipts now capture hosted-DTP acceptance and the Mom nonprofit pilot kickoff.
 - AI Activation Map V0 now exists as a required Practice OS template and has been used for the roadmap/steward and Mom pilot routing; keep using it when prompt intent spans multiple lanes.
 - Agentic Performance Gap Review V0 now exists as a required Practice OS template; use it whenever agent behavior, skill routing, research adoption, validation, or learning-loop conversion looks weak.
@@ -940,15 +952,17 @@ Standing preflight/postflight: run the Activation Routing Map plus the Roadmap S
 
 Preflight: use the Practice System Documentation Pack as the current/future/audit/optimization reference before adding major new platform, proof, agent, or cross-repo behavior.
 
-1. Keep Hub dependency PRs #54/#56/#61 parked until one is explicitly selected with a migration/security plan; PRs #59 and #55 no longer block the queue. Older PR #52 is no longer in the active visible queue.
-2. If phone-first tracking is the current pain, set up Notion Mirror V0 from `docs/NOTION_MIRROR_V0.md`; keep Notion as a mirror/inbox and run steward triage before DTP changes.
-3. Complete remaining CCAAP inputs: exact PayPal donate/membership links, contact routing, domain/DNS access, authentic photos/resources, owner review, and proof permissions.
-4. Continue the CCAAP off-Wix custom rebuild path, with launch scope gated by owner review, PayPal links, contact routing, domain/DNS, and authentic assets.
-5. Keep Hub prompt/registry cross-validation local-first; decide private sibling-repo CI access only if it becomes worth the operational cost.
-6. Keep repo manifests current as touched lanes change; DTP, consulting, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus now have manifests/evidence indexes; FamilyTrips also has thin CI.
-7. Run the next adjacent-project touch pass only when its trigger is ready; `dse-content` remains excluded unless explicitly selected with COI-aware scope.
-8. Use DeMario command room and Omnexus verification toolkit as proof/reference material only after permission/redaction review.
-9. Start hosted DTP implementation only after the Mom pilot/proof workflow gives the app real records to persist.
+1. Complete remaining CCAAP inputs: exact PayPal donate/membership links, contact routing and spam preference, meeting label/destination, domain/DNS access, authentic photos/resources, Leah plus Dad review, and proof decision.
+2. Continue the CCAAP off-Wix custom rebuild path only after owner-approved values arrive; production DNS waits for `pnpm validate:launch`.
+3. Use Notion Mirror V0 as the phone cockpit/inbox for CCAAP waiting-on items, but run steward triage before DTP source-of-truth changes.
+4. Use Architected Strength as the first governed assistant-pattern candidate after CCAAP owner-input closure is moving; do not migrate it into consulting.
+5. Keep the cross-site assistant lane at architecture/manifest level until the first site manifest, source corpus, refusal policy, analytics/logging plan, and handoff route are accepted.
+6. Keep Hub dependency PRs #54/#56/#61 parked until one is explicitly selected with a migration/security plan; PRs #59 and #55 no longer block the queue. Older PR #52 is no longer in the active visible queue.
+7. Keep Hub prompt/registry cross-validation local-first; decide private sibling-repo CI access only if it becomes worth the operational cost.
+8. Keep repo manifests current as touched lanes change; DTP, consulting, Architected Strength, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, CCAAP, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus now have manifests/evidence indexes.
+9. Run the next adjacent-project touch pass only when its trigger is ready; `dse-content` remains excluded unless explicitly selected with COI-aware scope.
+10. Use DeMario command room and Omnexus verification toolkit as proof/reference material only after permission/redaction review.
+11. Start hosted DTP implementation only after the Mom pilot/proof workflow gives the app real records to persist.
 
 Closed on 2026-04-30: GitHub Enterprise org-migration closeout for Omnexus PR #559. Hub's stale local org branch is cleaned, Hub PRs #59 and #55 are merged, Omnexus PR #559 is merged, and local Omnexus org-migration branches were pruned after merge confirmation.
 

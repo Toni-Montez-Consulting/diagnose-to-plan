@@ -217,21 +217,35 @@ Goal: capture and eventually implement the Frontier Agentic Operating System ide
 | Business agent stack and prediction calibration | future `faos`, DTP/Hub/consulting | Later | business-agent actions are draft/review only and produce scoreable predictions | no auto-send or public/client action |
 | Cloud migration | future `faos` | Later | local stack hits explicit pain threshold | local-first until pain forces cloud |
 
+## Epic 13: Cross-Site Assistant Experience
+
+Goal: give the right workspace websites a useful public assistant and, where justified, a private/admin assistant without mixing public content, private records, client data, or unsupported claims.
+
+| Story | Repo | Status | Done gate | Next action |
+|---|---|---|---|---|
+| Cross-site assistant architecture brief | `diagnose-to-plan` | Review | `docs/CROSS_SITE_ASSISTANT_ARCHITECTURE_BRIEF.md` defines shared gateway direction, per-site manifests, public/admin boundaries, refusal rules, logging/analytics expectations, and rollout order | accept or revise brief before any assistant code |
+| Architected Strength assistant-pattern candidate | `architected-strength`, future runtime owner | Ready | first public assistant manifest names approved source corpus, blocked sources, handoff path, refusal policy, analytics/logging plan, and route/widget smoke gates | scope only after CCAAP owner-input closure is moving |
+| Consulting public assistant adaptation | `consulting`, Hub/future runtime | Later | assistant supports service discovery and intake preparation without reading private Hub rows or DTP kits | wait for the first assistant pattern to prove useful |
+| DeMario admin assistant pilot | `demario-pickleball-1`, Hub/future runtime | Later | protected admin assistant is read-only first and never sends texts, mutates bookings, changes payments, or cancels lessons without explicit confirmation | wait for owner/admin habits and proof boundaries to stabilize |
+| CCAAP assistant lane | `ccaap-site`, future runtime | Later | public assistant only after launch inputs, preview, owner review, contact routing, assets, and privacy/proof decisions are stable | do not implement during current CCAAP launch gate |
+
 ## Current Active Next Queue
 
 Standing preflight/postflight: use `practice-os/templates/activation-routing-map.md`, `practice-os/templates/agentic-performance-gap-review.md`, and `practice-os/templates/roadmap-steward-review.md` for major roadmap sessions so the right skill/template/process is selected, agentic performance gaps are caught, and new ideas, blockers, repo lanes, gates, and no-touch boundaries are captured before memory drift.
 
-1. Use the Notion Mirror V0 phone inbox and daily views for capture/review; run Roadmap Steward triage before promoting any Notion item into DTP source-of-truth artifacts.
-2. Keep Hub dependency PRs #54/#56/#61 parked until one is explicitly selected with a migration/security plan; PRs #59 and #55 are merged and no longer block the queue. Older PR #52 is no longer in the active visible queue.
-3. Complete remaining CCAAP inputs: exact PayPal donate/membership links, contact routing, domain/DNS access, authentic photos/resources, owner review, and proof permissions.
-4. Continue the CCAAP off-Wix custom rebuild path; keep exact launch scope gated by owner review, PayPal links, contact routing, domain/DNS, and authentic assets.
-5. Capture owner-approved baseline/after-state evidence for the first proof candidate and run redaction/permission review.
-6. Keep Claude Code and GitHub Copilot `tm-skills` discovery smoke testing on the manual back burner; runbook exists, links are healthy, and Codex discovery is verified, but external reload checks remain manual and non-blocking.
-7. Keep Hub prompt/registry cross-validation local-first; decide private sibling-repo CI access only if it becomes worth the operational cost.
-8. Use `dtp workspace report` as a read-only steward preflight when checking repo coverage, recorded evidence, suggested gates, blockers, and missing manifest/evidence coverage; missing repo rows may carry explicit Active Next Queue blockers without guessing gates.
-9. Keep repo manifests current as lanes are touched; DTP, consulting, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, `fitness-app` / Omnexus, and `ccaap-site` now have DTP-owned manifests/evidence indexes.
-10. Keep DSE blocked until its active branch is clean or explicitly selected with COI-aware scope.
-11. Run FAOS Phase 0 readiness review only after the current pilot/proof/smoke/Hub-validation path; do not build FAOS from the raw Phase 0 prompt yet.
+1. Complete remaining CCAAP inputs: exact PayPal donate/membership links, contact routing and spam preference, meeting label/destination, domain/DNS access, authentic photos/resources, Leah plus Dad review, and proof decision.
+2. Continue the CCAAP off-Wix custom rebuild path only after owner-approved values arrive; production DNS waits for `pnpm validate:launch`.
+3. Use the Notion Mirror V0 phone inbox and daily views for capture/review; run Roadmap Steward triage before promoting any Notion item into DTP source-of-truth artifacts.
+4. Keep Architected Strength as its own personal-brand OS. PR #1 is merged into the org-owned private repo; use it as the first assistant-pattern candidate after CCAAP owner-input closure is moving.
+5. Keep the cross-site assistant lane at architecture/manifest level until a first site manifest, source corpus, refusal policy, logging/analytics plan, and human handoff are accepted.
+6. Capture owner-approved CCAAP baseline/after-state evidence for the first proof candidate and run redaction/permission review.
+7. Keep Claude Code and GitHub Copilot `tm-skills` discovery smoke testing on the manual back burner; runbook exists, links are healthy, and Codex discovery is verified, but external reload checks remain manual and non-blocking.
+8. Keep Hub dependency PRs #54/#56/#61 parked until one is explicitly selected with a migration/security plan; PRs #59 and #55 are merged and no longer block the queue. Older PR #52 is no longer in the active visible queue.
+9. Keep Hub prompt/registry cross-validation local-first; decide private sibling-repo CI access only if it becomes worth the operational cost.
+10. Use `dtp workspace report` as a read-only steward preflight when checking repo coverage, recorded evidence, suggested gates, blockers, and missing manifest/evidence coverage; missing repo rows may carry explicit Active Next Queue blockers without guessing gates.
+11. Keep repo manifests current as lanes are touched; DTP, consulting, Architected Strength, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, CCAAP, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus now have DTP-owned manifests/evidence indexes.
+12. Keep DSE blocked until its active branch is clean or explicitly selected with COI-aware scope.
+13. Run FAOS Phase 0 readiness review only after the current pilot/proof/smoke/Hub-validation path; do not build FAOS from the raw Phase 0 prompt yet.
 
 Closed on 2026-04-30: GitHub Enterprise org-migration closeout for Omnexus PR #559. The PR merged, local `fitness-app/main` was aligned to `origin/main`, and represented local org-migration branches were deleted.
 

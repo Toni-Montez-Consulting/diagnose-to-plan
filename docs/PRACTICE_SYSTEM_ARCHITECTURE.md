@@ -31,6 +31,7 @@ GitHub ownership boundary: as of 2026-04-30, the consulting/practice portfolio r
 |---|---|---|---|
 | `diagnose-to-plan` | Practice OS, roadmap, engagement kits, redaction, COI, templates, hosted DTP design, steward loop | `pytest`, `ruff`, `dtp skills --validate`, `dtp practice doctor`, redaction checks | Does not own public storefront or Hub runtime records |
 | `consulting` | Public site, `/start`, proof surface, public-safe `/admin` command room | `npm run build`, secret scan, route/visual checks when expanded | Does not store private engagement kits |
+| `architected-strength` | Personal brand OS, content hub, networking engine, proof lab, and first assistant-pattern candidate | `pnpm run ci`, source/claim review, public/private boundary review | Stays separate from consulting; no official Microsoft endorsement or confidential employer/client material |
 | `hub` | Runtime intake, private console, Supabase operational records, prompts/runs/captures | `pnpm verify`, `pnpm test`, security workflows, health/intake checks | Does not become DTP, CRM, or public proof source |
 | `tm-skills` | Reusable global SDLC skills and install/doctor scripts | `doctor.ps1`, `freshness-check.ps1`, `install.ps1 -WhatIf` | Global install remains explicit-approval only |
 | `engineering-playbook` | General doctrine, portfolio templates, decisions, secret-management references | portfolio checks and repo-local scripts | Does not duplicate DTP roadmap ownership |
@@ -38,6 +39,7 @@ GitHub ownership boundary: as of 2026-04-30, the consulting/practice portfolio r
 | `hub-registry` | Hub automation target registry and routing config | `npm run validate`, local portfolio manifest checks, local prompt-id cross-validation | Does not own prompt content or practice roadmap |
 | `fitness-app` / Omnexus | Product app, verification cockpit reference, founder/product proof candidate | app local gates, toolkit registry, CI evidence, Supabase drift gates, DTP extraction receipts | Do not disturb app code without explicit lane |
 | `demario-pickleball-1` | Local-business launch track and command-room reference | `npm run ci`, venue/routing/manual launch gates | Reference pattern, not practice roadmap owner |
+| `ccaap-site` | CCAAP off-Wix public-site implementation and first client operating kit launch lane | `pnpm lint`, `pnpm check`, `pnpm validate:content`, `pnpm build`, `pnpm validate:launch` after owner inputs | No private member/payment/form/student data; production waits on owner-approved launch inputs |
 | `FamilyTrips` | Private family trip app and privacy-first maintenance lane | data validation, build, tests, privacy checks | Not public proof by default |
 | `dse-content` | Internal Azure Apps/AI content and Microsoft-adjacent proof candidate | branch-specific app gates, COI, permission, redaction | Internal/professional proof only unless explicitly cleared |
 
@@ -53,7 +55,7 @@ flowchart LR
     Playbook["engineering-playbook\ndoctrine and templates"]
     Prompts["hub-prompts\nprompt catalog"]
     Registry["hub-registry\nautomation targets"]
-    Projects["project repos\nOmnexus, DeMario, FamilyTrips, DSE"]
+    Projects["project repos\nArchitected Strength, CCAAP, Omnexus, DeMario, FamilyTrips, DSE"]
     PrivateKits["gitignored engagements\nprivate Client Operating Kits"]
     Proof["proof and redaction queue"]
     Evidence["repo gates and evidence receipts"]

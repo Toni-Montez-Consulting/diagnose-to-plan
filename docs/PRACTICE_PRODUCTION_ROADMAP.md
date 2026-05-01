@@ -430,6 +430,7 @@ DTP treats `Toni-Montez-Consulting` as the canonical GitHub organization for con
 |---|---|---|
 | `diagnose-to-plan` | Practice OS, Client Operating Kits, redaction, COI, patterns, hosted DTP roadmap, private engagement methodology, CLI verification/evidence pattern | Public marketing site, Hub runtime records |
 | `consulting` | Public storefront, `/start`, public proof, `/admin` command room, launch/design docs | Private client kits, source-of-truth practice roadmap, runtime intake store |
+| `architected-strength` | Personal brand OS, content hub, networking engine, proof lab, and first public assistant-pattern candidate | Consulting service intake, official Microsoft representation, private employer/client material |
 | `hub` | Runtime intake, private console, Supabase operational tables, webhook/capture/runs support | DTP engagement kits, public proof pages, CRM replacement |
 | `tm-skills` | Cross-repo SDLC skills, global coding-agent instructions, trigger evals, skill install/doctor scripts, agent behavior for verification gates | Client engagement records, consulting-practice memory, public proof |
 | future `faos` repo | Agentic orchestration substrate if approved later: `op` wrapper, traces, memory MCP, eval harness, durable workflows, subagent/hook packaging | Practice source of truth, public proof, Hub runtime, or project repo ownership |
@@ -437,6 +438,7 @@ DTP treats `Toni-Montez-Consulting` as the canonical GitHub organization for con
 | `hub-prompts` | Hub prompt catalogue, prompt schemas, prompt validation fixtures | Practice roadmap, SDLC skills repo, Hub automation target routing |
 | `hub-registry` | Hub automation targets and routing config | Consulting knowledge registry, DTP engagement kits, case-study planning |
 | `demario-pickleball-1` | Brother/local business launch proof track, client project delivery, Client Command Room reference implementation | Practice-wide roadmap; DTP only owns the manifest/evidence receipt and proof-governance routing |
+| `ccaap-site` | CCAAP off-Wix public-site implementation, launch checklist, content validation, and Cloudflare preview/production path | Private DTP engagement kit, member/payment records, form submissions, proof publication, assistant implementation before owner approval |
 | `fitness-app` / Omnexus | Founder/product/operator proof, app launch evidence, reference CLI verification toolkit shape | Practice OS source of truth |
 | `FamilyTrips` | Private family trip planning app, data validation, privacy-bound trip coordination | Practice-wide roadmap, public proof, consulting runtime |
 | `dse-content` | Internal Azure Apps/AI content, readiness/workflow surfaces, MSX/DSE automation, Microsoft-adjacent proof candidates | Public consulting proof without COI, permission, and redaction review |

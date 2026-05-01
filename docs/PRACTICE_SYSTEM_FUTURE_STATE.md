@@ -17,6 +17,7 @@ The future system should feel like an operating cockpit for the practice:
 - Repo manifests and evidence indexes make every repo easier for future agents to understand.
 - The Roadmap Steward becomes progressively more automated only after the manual loop proves useful.
 - Notion becomes a mobile mirror and idea inbox for daily review, while DTP remains the operating source of truth.
+- Site-scoped assistants become a governed public/admin pattern only after manifests, source corpora, privacy boundaries, refusal policies, analytics, and human handoff paths are accepted.
 - Self-learning stays supervised: lessons can propose evals, checklists, skills, and roadmap changes, but humans approve changes.
 
 ## Target Hosted DTP Architecture
@@ -266,10 +267,12 @@ DTP remains the master source. Other repos get local pointers when their lane is
 | Repo | Future Local Pointer Or Doc |
 |---|---|
 | `consulting` | public proof and Hub intake boundary pointer to DTP system docs |
+| `architected-strength` | personal-brand OS and first assistant-pattern pointer to DTP assistant governance |
 | `hub` | Hub/DTP/consulting boundary pointer and prompt/registry validation runbook |
 | `tm-skills` | skill-trigger alignment note pointing back to DTP activation map |
 | `fitness-app` | verification cockpit extraction receipts and permissioned proof lane |
 | `demario-pickleball-1` | command-room reference and proof/launch permission lane |
+| `ccaap-site` | owner launch input, Cloudflare, proof/privacy, and assistant-hold pointer |
 | `FamilyTrips` | privacy-first validation and private-data boundary note |
 | `dse-content` | COI-aware proof and Microsoft-adjacent usage note |
 | `engineering-playbook` | doctrine pointer that DTP owns active practice sequencing |
@@ -287,6 +290,7 @@ DTP remains the master source. Other repos get local pointers when their lane is
 | repo manifests beyond DTP | DTP, consulting, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus covered; add DSE only when COI-aware scope is active |
 | global `tm-skills` install | explicit approval, dry-run review, reload, smoke tests |
 | Notion MCP/API mirror | `docs/NOTION_MIRROR_V0.md` accepted, Toni completes OAuth, manual mirror proves useful, and redaction boundaries are understood |
+| cross-site assistants | `docs/CROSS_SITE_ASSISTANT_ARCHITECTURE_BRIEF.md` accepted plus a first site manifest, source corpus, refusal policy, logging/analytics plan, and human handoff path |
 | project-pinned skill canary | global discovery works without duplicate confusion |
 | Hub prompt/registry automation | prompt ids and registry targets cross-validate |
 | AI red-team lab | before public AI workflows or write-enabled agents |

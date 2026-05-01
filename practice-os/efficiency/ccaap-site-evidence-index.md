@@ -11,13 +11,15 @@ review_status: draft
 
 - Name: `ccaap-site`
 - Branch: `main`
-- Last updated: 2026-04-30
+- Last updated: 2026-05-01
 - Reviewer: CCAAP memory-capture and launch-readiness pass
 
 ## Latest Verification
 
 | Lane | Date | Result | Commit | Artifact |
 |---|---|---|---|---|
+| content | 2026-05-01 | pass_with_expected_warnings | current branch | `pnpm validate:content`; PayPal/contact placeholders remain expected production blockers |
+| launch gate | 2026-05-01 | pass_with_expected_failure | current branch | `pnpm validate:launch` fails as intended on meeting link placeholders, board approval, PayPal URLs, and contact routing |
 | install | 2026-04-30 | pass_with_advisory | current branch | `pnpm install --frozen-lockfile`; pnpm reports ignored build scripts for esbuild/sharp until explicitly approved |
 | lint | 2026-04-30 | pass | current branch | `pnpm lint`; Astro check and content validation passed |
 | typecheck | 2026-04-30 | pass | current branch | `pnpm check`; 14 Astro files checked with 0 errors/warnings/hints |

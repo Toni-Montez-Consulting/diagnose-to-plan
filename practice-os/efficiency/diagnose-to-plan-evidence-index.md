@@ -11,13 +11,15 @@ review_status: draft
 
 - Name: `diagnose-to-plan`
 - Branch: `v2/harness`
-- Last updated: 2026-04-30
+- Last updated: 2026-05-01
 - Reviewer: accepted by steward review on 2026-04-30
 
 ## Latest Verification
 
 | Lane | Date | Result | Commit | Artifact |
 |---|---|---|---|---|
+| planning | 2026-05-01 | pass | current branch | Cross-site assistant architecture brief added; DTP backlog and portfolio roadmap now track Architected Strength, CCAAP, and the governed public/admin assistant lane without starting assistant implementation |
+| workspace coverage | 2026-05-01 | pass | current branch | Architected Strength repo manifest and evidence index added; `dtp workspace report` canonical repo list now includes Architected Strength and CCAAP |
 | private kit | 2026-04-30 | pass_with_manual_gates | current branch | CCAAP owner action packet, call-to-action extraction ledger, reusable owner-call extraction template, and raw pattern candidate added; PayPal/contact/meeting/assets/DNS/proof remain owner-input gates |
 | local | 2026-04-30 | pass | current branch | Notion/CCAAP memory-capture pass: targeted redaction checks, `pytest`, `ruff check .`, `dtp skills --validate`, `dtp practice doctor`, `dtp workspace report`, and `dtp workspace report --json`; `ccaap-site` now appears as manifest=ok/evidence=ok |
 | setup | 2026-04-30 | pass | local Codex user config plus Notion workspace | Notion MCP endpoint is configured; OAuth completed; refreshed Codex session exposed Notion tools; smoke page, V0 databases, safe seed rows, and phone-friendly views were created; DTP remains source of truth |
@@ -45,7 +47,8 @@ review_status: draft
 - Public proof still needs permission, redaction, reviewer, evidence, and caveat gates.
 - GitHub Enterprise org-migration closeout is complete for Omnexus PR #559; Hub PRs #59 and #55 are merged; non-DSE org alignment is no longer the active blocker.
 - Workspace Command Center V0 reports recorded artifacts only; live git/CI reads and command execution remain later. Missing repo rows may carry explicit Active Next Queue blockers without inferring gates.
-- Repo manifest/evidence index shape now covers DTP, consulting, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, `fitness-app` / Omnexus, and `ccaap-site`. `dse-content` remains missing until its lane is clean or explicitly selected with COI-aware scope.
+- Repo manifest/evidence index shape now covers DTP, consulting, Architected Strength, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, `ccaap-site`, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus. `dse-content` remains missing until its lane is clean or explicitly selected with COI-aware scope.
+- Cross-site assistant implementation is intentionally not started; the next gate is accepting a site manifest, source corpus, refusal policy, logging/analytics plan, and human handoff path for one narrow assistant surface.
 
 ## Notes
 

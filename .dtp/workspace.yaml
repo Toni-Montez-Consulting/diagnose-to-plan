@@ -2,6 +2,9 @@ repos:
   - name: consulting
     path: ../../consulting
     access: read
+  - name: architected-strength
+    path: ../../architected-strength
+    access: read
   - name: hub
     path: ../../hub
     access: read
@@ -13,6 +16,9 @@ repos:
     access: read
   - name: demario-pickleball-1
     path: ../../demario-pickleball-1
+    access: read
+  - name: ccaap-site
+    path: ../../ccaap-site
     access: read
   - name: fitness-app
     path: ../../fitness-app

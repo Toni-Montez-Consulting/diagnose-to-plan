@@ -8,6 +8,7 @@ from dtp.config import DtpConfig
 
 CANONICAL_REPOS = (
     "consulting",
+    "architected-strength",
     "diagnose-to-plan",
     "hub",
     "engineering-playbook",
@@ -16,6 +17,7 @@ CANONICAL_REPOS = (
     "fitness-app",
     "FamilyTrips",
     "demario-pickleball-1",
+    "ccaap-site",
     "dse-content",
     "tm-skills",
 )

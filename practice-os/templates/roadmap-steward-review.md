@@ -34,6 +34,7 @@ Use this before or after a major roadmap, planning, or implementation session. T
 Confirm every workspace repo still has a lane, trigger, and next action.
 
 - `consulting`:
+- `architected-strength`:
 - `diagnose-to-plan`:
 - `hub`:
 - `engineering-playbook`:
@@ -42,6 +43,7 @@ Confirm every workspace repo still has a lane, trigger, and next action.
 - `fitness-app`:
 - `FamilyTrips`:
 - `demario-pickleball-1`:
+- `ccaap-site`:
 - `dse-content`:
 - `tm-skills`:
 
