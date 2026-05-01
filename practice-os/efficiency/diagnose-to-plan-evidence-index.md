@@ -18,6 +18,8 @@ review_status: draft
 
 | Lane | Date | Result | Commit | Artifact |
 |---|---|---|---|---|
+| client follow-up sprint | 2026-05-01 | pass_with_manual_gates | current branch | Cam and Greg send-ready packets plus CCAAP waiting state were prepared in private engagement kits; Notion mirror is sanitized; `dtp workspace report`, kit status checks, `dtp practice doctor`, `dtp skills --validate`, `pytest`, and `ruff check .` passed; next manual gate is Toni review/send and client replies before repo access, live data, public proof, or production launch |
+| steward receipt | 2026-05-01 | pass_with_manual_gates | current branch | Custom Interface Craft and CCAAP closeout recorded in `practice-os/steward/2026-05-01-custom-interface-craft-and-ccaap-closeout.md`; DTP, `tm-skills`, and `ccaap-site` dirty work is verified but still uncommitted; CCAAP launch blockers remain owner-approved PayPal/contact/meeting/asset/proof inputs |
 | CCAAP owner review | 2026-05-01 | sent_with_temp_preview | current branch | Owner review packet and temporary prototype link were sent to Leah plus Dad; DTP records local gates, temporary route smoke, and the durable Cloudflare Pages CLI blocker without treating the tunnel as production readiness |
 | assistant manifest | 2026-05-01 | draft | current branch | Architected Strength public assistant V0 manifest added at `docs/assistant-manifests/architected-strength-public-v0.md`; implementation remains blocked until source corpus, refusal/handoff tests, analytics/logging review, and human approval are accepted |
 | steward receipt | 2026-05-01 | pass | current branch | Omnexus closeout postflight recorded with commit `65d9ea44`, live-proof checklist commit `deceade8`, local gates, CI run `25198605657`, Build iOS runs `25198605656`/`25198820004`, Security Ops runs `25198605663`/`25198820007`, Semgrep runs `25198605662`/`25198820015`, and the current CCAAP owner-input launch blockers |
@@ -46,6 +48,7 @@ review_status: draft
 
 - Hosted DTP app implementation is intentionally not started.
 - CCAAP owner direction and off-Wix rebuild preference are captured; remaining gates are exact PayPal links, contact routing, domain/DNS, authentic photos/resources, owner review, and proof permissions.
+- Cam and Greg are send-ready but not recorded as sent; client replies should update private engagement kits before Notion mirrors or public proof surfaces.
 - Notion Mirror V0 manual setup is complete for phone-first capture/review; future MCP/API sync still needs a DTP-owned dry-run export, redaction review, and steward approval.
 - Public proof still needs permission, redaction, reviewer, evidence, and caveat gates.
 - GitHub Enterprise org-migration closeout is complete for Omnexus PR #559; Hub PRs #59 and #55 are merged; non-DSE org alignment is no longer the active blocker.

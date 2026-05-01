@@ -29,7 +29,7 @@ Use the lightest rung that captures the idea and protects the right gate.
 |---|---|---|---|---|
 | Development enhancement | "make this cleaner", "improve this infra", "add better checks" | `tm-skills/testing-ladder` or `delivery-baseline`; repo manifest | work item spec or implementation | local gates before CI |
 | Development implementation | "build this", "fix this", "add this feature" | repo-specific skill/context plus story activation index | implementation plan or direct code change | repo tests/build/CI |
-| Product/design | "new UI", "design idea", "make this experience better" | `tm-skills/frontend-craft`, Command Room fit if owner-facing | design spec or frontend implementation | visual/mobile QA and product boundary |
+| Product/design | "new UI", "design idea", "make this experience better", "make everything custom" | Custom Interface Craft Standard, `tm-skills/frontend-craft`, Command Room fit if owner-facing | custom craft brief, design spec, or frontend implementation | craft brief or hotfix exception, visual/mobile QA, and product boundary |
 | Project/client work | "Mom nonprofit", "client kit", "handoff" | Client Operating Kit and steward review | private kit, runbook, proof packet | consent, COI, redaction |
 | Business/offer/pricing | "new offer", "package this", "how do I sell this" | Practice Production Roadmap and offer docs | decision record or roadmap story | public claims need proof |
 | Proof/case study | "can this become proof", "case study", "show this publicly" | proof/redaction templates | proof packet, asset inventory, claim review | evidence, caveat, permission, reviewer |
@@ -63,6 +63,7 @@ public proof, client work, agent behavior, or automation.
 - Steward review: `practice-os/templates/roadmap-steward-review.md`
 - One-off story activation: `practice-os/templates/story-activation-contract.md`
 - Idea intake template: `practice-os/templates/contextual-idea-intake.md`
+- Custom interface craft: `docs/CUSTOM_INTERFACE_CRAFT_STANDARD.md`, `practice-os/templates/custom-interface-craft-brief.md`
 - Owner call extraction: `practice-os/templates/owner-call-to-action-extraction.md`
 - Mobile app review learning: `docs/MOBILE_APP_REVIEW_AND_LAUNCH_PATTERN.md`, `practice-os/templates/mobile-app-review-journey.md`
 - Kanban backlog: `docs/ROADMAP_EXECUTION_BACKLOG.md`
@@ -75,3 +76,4 @@ public proof, client work, agent behavior, or automation.
 - Do not start hosted DTP implementation from an idea intake alone.
 - Do not mutate sibling repos unless the owning lane is active and gates are known.
 - Do not let a new idea overwrite the current active queue unless Toni explicitly changes priority.
+- Do not treat Architected Strength, consulting, or any other unfinished project as a canonical design template until DTP marks it as an operational or gold-standard reference.

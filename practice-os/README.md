@@ -16,6 +16,20 @@ Rules:
 - Use `extracts/` for raw DTP pattern extraction and `practice-os/patterns/` for reusable judgment.
 - No credentials, client financial specifics, raw intake, Microsoft confidential information, or unreviewed case-study claims.
 
+Business Brain:
+
+- `../docs/BUSINESS_BRAIN_OPERATING_SYSTEM.md` is the normalized source map for
+  the Business Brain / Consulting OS.
+- `commands/` stores command contracts such as `/diagnose-prospect`,
+  `/coi-screen`, `/draft-proposal`, and `/comms-kit` before any automation is
+  implemented.
+- `agents/` stores draft-producing role specs such as Controller, General
+  Counsel, and COO. These are not autonomous actors.
+- `fixtures/business-brain/` stores reusable internal fixtures for Greg,
+  Cameron, and Mom/Mario. Live private work stays in `engagements/`.
+- `comms/` stores private-first communication drafts, visual briefs, diagrams,
+  slide outlines, and social candidates with public review gates.
+
 Activation routing:
 
 - `templates/activation-routing-map.md` maps prompt shapes to the right `tm-skills` skill, DTP Practice OS skill, template, roadmap lane, proof gate, COI gate, research/eval artifact, repo touch pass, or parked automation path.

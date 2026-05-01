@@ -41,10 +41,12 @@ human gates.
 | Proof And Redaction Governance | proof templates, first proof pilot, consulting/Omnexus/DeMario/DSE proof lanes | proof packet, redaction queue, permission checklist, evidence checklist, public claim review | `local-codex`; `reviewer` for proof review only if asked | evidence, caveat, permission, redaction, reviewer before public proof |
 | Workspace Efficiency Layer | repo manifests, evidence indexes, command-center spec/report, affected checks, dependency policy | repo manifest, evidence index, decision record, workspace command-center spec, `dtp workspace report` | `local-codex`; `explorer` for repo-specific discovery only if asked | do not mutate sibling repos without lane readiness; no live git/CI reads or command runner until the V0 report proves useful |
 | Roadmap Steward Loop | steward template, activation map, steward command, hosted queue, agent manager | activation map, steward review, story activation contract | `local-codex`; `parked-autonomy` for future manager | no autonomous edits/status changes; manual loop proves value first |
+| Business Brain / Consulting OS | prospect diagnosis, COI, proposals, comms, operator handoff, business role specs | Business Brain source map, Practice OS command contracts, diagnose/COI/proposal/handoff skills, comms kit | `local-codex`; `parked-autonomy` for future business agents | DTP remains source of truth; no autonomous agents, public claims, pricing, employer endorsement, or live integrations without review |
 | Future Intelligence Layer | flight records, research radar, mobile app review journeys, eval garden, red-team lab | lesson capture, mobile app review journey, research radar, agent session record, red-team plan | `local-codex`; `reviewer` for red-team only if asked | human-approved learning; evals before autonomy; primary sources and repo evidence for research/launch learning |
 | First Client Operating Kit Pilot | Mom kit, fit assessment, proof/redaction, handoff/runbook, public proof | Client Operating Kit, Command Room fit, proof/redaction templates, handoff/runbook | `local-codex`; `explorer` only for public/source discovery if asked | private kit stays private; consent/COI first; public proof blocked until review |
 | Adjacent Project Touch Lanes | Omnexus, DeMario, FamilyTrips, DSE, engineering-playbook | repo manifest, portfolio scorecard, proof/COI/privacy lane, repo-specific gates | `local-codex`; `explorer` for scoped repo discovery only if asked | do not disturb active branches; touch only when trigger is ready |
 | FAOS Agentic Orchestration Substrate | FAOS spec review, Phase 0 readiness, `op` wrapper, traces, memory, MCP, subagents, hooks, evals, durable workflows | FAOS orchestration roadmap, FAOS phase readiness review, Agentic Performance Gap Review, Roadmap Steward | `local-codex`; `parked-autonomy` for future orchestration | readiness review before implementation; no raw Phase 0 prompt execution; no trace/memory capture before redaction policy |
+| Custom Interface Craft Standard | broad UI work, frontend craft, reference promotion, repo-local design pointers | custom interface craft standard, custom craft brief, `tm-skills/frontend-craft`, reference maturity gate | `local-codex`; `reviewer` only if asked for visual/design review | craft brief or hotfix exception before broad UI work; unfinished references stay north-star candidates until promoted |
 
 ## Current Active Story Activation
 
@@ -57,6 +59,8 @@ human gates.
 | Expand repo manifests | "make every repo covered", "what does this repo own", "which gates run" | repo manifest, evidence index, portfolio scorecard | `local-codex`; `explorer` only if asked | manifest names purpose, gates, proof/privacy lane, deploy/data boundaries |
 | Capture mobile app review/launch journey | "App Store approved", "app review", "TestFlight", "Play Console", "mobile launch", "store rejection" | Mobile App Review And Launch pattern, mobile app review journey template, lesson capture, proof/redaction templates if proof is requested | `local-codex`; `reviewer` only if proof review is explicitly requested | launch pattern/template/lesson updated; no credentials or private store screenshots committed; public proof remains gated |
 | Hub prompt/registry validation | "Hub prompts", "registry cross-validation", "prompt ids" | `testing-ladder`, Hub prompt/registry validation story | `local-codex`; `worker` only if asked and write scopes are split | local gates pass in both repos; CI-safe path does not require private siblings unless configured |
+| Custom interface craft gate | "everything should be custom", "make this less generic", "design it like the consulting process", "custom site/app/admin UI" | Custom Interface Craft Standard, custom craft brief, `tm-skills/frontend-craft`, reference maturity model | `local-codex`; `reviewer` only if asked | brief exists or hotfix exception recorded; reference maturity named; visual/mobile checks pass |
+| First Business Brain artifact pass | "Greg prep", "Cameron COI", "Mom/Mario handoff", "diagnose prospect", "draft proposal", "practice comms" | Business Brain source map, command contracts, fixtures, diagnose/COI/proposal/handoff skills, comms kit | `local-codex` | artifacts generated from fixtures, reviewed by Toni before use, lessons captured, no public comms or contracts without human review |
 
 ## Idea-To-Story Activation
 
@@ -66,7 +70,7 @@ Use this when the prompt is not yet a backlog story but should be captured.
 |---|---|---|---|
 | Development enhancement | contextual idea intake, repo manifest, `testing-ladder` or `delivery-baseline` | Verification/CI, Workspace Efficiency, or repo-specific lane | work item spec or implementation plan |
 | Development implementation | contextual idea intake, story activation index, repo-local gates | owning repo story or new backlog candidate | direct implementation if scoped; otherwise work item spec |
-| Product/design | contextual idea intake, `frontend-craft`, Command Room fit if owner-facing | project lane or Client Command Room lane | design spec, visual QA checklist, or implementation |
+| Product/design | contextual idea intake, Custom Interface Craft Standard, `frontend-craft`, Command Room fit if owner-facing | project lane, Client Command Room lane, or Custom Interface Craft Standard | custom craft brief, design spec, visual QA checklist, or implementation |
 | Project/client work | contextual idea intake, Client Operating Kit, COI/consent | Client Operating Kit pilot or adjacent project lane | private kit, handoff, proof packet |
 | Business/offer | contextual idea intake, Practice Production Roadmap | consulting/proof/business-ops lane | decision record or roadmap story |
 | Proof/case study | contextual idea intake, proof/redaction templates | Proof And Redaction Governance | proof packet, asset inventory, claim review |
@@ -84,6 +88,7 @@ When a backlog story changes status, also check whether one of these needs an up
 - `practice-os/templates/roadmap-steward-review.md`;
 - repo manifest or evidence index;
 - proof/redaction template;
+- custom interface craft standard or custom craft brief;
 - `tm-skills` trigger description or eval;
 - FAOS orchestration roadmap or readiness review when agent substrate prompts change;
 - research radar item;

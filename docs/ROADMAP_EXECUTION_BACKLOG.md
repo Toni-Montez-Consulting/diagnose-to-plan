@@ -32,6 +32,7 @@ Story rules:
 - The Practice System Documentation Pack is the standing architecture/audit/optimization layer. Use it to understand the current system, target state, highest-risk gaps, and next optimization stories before creating more platform surface.
 - Notion Mirror is a mobile capture and daily-cockpit layer. Use `docs/NOTION_MIRROR_V0.md` before connecting Notion MCP, creating Notion databases, or mirroring roadmap/proof/repo-health records. Notion may capture ideas, but DTP remains the source of truth after steward triage.
 - FAOS orchestration is a gated future substrate lane. Use `docs/FAOS_ORCHESTRATION_ROADMAP.md` and `practice-os/templates/faos-phase-readiness-review.md` before any `faos` repo, `op` wrapper, tracing/memory substrate, Spec-Kit rollout, MCP server, subagent roster, hook, durable workflow, or business-agent automation is implemented.
+- Custom Interface Craft is a hard gate for broad UI work. Use `docs/CUSTOM_INTERFACE_CRAFT_STANDARD.md` and `practice-os/templates/custom-interface-craft-brief.md` before building or substantially redesigning public sites, apps, admin portals, proof surfaces, or assistant-facing interfaces. Hotfixes may skip only with a documented exception.
 
 ## Story Activation Contract
 
@@ -232,24 +233,52 @@ Goal: give the right workspace websites a useful public assistant and, where jus
 | DeMario admin assistant pilot | `demario-pickleball-1`, Hub/future runtime | Later | protected admin assistant is read-only first and never sends texts, mutates bookings, changes payments, or cancels lessons without explicit confirmation | wait for owner/admin habits and proof boundaries to stabilize |
 | CCAAP assistant lane | `ccaap-site`, future runtime | Later | public assistant only after launch inputs, preview, owner review, contact routing, assets, and privacy/proof decisions are stable | do not implement during current CCAAP launch gate |
 
+## Epic 14: Custom Interface Craft Standard
+
+Goal: make every broad UI surface fully custom and authored while preventing unfinished references from becoming accidental templates.
+
+| Story | Repo | Status | Done gate | Next action |
+|---|---|---|---|---|
+| Practice-wide custom interface standard | `diagnose-to-plan` | Done | standard doc, required template, roadmap pointers, doctor enforcement, and tests exist | use on future broad UI work |
+| `frontend-craft` behavior update | `tm-skills` | Done | skill/eval encode custom authored design as the default without weakening practical UI checks | use after tool reload; external smoke remains manual |
+| Reference promotion gate | `diagnose-to-plan`, candidate repos | Ready | candidate project has production-level gates, Toni acceptance, clean boundaries, and a DTP note naming reusable lessons | evaluate Architected Strength and consulting only after production-level passes |
+| Repo-local custom craft pointers | touched project repos | Later | each repo has local pointer/brief when its lane is active | do not bulk-edit inactive repos |
+
+## Epic 15: Business Brain / Consulting OS
+
+Goal: make DTP the durable operating system for business practice, not only
+software delivery.
+
+| Story | Repo | Status | Done gate | Next action |
+|---|---|---|---|---|
+| Business Brain source map | `diagnose-to-plan` | Done | `docs/BUSINESS_BRAIN_OPERATING_SYSTEM.md` captures source docs, Claude context, repo mapping, source-of-truth order, proof/comms gates, and forbidden-until-unlocked boundaries | keep updated when Business Brain scope changes |
+| Command contracts and first fixtures | `diagnose-to-plan` | Done | `/diagnose-prospect`, `/coi-screen`, `/draft-proposal`, and `/comms-kit` contracts exist with Greg, Cameron, and Mom/Mario fixtures | convert into CLI/eval support only after manual use proves shape |
+| Business agent role specs | `diagnose-to-plan` | Done | Controller, General Counsel, and COO specs exist as draft-producing operating modes with escalation rules | keep non-autonomous until evals and write gates exist |
+| Private communications kit | `diagnose-to-plan` | Done | pitch kit, explainer, infographic brief, three diagrams, master deck, internal email, LinkedIn drafts, and X thread exist with public review gates | revise after first live conversations |
+| First live artifact run | `diagnose-to-plan` | Done | Greg/Cameron/Mom-Mario artifacts were converted into Cam and Greg send-ready packets, CCAAP waiting state, sanitized Notion mirrors, and a steward receipt | use client replies to update private kits first, then seed evals from the observed workflow |
+| Business Brain eval garden | `diagnose-to-plan` | Ready | eval garden is ready to seed from fixtures, client replies, and send-confirmation examples for diagnose-prospect, COI, proposal, handoff, and comms anti-slop checks | seed after Cam/Greg replies or send confirmation |
+| Controller close loop | `diagnose-to-plan` | Later | weekly-close command contract and fixture exist with financials unavailable when QuickBooks is absent | wait until the first weekly close is needed |
+
 ## Current Active Next Queue
 
 Standing preflight/postflight: use `practice-os/templates/activation-routing-map.md`, `practice-os/templates/agentic-performance-gap-review.md`, and `practice-os/templates/roadmap-steward-review.md` for major roadmap sessions so the right skill/template/process is selected, agentic performance gaps are caught, and new ideas, blockers, repo lanes, gates, and no-touch boundaries are captured before memory drift.
 
-1. Wait for Leah plus Dad's CCAAP review response after the owner packet/prototype link sent on 2026-05-01; collect exact PayPal donate/membership links, contact routing and spam preference, meeting label/destination, domain/DNS access, authentic photos/resources, review notes, and proof decision.
-2. Continue the CCAAP off-Wix custom rebuild path only after owner-approved values arrive; production DNS waits for `pnpm validate:launch`.
-3. Use the Notion Mirror V0 phone inbox and daily views for capture/review; run Roadmap Steward triage before promoting any Notion item into DTP source-of-truth artifacts.
-4. Keep Architected Strength as its own personal-brand OS. PR #1 is merged into the org-owned private repo; use it as the first assistant-pattern candidate after CCAAP owner-input closure is moving.
-5. Keep the cross-site assistant lane at architecture/manifest level until the Architected Strength public manifest is accepted and the repo-local source corpus, refusal policy, logging/analytics plan, and human handoff are validated.
-6. Treat the Omnexus App Store approval journey as the first mobile app review-to-launch learning pattern; use `docs/MOBILE_APP_REVIEW_AND_LAUNCH_PATTERN.md` for future client app builds, but do not publish Omnexus proof until proof gates pass.
-7. Capture owner-approved CCAAP baseline/after-state evidence for the first proof candidate and run redaction/permission review.
-8. Keep Claude Code and GitHub Copilot `tm-skills` discovery smoke testing on the manual back burner; runbook exists, links are healthy, and Codex discovery is verified, but external reload checks remain manual and non-blocking.
-9. Keep Hub dependency PRs #54/#56/#61 parked until one is explicitly selected with a migration/security plan; PRs #59 and #55 are merged and no longer block the queue. Older PR #52 is no longer in the active visible queue.
-10. Keep Hub prompt/registry cross-validation local-first; decide private sibling-repo CI access only if it becomes worth the operational cost.
-11. Use `dtp workspace report` as a read-only steward preflight when checking repo coverage, recorded evidence, suggested gates, blockers, and missing manifest/evidence coverage; missing repo rows may carry explicit Active Next Queue blockers without guessing gates.
-12. Keep repo manifests current as lanes are touched; DTP, consulting, Architected Strength, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, CCAAP, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus now have DTP-owned manifests/evidence indexes.
-13. Keep DSE blocked until its active branch is clean or explicitly selected with COI-aware scope.
-14. Run FAOS Phase 0 readiness review only after the current pilot/proof/smoke/Hub-validation path; do not build FAOS from the raw Phase 0 prompt yet.
+1. Review/send the Cam and Greg follow-up packets, then update the private DTP kits first when replies arrive; mirror only sanitized status into Notion.
+2. Wait for Leah plus Dad's CCAAP review response after the owner packet/prototype link sent on 2026-05-01; collect exact PayPal donate/membership links, contact routing and spam preference, meeting label/destination, domain/DNS access, authentic photos/resources, review notes, and proof decision.
+3. Continue the CCAAP off-Wix custom rebuild path only after owner-approved values arrive; production DNS waits for `pnpm validate:launch`.
+4. Apply the Custom Interface Craft Standard before broad UI work. Architected Strength and consulting are in-progress north-star candidates, not completed templates, until reference promotion gates pass.
+5. Use the Notion Mirror V0 phone inbox and daily views for capture/review; run Roadmap Steward triage before promoting any Notion item into DTP source-of-truth artifacts.
+6. Keep Architected Strength as its own personal-brand OS. PR #1 is merged into the org-owned private repo; use it as the first assistant-pattern candidate after CCAAP owner-input closure is moving.
+7. Keep the cross-site assistant lane at architecture/manifest level until the Architected Strength public manifest is accepted and the repo-local source corpus, refusal policy, logging/analytics plan, and human handoff are validated.
+8. Treat the Omnexus App Store approval journey as the first mobile app review-to-launch learning pattern; use `docs/MOBILE_APP_REVIEW_AND_LAUNCH_PATTERN.md` for future client app builds, but do not publish Omnexus proof until proof gates pass.
+9. Capture owner-approved CCAAP baseline/after-state evidence for the first proof candidate and run redaction/permission review.
+10. Keep Claude Code and GitHub Copilot `tm-skills` discovery smoke testing on the manual back burner; runbook exists, links are healthy, and Codex discovery is verified, but external reload checks remain manual and non-blocking.
+11. Keep Hub dependency PRs #54/#56/#61 parked until one is explicitly selected with a migration/security plan; PRs #59 and #55 are merged and no longer block the queue. Older PR #52 is no longer in the active visible queue.
+12. Keep Hub prompt/registry cross-validation local-first; decide private sibling-repo CI access only if it becomes worth the operational cost.
+13. Use `dtp workspace report` as a read-only steward preflight when checking repo coverage, recorded evidence, suggested gates, blockers, and missing manifest/evidence coverage; missing repo rows may carry explicit Active Next Queue blockers without guessing gates.
+14. Keep repo manifests current as lanes are touched; DTP, consulting, Architected Strength, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, CCAAP, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus now have DTP-owned manifests/evidence indexes.
+15. Keep DSE blocked until its active branch is clean or explicitly selected with COI-aware scope.
+16. Run FAOS Phase 0 readiness review only after the current pilot/proof/smoke/Hub-validation path; do not build FAOS from the raw Phase 0 prompt yet.
 
 Closed on 2026-04-30: GitHub Enterprise org-migration closeout for Omnexus PR #559. The PR merged, local `fitness-app/main` was aligned to `origin/main`, and represented local org-migration branches were deleted.
 

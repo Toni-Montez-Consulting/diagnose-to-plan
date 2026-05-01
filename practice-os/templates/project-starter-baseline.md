@@ -25,6 +25,7 @@ review_status: draft
 - Privacy/COI notes:
 - Handoff/runbook:
 - Command-room fit assessment:
+- Custom interface craft brief:
 - Evidence index:
 
 ## Defaults
@@ -32,7 +33,7 @@ review_status: draft
 - Runtime:
 - Package manager:
 - Deploy target:
-- Styling/design system:
+- Styling/design system: project-specific custom interface system; no generic template baseline
 - Data boundary:
 
 ## Do Not Include By Default
@@ -48,3 +49,5 @@ review_status: draft
 - New repo can be understood by a future agent in under 10 minutes.
 - Local and CI gates are named before feature work starts.
 - Proof and privacy boundaries are explicit.
+- Broad UI work has a custom craft brief or documented hotfix exception.
+- Reference projects are labeled as north-star, operational, or gold-standard before being used as inspiration.

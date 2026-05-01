@@ -25,11 +25,12 @@ Use this map when a prompt could route to more than one skill, template, process
 | Prompt shape | Primary activation | Supporting asset | Gate |
 |---|---|---|---|
 | "review my changes", "review this PR", "find regressions" | `tm-skills/review-checklist` | repo-local tests and CI evidence | no merge/push unless requested |
-| "make this UI feel better", "polish this dashboard", "responsive/mobile QA" | `tm-skills/frontend-craft` | visual QA and design-system docs | preserve existing product/design boundary |
+| "make this UI feel better", "polish this dashboard", "responsive/mobile QA", "make everything custom" | `tm-skills/frontend-craft` plus Custom Interface Craft Standard | `docs/CUSTOM_INTERFACE_CRAFT_STANDARD.md`, `practice-os/templates/custom-interface-craft-brief.md`, visual QA docs | craft brief or hotfix exception before broad UI work; preserve product/design boundary |
 | "add auth/schema/API/storage", "design hosted boundary", "smallest backend" | `tm-skills/backend-design` | `docs/HOSTED_DTP_PHASE_0.md` for hosted DTP | boundary accepted before implementation |
 | "what tests should run", "CI failed", "verification depth" | `tm-skills/testing-ladder` | repo manifest, evidence index, verification pattern | hard gates stay hard |
 | "validate branch", "what is left", "committed/pushed?", "prepare handoff" | `tm-skills/delivery-baseline` | evidence index, git status, CI status | do not commit/push unless requested |
 | "what is next on the roadmap", "keep everything aligned", "capture this idea" | Roadmap Steward review | `docs/ROADMAP_EXECUTION_BACKLOG.md` | update status only with real evidence |
+| "Business Brain", "Consulting OS", "business agents", "practice comms", "diagnose prospect", "draft proposal", "operator handoff" | Business Brain source map and Practice OS command contracts | `docs/BUSINESS_BRAIN_OPERATING_SYSTEM.md`, `practice-os/commands/`, `practice-os/agents/`, `practice-os/comms/`, `practice-os/fixtures/business-brain/` | DTP is source of truth; no public proof, pricing, live integrations, or autonomous agents without gates |
 | "new idea", "design idea", "business idea", "development enhancement", "project idea", "can we add this later" | contextual idea intake | `docs/CONTEXTUAL_ACTIVATION_PLAYBOOK.md`, story activation index | classify before implementation |
 | "which agent/skill should this story use", "tie this to Kanban", "activate for this epic" | story activation index | `docs/ROADMAP_STORY_ACTIVATION_INDEX.md`, story activation contract | suggested agents require explicit delegation approval |
 | "audit the agent system", "what gaps did we miss", "why did this not activate", "I caught a design hole" | Agentic Performance Gap Review | `docs/PRACTICE_SYSTEM_AGENTIC_PERFORMANCE_GAP_REVIEW.md`, Roadmap Steward review | convert misses into durable artifacts, not autonomy |
@@ -53,7 +54,9 @@ Use these labels in Roadmap Steward reviews and handoffs:
 
 - `global_sdlc_skill`
 - `dtp_practice_skill`
+- `business_brain`
 - `contextual_idea_intake`
+- `custom_interface_craft`
 - `practice_os_template`
 - `roadmap_backlog_story`
 - `proof_redaction_gate`

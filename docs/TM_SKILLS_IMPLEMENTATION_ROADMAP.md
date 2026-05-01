@@ -158,6 +158,9 @@ Use for UI polish, responsive layout, visual QA, interaction quality, and domain
 Default behavior:
 
 - inspect the existing design system before inventing a new look;
+- treat custom authored design as the default for broad UI work;
+- use the Custom Interface Craft Standard and craft brief before broad site, app, admin, proof, or assistant-facing UI implementation;
+- treat Architected Strength and consulting as north-star candidates until DTP promotes them to operational or gold-standard references;
 - keep operational tools dense, calm, and usable;
 - use real assets or meaningful generated assets when a website needs visual proof;
 - verify desktop and mobile behavior when changing visible UI.
@@ -444,6 +447,12 @@ Updated on 2026-04-30:
 - Added `tm-skills/docs/PRACTICE_SYSTEM_POINTER.md` and `tm-skills/docs/INSTALL_SMOKE_2026-04-30.md`.
 - Codex discovery smoke passed in a fresh Codex session: the five Phase 1 skills were visible and the review/delivery prompt activated the expected guidance.
 - Claude Code and GitHub Copilot reload and discovery smoke tests remain manual follow-up gates outside the current session.
+
+Updated on 2026-05-01:
+
+- Updated `frontend-craft` so broad UI work treats custom authored design as the default, not generic templates or unfinished reference copying.
+- Added a custom-interface craft eval fixture and refreshed the `frontend-craft` manifest review date.
+- DTP now owns the canonical Custom Interface Craft Standard and required craft-brief template; `tm-skills` carries the reusable agent behavior.
 
 ## Deferred
 

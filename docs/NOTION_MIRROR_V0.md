@@ -269,6 +269,16 @@ As of 2026-04-30:
 - One safe seed row was added to each database to prove write access without mirroring raw private material.
 - Phone-friendly views were added for inbox/triage, roadmap, repo health, proof, research, pilots, decisions, and notes.
 
+As of 2026-05-01:
+
+- The smoke-test page was promoted to `DTP Practice OS Command Center`.
+- The command center is now the phone-friendly cockpit for active work, while DTP remains the source of truth.
+- Active sanitized snapshots were added for Cam / SMB M&A Platform, Greg / TheGrantApp.io, Mom / CCAAP Site Rebuild, and the separated Omnexus app-ops lane.
+- Sanitized meeting-note mirrors were added for the 2026-05-01 Cam and Greg meetings.
+- Current roadmap-story mirrors were added for Notion cockpit use, Cam formalization/prototype work, Greg discovery/permission, and CCAAP owner-input closure.
+- The activation receipt lives at `practice-os/steward/2026-05-01-notion-command-center-activation.md`.
+- Automation remains parked behind a future DTP-owned dry run and redaction review.
+
 Completed authenticated smoke test:
 
 1. Confirm `codex mcp list` shows `notion` as `OAuth`.

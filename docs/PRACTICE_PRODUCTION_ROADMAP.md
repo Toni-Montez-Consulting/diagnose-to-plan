@@ -4,6 +4,13 @@ This is the canonical roadmap for bringing Toni Montez's consulting practice fro
 
 DTP owns this roadmap because DTP is the private Practice OS: the place where client kits, redaction, COI, patterns, proof capture, and operating methodology are organized. The consulting site is the public storefront and proof surface. Hub is the intake/runtime support layer.
 
+The Business Brain / Consulting OS is now a first-class DTP lane. It is the
+business-practice counterpart to the software-delivery learning loop: command
+contracts, skills, role specs, fixtures, comms, runbooks, proof gates, and
+human-reviewed self-improvement for operations, admin, finance, reporting,
+pricing, valuation, legal/compliance issue spotting, and handoff. The canonical
+source map is `docs/BUSINESS_BRAIN_OPERATING_SYSTEM.md`.
+
 `tm-skills` is a separate sibling layer for Toni's reusable software-development skills. It does not replace DTP. DTP owns consulting practice memory and client operating methodology. `tm-skills` owns cross-repo SDLC behavior for coding agents: review discipline, frontend craft, backend boundaries, testing judgment, and delivery hygiene. See `docs/TM_SKILLS_IMPLEMENTATION_ROADMAP.md`.
 
 The reusable admin/customer portal concept is captured as the Client Command Room pattern. It is inspired by the `demario-pickleball-1` admin portal and should guide future owner-facing operating rooms for Toni, clients, and selected engagements. Start with `practice-os/templates/client-command-room-fit-assessment.md`, then use `practice-os/templates/client-command-room-spec.md` only when the fit assessment says to build. See `docs/CLIENT_COMMAND_ROOM_PATTERN.md`.
@@ -15,6 +22,8 @@ The reusable mobile app review and launch concept is captured as the Mobile App 
 The Future Intelligence Layer is captured in `docs/WORKSPACE_PORTFOLIO_ROADMAP.md`. It adds supervised learning loops, research radar, agent flight records, portfolio scorecards, context engineering, AI red-team planning, release trust, feature flags, and protocol watchlists without changing the current build order.
 
 The Workspace Efficiency Layer is also captured in `docs/WORKSPACE_PORTFOLIO_ROADMAP.md`. It adds the read-only `dtp workspace report`, workspace command-center planning, repo manifests, affected-only checks, shared CI later, dependency maintenance, toolchain pinning, evidence indexes, decision logs, starter-factory templates, and CI cache hygiene without forcing the repos into one platform or monorepo.
+
+The Custom Interface Craft Standard is captured in `docs/CUSTOM_INTERFACE_CRAFT_STANDARD.md`. It makes fully authored custom interfaces a hard practice-wide rule for broad site, app, admin, proof, and assistant-facing UI work. `architected-strength` and `consulting` are intended gold-standard reference tracks, but they remain north-star candidates until they pass production-level reference promotion gates.
 
 The Notion Mirror is captured in `docs/NOTION_MIRROR_V0.md`. It gives Toni a phone-friendly daily cockpit and idea inbox while preserving DTP as the source of truth for roadmap execution, private kits, proof/redaction, repo gates, and steward receipts.
 
@@ -45,12 +54,16 @@ The Practice System Documentation Pack is the architecture and audit layer for t
 - Practice OS includes optional Future Intelligence templates for lessons, research radar items, research spikes, portfolio scorecards, agent session records, AI red-team plans, feature flag/kill switch plans, and supply-chain baselines.
 - Practice OS includes a mobile app review journey template seeded from Omnexus approval learning so future app builds can capture store review, native device, billing, privacy, and launch evidence without storing private reviewer or user data.
 - Practice OS includes optional Workspace Efficiency templates for repo manifests, evidence indexes, decision records, workspace command-center planning, dependency maintenance, toolchain pinning, CI cache planning, and project starter baselines.
+- Practice OS includes a required Custom Interface Craft Brief template so broad UI work starts with audience, tone, HTML, CSS, components, copy, assets, interaction, accessibility, public/private boundary, and verification decisions instead of generic templates.
 - Practice OS includes an optional FAOS Phase Readiness Review template for checking orchestration-substrate phases before any FAOS repo, `op` wrapper, tracing/memory service, Spec-Kit rollout, MCP server, subagent, hook, durable workflow, or business-agent automation is built.
 - Practice OS includes an AI Activation Map template for routing prompt shapes to the right skill, template, gate, roadmap lane, or parked automation path.
 - Practice OS includes a required Agentic Performance Gap Review template for recurring audit of prompt routing, context quality, skill triggers, planning continuity, verification, research, safety, and learning-loop conversion.
 - Practice OS includes a Contextual Idea Intake template for progressively turning new ideas/designs/work prompts into the right story, repo lane, template, skill, gate, or parked item.
 - Practice OS includes a Story Activation Contract template, and DTP includes a Roadmap Story Activation Index so every active Kanban lane can point to the right skill/template/agent-role suggestion and gate.
 - Practice OS includes a Roadmap Steward review template for major roadmap sessions; it is enforced by `dtp practice doctor` because it protects roadmap continuity across repos.
+- Practice OS includes Business Brain command contracts, first Controller/General
+  Counsel/COO role specs, Greg/Cameron/Mom-Mario fixtures, and a private-first
+  communications kit.
 - Practice OS includes a Notion Mirror item template, and DTP includes `docs/NOTION_MIRROR_V0.md` so phone-captured ideas and Notion roadmap views can mirror DTP without taking over source-of-truth ownership.
 - Hosted DTP Phase 0 now has an accepted design-boundary doc at `docs/HOSTED_DTP_PHASE_0.md`; hosted implementation remains gated until a separate implementation request and real records exist.
 - Practice OS now includes proof/redaction templates for proof packets, redaction queue items, permission review, evidence-source review, public claim review, and asset inventory.
@@ -143,6 +156,10 @@ The Practice System Documentation Pack is the architecture and audit layer for t
 - Add or strengthen templates for proposal/SOW, case-study proof packet, Work Item Spec, and hosted-DTP import/export.
 - Use the Future Intelligence templates opportunistically after real delivery/research sessions; do not make them required gates until they have proven useful.
 - Use the Workspace Efficiency templates opportunistically when touching a repo; use `dtp workspace report` for read-only steward preflight, but do not make live git/CI reads or command-center runner behavior required until the V0 report proves value.
+- Use `docs/CUSTOM_INTERFACE_CRAFT_STANDARD.md` and `practice-os/templates/custom-interface-craft-brief.md` before broad UI work on sites, apps, admin portals, proof surfaces, or assistant-facing interfaces. Treat `architected-strength` and `consulting` as north-star candidates until they are explicitly promoted to operational or gold-standard references.
+- Use `docs/BUSINESS_BRAIN_OPERATING_SYSTEM.md` before changing Business Brain
+  scope, command contracts, business agents, comms rules, or source-of-truth
+  behavior. Keep the Business Brain in DTP, not the public consulting repo.
 - Add tiny fixtures/evals for high-value Skills: COI, redact, diagnose, proposal, handoff, and case-study capture.
 - Promote only reviewed redacted patterns from `extracts/` into `practice-os/patterns/`.
 

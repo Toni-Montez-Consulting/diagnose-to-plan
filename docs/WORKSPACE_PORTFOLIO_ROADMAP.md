@@ -23,6 +23,10 @@ The practical thesis is:
 15. Mirror the practice into Notion for phone-first capture and daily review without moving source-of-truth ownership out of DTP.
 16. Plan site-scoped AI assistants as a governed cross-site pattern with separate public and admin surfaces, not as one generic chatbot pasted across projects.
 17. Turn mobile app review and launch journeys into reusable client-app launch packets, starting with the Omnexus App Store approval pattern.
+18. Make every broad UI surface fully custom and authored at the visual, HTML, CSS, component, copy, asset, interaction, boundary, and verification levels.
+19. Build the Business Brain as the business-practice counterpart to the SDLC
+    learning loop: command contracts, business agent roles, fixtures, comms,
+    runbooks, lessons, evals, and human-reviewed self-improvement.
 
 ## Scope
 
@@ -44,7 +48,7 @@ Workspace folders currently listed in `C:\Users\tonimontez\toni-consulting-ops.c
 
 GitHub ownership boundary: consulting/practice repos now live under `Toni-Montez-Consulting` where available. `dse-content` remains outside that organization in the personal/Microsoft-linked namespace, stays on the COI-aware lane, and should not be updated or moved unless explicitly selected.
 
-Current delta as of 2026-05-01: `architected-strength` is now tracked as Toni's personal brand OS, content hub, networking engine, proof lab, and first assistant-pattern candidate. `ccaap-site` is tracked as the first client operating kit public-site implementation and remains blocked on owner-approved PayPal, contact, meeting, DNS, photos/resources, owner review, and proof decisions. Omnexus App Review approval is now captured as an internal mobile app review-to-launch learning pattern for future client app builds; public proof remains blocked until proof packet gates pass.
+Current delta as of 2026-05-01: `architected-strength` is now tracked as Toni's personal brand OS, content hub, networking engine, proof lab, first assistant-pattern candidate, and in-progress north-star candidate for custom interface craft. `consulting` is also an in-progress north-star candidate for operator-grade proof/intake craft. Neither is a gold-standard reference until production-level operational review and DTP promotion gates pass. `ccaap-site` is tracked as the first client operating kit public-site implementation and remains blocked on owner-approved PayPal, contact, meeting, DNS, photos/resources, owner review, and proof decisions. Omnexus App Review approval is now captured as an internal mobile app review-to-launch learning pattern for future client app builds; public proof remains blocked until proof packet gates pass. The Business Brain / Consulting OS is now captured in DTP with a source map, command contracts, Controller/General Counsel/COO role specs, first Greg/Cameron/Mom-Mario fixtures, and private-first comms drafts.
 
 ## Priority Decision
 
@@ -89,6 +93,9 @@ An item stays on the roadmap only if it creates at least one of these forms of v
 - More repeatable revenue motion.
 - Stronger research-to-implementation signal, agent performance, or release trust.
 - Less repeated setup, rediscovery, verification runtime, or dependency-maintenance noise.
+- Stronger custom interface craft that makes each site, app, admin surface, proof surface, or assistant interface feel authored instead of generic.
+- Stronger business-practice execution across operations, admin, finance,
+  reporting, valuation, pricing, legal/compliance gates, handoff, and support.
 
 An item should be delayed or cut if it mostly creates:
 
@@ -100,6 +107,7 @@ An item should be delayed or cut if it mostly creates:
 - Research novelty that does not improve delivery speed, proof quality, risk control, agent performance, or business leverage.
 - Efficiency tooling that hides repo boundaries or makes agents skip required local evidence.
 - Notion sync that duplicates source-of-truth state or stores private/sensitive material outside approved DTP/vault boundaries.
+- Generic templates, default component-library assemblies, or copied unfinished references standing in for project-specific interface design.
 
 ## Future Intelligence Layer
 
@@ -895,7 +903,28 @@ Source:
 
 - https://containers.dev/
 
-### 20. FAOS Orchestration Substrate
+### 20. Custom Interface Craft Standard
+
+Broad UI work should begin from a custom interface craft brief, not from a generic template or default component assembly. This applies to public sites, apps, admin portals, proof surfaces, and assistant-facing interfaces. The current reference tracks are `architected-strength` and `consulting`, but both are still north-star candidates until they pass production-level operational review and are explicitly promoted.
+
+Roadmap impact:
+
+- Add `docs/CUSTOM_INTERFACE_CRAFT_STANDARD.md` as the canonical practice rule.
+- Make `practice-os/templates/custom-interface-craft-brief.md` a required Practice OS template.
+- Update `tm-skills/frontend-craft` so future agents treat custom authored design as the default behavior.
+- Require reference maturity before one project is used as inspiration for another: north-star candidate, operational reference, or gold-standard reference.
+- Use CCAAP as the reminder that simple and older-audience friendly can still be fully custom.
+
+Sources:
+
+- https://docs.astro.build/en/basics/astro-components/
+- https://docs.astro.build/en/guides/styling/
+- https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties
+- https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries
+- https://www.w3.org/WAI/tutorials/page-structure/regions/
+- https://web.dev/learn/design
+
+### 21. FAOS Orchestration Substrate
 
 The Frontier Agentic Operating System build spec is useful as a north-star for agent management and orchestration, but it should be absorbed into the current DTP system rather than run as a standalone build prompt immediately.
 
@@ -922,6 +951,26 @@ Sources:
 - https://inspect.aisi.org.uk/
 - https://docs.dbos.dev/
 - https://www.inngest.com/docs/learn/how-functions-are-executed
+
+### 22. Business Brain / Consulting OS
+
+The Business Brain is the DTP-owned operating layer for business practice. It
+absorbs the rebuilt ethos/build spec/prep/review packet into repo artifacts and
+turns Toni's consulting practice into a compounding system.
+
+Roadmap impact:
+
+- Keep `docs/BUSINESS_BRAIN_OPERATING_SYSTEM.md` as the source map.
+- Use `practice-os/commands/` for command contracts before automation.
+- Use `practice-os/agents/` for draft-producing business role specs, not
+  autonomous actors.
+- Use `practice-os/fixtures/business-brain/` for Greg, Cameron, and Mom/Mario
+  regression seeds.
+- Use `practice-os/comms/` for private-first communication assets and public
+  review candidates.
+- Treat QuickBooks, n8n, Notion writes, and business integrations as stubbed
+  until credentials and source-of-truth rules are accepted.
+- Fact-check AI adoption statistics before public use.
 
 ## Parked Or Explicitly Later
 
@@ -954,17 +1003,20 @@ Standing preflight/postflight: run the Activation Routing Map plus the Roadmap S
 
 Preflight: use the Practice System Documentation Pack as the current/future/audit/optimization reference before adding major new platform, proof, agent, or cross-repo behavior.
 
-1. Complete remaining CCAAP inputs: exact PayPal donate/membership links, contact routing and spam preference, meeting label/destination, domain/DNS access, authentic photos/resources, Leah plus Dad review, and proof decision.
-2. Continue the CCAAP off-Wix custom rebuild path only after owner-approved values arrive; production DNS waits for `pnpm validate:launch`.
-3. Use Notion Mirror V0 as the phone cockpit/inbox for CCAAP waiting-on items, but run steward triage before DTP source-of-truth changes.
-4. Use Architected Strength as the first governed assistant-pattern candidate after CCAAP owner-input closure is moving; do not migrate it into consulting.
-5. Keep the cross-site assistant lane at architecture/manifest level until the first site manifest, source corpus, refusal policy, analytics/logging plan, and handoff route are accepted.
-6. Keep Hub dependency PRs #54/#56/#61 parked until one is explicitly selected with a migration/security plan; PRs #59 and #55 no longer block the queue. Older PR #52 is no longer in the active visible queue.
-7. Keep Hub prompt/registry cross-validation local-first; decide private sibling-repo CI access only if it becomes worth the operational cost.
-8. Keep repo manifests current as touched lanes change; DTP, consulting, Architected Strength, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, CCAAP, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus now have manifests/evidence indexes.
-9. Run the next adjacent-project touch pass only when its trigger is ready; `dse-content` remains excluded unless explicitly selected with COI-aware scope.
-10. Use DeMario command room and Omnexus verification toolkit as proof/reference material only after permission/redaction review.
-11. Start hosted DTP implementation only after the Mom pilot/proof workflow gives the app real records to persist.
+1. Run the first live Business Brain artifact pass from the new Greg, Cameron,
+   and Mom/Mario fixtures, then capture lessons and eval candidates.
+2. Complete remaining CCAAP inputs: exact PayPal donate/membership links, contact routing and spam preference, meeting label/destination, domain/DNS access, authentic photos/resources, Leah plus Dad review, and proof decision.
+3. Continue the CCAAP off-Wix custom rebuild path only after owner-approved values arrive; production DNS waits for `pnpm validate:launch`.
+4. Use the Custom Interface Craft Standard for broad UI work. Treat `architected-strength` and `consulting` as north-star candidates until they pass reference promotion gates; do not copy them as finished templates.
+5. Use Notion Mirror V0 as the phone cockpit/inbox for CCAAP waiting-on items, but run steward triage before DTP source-of-truth changes.
+6. Use Architected Strength as the first governed assistant-pattern candidate after CCAAP owner-input closure is moving; do not migrate it into consulting.
+7. Keep the cross-site assistant lane at architecture/manifest level until the first site manifest, source corpus, refusal policy, analytics/logging plan, and handoff route are accepted.
+8. Keep Hub dependency PRs #54/#56/#61 parked until one is explicitly selected with a migration/security plan; PRs #59 and #55 no longer block the queue. Older PR #52 is no longer in the active visible queue.
+9. Keep Hub prompt/registry cross-validation local-first; decide private sibling-repo CI access only if it becomes worth the operational cost.
+10. Keep repo manifests current as touched lanes change; DTP, consulting, Architected Strength, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, CCAAP, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus now have manifests/evidence indexes.
+11. Run the next adjacent-project touch pass only when its trigger is ready; `dse-content` remains excluded unless explicitly selected with COI-aware scope.
+12. Use DeMario command room and Omnexus verification toolkit as proof/reference material only after permission/redaction review.
+13. Start hosted DTP implementation only after the Mom pilot/proof workflow gives the app real records to persist.
 
 Closed on 2026-04-30: GitHub Enterprise org-migration closeout for Omnexus PR #559. Hub's stale local org branch is cleaned, Hub PRs #59 and #55 are merged, Omnexus PR #559 is merged, and local Omnexus org-migration branches were pruned after merge confirmation.
 
