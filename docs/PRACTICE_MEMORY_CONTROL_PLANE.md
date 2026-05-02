@@ -30,6 +30,10 @@ The practical answer is a memory control plane:
    or next action becomes a DTP artifact first.
 5. Notion mirrors only the sanitized fields Toni needs to see quickly.
 
+The companion tool-governance layer is
+`docs/PRACTICE_TOOLING_STEWARD.md`. Use it when the question is not "how do we
+remember this?" but "which tools should we keep, add, park, remove, or evaluate?"
+
 ## Current Pressure
 
 The active load includes:
@@ -104,6 +108,8 @@ Use the Monday reset to answer:
 6. Which repo has dirty/uncommitted work?
 7. What are the next three actions for the week?
 8. What should stay parked?
+9. Did any connected tool help, hurt, confuse, duplicate state, or create a new
+   review need?
 
 ## Notion Premium Boundary
 
@@ -185,6 +191,7 @@ Use this ladder:
 1. Use the memory checkpoint template for the next broad infrastructure or
    client-status session.
 2. Add QuickBooks to the connector map as `not_connected`.
-3. Keep Notion cockpit as the daily visible layer.
-4. After two weekly reset cycles, decide whether the pain is still capture
+3. Use the Tooling Steward pattern for plugin/connector evaluation.
+4. Keep Notion cockpit as the daily visible layer.
+5. After two weekly reset cycles, decide whether the pain is still capture
    discipline or whether hosted DTP/import automation is justified.
