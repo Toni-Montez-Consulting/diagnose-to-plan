@@ -18,6 +18,7 @@ review_status: draft
 
 | Lane | Date | Result | Commit | Artifact |
 |---|---|---|---|---|
+| intelligence control plane sprint | 2026-05-02 | pass_with_manual_gates | current branch | Practice Intelligence Control Plane doc, memory-source index, tooling steward snapshot, connector map expansion, live Gmail/Calendar/Notion read-only checks, and steward receipt were added; hosted DTP, QuickBooks OAuth, assistant runtime, vector memory, client portal, and autonomous agents remain gated |
 | source-material/control-plane sprint | 2026-05-02 | pass_with_manual_gates | current branch | Practice OS source docs remain preserved, integration docs and ADR convention are documented, manual Thought Inbox/Input Studio/Context Pack/Opportunity Score/Exception Register/Value Ledger/Memory Review Queue templates were added, schema reconciliation was documented without migrations, and the Business Brain reset was piloted with sanitized reply-state evidence plus a sanitized Notion cockpit mirror |
 | infrastructure sprint | 2026-05-02 | pass_with_manual_gates | current branch | Client reply intake pattern/template, roadmap/doc alignment, first Cam reply capture, consulting assistant pre-code source/refusal artifacts, Notion cockpit views, and Business Brain calendar reset were prepared; validation recorded in the sprint steward receipt |
 | client cadence + light infrastructure | 2026-05-01 | pass_with_manual_gates | current branch | Recurring client cadence pattern/template, Cam/Greg/CCAAP private cadence records, consulting public assistant manifest/source corpus, roadmap alignment, and sanitized Notion cockpit page were prepared; `git diff --check`, `dtp workspace report`, kit status checks, `dtp practice doctor`, `dtp skills --validate`, `pytest`, `ruff check .`, and Notion fetch passed |
@@ -60,6 +61,7 @@ review_status: draft
 - Workspace Command Center V0 reports recorded artifacts only; live git/CI reads and command execution remain later. Missing repo rows may carry explicit Active Next Queue blockers without inferring gates.
 - Repo manifest/evidence index shape now covers DTP, consulting, Architected Strength, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, `ccaap-site`, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus. `dse-content` remains missing until its lane is clean or explicitly selected with COI-aware scope.
 - Cross-site assistant implementation is intentionally not started; the consulting public assistant is the first pilot candidate and remains gated on turning the accepted manifest, repo-local source corpus, refusal/handoff fixtures, logging/analytics policy, and launch gate into tests or a reviewed QA checklist.
+- Practice Intelligence Control Plane V0 is documentation/control-plane only. It improves rehydration, routing, and tool/client status discipline, but it does not authorize hosted DTP, private retrieval, QuickBooks OAuth, assistant runtime, client portal, auto-send, auto-schedule, or autonomous work.
 
 ## Notes
 

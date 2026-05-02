@@ -284,6 +284,7 @@ As of 2026-05-02:
 - The cockpit pattern is standardized around `Today`, `Waiting On`, `Decision Needed`, `Next Meeting`, and `Proof Blocked` views.
 - Client snapshots use the cadence fields `next_meeting`, `waiting_on`, `next_action`, `blocked_by`, and `last_updated`.
 - Client replies must be processed through `docs/CLIENT_REPLY_INTAKE_OPERATING_PATTERN.md` before Notion status changes.
+- Broad infrastructure/client sessions should use `docs/PRACTICE_INTELLIGENCE_CONTROL_PLANE.md` before Notion is updated, so loose ideas, replies, tool requests, assistant ideas, finance/admin requests, and durable memory candidates land in the right DTP artifact first.
 - Notion remains a sanitized cockpit; DTP remains the source of truth.
 - Toni has upgraded Notion. Treat that as permission to improve cockpit ergonomics
   and search/review flows after live feature availability is verified; it does

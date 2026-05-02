@@ -11,6 +11,12 @@ human-reviewed self-improvement for operations, admin, finance, reporting,
 pricing, valuation, legal/compliance issue spotting, and handoff. The canonical
 source map is `docs/BUSINESS_BRAIN_OPERATING_SYSTEM.md`.
 
+The Practice Intelligence Control Plane is the V0 operating layer for broad
+session rehydration and input routing. It uses
+`docs/PRACTICE_INTELLIGENCE_CONTROL_PLANE.md` to decide where new replies,
+ideas, proof claims, tool requests, assistant plans, finance/admin ideas, and
+memory candidates should land before any infrastructure expands.
+
 The Practice OS thesis/spec/schema source material is preserved in
 `docs/source/` and `database/schema/` and integrated through
 `docs/integration/`. It is additive source material, not an override of the
@@ -69,6 +75,9 @@ The Practice System Documentation Pack is the architecture and audit layer for t
 - Practice OS includes Business Brain command contracts, first Controller/General
   Counsel/COO role specs, Greg/Cameron/Mom-Mario fixtures, and a private-first
   communications kit.
+- Practice OS includes the Practice Intelligence Control Plane so broad
+  client/infrastructure sessions can rehydrate from DTP, git, Gmail, Calendar,
+  Notion, steward receipts, and active kit statuses before acting.
 - Practice OS source material is preserved in canonical source paths, with
   source index, integration map, concept registry, conflict register,
   reprioritization log, source-material ADR, and schema reconciliation docs.
