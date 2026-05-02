@@ -10,6 +10,38 @@ review_status: draft
 Use this log after meaningful Practice OS changes so backlog movement is
 deliberate and visible.
 
+## 2026-05-02: Source Thesis/Spec/Schema Integrated
+
+Source:
+
+- `docs/source/practice_os_build_spec_v0_1.md`
+- `docs/source/ai_implementation_layer_thesis_and_build_spec_v0_1.md`
+- `database/schema/practice_os_schema_v0_1.sql`
+
+Change:
+
+- Preserved the new source material in canonical DTP paths.
+- Added a source index, integration map, concept registry, and source-material
+  ADR.
+- Closed the missing-source-file conflict and opened narrower schema/app/portal
+  integration conflicts for future resolution.
+
+Priority impact:
+
+1. Source preservation is complete for this slice.
+2. Integration mapping is the current control layer.
+3. Schema reconciliation against Hosted DTP Phase 0 is now Ready, not active.
+4. Thought Inbox / Input Studio module templates are the next additive product
+   slice.
+5. Hosted app implementation remains gated and separate.
+
+Next review trigger:
+
+- Toni approves the next module-template slice.
+- Hosted DTP schema/app implementation is explicitly reopened.
+- A client cycle produces real inputs for Thought Inbox, Input Studio,
+  Opportunity Scoring, Exception Register, Value Ledger, or Memory Review.
+
 ## 2026-05-02: Practice OS Build Appendage Added
 
 Source: `AGENTS.md`

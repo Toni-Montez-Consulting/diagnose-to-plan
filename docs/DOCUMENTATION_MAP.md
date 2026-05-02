@@ -15,6 +15,9 @@ When another repo's docs conflict with this roadmap, treat the other doc as loca
 - `docs/02-commands.md`: current CLI command surface only.
 - `docs/03-skills.md`: current skill layout and validation boundary.
 - `docs/04-multi-repo.md`: sibling repo read/write boundaries.
+- `docs/source/practice_os_build_spec_v0_1.md`: additive source spec for the Practice OS capture -> learn loop and MVP modules. Preserve it; convert it into integration docs/templates/backlog items instead of editing it directly.
+- `docs/source/ai_implementation_layer_thesis_and_build_spec_v0_1.md`: additive company thesis and implementation-layer source material. Preserve its strategic language and use it as source for positioning, offer design, client discovery, and internal product development.
+- `database/schema/practice_os_schema_v0_1.sql`: additive starter schema source for future Practice OS records. Do not run it as a migration until it is reconciled with Hosted DTP Phase 0.
 - `docs/PRACTICE_VERIFICATION_SPINE.md`: Sprint 1 gate matrix, evidence contract, tool phasing, and no-slop quality gate for DTP, consulting, and Hub.
 - `docs/PRACTICE_SYSTEM_ARCHITECTURE.md`: current-state master architecture for the consulting operating system, including repo ownership, prompt/story activation, intake, proof/redaction, verification, and agent/skill boundaries.
 - `docs/PRACTICE_SYSTEM_FUTURE_STATE.md`: future-state architecture for hosted DTP, steward automation, supervised learning, research radar, repo manifests, command-center planning, and gated agent activation.
@@ -25,6 +28,9 @@ When another repo's docs conflict with this roadmap, treat the other doc as loca
 - `docs/PRACTICE_MEMORY_CONTROL_PLANE.md`: Priority 1 operating layer for keeping ideas, replies, meetings, blockers, proof gates, connector plans, and session receipts out of chat-only memory. Use before expanding Notion, QuickBooks, hosted DTP, or agent automation.
 - `docs/PRACTICE_MEMORY_OPTIMIZATION_PLAN.md`: retrieval and persistence ladder for making Codex rehydration reliable before adding hosted storage, vector retrieval, MCP recall, or a private Business Brain assistant.
 - `docs/PRACTICE_TOOLING_STEWARD.md`: connector/plugin/tool evaluation pattern. Use before adding, removing, piloting, or expanding access for plugins, MCP servers, OAuth apps, CLIs, hosted tools, or business integrations.
+- `docs/integration/source_index.md`: source-material inventory for the Practice OS thesis/spec/schema files and external DOCX duplicate.
+- `docs/integration/integration_map.md`: map from new source concepts to existing DTP architecture, current support, gaps, and additive-first implementation sequence.
+- `docs/integration/concept_registry.md`: named concept registry preserving the thesis language, memory levels, Input Studio, opportunity scoring, anti-slop review, value ledger, and related ideas.
 - `docs/integration/conflict_register.md`: additive source-material conflict register. Use when new thesis/spec/schema material conflicts with, is absent from, or needs mapping against current DTP architecture.
 - `docs/integration/reprioritization_log.md`: deliberate priority-change log. Use after new source documents, implementation slices, major exceptions, client feedback, constraints, strategy changes, or architecture decisions.
 - `docs/FAOS_ORCHESTRATION_ROADMAP.md`: planning integration and technical review for the Frontier Agentic Operating System build spec; read before any FAOS repo, `op` wrapper, Langfuse, Mem0/Letta, Spec-Kit, MCP, subagent, hook, durable execution, or agent-orchestration implementation.
