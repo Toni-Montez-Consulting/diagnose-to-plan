@@ -285,6 +285,9 @@ As of 2026-05-02:
 - Client snapshots use the cadence fields `next_meeting`, `waiting_on`, `next_action`, `blocked_by`, and `last_updated`.
 - Client replies must be processed through `docs/CLIENT_REPLY_INTAKE_OPERATING_PATTERN.md` before Notion status changes.
 - Notion remains a sanitized cockpit; DTP remains the source of truth.
+- Toni has upgraded Notion. Treat that as permission to improve cockpit ergonomics
+  and search/review flows after live feature availability is verified; it does
+  not change the rule that DTP owns source-of-truth state.
 
 Completed authenticated smoke test:
 

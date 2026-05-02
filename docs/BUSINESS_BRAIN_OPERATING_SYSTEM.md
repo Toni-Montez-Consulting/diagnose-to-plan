@@ -88,6 +88,12 @@ The Business Brain should improve through:
 - agent-proposed refactors that humans approve;
 - public proof only after permission, redaction, evidence, caveat, and review.
 
+The Business Brain should not depend on chat memory alone. Use
+`docs/PRACTICE_MEMORY_CONTROL_PLANE.md` and
+`practice-os/templates/memory-control-checkpoint.md` when a new idea,
+connector, client status sweep, or infrastructure decision needs to become
+durable operating state.
+
 ## Initial Proof Threads
 
 - Greg / TheGrantApp.io tests founder/product feedback, case-study engagement
@@ -125,6 +131,8 @@ statistics from planning context are research candidates, not public claims.
 - Notion as source of truth.
 - QuickBooks/n8n/business integrations as live dependencies before credentials,
   tools, and source-of-truth rules are confirmed.
+- QuickBooks write behavior, tax/accounting advice, or live financial imports
+  before a read-only connector gate is accepted.
 
 ## First Slice
 
