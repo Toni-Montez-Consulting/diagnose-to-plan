@@ -32,6 +32,7 @@ Story rules:
 - The Practice System Documentation Pack is the standing architecture/audit/optimization layer. Use it to understand the current system, target state, highest-risk gaps, and next optimization stories before creating more platform surface.
 - Notion Mirror is a mobile capture and daily-cockpit layer. Use `docs/NOTION_MIRROR_V0.md` before connecting Notion MCP, creating Notion databases, or mirroring roadmap/proof/repo-health records. Notion may capture ideas, but DTP remains the source of truth after steward triage.
 - Recurring client cadence uses `docs/RECURRING_CLIENT_CADENCE_OPERATING_PATTERN.md` and `practice-os/templates/recurring-engagement-cadence.md` before Notion or chat memory becomes the operating surface for live meetings.
+- Client reply intake uses `docs/CLIENT_REPLY_INTAKE_OPERATING_PATTERN.md` and `practice-os/templates/client-reply-intake.md` before Gmail replies, meeting notes, owner updates, or casual owner-approved facts change DTP state, Notion status, calendar invites, build work, or proof posture.
 - FAOS orchestration is a gated future substrate lane. Use `docs/FAOS_ORCHESTRATION_ROADMAP.md` and `practice-os/templates/faos-phase-readiness-review.md` before any `faos` repo, `op` wrapper, tracing/memory substrate, Spec-Kit rollout, MCP server, subagent roster, hook, durable workflow, or business-agent automation is implemented.
 - Custom Interface Craft is a hard gate for broad UI work. Use `docs/CUSTOM_INTERFACE_CRAFT_STANDARD.md` and `practice-os/templates/custom-interface-craft-brief.md` before building or substantially redesigning public sites, apps, admin portals, proof surfaces, or assistant-facing interfaces. Hotfixes may skip only with a documented exception.
 
@@ -257,6 +258,7 @@ software delivery.
 | Business agent role specs | `diagnose-to-plan` | Done | Controller, General Counsel, and COO specs exist as draft-producing operating modes with escalation rules | keep non-autonomous until evals and write gates exist |
 | Private communications kit | `diagnose-to-plan` | Done | pitch kit, explainer, infographic brief, three diagrams, master deck, internal email, LinkedIn drafts, and X thread exist with public review gates | revise after first live conversations |
 | First live artifact run | `diagnose-to-plan` | Done | Greg/Cameron/Mom-Mario artifacts were converted into Cam and Greg send-ready packets, CCAAP waiting state, sanitized Notion mirrors, and a steward receipt | use client replies to update private kits first, then seed evals from the observed workflow |
+| Client reply intake loop | `diagnose-to-plan` | Done | reply intake pattern/template exist, practice doctor enforces the template, and the first Cam reply is captured without advancing blocked work | use on every Cam/Greg/CCAAP reply before Notion or calendar changes |
 | Business Brain eval garden | `diagnose-to-plan` | Ready | eval garden is ready to seed from fixtures, client replies, and send-confirmation examples for diagnose-prospect, COI, proposal, handoff, and comms anti-slop checks | seed after Cam/Greg replies or send confirmation |
 | Controller close loop | `diagnose-to-plan` | Later | weekly-close command contract and fixture exist with financials unavailable when QuickBooks is absent | wait until the first weekly close is needed |
 
@@ -264,7 +266,7 @@ software delivery.
 
 Standing preflight/postflight: use `practice-os/templates/activation-routing-map.md`, `practice-os/templates/agentic-performance-gap-review.md`, and `practice-os/templates/roadmap-steward-review.md` for major roadmap sessions so the right skill/template/process is selected, agentic performance gaps are caught, and new ideas, blockers, repo lanes, gates, and no-touch boundaries are captured before memory drift.
 
-1. Run the recurring client loop: Cam weekly, Greg biweekly if confirmed, CCAAP monthly formal owner check-in, and Toni's weekly Business Brain reset. Update DTP private kits first, then mirror only sanitized status into Notion.
+1. Run the recurring client and reply intake loop: Cam weekly after time confirmation, Greg biweekly only if discovery confirms it, CCAAP monthly formal owner check-in, and Toni's weekly Business Brain reset. Update DTP private kits first, then mirror only sanitized status into Notion.
 2. Wait for Leah plus Dad's CCAAP review response after the owner packet/prototype link sent on 2026-05-01; collect exact PayPal donate/membership links, contact routing and spam preference, meeting label/destination, domain/DNS access, authentic photos/resources, review notes, and proof decision.
 3. Continue the CCAAP off-Wix custom rebuild path only after owner-approved values arrive; production DNS waits for `pnpm validate:launch`.
 4. Apply the Custom Interface Craft Standard before broad UI work. Architected Strength and consulting are in-progress north-star candidates, not completed templates, until reference promotion gates pass.

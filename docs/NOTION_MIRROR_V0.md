@@ -279,6 +279,13 @@ As of 2026-05-01:
 - The activation receipt lives at `practice-os/steward/2026-05-01-notion-command-center-activation.md`.
 - Automation remains parked behind a future DTP-owned dry run and redaction review.
 
+As of 2026-05-02:
+
+- The cockpit pattern is standardized around `Today`, `Waiting On`, `Decision Needed`, `Next Meeting`, and `Proof Blocked` views.
+- Client snapshots use the cadence fields `next_meeting`, `waiting_on`, `next_action`, `blocked_by`, and `last_updated`.
+- Client replies must be processed through `docs/CLIENT_REPLY_INTAKE_OPERATING_PATTERN.md` before Notion status changes.
+- Notion remains a sanitized cockpit; DTP remains the source of truth.
+
 Completed authenticated smoke test:
 
 1. Confirm `codex mcp list` shows `notion` as `OAuth`.
@@ -298,6 +305,7 @@ Future automation should still start from a DTP-owned dry run and redaction revi
 - Add a "Repo touch pass" board grouped by repo so the next clean batch is obvious from a phone.
 - Add a "Research radar" database with review dates so interesting tools do not become random scope creep.
 - Add a "Decision needed" view for choices like Cloudflare domain, contact routing, CMS timing, hosted DTP start, and FAOS readiness.
+- Keep "Today", "Waiting On", "Decision Needed", "Next Meeting", and "Proof Blocked" visible as the daily cockpit shape for active work.
 
 ## Acceptance For V0
 

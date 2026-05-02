@@ -18,6 +18,7 @@ review_status: draft
 
 | Lane | Date | Result | Commit | Artifact |
 |---|---|---|---|---|
+| infrastructure sprint | 2026-05-02 | pass_with_manual_gates | current branch | Client reply intake pattern/template, roadmap/doc alignment, first Cam reply capture, consulting assistant pre-code source/refusal artifacts, Notion cockpit views, and Business Brain calendar reset were prepared; validation recorded in the sprint steward receipt |
 | client cadence + light infrastructure | 2026-05-01 | pass_with_manual_gates | current branch | Recurring client cadence pattern/template, Cam/Greg/CCAAP private cadence records, consulting public assistant manifest/source corpus, roadmap alignment, and sanitized Notion cockpit page were prepared; `git diff --check`, `dtp workspace report`, kit status checks, `dtp practice doctor`, `dtp skills --validate`, `pytest`, `ruff check .`, and Notion fetch passed |
 | client follow-up sprint | 2026-05-01 | pass_with_manual_gates | current branch | Cam and Greg send-ready packets plus CCAAP waiting state were prepared in private engagement kits; Notion mirror is sanitized; `dtp workspace report`, kit status checks, `dtp practice doctor`, `dtp skills --validate`, `pytest`, and `ruff check .` passed; next manual gate is Toni review/send and client replies before repo access, live data, public proof, or production launch |
 | steward receipt | 2026-05-01 | pass_with_manual_gates | current branch | Custom Interface Craft and CCAAP closeout recorded in `practice-os/steward/2026-05-01-custom-interface-craft-and-ccaap-closeout.md`; DTP, `tm-skills`, and `ccaap-site` dirty work is verified but still uncommitted; CCAAP launch blockers remain owner-approved PayPal/contact/meeting/asset/proof inputs |
@@ -49,13 +50,13 @@ review_status: draft
 
 - Hosted DTP app implementation is intentionally not started.
 - CCAAP owner direction and off-Wix rebuild preference are captured; remaining gates are exact PayPal links, contact routing, domain/DNS, authentic photos/resources, owner review, and proof permissions.
-- Cam and Greg are send-ready but not recorded as sent; client replies should update private engagement kits before Notion mirrors or public proof surfaces.
+- Cam and Greg follow-ups are sent. Cameron has sent an initial positive reply and is still expected to provide the requested item packet. Greg has no visible reply in the latest check. Client replies should update private engagement kits before Notion mirrors, calendar invites, repo access, build work, or public proof surfaces.
 - Notion Mirror V0 manual setup is complete for phone-first capture/review; future MCP/API sync still needs a DTP-owned dry-run export, redaction review, and steward approval.
 - Public proof still needs permission, redaction, reviewer, evidence, and caveat gates.
 - GitHub Enterprise org-migration closeout is complete for Omnexus PR #559; Hub PRs #59 and #55 are merged; non-DSE org alignment is no longer the active blocker.
 - Workspace Command Center V0 reports recorded artifacts only; live git/CI reads and command execution remain later. Missing repo rows may carry explicit Active Next Queue blockers without inferring gates.
 - Repo manifest/evidence index shape now covers DTP, consulting, Architected Strength, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, `ccaap-site`, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus. `dse-content` remains missing until its lane is clean or explicitly selected with COI-aware scope.
-- Cross-site assistant implementation is intentionally not started; the consulting public assistant is the first pilot candidate and remains gated on accepting the manifest, extracting the repo-local source corpus, refusal/handoff fixtures, logging/analytics policy, and launch gate.
+- Cross-site assistant implementation is intentionally not started; the consulting public assistant is the first pilot candidate and remains gated on turning the accepted manifest, repo-local source corpus, refusal/handoff fixtures, logging/analytics policy, and launch gate into tests or a reviewed QA checklist.
 
 ## Notes
 

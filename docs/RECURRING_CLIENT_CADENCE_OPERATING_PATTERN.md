@@ -30,6 +30,8 @@ DTP private kits and DTP roadmap artifacts remain authoritative.
 
 Notion is the daily cockpit only. It may show sanitized status, cadence, waiting-on items, and next actions, but it must not store raw transcripts, private terms, client data, confidential employer/client context, payment/member/form records, or public proof claims.
 
+When a reply or owner update arrives between meetings, use `docs/CLIENT_REPLY_INTAKE_OPERATING_PATTERN.md` and `practice-os/templates/client-reply-intake.md` before changing calendar state, Notion status, build scope, repo access, or proof posture.
+
 ## Pre-Meeting Loop
 
 Before each recurring meeting, review the engagement kit in this order:
@@ -97,3 +99,5 @@ Use a 30-minute reset to ask:
 7. Are any Notion cockpit items stale or too private?
 
 The reset should end with no more than three active next actions.
+
+The reset starts by checking for unprocessed replies. If a reply changes a waiting state, run the client reply intake loop before adding new work.

@@ -64,7 +64,7 @@ The Practice System Documentation Pack is the architecture and audit layer for t
 - Practice OS includes Business Brain command contracts, first Controller/General
   Counsel/COO role specs, Greg/Cameron/Mom-Mario fixtures, and a private-first
   communications kit.
-- Practice OS includes a recurring client cadence template, and DTP includes `docs/RECURRING_CLIENT_CADENCE_OPERATING_PATTERN.md` so Cam, Greg, CCAAP, and Toni's weekly Business Brain reset follow the same prep, meeting, extraction, decision, action, and sanitized Notion mirror loop.
+- Practice OS includes recurring client cadence and client reply intake templates, and DTP includes `docs/RECURRING_CLIENT_CADENCE_OPERATING_PATTERN.md` plus `docs/CLIENT_REPLY_INTAKE_OPERATING_PATTERN.md` so Cam, Greg, CCAAP, and Toni's weekly Business Brain reset follow the same prep, reply capture, meeting, extraction, decision, action, and sanitized Notion mirror loop.
 - Practice OS includes a Notion Mirror item template, and DTP includes `docs/NOTION_MIRROR_V0.md` so phone-captured ideas and Notion roadmap views can mirror DTP without taking over source-of-truth ownership.
 - Hosted DTP Phase 0 now has an accepted design-boundary doc at `docs/HOSTED_DTP_PHASE_0.md`; hosted implementation remains gated until a separate implementation request and real records exist.
 - Practice OS now includes proof/redaction templates for proof packets, redaction queue items, permission review, evidence-source review, public claim review, and asset inventory.
@@ -297,6 +297,7 @@ Complete these before treating the practice as ready for soft launch.
 
 13. Run recurring client cadence as the current light-infrastructure layer.
    - Use `docs/RECURRING_CLIENT_CADENCE_OPERATING_PATTERN.md`.
+   - Use `docs/CLIENT_REPLY_INTAKE_OPERATING_PATTERN.md` when Gmail replies, meeting notes, owner updates, or casual owner-approved facts arrive.
    - Keep Cam weekly, Greg biweekly if confirmed, CCAAP monthly formal owner check-in, and Toni's weekly Business Brain reset.
    - Update private DTP kits before mirroring sanitized `next_meeting`, `waiting_on`, `next_action`, `blocked_by`, and `last_updated` fields into Notion.
 

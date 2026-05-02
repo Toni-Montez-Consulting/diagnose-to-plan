@@ -19,5 +19,6 @@ def test_practice_doctor_passes_repo_contract(repo_root: Path) -> None:
     assert any("template client-command-room-fit-assessment.md" in check for check in result.checks)
     assert any("template client-command-room-spec.md" in check for check in result.checks)
     assert any("template recurring-engagement-cadence.md" in check for check in result.checks)
+    assert any("template client-reply-intake.md" in check for check in result.checks)
     assert any("template custom-interface-craft-brief.md" in check for check in result.checks)
     assert any("practice skill diagnose" in check for check in result.checks)

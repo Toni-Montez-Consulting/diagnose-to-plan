@@ -8,12 +8,26 @@ from pathlib import Path
 import pytest
 
 
-@pytest.mark.skipif(shutil.which("bash") is None, reason="bash is required for hook scripts")
+def _usable_bash() -> str | None:
+    bash = shutil.which("bash")
+    if bash is None:
+        return None
+    try:
+        subprocess.run([bash, "--version"], check=False, capture_output=True, timeout=5)
+    except (OSError, subprocess.TimeoutExpired):
+        return None
+    return bash
+
+
+BASH = _usable_bash()
+
+
+@pytest.mark.skipif(BASH is None, reason="usable bash is required for hook scripts")
 def test_block_sibling_writes_hook_denies_outside_path(repo_root: Path) -> None:
     env = os.environ.copy()
 
     result = subprocess.run(
-        ["bash", ".claude/hooks/block-sibling-writes.sh"],
+        [BASH, ".claude/hooks/block-sibling-writes.sh"],
         cwd=repo_root,
         env=env,
         input='{"file_path":"../tonimontez.co/index.md"}',
@@ -26,7 +40,7 @@ def test_block_sibling_writes_hook_denies_outside_path(repo_root: Path) -> None:
     assert "outside repo root" in result.stderr
 
 
-@pytest.mark.skipif(shutil.which("bash") is None, reason="bash is required for hook scripts")
+@pytest.mark.skipif(BASH is None, reason="usable bash is required for hook scripts")
 def test_block_protected_branch_hook_denies_commit_on_main(
     tmp_path: Path,
     repo_root: Path,
@@ -39,7 +53,7 @@ def test_block_protected_branch_hook_denies_commit_on_main(
     env = os.environ.copy()
 
     result = subprocess.run(
-        ["bash", "block-protected-branch.sh"],
+        [BASH, "block-protected-branch.sh"],
         cwd=tmp_path,
         env=env,
         input='{"command":"git commit -m test"}',
@@ -52,7 +66,7 @@ def test_block_protected_branch_hook_denies_commit_on_main(
     assert "protected branch: main" in result.stderr
 
 
-@pytest.mark.skipif(shutil.which("bash") is None, reason="bash is required for hook scripts")
+@pytest.mark.skipif(BASH is None, reason="usable bash is required for hook scripts")
 def test_pre_commit_hook_blocks_confidential_frontmatter(
     tmp_path: Path,
     repo_root: Path,
@@ -67,7 +81,7 @@ def test_pre_commit_hook_blocks_confidential_frontmatter(
     subprocess.run(["git", "add", "."], cwd=tmp_path, check=True)
 
     result = subprocess.run(
-        ["bash", "pre-commit.sh"],
+        [BASH, "pre-commit.sh"],
         cwd=tmp_path,
         capture_output=True,
         text=True,

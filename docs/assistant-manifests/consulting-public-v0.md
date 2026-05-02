@@ -2,12 +2,12 @@
 data_class: P0
 confidential: false
 permission_level: internal_only
-review_status: draft
+review_status: accepted_pre_code
 ---
 
 # Assistant Manifest: Consulting Public V0
 
-Status: pre-code manifest. This does not authorize a chat widget, endpoint, retrieval index, or hosted assistant runtime.
+Status: accepted pre-code manifest. This does not authorize a chat widget, endpoint, retrieval index, or hosted assistant runtime.
 
 ## Identity
 
@@ -40,6 +40,13 @@ Only the published public consulting-site content below is approved for V0 answe
 | `/work/omnexus` | describe only public-safe Omnexus material shown on the page; do not add private metrics, App Store claims, or unsupported status |
 
 The source corpus should be extracted from the owning repo or deployed public pages before implementation. Internal docs are not approved source material unless they are separately redacted and accepted.
+
+Repo-local pre-code corpus and refusal fixtures now live in:
+
+- `C:\Users\tonimontez\consulting\docs\ASSISTANT_PUBLIC_V0_SOURCE_CORPUS.md`
+- `C:\Users\tonimontez\consulting\docs\ASSISTANT_PUBLIC_V0_REFUSAL_FIXTURES.md`
+
+Those files are the handoff point for turning this manifest into tests or a manual QA checklist before any runtime code.
 
 ## Blocked Sources
 
@@ -102,9 +109,9 @@ V0 logging must be minimal:
 
 Before code:
 
-1. Accept this manifest.
-2. Extract the approved public source corpus from `C:\Users\tonimontez\consulting`.
-3. Add refusal and handoff fixtures.
+1. Keep this manifest accepted as the DTP boundary.
+2. Keep the repo-local public source corpus current in `consulting`.
+3. Turn refusal and handoff fixtures into tests or a reviewed manual QA checklist.
 4. Decide runtime owner, environment variables, model/provider, and rate limit.
 5. Define a no-raw-message logging policy in the owning repo.
 6. Confirm `/start` remains the human-owned handoff route.
