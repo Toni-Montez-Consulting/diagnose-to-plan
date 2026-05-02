@@ -15,6 +15,8 @@ When another repo's docs conflict with this roadmap, treat the other doc as loca
 - `docs/02-commands.md`: current CLI command surface only.
 - `docs/03-skills.md`: current skill layout and validation boundary.
 - `docs/04-multi-repo.md`: sibling repo read/write boundaries.
+- `decisions/`: ADR-lite decision records for DTP. Use this directory when prompts ask for ADRs unless a future accepted repo-structure decision moves ADRs.
+- `docs/adr/README.md`: pointer explaining that DTP's active ADR convention is `decisions/`, preventing duplicate ADR systems.
 - `docs/source/practice_os_build_spec_v0_1.md`: additive source spec for the Practice OS capture -> learn loop and MVP modules. Preserve it; convert it into integration docs/templates/backlog items instead of editing it directly.
 - `docs/source/ai_implementation_layer_thesis_and_build_spec_v0_1.md`: additive company thesis and implementation-layer source material. Preserve its strategic language and use it as source for positioning, offer design, client discovery, and internal product development.
 - `database/schema/practice_os_schema_v0_1.sql`: additive starter schema source for future Practice OS records. Do not run it as a migration until it is reconciled with Hosted DTP Phase 0.

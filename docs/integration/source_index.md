@@ -39,6 +39,8 @@ order already recorded in `AGENTS.md`:
 
 - Preserve the source files.
 - Map concepts into integration docs before implementation.
+- Record ADRs in `decisions/`; `docs/adr/README.md` exists only as a pointer
+  because DTP's established convention is ADR-lite decision records.
 - Prefer additive templates/docs before code.
 - Keep DTP local-first until hosted implementation is explicitly opened.
 - Keep durable memory human-approved.
