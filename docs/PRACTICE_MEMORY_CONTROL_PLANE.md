@@ -34,6 +34,11 @@ The companion tool-governance layer is
 `docs/PRACTICE_TOOLING_STEWARD.md`. Use it when the question is not "how do we
 remember this?" but "which tools should we keep, add, park, remove, or evaluate?"
 
+The companion retrieval and persistence layer is
+`docs/PRACTICE_MEMORY_OPTIMIZATION_PLAN.md`. Use it when the question becomes
+"how can Codex rehydrate faster and more reliably?" or "should this move into
+private persistent storage?"
+
 ## Current Pressure
 
 The active load includes:
@@ -188,10 +193,12 @@ Use this ladder:
 
 ## Next Implementation Slice
 
-1. Use the memory checkpoint template for the next broad infrastructure or
+1. Use the session rehydration checklist for the next broad infrastructure or
    client-status session.
-2. Add QuickBooks to the connector map as `not_connected`.
-3. Use the Tooling Steward pattern for plugin/connector evaluation.
-4. Keep Notion cockpit as the daily visible layer.
-5. After two weekly reset cycles, decide whether the pain is still capture
+2. Use the memory checkpoint template when a specific idea, connector, client
+   status, or decision needs source-of-truth capture.
+3. Add QuickBooks to the connector map as `not_connected`.
+4. Use the Tooling Steward pattern for plugin/connector evaluation.
+5. Keep Notion cockpit as the daily visible layer.
+6. After two weekly reset cycles, decide whether the pain is still capture
    discipline or whether hosted DTP/import automation is justified.
