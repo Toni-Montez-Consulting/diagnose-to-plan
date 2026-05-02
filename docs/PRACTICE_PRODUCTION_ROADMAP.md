@@ -11,6 +11,11 @@ human-reviewed self-improvement for operations, admin, finance, reporting,
 pricing, valuation, legal/compliance issue spotting, and handoff. The canonical
 source map is `docs/BUSINESS_BRAIN_OPERATING_SYSTEM.md`.
 
+The Practice OS thesis/spec/schema source material is preserved in
+`docs/source/` and `database/schema/` and integrated through
+`docs/integration/`. It is additive source material, not an override of the
+current DTP architecture.
+
 `tm-skills` is a separate sibling layer for Toni's reusable software-development skills. It does not replace DTP. DTP owns consulting practice memory and client operating methodology. `tm-skills` owns cross-repo SDLC behavior for coding agents: review discipline, frontend craft, backend boundaries, testing judgment, and delivery hygiene. See `docs/TM_SKILLS_IMPLEMENTATION_ROADMAP.md`.
 
 The reusable admin/customer portal concept is captured as the Client Command Room pattern. It is inspired by the `demario-pickleball-1` admin portal and should guide future owner-facing operating rooms for Toni, clients, and selected engagements. Start with `practice-os/templates/client-command-room-fit-assessment.md`, then use `practice-os/templates/client-command-room-spec.md` only when the fit assessment says to build. See `docs/CLIENT_COMMAND_ROOM_PATTERN.md`.
@@ -64,7 +69,14 @@ The Practice System Documentation Pack is the architecture and audit layer for t
 - Practice OS includes Business Brain command contracts, first Controller/General
   Counsel/COO role specs, Greg/Cameron/Mom-Mario fixtures, and a private-first
   communications kit.
+- Practice OS source material is preserved in canonical source paths, with
+  source index, integration map, concept registry, conflict register,
+  reprioritization log, source-material ADR, and schema reconciliation docs.
 - Practice OS includes recurring client cadence and client reply intake templates, and DTP includes `docs/RECURRING_CLIENT_CADENCE_OPERATING_PATTERN.md` plus `docs/CLIENT_REPLY_INTAKE_OPERATING_PATTERN.md` so Cam, Greg, CCAAP, and Toni's weekly Business Brain reset follow the same prep, reply capture, meeting, extraction, decision, action, and sanitized Notion mirror loop.
+- Practice OS includes optional manual module templates for Thought Inbox,
+  Input Studio, Context Pack, Opportunity Score, Exception Register, Value
+  Ledger, and Memory Review Queue. These are not doctor-required until real
+  cycles prove which shapes should become stricter gates.
 - Practice OS includes a Notion Mirror item template, and DTP includes `docs/NOTION_MIRROR_V0.md` so phone-captured ideas and Notion roadmap views can mirror DTP without taking over source-of-truth ownership.
 - Hosted DTP Phase 0 now has an accepted design-boundary doc at `docs/HOSTED_DTP_PHASE_0.md`; hosted implementation remains gated until a separate implementation request and real records exist.
 - Practice OS now includes proof/redaction templates for proof packets, redaction queue items, permission review, evidence-source review, public claim review, and asset inventory.

@@ -49,7 +49,7 @@ review_status: draft
 
 ## Next Touch
 
-- Lane: hosted DTP Phase 0 and proof/redaction governance
-- Trigger: current Sprint 2 sequence and Notion mirror setup
-- Blocker: hosted implementation still needs a separate implementation request; public proof still needs permission/redaction/reviewer approval
-- Next action: use the CCAAP owner action packet and owner-call extraction ledger to complete remaining gates: PayPal links, contact routing, meeting label/destination, domain/DNS, authentic photos/resources, owner review, and proof permissions; use Notion Mirror V0 for phone-first capture/review with steward triage before DTP changes
+- Lane: Business Brain / Practice OS source-module control plane
+- Trigger: next Cam, Greg, CCAAP, or weekly Business Brain reset cycle
+- Blocker: hosted implementation still needs a separate implementation request and merged schema design; public proof still needs permission/redaction/reviewer approval
+- Next action: pilot the Thought Inbox, Input Studio, Context Pack, Opportunity Score, Exception Register, Value Ledger, and Memory Review Queue templates on the next real reply or reset cycle; keep CCAAP implementation waiting on owner-approved PayPal, contact, meeting, DNS, asset, review, and proof inputs

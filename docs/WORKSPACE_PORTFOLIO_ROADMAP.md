@@ -969,6 +969,10 @@ Roadmap impact:
   regression seeds.
 - Use `practice-os/comms/` for private-first communication assets and public
   review candidates.
+- Use `practice-os/templates/thought-inbox.md`, `input-studio.md`,
+  `context-pack.md`, `opportunity-score.md`, `exception-register.md`,
+  `value-ledger.md`, and `memory-review-queue.md` as optional manual module
+  templates before any hosted/app implementation.
 - Treat QuickBooks, n8n, Notion writes, and business integrations as stubbed
   until credentials and source-of-truth rules are accepted.
 - Fact-check AI adoption statistics before public use.
@@ -1004,19 +1008,20 @@ Standing preflight/postflight: run the Activation Routing Map plus the Roadmap S
 
 Preflight: use the Practice System Documentation Pack as the current/future/audit/optimization reference before adding major new platform, proof, agent, or cross-repo behavior.
 
-1. Run the recurring client cadence loop: Cam weekly, Greg biweekly if confirmed, CCAAP monthly formal owner check-in, and Toni's weekly Business Brain reset. Update DTP private kits first, then mirror only sanitized status into Notion.
-2. Complete remaining CCAAP inputs: exact PayPal donate/membership links, contact routing and spam preference, meeting label/destination, domain/DNS access, authentic photos/resources, Leah plus Dad review, and proof decision.
-3. Continue the CCAAP off-Wix custom rebuild path only after owner-approved values arrive; production DNS waits for `pnpm validate:launch`.
-4. Use the Custom Interface Craft Standard for broad UI work. Treat `architected-strength` and `consulting` as north-star candidates until they pass reference promotion gates; do not copy them as finished templates.
-5. Use Notion Mirror V0 as the phone cockpit/inbox for CCAAP waiting-on items, but run steward triage before DTP source-of-truth changes.
-6. Use consulting as the first governed public assistant pilot and keep Architected Strength as a later assistant-pattern candidate; do not migrate Architected Strength into consulting.
-7. Keep the cross-site assistant lane at architecture/manifest level until the consulting public manifest, source corpus, refusal policy, analytics/logging plan, and handoff route are accepted.
-8. Keep Hub dependency PRs #54/#56/#61 parked until one is explicitly selected with a migration/security plan; PRs #59 and #55 no longer block the queue. Older PR #52 is no longer in the active visible queue.
-9. Keep Hub prompt/registry cross-validation local-first; decide private sibling-repo CI access only if it becomes worth the operational cost.
-10. Keep repo manifests current as touched lanes change; DTP, consulting, Architected Strength, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, CCAAP, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus now have manifests/evidence indexes.
-11. Run the next adjacent-project touch pass only when its trigger is ready; `dse-content` remains excluded unless explicitly selected with COI-aware scope.
-12. Use DeMario command room and Omnexus verification toolkit as proof/reference material only after permission/redaction review.
-13. Start hosted DTP implementation only after the Mom pilot/proof workflow gives the app real records to persist.
+1. Run the recurring client cadence loop: Cam weekly only after time confirmation, Greg biweekly only if discovery confirms it, CCAAP monthly formal owner check-in, and Toni's weekly Business Brain reset. Update DTP private kits first, then mirror only sanitized status into Notion.
+2. Pilot the Thought Inbox, Input Studio, Context Pack, Opportunity Score, Exception Register, Value Ledger, and Memory Review Queue templates on the next real Cam, Greg, CCAAP, or weekly reset cycle.
+3. Complete remaining CCAAP inputs: exact PayPal donate/membership links, contact routing and spam preference, meeting label/destination, domain/DNS access, authentic photos/resources, Leah plus Dad review, and proof decision.
+4. Continue the CCAAP off-Wix custom rebuild path only after owner-approved values arrive; production DNS waits for `pnpm validate:launch`.
+5. Use the Custom Interface Craft Standard for broad UI work. Treat `architected-strength` and `consulting` as north-star candidates until they pass reference promotion gates; do not copy them as finished templates.
+6. Use Notion Mirror V0 as the phone cockpit/inbox for waiting-on items, but run steward triage before DTP source-of-truth changes.
+7. Use consulting as the first governed public assistant pilot and keep Architected Strength as a later assistant-pattern candidate; do not migrate Architected Strength into consulting.
+8. Keep the cross-site assistant lane at architecture/manifest level until the consulting public manifest, source corpus, refusal policy, analytics/logging plan, and handoff route are accepted.
+9. Keep Hub dependency PRs #54/#56/#61 parked until one is explicitly selected with a migration/security plan; PRs #59 and #55 no longer block the queue. Older PR #52 is no longer in the active visible queue.
+10. Keep Hub prompt/registry cross-validation local-first; decide private sibling-repo CI access only if it becomes worth the operational cost.
+11. Keep repo manifests current as touched lanes change; DTP, consulting, Architected Strength, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, CCAAP, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus now have manifests/evidence indexes.
+12. Run the next adjacent-project touch pass only when its trigger is ready; `dse-content` remains excluded unless explicitly selected with COI-aware scope.
+13. Use DeMario command room and Omnexus verification toolkit as proof/reference material only after permission/redaction review.
+14. Start hosted DTP implementation only after the Mom pilot/proof workflow gives the app real records to persist and a merged schema design is accepted.
 
 Closed on 2026-04-30: GitHub Enterprise org-migration closeout for Omnexus PR #559. Hub's stale local org branch is cleaned, Hub PRs #59 and #55 are merged, Omnexus PR #559 is merged, and local Omnexus org-migration branches were pruned after merge confirmation.
 

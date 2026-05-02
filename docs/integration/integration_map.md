@@ -38,14 +38,14 @@ self-learning loop, or runtime schema migration.
 
 | Concept | What the source adds | Additive DTP move |
 |---|---|---|
-| Thought Inbox | A named raw-input capture surface for fleeting ideas, notes, transcripts, lessons, and observations. | Add a template first; later wire to CLI/workbench if repeated use proves value. |
-| Input Studio | A named transformation layer from raw human input into structured context without losing voice. | Create an Input Studio template and map it to Business Brain command contracts. |
-| Context Pack | The complete-enough package that lets AI/code agents produce useful work. | Add a template that references existing work item/spec/handoff surfaces. |
-| Opportunity Scorer | Explicit score factors for prioritizing workflow opportunities. | Add a lightweight scoring template before spreadsheet/app behavior. |
+| Thought Inbox | A named raw-input capture surface for fleeting ideas, notes, transcripts, lessons, and observations. | Manual template exists; later wire to CLI/workbench if repeated use proves value. |
+| Input Studio | A named transformation layer from raw human input into structured context without losing voice. | Manual template exists and should map to Business Brain command contracts during real use. |
+| Context Pack | The complete-enough package that lets AI/code agents produce useful work. | Manual template exists and references source-aware context, facts, decisions, and waiting states. |
+| Opportunity Scorer | Explicit score factors for prioritizing workflow opportunities. | Manual scoring template exists before spreadsheet/app behavior. |
 | Anti-Slop Reviewer | Named review layer for business accuracy, user intent, specificity, assumptions, and risk. | Map into review-checklist/business fixtures and future eval garden. |
-| Exception Register | Debug log for workflow/system failures that can become pattern memory. | Add template; later connect to value ledger and memory review. |
-| Value Ledger | Core record of time, revenue, quality, strategic, and trust value. | Add template; use manually before hosted metrics. |
-| Memory Review Queue | Human approval path from raw note to reusable memory. | Add queue template and keep durable memory gates explicit. |
+| Exception Register | Debug log for workflow/system failures that can become pattern memory. | Manual template exists; later connect to value ledger and memory review after real misses. |
+| Value Ledger | Core record of time, revenue, quality, strategic, and trust value. | Manual template exists; use manually before hosted metrics. |
+| Memory Review Queue | Human approval path from raw note to reusable memory. | Manual queue template exists and keeps durable memory gates explicit. |
 | Reprioritization Loop | Backlog changes after meaningful events. | Use `docs/integration/reprioritization_log.md` plus roadmap steward reviews. |
 
 ## Schema Reconciliation Notes
@@ -55,7 +55,9 @@ is not a migration yet.
 
 Before schema implementation:
 
-- Reconcile table names and relationships with `docs/HOSTED_DTP_PHASE_0.md`.
+- Start from `docs/integration/schema_reconciliation_v0.md`, then reconcile table
+  names and relationships with `docs/HOSTED_DTP_PHASE_0.md` in a merged schema
+  design.
 - Add private auth/RLS/storage posture from Hosted DTP Phase 0.
 - Preserve local markdown import/export.
 - Add redaction, proof review, evidence, artifact, and permission concepts that
@@ -68,7 +70,7 @@ Before schema implementation:
 1. Preserve source files verbatim.
 2. Create source index, integration map, concept registry, conflict register,
    reprioritization log, and ADR.
-3. Add manual templates for the sharpened modules.
+3. Add manual templates for the sharpened modules. Done as of 2026-05-02.
 4. Use templates on Cam, Greg, CCAAP, or Toni's weekly reset.
 5. Only then consider CLI/workbench support.
 6. Hosted app/schema implementation remains a separate gated slice.

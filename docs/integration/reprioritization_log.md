@@ -10,6 +10,43 @@ review_status: draft
 Use this log after meaningful Practice OS changes so backlog movement is
 deliberate and visible.
 
+## 2026-05-02: Source Material Closeout And Template Pass
+
+Source:
+
+- `docs/source/practice_os_build_spec_v0_1.md`
+- `docs/source/ai_implementation_layer_thesis_and_build_spec_v0_1.md`
+- `database/schema/practice_os_schema_v0_1.sql`
+- `docs/HOSTED_DTP_PHASE_0.md`
+- Current Cam, Greg, and CCAAP reply-state checks
+
+Change:
+
+- Added manual templates for Thought Inbox, Input Studio, Context Pack,
+  Opportunity Score, Exception Register, Value Ledger, and Memory Review Queue.
+- Added schema reconciliation planning against Hosted DTP Phase 0 without
+  running SQL or implementing hosted DTP.
+- Added steward/evidence closeout for the source-material/control-plane sprint.
+- Piloted the template set on a sanitized weekly Business Brain reset.
+
+Priority impact:
+
+1. Module templates are now Done as manual assets, not doctor-required gates.
+2. First real Practice OS template pilot is Active next.
+3. Schema reconciliation doc is Done, but merged schema design remains Ready.
+4. QuickBooks remains Blocked until connector boundary, credentials, and
+   source-of-truth rules are accepted.
+5. Hosted DTP app/schema implementation remains Later/Gated.
+
+Next review trigger:
+
+- Cam sends the requested item packet.
+- Greg replies with discovery availability.
+- Dad/Leah clarify CCAAP owner inputs.
+- Toni explicitly reopens hosted schema/app work.
+- Two Business Brain reset cycles reveal which templates deserve stricter
+  enforcement.
+
 ## 2026-05-02: Source Thesis/Spec/Schema Integrated
 
 Source:
