@@ -1,0 +1,28 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/block-sibling-writes.sh"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/block-protected-branch.sh"
+          },
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/scan-client-confidential.sh"
+          }
+        ]
+      }
+    ]
+  }
+}

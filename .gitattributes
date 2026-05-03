@@ -1,0 +1,7 @@
+*.sh text eol=lf
+Makefile text eol=lf
+.claude/settings.json text eol=lf
+.dtp/scrub-patterns.txt text eol=lf
+
+# Preserve source documents as-authored; some Markdown sources use hard breaks.
+docs/source/*.md whitespace=-blank-at-eol

@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "diagnose-to-plan"
+version = "0.1.0"
+description = "Personal AI consulting harness for durable diagnose-to-plan artifacts."
+requires-python = ">=3.12"
+dependencies = [
+  "claude-agent-sdk>=0.1.69",
+  "cryptography>=46.0.3,<47",
+  "gitpython>=3.1.45",
+  "pydantic>=2.12.0",
+  "python-frontmatter>=1.1.0",
+  "rich>=14.0.0",
+  "typer>=0.20.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=9.0.0",
+  "ruff>=0.14.0",
+]
+
+[project.scripts]
+dtp = "dtp.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]

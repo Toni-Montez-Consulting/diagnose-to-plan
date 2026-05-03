@@ -1,0 +1,63 @@
+{
+  "version": "phase0",
+  "principles": [
+    "local_markdown_remains_fallback",
+    "hosted_records_preserve_data_classification",
+    "storage_uses_pointers_before_raw_private_content",
+    "public_proof_requires_reviewed_export"
+  ],
+  "imports": [
+    {
+      "source": "engagements/<client>/<engagement>/*.md",
+      "targetTables": [
+        "private_dtp_engagements",
+        "private_dtp_artifacts",
+        "private_dtp_decisions",
+        "private_dtp_evidence_runs",
+        "private_dtp_redaction_reviews",
+        "private_dtp_proof_candidates"
+      ],
+      "requiredFrontmatter": [
+        "data_class",
+        "confidential",
+        "permission_level",
+        "review_status"
+      ]
+    },
+    {
+      "source": "practice-os/steward/*.md",
+      "targetTables": ["private_dtp_steward_items"],
+      "requiredFrontmatter": ["data_class", "permission_level", "review_status"]
+    },
+    {
+      "source": "practice-os/templates/research-radar-item.md outputs",
+      "targetTables": ["private_dtp_research_items"],
+      "requiredFrontmatter": ["data_class", "permission_level", "review_status"]
+    }
+  ],
+  "exports": [
+    {
+      "name": "engagement_summary_markdown",
+      "sourceTables": ["private_dtp_engagements", "private_dtp_artifacts"],
+      "destination": "engagements/<client>/<engagement>/hosted-export-summary.md"
+    },
+    {
+      "name": "proof_packet_markdown",
+      "sourceTables": ["private_dtp_proof_candidates", "private_dtp_redaction_reviews"],
+      "destination": "engagements/<client>/<engagement>/proof/proof-packet.md"
+    },
+    {
+      "name": "evidence_index_markdown_json",
+      "sourceTables": ["private_dtp_evidence_runs"],
+      "destination": "practice-os/efficiency/<repo>-evidence-index.md"
+    }
+  ],
+  "blockedExports": [
+    "raw_email_threads",
+    "raw_transcripts",
+    "secrets_or_tokens",
+    "payment_member_records",
+    "unreviewed_public_claims",
+    "microsoft_or_customer_adjacent_material_without_coi_review"
+  ]
+}

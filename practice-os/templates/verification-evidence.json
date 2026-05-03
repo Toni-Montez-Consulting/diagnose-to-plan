@@ -1,0 +1,16 @@
+{
+  "repo": "",
+  "branch": "",
+  "commit": "",
+  "run_at": "",
+  "lane": "local",
+  "result": "manual_pending",
+  "commands": [],
+  "hard_failures": [],
+  "advisory_failures": [],
+  "manual_gates": [],
+  "artifacts": [],
+  "redaction_status": "internal_only",
+  "reviewer": "",
+  "next_action": ""
+}

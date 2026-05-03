@@ -1,0 +1,37 @@
+repos:
+  - name: consulting
+    path: ../../consulting
+    access: read
+  - name: architected-strength
+    path: ../../architected-strength
+    access: read
+  - name: hub
+    path: ../../hub
+    access: read
+  - name: engineering-playbook
+    path: ../../engineering-playbook
+    access: read
+  - name: hub-registry
+    path: ../../hub-registry
+    access: read
+  - name: hub-prompts
+    path: ../../hub-prompts
+    access: read
+  - name: demario-pickleball-1
+    path: ../../demario-pickleball-1
+    access: read
+  - name: ccaap-site
+    path: ../../ccaap-site
+    access: read
+  - name: fitness-app
+    path: ../../fitness-app
+    access: read
+  - name: FamilyTrips
+    path: ../../FamilyTrips
+    access: read
+  - name: dse-content
+    path: ../../dse-content
+    access: read
+  - name: tm-skills
+    path: ../../tm-skills
+    access: read
