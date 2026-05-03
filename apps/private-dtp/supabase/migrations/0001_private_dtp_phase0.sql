@@ -363,52 +363,82 @@ alter table private_dtp_steward_items enable row level security;
 alter table private_dtp_research_items enable row level security;
 alter table private_dtp_import_export_receipts enable row level security;
 
+grant usage on schema public to authenticated;
+
+revoke all
+on
+  private_dtp_engagements,
+  private_dtp_artifacts,
+  private_dtp_artifact_versions,
+  private_dtp_evidence_runs,
+  private_dtp_redaction_reviews,
+  private_dtp_proof_candidates,
+  private_dtp_decisions,
+  private_dtp_steward_items,
+  private_dtp_research_items,
+  private_dtp_import_export_receipts
+from anon;
+
+grant select, insert, update, delete
+on
+  private_dtp_engagements,
+  private_dtp_artifacts,
+  private_dtp_artifact_versions,
+  private_dtp_evidence_runs,
+  private_dtp_redaction_reviews,
+  private_dtp_proof_candidates,
+  private_dtp_decisions,
+  private_dtp_steward_items,
+  private_dtp_research_items,
+  private_dtp_import_export_receipts
+to authenticated;
+
 create policy "operator manages own engagements"
 on private_dtp_engagements for all
-using (operator_id = auth.uid())
-with check (operator_id = auth.uid());
+using (auth.uid() is not null and operator_id = auth.uid())
+with check (auth.uid() is not null and operator_id = auth.uid());
 
 create policy "operator manages own artifacts"
 on private_dtp_artifacts for all
-using (operator_id = auth.uid())
-with check (operator_id = auth.uid());
+using (auth.uid() is not null and operator_id = auth.uid())
+with check (auth.uid() is not null and operator_id = auth.uid());
 
 create policy "operator manages own artifact versions"
 on private_dtp_artifact_versions for all
-using (operator_id = auth.uid())
-with check (operator_id = auth.uid());
+using (auth.uid() is not null and operator_id = auth.uid())
+with check (auth.uid() is not null and operator_id = auth.uid());
 
 create policy "operator manages own evidence runs"
 on private_dtp_evidence_runs for all
-using (operator_id = auth.uid())
-with check (operator_id = auth.uid());
+using (auth.uid() is not null and operator_id = auth.uid())
+with check (auth.uid() is not null and operator_id = auth.uid());
 
 create policy "operator manages own redaction reviews"
 on private_dtp_redaction_reviews for all
-using (operator_id = auth.uid())
-with check (operator_id = auth.uid());
+using (auth.uid() is not null and operator_id = auth.uid())
+with check (auth.uid() is not null and operator_id = auth.uid());
 
 create policy "operator manages own proof candidates"
 on private_dtp_proof_candidates for all
-using (operator_id = auth.uid())
-with check (operator_id = auth.uid());
+using (auth.uid() is not null and operator_id = auth.uid())
+with check (auth.uid() is not null and operator_id = auth.uid());
 
 create policy "operator manages own decisions"
 on private_dtp_decisions for all
-using (operator_id = auth.uid())
-with check (operator_id = auth.uid());
+using (auth.uid() is not null and operator_id = auth.uid())
+with check (auth.uid() is not null and operator_id = auth.uid());
 
 create policy "operator manages own steward items"
 on private_dtp_steward_items for all
-using (operator_id = auth.uid())
-with check (operator_id = auth.uid());
+using (auth.uid() is not null and operator_id = auth.uid())
+with check (auth.uid() is not null and operator_id = auth.uid());
 
 create policy "operator manages own research items"
 on private_dtp_research_items for all
-using (operator_id = auth.uid())
-with check (operator_id = auth.uid());
+using (auth.uid() is not null and operator_id = auth.uid())
+with check (auth.uid() is not null and operator_id = auth.uid());
 
 create policy "operator manages own import export receipts"
 on private_dtp_import_export_receipts for all
-using (operator_id = auth.uid())
-with check (operator_id = auth.uid());
+using (auth.uid() is not null and operator_id = auth.uid())
+with check (auth.uid() is not null and operator_id = auth.uid());

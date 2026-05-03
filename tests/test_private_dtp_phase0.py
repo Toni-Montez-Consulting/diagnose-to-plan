@@ -30,7 +30,12 @@ def test_private_dtp_phase0_schema_has_core_tables_and_rls(repo_root: Path) -> N
         assert f"alter table {table} enable row level security" in sql
 
     assert "operator_id uuid not null default auth.uid()" in sql
-    assert "with check (operator_id = auth.uid())" in sql
+    assert "auth.uid() is not null and operator_id = auth.uid()" in sql
+    assert "with check (auth.uid() is not null and operator_id = auth.uid())" in sql
+    assert "grant usage on schema public to authenticated" in sql
+    assert "from anon;" in sql
+    assert "to authenticated;" in sql
+    assert "to anon;" not in sql
     assert "foreign key (engagement_id, operator_id)" in sql
     assert "foreign key (artifact_id, operator_id)" in sql
     assert "status <> 'approved'" in sql

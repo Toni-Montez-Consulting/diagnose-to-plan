@@ -1,8 +1,7 @@
 # Hosted DTP Phase 0
 
 Status: accepted design boundary plus schema/app-shell scaffold, local Phase
-0.1 private UI, and live smoke harness awaiting a dedicated Supabase
-environment.
+0.1 private UI, and passed live smoke against a dedicated Supabase environment.
 
 Accepted: 2026-04-29 via `practice-os/steward/2026-04-29-hosted-dtp-phase-0-acceptance-review.md`.
 
@@ -12,6 +11,9 @@ Phase 0.1 local private UI started: 2026-05-03 in `apps/private-dtp/`.
 
 Live smoke harness added: 2026-05-03 at
 `apps/private-dtp/scripts/smoke-live.mjs`.
+
+Live smoke passed: 2026-05-03 against the dedicated `DTP Private` Supabase
+project.
 
 Hosted DTP Phase 0 is the private foundation for engagement state, artifact governance, evidence, redaction, proof review, and decisions. It should not start as a dashboard. It should start as a private data model and app boundary that can later support useful views because the records already exist.
 
@@ -288,10 +290,13 @@ records, generates a markdown export, records an import/export receipt, checks
 owner visibility across all inserted tables, and confirms the second operator
 cannot read or attach rows to the primary operator's engagement.
 
-Next hosted implementation should create or select a dedicated DTP Supabase
-project, create two operator test accounts, apply
-`apps/private-dtp/supabase/migrations/0001_private_dtp_phase0.sql`, configure
-`apps/private-dtp/.env`, run `npm run smoke:live`, and decide backup/export
-rules before deployment. Existing Omnexus, Consulting, FamilyTrips, and Mario
-Supabase projects are not the DTP brain boundary and should not be reused for
-this smoke.
+The first live smoke created the dedicated `DTP Private` Supabase project,
+created two smoke operator accounts, applied
+`apps/private-dtp/supabase/migrations/0001_private_dtp_phase0.sql`, configured
+local ignored env, and passed `npm run smoke:live`.
+
+Next hosted implementation should decide the real operator account, backup and
+export rules, deployment posture, and whether smoke records/accounts should stay
+as regression fixtures or be rotated. Existing Omnexus, Consulting,
+FamilyTrips, and Mario Supabase projects are not the DTP brain boundary and
+should not be reused.

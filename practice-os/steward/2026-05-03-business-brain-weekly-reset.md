@@ -46,7 +46,7 @@ review_status: checked
 | Greg discovery not scheduled | Greg | case-study sprint cannot shape accurately | wait for availability and permission boundaries | after reply |
 | CCAAP owner values missing | Dad/Leah | production launch and proof cannot move | collect exact values and review notes | after reply |
 | Omnexus Stripe webhook disabled | Toni / Stripe Dashboard | live Stripe events may not update subscription state until endpoint is re-enabled | parked per Toni; reopen later with dashboard endpoint correction, re-enable, failed-event replay, and affected-subscription verification | parked |
-| Hosted DTP live Supabase environment not selected | Toni | live Auth/RLS smoke cannot run | choose or create a dedicated DTP Supabase project plus two operator test accounts, apply migration, configure `.env`, then run `npm run smoke:live` | current infrastructure pass |
+| Hosted DTP real-operator/deployment posture not accepted | Toni | smoke records work, but non-smoke private engagement records should wait | decide real operator account, backup/export rules, deployment posture, and whether smoke accounts stay or rotate | next hosted DTP pass |
 | External Claude/Copilot skill discovery not verified | Toni / manual tools | `tm-skills` cross-tool proof incomplete | run manual smoke prompts | when those tools are open |
 | FAOS readiness not accepted | Toni | no FAOS repo/services | review readiness artifact | after Hosted DTP Phase 0.1 |
 
@@ -57,7 +57,7 @@ review_status: checked
 | Memory Spine V1 baseline validation | broad sessions can start from a consistent source order | `dtp memory status`, this receipt | yes | run across one more real session |
 | Business Brain weekly reset | current client/proof lanes are visible in one operating packet | this packet | sanitized only | refresh weekly or after real replies |
 | Hosted DTP Phase 0 scaffold | schema/RLS/contracts exist for private app layer | `apps/private-dtp/` | yes as architecture | run the live smoke after environment selection |
-| Hosted DTP live smoke harness | live Auth/RLS can be verified once the dedicated environment exists | `apps/private-dtp/scripts/smoke-live.mjs` | yes as architecture | create/select DTP Supabase project and run `npm run smoke:live` |
+| Hosted DTP live smoke | live Auth/RLS is verified against the dedicated DTP project | `apps/private-dtp/scripts/smoke-live.mjs`, `DTP Private` Supabase project | yes as architecture | decide real operator account and backup/export posture |
 | Hub Prettier-ignore cleanup | Hub verification no longer trips on Supabase temp state | Hub `pnpm verify` | yes | commit separately |
 | `tm-skills` misfire promotion rule | delivery misses have a path into DTP or skill updates | `MISFIRES.md` | yes | record first real misfire-to-eval |
 
@@ -81,7 +81,7 @@ review_status: checked
 
 ## Top Three Actions
 
-1. Select/create the dedicated DTP Supabase project and two operator test accounts, apply the Phase 0 migration, configure `apps/private-dtp/.env`, and run `npm run smoke:live`.
+1. Decide Hosted DTP real operator account, backup/export rules, deployment posture, and whether smoke accounts/records stay as regression fixtures or rotate.
 2. Use reply intake immediately when Cameron, Greg, or CCAAP replies.
 3. Repeat the Business Brain weekly reset or next client-reply template pilot before adding broader infrastructure.
 

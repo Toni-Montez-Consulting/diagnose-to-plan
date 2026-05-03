@@ -1,7 +1,7 @@
 # Private DTP Phase 0.1
 
 Status: local private UI implementation plus schema/app-shell scaffold and
-ready-to-run live smoke harness.
+passed live smoke against the dedicated `DTP Private` Supabase project.
 
 This app is the private hosted surface for the DTP operating brain. It is
 single-operator first and preserves local markdown/private-kit fallback.
@@ -79,10 +79,11 @@ of private engagement state until backup, export, and access rules are accepted.
 
 ## Next Gate
 
-Select or create a dedicated DTP Supabase project and two operator test
-accounts, apply `supabase/migrations/0001_private_dtp_phase0.sql`, configure
-`apps/private-dtp/.env`, and run `npm run smoke:live`.
+The first live smoke passed against the dedicated `DTP Private` Supabase project
+on 2026-05-03. Local `.env` is configured on this machine and remains ignored
+by git.
 
 Do not reuse existing Omnexus, Consulting, FamilyTrips, or Mario Supabase
-projects for the DTP brain. The current live gate is environment selection, not
-app code.
+projects for the DTP brain. The next gate is deciding the real operator account,
+backup/export rules, and deployment posture before storing non-smoke engagement
+records.
