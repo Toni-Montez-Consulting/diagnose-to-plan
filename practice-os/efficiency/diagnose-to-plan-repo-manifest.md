@@ -12,14 +12,14 @@ review_status: draft
 - Repo: `diagnose-to-plan`
 - GitHub repo: `Toni-Montez-Consulting/diagnose-to-plan`
 - Local path: `Projects/diagnose-to-plan`
-- Primary role: private Practice OS, Client Operating Kits, redaction, COI, proof governance, and hosted-DTP roadmap
+- Primary role: private Practice OS, Client Operating Kits, redaction, COI, proof governance, and hosted-DTP private app foundation
 - Owner lane: core infrastructure
 - Public/private: private practice methodology with public-safe code/docs only
-- Deploy target: none for current CLI; future hosted DTP is private and gated by `docs/HOSTED_DTP_PHASE_0.md`
+- Deploy target: none for current CLI; hosted DTP Phase 0.1 is a private app under `apps/private-dtp` and still needs a selected Supabase environment before live use
 
 ## Boundaries
 
-- Owns: DTP CLI, local Workbench, Practice OS, engagement-kit contracts, redaction/proof governance, hosted DTP schema/app-boundary planning
+- Owns: DTP CLI, local Workbench, Practice OS, engagement-kit contracts, redaction/proof governance, hosted DTP schema/app-boundary planning, and the Phase 0.1 private app
 - Does not own: consulting public site, Hub runtime records, client CRM/billing, project-specific app state
 - Sensitive data: client kits, raw evidence, private proof assets, COI-sensitive notes
 - COI/privacy notes: DSE/Microsoft-adjacent material requires COI-aware review before professional or public reuse
@@ -29,7 +29,7 @@ review_status: draft
 - Local gate: `pytest`, `ruff check .`, `dtp skills --validate`, `dtp practice doctor`
 - CI gate: DTP CI Python and Practice OS gates
 - Release gate: targeted redaction checks for changed public-safe docs/templates
-- Support gate: not applicable until hosted DTP exists
+- Support gate: hosted DTP live smoke only after Supabase environment/operator account is selected
 - Manual gate: public proof requires evidence, caveat, permission, redaction, and reviewer
 
 ## Evidence
@@ -49,7 +49,7 @@ review_status: draft
 
 ## Next Touch
 
-- Lane: Business Brain / Practice OS source-module control plane
-- Trigger: next Cam, Greg, CCAAP, or weekly Business Brain reset cycle
-- Blocker: hosted implementation still needs a separate implementation request and merged schema design; public proof still needs permission/redaction/reviewer approval
-- Next action: pilot the Thought Inbox, Input Studio, Context Pack, Opportunity Score, Exception Register, Value Ledger, and Memory Review Queue templates on the next real reply or reset cycle; keep CCAAP implementation waiting on owner-approved PayPal, contact, meeting, DNS, asset, review, and proof inputs
+- Lane: Business Brain / Hosted DTP Phase 0.1 / Practice OS memory loop
+- Trigger: next Cam, Greg, CCAAP reply, weekly Business Brain reset, or Supabase environment selection
+- Blocker: hosted DTP live use needs a selected Supabase project/operator account and RLS smoke; public proof still needs permission/redaction/reviewer approval
+- Next action: run reply intake on the next real client reply, repeat the Business Brain weekly reset, and run Hosted DTP live Auth/RLS/import-export smoke after environment selection

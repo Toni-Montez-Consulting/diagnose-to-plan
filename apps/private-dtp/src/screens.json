@@ -1,0 +1,83 @@
+{
+  "version": "phase0",
+  "operatorModel": "single-operator-private",
+  "screens": [
+    {
+      "id": "engagements",
+      "title": "Engagements",
+      "route": "/engagements",
+      "reads": ["private_dtp_engagements"],
+      "primaryActions": ["create_engagement", "import_markdown_kit"],
+      "blockedActions": ["publish_proof", "client_invite"]
+    },
+    {
+      "id": "engagement_detail",
+      "title": "Engagement Detail",
+      "route": "/engagements/:id",
+      "reads": [
+        "private_dtp_engagements",
+        "private_dtp_artifacts",
+        "private_dtp_evidence_runs",
+        "private_dtp_decisions"
+      ],
+      "primaryActions": ["add_artifact_pointer", "record_decision", "export_summary"],
+      "blockedActions": ["deep_hub_sync", "client_portal"]
+    },
+    {
+      "id": "artifact_inventory",
+      "title": "Artifact Inventory",
+      "route": "/artifacts",
+      "reads": ["private_dtp_artifacts", "private_dtp_artifact_versions"],
+      "primaryActions": ["add_artifact_pointer", "record_artifact_version"],
+      "blockedActions": ["raw_secret_upload", "public_asset_publish"]
+    },
+    {
+      "id": "evidence",
+      "title": "Evidence Runs",
+      "route": "/evidence",
+      "reads": ["private_dtp_evidence_runs"],
+      "primaryActions": ["record_evidence_run", "export_evidence_index"],
+      "blockedActions": ["hide_hard_failure", "copy_raw_private_logs_by_default"]
+    },
+    {
+      "id": "redaction_queue",
+      "title": "Redaction Queue",
+      "route": "/redaction",
+      "reads": ["private_dtp_redaction_reviews"],
+      "primaryActions": ["review_target", "mark_needs_changes", "approve_internal"],
+      "blockedActions": ["approve_public_without_permission"]
+    },
+    {
+      "id": "proof_queue",
+      "title": "Proof Queue",
+      "route": "/proof",
+      "reads": ["private_dtp_proof_candidates"],
+      "primaryActions": ["propose_claim", "park_claim", "approve_claim"],
+      "blockedActions": ["auto_publish", "approve_without_evidence"]
+    },
+    {
+      "id": "decisions",
+      "title": "Decisions",
+      "route": "/decisions",
+      "reads": ["private_dtp_decisions"],
+      "primaryActions": ["record_decision", "supersede_decision"],
+      "blockedActions": ["silent_boundary_change"]
+    },
+    {
+      "id": "steward",
+      "title": "Steward Items",
+      "route": "/steward",
+      "reads": ["private_dtp_steward_items"],
+      "primaryActions": ["capture_correction", "promote_memory_candidate", "park_item"],
+      "blockedActions": ["unapproved_playbook_memory"]
+    },
+    {
+      "id": "research",
+      "title": "Research Items",
+      "route": "/research",
+      "reads": ["private_dtp_research_items"],
+      "primaryActions": ["classify_research_item", "link_source", "record_decision"],
+      "blockedActions": ["adopt_without_source_review"]
+    }
+  ]
+}

@@ -11,13 +11,14 @@ review_status: draft
 
 - Name: `tm-skills`
 - Branch: `main`
-- Last updated: 2026-04-30
-- Reviewer: Roadmap Steward expansion pass
+- Last updated: 2026-05-03
+- Reviewer: Iteration 1 Brain Completion implementation pass
 
 ## Latest Verification
 
 | Lane | Date | Result | Commit | Artifact |
 |---|---|---|---|---|
+| local | 2026-05-03 | pass | current branch | `MISFIRES.md` includes DTP promotion fields and records the evidence-dossier-depth miss; `.\scripts\doctor.ps1`, `.\scripts\freshness-check.ps1`, and `.\scripts\install.ps1 -WhatIf` passed |
 | local | 2026-04-30 | pass | `e30d7ba` | `doctor.ps1`, `freshness-check.ps1`, `install.ps1 -WhatIf` |
 | CI | 2026-04-30 | pass | `e30d7ba` | tm-skills CI run `25158720574` |
 | release | 2026-04-30 | partial | `e30d7ba` | `install.ps1 -Apply` previously succeeded without `-Force`; Codex discovery verified |
@@ -35,7 +36,7 @@ review_status: draft
 
 - Claude Code and GitHub Copilot reload/smoke tests remain manual.
 - Project-pinned canary is deferred until global discovery is stable.
-- Real trigger misses should become `MISFIRES.md` notes or trigger eval updates.
+- Real trigger misses should become `MISFIRES.md` notes or trigger eval updates; the first evidence-dossier-depth miss is now linked to DTP eval case `evidence-dossier-depth-001`.
 
 ## Notes
 

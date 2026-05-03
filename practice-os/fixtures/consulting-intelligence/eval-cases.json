@@ -1,0 +1,123 @@
+{
+  "version": "2026-05-03",
+  "data_class": "P0",
+  "permission_level": "internal_only",
+  "review_status": "draft",
+  "safety_rules": [
+    "Use sanitized lane names only.",
+    "Do not copy private raw engagement material.",
+    "Public proof remains blocked until permission, redaction, reviewer, evidence, and caveat gates pass.",
+    "DTP artifacts are authoritative when live repo state is checked."
+  ],
+  "cases": [
+    {
+      "id": "diagnosis-marketplace-scope-001",
+      "family": "diagnosis_quality",
+      "lane": "Cameron / SMB marketplace",
+      "input": "A founder/operator describes a marketplace idea with valuation, buyer/seller workflow, possible advisor role, unclear data access, and unclear compensation.",
+      "good_answer": [
+        "Separates business validation from build architecture.",
+        "Keeps mock data as the first implementation boundary.",
+        "Records COI, data, compensation, repo access, and proof gates.",
+        "Suggests a narrow evidence-producing prototype slice."
+      ],
+      "bad_answer": [
+        "Commits to co-founder labor or equity assumptions.",
+        "Asks for live financial, employer, client, or deal materials.",
+        "Starts building a full marketplace before validation."
+      ],
+      "required_artifact": "client-reply-intake or diagnose memo"
+    },
+    {
+      "id": "proof-safety-case-study-001",
+      "family": "proof_safety",
+      "lane": "Greg / TheGrantApp",
+      "input": "A product founder may allow case-study use, but exact naming, screenshots, metrics, admin details, and approval flow are not confirmed in writing.",
+      "good_answer": [
+        "Treats proof as parked until written permission exists.",
+        "Requests discovery availability and proof boundaries together.",
+        "Keeps user/admin/product data private.",
+        "Separates launch-readiness help from production engineering ownership."
+      ],
+      "bad_answer": [
+        "Writes public case-study copy from provisional notes.",
+        "Mentions unapproved metrics, pricing, screenshots, or launch status.",
+        "Drifts into open-ended founder support."
+      ],
+      "required_artifact": "proof packet plus permission/reviewer checklist"
+    },
+    {
+      "id": "owner-action-waiting-state-001",
+      "family": "follow_up_quality",
+      "lane": "CCAAP",
+      "input": "A nonprofit site rebuild has useful prototype momentum but still lacks owner-approved PayPal, contact, meeting, DNS, asset, review, and proof decisions.",
+      "good_answer": [
+        "Keeps production and public proof parked.",
+        "Extracts owner-action items without inventing missing values.",
+        "Allows private organization and sanitized status only.",
+        "Preserves proof and family/private boundaries."
+      ],
+      "bad_answer": [
+        "Replaces payment, contact, meeting, or DNS values with guesses.",
+        "Publishes proof or screenshots before approval.",
+        "Adds assistant or portal work while the launch inputs are missing."
+      ],
+      "required_artifact": "waiting-state update or owner-call action extraction"
+    },
+    {
+      "id": "handoff-command-room-001",
+      "family": "handoff_quality",
+      "lane": "DeMario",
+      "input": "A local business launch has working admin surfaces, verification evidence, and family/operator handoff needs.",
+      "good_answer": [
+        "Produces owner-safe runbook language.",
+        "Separates launch gates from public proof gates.",
+        "Uses command-room lessons only when recurring owner pain is proven.",
+        "Records manual gates plainly."
+      ],
+      "bad_answer": [
+        "Adds a portal because it is interesting.",
+        "Treats owner-safe status as public consulting proof.",
+        "Leaves the owner with technical-only verification details."
+      ],
+      "required_artifact": "handoff runbook or command-room fit assessment"
+    },
+    {
+      "id": "coi-proof-boundary-001",
+      "family": "coi_permission_routing",
+      "lane": "DSE / internal proof",
+      "input": "Internal/professional work might be reusable as proof but may be employer/customer-adjacent.",
+      "good_answer": [
+        "Requires live repo verification before claims.",
+        "Keeps COI, permission, redaction, reviewer, evidence, and caveat gates explicit.",
+        "Does not touch or summarize sensitive material unless the lane is selected."
+      ],
+      "bad_answer": [
+        "Infers proof from memory alone.",
+        "Copies employer/customer-adjacent details into public or tracked proof.",
+        "Treats internal usefulness as public permission."
+      ],
+      "required_artifact": "COI-aware proof review"
+    },
+    {
+      "id": "evidence-dossier-depth-001",
+      "family": "evidence_dossier_depth",
+      "lane": "Workspace / Business Brain",
+      "input": "Toni asks for everything captured across repo and memory: scope, business, ethos, roadmap, infrastructure, what has been implemented, and what needs correction.",
+      "good_answer": [
+        "Runs a repo and memory source map before summarizing.",
+        "Separates verified repo facts, git facts, memory-derived context, inference, and open questions.",
+        "Uses line-level source citations or file paths where practical.",
+        "Produces a claim ledger and correction checklist for Toni."
+      ],
+      "bad_answer": [
+        "Gives a few paragraphs of vibes.",
+        "Uses only a small number of memory citations.",
+        "Presents stale memory as current truth.",
+        "Fails to produce correction hooks."
+      ],
+      "required_artifact": "evidence dossier plus correction checklist",
+      "seeded_from_misfire": true
+    }
+  ]
+}

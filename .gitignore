@@ -6,6 +6,12 @@ __pycache__/
 *.py[cod]
 *.egg-info/
 .mypy_cache/
+apps/private-dtp/node_modules/
+apps/private-dtp/dist/
+apps/private-dtp/.vite/
+apps/private-dtp/coverage/
+apps/private-dtp/.env
+apps/private-dtp/*.tsbuildinfo
 .dtp/audit.log
 inputs/*
 !inputs/README.md

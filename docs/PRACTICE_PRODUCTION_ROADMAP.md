@@ -189,11 +189,15 @@ The Practice System Documentation Pack is the architecture and audit layer for t
 
 - Phase 0 design is captured in `docs/HOSTED_DTP_PHASE_0.md`.
 - Boundary decision is captured in `decisions/0004-hosted-dtp-private-practice-os-boundary.md`.
-- Build a private single-user DTP app with Supabase Auth, Postgres, Storage, and RLS.
+- Phase 0.1 local private UI exists in `apps/private-dtp` with Vite React,
+  Supabase Auth/RLS client access, core record screens, markdown import/export
+  helpers, and local test/build/audit gates.
 - Keep the Python CLI, local Workbench, markdown artifacts, and vault as fallback/import-export surfaces.
 - Do not deploy the current local Workbench as-is. It has no hosted auth model and assumes local trust.
 - Replace consulting's local `PUBLIC_DTP_WORKBENCH_URL` default with a hosted DTP URL once the private app exists.
-- Do not start implementation until there is a separate hosted-app implementation request and the first pilot has real records worth persisting.
+- Next hosted gate: choose the Supabase project/operator account, apply the
+  Phase 0 migration, run sign-in/create/export/RLS smoke tests, and decide
+  backup/export rules before relying on hosted records as the only copy.
 
 ### Client Operating Kits
 
@@ -439,7 +443,10 @@ Build these only after repeated usage proves the need.
 - Dependency maintenance automation after grouping, schedule, and approval rules are accepted.
 - Dev environment pinning where tool drift has caused real failures or onboarding friction.
 - Optional plugin packaging only if the skills need to be distributed beyond Toni's local environment.
-- FAOS orchestration substrate after Phase 0A readiness review proves the technical shape, trace redaction, memory isolation, repo boundary, and value gate.
+- FAOS orchestration substrate only after the 2026-05-03 readiness review is
+  accepted and a separate command/version verification pass proves the local
+  build commands. No FAOS repo, `op` wrapper, trace store, or memory substrate
+  is created by the readiness review.
 - Heavier customer portals after the lightweight Client Command Room pattern proves value across multiple engagements.
 - Notion MCP/API sync after the manual Notion mirror proves useful and Toni completes OAuth; start with DTP-to-Notion dry-run export before write-enabled sync.
 - Secondary repo-local documentation after the DTP master system docs settle and the relevant repo lane is touched.
@@ -456,7 +463,9 @@ Do not build these into the near-term practice.
 - Autonomous self-learning or self-modifying skills.
 - Research automation that creates implementation work without human acceptance.
 - Protocol adoption just because the protocol is interesting.
-- FAOS Phase 0 implementation from the raw prompt before readiness review and technical corrections.
+- FAOS Phase 0 implementation from the raw prompt before readiness review,
+  local command/version verification, trace redaction, storage isolation, and a
+  separate accepted build request.
 - Forced monorepo migration.
 - Cross-repo command runners that mutate repos without repo-local gates.
 - Shared CI abstractions before the duplicated pattern is stable.
@@ -474,7 +483,7 @@ Do not build these into the near-term practice.
 
 ## Repo Ownership Map
 
-DTP treats `Toni-Montez-Consulting` as the canonical GitHub organization for consulting/practice portfolio repos as of 2026-04-30. `dse-content` is intentionally excluded because it remains in Toni's personal/Microsoft-linked namespace and must stay COI-gated before any reuse or public/professional proof.
+DTP treats `Toni-Montez-Consulting` as the canonical GitHub organization for consulting/practice portfolio repos as of 2026-04-30. `dse-content` remains intentionally excluded from org-migration assumptions because it stays in Toni's personal/Microsoft-linked namespace and must stay COI-gated before any reuse or public/professional proof. DTP now records workspace coverage for it without treating it as public proof.
 
 | Repo | Owns | Does Not Own |
 |---|---|---|

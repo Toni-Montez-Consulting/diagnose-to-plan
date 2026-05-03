@@ -1,8 +1,12 @@
 # Hosted DTP Phase 0
 
-Status: accepted design boundary, not implementation.
+Status: accepted design boundary plus schema/app-shell scaffold and local Phase 0.1 private UI.
 
 Accepted: 2026-04-29 via `practice-os/steward/2026-04-29-hosted-dtp-phase-0-acceptance-review.md`.
+
+Scaffold started: 2026-05-03 in `apps/private-dtp/`.
+
+Phase 0.1 local private UI started: 2026-05-03 in `apps/private-dtp/`.
 
 Hosted DTP Phase 0 is the private foundation for engagement state, artifact governance, evidence, redaction, proof review, and decisions. It should not start as a dashboard. It should start as a private data model and app boundary that can later support useful views because the records already exist.
 
@@ -266,6 +270,14 @@ These screens should read from real records. Do not build charts, dashboards, or
 
 ## Implementation Gate
 
-Do not implement hosted DTP until this design boundary, proof/redaction templates, and first DTP repo manifest/evidence-index pilot have been reviewed.
+The schema, app-shell scaffold, and Phase 0.1 local private UI now exist at
+`apps/private-dtp/`.
 
-The first implementation plan should create schema and app shell only. It should not add dashboards, multi-user SaaS behavior, MCP recall, deep Hub sync, or client portal features.
+The first implementation slice is intentionally limited to schema, RLS, screen
+contract, private Auth/RLS-backed record screens, and markdown import/export
+fallback. It does not add dashboards, multi-user SaaS behavior, MCP recall,
+deep Hub sync, QuickBooks writes, autonomous agents, or client portal features.
+
+Next hosted implementation should select the Supabase environment/operator
+account, apply the migration, run a live RLS smoke, and decide backup/export
+rules before deployment.

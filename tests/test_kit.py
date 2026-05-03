@@ -77,6 +77,18 @@ def test_kit_status_reports_missing_readiness(tmp_path: Path) -> None:
     assert "redaction: needed" in rendered
 
 
+def test_kit_status_default_skips_hidden_dirs_and_local_sample(tmp_path: Path) -> None:
+    config = _config(tmp_path)
+    run_kit_new(config=config, client="Fake Client", project="sample", kind="audit")
+    run_kit_new(config=config, client="Real Client", project="pilot", kind="launch")
+    (tmp_path / "engagements" / ".git").mkdir()
+    (tmp_path / "engagements" / "real-client" / ".system").mkdir()
+
+    statuses = run_kit_status(config=config)
+
+    assert [status.client_id for status in statuses] == ["real-client"]
+
+
 def _config(root: Path) -> DtpConfig:
     return DtpConfig(
         repo_root=root,

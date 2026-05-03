@@ -32,6 +32,12 @@ REQUIRED_TEMPLATES = (
     "connector-map.md",
     "runbook.md",
     "case-study-capture.md",
+    "session-rehydration-checklist.md",
+    "memory-control-checkpoint.md",
+    "memory-review-queue.md",
+    "memory-source-index.md",
+    "correction-checklist-for-toni.md",
+    "business-brain-weekly-operating-packet.md",
 )
 REQUIRED_SKILLS = (
     "diagnose",

@@ -13,6 +13,7 @@ from dtp.commands.draft import run_draft, user_facing_error
 from dtp.commands.index_cmd import run_index
 from dtp.commands.kit import KIT_KINDS, KitError, render_status, run_kit_new, run_kit_status
 from dtp.commands.lesson import run_lesson
+from dtp.commands.memory import render_memory_status, run_memory_status
 from dtp.commands.practice import render_doctor, run_practice_doctor
 from dtp.commands.recall import run_recall
 from dtp.commands.redact import REDACT_PROFILES, RedactionError, run_redact_check
@@ -36,12 +37,14 @@ app = typer.Typer(no_args_is_help=True, add_completion=False)
 kit_app = typer.Typer(no_args_is_help=True, add_completion=False)
 redact_app = typer.Typer(no_args_is_help=True, add_completion=False)
 practice_app = typer.Typer(no_args_is_help=True, add_completion=False)
+memory_app = typer.Typer(no_args_is_help=True, add_completion=False)
 vault_app = typer.Typer(no_args_is_help=True, add_completion=False)
 workspace_app = typer.Typer(no_args_is_help=True, add_completion=False)
 console = Console()
 app.add_typer(kit_app, name="kit")
 app.add_typer(redact_app, name="redact")
 app.add_typer(practice_app, name="practice")
+app.add_typer(memory_app, name="memory")
 app.add_typer(vault_app, name="vault")
 app.add_typer(workspace_app, name="workspace")
 
@@ -414,6 +417,15 @@ def practice_doctor_command() -> None:
     config = load_config()
     result = run_practice_doctor(config)
     console.print(render_doctor(result), end="")
+    if not result.ok:
+        raise typer.Exit(code=1)
+
+
+@memory_app.command("status")
+def memory_status_command() -> None:
+    config = load_config()
+    result = run_memory_status(config)
+    console.print(render_memory_status(result, config.repo_root), end="")
     if not result.ok:
         raise typer.Exit(code=1)
 

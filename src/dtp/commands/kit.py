@@ -11,6 +11,8 @@ from dtp.frontmatter_utils import split_frontmatter
 from dtp.git_safety import resolve_inside_repo
 
 KIT_KINDS = {"audit", "launch", "operating-system", "assistant"}
+SAMPLE_CLIENT_IDS = {"fake-client"}
+SYSTEM_DIR_NAMES = {"deliverable", "__pycache__"}
 
 
 class KitError(ValueError):
@@ -129,7 +131,7 @@ def run_kit_status(*, config: DtpConfig, client: str | None = None) -> tuple[Kit
     client_dirs = (
         [root / slugify(client)]
         if client
-        else sorted(path for path in root.iterdir() if path.is_dir())
+        else sorted(path for path in root.iterdir() if _is_default_client_kit_dir(path))
     )
     statuses: list[KitStatus] = []
     for client_dir in client_dirs:
@@ -146,7 +148,7 @@ def _status_for_client(root: Path) -> KitStatus:
         "consent.md",
     )
     engagement_dirs = sorted(
-        path for path in root.iterdir() if path.is_dir() and path.name not in {"deliverable"}
+        path for path in root.iterdir() if _is_engagement_dir(path)
     )
     latest = engagement_dirs[-1] if engagement_dirs else None
     if latest:
@@ -211,6 +213,19 @@ def render_status(statuses: Iterable[KitStatus], repo_root: Path) -> str:
             ]
         )
     return "\n".join(lines) + ("\n" if lines else "")
+
+
+def _is_default_client_kit_dir(path: Path) -> bool:
+    return (
+        path.is_dir()
+        and not path.name.startswith(".")
+        and path.name not in SYSTEM_DIR_NAMES
+        and path.name not in SAMPLE_CLIENT_IDS
+    )
+
+
+def _is_engagement_dir(path: Path) -> bool:
+    return path.is_dir() and not path.name.startswith(".") and path.name not in SYSTEM_DIR_NAMES
 
 
 def _metadata(*, client_id: str, engagement_id: str, kind: str, now: datetime) -> dict[str, object]:
