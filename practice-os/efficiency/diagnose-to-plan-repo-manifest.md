@@ -15,7 +15,7 @@ review_status: draft
 - Primary role: private Practice OS, Client Operating Kits, redaction, COI, proof governance, and hosted-DTP private app foundation
 - Owner lane: core infrastructure
 - Public/private: private practice methodology with public-safe code/docs only
-- Deploy target: none for current CLI; hosted DTP Phase 0.1 is a private app under `apps/private-dtp` and still needs a selected Supabase environment before live use
+- Deploy target: none for current CLI; hosted DTP Phase 0.1 is a private app under `apps/private-dtp` with a live smoke harness, and still needs a dedicated DTP Supabase environment before live use
 
 ## Boundaries
 
@@ -29,7 +29,7 @@ review_status: draft
 - Local gate: `pytest`, `ruff check .`, `dtp skills --validate`, `dtp practice doctor`
 - CI gate: DTP CI Python and Practice OS gates
 - Release gate: targeted redaction checks for changed public-safe docs/templates
-- Support gate: hosted DTP live smoke only after Supabase environment/operator account is selected
+- Support gate: hosted DTP live smoke only after a dedicated DTP Supabase environment, two operator test accounts, and local env are selected
 - Manual gate: public proof requires evidence, caveat, permission, redaction, and reviewer
 
 ## Evidence
@@ -51,5 +51,5 @@ review_status: draft
 
 - Lane: Business Brain / Hosted DTP Phase 0.1 / Practice OS memory loop
 - Trigger: next Cam, Greg, CCAAP reply, weekly Business Brain reset, or Supabase environment selection
-- Blocker: hosted DTP live use needs a selected Supabase project/operator account and RLS smoke; public proof still needs permission/redaction/reviewer approval
-- Next action: run reply intake on the next real client reply, repeat the Business Brain weekly reset, and run Hosted DTP live Auth/RLS/import-export smoke after environment selection
+- Blocker: hosted DTP live use needs a dedicated DTP Supabase project, two operator test accounts, the Phase 0 migration, local env, and `npm run smoke:live`; public proof still needs permission/redaction/reviewer approval
+- Next action: run reply intake on the next real client reply, repeat the Business Brain weekly reset, and run Hosted DTP live Auth/RLS/import-export smoke after dedicated environment selection

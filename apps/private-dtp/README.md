@@ -1,6 +1,7 @@
 # Private DTP Phase 0.1
 
-Status: local private UI implementation plus schema/app-shell scaffold.
+Status: local private UI implementation plus schema/app-shell scaffold and
+ready-to-run live smoke harness.
 
 This app is the private hosted surface for the DTP operating brain. It is
 single-operator first and preserves local markdown/private-kit fallback.
@@ -34,6 +35,7 @@ single-operator first and preserves local markdown/private-kit fallback.
 - `src/App.tsx`: private Auth/RLS-backed record surface for the core queues.
 - `src/importExport.ts`: markdown import/export helpers for local fallback.
 - `src/schema.ts`: screen/table/field contract used by the UI.
+- `scripts/smoke-live.mjs`: Auth/RLS live smoke for the core Phase 0 tables.
 - `.env.example`: required Supabase public client environment keys.
 
 ## Local Commands
@@ -42,6 +44,7 @@ single-operator first and preserves local markdown/private-kit fallback.
 npm install
 npm test
 npm run build
+npm run smoke:live
 npm run dev
 ```
 
@@ -49,9 +52,20 @@ Required environment:
 
 - `VITE_SUPABASE_URL`
 - `VITE_SUPABASE_ANON_KEY`
+- `PRIVATE_DTP_OPERATOR_EMAIL`
+- `PRIVATE_DTP_OPERATOR_PASSWORD`
+- `PRIVATE_DTP_SECOND_OPERATOR_EMAIL`
+- `PRIVATE_DTP_SECOND_OPERATOR_PASSWORD`
 
 The app uses the browser Supabase client only. Service-role keys do not belong
 in this app.
+
+`npm run smoke:live` signs in two private operator accounts, writes one smoke
+record across each core Phase 0 table, generates an engagement-summary markdown
+export in memory, records an import/export receipt, verifies the primary
+operator can read the rows, verifies the second operator cannot read them, and
+verifies the second operator cannot attach a row to the primary operator's
+engagement. It does not use service-role credentials.
 
 ## Implementation Boundary
 
@@ -65,7 +79,10 @@ of private engagement state until backup, export, and access rules are accepted.
 
 ## Next Gate
 
-Select a Supabase project/operator account, apply the migration, and run a live
-smoke covering sign-in, create engagement, create artifact pointer, create
-evidence run, create redaction/proof queue items, export markdown, and verify
-RLS blocks a second operator from reading the records.
+Select or create a dedicated DTP Supabase project and two operator test
+accounts, apply `supabase/migrations/0001_private_dtp_phase0.sql`, configure
+`apps/private-dtp/.env`, and run `npm run smoke:live`.
+
+Do not reuse existing Omnexus, Consulting, FamilyTrips, or Mario Supabase
+projects for the DTP brain. The current live gate is environment selection, not
+app code.

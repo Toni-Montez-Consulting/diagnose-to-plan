@@ -1,12 +1,17 @@
 # Hosted DTP Phase 0
 
-Status: accepted design boundary plus schema/app-shell scaffold and local Phase 0.1 private UI.
+Status: accepted design boundary plus schema/app-shell scaffold, local Phase
+0.1 private UI, and live smoke harness awaiting a dedicated Supabase
+environment.
 
 Accepted: 2026-04-29 via `practice-os/steward/2026-04-29-hosted-dtp-phase-0-acceptance-review.md`.
 
 Scaffold started: 2026-05-03 in `apps/private-dtp/`.
 
 Phase 0.1 local private UI started: 2026-05-03 in `apps/private-dtp/`.
+
+Live smoke harness added: 2026-05-03 at
+`apps/private-dtp/scripts/smoke-live.mjs`.
 
 Hosted DTP Phase 0 is the private foundation for engagement state, artifact governance, evidence, redaction, proof review, and decisions. It should not start as a dashboard. It should start as a private data model and app boundary that can later support useful views because the records already exist.
 
@@ -270,14 +275,23 @@ These screens should read from real records. Do not build charts, dashboards, or
 
 ## Implementation Gate
 
-The schema, app-shell scaffold, and Phase 0.1 local private UI now exist at
-`apps/private-dtp/`.
+The schema, app-shell scaffold, Phase 0.1 local private UI, and live smoke
+harness now exist at `apps/private-dtp/`.
 
 The first implementation slice is intentionally limited to schema, RLS, screen
 contract, private Auth/RLS-backed record screens, and markdown import/export
 fallback. It does not add dashboards, multi-user SaaS behavior, MCP recall,
 deep Hub sync, QuickBooks writes, autonomous agents, or client portal features.
 
-Next hosted implementation should select the Supabase environment/operator
-account, apply the migration, run a live RLS smoke, and decide backup/export
-rules before deployment.
+The smoke harness signs in two operator accounts, writes the core Phase 0
+records, generates a markdown export, records an import/export receipt, checks
+owner visibility across all inserted tables, and confirms the second operator
+cannot read or attach rows to the primary operator's engagement.
+
+Next hosted implementation should create or select a dedicated DTP Supabase
+project, create two operator test accounts, apply
+`apps/private-dtp/supabase/migrations/0001_private_dtp_phase0.sql`, configure
+`apps/private-dtp/.env`, run `npm run smoke:live`, and decide backup/export
+rules before deployment. Existing Omnexus, Consulting, FamilyTrips, and Mario
+Supabase projects are not the DTP brain boundary and should not be reused for
+this smoke.

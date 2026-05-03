@@ -50,6 +50,6 @@ review_status: draft
 ## Next Touch
 
 - Lane: verification cockpit reference, mobile app review-to-launch pattern, app-release evidence, and proof candidate extraction
-- Trigger: verification cockpit pattern changes, release readiness work, App Store/public install proof, public proof request, future client mobile app launch planning, or a recurring Omnexus support/release failure
+- Trigger: verification cockpit pattern changes, release readiness work, App Store/public install proof, public proof request, future client mobile app launch planning, a recurring Omnexus support/release failure, or Toni reopening the parked Stripe support lane
 - Blocker: public proof remains blocked until evidence, permission, redaction, reviewer, and caveat are real
-- Next action: resolve the 2026-05-02 Stripe webhook-disabled alert in Stripe Dashboard, replay failed events, verify affected subscription state, then return Omnexus to reference-pattern mode
+- Next action: keep Stripe parked per Toni for now; when reopened, resolve the 2026-05-02 Stripe webhook-disabled alert in Stripe Dashboard, replay failed events, verify affected subscription state, then return Omnexus to reference-pattern mode

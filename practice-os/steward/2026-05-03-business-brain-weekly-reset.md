@@ -23,7 +23,7 @@ review_status: checked
 | Cameron / SMB marketplace | follow-up sent; Cameron replied that he will send requested items; latest inbox scan found no packet yet | prepare reply intake once packet arrives | Cameron's safe artifact packet, GitHub username, mock-data confirmation, compensation preference, proof constraints | wait; do not grant repo access before guardrails are confirmed | internal / blocked | COI, confidential M&A context, compensation ambiguity |
 | Greg / TheGrantApp | follow-up sent; waiting on discovery availability and permission boundaries | be ready with discovery guide and proof questions | Greg reply with times, bug status, soft-launch preference, written case-study boundaries | schedule discovery only after reply | internal / blocked | public proof overclaim, private user/admin data, product-support drift |
 | CCAAP | parked after clarification request; latest inbox scan found no owner reply after clarification | collect owner-approved values when reply arrives | Dad/Leah PayPal, contact, meeting, DNS, assets, review notes, proof posture | keep parked; no production or proof movement | internal / blocked | wrong payment/contact/meeting details, unapproved photos/proof |
-| Omnexus | internal app-review/launch-learning pattern exists; Stripe live webhook-disabled alert arrived for root-domain endpoint | fix/verify Stripe Dashboard endpoint before treating billing webhooks as healthy | Stripe Dashboard endpoint update/re-enable/replay; production env secret only if endpoint secret changes | keep public proof gated; handle billing alert as manual support gate | internal / active manual | billing/entitlement drift, App Store/status overclaim, private product details |
+| Omnexus | internal app-review/launch-learning pattern exists; Stripe live webhook-disabled alert is known but parked per Toni for now | decide when Stripe support lane is reopened | Stripe Dashboard endpoint update/re-enable/replay later; production env secret only if endpoint secret changes | keep public proof gated; no Stripe action in the current operating loop | internal / parked manual | billing/entitlement drift if reopened late, App Store/status overclaim, private product details |
 | DeMario | launch/handoff reference lane exists | use as reference for command-room pattern only | owner proof permission if public use is desired | no public promotion until proof packet clears | owner-safe / blocked | family/local-business context, screenshot/testimonial permission |
 | DSE / internal proof | workspace coverage recorded but not live-verified in this cycle | only touch with explicit COI scope | permission and COI review | keep blocked until selected | internal / COI-gated | employer/customer-adjacent proof risk |
 
@@ -45,8 +45,8 @@ review_status: checked
 | Cameron requested packet not received yet | Cameron | prototype repo/access cannot start | wait for safe packet; run reply intake | after reply |
 | Greg discovery not scheduled | Greg | case-study sprint cannot shape accurately | wait for availability and permission boundaries | after reply |
 | CCAAP owner values missing | Dad/Leah | production launch and proof cannot move | collect exact values and review notes | after reply |
-| Omnexus Stripe webhook disabled | Toni / Stripe Dashboard | live Stripe events may not update subscription state until endpoint is re-enabled | point live endpoint to `/api/webhook-stripe`, re-enable, replay failed events, and verify affected subscriptions | immediate support pass |
-| Hosted DTP live Supabase environment not selected | Toni | live Auth/RLS smoke cannot run | choose project/operator account | next Hosted DTP pass |
+| Omnexus Stripe webhook disabled | Toni / Stripe Dashboard | live Stripe events may not update subscription state until endpoint is re-enabled | parked per Toni; reopen later with dashboard endpoint correction, re-enable, failed-event replay, and affected-subscription verification | parked |
+| Hosted DTP live Supabase environment not selected | Toni | live Auth/RLS smoke cannot run | choose or create a dedicated DTP Supabase project plus two operator test accounts, apply migration, configure `.env`, then run `npm run smoke:live` | current infrastructure pass |
 | External Claude/Copilot skill discovery not verified | Toni / manual tools | `tm-skills` cross-tool proof incomplete | run manual smoke prompts | when those tools are open |
 | FAOS readiness not accepted | Toni | no FAOS repo/services | review readiness artifact | after Hosted DTP Phase 0.1 |
 
@@ -56,7 +56,8 @@ review_status: checked
 |---|---|---|---|---|
 | Memory Spine V1 baseline validation | broad sessions can start from a consistent source order | `dtp memory status`, this receipt | yes | run across one more real session |
 | Business Brain weekly reset | current client/proof lanes are visible in one operating packet | this packet | sanitized only | refresh weekly or after real replies |
-| Hosted DTP Phase 0 scaffold | schema/RLS/contracts exist for private app layer | `apps/private-dtp/` | yes as architecture | build and smoke Phase 0.1 |
+| Hosted DTP Phase 0 scaffold | schema/RLS/contracts exist for private app layer | `apps/private-dtp/` | yes as architecture | run the live smoke after environment selection |
+| Hosted DTP live smoke harness | live Auth/RLS can be verified once the dedicated environment exists | `apps/private-dtp/scripts/smoke-live.mjs` | yes as architecture | create/select DTP Supabase project and run `npm run smoke:live` |
 | Hub Prettier-ignore cleanup | Hub verification no longer trips on Supabase temp state | Hub `pnpm verify` | yes | commit separately |
 | `tm-skills` misfire promotion rule | delivery misses have a path into DTP or skill updates | `MISFIRES.md` | yes | record first real misfire-to-eval |
 
@@ -80,13 +81,14 @@ review_status: checked
 
 ## Top Three Actions
 
-1. Resolve the Omnexus Stripe webhook-disabled alert in Stripe Dashboard, then replay failed events and verify subscription state.
+1. Select/create the dedicated DTP Supabase project and two operator test accounts, apply the Phase 0 migration, configure `apps/private-dtp/.env`, and run `npm run smoke:live`.
 2. Use reply intake immediately when Cameron, Greg, or CCAAP replies.
-3. Select a Supabase environment for Hosted DTP Phase 0.1 live Auth/RLS smoke.
+3. Repeat the Business Brain weekly reset or next client-reply template pilot before adding broader infrastructure.
 
 ## Parked On Purpose
 
 - Public proof publishing.
+- Omnexus Stripe support work until Toni reopens it.
 - QuickBooks writes.
 - Client portal.
 - Autonomous agents.
