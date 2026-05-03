@@ -380,6 +380,10 @@ As of 2026-05-03:
   `practice-os/steward/2026-05-03-notion-command-center-v1.md`.
 - The receipt lives at
   `practice-os/steward/2026-05-03-notion-command-center-v1.md`.
+- After a live Cameron/Greg/CCAAP reply scan found no new actionable replies,
+  quick-action starter pages were added for `Client Update`,
+  `Decision Needed`, `Proof Candidate`, and `Weekly Reset`; the receipt lives at
+  `practice-os/steward/2026-05-03-live-reply-scan-and-notion-quick-actions.md`.
 
 Completed authenticated smoke test:
 
