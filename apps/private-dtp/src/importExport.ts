@@ -75,12 +75,13 @@ export function exportEngagementSummaryMarkdown(input: {
   const title = String(engagement.title ?? "Hosted DTP Export");
   const alias = String(engagement.client_or_project_alias ?? "unknown");
   const sensitivity = String(engagement.sensitivity ?? "internal_only");
+  const permissionLevel = String(engagement.permission_level ?? "internal_only");
 
   return [
     "---",
     "data_class: P0",
     "confidential: false",
-    `permission_level: ${String(engagement.permission_level ?? "internal_only")}`,
+    `permission_level: ${permissionLevel}`,
     "review_status: exported",
     "---",
     "",
@@ -91,12 +92,27 @@ export function exportEngagementSummaryMarkdown(input: {
     `- Alias: ${alias}`,
     `- Stage: ${String(engagement.stage ?? "unknown")}`,
     `- Sensitivity: ${sensitivity}`,
+    `- Permission: ${permissionLevel}`,
     `- Source repo: ${String(engagement.source_repo ?? "not_recorded")}`,
     "",
-    renderList("Artifacts", artifacts, ["title", "artifact_type", "redaction_status", "proof_eligibility"]),
+    renderList("Artifacts", artifacts, [
+      "title",
+      "artifact_type",
+      "data_class",
+      "permission_level",
+      "redaction_status",
+      "proof_eligibility",
+      "source_pointer",
+    ]),
     renderList("Evidence Runs", evidenceRuns, ["repo", "lane", "result", "artifact_path"]),
     renderList("Decisions", decisions, ["title", "status", "chosen_path"]),
-    renderList("Proof Candidates", proofCandidates, ["status", "permission_status", "redaction_status", "public_claim"]),
+    renderList("Proof Candidates", proofCandidates, [
+      "status",
+      "permission_status",
+      "redaction_status",
+      "evidence_source",
+      "public_claim",
+    ]),
     "",
     "## Export Boundary",
     "",

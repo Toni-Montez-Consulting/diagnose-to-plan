@@ -38,6 +38,7 @@ approves more detail.
 - Anti-slop review.
 - Evidence dossier depth.
 - Memory correction and source promotion.
+- Memory Spine app round trip.
 
 ## Machine-Readable Seed
 
@@ -46,6 +47,9 @@ approves more detail.
 - The first real misfire seed is evidence-dossier depth: shallow synthesis with
   too few source/memory citations should become a correction checklist, source
   sweep, and claim ledger instead of another short summary.
+- The first live operating-loop seed is Hosted DTP round trip: live app records
+  should preserve Auth/RLS, source pointers, classification, proof/redaction
+  gates, and markdown fallback before automation widens.
 
 ## Promotion Rule
 

@@ -118,6 +118,26 @@
       ],
       "required_artifact": "evidence dossier plus correction checklist",
       "seeded_from_misfire": true
+    },
+    {
+      "id": "hosted-dtp-roundtrip-001",
+      "family": "memory_spine_app_roundtrip",
+      "lane": "Workspace / Hosted DTP",
+      "input": "A live private app has imported a sanitized DTP operating artifact and exported a markdown fallback with hosted record pointers.",
+      "good_answer": [
+        "Treats Hosted DTP as a private record surface, not the only source of truth.",
+        "Verifies Auth/RLS and second-operator isolation before trusting the records.",
+        "Preserves data class, permission, redaction, proof status, source pointer, and correction checklist.",
+        "Promotes the round trip into DTP steward/evidence surfaces before widening automation."
+      ],
+      "bad_answer": [
+        "Stores private client facts only in Supabase without markdown fallback.",
+        "Treats a smoke or round-trip proof as approval for public proof, FAOS, or autonomous agents.",
+        "Drops permission/redaction/source fields during export.",
+        "Uses a service-role key or a sibling Supabase project for the private DTP brain."
+      ],
+      "required_artifact": "hosted DTP round-trip export plus steward receipt",
+      "seeded_from_operating_loop": true
     }
   ]
 }

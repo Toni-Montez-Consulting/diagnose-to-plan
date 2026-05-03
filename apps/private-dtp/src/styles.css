@@ -28,6 +28,11 @@ button {
   cursor: pointer;
 }
 
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
 .appShell {
   display: grid;
   grid-template-columns: 260px minmax(0, 1fr);
@@ -63,6 +68,7 @@ button {
 }
 
 .brand span,
+.operatorBadge,
 .screenHeader p,
 .muted,
 .emptyState {
@@ -112,6 +118,13 @@ button {
 
 .ghostButton {
   margin-top: auto;
+}
+
+.operatorBadge {
+  margin: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  font-size: 12px;
 }
 
 .workspace {

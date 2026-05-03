@@ -15,7 +15,7 @@ review_status: draft
 - Primary role: private Practice OS, Client Operating Kits, redaction, COI, proof governance, and hosted-DTP private app foundation
 - Owner lane: core infrastructure
 - Public/private: private practice methodology with public-safe code/docs only
-- Deploy target: none for current CLI; hosted DTP Phase 0.1 is a private app under `apps/private-dtp` with a passed live smoke against the dedicated `DTP Private` Supabase project
+- Deploy target: none for current CLI; hosted DTP Phase 0.2 is a local/private app under `apps/private-dtp` with passed live smoke and live import/export round trip against the dedicated `DTP Private` Supabase project
 
 ## Boundaries
 
@@ -29,7 +29,7 @@ review_status: draft
 - Local gate: `pytest`, `ruff check .`, `dtp skills --validate`, `dtp practice doctor`
 - CI gate: DTP CI Python and Practice OS gates
 - Release gate: targeted redaction checks for changed public-safe docs/templates
-- Support gate: rerun hosted DTP live smoke after schema/Auth/RLS changes; deployment waits on real operator account, backup/export, and access posture decisions
+- Support gate: rerun hosted DTP live smoke and round trip after schema/Auth/RLS/import-export changes; public deployment waits on a separate accepted deployment decision
 - Manual gate: public proof requires evidence, caveat, permission, redaction, and reviewer
 
 ## Evidence
@@ -49,7 +49,7 @@ review_status: draft
 
 ## Next Touch
 
-- Lane: Business Brain / Hosted DTP Phase 0.1 / Practice OS memory loop
+- Lane: Business Brain / Hosted DTP Phase 0.2 / Practice OS memory loop
 - Trigger: next Cam, Greg, CCAAP reply, weekly Business Brain reset, hosted DTP deployment decision, or schema/Auth/RLS change
-- Blocker: hosted DTP deployment and non-smoke records need real operator account policy, backup/export rules, and access posture; public proof still needs permission/redaction/reviewer approval
-- Next action: run reply intake on the next real client reply, repeat the Business Brain weekly reset, and decide hosted DTP real-operator/deployment posture before storing non-smoke engagement records
+- Blocker: client-sensitive non-smoke records need lane-specific markdown fallback before Hosted DTP becomes normal workflow; public proof still needs permission/redaction/reviewer approval
+- Next action: run reply intake on the next real client reply, repeat the Business Brain weekly reset, and use Hosted DTP only with markdown fallback plus review gates

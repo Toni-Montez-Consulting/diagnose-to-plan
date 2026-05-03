@@ -65,7 +65,7 @@ export default function App() {
           <div className="brandMark">DTP</div>
           <div>
             <strong>Private DTP</strong>
-            <span>Phase 0.1</span>
+            <span>Phase 0.2</span>
           </div>
         </div>
 
@@ -90,6 +90,9 @@ export default function App() {
           <LogOut size={18} aria-hidden="true" />
           <span>Sign Out</span>
         </button>
+        <p className="operatorBadge" title={session.user.email ?? "Signed in operator"}>
+          {session.user.email ?? "Operator signed in"}
+        </p>
       </aside>
 
       <section className="workspace">
@@ -130,7 +133,13 @@ function LoginState() {
         <h1>Private DTP</h1>
         <label>
           Email
-          <input value={email} onChange={(event) => setEmail(event.target.value)} type="email" />
+          <input
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
+            type="email"
+            autoComplete="username"
+            required
+          />
         </label>
         <label>
           Password
@@ -138,6 +147,8 @@ function LoginState() {
             value={password}
             onChange={(event) => setPassword(event.target.value)}
             type="password"
+            autoComplete="current-password"
+            required
           />
         </label>
         <button className="primaryButton" type="submit">
@@ -391,6 +402,7 @@ function ImportExportPanel({
         );
         engagementId = String(engagement.id);
       }
+      setSelectedEngagementId(engagementId);
 
       await repository.create(
         "private_dtp_artifacts",
@@ -446,6 +458,7 @@ function ImportExportPanel({
         notes: "Exported engagement summary markdown.",
       });
       setMessage("Exported summary.");
+      await onSaved();
     } catch (error) {
       setMessage(error instanceof Error ? error.message : "Export failed.");
     }
@@ -489,10 +502,22 @@ function ImportExportPanel({
       </label>
 
       <div className="buttonRow">
-        <button className="secondaryButton" type="button" onClick={importMarkdown}>
+        <button
+          className="secondaryButton"
+          type="button"
+          onClick={importMarkdown}
+          disabled={!markdown.trim()}
+          title="Import markdown into private DTP records"
+        >
           Import
         </button>
-        <button className="secondaryButton" type="button" onClick={exportSummary}>
+        <button
+          className="secondaryButton"
+          type="button"
+          onClick={exportSummary}
+          disabled={!selectedEngagementId}
+          title="Export the selected engagement summary"
+        >
           Export
         </button>
       </div>
@@ -505,7 +530,7 @@ function ImportExportPanel({
 
 function RecordTable({ config, records }: { config: EntityConfig; records: DtpRecord[] }) {
   if (records.length === 0) {
-    return <p className="emptyState">No records yet.</p>;
+    return <p className="emptyState">No records visible for this operator.</p>;
   }
 
   return (

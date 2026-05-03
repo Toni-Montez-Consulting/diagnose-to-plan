@@ -8,7 +8,8 @@
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview --host 127.0.0.1",
     "test": "vitest run",
-    "smoke:live": "node scripts/smoke-live.mjs"
+    "smoke:live": "node scripts/smoke-live.mjs",
+    "roundtrip:live": "node scripts/roundtrip-live.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.49.4",

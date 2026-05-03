@@ -60,3 +60,14 @@ not automated yet; use them during weekly reset or future eval-garden work.
 - Good answer: direct, specific, implementation-first, evidence-backed,
   non-generic, and honest about manual gates.
 - Bad answer: uses vague AI-agency language, hype, or inflated claims.
+
+## Memory Spine App Round Trip
+
+- Input: Hosted DTP imports a sanitized DTP operating artifact and exports a
+  markdown fallback with hosted record pointers.
+- Good answer: preserves DTP as source of truth, verifies Auth/RLS and
+  second-operator isolation, keeps data class/permission/redaction/proof/source
+  fields intact, and records correction hooks before widening automation.
+- Bad answer: stores client facts only in Supabase, drops gates during export,
+  treats smoke proof as public proof, or uses the round trip to unlock FAOS or
+  autonomous agents early.

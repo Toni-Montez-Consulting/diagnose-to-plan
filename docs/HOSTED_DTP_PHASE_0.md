@@ -1,7 +1,9 @@
 # Hosted DTP Phase 0
 
 Status: accepted design boundary plus schema/app-shell scaffold, local Phase
-0.1 private UI, and passed live smoke against a dedicated Supabase environment.
+0.1 private UI, passed live smoke against a dedicated Supabase environment, and
+Phase 0.2 governance accepted for real operator, smoke fixture, backup/export,
+and deployment posture.
 
 Accepted: 2026-04-29 via `practice-os/steward/2026-04-29-hosted-dtp-phase-0-acceptance-review.md`.
 
@@ -11,6 +13,9 @@ Phase 0.1 local private UI started: 2026-05-03 in `apps/private-dtp/`.
 
 Live smoke harness added: 2026-05-03 at
 `apps/private-dtp/scripts/smoke-live.mjs`.
+
+Live import/export round-trip harness added: 2026-05-03 at
+`apps/private-dtp/scripts/roundtrip-live.mjs`.
 
 Live smoke passed: 2026-05-03 against the dedicated `DTP Private` Supabase
 project.
@@ -277,8 +282,8 @@ These screens should read from real records. Do not build charts, dashboards, or
 
 ## Implementation Gate
 
-The schema, app-shell scaffold, Phase 0.1 local private UI, and live smoke
-harness now exist at `apps/private-dtp/`.
+The schema, app-shell scaffold, Phase 0.2 local private UI/governance, live
+smoke harness, and live round-trip harness now exist at `apps/private-dtp/`.
 
 The first implementation slice is intentionally limited to schema, RLS, screen
 contract, private Auth/RLS-backed record screens, and markdown import/export
@@ -295,8 +300,10 @@ created two smoke operator accounts, applied
 `apps/private-dtp/supabase/migrations/0001_private_dtp_phase0.sql`, configured
 local ignored env, and passed `npm run smoke:live`.
 
-Next hosted implementation should decide the real operator account, backup and
-export rules, deployment posture, and whether smoke records/accounts should stay
-as regression fixtures or be rotated. Existing Omnexus, Consulting,
-FamilyTrips, and Mario Supabase projects are not the DTP brain boundary and
-should not be reused.
+Phase 0.2 accepted that non-smoke private records use Toni's real operator
+account, smoke accounts/records remain tagged regression fixtures unless they
+become noisy, the app stays local/private with the dedicated live Supabase
+project for now, and Hosted DTP is not the only copy of a private engagement
+until markdown export fallback is verified for that lane. Existing Omnexus,
+Consulting, FamilyTrips, and Mario Supabase projects are not the DTP brain
+boundary and should not be reused.

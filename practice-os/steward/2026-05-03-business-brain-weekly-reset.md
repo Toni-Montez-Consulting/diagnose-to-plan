@@ -33,7 +33,7 @@ review_status: checked
 |---|---|---:|---:|---:|---|
 | Package Iteration 1 brain slice | current infrastructure is verified but dirty across repos | 5 | 5 | 2 | do now |
 | Business Brain weekly reset loop | client/proof lanes can drift across chat and private kits | 5 | 5 | 2 | do now |
-| Hosted DTP Phase 0.1 private UI | markdown-only governance will become hard to scan as records grow | 5 | 4 | 3 | do now |
+| Hosted DTP Phase 0.2 private UI/governance | markdown-only governance will become hard to scan as records grow | 5 | 4 | 3 | use in next operating loop |
 | Consulting intelligence eval garden | diagnosis/proof/follow-up quality needs repeatable tests | 4 | 4 | 2 | schedule now |
 | FAOS Phase 0A readiness | orchestration could add leverage, but could also duplicate DTP | 4 | 2 | 4 | review only |
 | Public proof publishing | sales proof matters, but permission gates are not cleared | 5 | 1 | 5 | park |
@@ -46,9 +46,9 @@ review_status: checked
 | Greg discovery not scheduled | Greg | case-study sprint cannot shape accurately | wait for availability and permission boundaries | after reply |
 | CCAAP owner values missing | Dad/Leah | production launch and proof cannot move | collect exact values and review notes | after reply |
 | Omnexus Stripe webhook disabled | Toni / Stripe Dashboard | live Stripe events may not update subscription state until endpoint is re-enabled | parked per Toni; reopen later with dashboard endpoint correction, re-enable, failed-event replay, and affected-subscription verification | parked |
-| Hosted DTP real-operator/deployment posture not accepted | Toni | smoke records work, but non-smoke private engagement records should wait | decide real operator account, backup/export rules, deployment posture, and whether smoke accounts stay or rotate | next hosted DTP pass |
+| Hosted DTP lane-specific fallback not yet repeated | Toni / next operating loop | Phase 0.2 works live, but client-sensitive non-smoke records should wait for one more lane-specific markdown fallback cycle | use Hosted DTP on the next real reply or weekly reset with export fallback and review gates | next client reply or weekly reset |
 | External Claude/Copilot skill discovery not verified | Toni / manual tools | `tm-skills` cross-tool proof incomplete | run manual smoke prompts | when those tools are open |
-| FAOS readiness not accepted | Toni | no FAOS repo/services | review readiness artifact | after Hosted DTP Phase 0.1 |
+| FAOS readiness not accepted | Toni | no FAOS repo/services | review readiness artifact | after Hosted DTP runs one more real operating loop |
 
 ## Value Ledger
 
@@ -57,7 +57,7 @@ review_status: checked
 | Memory Spine V1 baseline validation | broad sessions can start from a consistent source order | `dtp memory status`, this receipt | yes | run across one more real session |
 | Business Brain weekly reset | current client/proof lanes are visible in one operating packet | this packet | sanitized only | refresh weekly or after real replies |
 | Hosted DTP Phase 0 scaffold | schema/RLS/contracts exist for private app layer | `apps/private-dtp/` | yes as architecture | run the live smoke after environment selection |
-| Hosted DTP live smoke | live Auth/RLS is verified against the dedicated DTP project | `apps/private-dtp/scripts/smoke-live.mjs`, `DTP Private` Supabase project | yes as architecture | decide real operator account and backup/export posture |
+| Hosted DTP Phase 0.2 live round trip | live Auth/RLS plus import/export fallback are verified against the dedicated DTP project | `apps/private-dtp/scripts/roundtrip-live.mjs`, `practice-os/steward/2026-05-03-hosted-dtp-live-roundtrip-export.md` | yes as architecture | repeat on next real operating loop before normalizing client-sensitive records |
 | Hub Prettier-ignore cleanup | Hub verification no longer trips on Supabase temp state | Hub `pnpm verify` | yes | commit separately |
 | `tm-skills` misfire promotion rule | delivery misses have a path into DTP or skill updates | `MISFIRES.md` | yes | record first real misfire-to-eval |
 
@@ -76,12 +76,12 @@ review_status: checked
 |---|---|---|---|---|
 | Memory Spine cycle should precede broad implementation sessions | this packet and memory spine receipt | playbook / doctor guidance later | yes | repeat once more before making stricter |
 | Business Brain weekly reset is the practical operating cadence | this packet | recurring operating pattern | yes | run next Sunday or after client replies |
-| Hosted DTP Phase 0.1 should be record-first, not dashboard-first | Hosted DTP docs and implementation | decision / roadmap | no if implementation passes | update Hosted DTP docs |
+| Hosted DTP Phase 0.2 should be record-first, not dashboard-first | Hosted DTP docs and implementation | decision / roadmap | no if implementation passes | use in next operating loop |
 | FAOS stays gated until DTP loops prove useful | FAOS readiness review | decision | yes | review after Hosted DTP smoke |
 
 ## Top Three Actions
 
-1. Decide Hosted DTP real operator account, backup/export rules, deployment posture, and whether smoke accounts/records stay as regression fixtures or rotate.
+1. Use Hosted DTP Phase 0.2 on the next real operating loop with lane-specific markdown fallback before normalizing client-sensitive non-smoke records.
 2. Use reply intake immediately when Cameron, Greg, or CCAAP replies.
 3. Repeat the Business Brain weekly reset or next client-reply template pilot before adding broader infrastructure.
 
