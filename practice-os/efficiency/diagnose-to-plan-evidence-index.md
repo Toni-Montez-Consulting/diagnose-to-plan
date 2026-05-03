@@ -10,7 +10,7 @@ review_status: draft
 ## Repo
 
 - Name: `diagnose-to-plan`
-- Branch: `v2/harness`
+- Branch: `main`
 - Last updated: 2026-05-03
 - Reviewer: Iteration 1 brain completion and Phase 0.2 implementation pass
 
@@ -18,6 +18,7 @@ review_status: draft
 
 | Lane | Date | Result | Commit | Artifact |
 |---|---|---|---|---|
+| DTP V2 harness foundation PR | 2026-05-03 | merged | `f5d1f20` | PR #1 `Promote DTP V2 harness foundation` merged `v2/harness` into `main` after GitHub Actions `Python and Practice OS gates` passed; local `main` is synced with `origin/main`. |
 | Hosted DTP Phase 0.2 round trip | 2026-05-03 | pass | current branch | `npm run roundtrip:live` imported the Business Brain weekly packet into the dedicated live Hosted DTP project, created engagement/artifact/version/evidence/redaction/proof/decision/steward/research/import-export records, exported `practice-os/steward/2026-05-03-hosted-dtp-live-roundtrip-export.md`, preserved P0/internal/restricted/not-candidate gates, and confirmed second-operator RLS plus cross-operator attachment blocking. |
 | Hosted DTP live smoke | 2026-05-03 | pass | current branch | Dedicated Supabase project `DTP Private` was created in the existing org, the Phase 0 migration was applied, local ignored `.env` was configured, two smoke operator accounts were created/confirmed, `npm run smoke:live` passed, RLS blocked the second operator from all primary-operator rows, cross-operator artifact attachment failed, and metadata verification showed RLS enabled, authenticated access granted, and anon table access revoked across all `private_dtp_*` tables. |
 | Iteration 1 Brain Completion / Phase 0.1 | 2026-05-03 | pass | current branch | Memory Spine V1 CLI/doctor gate, correction checklist, first Business Brain weekly reset, consulting intelligence eval JSON, Hosted DTP Phase 0 schema/app-shell scaffold, Phase 0.1 Vite React private UI, markdown import/export tests, DSE coverage artifacts, kit scanner cleanup, Hub verification ignore fix, and FAOS Phase 0A readiness review were implemented; Hosted DTP has operator-aware composite FKs, queue indexes, approved-proof constraints, Supabase Auth/RLS client access, and npm test/build/audit passing; full DTP/Hub/tm-skills validation was green before the Phase 0.1 edits and should be rerun before commit |

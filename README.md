@@ -2,7 +2,7 @@
 
 `dtp` is Toni Montez's local AI consulting harness. It turns rough diagnose notes, practice ideas, and operator context into durable repo artifacts.
 
-Current branch target: `v2/harness`.
+Current branch target: `main`.
 
 Canonical roadmap:
 

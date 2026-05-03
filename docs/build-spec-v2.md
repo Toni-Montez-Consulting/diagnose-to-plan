@@ -3,7 +3,7 @@
 **Operator:** Toni Montez
 **Purpose:** Single-user CLI harness that lives next to `tonimontez.co`, `demariomontezpb.com`, Omnexus, and future client repos in one VS Code workspace. The repo IS the practice's memory: every meaningful conversation produces a durable artifact.
 **Audience for this document:** A coding agent (Codex, Claude Code, or Cursor) executing sequentially. Toni will read it too.
-**Status:** Historical V2 harness implementation spec. It is preserved for context, but the current production roadmap lives in `docs/PRACTICE_PRODUCTION_ROADMAP.md`. If this spec's local-only or no-cloud assumptions conflict with the hosted private DTP direction, follow the production roadmap.
+**Status:** Historical V2 harness implementation spec. It is preserved for context, but the V2 foundation was promoted to `main` through PR #1 on 2026-05-03. The current production roadmap lives in `docs/PRACTICE_PRODUCTION_ROADMAP.md`. If this spec's local-only or no-cloud assumptions conflict with the hosted private DTP direction, follow the production roadmap.
 
 ---
 
