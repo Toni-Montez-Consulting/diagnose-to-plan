@@ -38,6 +38,7 @@ REQUIRED_TEMPLATES = (
     "memory-control-checkpoint.md",
     "memory-review-queue.md",
     "memory-source-index.md",
+    "notion-cockpit-audit.md",
     "correction-checklist-for-toni.md",
     "business-brain-weekly-operating-packet.md",
 )

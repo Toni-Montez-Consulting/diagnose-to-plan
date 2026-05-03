@@ -36,7 +36,7 @@ The Workspace Efficiency Layer is also captured in `docs/WORKSPACE_PORTFOLIO_ROA
 
 The Custom Interface Craft Standard is captured in `docs/CUSTOM_INTERFACE_CRAFT_STANDARD.md`. It makes fully authored custom interfaces a hard practice-wide rule for broad site, app, admin, proof, and assistant-facing UI work. `architected-strength` and `consulting` are intended gold-standard reference tracks, but they remain north-star candidates until they pass production-level reference promotion gates.
 
-The Notion Mirror is captured in `docs/NOTION_MIRROR_V0.md`. It gives Toni a phone-friendly daily cockpit and idea inbox while preserving DTP as the source of truth for roadmap execution, private kits, proof/redaction, repo gates, and steward receipts.
+The Notion Mirror and Command Center is captured in `docs/NOTION_MIRROR_V0.md`. It gives Toni a phone-friendly daily cockpit and idea inbox while preserving DTP as the source of truth for roadmap execution, private kits, proof/redaction, repo gates, and steward receipts. Use `practice-os/templates/notion-cockpit-audit.md` before a live Notion rebuild or major dashboard cleanup.
 
 The FAOS Orchestration Roadmap is captured in `docs/FAOS_ORCHESTRATION_ROADMAP.md`. It integrates the Frontier Agentic Operating System build spec as a gated future substrate for specs, skills, subagents, MCP, memory, tracing, evals, reflection, durable execution, sandboxes, and an `op` wrapper. It does not change the current build order or authorize creating a `faos` repo yet.
 
@@ -87,7 +87,7 @@ The Practice System Documentation Pack is the architecture and audit layer for t
   Input Studio, Context Pack, Opportunity Score, Exception Register, Value
   Ledger, and Memory Review Queue. These are not doctor-required until real
   cycles prove which shapes should become stricter gates.
-- Practice OS includes a Notion Mirror item template, and DTP includes `docs/NOTION_MIRROR_V0.md` so phone-captured ideas and Notion roadmap views can mirror DTP without taking over source-of-truth ownership.
+- Practice OS includes a Notion Mirror item template and a Notion Cockpit Audit template, and DTP includes `docs/NOTION_MIRROR_V0.md` so phone-captured ideas and Notion roadmap views can mirror DTP without taking over source-of-truth ownership.
 - Hosted DTP Phase 0 now has an accepted design-boundary doc at `docs/HOSTED_DTP_PHASE_0.md`; hosted implementation remains gated until a separate implementation request and real records exist.
 - Practice OS now includes proof/redaction templates for proof packets, redaction queue items, permission review, evidence-source review, public claim review, and asset inventory.
 - The first DTP repo manifest/evidence-index pilot lives in `practice-os/efficiency/`.
@@ -314,8 +314,9 @@ Complete these before treating the practice as ready for soft launch.
    - Treat the steward as a process role: it identifies the correct next story, owning repo, gates, blockers, uncaptured ideas, and no-touch boundaries.
    - Do not build `dtp steward review`, a hosted steward queue, or an agent-assisted roadmap manager until the markdown loop proves useful.
 
-12. Add Notion as the mobile mirror/inbox.
+12. Add Notion as the mobile mirror/inbox and command cockpit.
    - Use `docs/NOTION_MIRROR_V0.md` to create the Practice Home, Ideas, Roadmap, Repo Health, Proof Queue, Research Radar, Decisions, and Meeting Notes surfaces.
+   - Use `practice-os/templates/notion-cockpit-audit.md` before rebuilding live views, adding database fields, or treating Notion status as current.
    - Connect Notion MCP only after Toni completes OAuth.
    - Treat Notion phone ideas as inbox items until Roadmap Steward triage promotes them into DTP.
    - Do not mirror secrets, raw transcripts, private engagement data, payment/form records, DSE/Microsoft confidential material, or unsupported public proof claims.

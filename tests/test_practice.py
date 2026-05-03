@@ -25,6 +25,7 @@ def test_practice_doctor_passes_repo_contract(repo_root: Path) -> None:
     assert any("template custom-interface-craft-brief.md" in check for check in result.checks)
     assert any("template session-rehydration-checklist.md" in check for check in result.checks)
     assert any("template memory-review-queue.md" in check for check in result.checks)
+    assert any("template notion-cockpit-audit.md" in check for check in result.checks)
     assert any("template correction-checklist-for-toni.md" in check for check in result.checks)
     assert any(
         "template business-brain-weekly-operating-packet.md" in check

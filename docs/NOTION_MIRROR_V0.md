@@ -5,9 +5,9 @@ permission_level: internal_only
 review_status: draft
 ---
 
-# Notion Mirror V0
+# Notion Mirror And Command Center
 
-Status: planning and setup contract. This is not a source-of-truth move.
+Status: active mirror contract plus V1 cockpit improvement lane. This is not a source-of-truth move.
 
 Owner: `diagnose-to-plan`
 
@@ -40,6 +40,50 @@ Notion becomes:
 Mirror the work. Do not relocate the work.
 
 If Notion and DTP disagree, DTP wins until a steward review intentionally updates DTP.
+
+## V1 Command Center Upgrade
+
+V1 improves the existing `DTP Practice OS Command Center` in place. Do not
+create a parallel command center unless the live page is broken or duplicated
+beyond repair.
+
+The first screen should answer one question: what needs Toni's attention now?
+
+Use these top-level sections:
+
+- `Today`
+- `This Week`
+- `Waiting On`
+- `Decision Needed`
+- `Client Lanes`
+- `Proof Queue`
+- `Roadmap`
+- `Idea Inbox`
+- `Repo Health`
+- `Meetings`
+- `Archive`
+
+Use `practice-os/templates/notion-cockpit-audit.md` before and after a live
+cockpit rebuild. The audit should check current Notion shape against DTP source
+paths, stale records, duplicate state, unsafe fields, unclear page names, and
+Toni correction notes.
+
+V1 is allowed to:
+
+- tighten dashboard layout and section order;
+- add linked database views to the existing command center;
+- add missing safe fields to existing databases;
+- create sanitized seed rows from DTP steward receipts;
+- add plain-language templates for common operating inputs.
+
+V1 is not allowed to:
+
+- move private engagement truth into Notion;
+- add two-way sync;
+- publish proof;
+- store raw client replies, private contact details, transcripts, payment data,
+  secrets, or unsupported public claims;
+- create a second command center unless the steward receipt explains why.
 
 ## V0 Surfaces
 
@@ -75,6 +119,12 @@ Properties:
 
 Rule: phone ideas start as `inbox`. A steward review promotes them into DTP artifacts.
 
+V1 presentation views:
+
+- `Inbox`: untriaged phone/chat captures.
+- `Triage`: ideas that need DTP classification.
+- `Parked`: useful but inactive ideas.
+
 ### 2. Roadmap Stories
 
 Properties:
@@ -82,6 +132,7 @@ Properties:
 - `Story`
 - `Epic`
 - `Repo`
+- `Phase`
 - `Status`
 - `Done Gate`
 - `Blocker`
@@ -90,6 +141,12 @@ Properties:
 - `Last Mirrored At`
 
 Rule: status changes should be made in DTP first, then mirrored to Notion.
+
+V1 presentation views:
+
+- `Active Next`: only stories that are active or ready.
+- `By Phase`: grouped by roadmap phase.
+- `Blocked`: stories waiting on a named gate.
 
 ### 3. Repo Health
 
@@ -109,6 +166,11 @@ Properties:
 
 Rule: Notion shows the latest recorded evidence; it does not replace repo-local validation.
 
+V1 presentation views:
+
+- `Needs Touch`: repos with blockers or stale verification.
+- `Healthy`: repos with current evidence and no active blocker.
+
 ### 4. Proof Queue
 
 Properties:
@@ -125,6 +187,11 @@ Properties:
 - `Public-Safe Summary`
 
 Rule: no raw private material, transcript, payment record, student/member data, secret, or unsupported claim goes into Notion.
+
+V1 presentation views:
+
+- `Proof Blocked`: missing permission, redaction, reviewer, evidence, or caveat.
+- `Internal Only`: useful internal proof candidates that are not public-safe.
 
 ### 5. Research Radar
 
@@ -223,6 +290,16 @@ V1: DTP export command.
 - Produce sanitized JSON/Markdown payloads from DTP-owned artifacts.
 - Do not write to Notion until the dry run is reviewed.
 
+V1.0: live cockpit ergonomics.
+
+- Audit the existing Command Center with
+  `practice-os/templates/notion-cockpit-audit.md`.
+- Improve the existing page layout, linked views, database fields, and templates.
+- Verify one sanitized DTP steward receipt can be mirrored into Notion and still
+  points back to its DTP source.
+- Record the result in a DTP steward receipt before treating the cockpit as
+  current.
+
 V2: Notion API/MCP sync.
 
 - Update Notion from DTP records using stable IDs and redaction rules.
@@ -290,6 +367,20 @@ As of 2026-05-02:
   and search/review flows after live feature availability is verified; it does
   not change the rule that DTP owns source-of-truth state.
 
+As of 2026-05-03:
+
+- The existing `DTP Practice OS Command Center` was rebuilt in place for V1
+  cockpit ergonomics; no parallel command center was created.
+- The first screen is organized around `Today`, `This Week`, `Waiting On`,
+  `Decision Needed`, `Client Lanes`, `Proof Queue`, `Roadmap`, `Idea Inbox`,
+  `Repo Health`, `Meetings`, and `Archive`.
+- Client Pilot Snapshots gained `Lane`, `DTP Source`, and `proof_status`.
+- Roadmap Stories gained `Phase`.
+- A sanitized decision-log mirror item was added from
+  `practice-os/steward/2026-05-03-notion-command-center-v1.md`.
+- The receipt lives at
+  `practice-os/steward/2026-05-03-notion-command-center-v1.md`.
+
 Completed authenticated smoke test:
 
 1. Confirm `codex mcp list` shows `notion` as `OAuth`.
@@ -318,3 +409,13 @@ Future automation should still start from a DTP-owned dry run and redaction revi
 - Roadmap Steward reviews include a Notion inbox check once Notion is enabled.
 - No private client data, secrets, DSE/Microsoft confidential material, or public proof claims are mirrored without gates.
 - A future automation pass starts from this doc instead of guessing sync rules from chat.
+
+## Acceptance For V1 Cockpit
+
+- The existing Command Center is improved in place.
+- The first screen answers what needs Toni's attention now.
+- Client lanes expose `waiting_on`, `next_action`, `blocked_by`,
+  `last_updated`, and proof status.
+- Source databases remain reachable for traceability.
+- DTP source paths are visible on mirrored operating items.
+- A steward receipt records every live Notion rebuild.
