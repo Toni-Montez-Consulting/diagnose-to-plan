@@ -107,7 +107,9 @@ Required fields:
 Apply this to public/proof-facing work before it moves to Done:
 
 - The story shows real evidence instead of generic claims.
-- The copy keeps operator voice and avoids generic AI consultancy language.
+- The copy keeps operator voice, follows
+  `practice-os/policies/authentic-voice-and-anti-slop.md`, and avoids generic
+  AI consultancy language.
 - Consulting work preserves the Steel Ledger visual baseline unless a design change is explicit.
 - No fake dashboards, fake booking links, or fake proof.
 - No public proof without redaction status, permission level, and reviewer.

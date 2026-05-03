@@ -38,8 +38,16 @@ instead of leaving them in chat.
 - Client or project:
 - Infrastructure priority:
 - Tone / ethos:
+- Voice / positioning:
+- Copy that sounds fake, inflated, or too AI-written:
 - Active vs parked classification:
 - Privacy / proof / COI boundary:
+
+## Voice And Positioning Corrections
+
+| Artifact | Current wording | Why it feels wrong | Corrected direction | Destination |
+|---|---|---|---|---|
+|  |  |  |  | source doc / steward / public claim review / proof packet / consulting copy / parked |
 
 ## Promotion Decision
 

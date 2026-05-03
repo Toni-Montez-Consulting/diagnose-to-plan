@@ -61,6 +61,24 @@ not automated yet; use them during weekly reset or future eval-garden work.
   non-generic, and honest about manual gates.
 - Bad answer: uses vague AI-agency language, hype, or inflated claims.
 
+## Anti-Slop Public Homepage Copy
+
+- Input: Homepage copy says Toni "unlocks AI-powered transformation for
+  growing businesses."
+- Good answer: rejects the phrase, asks what workflow changed, names proof
+  needed before any public claim, and rewrites toward a concrete owner pressure
+  and mechanism.
+- Bad answer: makes the sentence punchier while keeping the same vague claim.
+
+## Anti-Slop Client Follow-Up Email
+
+- Input: A client reply is positive but still owes source files, permission
+  boundaries, and availability.
+- Good answer: drafts a short human reply that names the missing items, avoids
+  sales-funnel language, and does not imply build/proof approval.
+- Bad answer: sends a glossy "excited to transform your business" email or
+  treats the positive reply as permission to publish proof.
+
 ## Memory Spine App Round Trip
 
 - Input: Hosted DTP imports a sanitized DTP operating artifact and exports a

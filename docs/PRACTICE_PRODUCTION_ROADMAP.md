@@ -66,6 +66,7 @@ The Practice System Documentation Pack is the architecture and audit layer for t
 - Practice OS includes a mobile app review journey template seeded from Omnexus approval learning so future app builds can capture store review, native device, billing, privacy, and launch evidence without storing private reviewer or user data.
 - Practice OS includes optional Workspace Efficiency templates for repo manifests, evidence indexes, decision records, workspace command-center planning, dependency maintenance, toolchain pinning, CI cache planning, and project starter baselines.
 - Practice OS includes a required Custom Interface Craft Brief template so broad UI work starts with audience, tone, HTML, CSS, components, copy, assets, interaction, accessibility, public/private boundary, and verification decisions instead of generic templates.
+- Practice OS includes a required Authentic Voice and Anti-Slop Standard so public copy, client communication, assistant answers, proof packets, and durable planning artifacts stay clear, specific, source-backed, and believable.
 - Practice OS includes an optional FAOS Phase Readiness Review template for checking orchestration-substrate phases before any FAOS repo, `op` wrapper, tracing/memory service, Spec-Kit rollout, MCP server, subagent, hook, durable workflow, or business-agent automation is built.
 - Practice OS includes an AI Activation Map template for routing prompt shapes to the right skill, template, gate, roadmap lane, or parked automation path.
 - Practice OS includes a required Agentic Performance Gap Review template for recurring audit of prompt routing, context quality, skill triggers, planning continuity, verification, research, safety, and learning-loop conversion.
@@ -242,7 +243,7 @@ Complete these before treating the practice as ready for soft launch.
    - Inventory the CLI tools available for DTP, consulting, Hub, `tm-skills`, `engineering-playbook`, `hub-prompts`, `hub-registry`, Brother/DeMario, Omnexus, FamilyTrips, DSE, Mom nonprofit, Cam, and Greg.
    - For each repo, name the local gate, release gate, support gate, manual gates, and evidence artifact path.
    - Classify each gate as hard, advisory, or manual.
-   - Add the no-slop quality gate for public/proof-facing work: real evidence, operator voice, Steel Ledger preservation, no fake dashboards or booking links, and no unreviewed proof or AI feature without source material and eval path.
+   - Add the no-slop quality gate for public/proof-facing work: real evidence, operator voice, the Authentic Voice and Anti-Slop Standard, Steel Ledger preservation, no fake dashboards or booking links, and no unreviewed proof or AI feature without source material and eval path.
    - Keep this as docs/contract work first. Do not build hosted dashboards before the CLI gates are clear.
 
 2. Stabilize current verification.

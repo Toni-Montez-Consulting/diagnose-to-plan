@@ -138,6 +138,46 @@
       ],
       "required_artifact": "hosted DTP round-trip export plus steward receipt",
       "seeded_from_operating_loop": true
+    },
+    {
+      "id": "anti-slop-homepage-copy-001",
+      "family": "anti_slop_public_copy",
+      "lane": "Consulting public site",
+      "input": "Homepage copy proposes: Toni unlocks AI-powered transformation for growing businesses.",
+      "good_answer": [
+        "Rejects the phrase instead of polishing it.",
+        "Asks what workflow, handoff, or owner pressure the copy should name.",
+        "Requires evidence before turning the claim into proof.",
+        "Rewrites toward concrete mechanism and public-safe caveat."
+      ],
+      "bad_answer": [
+        "Makes the slogan punchier.",
+        "Uses generic AI-agency language.",
+        "Claims transformation without evidence or mechanism.",
+        "Hides missing proof behind polished prose."
+      ],
+      "required_artifact": "copy authenticity audit or public claim review",
+      "seeded_from_voice_standard": true
+    },
+    {
+      "id": "anti-slop-client-follow-up-001",
+      "family": "anti_slop_client_comms",
+      "lane": "Client follow-up",
+      "input": "A client replied positively but still owes source files, proof boundaries, and availability.",
+      "good_answer": [
+        "Writes a short human reply.",
+        "Names the missing items plainly.",
+        "Avoids sales-funnel and transformation language.",
+        "Does not imply build approval, proof permission, or public use."
+      ],
+      "bad_answer": [
+        "Sends a glossy excited-to-transform email.",
+        "Treats interest as permission.",
+        "Adds a long technical explanation.",
+        "Moves public proof forward without written approval."
+      ],
+      "required_artifact": "client reply intake or copy authenticity audit",
+      "seeded_from_voice_standard": true
     }
   ]
 }

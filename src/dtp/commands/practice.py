@@ -7,6 +7,7 @@ from dtp.config import DtpConfig
 from dtp.skills_loader import SkillValidationError, load_skill
 
 REQUIRED_POLICIES = (
+    "authentic-voice-and-anti-slop.md",
     "data-classification.md",
     "coi-screen.md",
     "redaction-policy.md",
@@ -17,6 +18,7 @@ REQUIRED_POLICIES = (
 REQUIRED_TEMPLATES = (
     "activation-routing-map.md",
     "agentic-performance-gap-review.md",
+    "copy-authenticity-audit.md",
     "contextual-idea-intake.md",
     "diagnose-memo.md",
     "plan-roadmap.md",

@@ -54,6 +54,8 @@ Proof and redaction templates:
 - `templates/permission-reviewer-checklist.md` records permission and reviewer gates.
 - `templates/evidence-source-checklist.md` checks whether evidence is good enough to support a proof claim.
 - `templates/public-claim-review.md` keeps public wording evidence-backed and caveated.
+- `policies/authentic-voice-and-anti-slop.md` is the canonical voice standard for clear, specific, believable public/proof/client/planning language.
+- `templates/copy-authenticity-audit.md` reviews public copy, client communication, proof language, assistant answers, and durable planning artifacts before promotion.
 - `templates/asset-inventory.md` tracks screenshots, documents, walkthroughs, and other proof assets.
 
 Future Intelligence templates:

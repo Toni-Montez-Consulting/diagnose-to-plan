@@ -20,6 +20,8 @@ def test_consulting_intelligence_eval_seed_is_safe_and_complete(repo_root: Path)
         "handoff_quality",
         "coi_permission_routing",
         "evidence_dossier_depth",
+        "anti_slop_public_copy",
+        "anti_slop_client_comms",
     }.issubset(families)
     assert any(case.get("seeded_from_misfire") for case in data["cases"])
 

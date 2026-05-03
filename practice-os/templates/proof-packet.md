@@ -42,6 +42,13 @@ review_status: draft
 
 ## Public Claim Draft
 
+- Evidence named in the claim:
+- Caveat visible in the claim:
+- Wording not allowed yet:
+- Authenticity review:
+  `practice-os/policies/authentic-voice-and-anti-slop.md`
+- Knowledgeable-reader test: pass | needs_changes
+
 ## What Stayed Manual On Purpose
 
 ## Publish Decision

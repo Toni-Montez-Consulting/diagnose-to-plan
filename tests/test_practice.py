@@ -10,9 +10,11 @@ def test_practice_doctor_passes_repo_contract(repo_root: Path) -> None:
     result = run_practice_doctor(load_config(repo_root))
 
     assert result.ok is True
+    assert any("policy authentic-voice-and-anti-slop.md" in check for check in result.checks)
     assert any("policy data-classification.md" in check for check in result.checks)
     assert any("template activation-routing-map.md" in check for check in result.checks)
     assert any("template agentic-performance-gap-review.md" in check for check in result.checks)
+    assert any("template copy-authenticity-audit.md" in check for check in result.checks)
     assert any("template contextual-idea-intake.md" in check for check in result.checks)
     assert any("template roadmap-steward-review.md" in check for check in result.checks)
     assert any("template story-activation-contract.md" in check for check in result.checks)
