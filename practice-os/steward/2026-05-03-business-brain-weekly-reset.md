@@ -14,7 +14,7 @@ review_status: checked
 - Source sweep: DTP roadmaps, workspace report, private kit summaries, memory registry, Hub status, `tm-skills` status
 - Repos checked: DTP, Hub, `tm-skills`
 - Inboxes checked: Gmail targeted scan plus broader recent inbox sweep on 2026-05-03; see `practice-os/steward/2026-05-03-inbox-scan-operating-loop.md`
-- Notion mirror checked: not checked; Notion remains mirror/inbox only
+- Notion mirror checked: checked via V1 cockpit reset; see `practice-os/steward/2026-05-03-business-brain-v1-cockpit-reset.md`
 
 ## Client And Proof Lanes
 
@@ -99,7 +99,7 @@ review_status: checked
 ## Closeout
 
 - DTP artifacts updated: Memory Spine cycle, Business Brain weekly reset, Hosted DTP app, consulting eval fixtures, FAOS readiness review.
-- Notion mirror update: optional sanitized status only.
+- Notion mirror update: sanitized V1 cockpit fields updated for Cameron, Greg, CCAAP, and weekly reset; see `practice-os/steward/2026-05-03-business-brain-v1-cockpit-reset.md`.
 - Client replies or calendar actions: none sent in this cycle.
 - Verification evidence: baseline passed before edits; final validation passed after implementation; inbox scan and Omnexus webhook smoke recorded on 2026-05-03.
 - Open corrections for Toni: confirm whether any lane is more active than the recorded waiting state.
