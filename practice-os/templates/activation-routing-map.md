@@ -35,7 +35,12 @@ Use this map when a prompt could route to more than one skill, template, process
 | "which agent/skill should this story use", "tie this to Kanban", "activate for this epic" | story activation index | `docs/ROADMAP_STORY_ACTIVATION_INDEX.md`, story activation contract | suggested agents require explicit delegation approval |
 | "audit the agent system", "what gaps did we miss", "why did this not activate", "I caught a design hole" | Agentic Performance Gap Review | `docs/PRACTICE_SYSTEM_AGENTIC_PERFORMANCE_GAP_REVIEW.md`, Roadmap Steward review | convert misses into durable artifacts, not autonomy |
 | "can this become proof", "case study", "public claim" | proof/redaction templates | evidence source, asset inventory, claim review | permission, redaction, reviewer required |
-| "client uses Azure/Copilot/Microsoft", "DSE", "COI" | DTP COI screen | data classification and redaction policy | pause before scoping/coding |
+| "client uses Azure/Copilot/Microsoft", "DSE", "COI" | DTP COI screen | data classification and redaction policy; after clearance route to the relevant Azure incubator skill | pause before scoping/coding |
+| "prepare this app for Azure", "Azure Container Apps plan", "Azure deployment plan" | `tm-skills/azure-prepare` | `tm-skills/azure-validate`, repo manifest, DTP client/data boundary | plan-first; no live cloud mutation without explicit approval |
+| "validate this Azure deployment", "preflight Azure release", "prove Azure plan is ready" | `tm-skills/azure-validate` | `tm-skills/azure-prepare`, delivery evidence, rollback notes | validate only after a prepared plan exists; no deploy until validation is accepted |
+| "deploy this Azure plan", "run Azure deployment", "ship Azure infra" | `tm-skills/azure-deploy` | `tm-skills/azure-validate`, delivery baseline, release evidence | deploy only after validation, owner approval, secrets handling, and rollback gate |
+| "Azure diagnostics", "Azure cost", "Azure RBAC", "Azure resource lookup" | matching Azure incubator skill | `azure-diagnostics`, `azure-cost`, `azure-rbac`, `azure-resource-lookup` | read-only by default; do not infer live resource truth without evidence |
+| "Entra app registration", "Entra agent identity", "Microsoft Foundry hosted agent" | matching Entra/Foundry incubator skill | `entra-app-registration`, `entra-agent-id`, `microsoft-foundry` | identity, tenant, credentials, eval, trace, and approval boundaries first |
 | "does this need a portal", "command room", "owner dashboard" | Command Room fit assessment | Command Room spec if fit passes | checklist/no surface is allowed |
 | "new client kit", "Mom nonprofit", "engagement plan" | Client Operating Kit | diagnose, plan, consent, data inventory | private engagement material stays private |
 | "research this tool/protocol", "should we adopt X" | research radar or research spike | Future Intelligence layer | classify Adopt/Pilot/Watch/Reject |
@@ -63,6 +68,9 @@ Use these labels in Roadmap Steward reviews and handoffs:
 - `coi_privacy_gate`
 - `research_eval_lesson`
 - `repo_touch_pass`
+- `azure_infra_incubator`
+- `entra_identity_incubator`
+- `foundry_agent_incubator`
 - `faos_orchestration_spike`
 - `parked_gated_automation`
 
