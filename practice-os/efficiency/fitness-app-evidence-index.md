@@ -11,13 +11,14 @@ review_status: draft
 
 - Name: `fitness-app` / Omnexus
 - Branch: `main`
-- Last updated: 2026-05-01
+- Last updated: 2026-05-03
 - Reviewer: Omnexus App Store closeout evidence pass
 
 ## Latest Verification
 
 | Lane | Date | Result | Commit | Artifact |
 |---|---|---|---|---|
+| billing support alert | 2026-05-03 | active_manual_gate | local runbook update pending | Gmail alert reported Stripe disabled a live webhook endpoint shown as the root domain; live smoke confirmed `https://omnexus.fit/api/health` returns 200, `GET /api/webhook-stripe` returns 405, and unsigned `POST /api/webhook-stripe` returns 400 signature failure; likely next fix is Stripe Dashboard endpoint update/re-enable/replay, not app-route code |
 | live proof checklist | 2026-05-01 | pass_with_manual_gates | `deceade8` | `docs/ops/post-approval-live-proof-checklist.md` added and linked from README, Launch Guide, ops docs, post-approval audit, and post-App-Store roadmap; Security Ops run `25198820007`, Build iOS run `25198820004`, and Semgrep run `25198820015` passed; manual proof capture starts on or after 2026-05-02 |
 | local | 2026-05-01 | pass | `65d9ea44` | `npm run typecheck`; `npx vitest run api/export-data.test.ts api/delete-account.test.ts`; `npm run ios:submission-lint:strict`; `npm run verify:local`; `npm run security:secrets`; `git diff --check` |
 | CI | 2026-05-01 | pass | `65d9ea44` | GitHub Actions CI run `25198605657` passed after push to `main`; conditional branch/preview/dev jobs were skipped by workflow rules, not failures |
@@ -46,6 +47,7 @@ review_status: draft
 - Public consulting proof is blocked until a proof packet names the claim, permission, redaction status, reviewer, after-state evidence, and caveat.
 - Public App Store install proof and first-72-hour launch trust checks remain manual after public listing availability on or after 2026-05-02; do not treat App Review approval as business traction proof by itself.
 - External App Store, real-device, provider, support, analytics, billing, and production-data checks remain manual, repo-owned gates.
+- Stripe disabled a live webhook endpoint shown as the root domain on 2026-05-02; the repo-documented route is reachable at `/api/webhook-stripe`, so Stripe Dashboard endpoint correction, re-enable, event replay, and affected-subscription verification remain manual support gates.
 - GitHub reported an existing Dependabot alert backlog after the push; triage belongs to the Omnexus security backlog and is not a CCAAP launch blocker.
 - DSE remains a separate COI-aware lane and was intentionally not touched.
 - GitHub Enterprise org-migration closeout is complete for Omnexus as of PR #559; future Omnexus work should start from `main`.

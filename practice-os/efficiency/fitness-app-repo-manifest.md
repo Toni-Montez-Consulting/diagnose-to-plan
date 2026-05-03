@@ -29,7 +29,7 @@ review_status: draft
 - Local gate: `npm run lint`, `npm run typecheck`, `npm run build`, `npm run db:schema:contract:local`, `npx supabase db lint --local`, and `npm run tools:verify:local` when the local Docker/Supabase setup is available
 - CI gate: GitHub Actions `CI`, `Security Ops`, `Semgrep`, `PR Hygiene`, `Dependency Review`, and workflow-dispatched `Verification Toolkit` when release evidence is needed
 - Release gate: `Preview/Production Verification Gate`, Vercel status, `npm run tools:verify:release`, App Store/TestFlight manual evidence, and production verification runbooks
-- Support gate: health/synthetic-monitor workflows, release evidence, Sentry/PostHog review, Supabase production-safe SQL checks, and app-store evidence trackers
+- Support gate: health/synthetic-monitor workflows, release evidence, Sentry/PostHog review, Stripe webhook endpoint health/Dashboard alignment, Supabase production-safe SQL checks, and app-store evidence trackers
 - Manual gate: production data checks, App Review state, IAP product state, reviewer credentials, mobile-device QA, public proof permission, and screenshot/redaction approval
 
 ## Evidence
@@ -52,4 +52,4 @@ review_status: draft
 - Lane: verification cockpit reference, mobile app review-to-launch pattern, app-release evidence, and proof candidate extraction
 - Trigger: verification cockpit pattern changes, release readiness work, App Store/public install proof, public proof request, future client mobile app launch planning, or a recurring Omnexus support/release failure
 - Blocker: public proof remains blocked until evidence, permission, redaction, reviewer, and caveat are real
-- Next action: use DTP's mobile app review pattern for future client app builds while keeping Omnexus source changes repo-owned and explicitly scoped
+- Next action: resolve the 2026-05-02 Stripe webhook-disabled alert in Stripe Dashboard, replay failed events, verify affected subscription state, then return Omnexus to reference-pattern mode

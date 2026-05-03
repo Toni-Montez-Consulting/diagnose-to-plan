@@ -301,15 +301,16 @@ Standing preflight/postflight: use `practice-os/templates/activation-routing-map
 12. Keep QuickBooks as a gated read-only financial connector candidate; no OAuth, token storage, imports, webhooks, or write behavior until the connector boundary is accepted.
 13. Keep Architected Strength as its own personal-brand OS. PR #1 is merged into the org-owned private repo; use it as a later assistant-pattern candidate after the consulting public assistant pilot proves the pattern.
 14. Keep the cross-site assistant lane at architecture/manifest level until the consulting public manifest, approved source corpus, refusal policy, logging/analytics plan, and human handoff are accepted.
-15. Treat the Omnexus App Store approval journey as the first mobile app review-to-launch learning pattern; use `docs/MOBILE_APP_REVIEW_AND_LAUNCH_PATTERN.md` for future client app builds, but do not publish Omnexus proof until proof gates pass.
-16. Capture owner-approved CCAAP baseline/after-state evidence for the first proof candidate and run redaction/permission review.
-17. Keep Claude Code and GitHub Copilot `tm-skills` discovery smoke testing on the manual back burner; runbook exists, links are healthy, and Codex discovery is verified, but external reload checks remain manual and non-blocking.
-18. Keep Hub dependency PRs #54/#56/#61 parked until one is explicitly selected with a migration/security plan; PRs #59 and #55 are merged and no longer block the queue. Older PR #52 is no longer in the active visible queue.
-19. Keep Hub prompt/registry cross-validation local-first; decide private sibling-repo CI access only if it becomes worth the operational cost.
-20. Use `dtp workspace report` as a read-only steward preflight when checking repo coverage, recorded evidence, suggested gates, blockers, and missing manifest/evidence coverage; missing repo rows may carry explicit Active Next Queue blockers without guessing gates.
-21. Keep repo manifests current as lanes are touched; DTP, consulting, Architected Strength, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, CCAAP, FamilyTrips, engineering-playbook, `dse-content`, and `fitness-app` / Omnexus now have DTP-owned manifests/evidence indexes.
-22. Keep DSE proof/reuse blocked until it is explicitly selected with COI-aware scope, live repo verification, permission, redaction, reviewer, evidence, and caveat gates.
-23. Keep FAOS implementation parked after the 2026-05-03 readiness review; next FAOS action is a separate local command/version verification pass, not repo/service creation.
+15. Resolve the Omnexus Stripe webhook-disabled alert before treating billing/support as healthy: the live app route is reachable at `/api/webhook-stripe`, so the next gate is Stripe Dashboard endpoint correction, re-enable, failed-event replay, and affected-subscription verification.
+16. Treat the Omnexus App Store approval journey as the first mobile app review-to-launch learning pattern; use `docs/MOBILE_APP_REVIEW_AND_LAUNCH_PATTERN.md` for future client app builds, but do not publish Omnexus proof until proof gates pass.
+17. Capture owner-approved CCAAP baseline/after-state evidence for the first proof candidate and run redaction/permission review.
+18. Keep Claude Code and GitHub Copilot `tm-skills` discovery smoke testing on the manual back burner; runbook exists, links are healthy, and Codex discovery is verified, but external reload checks remain manual and non-blocking.
+19. Keep Hub dependency PRs #54/#56/#61 parked until one is explicitly selected with a migration/security plan; PRs #59 and #55 are merged and no longer block the queue. Older PR #52 is no longer in the active visible queue.
+20. Keep Hub prompt/registry cross-validation local-first; decide private sibling-repo CI access only if it becomes worth the operational cost.
+21. Use `dtp workspace report` as a read-only steward preflight when checking repo coverage, recorded evidence, suggested gates, blockers, and missing manifest/evidence coverage; missing repo rows may carry explicit Active Next Queue blockers without guessing gates.
+22. Keep repo manifests current as lanes are touched; DTP, consulting, Architected Strength, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, CCAAP, FamilyTrips, engineering-playbook, `dse-content`, and `fitness-app` / Omnexus now have DTP-owned manifests/evidence indexes.
+23. Keep DSE proof/reuse blocked until it is explicitly selected with COI-aware scope, live repo verification, permission, redaction, reviewer, evidence, and caveat gates.
+24. Keep FAOS implementation parked after the 2026-05-03 readiness review; next FAOS action is a separate local command/version verification pass, not repo/service creation.
 
 Closed on 2026-04-30: GitHub Enterprise org-migration closeout for Omnexus PR #559. The PR merged, local `fitness-app/main` was aligned to `origin/main`, and represented local org-migration branches were deleted.
 
