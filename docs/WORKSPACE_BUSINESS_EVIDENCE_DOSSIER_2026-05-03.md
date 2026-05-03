@@ -15,6 +15,17 @@ Evidence standard:
 - Inference: reasoned synthesis from multiple verified sources.
 - Open question: not provable from available sources.
 
+Post-closeout update on 2026-05-03:
+
+- DTP PR #1 `Promote DTP V2 harness foundation` merged into `main` at
+  `f5d1f20` after GitHub Actions passed.
+- CCAAP PR #1 `Refine CCAAP civic prototype` merged into `main` at
+  `fd18b92` after GitHub Actions passed.
+- Consulting `main`, DTP `main`, and CCAAP `main` are clean and synced with
+  origin after the PR closeout.
+- The git-state snapshot later in this dossier is preserved as the verified
+  state at the time the dossier was prepared, not the current post-merge state.
+
 ## 1. Executive Reconstruction
 
 Toni is building a consulting practice and operating system for owner-led
