@@ -11,13 +11,13 @@ Date: 2026-05-01
 
 ## Trigger
 
-Toni sent Leah plus Dad the CCAAP prototype review message and asked to keep the work moving while owner feedback is pending.
+Toni sent Leah plus Tony the CCAAP prototype review message and asked to keep the work moving while owner feedback is pending.
 
 ## What Changed
 
 | Area | Result |
 |---|---|
-| Owner packet | Sent to Leah plus Dad with prototype review focus, known placeholders, and required launch inputs. |
+| Owner packet | Sent to Leah plus Tony with prototype review focus, known placeholders, and required launch inputs. |
 | Prototype access | Temporary Cloudflare quick-tunnel review link created from the local build and sent in the owner message. |
 | Production launch | Still blocked; temporary tunnel is not a durable Cloudflare Pages preview and not production readiness evidence. |
 | Assistant lane | Move only at architecture/manifest level while waiting; no CCAAP assistant code. |
@@ -57,7 +57,7 @@ Durable preview options remain:
 
 ## Next Queue
 
-1. If Leah/Dad respond, update `ccaap-site` only with exact owner-approved values and rerun the launch gates.
+1. If Leah/Tony respond, update `ccaap-site` only with exact owner-approved values and rerun the launch gates.
 2. If feedback lags, keep waiting-room work to assistant manifests, Omnexus public App Store proof on or after 2026-05-02, or external `tm-skills` smoke checks.
 3. Do not connect production DNS until `pnpm validate:launch` passes and owner review is complete.
 

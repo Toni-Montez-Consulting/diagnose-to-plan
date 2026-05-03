@@ -20,7 +20,7 @@ review_status: checked
 |---|---|---|---|
 | Cameron / SMB marketplace | Cameron replied on 2026-05-02 and said he will send the requested items in the next few days. Latest scan found no additional item packet. | Keep waiting; when packet arrives, run client reply intake before repo access, build work, or proof movement. | waiting |
 | Greg / TheGrantApp | Latest scan found Toni's sent follow-up and no Greg reply. | Keep waiting; no discovery scheduling or proof movement yet. | waiting |
-| CCAAP | Latest scan found Dad's earlier inline notes and Toni's clarification reply; no owner reply after the clarification. | Keep parked until exact public links, contact routing, meeting label/URL, DNS path, authentic assets, review notes, and proof posture are confirmed. | waiting |
+| CCAAP | Latest scan found Tony's earlier inline notes and Toni's clarification reply; no owner reply after the clarification. | Keep parked until exact public links, contact routing, meeting label/URL, DNS path, authentic assets, review notes, and proof posture are confirmed. | waiting |
 | Omnexus / Stripe | Stripe sent a live webhook-disabled alert for an endpoint shown as the root domain. Live smoke shows `/api/health` returns 200, `GET /api/webhook-stripe` returns 405, and unsigned `POST /api/webhook-stripe` returns 400 signature failure. | Stripe is parked per Toni for now. When reopened, treat as manual Stripe Dashboard endpoint/config fix: point live webhook to `/api/webhook-stripe`, re-enable, and replay failed events after checking logs. | parked |
 
 ## Non-Actions
@@ -50,5 +50,5 @@ review_status: checked
 
 - If Cameron sent the packet through another channel, mark the Cameron lane active and run reply intake.
 - If Greg replied outside Gmail, mark Greg discovery active and update the case-study sprint kit.
-- If Dad/Leah gave CCAAP confirmations somewhere else, move CCAAP out of waiting and into owner-input processing.
+- If Leah/Tony gave CCAAP confirmations somewhere else, move CCAAP out of waiting and into owner-input processing.
 - If the Stripe endpoint is intentionally configured at the root for a reason not visible in repo docs, correct the runbook and DTP evidence before changing Dashboard settings.

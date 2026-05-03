@@ -28,7 +28,7 @@ Toni asked to implement the next operating plan: keep CCAAP owner-input closure 
 |---|---|---|
 | `pnpm validate:content` | pass_with_expected_warnings | PayPal and contact placeholders remain expected warnings. |
 | `pnpm validate:launch` | expected_failure | Meeting label/link, board/media approval, PayPal links, and contact routing are still owner-input blockers. |
-| Owner packet | ready_to_send | Leah plus Dad need PayPal, contact, meeting, DNS, authentic assets, admin scope, and proof decision before implementation resumes. |
+| Owner packet | ready_to_send | Leah plus Tony need PayPal, contact, meeting, DNS, authentic assets, admin scope, and proof decision before implementation resumes. |
 
 ## Omnexus Closeout Evidence
 

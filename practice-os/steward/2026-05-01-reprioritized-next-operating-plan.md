@@ -33,7 +33,7 @@ Toni asked to implement the reprioritized plan after adding CCAAP owner-input cl
 
 ## Next Action
 
-Send the CCAAP owner launch packet to Leah plus Dad and collect:
+Send the CCAAP owner launch packet to Leah plus Tony and collect:
 
 - PayPal donation link/button;
 - PayPal `$25` membership link/button;

@@ -48,7 +48,7 @@ Use these anchors before relying on chat memory:
 - Captured Cameron's first positive reply and kept the work in a waiting state.
 - Updated future Cam communication routing privately, without mirroring contact
   details into Notion or public surfaces.
-- Retrieved Dad's CCAAP email inputs, prepared and sent the CCAAP clarification
+- Retrieved Tony's CCAAP email inputs, prepared and sent the CCAAP clarification
   reply, and kept CCAAP parked until owner answers arrive.
 - Created/updated Notion cockpit views and sanitized client snapshots.
 - Created Toni's private weekly Business Brain Reset calendar hold.
@@ -81,7 +81,7 @@ Earlier related repo commits in this broader sprint:
 |---|---|---|
 | Cam / SMB marketplace | Positive reply received; waiting on requested item packet. Future communication should use the private preferred route captured in the kit. | Wait for GitHub username, safe artifacts, valuation notes, cadence time, proof constraints, mock-data confirmation, compensation path, and COI/data/IP clarity. |
 | Greg / TheGrantApp.io | Follow-up sent; no substantive reply captured in DTP yet. | Wait for discovery availability, case-study permission boundaries, bug status, soft-launch preference, and approval flow. |
-| CCAAP | Clarification sent; site remains parked. | Wait for PayPal links, contact route/spam preference, meeting label/destination, DNS/domain access, authentic assets, Leah/Dad review, and proof/privacy decision. |
+| CCAAP | Clarification sent; site remains parked. | Wait for PayPal links, contact route/spam preference, meeting label/destination, DNS/domain access, authentic assets, Leah/Tony review, and proof/privacy decision. |
 | Toni / Business Brain | Weekly reset exists as the anchor habit. | Use reset to reconcile DTP, Notion, Gmail, calendar, blockers, repo state, and next three actions. |
 
 ## Infrastructure State

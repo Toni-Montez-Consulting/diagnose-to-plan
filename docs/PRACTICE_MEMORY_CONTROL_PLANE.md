@@ -47,7 +47,7 @@ The active load includes:
   Cameron's personal email for future communication.
 - Greg / TheGrantApp.io: waiting on discovery availability and case-study
   permission boundaries.
-- CCAAP: waiting on Dad/Leah clarification before site changes or launch work.
+- CCAAP: waiting on Leah/Tony clarification before site changes or launch work.
 - Consulting site: first public assistant pilot candidate, still pre-code.
 - Notion cockpit: active and useful, but not authoritative.
 - Business Brain: useful enough to keep, but still early and manual.

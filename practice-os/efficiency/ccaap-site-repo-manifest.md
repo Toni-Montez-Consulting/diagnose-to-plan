@@ -51,5 +51,5 @@ review_status: draft
 
 - Lane: CCAAP launch readiness
 - Trigger: PayPal links, contact routing, domain/DNS access, approved assets, owner review, or Cloudflare preview setup
-- Blocker: production launch waits on PayPal donation/membership links, contact routing, DNS/domain access, authentic photos/resources, Leah plus Dad review, and proof permission/internal-only decision
+- Blocker: production launch waits on PayPal donation/membership links, contact routing, DNS/domain access, authentic photos/resources, Leah plus Tony review, and proof permission/internal-only decision
 - Next action: gather owner inputs with `docs/OWNER_LAUNCH_INPUTS.md`, replace placeholders, connect Cloudflare preview, add authentic assets/resources, and run owner review before production

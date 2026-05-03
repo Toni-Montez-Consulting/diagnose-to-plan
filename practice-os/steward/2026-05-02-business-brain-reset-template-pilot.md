@@ -90,6 +90,6 @@ here.
 |---|---|---|
 | Toni | Wait for Cam item packet before repo/build/calendar actions. | Cam confirms requested gates. |
 | Toni | Wait for Greg availability before scheduling discovery. | Greg replies. |
-| Toni | Wait for CCAAP owner clarification before site launch changes. | Dad/Leah confirm owner inputs. |
+| Toni | Wait for CCAAP owner clarification before site launch changes. | Leah/Tony confirm owner inputs. |
 | Codex | Use templates on the next real reply cycle and record friction. | DTP private kit updated first. |
 | Codex | Keep schema/app work to planning until hosted DTP is explicitly reopened. | Accepted merged schema design. |

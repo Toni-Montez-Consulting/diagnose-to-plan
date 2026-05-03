@@ -42,7 +42,7 @@ Next review trigger:
 
 - Cam sends the requested item packet.
 - Greg replies with discovery availability.
-- Dad/Leah clarify CCAAP owner inputs.
+- Leah/Tony clarify CCAAP owner inputs.
 - Toni explicitly reopens hosted schema/app work.
 - Two Business Brain reset cycles reveal which templates deserve stricter
   enforcement.

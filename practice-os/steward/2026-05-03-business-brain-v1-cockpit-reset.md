@@ -31,7 +31,7 @@ mirrors the safe status fields Toni needs from a phone.
 |---|---|---|---|---|
 | Cameron / SMB marketplace | waiting on Cameron's requested item packet; no repo access or build work yet | run reply intake when packet arrives | update existing client snapshot with V1 fields and source path | blocked |
 | Greg / TheGrantApp | waiting on Greg reply; no discovery scheduling or proof movement yet | run reply intake when Greg replies | update existing client snapshot with V1 fields and source path | blocked |
-| CCAAP | waiting on Dad/Leah owner inputs; no production, DNS, or proof movement yet | process owner confirmations only after reply | update existing client snapshot with V1 fields and source path | blocked |
+| CCAAP | waiting on Leah/Tony owner inputs; no production, DNS, or proof movement yet | process owner confirmations only after reply | update existing client snapshot with V1 fields and source path | blocked |
 | Weekly Business Brain reset | active internal operating rhythm | use the cockpit for weekly review and next three actions | update existing weekly reset snapshot | internal-only |
 
 ## Top Three Actions
@@ -99,7 +99,7 @@ receipt remains the exact source record.
   run reply intake.
 - If Greg replied outside Gmail, mark Greg active and update the discovery
   packet.
-- If Dad or Leah confirmed CCAAP inputs elsewhere, mark CCAAP active and update
+- If Leah or Tony confirmed CCAAP inputs elsewhere, mark CCAAP active and update
   the owner-input packet.
 - If any lane should outrank the hosted DTP / Notion infrastructure work, move
   it into `Today`.

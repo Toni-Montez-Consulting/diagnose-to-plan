@@ -69,7 +69,7 @@ Do not use this pattern for raw archive dumping. The goal is extraction into ope
 |---|---|---|---|
 | Cam / SMB M&A platform | Capture safe artifacts, methodology, proof constraints, mock-data confirmation, compensation path, and Friday cadence preference. | Weekly 45-minute Friday cadence only after Cameron confirms a time. | No repo access, build work, live data, or public proof until COI/data/IP gates are clear. |
 | Greg / TheGrantApp.io | Capture discovery availability, case-study permission, bug status, soft-launch preference, and approval flow. | One discovery session first; biweekly cadence only after discovery confirms value. | No public case study, screenshots, metrics, proof claims, or production promises until Greg approves. |
-| CCAAP / Mom nonprofit | Capture owner-approved PayPal, membership, contact, spam, meeting, board bio, photo, DNS, and proof decisions. | Monthly formal owner check-in after Dad/Leah clarify launch inputs. | No production launch, proof, or assistant work until owner review and launch gates clear. |
+| CCAAP / Mom nonprofit | Capture owner-approved PayPal, membership, contact, spam, meeting, board bio, photo, DNS, and proof decisions. | Monthly formal owner check-in after Leah/Tony clarify launch inputs. | No production launch, proof, or assistant work until owner review and launch gates clear. |
 | Toni / Business Brain reset | Capture stale waiting states, proof gates, reply gaps, and the next three actions. | Weekly 30-minute internal reset. | No hosted DTP, live runner, or automation until manual loops show real pain. |
 
 ## Notion Boundary

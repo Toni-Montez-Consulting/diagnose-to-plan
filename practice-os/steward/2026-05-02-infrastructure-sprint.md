@@ -43,7 +43,7 @@ Reduce mental load with a reply-intake and cockpit layer before building hosted 
 |---|---|---|
 | Cam / SMB M&A platform | Reply received; Cameron said he will send requested items in the next few days. | Wait for requested items; no repo access or build work yet. |
 | Greg / TheGrantApp.io | No reply visible in latest check. | Wait for discovery availability and permission boundaries. |
-| CCAAP / Mom nonprofit | No clarification reply visible in latest check. | Wait for Dad/Leah clarification before site changes. |
+| CCAAP / Mom nonprofit | No clarification reply visible in latest check. | Wait for Leah/Tony clarification before site changes. |
 | Toni / Business Brain reset | Internal weekly reset is safe to schedule. | Use it to reconcile DTP, Notion, replies, blockers, and next three actions. |
 
 ## Live Surfaces

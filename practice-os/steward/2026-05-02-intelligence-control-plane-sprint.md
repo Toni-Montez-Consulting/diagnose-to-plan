@@ -87,7 +87,7 @@ sent in that failed write attempt.
   invite until reply gates are clear.
 - No Greg case-study proof or recurring cadence until written permission and
   discovery shape are clear.
-- No CCAAP site changes until Dad/Leah clarify launch inputs.
+- No CCAAP site changes until Leah/Tony clarify launch inputs.
 - No QuickBooks OAuth or API work.
 - No public assistant runtime.
 - No hosted DTP, vector store, private assistant, client portal, or autonomous

@@ -50,7 +50,7 @@ Toni wants the current consulting operating system, roadmap, CCAAP launch work, 
 | Contact routing | blocked | Destination inbox and spam-protection path still needed |
 | Domain/DNS | blocked | Production domain waits for access and owner approval |
 | Authentic photos/resources | blocked | Use only approved CCAAP assets; exclude the old stock banner |
-| Owner review | blocked | Leah plus Dad approval required before production launch |
+| Owner review | blocked | Leah plus Tony approval required before production launch |
 | Public proof | blocked | Permission, redaction, reviewer, evidence, and caveat gates are not complete |
 
 ## Notion V0 Created After OAuth

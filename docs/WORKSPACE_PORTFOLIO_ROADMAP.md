@@ -344,7 +344,7 @@ This is the master coverage queue. Each repo gets at least one explicit future p
 | `hub-registry` | Cross-repo prompt id and manifest validation pass | DTP-owned manifest/evidence index exists and local-first validation now exists | Decide later whether CI should receive private sibling-repo access |
 | `fitness-app` / Omnexus | Verification cockpit review and launch-stability pass | PR #553 merged; DTP extraction complete on 2026-04-30 | DTP-owned manifest/evidence index exists; next output is permissioned proof or release/support follow-up only when the lane reopens |
 | `demario-pickleball-1` | Launch/Command Room proof pass | After manual launch gates and permission are handled | DTP-owned manifest/evidence index exists; next output is owner-safe proof packet, venue-routing maintenance, or Node 24 CI maintenance |
-| `ccaap-site` | CCAAP launch implementation and proof/readiness pass | Owner inputs arrive and Cloudflare preview path is ready | Replace placeholders, verify launch gate, review with Leah plus Dad, then connect production DNS only after approval |
+| `ccaap-site` | CCAAP launch implementation and proof/readiness pass | Owner inputs arrive and Cloudflare preview path is ready | Replace placeholders, verify launch gate, review with Leah plus Tony, then connect production DNS only after approval |
 | `FamilyTrips` | Privacy-first maintenance pass | Before adding features or AI/public sharing | DTP-owned manifest/evidence index and thin CI exist; next pass should revisit privacy and deploy smoke |
 | `dse-content` | COI-aware internal proof and workflow maintenance pass | Before any DSE material is reused publicly or professionally | COI screen, redaction/permission notes, live-branch verification |
 
@@ -1010,7 +1010,7 @@ Preflight: use the Practice System Documentation Pack as the current/future/audi
 
 1. Run the recurring client cadence loop: Cam weekly only after time confirmation, Greg biweekly only if discovery confirms it, CCAAP monthly formal owner check-in, and Toni's weekly Business Brain reset. Update DTP private kits first, then mirror only sanitized status into Notion.
 2. Pilot the Thought Inbox, Input Studio, Context Pack, Opportunity Score, Exception Register, Value Ledger, and Memory Review Queue templates on the next real Cam, Greg, CCAAP, or weekly reset cycle.
-3. Complete remaining CCAAP inputs: exact PayPal donate/membership links, contact routing and spam preference, meeting label/destination, domain/DNS access, authentic photos/resources, Leah plus Dad review, and proof decision.
+3. Complete remaining CCAAP inputs: exact PayPal donate/membership links, contact routing and spam preference, meeting label/destination, domain/DNS access, authentic photos/resources, Leah plus Tony review, and proof decision.
 4. Continue the CCAAP off-Wix custom rebuild path only after owner-approved values arrive; production DNS waits for `pnpm validate:launch`.
 5. Use the Custom Interface Craft Standard for broad UI work. Treat `architected-strength` and `consulting` as north-star candidates until they pass reference promotion gates; do not copy them as finished templates.
 6. Use Notion Mirror V0 as the phone cockpit/inbox for waiting-on items, but run steward triage before DTP source-of-truth changes.

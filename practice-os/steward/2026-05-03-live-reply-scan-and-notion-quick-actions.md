@@ -28,7 +28,7 @@ Run the live operating loop after the V1 Notion cockpit reset:
 |---|---|---|
 | Cameron / SMB marketplace | No new actionable packet after the known 2026-05-02 reply. The lane is still waiting on requested items. | No reply intake beyond the existing 2026-05-02 intake. Keep waiting. |
 | Greg / TheGrantApp | No inbox reply found after the follow-up. | Keep waiting; do not schedule discovery or move proof. |
-| CCAAP | Targeted matches were noise or unrelated calendar/promotional items, not Dad/Leah owner confirmations. | Keep owner-input gate blocked. |
+| CCAAP | Targeted matches were noise or unrelated calendar/promotional items, not Leah/Tony owner confirmations. | Keep owner-input gate blocked. |
 
 ## Reply Intake Decision
 
@@ -81,7 +81,7 @@ reply intake before changing scheduling, proof, access, launch, or build state.
 - If Cameron sent the requested packet outside Gmail, mark Cameron active and
   run reply intake.
 - If Greg replied outside Gmail, mark Greg active and update the discovery kit.
-- If Dad or Leah confirmed CCAAP inputs elsewhere, mark CCAAP active and update
+- If Leah or Tony confirmed CCAAP inputs elsewhere, mark CCAAP active and update
   the owner-input packet.
 - If the `Quick Actions` section is too high on mobile, move it below `Today`
   after one week of real use.
