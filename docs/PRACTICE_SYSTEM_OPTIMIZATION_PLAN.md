@@ -13,14 +13,15 @@ The strategy is not to build more surface area first. The strategy is to make ev
 Optimize in this order:
 
 1. Make the system understandable from DTP alone.
-2. Make the agentic performance loop catch routing, context, skill-trigger, validation, research, safety, and learning gaps.
-3. Make the next real pilot produce evidence.
-4. Make public proof permissioned and receipt-backed.
-5. Expand repo manifests and local pointers only when the repo lane is touched.
-6. Cross-validate Hub prompts and registry before deeper runtime automation.
-7. Install and smoke-test global skills only after approval.
-8. Build hosted DTP only when real artifacts need persistence.
-9. Add steward automation, evals, red-team, and protocols after manual loops prove useful.
+2. Make the practice offer-led before making it platform-heavy.
+3. Make the agentic performance loop catch routing, context, skill-trigger, validation, research, safety, and learning gaps.
+4. Make the next real pilot produce evidence.
+5. Make public proof permissioned and receipt-backed.
+6. Expand repo manifests and local pointers only when the repo lane is touched.
+7. Cross-validate Hub prompts and registry before deeper runtime automation.
+8. Install and smoke-test global skills only after approval.
+9. Build hosted DTP only when real artifacts need persistence.
+10. Add steward automation, evals, red-team, and protocols after manual loops prove useful.
 
 ## Epic A: Practice System Documentation Pack
 
@@ -33,6 +34,9 @@ Goal: a future agent can open DTP and understand the current system, future syst
 | Audit and gap review | `diagnose-to-plan` | Done when merged | severity-ranked findings tie to follow-up stories | revisit after Mom pilot |
 | Agentic performance gap review | `diagnose-to-plan` | Done when merged | required template and doc inspect prompt routing, context, skill triggers, verification, research, safety, and learning-loop conversion | run after major agent-system misses |
 | Optimization plan | `diagnose-to-plan` | Done when merged | findings convert into epics/stories/gates | keep backlog aligned |
+| Practice machine operating map | `diagnose-to-plan` | Done when merged | offer-led machine map stages ideas as Now/Next/Later/Hold and points to proof, Hub, and workspace runbooks | use before broad workspace/platform prompts |
+| Workspace operator runbook | `diagnose-to-plan` | Done when merged | safe command classes, repo roles, and no-touch boundaries are documented | use before cross-repo command selection |
+| Offer packaging source | `diagnose-to-plan` | Done when merged | first three sellable offers are internally defined before public copy changes | use before consulting copy pass |
 
 ## Epic B: Documentation Propagation Lane
 
@@ -83,6 +87,7 @@ Goal: reduce drift between prompt definitions, registry targets, and Hub runtime
 | Registry reference inventory | `hub-registry` | Ready | registry targets list prompt references clearly | run registry validation first |
 | Cross-validation plan | `hub-prompts`, `hub-registry`, `hub` | Ready | CI-safe and local-private validation modes are documented | implement after Mom pilot or when Hub resumes |
 | Runtime expectation check | `hub` | Later | Hub docs and runtime agree on prompt source and deployment path | do before deeper Hub automation |
+| Runtime current-state map | `hub` | Done when merged | Hub surfaces are classified as live-hosted, local-only, legacy-proxy, planned, or retired | update whenever routing/runtime ownership changes |
 
 Gate: do not require private sibling-repo access in repo-scoped CI unless explicitly configured.
 
@@ -180,16 +185,17 @@ Gate: FAOS work may plan and review now, but implementation is parked until the 
 
 ## Recommended Next Execution Order
 
-1. Finish and validate this documentation pack.
-2. Run the Agentic Performance Gap Review when a session exposes a missed routing, memory, verification, research, safety, or learning-loop behavior.
-3. Keep the active queue centered on the Mom nonprofit private kit.
-4. Use the proof/redaction templates on the first real claim.
-5. Keep repo manifests current for DTP, consulting, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus as those lanes are touched.
-6. Keep Hub prompt/registry cross-validation local-first unless private sibling-repo CI access becomes worth the cost.
-7. Keep external `tm-skills` Claude Code/GitHub Copilot smoke tests manual until they can be observed.
-8. Run adjacent repo touch passes only when their triggers are ready and the target repo is clean or explicitly selected.
-9. Revisit hosted DTP implementation after real pilot records exist.
-10. Run FAOS Phase 0 readiness review after the current active path; do not implement the raw FAOS prompt until the corrections are accepted.
+1. Use `docs/PRACTICE_MACHINE_OPERATING_MAP.md` before broad workspace, offer, platform, Hub, proof, or adjacent-project planning.
+2. Run one real client loop through `client-reply-intake` and `recurring-engagement-cadence`.
+3. Fill the private kit with real context, decisions, source material, and one internal proof candidate.
+4. Use `docs/PUBLIC_PROOF_PROMOTION_RUNBOOK.md` on the first real claim.
+5. Use `docs/OFFER_LED_PRACTICE_PACKAGING.md` for the consulting public-copy pass after proof classification.
+6. Keep repo manifests current for DTP, consulting, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus as those lanes are touched.
+7. Keep Hub prompt/registry cross-validation local-first unless private sibling-repo CI access becomes worth the cost.
+8. Keep external `tm-skills` Claude Code/GitHub Copilot smoke tests manual until they can be observed.
+9. Revisit public assistant manifests only after proof/source/refusal gates pass.
+10. Revisit hosted DTP implementation after real pilot records exist.
+11. Run FAOS Phase 0 readiness review after the current active path; do not implement the raw FAOS prompt until the corrections are accepted.
 
 ## Optimization Done Gate
 

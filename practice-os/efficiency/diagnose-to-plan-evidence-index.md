@@ -11,13 +11,15 @@ review_status: draft
 
 - Name: `diagnose-to-plan`
 - Branch: `main`
-- Last updated: 2026-05-03
+- Last updated: 2026-05-04
 - Reviewer: Iteration 1 brain completion and Phase 0.2 implementation pass
 
 ## Latest Verification
 
 | Lane | Date | Result | Commit | Artifact |
 |---|---|---|---|---|
+| consulting brand system promotion | 2026-05-04 | pass | current branch | `practice-os/steward/2026-05-04-consulting-brand-system-promotion.md` records the official 2026-05-04 logo kit source, consulting site promotion, route/build/security validation, screenshot review, and sibling-site boundary. |
+| workspace thread triage implementation | 2026-05-04 | pass_with_manual_gates | current branch | `practice-os/steward/2026-05-04-workspace-thread-triage-implementation.md` records the active operating queue, repo-state split, stale Hub PR memory correction, DTP validation ladder, and no-go boundaries for consulting, Hub, proof, client-loop, DSE, and platform work. |
 | DTP V2 harness foundation PR | 2026-05-03 | merged | `f5d1f20` | PR #1 `Promote DTP V2 harness foundation` merged `v2/harness` into `main` after GitHub Actions `Python and Practice OS gates` passed; local `main` is synced with `origin/main`. |
 | Hosted DTP Phase 0.2 round trip | 2026-05-03 | pass | current branch | `npm run roundtrip:live` imported the Business Brain weekly packet into the dedicated live Hosted DTP project, created engagement/artifact/version/evidence/redaction/proof/decision/steward/research/import-export records, exported `practice-os/steward/2026-05-03-hosted-dtp-live-roundtrip-export.md`, preserved P0/internal/restricted/not-candidate gates, and confirmed second-operator RLS plus cross-operator attachment blocking. |
 | Hosted DTP live smoke | 2026-05-03 | pass | current branch | Dedicated Supabase project `DTP Private` was created in the existing org, the Phase 0 migration was applied, local ignored `.env` was configured, two smoke operator accounts were created/confirmed, `npm run smoke:live` passed, RLS blocked the second operator from all primary-operator rows, cross-operator artifact attachment failed, and metadata verification showed RLS enabled, authenticated access granted, and anon table access revoked across all `private_dtp_*` tables. |

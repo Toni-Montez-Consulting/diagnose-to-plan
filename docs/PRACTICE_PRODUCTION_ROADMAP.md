@@ -4,12 +4,28 @@ This is the canonical roadmap for bringing Toni Montez's consulting practice fro
 
 DTP owns this roadmap because DTP is the private Practice OS: the place where client kits, redaction, COI, patterns, proof capture, and operating methodology are organized. The consulting site is the public storefront and proof surface. Hub is the intake/runtime support layer.
 
+The Offer-Led Practice Machine compression map is now captured in
+`docs/PRACTICE_MACHINE_OPERATING_MAP.md`. It is the first stop for broad
+workspace/business/platform prompts because it preserves valuable ideas while
+staging them as `Now`, `Next`, `Later`, or `Hold`. The first active compression
+sprint is Clarity + Proof: workspace ownership, safe commands, public-proof
+promotion, Hub runtime clarity, and offer packaging before public-site copy
+changes.
+
 The Business Brain / Consulting OS is now a first-class DTP lane. It is the
 business-practice counterpart to the software-delivery learning loop: command
 contracts, skills, role specs, fixtures, comms, runbooks, proof gates, and
 human-reviewed self-improvement for operations, admin, finance, reporting,
 pricing, valuation, legal/compliance issue spotting, and handoff. The canonical
 source map is `docs/BUSINESS_BRAIN_OPERATING_SYSTEM.md`.
+
+The Google Workspace + Business Admin lane is now a first-class Business Brain
+slice. `docs/BUSINESS_ADMIN_OPERATING_SYSTEM.md` owns the DTP-first planning
+view for `founder@tonimontez.co`, Google Calendar/Meet, Apple Reminders capture,
+LLC readiness, EIN/banking/tax/contracts/insurance prompts, brand assets, and
+admin cadence. `docs/INTERNAL_OFFER_REPERTOIRE_CATALOG.md` captures reusable
+capabilities from Toni's own operations and client work before they become
+public offers.
 
 The Practice Intelligence Control Plane is the V0 operating layer for broad
 session rehydration and input routing. It uses
@@ -76,6 +92,9 @@ The Practice System Documentation Pack is the architecture and audit layer for t
 - Practice OS includes Business Brain command contracts, first Controller/General
   Counsel/COO role specs, Greg/Cameron/Mom-Mario fixtures, and a private-first
   communications kit.
+- Practice OS includes Business Admin item, Calendar Policy, Apple Reminders
+  capture pilot, and Offer Catalog item templates, plus DTP source docs for
+  Google Workspace/admin overhead and the internal reusable-offer repertoire.
 - Practice OS includes the Practice Intelligence Control Plane so broad
   client/infrastructure sessions can rehydrate from DTP, git, Gmail, Calendar,
   Notion, steward receipts, and active kit statuses before acting.
@@ -90,6 +109,11 @@ The Practice System Documentation Pack is the architecture and audit layer for t
 - Practice OS includes a Notion Mirror item template and a Notion Cockpit Audit template, and DTP includes `docs/NOTION_MIRROR_V0.md` so phone-captured ideas and Notion roadmap views can mirror DTP without taking over source-of-truth ownership.
 - Hosted DTP Phase 0 now has an accepted design-boundary doc at `docs/HOSTED_DTP_PHASE_0.md`; hosted implementation remains gated until a separate implementation request and real records exist.
 - Practice OS now includes proof/redaction templates for proof packets, redaction queue items, permission review, evidence-source review, public claim review, and asset inventory.
+- DTP now includes the Offer-Led Practice Machine compression docs:
+  `docs/PRACTICE_MACHINE_OPERATING_MAP.md`,
+  `docs/WORKSPACE_OPERATOR_RUNBOOK.md`,
+  `docs/PUBLIC_PROOF_PROMOTION_RUNBOOK.md`, and
+  `docs/OFFER_LED_PRACTICE_PACKAGING.md`.
 - The first DTP repo manifest/evidence-index pilot lives in `practice-os/efficiency/`.
 - `docs/ROADMAP_EXECUTION_BACKLOG.md` maps roadmap items into epics, stories, statuses, Done gates, and next actions.
 - `docs/PRACTICE_SYSTEM_ARCHITECTURE.md`, `docs/PRACTICE_SYSTEM_FUTURE_STATE.md`, `docs/PRACTICE_SYSTEM_AUDIT_AND_GAP_REVIEW.md`, and `docs/PRACTICE_SYSTEM_OPTIMIZATION_PLAN.md` document the current system, future system, gap review, and optimization path for the whole consulting operating model.
@@ -166,6 +190,22 @@ The Practice System Documentation Pack is the architecture and audit layer for t
 - Thin CI is now installed or reviewed for the core lane: DTP, consulting, Hub, `tm-skills`, `hub-prompts`, and `hub-registry`.
 - Add Sprint 1 tools in phases: evidence templates, Gitleaks, consulting Playwright/axe, advisory Knip, and repo doctor/matrix coverage now; Lighthouse CI, Semgrep, dependency automation, and shared GitHub Actions soon; dashboards, Storybook/Chromatic, Percy/Applitools, OpenTelemetry, k6, and PostHog-for-consulting later only when proven useful.
 
+### Offer-Led Practice Machine Compression
+
+- Keep the active north star as an offer-led machine: make the business easier
+  to sell, explain, deliver, improve, and compound while DTP, Hub, prompts,
+  skills, and project repos support delivery behind the scenes.
+- Use `docs/PRACTICE_MACHINE_OPERATING_MAP.md` before activating broad ideas.
+  Valuable ideas should be staged, not deleted.
+- Use `docs/WORKSPACE_OPERATOR_RUNBOOK.md` before cross-repo command selection
+  or repo touch passes. Do not replace it with a live command runner.
+- Use `docs/PUBLIC_PROOF_PROMOTION_RUNBOOK.md` before public proof movement.
+- Use `docs/OFFER_LED_PRACTICE_PACKAGING.md` as the source for the next
+  consulting-site offer-copy pass.
+- Next sprint after Clarity + Proof: run one real client loop through the
+  cadence/reply templates, produce one internal proof candidate, and update the
+  machine map with the lesson.
+
 ### Practice OS
 
 - Keep policies current: data classification, COI, redaction, kill switch, no-secrets-in-git, and client consent.
@@ -183,6 +223,11 @@ The Practice System Documentation Pack is the architecture and audit layer for t
 - Use `docs/BUSINESS_BRAIN_OPERATING_SYSTEM.md` before changing Business Brain
   scope, command contracts, business agents, comms rules, or source-of-truth
   behavior. Keep the Business Brain in DTP, not the public consulting repo.
+- Use `docs/BUSINESS_ADMIN_OPERATING_SYSTEM.md` before changing Google
+  Workspace, Calendar/Meet, LLC readiness, contracts, insurance, banking/tax
+  prompts, brand assets, or Toni's business-admin operating cadence. Use
+  `docs/INTERNAL_OFFER_REPERTOIRE_CATALOG.md` when new delivery work could
+  become a future offer.
 - Add tiny fixtures/evals for high-value Skills: COI, redact, diagnose, proposal, handoff, and case-study capture.
 - Promote only reviewed redacted patterns from `extracts/` into `practice-os/patterns/`.
 

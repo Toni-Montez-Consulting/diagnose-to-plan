@@ -12,14 +12,14 @@ review_status: draft
 - Repo: `consulting`
 - GitHub repo: `Toni-Montez-Consulting/consulting`
 - Local path: `consulting`
-- Primary role: public consulting storefront, public-safe proof surface, Hub-first intake path, and noindex admin command room
+- Primary role: public consulting storefront, official Toni Montez brand surface, public-safe proof surface, Hub-first intake path, and noindex admin command room
 - Owner lane: public proof and storefront
 - Public/private: public site repo with private operational boundaries
 - Deploy target: Vercel, canonical domain `tonimontez.co`
 
 ## Boundaries
 
-- Owns: public routes, site copy, Steel Ledger visual baseline, proof presentation, `/start` intake UX, `/admin` command-room launcher, Hub/Formspree/email fallback routing
+- Owns: public routes, official consulting brand application, site copy, Steel Ledger visual baseline, proof presentation, `/start` intake UX, `/admin` command-room launcher, Hub/Formspree/email fallback routing
 - Does not own: private DTP engagement kits, Hub runtime rows, Supabase service-role access, global skills, client CRM/billing, private proof review
 - Sensitive data: proof assets, intake endpoint configuration, owner/client evidence before redaction, admin links
 - COI/privacy notes: public proof needs DTP proof/redaction review before publication; Microsoft/DSE-adjacent proof needs COI-aware screening before reuse
@@ -49,7 +49,7 @@ review_status: draft
 
 ## Next Touch
 
-- Lane: public proof upgrade and route/visual verification
-- Trigger: a reviewed DTP proof packet is ready or the consulting site intake/proof lane resumes
+- Lane: public brand/proof upgrade and route/visual verification
+- Trigger: a reviewed DTP proof packet is ready, Toni approves a newer brand source, or the consulting site intake/proof lane resumes
 - Blocker: no proof should publish until permission, redaction, reviewer, evidence, and caveat are real
 - Next action: keep current site stable; promote Mom/Omnexus/DeMario proof only through the DTP proof packet flow

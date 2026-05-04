@@ -8,6 +8,10 @@ Canonical roadmap:
 
 - `docs/PRACTICE_PRODUCTION_ROADMAP.md` is the source of truth for practice production work: hosted DTP, Practice OS, Client Operating Kits, redaction, COI, proof promotion, pilot sequencing, and parked ideas.
 - `docs/DOCUMENTATION_MAP.md` explains which docs in DTP, consulting, and Hub own which decisions.
+- `docs/PRACTICE_MACHINE_OPERATING_MAP.md` is the offer-led compression map for deciding which ideas are Now, Next, Later, or Hold across DTP, consulting, Hub, prompts, skills, and project repos.
+- `docs/WORKSPACE_OPERATOR_RUNBOOK.md` names safe cross-repo command classes, repo ownership, verification paths, and no-touch boundaries.
+- `docs/PUBLIC_PROOF_PROMOTION_RUNBOOK.md` is the proof movement gate before any evidence, claim, screenshot, or metric becomes public.
+- `docs/OFFER_LED_PRACTICE_PACKAGING.md` defines the first internal offer packaging source for later consulting-site copy.
 - `docs/CLIENT_COMMAND_ROOM_PATTERN.md` captures the reusable admin/customer portal concept from the DeMario pickleball admin portal for Toni and future client engagements.
 - `docs/CLI_VERIFICATION_AUTOMATION_PATTERN.md` captures the Omnexus-style CLI verification, support, and evidence pattern that should come before heavier hosted product work.
 - `docs/MOBILE_APP_REVIEW_AND_LAUNCH_PATTERN.md` captures the Omnexus App Store approval journey as a reusable mobile app review, approval, and first-user launch pattern for future client builds.
