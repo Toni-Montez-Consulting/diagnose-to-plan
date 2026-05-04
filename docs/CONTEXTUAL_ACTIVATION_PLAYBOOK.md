@@ -23,6 +23,15 @@ Use the lightest rung that captures the idea and protects the right gate.
 7. Run the gates for the chosen artifact.
 8. Update the steward/backlog only when status actually changes.
 
+Default capture command:
+
+```powershell
+.\.venv\Scripts\python.exe -m dtp kaizen capture "..."
+```
+
+Use the Kaizen index for lightweight capture. Use the contextual intake template
+only when the record needs deeper routing, promotion, or review.
+
 ## Idea Types
 
 | Idea type | Use when Toni says | Primary activation | Typical artifact | Gate |
@@ -59,6 +68,7 @@ public proof, client work, agent behavior, or automation.
 ## Tie-In Files
 
 - Prompt routing: `practice-os/templates/activation-routing-map.md`
+- Kaizen capture: `docs/PRACTICE_KAIZEN_KANBAN_SYSTEM.md`, `practice-os/kaizen/intake.jsonl`
 - Story routing: `docs/ROADMAP_STORY_ACTIVATION_INDEX.md`
 - Steward review: `practice-os/templates/roadmap-steward-review.md`
 - One-off story activation: `practice-os/templates/story-activation-contract.md`

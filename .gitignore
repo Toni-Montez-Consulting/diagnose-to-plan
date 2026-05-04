@@ -13,6 +13,9 @@ apps/private-dtp/coverage/
 apps/private-dtp/.env
 apps/private-dtp/*.tsbuildinfo
 .dtp/audit.log
+.dtp/kaizen/
+.dtp/notion-sync-state.json
+.dtp/kaizen-notion-outbox.json
 inputs/*
 !inputs/README.md
 outputs/*

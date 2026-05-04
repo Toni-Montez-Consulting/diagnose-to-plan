@@ -34,7 +34,7 @@ Compression does not mean deletion. Every meaningful idea keeps a home, an activ
 
 The machine works when work leaves behind useful residue:
 
-1. Capture: client replies, project progress, launch lessons, proof candidates, idea sparks, operator observations.
+1. Capture: client replies, project progress, launch lessons, proof candidates, idea sparks, operator observations, and new asks into `dtp kaizen capture`.
 2. Classify: route to offer, DTP, Hub, proof, client cadence, skill, template, repo touch pass, or parked lane.
 3. Stage: mark `Now`, `Next`, `Later`, or `Hold`.
 4. Deliver: build, document, run, verify, or hand off in the owning repo.
@@ -56,6 +56,7 @@ If a cycle does not produce evidence, a decision, a reusable pattern, a proof up
 | Offer-Led Practice Packaging | Now | `diagnose-to-plan`, later `consulting` | public-site copy, sales conversation, client intake, offer framing | Active now before changing public copy |
 | Business Admin Operating System | Now | `diagnose-to-plan`, Notion mirror, `consulting` launcher | Google Workspace, Calendar/Meet, Apple Reminders capture, LLC readiness, banking/tax/contracts/insurance planning, brand asset administration | Active now because Toni's business overhead needs one cockpit without putting private records on the public site |
 | Internal Offer Repertoire Catalog | Now | `diagnose-to-plan` | any reusable service pattern from Toni's own operations or client delivery | Active now so new capabilities become private offer inventory before public proof |
+| Kaizen Kanban Operating Loop | Now | `diagnose-to-plan`, Notion mirror | any meaningful new idea, ask, blocker, proof candidate, repo issue, client signal, correction, or process improvement | Active now to reduce document sprawl, memory drift, and queue ambiguity |
 | Client Loop Pilot | Next | `diagnose-to-plan` private kits | next real Cameron, Greg, or CCAAP reply/cadence cycle | Needs one real cycle after Clarity + Proof docs land |
 | Consulting Public Packaging Pass | Next | `consulting` | offer packaging accepted and at least one proof candidate classified | Public copy should follow source-backed offer work |
 | CCAAP Launch/Proof Lane | Next | `ccaap-site`, DTP private kit | owner inputs, PayPal/contact/DNS/assets/review/proof permissions close | Owner and proof gates still matter |
@@ -89,7 +90,7 @@ Use this map before accepting broad work that touches more than one repo or one 
 | "Add a portal/dashboard/command room" | Client Command Room fit assessment | prove recurring workflow pain first |
 | "Expand Hub" | Hub Runtime Current-State Map | classify surface as live-hosted, local-only, legacy-proxy, planned, or retired |
 | "Automate this across repos" | Workspace Operator Runbook + Workspace Command Center V0 | start read-only and repo-local |
-| "Remember/use this later" | Practice Memory Control Plane | decide raw, working, decision, pattern, or playbook memory |
+| "Remember/use this later" | Kaizen Kanban + Practice Memory Control Plane | capture with `dtp kaizen capture`, then decide raw, working, decision, pattern, or playbook memory |
 | "Google Workspace, Calendar/Meet, Apple Reminders, LLC, business admin, brand kit, mission/vision, offer catalog" | Business Admin OS + Internal Offer Repertoire Catalog | update DTP first, mirror sanitized status to Notion, keep `/admin` as a launcher only |
 | "Publish DSE/Microsoft-adjacent proof" | COI/redaction hold | stop until explicit clearance exists |
 | "Build hosted DTP" | Hosted DTP Phase 0 | require real records and separate implementation approval |
