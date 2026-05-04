@@ -11,6 +11,19 @@ from dtp.commands.capture_cmd import run_mentor, run_note, run_story
 from dtp.commands.detect import run_detect
 from dtp.commands.draft import run_draft, user_facing_error
 from dtp.commands.index_cmd import run_index
+from dtp.commands.kaizen import (
+    KaizenError,
+    render_capture,
+    render_mirror,
+    render_update,
+    run_kaizen_capture,
+    run_kaizen_mirror,
+    run_kaizen_status,
+    run_kaizen_update,
+)
+from dtp.commands.kaizen import (
+    render_status as render_kaizen_status,
+)
 from dtp.commands.kit import KIT_KINDS, KitError, render_status, run_kit_new, run_kit_status
 from dtp.commands.lesson import run_lesson
 from dtp.commands.memory import render_memory_status, run_memory_status
@@ -37,6 +50,7 @@ app = typer.Typer(no_args_is_help=True, add_completion=False)
 kit_app = typer.Typer(no_args_is_help=True, add_completion=False)
 redact_app = typer.Typer(no_args_is_help=True, add_completion=False)
 practice_app = typer.Typer(no_args_is_help=True, add_completion=False)
+kaizen_app = typer.Typer(no_args_is_help=True, add_completion=False)
 memory_app = typer.Typer(no_args_is_help=True, add_completion=False)
 vault_app = typer.Typer(no_args_is_help=True, add_completion=False)
 workspace_app = typer.Typer(no_args_is_help=True, add_completion=False)
@@ -44,6 +58,7 @@ console = Console()
 app.add_typer(kit_app, name="kit")
 app.add_typer(redact_app, name="redact")
 app.add_typer(practice_app, name="practice")
+app.add_typer(kaizen_app, name="kaizen")
 app.add_typer(memory_app, name="memory")
 app.add_typer(vault_app, name="vault")
 app.add_typer(workspace_app, name="workspace")
@@ -419,6 +434,206 @@ def practice_doctor_command() -> None:
     console.print(render_doctor(result), end="")
     if not result.ok:
         raise typer.Exit(code=1)
+
+
+@kaizen_app.command("capture")
+def kaizen_capture_command(
+    text: Annotated[str, typer.Argument(help="Idea, ask, blocker, proof item, or state change.")],
+    item_type: Annotated[
+        str,
+        typer.Option("--type", help="Kaizen type, or auto for classifier routing."),
+    ] = "auto",
+    status: Annotated[
+        str,
+        typer.Option("--status", help="Kanban status: inbox, now, waiting, blocked, parked."),
+    ] = "inbox",
+    sensitivity: Annotated[
+        str,
+        typer.Option(
+            "--sensitivity",
+            help="public-safe, internal-only, private-client, coi-gated, or auto.",
+        ),
+    ] = "auto",
+    repo: Annotated[
+        str,
+        typer.Option("--repo", help="Owning repo or lane."),
+    ] = "diagnose-to-plan",
+    source: Annotated[
+        str,
+        typer.Option("--source", help="Capture source such as codex, notion, meeting, repo."),
+    ] = "codex",
+    dtp_source_path: Annotated[
+        str,
+        typer.Option("--dtp-path", help="DTP source path backing this record."),
+    ] = "practice-os/kaizen/intake.jsonl",
+    notion_target: Annotated[
+        str,
+        typer.Option("--notion-target", help="Notion mirror surface, or auto."),
+    ] = "auto",
+    next_action: Annotated[
+        str,
+        typer.Option("--next-action", help="Smallest next action before promotion."),
+    ] = "steward triage",
+    tag: Annotated[
+        list[str] | None,
+        typer.Option("--tag", help="Repeatable lightweight tag."),
+    ] = None,
+    json_output: Annotated[
+        bool,
+        typer.Option("--json", help="Print the captured record as JSON."),
+    ] = False,
+) -> None:
+    config = load_config()
+    try:
+        result = run_kaizen_capture(
+            config,
+            text,
+            item_type=item_type,
+            status=status,
+            sensitivity=sensitivity,
+            repo=repo,
+            source=source,
+            dtp_source_path=dtp_source_path,
+            notion_target=notion_target,
+            next_action=next_action,
+            tags=tuple(tag or ()),
+        )
+    except KaizenError as error:
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(code=1) from error
+
+    if json_output:
+        typer.echo(json.dumps(result.record.to_dict(), indent=2, sort_keys=True))
+        return
+    console.print(render_capture(result, config.repo_root), end="")
+
+
+@kaizen_app.command("status")
+def kaizen_status_command(
+    status_filter: Annotated[
+        str | None,
+        typer.Option("--status", help="Limit output records to one Kanban status."),
+    ] = None,
+    limit: Annotated[
+        int,
+        typer.Option("--limit", help="Maximum records per active status bucket."),
+    ] = 5,
+    json_output: Annotated[
+        bool,
+        typer.Option("--json", help="Print machine-readable Kaizen counts and records."),
+    ] = False,
+) -> None:
+    config = load_config()
+    try:
+        status = run_kaizen_status(config, status_filter=status_filter, limit=limit)
+    except KaizenError as error:
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(code=1) from error
+
+    if json_output:
+        typer.echo(json.dumps(status.to_dict(), indent=2, sort_keys=True))
+        return
+    typer.echo(render_kaizen_status(status), nl=False)
+
+
+@kaizen_app.command("update")
+def kaizen_update_command(
+    record_id: Annotated[str, typer.Argument(help="Kaizen record ID to update.")],
+    item_type: Annotated[
+        str | None,
+        typer.Option("--type", help="New Kaizen type."),
+    ] = None,
+    status: Annotated[
+        str | None,
+        typer.Option("--status", help="New Kanban status."),
+    ] = None,
+    sensitivity: Annotated[
+        str | None,
+        typer.Option("--sensitivity", help="New sensitivity."),
+    ] = None,
+    repo: Annotated[
+        str | None,
+        typer.Option("--repo", help="New owning repo or lane."),
+    ] = None,
+    source: Annotated[
+        str | None,
+        typer.Option("--source", help="New capture source."),
+    ] = None,
+    dtp_source_path: Annotated[
+        str | None,
+        typer.Option("--dtp-path", help="New DTP source path."),
+    ] = None,
+    notion_target: Annotated[
+        str | None,
+        typer.Option("--notion-target", help="New Notion mirror surface, or auto."),
+    ] = None,
+    next_action: Annotated[
+        str | None,
+        typer.Option("--next-action", help="New smallest next action."),
+    ] = None,
+    tag: Annotated[
+        list[str] | None,
+        typer.Option("--tag", help="Replace tags with repeated values."),
+    ] = None,
+    json_output: Annotated[
+        bool,
+        typer.Option("--json", help="Print the updated record as JSON."),
+    ] = False,
+) -> None:
+    config = load_config()
+    try:
+        result = run_kaizen_update(
+            config,
+            record_id,
+            item_type=item_type,
+            status=status,
+            sensitivity=sensitivity,
+            repo=repo,
+            source=source,
+            dtp_source_path=dtp_source_path,
+            notion_target=notion_target,
+            next_action=next_action,
+            tags=tuple(tag) if tag is not None else None,
+        )
+    except KaizenError as error:
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(code=1) from error
+
+    if json_output:
+        typer.echo(json.dumps(result.record.to_dict(), indent=2, sort_keys=True))
+        return
+    console.print(render_update(result, config.repo_root), end="")
+
+
+@kaizen_app.command("mirror")
+def kaizen_mirror_command(
+    dry_run: Annotated[
+        bool,
+        typer.Option("--dry-run", help="Preview sanitized Notion rows. This is the default."),
+    ] = False,
+    apply: Annotated[
+        bool,
+        typer.Option("--apply", help="Attempt live Notion writes after reviewed dry-run."),
+    ] = False,
+    include_done: Annotated[
+        bool,
+        typer.Option("--include-done", help="Include done records in the mirror payload."),
+    ] = False,
+    limit: Annotated[
+        int,
+        typer.Option("--limit", help="Maximum rows to emit."),
+    ] = 100,
+) -> None:
+    if apply and dry_run:
+        console.print("[red]choose either --dry-run or --apply, not both[/red]")
+        raise typer.Exit(code=1)
+    config = load_config()
+    try:
+        result = run_kaizen_mirror(config, apply=apply, include_done=include_done, limit=limit)
+    except KaizenError as error:
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(code=1) from error
+    typer.echo(render_mirror(result), nl=False)
 
 
 @memory_app.command("status")

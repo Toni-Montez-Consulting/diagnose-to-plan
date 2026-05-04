@@ -25,6 +25,7 @@ def test_cli_help() -> None:
     assert "kit" in result.output
     assert "redact" in result.output
     assert "practice" in result.output
+    assert "kaizen" in result.output
     assert "vault" in result.output
     assert "workspace" in result.output
     assert "web" in result.output

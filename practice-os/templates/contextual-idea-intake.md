@@ -15,6 +15,15 @@ The goal is progressive activation: capture the idea, classify it, attach it to 
 right repo/roadmap lane, activate the right skill/template/gate, and decide the
 next artifact. Do not turn every idea into implementation immediately.
 
+Default quick capture:
+
+```powershell
+.\.venv\Scripts\python.exe -m dtp kaizen capture "..."
+```
+
+Use this full template only when the Kaizen record needs deeper classification,
+promotion, or steward review.
+
 ## Raw Idea
 
 - Date:
@@ -92,6 +101,7 @@ Choose the smallest useful next artifact.
 
 ## Steward Outcome
 
+- Kaizen record ID:
 - Captured as:
 - Owning repo:
 - Owning roadmap story:

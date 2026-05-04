@@ -30,6 +30,21 @@ Business Brain:
 - `comms/` stores private-first communication drafts, visual briefs, diagrams,
   slide outlines, and social candidates with public review gates.
 
+Kaizen Kanban:
+
+- `../docs/PRACTICE_KAIZEN_KANBAN_SYSTEM.md` is the operating contract for
+  capture, classification, routing, staging, execution, verification, recording,
+  and improvement.
+- `kaizen/intake.jsonl` is the compact machine-readable index for meaningful
+  new ideas, asks, blockers, proof candidates, repo issues, client signals,
+  corrections, and process improvements.
+- Use `dtp kaizen capture`, `dtp kaizen status`, and
+  `dtp kaizen mirror --dry-run` before relying on chat memory or Notion as the
+  active queue.
+- Notion remains a sanitized mirror. Private-client, COI-gated, secret, raw
+  transcript, payment, DSE, and unreviewed proof material stays out of mirror
+  payloads.
+
 Activation routing:
 
 - `templates/activation-routing-map.md` maps prompt shapes to the right `tm-skills` skill, DTP Practice OS skill, template, roadmap lane, proof gate, COI gate, research/eval artifact, repo touch pass, or parked automation path.

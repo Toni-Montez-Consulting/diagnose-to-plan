@@ -18,12 +18,14 @@ Use this before or after a major roadmap, planning, or implementation session. T
 - Roadmap files reviewed:
 - Backlog files reviewed:
 - Story activation files reviewed:
+- Kaizen intake reviewed:
 - Contextual intake files reviewed:
 - Notion mirror/inbox reviewed:
 
 ## Source Of Truth Check
 
 - DTP remains the practice roadmap source of truth:
+- `practice-os/kaizen/intake.jsonl` reflects meaningful new captures:
 - `docs/ROADMAP_EXECUTION_BACKLOG.md` reflects current story status:
 - Repo manifests/evidence indexes were checked where available:
 - Notion is being treated as a mirror/capture surface, not the source of truth:
@@ -65,6 +67,11 @@ Confirm every workspace repo still has a lane, trigger, and next action.
 
 Classify each new idea so it becomes an artifact instead of living in chat memory.
 
+First, capture meaningful items with `dtp kaizen capture`, then move them with
+`dtp kaizen update` instead of hand-editing JSONL. Promote only records that
+change execution order, status, evidence, proof, repo health, client state, or
+future operating behavior.
+
 Use `practice-os/templates/contextual-idea-intake.md` for any idea that could
 affect multiple repos, business strategy, public proof, client work, agent behavior,
 automation, or future roadmap priority.
@@ -74,9 +81,9 @@ captures here before promoting them into DTP. Use
 `practice-os/templates/notion-mirror-item.md` when a Notion item needs an
 explicit mirror contract.
 
-| Idea | Classification | Owning repo | Activation | Action | Gate |
-|---|---|---|---|---|---|
-|  | story |  |  |  |  |
+| Kaizen ID | Idea | Classification | Owning repo | Activation | Action | Gate |
+|---|---|---|---|---|---|---|
+|  |  | story |  |  |  |  |
 
 Allowed classifications: `story`, `template`, `eval`, `proof item`, `research radar item`, `decision record`, `repo touch pass`, `parked`.
 

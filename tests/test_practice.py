@@ -31,4 +31,7 @@ def test_practice_doctor_passes_repo_contract(repo_root: Path) -> None:
         "template business-brain-weekly-operating-packet.md" in check
         for check in result.checks
     )
+    assert any("doc PRACTICE_KAIZEN_KANBAN_SYSTEM.md" in check for check in result.checks)
+    assert any("kaizen README.md" in check for check in result.checks)
+    assert any("kaizen intake.jsonl" in check for check in result.checks)
     assert any("practice skill diagnose" in check for check in result.checks)

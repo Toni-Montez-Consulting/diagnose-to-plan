@@ -42,6 +42,13 @@ REQUIRED_TEMPLATES = (
     "correction-checklist-for-toni.md",
     "business-brain-weekly-operating-packet.md",
 )
+REQUIRED_DOCS = (
+    "PRACTICE_KAIZEN_KANBAN_SYSTEM.md",
+)
+REQUIRED_KAIZEN_FILES = (
+    "README.md",
+    "intake.jsonl",
+)
 REQUIRED_SKILLS = (
     "diagnose",
     "plan-roadmap",
@@ -72,6 +79,8 @@ def run_practice_doctor(config: DtpConfig) -> DoctorResult:
 
     _check_files(root / "policies", REQUIRED_POLICIES, "policy", checks, problems)
     _check_files(root / "templates", REQUIRED_TEMPLATES, "template", checks, problems)
+    _check_files(config.repo_root / "docs", REQUIRED_DOCS, "doc", checks, problems)
+    _check_files(root / "kaizen", REQUIRED_KAIZEN_FILES, "kaizen", checks, problems)
     _check_practice_skills(root / "skills", checks, problems)
     _check_gitignore(config.repo_root / ".gitignore", checks, problems)
 

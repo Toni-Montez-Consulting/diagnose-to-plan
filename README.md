@@ -9,6 +9,8 @@ Canonical roadmap:
 - `docs/PRACTICE_PRODUCTION_ROADMAP.md` is the source of truth for practice production work: hosted DTP, Practice OS, Client Operating Kits, redaction, COI, proof promotion, pilot sequencing, and parked ideas.
 - `docs/DOCUMENTATION_MAP.md` explains which docs in DTP, consulting, and Hub own which decisions.
 - `docs/PRACTICE_MACHINE_OPERATING_MAP.md` is the offer-led compression map for deciding which ideas are Now, Next, Later, or Hold across DTP, consulting, Hub, prompts, skills, and project repos.
+- `docs/PRACTICE_ROADMAP_HORIZONS_2026.md` is the urgent/short/mid/long horizon overlay for deciding what to do now, what to improve next, and what remains gated.
+- `docs/PRACTICE_KAIZEN_KANBAN_SYSTEM.md` is the DTP-first continuous-improvement loop for capturing and routing meaningful ideas, asks, blockers, proof candidates, repo issues, client signals, corrections, and process improvements.
 - `docs/WORKSPACE_OPERATOR_RUNBOOK.md` names safe cross-repo command classes, repo ownership, verification paths, and no-touch boundaries.
 - `docs/PUBLIC_PROOF_PROMOTION_RUNBOOK.md` is the proof movement gate before any evidence, claim, screenshot, or metric becomes public.
 - `docs/OFFER_LED_PRACTICE_PACKAGING.md` defines the first internal offer packaging source for later consulting-site copy.
@@ -24,6 +26,7 @@ Current scope:
 - `dtp note`, `dtp story`, and `dtp mentor` capture practice context without an agent call
 - `dtp index`, `dtp detect`, `dtp lesson`, `dtp recall`, and `dtp synthesize` power Extract Through Synthesis
 - `dtp kit`, `dtp redact`, and `dtp practice doctor` power the Practice OS + Client Operating Kit workflow
+- `dtp kaizen capture/update/status/mirror --dry-run` powers the lightweight intake/index loop before ideas become backlog stories, steward receipts, proof packets, engagement kits, or Notion mirror rows
 - `dtp workspace report` powers the read-only Workspace Command Center V0 report from DTP-owned manifests, evidence indexes, backlog docs, and blockers
 - `dtp web` opens a local DTP Workbench UI over the same markdown artifacts
 - `dtp vault` gives private `engagements/` artifacts their own git-backed durability path
@@ -66,6 +69,15 @@ Add a private remote later with `dtp vault init --remote <private-git-url>`, the
 ```
 
 Use `extracts/` for raw pattern extraction. Promote only redacted, reviewed judgment into `practice-os/patterns/`.
+
+Use Kaizen capture before relying on chat memory for meaningful new work:
+
+```powershell
+.\.venv\Scripts\python.exe -m dtp kaizen capture "New idea or request"
+.\.venv\Scripts\python.exe -m dtp kaizen update kzn-YYYYMMDD-slug-hash --status now
+.\.venv\Scripts\python.exe -m dtp kaizen status
+.\.venv\Scripts\python.exe -m dtp kaizen mirror --dry-run
+```
 
 ## Extract Through Synthesis
 

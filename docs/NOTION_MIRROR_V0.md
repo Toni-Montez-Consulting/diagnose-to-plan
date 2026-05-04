@@ -286,9 +286,16 @@ V0.5: Notion MCP assisted updates.
 
 V1: DTP export command.
 
-- Add a read-only `dtp notion export` or `dtp mirror notion --dry-run`.
-- Produce sanitized JSON/Markdown payloads from DTP-owned artifacts.
+- Use `dtp kaizen mirror --dry-run` as the read-only DTP export for captured
+  ideas, roadmap candidates, blockers, repo-health signals, proof queue
+  summaries, and waiting-on rows.
+- Produce sanitized JSON payloads from DTP-owned artifacts.
+- Skip `done` records by default; use `--include-done` only for deliberate
+  archive or closeout review.
+- Private/COI captures must appear only as blocked redacted stubs and must not
+  expose raw text to Notion payloads.
 - Do not write to Notion until the dry run is reviewed.
+- Keep sync state in local ignored files, not public docs.
 
 V1.0: live cockpit ergonomics.
 

@@ -28,6 +28,8 @@ Story rules:
 - Roadmap Steward review is a standing preflight/postflight for major roadmap sessions; it keeps ideas, gates, blockers, and repo coverage out of chat memory.
 - Activation routing is the standing prompt-to-process map; it tells future agents which skill, template, gate, or roadmap lane to use without creating autonomy.
 - Story activation is the standing story-to-skill/template/agent-role map; `docs/ROADMAP_STORY_ACTIVATION_INDEX.md` ties each epic/story family to the right assets and gates.
+- Kaizen Kanban capture is the standing intake/index layer. Use `docs/PRACTICE_KAIZEN_KANBAN_SYSTEM.md` and `dtp kaizen capture` for meaningful new ideas, asks, blockers, proof candidates, repo issues, client signals, corrections, and process improvements before promoting them into stories or artifacts.
+- Practice Roadmap Horizons is the standing urgent/short/mid/long overlay. Use `docs/PRACTICE_ROADMAP_HORIZONS_2026.md` when a prompt asks for comprehensive planning, feature revisits, envisioning, or sequencing beyond the current active queue.
 - Agentic performance gap review is the standing audit for whether prompts routed correctly, context was sufficient, skills triggered correctly, verification/research/safety gates happened, and misses became durable learning.
 - The Practice System Documentation Pack is the standing architecture/audit/optimization layer. Use it to understand the current system, target state, highest-risk gaps, and next optimization stories before creating more platform surface.
 - Notion Mirror and Command Center is a mobile capture and daily-cockpit layer. Use `docs/NOTION_MIRROR_V0.md` and `practice-os/templates/notion-cockpit-audit.md` before connecting Notion MCP, creating/updating Notion databases, rebuilding dashboard views, or mirroring roadmap/proof/repo-health records. Notion may capture ideas, but DTP remains the source of truth after steward triage.
@@ -48,6 +50,8 @@ Use `docs/ROADMAP_STORY_ACTIVATION_INDEX.md` before starting or advancing a stor
 Use `practice-os/templates/story-activation-contract.md` when a story needs a dedicated one-off activation record.
 
 Use `docs/CONTEXTUAL_ACTIVATION_PLAYBOOK.md` and `practice-os/templates/contextual-idea-intake.md` before promoting a new idea, design, business move, project request, development enhancement, or automation concept into a story.
+
+Use `dtp kaizen capture`, `dtp kaizen status`, and `dtp kaizen mirror --dry-run` as the lightweight operator loop before creating a larger intake artifact.
 
 Agent roles in the activation index are recommendations, not permission. Subagents, autonomous managers, global installs, hosted implementation, public proof, and write-enabled automation still require their explicit gates.
 
@@ -267,6 +271,10 @@ software delivery.
 | Private communications kit | `diagnose-to-plan` | Done | pitch kit, explainer, infographic brief, three diagrams, master deck, internal email, LinkedIn drafts, and X thread exist with public review gates | revise after first live conversations |
 | First live artifact run | `diagnose-to-plan` | Done | Greg/Cameron/Mom-Mario artifacts were converted into Cam and Greg send-ready packets, CCAAP waiting state, sanitized Notion mirrors, and a steward receipt | use client replies to update private kits first, then seed evals from the observed workflow |
 | Client reply intake loop | `diagnose-to-plan` | Done | reply intake pattern/template exist, practice doctor enforces the template, and the first Cam reply is captured without advancing blocked work | use on every Cam/Greg/CCAAP reply before Notion or calendar changes |
+| Workspace roadmap deep audit and focus queue | `diagnose-to-plan`, private `engagements` reference | Done | `practice-os/steward/2026-05-04-workspace-roadmap-deep-audit.md` and private `engagements/2026-05-04-engagement-vault-status.md` classify Now, Waiting, Parked, PR, repo, DSE, and engagement-vault state | use the audit's three-item Now queue before starting new broad workspace work |
+| Private engagement-vault durability pass | private `engagements` repo | Active next | private engagement diff is reviewed, coherent client-kit state is committed in the nested vault, and a private remote decision is recorded before any push | do not public-commit client kit material; configure/push only to an approved private remote |
+| Kaizen Kanban operating loop and CLI | `diagnose-to-plan`, Notion mirror | Done | DTP source doc, `practice-os/kaizen/` index, `dtp kaizen capture/update/status/mirror --dry-run`, private/COI redacted committed stubs, ignored raw-private state, doctor gate, tests, and Notion write guard exist | capture meaningful new ideas/asks/state changes here before promotion; live Notion apply remains gated |
+| Practice roadmap horizon overlay | `diagnose-to-plan` | Done | `docs/PRACTICE_ROADMAP_HORIZONS_2026.md` organizes urgent, short-term, mid-term, long-term, feature-enhancement, cadence, and do-not-build lanes without replacing the backlog | use before broad planning/envisioning sessions |
 | Practice memory control plane | `diagnose-to-plan` | Done | memory control doc, checkpoint template, connector-map update, and steward receipt exist | use before more Notion/QuickBooks/hosted-DTP/agent automation work |
 | Agent memory optimization plan | `diagnose-to-plan` | Done | retrieval/persistence ladder, session rehydration checklist, memory source index template, docs map, roadmap pointer, and steward receipt exist | use at the start of broad sessions before relying on chat memory or adding hosted/vector memory |
 | Practice Intelligence Control Plane V0 | `diagnose-to-plan` | Done | control-plane doc, memory-source index, tooling snapshot, Notion cockpit confirmation, and steward receipt exist without hosted app, QuickBooks OAuth, assistant runtime, vector memory, or autonomy | use as broad-session preflight before client/infrastructure work |
@@ -295,6 +303,12 @@ software delivery.
 
 Standing preflight/postflight: use `practice-os/templates/activation-routing-map.md`, `practice-os/templates/agentic-performance-gap-review.md`, and `practice-os/templates/roadmap-steward-review.md` for major roadmap sessions so the right skill/template/process is selected, agentic performance gaps are caught, and new ideas, blockers, repo lanes, gates, and no-touch boundaries are captured before memory drift.
 
+Kaizen preflight: run `dtp kaizen status --limit 5` at the start of broad work. When Toni adds a meaningful idea, ask, blocker, proof candidate, repo issue, client signal, correction, or process improvement, run `dtp kaizen capture "..."` before deciding whether it deserves a larger artifact. Use `dtp kaizen update ID --status ... --next-action ...` to move the item instead of hand-editing JSONL.
+
+Current focus overlay: use `practice-os/steward/2026-05-04-workspace-roadmap-deep-audit.md` as the current focus map. Keep active work to private engagement-vault durability, the human-gated client/proof loop, and consulting share-readiness/proof maturity. Treat DSE as a separate sensitive lane.
+
+Horizon overlay: use `docs/PRACTICE_ROADMAP_HORIZONS_2026.md` for urgent/short/mid/long planning, feature revisits, cadence, and gated future capabilities. It does not replace this backlog; it explains sequencing across time horizons.
+
 1. Use the Practice Intelligence Control Plane as the first broad-session preflight: rehydrate from DTP/git/Gmail/Calendar/Notion, route inputs to the correct artifact, and block unsafe actions before expanding infrastructure.
 2. Use the Practice Memory Control Plane before expanding infrastructure: capture new ideas, connector plans, client states, decisions, and blockers into DTP first; use Notion only as cockpit/inbox.
 3. Use the Agent Memory Optimization Plan for broad sessions: rehydrate from source-aware DTP/git/Gmail/Calendar/Notion checks before acting, and graduate to hosted/vector memory only after the persistence ladder gates are met.
@@ -314,11 +328,11 @@ Standing preflight/postflight: use `practice-os/templates/activation-routing-map
 17. Keep the Omnexus Stripe webhook-disabled alert parked per Toni until the support lane is reopened. When reopened, the live app route is reachable at `/api/webhook-stripe`, so the gate is Stripe Dashboard endpoint correction, re-enable, failed-event replay, and affected-subscription verification. Treat the Omnexus App Store approval journey as the first mobile app review-to-launch learning pattern, but do not publish Omnexus proof until proof gates pass.
 18. Capture owner-approved CCAAP baseline/after-state evidence for the first proof candidate and run redaction/permission review.
 19. Keep Claude Code and GitHub Copilot `tm-skills` discovery smoke testing on the manual back burner; runbook exists, links are healthy, and Codex discovery is verified, but external reload checks remain manual and non-blocking.
-20. Keep Hub dependency PRs #54/#56/#61 parked until one is explicitly selected with a migration/security plan; PRs #59 and #55 are merged and no longer block the queue. Older PR #52 is no longer in the active visible queue.
+20. Keep Hub dependency PR #68 parked until a targeted Tailwind 4 migration/fix plan exists; live PR checks currently fail typecheck and build-test even though GitHub marks the PR mergeable. Older Hub dependency PRs are no longer in the active visible queue.
 21. Keep Hub prompt/registry cross-validation local-first; decide private sibling-repo CI access only if it becomes worth the operational cost.
 22. Use `dtp workspace report` as a read-only steward preflight when checking repo coverage, recorded evidence, suggested gates, blockers, and missing manifest/evidence coverage; missing repo rows may carry explicit Active Next Queue blockers without guessing gates.
 23. Keep repo manifests current as lanes are touched; DTP, consulting, Architected Strength, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, CCAAP, FamilyTrips, engineering-playbook, `dse-content`, and `fitness-app` / Omnexus now have DTP-owned manifests/evidence indexes.
-24. Keep DSE proof/reuse blocked until it is explicitly selected with COI-aware scope, live repo verification, permission, redaction, reviewer, evidence, and caveat gates.
+24. Keep DSE proof/reuse blocked until it is explicitly selected with COI-aware scope, live repo verification, permission, redaction, reviewer, evidence, and caveat gates. Live audit on 2026-05-04 found `dse-content/dev` ahead 4 with dirty Azure readiness work and 64 open PRs, so DSE cleanup needs its own sensitive triage pass.
 25. Keep FAOS implementation parked after the 2026-05-03 readiness review; next FAOS action is a separate local command/version verification pass, not repo/service creation.
 
 Closed on 2026-04-30: GitHub Enterprise org-migration closeout for Omnexus PR #559. The PR merged, local `fitness-app/main` was aligned to `origin/main`, and represented local org-migration branches were deleted.
