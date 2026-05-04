@@ -163,4 +163,3 @@ Before anything moves into `consulting`:
 Offer copy can mention capabilities before proof is fully public, but it must not claim outcomes, approvals, client wins, or product maturity beyond the reviewed proof.
 
 Use `docs/OFFER_LED_PRACTICE_PACKAGING.md` to decide which proof would strengthen an offer. Use this runbook to decide whether that proof can be public.
-

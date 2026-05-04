@@ -85,4 +85,3 @@ Use the narrowest safe path:
 2. Write a DTP plan or runbook.
 3. Keep the idea staged rather than activated.
 4. Ask Toni only when the remaining choice is about business intent, proof permission, money, privacy, legal/COI risk, or irreversible operations.
-
