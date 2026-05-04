@@ -14,6 +14,11 @@ The consulting system is a multi-repo Practice OS, not a single app.
 
 DTP is the private operating brain. Consulting is the public storefront and proof surface. Hub is the runtime intake and operator console layer. `tm-skills` is the reusable coding-agent skill layer. Project repos remain separate product/client tracks with their own gates, proof rules, and delivery context.
 
+The active compression model is the Offer-Led Practice Machine in
+`docs/PRACTICE_MACHINE_OPERATING_MAP.md`: public offer first, DTP as private
+source of truth, Hub as runtime support, reusable patterns as supporting
+infrastructure, and project repos as staged proof/reference lanes.
+
 The current system is designed to reduce reliance on memory:
 
 - Roadmap intent lives in DTP roadmap docs.
@@ -169,6 +174,11 @@ Public proof is blocked unless the claim has:
 - redaction status
 - reviewer status
 
+The operational runbook for this flow is
+`docs/PUBLIC_PROOF_PROMOTION_RUNBOOK.md`. It reuses the existing Practice OS
+proof/redaction templates and is required before proof moves into consulting
+copy or assets.
+
 ## Development Workflow
 
 ```mermaid
@@ -249,7 +259,7 @@ Current guarantees:
 | Private engagement data | stays in ignored `engagements/`, a private vault, or future hosted private DTP |
 | Public proof | only after evidence, permission, redaction, reviewer, and caveat approval |
 | Hosted DTP | design accepted, implementation still gated until real pilot records exist |
-| Hub | runtime intake/support layer, not DTP, CRM, billing, or client portal |
+| Hub | runtime intake/support layer, not DTP, CRM, billing, or client portal; current-state surfaces are classified in `C:\Users\tonimontez\hub\docs\HUB_RUNTIME_CURRENT_STATE.md` |
 | Consulting | public storefront/proof surface, not private operating store |
 | `tm-skills` | instruction/skill layer, not autonomous manager |
 | Agent automation | no unsupervised repo edits, public proof, client communication, or production writes |

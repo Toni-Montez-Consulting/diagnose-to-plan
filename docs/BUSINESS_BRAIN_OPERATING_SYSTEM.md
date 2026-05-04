@@ -107,6 +107,21 @@ durable operating state.
 The Mom nonprofit / CCAAP stream remains separate and should not be folded into
 this slice except through existing roadmap boundaries.
 
+## Current Additive Workstreams
+
+- Business admin overhead now has a DTP-first operating lane in
+  `docs/BUSINESS_ADMIN_OPERATING_SYSTEM.md`. Use it for Google Workspace,
+  Calendar/Meet, Apple Reminders capture, LLC readiness, EIN/banking/tax setup
+  prompts, contracts, insurance, brand assets, and operating cadence before
+  mirroring any clean status to Notion or a public/admin launcher.
+- Reusable service patterns now live first in
+  `docs/INTERNAL_OFFER_REPERTOIRE_CATALOG.md`. Use it when work Toni builds for
+  himself or a client could become a future offer, including brand kits,
+  mission/vision messaging, Apple Reminders capture bridges, intake systems,
+  admin rooms, command rooms, launch hardening, and follow-up queues.
+- Notion remains a cockpit and mobile mirror. DTP owns the source artifacts,
+  decision gates, evidence notes, and private/public boundary.
+
 ## Communication Rules
 
 Human-facing artifacts must classify destination first:
