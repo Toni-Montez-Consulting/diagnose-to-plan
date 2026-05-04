@@ -202,6 +202,12 @@ Current brand language:
 Durable routing:
 
 - Use the logo kit as internal asset proof and brand-system source material.
+- Consulting public site promoted the current slogan, descriptor, header
+  wordmark, footer mark, favicon, and Open Graph image from this kit on
+  2026-05-04.
+- Architected Strength and other sibling sites are not automatically updated
+  from this lane; each brand surface needs its own reopened scope and public
+  boundary check.
 - Do not publish new proof claims just because the brand kit exists.
 - If this becomes a client offer, route it through
   `docs/INTERNAL_OFFER_REPERTOIRE_CATALOG.md` first.
