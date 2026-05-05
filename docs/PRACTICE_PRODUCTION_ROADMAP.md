@@ -109,11 +109,13 @@ The Practice System Documentation Pack is the architecture and audit layer for t
 - Practice OS includes a Notion Mirror item template and a Notion Cockpit Audit template, and DTP includes `docs/NOTION_MIRROR_V0.md` so phone-captured ideas and Notion roadmap views can mirror DTP without taking over source-of-truth ownership.
 - Hosted DTP Phase 0 now has an accepted design-boundary doc at `docs/HOSTED_DTP_PHASE_0.md`; hosted implementation remains gated until a separate implementation request and real records exist.
 - Practice OS now includes proof/redaction templates for proof packets, redaction queue items, permission review, evidence-source review, public claim review, and asset inventory.
+- DTP now includes `docs/PRACTICE_PROOF_QUEUE_INDEX.md` and `docs/OFFER_TO_PROOF_MATRIX.md` so proof candidates and V0 offer copy claims are reviewed before any consulting public-copy refresh.
 - DTP now includes the Offer-Led Practice Machine compression docs:
   `docs/PRACTICE_MACHINE_OPERATING_MAP.md`,
   `docs/WORKSPACE_OPERATOR_RUNBOOK.md`,
   `docs/PUBLIC_PROOF_PROMOTION_RUNBOOK.md`, and
   `docs/OFFER_LED_PRACTICE_PACKAGING.md`.
+- DTP now includes `docs/WORKSPACE_DASHBOARD_READONLY.md` and `docs/ROADMAP_SYNTHESIS_GATE_LEDGER.md` so workspace visibility and blocked/speculative synthesis ideas stay read-only and gated.
 - The first DTP repo manifest/evidence-index pilot lives in `practice-os/efficiency/`.
 - `docs/ROADMAP_EXECUTION_BACKLOG.md` maps roadmap items into epics, stories, statuses, Done gates, and next actions.
 - `docs/PRACTICE_SYSTEM_ARCHITECTURE.md`, `docs/PRACTICE_SYSTEM_FUTURE_STATE.md`, `docs/PRACTICE_SYSTEM_AUDIT_AND_GAP_REVIEW.md`, and `docs/PRACTICE_SYSTEM_OPTIMIZATION_PLAN.md` document the current system, future system, gap review, and optimization path for the whole consulting operating model.

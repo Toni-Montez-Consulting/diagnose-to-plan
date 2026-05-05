@@ -238,6 +238,10 @@ The next consulting-site pass should:
 | Launch / Proof Hardening Sprint | Omnexus launch/review journey; Demario launch/admin hardening | strong internal evidence, public permission/review still needed |
 | Client Command Room / Workflow System Sprint | DeMario command room and CCAAP owner workflow | permission and redaction gates still needed |
 
+Use `docs/OFFER_TO_PROOF_MATRIX.md` for the active proof-readiness matrix
+before changing public consulting copy. This source keeps the offer thesis; the
+matrix decides which exact claims are currently eligible.
+
 ## Decision Default
 
 When a new idea could become either an offer, a feature, a proof packet, or platform work:

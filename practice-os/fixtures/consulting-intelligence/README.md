@@ -50,6 +50,9 @@ approves more detail.
 - The first live operating-loop seed is Hosted DTP round trip: live app records
   should preserve Auth/RLS, source pointers, classification, proof/redaction
   gates, and markdown fallback before automation widens.
+- `real-reply-seed-queue.md` names the next Cam, Greg, CCAAP, and weekly
+  Business Brain reply patterns that should become sanitized eval cases only
+  after real replies arrive.
 
 ## Promotion Rule
 
