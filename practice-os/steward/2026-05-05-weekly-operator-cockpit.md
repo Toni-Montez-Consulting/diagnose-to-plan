@@ -16,7 +16,7 @@ Live git refresh at intake:
 Straight-and-narrow queue:
 
 1. DeMario launch-feedback social/proof packet: draft, evidence, permission, redaction, caveat, and final channel copy before posting.
-2. Omnexus subscription-review resubmission: inspect exact App Store Connect status/reviewer message, then prepare a new-version-plus-subscriptions path if these are first subscriptions.
+2. Omnexus subscription-review resubmission: fill `fitness-app/docs/ops/app-store-subscription-resubmission-checklist-2026-05-05.md` from exact App Store Connect status/reviewer detail, then decide manual resubmission versus code branch.
 3. Consulting public-site fix/readiness pass: Hub-first intake, route/build checks, visual QA, proof posture, and Steel Ledger preservation before redesign.
 4. Architected Strength P0/P1 finish/fix pass: public signal, claim hygiene, positioning, craft, and repo-local gates before assistant-pattern work.
 

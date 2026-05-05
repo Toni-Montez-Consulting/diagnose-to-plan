@@ -74,9 +74,9 @@ Priority impact:
 1. First: draft a DeMario LinkedIn/social proof packet with owner-approved
    wording, source/testimonial evidence, screenshot approvals, redaction,
    launch context, caveat, and final channel copy before posting.
-2. Second: inspect Omnexus App Store Connect subscription statuses and reviewer
-   message, then prepare a new-version-plus-subscriptions resubmission path if
-   these are first subscriptions.
+2. Second: fill `fitness-app/docs/ops/app-store-subscription-resubmission-checklist-2026-05-05.md`
+   from Omnexus App Store Connect subscription statuses and reviewer message,
+   then choose manual resubmission or a code branch.
 3. Third: run the consulting public-site fix/readiness pass while preserving
    Steel Ledger and Hub-first intake.
 4. Fourth: run the Architected Strength P0/P1 finish/fix pass while preserving

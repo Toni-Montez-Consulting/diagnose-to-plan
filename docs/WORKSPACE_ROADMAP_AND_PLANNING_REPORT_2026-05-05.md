@@ -83,7 +83,7 @@ Updated order:
 | Order | Lane | Next action | Gate |
 |---|---|---|---|
 | 1 | DeMario launch-feedback social/proof packet | Draft LinkedIn/social copy and evidence checklist. | Mario-approved wording, testimonial/source evidence, redacted screenshots, launch context, caveat, reviewer, human posting. |
-| 2 | Omnexus subscription-review resubmission | Inspect App Store Connect status/reviewer message and prepare version-plus-subscriptions checklist if these are first subscriptions. | Metadata, screenshot, availability, review notes, product IDs, and build/version attachment are verified before code work. |
+| 2 | Omnexus subscription-review resubmission | Fill `fitness-app/docs/ops/app-store-subscription-resubmission-checklist-2026-05-05.md` from App Store Connect status/reviewer detail, then decide manual resubmission versus code branch. | Metadata, screenshot, availability, review notes, product IDs, and build/version attachment are verified before code work. |
 | 3 | Consulting public-site fix/readiness | Run focused site QA and fix pass. | Build/route/visual/doctor/matrix evidence and no new proof claims without DTP proof gates. |
 | 4 | Architected Strength finish/fix | Inspect current site against repo roadmap and implement P0/P1 public-signal polish. | Repo-local gates plus clear boundary from consulting and employer/private material. |
 
