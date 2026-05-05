@@ -32,8 +32,20 @@ ITEM_TYPES = (
     "research",
     "tooling",
 )
-STATUSES = ("inbox", "now", "next", "waiting", "blocked", "parked", "done")
+STATUSES = (
+    "inbox",
+    "now",
+    "next",
+    "waiting",
+    "blocked",
+    "parked",
+    "done",
+    "cancelled",
+    "superseded",
+    "discarded",
+)
 ACTIVE_STATUSES = ("now", "next", "inbox", "waiting", "blocked", "parked")
+TERMINAL_STATUSES = ("done", "cancelled", "superseded", "discarded")
 SENSITIVITIES = ("auto", "public-safe", "internal-only", "private-client", "coi-gated")
 PRIVATE_SENSITIVITIES = {"private-client", "coi-gated"}
 MIRRORABLE_SENSITIVITIES = {"public-safe", "internal-only"}
@@ -86,6 +98,10 @@ class KaizenRecord:
     next_action: str
     tags: tuple[str, ...]
     raw_ref: str = ""
+    closed_at: str = ""
+    closure_reason: str = ""
+    evidence_refs: tuple[str, ...] = ()
+    superseded_by: str = ""
 
     def to_dict(self) -> dict[str, Any]:
         data: dict[str, Any] = {
@@ -105,6 +121,14 @@ class KaizenRecord:
         }
         if self.raw_ref:
             data["raw_ref"] = self.raw_ref
+        if self.closed_at:
+            data["closed_at"] = self.closed_at
+        if self.closure_reason:
+            data["closure_reason"] = self.closure_reason
+        if self.evidence_refs:
+            data["evidence_refs"] = list(self.evidence_refs)
+        if self.superseded_by:
+            data["superseded_by"] = self.superseded_by
         return data
 
     @classmethod
@@ -124,6 +148,10 @@ class KaizenRecord:
             next_action=str(data["next_action"]),
             tags=tuple(str(tag) for tag in data.get("tags", ())),
             raw_ref=str(data.get("raw_ref", "")),
+            closed_at=str(data.get("closed_at", "")),
+            closure_reason=str(data.get("closure_reason", "")),
+            evidence_refs=tuple(str(ref) for ref in data.get("evidence_refs", ())),
+            superseded_by=str(data.get("superseded_by", "")),
         )
 
 
@@ -192,6 +220,10 @@ def run_kaizen_capture(
     notion_target: str = "auto",
     next_action: str = "steward triage",
     tags: tuple[str, ...] = (),
+    closed_at: str = "",
+    closure_reason: str = "",
+    evidence_refs: tuple[str, ...] = (),
+    superseded_by: str = "",
     captured_at: datetime | None = None,
 ) -> CaptureResult:
     cleaned = _clean_text(text)
@@ -222,6 +254,10 @@ def run_kaizen_capture(
         next_action=next_action.strip() or "steward triage",
         tags=tuple(tag.strip() for tag in tags if tag.strip()),
         raw_ref=raw_ref,
+        closed_at=_normalized_closed_at(normalized_status, captured, closed_at),
+        closure_reason=closure_reason.strip(),
+        evidence_refs=tuple(ref.strip() for ref in evidence_refs if ref.strip()),
+        superseded_by=superseded_by.strip(),
     )
 
     index_path = kaizen_index_path(config)
@@ -243,6 +279,10 @@ def run_kaizen_update(
     notion_target: str | None = None,
     next_action: str | None = None,
     tags: tuple[str, ...] | None = None,
+    closed_at: str | None = None,
+    closure_reason: str | None = None,
+    evidence_refs: tuple[str, ...] | None = None,
+    superseded_by: str | None = None,
 ) -> UpdateResult:
     cleaned_id = record_id.strip()
     if not cleaned_id:
@@ -294,6 +334,14 @@ def run_kaizen_update(
             title=_stored_title(record.text, new_type, new_sensitivity),
             text=_stored_text(record.text, new_sensitivity),
             raw_ref=raw_ref,
+            closed_at=_update_closed_at(record, new_status, closed_at),
+            closure_reason=_optional_text(closure_reason, record.closure_reason),
+            evidence_refs=(
+                tuple(ref.strip() for ref in evidence_refs if ref.strip())
+                if evidence_refs is not None
+                else record.evidence_refs
+            ),
+            superseded_by=_optional_text(superseded_by, record.superseded_by),
         )
         updated = new_record
         rewritten.append(new_record)
@@ -356,7 +404,7 @@ def run_kaizen_mirror(
     blocked: list[dict[str, Any]] = []
     skipped_done = 0
     for record in iter_kaizen_records(config):
-        if record.status == "done" and not include_done:
+        if record.status in TERMINAL_STATUSES and not include_done:
             skipped_done += 1
             continue
         if len(allowed) + len(blocked) >= normalized_limit:
@@ -436,6 +484,9 @@ def render_status(status: KaizenStatus) -> str:
             f"blocked={status.counts.get('blocked', 0)}, "
             f"parked={status.counts.get('parked', 0)}, "
             f"done={status.counts.get('done', 0)}, "
+            f"cancelled={status.counts.get('cancelled', 0)}, "
+            f"superseded={status.counts.get('superseded', 0)}, "
+            f"discarded={status.counts.get('discarded', 0)}, "
             f"total={status.counts.get('total', 0)}"
         ),
         f"Limit: {status.limit}",
@@ -495,6 +546,8 @@ def enforce_sensitive_storage(sensitivity: str, text: str) -> str:
 
 def normalize_status(status: str) -> str:
     normalized = status.strip().lower().replace("-", "_")
+    if normalized == "canceled":
+        normalized = "cancelled"
     if normalized not in STATUSES:
         raise KaizenError(f"unknown kaizen status: {status}")
     return normalized
@@ -504,6 +557,8 @@ def normalize_notion_target(notion_target: str, item_type: str, status: str) -> 
     target = notion_target.strip()
     if target and target.lower() != "auto":
         return target
+    if status in TERMINAL_STATUSES:
+        return "Archive"
     if status == "now":
         return "Today"
     if item_type == "proof":
@@ -675,6 +730,27 @@ def _optional_text(value: str | None, fallback: str) -> str:
     if value is None:
         return fallback
     return value.strip() or fallback
+
+
+def _normalized_closed_at(status: str, captured_at: datetime, closed_at: str) -> str:
+    cleaned = closed_at.strip()
+    if cleaned:
+        return cleaned
+    if status in TERMINAL_STATUSES:
+        return captured_at.isoformat(timespec="seconds")
+    return ""
+
+
+def _update_closed_at(
+    record: KaizenRecord,
+    status: str,
+    closed_at: str | None,
+) -> str:
+    if closed_at is not None:
+        return closed_at.strip()
+    if status in TERMINAL_STATUSES:
+        return record.closed_at or datetime.now(UTC).isoformat(timespec="seconds")
+    return ""
 
 
 def _normalize_limit(limit: int) -> int:
