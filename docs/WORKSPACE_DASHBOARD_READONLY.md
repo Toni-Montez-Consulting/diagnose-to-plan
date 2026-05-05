@@ -99,6 +99,13 @@ npm run package:vsix
 code --install-extension dist/dtp-workspace-dashboard.vsix --force
 ```
 
+On Toni's Windows machine, if the `code` shim does not accept
+`--install-extension`, use the VS Code command shim directly:
+
+```powershell
+& "$env:LOCALAPPDATA\Programs\Microsoft VS Code\bin\code.cmd" --install-extension dist\dtp-workspace-dashboard.vsix --force
+```
+
 The extension does not own roadmap state. It only finds the `diagnose-to-plan`
 workspace folder, opens a VS Code webview panel, and manually runs the
 read-only DTP dashboard command when Toni invokes refresh.

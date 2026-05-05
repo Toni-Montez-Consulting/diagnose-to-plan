@@ -315,3 +315,32 @@ Next review trigger:
 - A new source thesis/spec/schema file is added.
 - Hosted DTP/schema work resumes.
 - A future implementation prompt relies on the newly referenced source paths.
+
+## 2026-05-05: Systems Health Review Skill Routed
+
+Source:
+
+- `docs/TM_SKILLS_IMPLEMENTATION_ROADMAP.md`
+- `practice-os/templates/activation-routing-map.md`
+
+Change:
+
+- Registered `systems-health-review` as a Phase 1 `tm-skills` diagnostic lane
+  in DTP roadmap surfaces.
+- Routed systems-health prompts to `tm-skills/systems-health-review`.
+- Documented Toni's Windows VS Code extension install fallback for the local
+  workspace dashboard.
+
+Priority impact:
+
+- Keep systems-health review as a review-first diagnostic skill, not a rewrite
+  mandate.
+- Keep DTP as the router/source map while the actual skill implementation lives
+  in `tm-skills`.
+- Keep the dashboard extension local, manual-refresh, and no-server.
+
+Next review trigger:
+
+- The `tm-skills` systems-health-review work is committed and validated.
+- A repo or client operating system asks for a weakest-system review.
+- The dashboard extension needs reinstall or machine-specific setup notes.

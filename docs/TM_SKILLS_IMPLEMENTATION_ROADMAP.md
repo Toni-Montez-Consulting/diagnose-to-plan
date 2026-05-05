@@ -119,7 +119,8 @@ tm-skills/
 │   ├── frontend-craft/
 │   ├── backend-design/
 │   ├── testing-ladder/
-│   └── delivery-baseline/
+│   ├── delivery-baseline/
+│   └── systems-health-review/
 ├── scripts/
 │   ├── doctor.ps1
 │   ├── install.ps1
@@ -227,6 +228,27 @@ Expected output:
 - commit/push/deploy state;
 - next manual gates;
 - links or paths to release/support/proof evidence.
+
+### systems-health-review
+
+Use before building more on top of an app, feature, workflow, automation, AI assistant, internal consulting system, or client operating system.
+
+Default behavior:
+
+- inspect the real system first;
+- rank the weakest system areas by evidence and urgency;
+- cover intake, digestion, circulation, brain, nervous system, immune system, muscle, memory, recovery, and homeostasis;
+- prefer the smallest useful fix over a rewrite;
+- include handoff and maintainability notes for client or internal operating systems.
+
+Expected output:
+
+- systems health summary;
+- ranked weakest systems;
+- ten-lens system map;
+- recommended sequence;
+- work not to do yet;
+- handoff notes for docs, runbooks, decision logs, README, AGENTS.md, or operating manuals.
 
 ## Always-On Instruction Floor
 
@@ -345,7 +367,7 @@ This makes the skills iterate on real usage instead of becoming frozen commandme
 1. Create the separate `tm-skills` repo.
 2. Add `README.md`, root `AGENTS.md`, root `CLAUDE.md`, and the two decision records.
 3. Add `instructions/global/AGENTS.md`, `CLAUDE.md`, and `copilot-instructions.md`.
-4. Create the five Phase 1 skill folders.
+4. Create the registered Phase 1 skill folders.
 5. Author concise `SKILL.md` files with strong descriptions and practical workflows.
 6. Port any existing mature PR review prompt into `review-checklist` if present.
 7. Add trigger evals and expected-output notes.
@@ -412,7 +434,7 @@ Expected behavior: the agent should pause and route to the DTP COI screen before
 ## Acceptance Criteria
 
 - `tm-skills` exists as a separate repo.
-- The five Phase 1 skills exist and are discoverable.
+- The registered Phase 1 skills exist and are discoverable.
 - No Phase 1 `compliance-coi` skill exists.
 - Always-on global instructions include the Microsoft/COI floor and point to DTP.
 - Doctor passes before global install.
@@ -454,6 +476,11 @@ Updated on 2026-05-01:
 - Added a custom-interface craft eval fixture and refreshed the `frontend-craft` manifest review date.
 - DTP now owns the canonical Custom Interface Craft Standard and required craft-brief template; `tm-skills` carries the reusable agent behavior.
 
+Updated on 2026-05-05:
+
+- Added `systems-health-review` as a Phase 1 diagnostic skill for practical weakest-system reviews across intake, data flow, decision logic, observability, protection, memory, recovery, and steady state.
+- Updated the DTP activation routing map so systems-health prompts route to `tm-skills/systems-health-review`.
+
 ## Deferred
 
 - Multi-user skill product.
@@ -461,12 +488,12 @@ Updated on 2026-05-01:
 - Self-rewriting skills.
 - Skill telemetry beyond local evals and `MISFIRES.md`.
 - DTP `skills-keeper` automation before there is real misfire/update history.
-- Stack overlays before the five base skills prove useful.
+- Stack overlays before the base skills prove useful.
 
 ## Implementation Prompt For A Future Chat
 
 Paste this into a fresh chat from the DTP repo:
 
 ```text
-Please implement the tm-skills roadmap. Start by reading diagnose-to-plan/docs/PRACTICE_PRODUCTION_ROADMAP.md, diagnose-to-plan/docs/DOCUMENTATION_MAP.md, diagnose-to-plan/docs/CLI_VERIFICATION_AUTOMATION_PATTERN.md, and diagnose-to-plan/docs/TM_SKILLS_IMPLEMENTATION_ROADMAP.md. Then create the separate tm-skills repo, scaffold the five Phase 1 skills, add evals, MISFIRES.md, manifest.json, PowerShell doctor/install/freshness scripts, and run the doctor before any global install. Do not overwrite existing global instruction files or legacy skill folders. Keep DTP as the consulting Practice OS and tm-skills as the cross-repo SDLC skills layer. Make testing-ladder and delivery-baseline aware of repo-local doctor/matrix/verification/evidence gates. After implementation, summarize validation, repo state, evidence artifacts, advisory failures, hard failures, and any manual install steps that remain.
+Please implement the tm-skills roadmap. Start by reading diagnose-to-plan/docs/PRACTICE_PRODUCTION_ROADMAP.md, diagnose-to-plan/docs/DOCUMENTATION_MAP.md, diagnose-to-plan/docs/CLI_VERIFICATION_AUTOMATION_PATTERN.md, and diagnose-to-plan/docs/TM_SKILLS_IMPLEMENTATION_ROADMAP.md. Then create the separate tm-skills repo, scaffold the registered Phase 1 skills, add evals, MISFIRES.md, manifest.json, PowerShell doctor/install/freshness scripts, and run the doctor before any global install. Do not overwrite existing global instruction files or legacy skill folders. Keep DTP as the consulting Practice OS and tm-skills as the cross-repo SDLC skills layer. Make testing-ladder and delivery-baseline aware of repo-local doctor/matrix/verification/evidence gates. After implementation, summarize validation, repo state, evidence artifacts, advisory failures, hard failures, and any manual install steps that remain.
 ```

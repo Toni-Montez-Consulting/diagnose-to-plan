@@ -22,6 +22,12 @@ npm run package:vsix
 code --install-extension dist/dtp-workspace-dashboard.vsix --force
 ```
 
+If the `code` shim rejects `--install-extension` on Toni's Windows machine, use:
+
+```powershell
+& "$env:LOCALAPPDATA\Programs\Microsoft VS Code\bin\code.cmd" --install-extension dist\dtp-workspace-dashboard.vsix --force
+```
+
 Open `C:\Users\tonimontez\toni-consulting-ops.code-workspace`, then run
 `DTP: Open Workspace Dashboard` from the command palette.
 
