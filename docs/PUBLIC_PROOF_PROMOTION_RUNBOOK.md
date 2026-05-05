@@ -34,7 +34,8 @@ Optional supporting templates:
 Public proof must move through this path:
 
 ```text
-private evidence
+proof candidate queue
+-> private evidence
 -> asset inventory
 -> evidence source review
 -> permission review
@@ -46,6 +47,9 @@ private evidence
 ```
 
 If any step fails, the proof remains private, internal-only, or parked.
+
+Use `docs/PRACTICE_PROOF_QUEUE_INDEX.md` to decide which candidate is active
+before starting the path.
 
 ## Minimum Required Fields
 

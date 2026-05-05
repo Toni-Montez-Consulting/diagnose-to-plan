@@ -112,3 +112,9 @@ The V0 report is accepted when `dtp workspace report` can answer:
 - What should happen next?
 
 The live runner stays later until the read-only report proves value and a separate boundary decision accepts any live git, CI, or command-execution behavior.
+
+## Static Dashboard Add-On
+
+`docs/WORKSPACE_DASHBOARD_READONLY.md` defines the allowed dashboard view from
+`dtp workspace report --json`. It may render a static summary, but it inherits
+this document's no-live-runner boundary.

@@ -15,3 +15,4 @@ Initial pattern files:
 - `vendor-follow-up-bottleneck.md`
 - `proposal-turnaround-bottleneck.md`
 - `mobile-app-review-to-launch.md` (draft from Omnexus App Store approval learning; keep internal until reviewed)
+- `admin-surface-operating-room.md` (draft pattern for public proof surface outside, protected operating room inside, and handoff record after shipping)

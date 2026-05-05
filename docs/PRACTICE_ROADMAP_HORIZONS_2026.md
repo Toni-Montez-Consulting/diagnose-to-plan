@@ -36,11 +36,11 @@ automation surfaces only when repeated manual pain proves the need.
 
 | Lane | Current state | Next action | Boundary |
 |---|---|---|---|
-| DTP control plane | Kaizen, deep audit, existing-system map, docs, CLI, and tests are ready for packaging | commit and push safe public DTP work after validation | public repo; no private raw text |
+| DTP control plane | Kaizen, deep audit, existing-system map, proof queue, offer/proof matrix, gate ledger, docs, CLI, and tests are ready for packaging | validate safe public DTP work and use proof queue before public copy | public repo; no private raw text |
 | Engagement vault | private nested repo has active changes and no configured remote | commit coherent private vault state locally; push only after approved private remote exists | private-client |
 | CCAAP | waiting on owner inputs | wait; update private kit first if replies arrive | private-client; proof gated |
-| Consulting | share-ready/proof-maturity lane is next | run routes/build/doctor/matrix/manual visual QA before redesign | public-safe only |
-| Hub | PR #68 is the active visible dependency blocker | keep parked until Tailwind 4 fix/migration plan exists | runtime support |
+| Consulting | share-ready/proof-maturity lane now has `/start` qualification and no-widget assistant QA | run build, assistant QA, routes, doctor, matrix, and manual visual QA before redesign | public-safe only |
+| Hub | PR #68 is the active visible dependency blocker and now has a targeted docs-only plan | execute Hub-local Tailwind 4 fix/migration plan only when activated | runtime support |
 | DSE | sensitive lane | do not touch without explicit COI-aware scope and live validation | COI-gated |
 
 ## Urgent: 1-7 Days
@@ -54,16 +54,18 @@ automation surfaces only when repeated manual pain proves the need.
 - Do not build around waiting states. CCAAP waits on owner inputs; Cam/Greg wait
   on replies; DSE stays COI-gated; Hub PR #68 stays parked.
 - Make consulting share-ready before redesign: verify intake posture, route
-  coverage, build/doctor/matrix checks, manual visual QA, and proof readiness.
+  coverage, assistant QA, build/doctor/matrix checks, manual visual QA, and
+  proof readiness.
 
 ## Short Term: 2-4 Weeks
 
 - Make the client loop repeatable: reply intake, owner-call extraction, weekly
   Business Brain packets, Kaizen updates, and private-kit-first status changes.
-- Turn proof into a pipeline: evidence, permission, redaction, reviewer, caveat,
-  and proof packet before any consulting copy change.
+- Turn proof into a pipeline: proof queue, evidence, permission, redaction,
+  reviewer, caveat, and proof packet before any consulting copy change.
 - Promote offer clarity from real delivery: use offer-led packaging and the
-  internal offer repertoire before public language changes.
+  offer-to-proof matrix plus internal offer repertoire before public language
+  changes.
 - Harden Kaizen V1 with lightweight saved views for Today, Waiting, Proof Queue,
   and Repo Health; keep Notion as dry-run mirror until one reviewed safe apply is
   explicitly approved.
