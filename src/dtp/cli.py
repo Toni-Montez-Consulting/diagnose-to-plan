@@ -40,6 +40,7 @@ from dtp.commands.vault import (
     run_vault_status,
 )
 from dtp.commands.web import run_workbench_server
+from dtp.commands.workspace_dashboard import DashboardSurface, run_workspace_dashboard
 from dtp.commands.workspace_report import render_workspace_report, run_workspace_report
 from dtp.config import load_config
 from dtp.extract.indexer import ExtractError
@@ -707,6 +708,26 @@ def workspace_report_command(
         typer.echo(json.dumps(report.to_dict(), indent=2))
         return
     typer.echo(render_workspace_report(report), nl=False)
+
+
+@workspace_app.command("dashboard")
+def workspace_dashboard_command(
+    out: Annotated[
+        Path,
+        typer.Option("--out", help="Static HTML dashboard output path."),
+    ] = Path("docs/workspace-dashboard.html"),
+    surface: Annotated[
+        DashboardSurface,
+        typer.Option("--surface", help="Dashboard surface style."),
+    ] = DashboardSurface.browser,
+) -> None:
+    config = load_config()
+    result = run_workspace_dashboard(config, output_path=out, surface=surface)
+    console.print(f"[green]workspace dashboard written[/green] {result.path}")
+    console.print(
+        f"repos={result.repo_count}; active_items={result.active_item_count}; "
+        f"proof_candidates={result.proof_candidate_count}"
+    )
 
 
 @app.command("web")

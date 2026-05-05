@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Practice Work Dashboard</title>
+  <style>
+    
+    :root {
+      color-scheme: light;
+      --ink: #1f2933;
+      --muted: #5f6b7a;
+      --line: #d8dee8;
+      --paper: #f6f4ef;
+      --panel: #ffffff;
+      --accent: #315f72;
+      --ok: #1f7a57;
+      --warn: #a15c12;
+      --risk: #9c2f3f;
+      --hold: #665c92;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system,
+        BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.45;
+    }
+    header, main { width: min(1480px, calc(100vw - 32px)); margin: 0 auto; }
+    header { padding: 28px 0 18px; border-bottom: 1px solid var(--line); }
+    h1 { margin: 0; font-size: clamp(28px, 4vw, 48px); letter-spacing: 0; }
+    h2 { margin: 0 0 12px; font-size: 18px; letter-spacing: 0; }
+    h3 { margin: 0 0 6px; font-size: 15px; letter-spacing: 0; }
+    p { margin: 0; }
+    a { color: var(--accent); }
+    .meta { color: var(--muted); margin-top: 6px; max-width: 900px; }
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 10px;
+      margin: 18px 0 0;
+    }
+    .metric {
+      min-height: 82px;
+      padding: 12px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+    .metric strong { display: block; font-size: 26px; line-height: 1; margin-bottom: 8px; }
+    .metric span { color: var(--muted); font-size: 13px; }
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(360px, .95fr);
+      gap: 16px;
+      align-items: start;
+      margin: 18px 0 36px;
+    }
+    section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      overflow: hidden;
+    }
+    .stack { display: grid; gap: 12px; }
+    .status-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+    }
+    .lane {
+      border-left: 4px solid var(--accent);
+      padding: 10px 10px 12px;
+      background: #fdfbf7;
+      min-height: 170px;
+    }
+    .lane.now { border-color: var(--ok); }
+    .lane.next { border-color: var(--accent); }
+    .lane.waiting { border-color: var(--warn); }
+    .lane.blocked { border-color: var(--risk); }
+    .lane.parked { border-color: var(--hold); }
+    .item { padding: 10px 0; border-top: 1px solid var(--line); }
+    .item:first-of-type { border-top: 0; }
+    .title { font-weight: 700; }
+    .small { color: var(--muted); font-size: 12px; margin-top: 4px; }
+    table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+    th, td {
+      padding: 9px 8px;
+      border-top: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+      overflow-wrap: anywhere;
+      font-size: 13px;
+    }
+    th { color: var(--muted); font-weight: 700; border-top: 0; }
+    .status-pill {
+      display: inline-block;
+      padding: 2px 7px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #f8fafc;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .boundary {
+      margin-top: 12px;
+      padding: 12px;
+      background: #fdfbf7;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    @media (max-width: 900px) {
+      header, main { width: min(100% - 20px, 1480px); }
+      .grid { grid-template-columns: 1fr; }
+      section { padding: 12px; }
+      th, td { font-size: 12px; }
+    }
+
+  </style>
+</head>
+<body class="browser">
+  <header>
+    <h1>Practice Work Dashboard</h1>
+    <p class="meta">Generated 2026-05-05T17:29:01+00:00 from DTP read-only artifacts.
+    This view shows what is active, waiting, blocked, and proof-gated without
+    running live repo, cloud, or GitHub commands.</p>
+    <div class="summary">
+      <div class="metric"><strong>3</strong><span>Now</span></div>
+      <div class="metric"><strong>1</strong><span>Next</span></div>
+      <div class="metric"><strong>1</strong><span>Waiting</span></div>
+      <div class="metric"><strong>2</strong><span>Blocked</span></div>
+      <div class="metric"><strong>13</strong><span>Repos</span></div>
+      <div class="metric"><strong>9</strong><span>Proof Candidates</span></div>
+    </div>
+  </header>
+  <main>
+    <div class="grid">
+      <div class="stack">
+        <section>
+          <h2>Current Work</h2>
+          <div class="status-grid">
+            <div class="lane now"><h3>Now</h3><div class="item"><p class="title">DeMario pickleball site is live and receiving strong feedback; prepare a LinkedIn/social proo...</p><p class="small">demario-pickleball-1 · proof</p><p class="small">Next: draft a permissioned social/proof packet, then review with Mario before posting</p></div><div class="item"><p class="title">Consulting site needs a focused fix pass now that earlier share-readiness work is checkpointe...</p><p class="small">consulting · feature</p><p class="small">Next: run a consulting public-site fix/readiness pass before adding new proof claims or redesign scope</p></div><div class="item"><p class="title">Omnexus is approved on the App Store, but the initial subscriptions were declined/not approve...</p><p class="small">fitness-app · repo_issue</p><p class="small">Next: inspect App Store Connect subscription statuses and prepare a version-plus-subscriptions resubmission checklist</p></div></div><div class="lane next"><h3>Next</h3><div class="item"><p class="title">Architected Strength should be reopened as a fix/finish public-signal site pass, separate fro...</p><p class="small">architected-strength · feature</p><p class="small">Next: inspect current Architected Strength site and roadmap, then run a P0/P1 finish pass with pnpm gates</p></div></div><div class="lane waiting"><h3>Waiting</h3><div class="item"><p class="title">[redacted private-client waiting item]</p><p class="small">ccaap-site · engagement</p><p class="small">Next: wait for owner inputs before launch/proof movement</p></div></div><div class="lane blocked"><h3>Blocked</h3><div class="item"><p class="title">Hub PR #68 Tailwind migration blocker.</p><p class="small">hub · repo_issue</p><p class="small">Next: keep parked until a targeted Tailwind 4 migration/fix plan exists</p></div><div class="item"><p class="title">[redacted coi-gated repo issue]</p><p class="small">dse-content · repo_issue</p><p class="small">Next: do not touch without explicit COI-aware scope and live repo validation</p></div></div><div class="lane parked"><h3>Parked</h3><p class="small">Nothing recorded.</p></div>
+          </div>
+        </section>
+        <section>
+          <h2>Proof Queue</h2>
+          <table><thead><tr><th>Candidate</th><th>Lane</th><th>Status</th><th>Next</th><th>Gate</th></tr></thead><tbody><tr><td>CCAAP baseline and after-state owner flow</td><td>ccaap-site, private DTP kit</td><td><span class="status-pill">needs_permission</span></td><td>wait for Leah/Tony inputs, then inventory baseline, after-state, screenshots, and owner-approved wording</td><td>owner permission, authentic assets, launch review, redaction, reviewer, caveat</td></tr><tr><td>Omnexus launch and review journey</td><td>fitness-app / Omnexus</td><td><span class="status-pill">needs_redaction</span></td><td>separate public-safe app-review proof from private app, billing, account, support, and dashboard records</td><td>app/privacy caveats, no private user data, source review, reviewer, approved wording</td></tr><tr><td>DeMario launch-feedback social packet</td><td>demario-pickleball-1, DTP proof lane, human-owned social channels</td><td><span class="status-pill">candidate_intake</span></td><td>draft LinkedIn/social copy from the live positive-feedback signal, then collect Mario-approved wording, source/testimonial evidence, screenshot approvals, launch context, caveat, and final channel-specific drafts</td><td>owner permission, testimonial/source evidence, private admin redaction, screenshot approval, reviewer, caveat, human posting</td></tr><tr><td>DeMario launch/admin command room</td><td>demario-pickleball-1</td><td><span class="status-pill">needs_permission</span></td><td>collect owner-approved walkthrough candidates and redact booking/admin/payment details</td><td>owner permission, private admin redaction, caveat, reviewer</td></tr><tr><td>Consulting Hub-first intake route</td><td>consulting, hub</td><td><span class="status-pill">restricted_internal</span></td><td>use the live intake receipt template to record endpoint, row verification, cleanup, and manual gates</td><td>no private row screenshots, no secrets, test record cleanup, DTP receipt</td></tr><tr><td>Architected Strength assistant/reference lane</td><td>architected-strength</td><td><span class="status-pill">parked</span></td><td>wait for consulting assistant source/refusal QA to prove the pattern first</td><td>consulting pilot acceptance, repo-local corpus, refusal tests, logging boundary</td></tr><tr><td>Consulting public assistant manifest</td><td>consulting</td><td><span class="status-pill">review_ready for QA only</span></td><td>keep as no-widget QA harness until source and refusal gates pass</td><td>approved public corpus, refusal checklist/test, logging policy, human handoff, route/widget smoke before runtime</td></tr><tr><td>Business Brain real reply loop</td><td>DTP Business Brain</td><td><span class="status-pill">needs_evidence</span></td><td>seed redacted eval cases from the next substantive Cam/Greg/CCAAP reply</td><td>no raw private text, client-safe abstraction, expected behavior, reviewer</td></tr><tr><td>DSE Azure readiness kit</td><td>dse-content</td><td><span class="status-pill">parked</span></td><td>hold until COI-aware scope is explicitly selected</td><td>COI, live repo validation, permission, redaction, reviewer, caveat</td></tr></tbody></table>
+        </section>
+      </div>
+      <div class="stack">
+        <section>
+          <h2>Repo Coverage</h2>
+          <table><thead><tr><th>Repo</th><th>Lane</th><th>Coverage</th><th>Latest</th><th>Next</th><th>Gate</th></tr></thead><tbody><tr><td>architected-strength</td><td>personal brand OS and later assistant-pattern candidate</td><td><span class="status-pill">recorded</span></td><td>local: pass (2026-05-01)</td><td>revisit public assistant scope after the consulting public assistant pilot proves useful</td><td>assistant implementation needs an accepted site manifest, approved source corpus, refusal policy, analytics/logging plan, and human handoff path</td></tr><tr><td>ccaap-site</td><td>first client operating kit pilot and public-site implementation</td><td><span class="status-pill">recorded</span></td><td>owner review packet: sent_with_temp_preview (2026-05-01)</td><td>gather owner inputs with docs/OWNER_LAUNCH_INPUTS.md, replace placeholders, connect Cloudflare preview, add authentic assets/resources, and run owner review before production</td><td>production launch waits on PayPal donation/membership links, contact routing, DNS/domain access, authentic photos/resources, Leah plus Tony review, and proof permission/internal-only decision</td></tr><tr><td>consulting</td><td>public proof and storefront</td><td><span class="status-pill">recorded</span></td><td>brand system: pass (2026-05-04)</td><td>keep current site stable; promote Mom/Omnexus/DeMario proof only through the DTP proof packet flow</td><td>no proof should publish until permission, redaction, reviewer, evidence, and caveat are real</td></tr><tr><td>demario-pickleball-1</td><td>adjacent project launch, proof, and Client Command Room reference</td><td><span class="status-pill">recorded</span></td><td>local: pass (2026-04-30)</td><td>keep DeMario as a reference implementation; do not promote screenshots or claims into consulting until the DTP proof packet flow clears them</td><td>public proof is blocked until review/testimonial source evidence, command-room screenshot permission, redaction, reviewer approval, and launch context are real</td></tr><tr><td>diagnose-to-plan</td><td>core infrastructure</td><td><span class="status-pill">recorded</span></td><td>consulting brand system promotion: pass (2026-05-04)</td><td>run reply intake on the next real client reply, repeat the Business Brain weekly reset, and use Hosted DTP only with markdown fallback plus review gates</td><td>client-sensitive non-smoke records need lane-specific markdown fallback before Hosted DTP becomes normal workflow; public proof still needs permission/redaction/reviewer approval</td></tr><tr><td>dse-content</td><td>DSE/internal professional proof candidate</td><td><span class="status-pill">recorded</span></td><td>coverage: recorded_not_verified (2026-05-03)</td><td>run a repo-local status/validation sweep and create a DTP proof review only when the lane is active</td><td>COI, permission, and redaction review are required before reuse</td></tr><tr><td>engineering-playbook</td><td>adjacent reference/doctrine maintenance</td><td><span class="status-pill">recorded</span></td><td>pointer: implemented (2026-04-30)</td><td>revisit only when a general doctrine or portfolio policy change needs durable reference material</td><td>this repo must not become the active roadmap owner</td></tr><tr><td>FamilyTrips</td><td>adjacent project privacy-first maintenance</td><td><span class="status-pill">recorded</span></td><td>data: pass (2026-04-30)</td><td>keep local gates passing and avoid putting sensitive data in static trip objects</td><td>stronger privacy requires architecture change; unlisted trip routes are only casual visibility control</td></tr><tr><td>fitness-app / Omnexus</td><td>adjacent project verification cockpit reference, app-review learning pattern, and app-release evidence</td><td><span class="status-pill">recorded</span></td><td>billing support alert: parked_manual_gate (2026-05-03)</td><td>keep Stripe parked per Toni for now; when reopened, resolve the 2026-05-02 Stripe webhook-disabled alert in Stripe Dashboard, replay failed events, verify affected subscription state, then return Omnexus to reference-pattern mode</td><td>public proof remains blocked until evidence, permission, redaction, reviewer, and caveat are real</td></tr><tr><td>hub</td><td>runtime/intake infrastructure</td><td><span class="status-pill">recorded</span></td><td>local: pass (2026-05-03)</td><td>keep hub-registry local npm test as the cross-validation gate; decide CI sibling access only if local-only validation becomes a bottleneck</td><td>sibling repo access in CI is not yet safely configured for full portfolio manifest or prompt-id validation</td></tr><tr><td>hub-prompts</td><td>prompt catalog and prompt-quality infrastructure</td><td><span class="status-pill">recorded</span></td><td>local: pass (2026-04-30)</td><td>add eval/golden fixtures only when real prompt misfires or high-value workflows justify them</td><td>no blocker for catalog validation; runtime proof still depends on Hub-owned execution evidence</td></tr><tr><td>hub-registry</td><td>prompt routing and automation-target governance</td><td><span class="status-pill">recorded</span></td><td>local: pass (2026-04-30)</td><td>keep repo-scoped CI thin and decide sibling CI access only if local-first validation becomes a real bottleneck</td><td>private sibling-repo CI access is intentionally deferred; local npm test remains the full cross-repo validation gate</td></tr><tr><td>tm-skills</td><td>global agent skill behavior</td><td><span class="status-pill">recorded</span></td><td>local: pass (2026-05-03)</td><td>run README smoke prompts in Claude Code and GitHub Copilot, then record results or misfires</td><td>this session cannot verify external Claude Code or GitHub Copilot discovery</td></tr></tbody></table>
+        </section>
+        <section>
+          <h2>Open Gates</h2>
+          <ul><li>Wait for Leah plus Tony&#x27;s CCAAP review response after the owner packet/prototype link sent on 2026-05-01 and clarification sent on 2026-05-02; collect exact PayPal donate/membership links, contact routing and spam preference, meeting label/destination, domain/DNS access, authentic photos/resources, review notes, and proof decision.</li><li>Use Hosted DTP Phase 0.2 in one more real operating loop with markdown fallback before storing client-sensitive non-smoke records as normal workflow. The real-operator, smoke-fixture, backup/export, and local-private deployment posture is accepted; do not reuse Omnexus, Consulting, FamilyTrips, or Mario Supabase projects for the DTP brain.</li><li>Keep the Omnexus Stripe webhook-disabled alert parked per Toni until the support lane is reopened. When reopened, the live app route is reachable at `/api/webhook-stripe`, so the gate is Stripe Dashboard endpoint correction, re-enable, failed-event replay, and affected-subscription verification. Treat the Omnexus App Store approval journey as the first mobile app review-to-launch learning pattern, but do not publish Omnexus proof until proof gates pass.</li><li>Treat Omnexus subscription-review decline as reopened App Store Connect/IAP support, not proof of a runtime defect. Apple&#x27;s current App Store Connect help says first In-App Purchases/subscriptions must be submitted with a new app version, and rejected IAP products may require action or replacement depending on status. Inspect exact subscription status and reviewer message before changing code.</li><li>Capture owner-approved CCAAP baseline/after-state evidence for the first proof candidate and run redaction/permission review. Track proof posture in `docs/PRACTICE_PROOF_QUEUE_INDEX.md` before any consulting public proof movement.</li><li>Keep Claude Code and GitHub Copilot `tm-skills` discovery smoke testing on the manual back burner; runbook exists, links are healthy, and Codex discovery is verified, but external reload checks remain manual and non-blocking.</li><li>Keep Hub dependency PR #68 parked until the targeted Tailwind 4 migration/fix plan in `hub/docs/PR68_TAILWIND4_MIGRATION_PLAN.md` is executed in a Hub-local pass; live PR checks currently fail typecheck and build-test even though GitHub marks the PR mergeable. Older Hub dependency PRs are no longer in the active visible queue.</li><li>Keep Hub prompt/registry cross-validation local-first; decide private sibling-repo CI access only if it becomes worth the operational cost.</li><li>Keep repo manifests current as lanes are touched; DTP, consulting, Architected Strength, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, CCAAP, FamilyTrips, engineering-playbook, `dse-content`, and `fitness-app` / Omnexus now have DTP-owned manifests/evidence indexes.</li><li>Keep DSE proof/reuse blocked until it is explicitly selected with COI-aware scope, live repo verification, permission, redaction, reviewer, evidence, and caveat gates. Live audit on 2026-05-04 found `dse-content/dev` ahead 4 with dirty Azure readiness work and 64 open PRs, so DSE cleanup needs its own sensitive triage pass.</li><li>Keep FAOS implementation parked after the 2026-05-03 readiness review; next FAOS action is a separate local command/version verification pass, not repo/service creation.</li></ul>
+          <div class="boundary">
+            Boundary: read_only_recorded_dtp_artifacts. Live status: not_checked_v0_no_repo_commands_or_github_calls.
+            This dashboard does not publish proof, read secrets, mutate repos,
+            send client communications, or replace repo-local validation.
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

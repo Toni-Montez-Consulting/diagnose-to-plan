@@ -118,3 +118,8 @@ The live runner stays later until the read-only report proves value and a separa
 `docs/WORKSPACE_DASHBOARD_READONLY.md` defines the allowed dashboard view from
 `dtp workspace report --json`. It may render a static summary, but it inherits
 this document's no-live-runner boundary.
+
+The local VS Code panel in `tools/vscode-dtp-dashboard` is only a viewer and
+manual refresh button for that static summary. It does not make the dashboard
+live, does not watch files, does not call third-party APIs, and does not replace
+DTP-owned roadmap, proof, Kaizen, manifest, or evidence records.

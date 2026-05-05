@@ -1,0 +1,78 @@
+{
+  "name": "dtp-workspace-dashboard",
+  "displayName": "DTP Workspace Dashboard",
+  "description": "Local no-server VS Code panel for the DTP workspace planning and roadmap dashboard.",
+  "version": "0.0.1",
+  "publisher": "toni-montez-consulting",
+  "license": "UNLICENSED",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Toni-Montez-Consulting/diagnose-to-plan.git",
+    "directory": "tools/vscode-dtp-dashboard"
+  },
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:dtpDashboard.open",
+    "onCommand:dtpDashboard.refresh",
+    "onCommand:dtpDashboard.openSourceDocs"
+  ],
+  "main": "./out/extension.js",
+  "files": [
+    "LICENSE",
+    "media",
+    "out",
+    "README.md",
+    "package.json"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "dtpDashboard.open",
+        "title": "Open Workspace Dashboard",
+        "category": "DTP"
+      },
+      {
+        "command": "dtpDashboard.refresh",
+        "title": "Refresh Workspace Dashboard",
+        "category": "DTP"
+      },
+      {
+        "command": "dtpDashboard.openSourceDocs",
+        "title": "Open Dashboard Source Docs",
+        "category": "DTP"
+      }
+    ],
+    "configuration": {
+      "title": "DTP Workspace Dashboard",
+      "properties": {
+        "dtpDashboard.dtpRoot": {
+          "type": "string",
+          "default": "",
+          "description": "Fallback absolute path to the diagnose-to-plan repo when it is not open as a workspace folder."
+        },
+        "dtpDashboard.pythonPath": {
+          "type": "string",
+          "default": "",
+          "description": "Fallback Python executable path used when the DTP repo virtual environment is unavailable."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "vscode:prepublish": "npm run compile",
+    "package:vsix": "node -e \"require('fs').mkdirSync('dist',{recursive:true})\" && vsce package --out dist/dtp-workspace-dashboard.vsix"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "@types/vscode": "^1.90.0",
+    "@vscode/vsce": "^3.9.1",
+    "typescript": "^5.9.3"
+  }
+}

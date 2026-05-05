@@ -12,6 +12,10 @@ apps/private-dtp/.vite/
 apps/private-dtp/coverage/
 apps/private-dtp/.env
 apps/private-dtp/*.tsbuildinfo
+tools/vscode-dtp-dashboard/node_modules/
+tools/vscode-dtp-dashboard/out/
+tools/vscode-dtp-dashboard/dist/
+tools/vscode-dtp-dashboard/*.vsix
 .dtp/audit.log
 .dtp/kaizen/
 .dtp/notion-sync-state.json

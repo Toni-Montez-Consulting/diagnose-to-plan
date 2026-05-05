@@ -39,7 +39,10 @@ automation surfaces only when repeated manual pain proves the need.
 | DTP control plane | Kaizen, deep audit, existing-system map, proof queue, offer/proof matrix, gate ledger, docs, CLI, and tests are ready for packaging | validate safe public DTP work and use proof queue before public copy | public repo; no private raw text |
 | Engagement vault | private nested repo has active changes and no configured remote | commit coherent private vault state locally; push only after approved private remote exists | private-client |
 | CCAAP | waiting on owner inputs | wait; update private kit first if replies arrive | private-client; proof gated |
-| Consulting | share-ready/proof-maturity lane now has `/start` qualification and no-widget assistant QA | run build, assistant QA, routes, doctor, matrix, and manual visual QA before redesign | public-safe only |
+| DeMario social/proof prep | site is live and receiving strong feedback | prepare a permissioned LinkedIn/social proof packet with source evidence, owner-approved wording, redacted screenshots, launch context, and caveat | human-owned public communication; proof gated |
+| Omnexus subscriptions | app is approved, but initial subscriptions are not approved | inspect exact App Store Connect subscription statuses/reviewer message and prepare version-plus-subscription resubmission if these are first subscriptions | App Store Connect/manual review-state first; code only if evidence shows runtime issue |
+| Consulting | share-ready/proof-maturity lane now has `/start` qualification and no-widget assistant QA | run a focused public-site fix/readiness pass before proof replacement, assistant runtime, or broad redesign | public-safe only |
+| Architected Strength | clean repo with active public-signal roadmap | reopen a P0/P1 finish/fix pass for positioning, claim hygiene, craft, and validation while keeping it separate from consulting | personal-brand OS; no employer/private material |
 | Hub | PR #68 is the active visible dependency blocker and now has a targeted docs-only plan | execute Hub-local Tailwind 4 fix/migration plan only when activated | runtime support |
 | DSE | sensitive lane | do not touch without explicit COI-aware scope and live validation | COI-gated |
 
@@ -53,9 +56,18 @@ automation surfaces only when repeated manual pain proves the need.
   `dtp workspace report`.
 - Do not build around waiting states. CCAAP waits on owner inputs; Cam/Greg wait
   on replies; DSE stays COI-gated; Hub PR #68 stays parked.
+- Make DeMario social-proof prep the first new proof movement: draft copy,
+  inventory permission/evidence/screenshot needs, and keep posting human-owned.
+- Reopen Omnexus IAP support only around the subscription-review decline:
+  verify the App Store Connect status, product metadata, screenshots,
+  availability, review notes, and whether a new app version must carry the
+  first subscriptions before making code changes.
 - Make consulting share-ready before redesign: verify intake posture, route
   coverage, assistant QA, build/doctor/matrix checks, manual visual QA, and
   proof readiness.
+- Reopen Architected Strength as a focused finish/fix pass: P0/P1 public signal,
+  claim hygiene, visual/content polish, and repo-local gates before assistant
+  work.
 
 ## Short Term: 2-4 Weeks
 
@@ -63,6 +75,8 @@ automation surfaces only when repeated manual pain proves the need.
   Business Brain packets, Kaizen updates, and private-kit-first status changes.
 - Turn proof into a pipeline: proof queue, evidence, permission, redaction,
   reviewer, caveat, and proof packet before any consulting copy change.
+- Use the DeMario launch-feedback signal to test that pipeline with a real
+  human-owned social package before broader case-study promotion.
 - Promote offer clarity from real delivery: use offer-led packaging and the
   offer-to-proof matrix plus internal offer repertoire before public language
   changes.

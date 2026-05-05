@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="DTP dashboard">
+  <rect width="64" height="64" rx="12" fill="#315f72"/>
+  <rect x="12" y="14" width="40" height="10" rx="2" fill="#f6f4ef"/>
+  <rect x="12" y="30" width="18" height="20" rx="2" fill="#f6f4ef"/>
+  <rect x="34" y="30" width="18" height="20" rx="2" fill="#f6f4ef"/>
+  <path d="M16 19h18M16 38h10M38 38h10" stroke="#315f72" stroke-width="3" stroke-linecap="round"/>
+</svg>
