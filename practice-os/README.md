@@ -52,6 +52,25 @@ Activation routing:
 - `../docs/ROADMAP_STORY_ACTIVATION_INDEX.md` maps roadmap epics/stories to the skills, templates, suggested agent roles, and gates that should activate when that story is in play.
 - `templates/story-activation-contract.md` captures a one-off story activation record when a backlog item needs a more explicit skill/agent/gate contract.
 
+Agent Squads + Knowledge Base:
+
+- `../docs/AGENT_SQUADS_KNOWLEDGE_BASE_V0.md` is the canonical DTP-owned
+  operating model for human-led Delivery and Business Justification squads.
+- `templates/agent-squad-charter.md` names squad mission, scope, roles, and
+  gates.
+- `templates/knowledge-scope-source-index.md` records authoritative sources,
+  blocked sources, freshness, and drift risk.
+- `templates/business-justification-scorecard.md` answers the operator problem,
+  why now, evidence, simpler alternative, value, and approval questions.
+- `templates/approval-gate.md` records `required_approver`,
+  `approval_state`, scope, evidence, and stop conditions.
+- `templates/squad-handoff-receipt.md` ties story activation, squad ownership,
+  decisions, verification, gates, and next action together.
+
+These are manual V0 contracts. They do not authorize autonomous agents,
+framework installs, public proof, client communication, production writes, or
+repo mutation.
+
 Command-room templates:
 
 - `templates/client-command-room-fit-assessment.md` decides whether to build a command room, use a handoff checklist, skip the private surface, or defer.

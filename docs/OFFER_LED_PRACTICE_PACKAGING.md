@@ -8,6 +8,12 @@ Purpose: define the first sellable offers without flattening the broader Practic
 
 This is not public site copy yet. It is the source for a later consulting-site copy pass after proof and positioning review.
 
+Before a public offer or proof move, run the Business Justification Squad lens
+from `docs/AGENT_SQUADS_KNOWLEDGE_BASE_V0.md`: name the buyer/operator problem,
+why the move is worth doing now, what evidence supports it, what simpler
+alternative was considered, what value it creates, and what approval is needed.
+Use `practice-os/templates/business-justification-scorecard.md` for the receipt.
+
 ## Private Repertoire Layer
 
 The public offer set stays intentionally simple, but the internal catalog is now
@@ -37,6 +43,28 @@ The practice combines:
 - reusable verification and handoff patterns.
 
 The public offer should feel concrete, evidence-backed, and operator-led. The internal machine can be deep; the external package should be simple enough for a good prospect to understand quickly.
+
+## Wedge Note: Custom AI Integrations
+
+The buyer-facing wedge is customized AI integrations: implementing AI and
+helping businesses actually use it inside existing workflows.
+
+This should not sound like generic AI strategy, vague automation, or "AI
+transformation" without evidence. The entry point is practical implementation:
+where can AI reduce manual work, improve decision flow, connect tools, speed up
+owner/admin execution, or create operating leverage without taking control away
+from the business?
+
+This wedge can lead into:
+
+- Business / AI Operating System Sprint;
+- workflow diagnosis;
+- custom app or automation builds;
+- client/admin command-room systems;
+- launch/proof hardening for AI-enabled tools.
+
+Public copy can later phrase this as practical AI implementation and utilization
+for real business workflows, once proof and positioning gates are ready.
 
 ## Offer Set V0
 

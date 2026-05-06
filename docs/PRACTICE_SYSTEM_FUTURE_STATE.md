@@ -15,6 +15,8 @@ The future system should feel like an operating cockpit for the practice:
 - Consulting remains the public storefront and proof surface.
 - `tm-skills` becomes the reusable cross-repo SDLC behavior layer.
 - Repo manifests and evidence indexes make every repo easier for future agents to understand.
+- Agent squad records make ownership, source scope, business justification,
+  approval, and handoff queryable without replacing human gates.
 - The Roadmap Steward becomes progressively more automated only after the manual loop proves useful.
 - Notion becomes a mobile mirror and idea inbox for daily review, while DTP remains the operating source of truth.
 - Site-scoped assistants become a governed public/admin pattern only after manifests, source corpora, privacy boundaries, refusal policies, analytics, and human handoff paths are accepted.
@@ -67,6 +69,11 @@ Target principles:
 | Evidence run | repo, branch, commit, command, lane, result, hard/advisory/manual status, artifact path |
 | Redaction review | reviewer, status, permission level, redaction notes, next action |
 | Proof candidate | public claim, evidence source, caveat, permission, redaction, reviewer, status |
+| Squad charter | squad name, owning repo/lane, mission, scope, no-touch boundaries, roles, and gates |
+| Knowledge scope | authoritative sources, blocked sources, freshness, drift risk, and revisit trigger |
+| Business justification | operator problem, why now, evidence, simpler alternative, value created, approval needed |
+| Approval gate | required approver, approval state, stop conditions, evidence, allowed scope, and blocked scope |
+| Squad handoff receipt | story activation, squad ownership, decisions, verification, blocked items, and next action |
 | Decision | context, chosen path, alternatives, consequences, related engagement/artifact/evidence |
 | Steward item | active story, repo lane, blocker, gate, follow-up, status |
 | Research item | source, classification, relevance, risk, next review, linked story |
@@ -224,6 +231,10 @@ Target behavior:
 
 - Prompt shape activates the right skill or process.
 - Kanban stories carry suggested skills, templates, gates, and agent roles.
+- Squad records identify whether Delivery, Business Justification, or both own
+  the work.
+- A central squad board appears only after markdown story/handoff receipts prove
+  the interaction model.
 - The steward checks repo coverage, stale status, no-touch boundaries, and follow-up capture.
 - Actual agent delegation remains explicit.
 - Write-enabled automation remains gated.
@@ -287,6 +298,7 @@ DTP remains the master source. Other repos get local pointers when their lane is
 | hosted DTP schema/app shell | accepted Phase 0 boundary and real pilot records |
 | hosted proof dashboard | real proof packets and redaction reviews |
 | hosted steward queue | repeated manual steward receipts |
+| hosted squad records / central squad board | repeated squad charters, source indexes, scorecards, approval gates, and handoff receipts prove useful in markdown first |
 | `dtp steward review` CLI | manual template proves useful and checks are stable |
 | repo manifests beyond DTP | DTP, consulting, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus covered; add DSE only when COI-aware scope is active |
 | global `tm-skills` install | explicit approval, dry-run review, reload, smoke tests |

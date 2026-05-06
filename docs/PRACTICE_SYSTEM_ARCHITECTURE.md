@@ -25,6 +25,8 @@ The current system is designed to reduce reliance on memory:
 - Execution status lives in the Kanban backlog.
 - Prompt routing lives in the activation map and contextual activation playbook.
 - Story-to-skill routing lives in the story activation index.
+- Squad ownership, knowledge scope, business justification, approval gates, and
+  squad handoff receipts live in the Agent Squads + Knowledge Base V0 lane.
 - Private client work lives in ignored engagement kits or a future private vault.
 - Public proof must pass evidence, redaction, permission, reviewer, and caveat gates.
 
@@ -249,6 +251,12 @@ Current guarantees:
 
 - Skills and templates can be suggested from prompt intent.
 - Actual global `tm-skills` install is still gated.
+- Squads are role contracts for ownership, source scope, business
+  justification, approval, and handoff; they are not autonomous workers.
+- Delivery Squad owns architecture, implementation scope, tests, verification,
+  and handoff for scoped repo work.
+- Business Justification Squad owns buyer/operator problem, workflow fit,
+  value, proof posture, and approval posture.
 - Subagents are suggestions only unless the user explicitly asks for delegation.
 - No skill can bypass proof, COI, privacy, public-claim, hosted-app, or repo-mutation gates.
 
@@ -263,6 +271,7 @@ Current guarantees:
 | Consulting | public storefront/proof surface, not private operating store |
 | `tm-skills` | instruction/skill layer, not autonomous manager |
 | Agent automation | no unsupervised repo edits, public proof, client communication, or production writes |
+| Agent Squads + Knowledge Base | DTP-owned manual operating model; consulting may point to it, but squad state, source indexes, scorecards, gates, and receipts stay in DTP or future hosted DTP |
 | Project repos | benefit through patterns and gates, but stay repo-owned |
 
 ## Documentation Propagation Rule

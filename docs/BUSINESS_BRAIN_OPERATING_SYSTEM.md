@@ -119,6 +119,11 @@ this slice except through existing roadmap boundaries.
   himself or a client could become a future offer, including brand kits,
   mission/vision messaging, Apple Reminders capture bridges, intake systems,
   admin rooms, command rooms, launch hardening, and follow-up queues.
+- Business justification for squad-run work now uses
+  `docs/AGENT_SQUADS_KNOWLEDGE_BASE_V0.md` and
+  `practice-os/templates/business-justification-scorecard.md`. Use it before a
+  Business Brain idea changes public offer/proof posture, client/operator
+  workflow, or meaningful delivery priority.
 - Notion remains a cockpit and mobile mirror. DTP owns the source artifacts,
   decision gates, evidence notes, and private/public boundary.
 

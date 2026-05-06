@@ -18,6 +18,9 @@ Use this map when a prompt could route to more than one skill, template, process
 - Use `practice-os/templates/contextual-idea-intake.md` when Toni submits a new idea, design, business move, project request, development enhancement, or automation concept that should become a durable artifact.
 - Use Roadmap Steward review when the prompt changes roadmap priority, status, active-next work, blockers, repo coverage, or idea capture.
 - Use `docs/ROADMAP_STORY_ACTIVATION_INDEX.md` when a prompt maps to a specific epic/story and you need the matching skill, template, agent-role suggestion, or gate.
+- Use `docs/AGENT_SQUADS_KNOWLEDGE_BASE_V0.md` when a prompt asks for squads,
+  agent teams, knowledge bases, business justification, approval gates, or
+  source-indexed handoffs.
 - Keep all gated actions gated: global skill install, hosted DTP implementation, public proof promotion, write-enabled automation, autonomous agents, and production/client data changes.
 
 ## Prompt Activation Matrix
@@ -36,6 +39,7 @@ Use this map when a prompt could route to more than one skill, template, process
 | "Apple Reminders", "iOS Reminders", "sync reminders", "I use reminders all day", "do not move to Google Tasks" | Business Admin OS Apple Reminders capture lane | `docs/BUSINESS_ADMIN_OPERATING_SYSTEM.md`, `practice-os/templates/apple-reminders-capture-pilot.md`, `practice-os/templates/connector-map.md`, Tooling Steward review | one-list pilot only; no all-reminders sync, broad third-party access, or private reminder mirror without explicit approval |
 | "new idea", "design idea", "business idea", "development enhancement", "project idea", "can we add this later" | contextual idea intake | `docs/CONTEXTUAL_ACTIVATION_PLAYBOOK.md`, story activation index | classify before implementation |
 | "which agent/skill should this story use", "tie this to Kanban", "activate for this epic" | story activation index | `docs/ROADMAP_STORY_ACTIVATION_INDEX.md`, story activation contract | suggested agents require explicit delegation approval |
+| "squad of agents", "agent squad", "Delivery Squad", "Business Justification Squad", "knowledge base", "knowledge scope", "business justification", "approval gate", "handoff receipt" | Agent Squads + Knowledge Base V0 | `docs/AGENT_SQUADS_KNOWLEDGE_BASE_V0.md`, squad charter, source index, business justification scorecard, approval gate, squad handoff receipt | human-led only; no install, autonomous agents, public proof, client comms, production writes, or repo mutation without gates |
 | "audit the agent system", "what gaps did we miss", "why did this not activate", "I caught a design hole" | Agentic Performance Gap Review | `docs/PRACTICE_SYSTEM_AGENTIC_PERFORMANCE_GAP_REVIEW.md`, Roadmap Steward review | convert misses into durable artifacts, not autonomy |
 | "can this become proof", "case study", "public claim" | proof/redaction templates | evidence source, asset inventory, claim review | permission, redaction, reviewer required |
 | "client uses Azure/Copilot/Microsoft", "DSE", "COI" | DTP COI screen | data classification and redaction policy; after clearance route to the relevant Azure incubator skill | pause before scoping/coding |
@@ -63,6 +67,10 @@ Use these labels in Roadmap Steward reviews and handoffs:
 - `global_sdlc_skill`
 - `dtp_practice_skill`
 - `business_brain`
+- `agent_squad_v0`
+- `knowledge_scope`
+- `business_justification_gate`
+- `approval_gate`
 - `contextual_idea_intake`
 - `custom_interface_craft`
 - `practice_os_template`
