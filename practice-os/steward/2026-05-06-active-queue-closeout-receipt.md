@@ -19,8 +19,10 @@ Omnexus, consulting, and Architected Strength.
   channels on 2026-05-06 per Toni's report; exact public post URLs are now
   recorded in the proof packet.
 - Omnexus PR #562 merged on 2026-05-06. Toni reported monthly and annual
-  subscriptions were `Waiting for Review` when submitted, and app version
-  `1.0.1` has been submitted for review.
+  subscriptions were `Waiting for Review` when submitted, app version `1.0.1`
+  was submitted for review, then app version `1.0.1` was approved and moved to
+  `Pending Developer Release` while the subscriptions remained `Waiting for
+  Review`.
 - Consulting PR #3 merged the public-site readiness recheck into `main` with no
   source behavior changes, green CI, live route smoke, Hub-first intake proof,
   and manual gates recorded. A 2026-05-06 synthetic live intake smoke then
@@ -51,10 +53,11 @@ Omnexus, consulting, and Architected Strength.
 
 ## Remaining Gates
 
-1. Wait for Apple's review result on Omnexus app version `1.0.1` and the
-   monthly/annual subscriptions. If approved, run the post-approval live IAP
-   proof checklist; if rejected, capture exact reviewer/status evidence
-   privately before changing code.
+1. Hold Omnexus app version `1.0.1` in `Pending Developer Release` while the
+   monthly/annual subscriptions remain `Waiting for Review`. If Apple approves
+   the subscriptions, release `1.0.1` and run the post-approval live IAP proof
+   checklist. If Apple rejects the subscriptions, capture exact reviewer/status
+   evidence privately before changing code.
 2. Consulting still needs a human desktop/mobile taste pass before broader
    sharing. Intake cleanup remains manual/structural because Hub has no intake
    delete/archive endpoint; the smoke row is clearly labeled test data.
