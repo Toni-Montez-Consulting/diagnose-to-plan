@@ -11,13 +11,17 @@ review_status: draft
 
 - Name: `demario-pickleball-1`
 - Branch: `master`
-- Last updated: 2026-04-30
-- Reviewer: Adjacent project touch pass
+- Last updated: 2026-05-06
+- Reviewer: DeMario closeout and CI repair pass
 
 ## Latest Verification
 
 | Lane | Date | Result | Commit | Artifact |
 |---|---|---|---|---|
+| local | 2026-05-06 | pass | `e92b1c0` | `npm run ci`: typecheck pass, lint pass, Vitest 15 files / 55 tests pass, `next build` pass |
+| local E2E | 2026-05-06 | pass | `e92b1c0` | `npm run test:e2e`: 20 Playwright smoke tests passed across desktop and mobile projects |
+| live smoke | 2026-05-06 | pass | `e92b1c0` | `https://demariomontezpb.com/`, `/pay`, `/privacy`, `/terms`, and `/admin/login` returned 200; `/admin` redirected to `/admin/login`; availability probe for 2026-05-07 returned 200 JSON |
+| CI | 2026-05-06 | pass | `e92b1c0` | GitHub Actions CI run `25413691658` passed; CodeQL run `25413691307` passed |
 | local | 2026-04-30 | pass | `bcd23a2` | `npm run ci`: typecheck pass, lint pass, Vitest 15 files / 55 tests pass, `next build` pass |
 | local hygiene | 2026-04-30 | noted | `bcd23a2` | `next build` regenerated `next-env.d.ts` from `.next/dev/types/routes.d.ts` to `.next/types/routes.d.ts`; change was restored to keep the repo clean |
 | CI | 2026-04-29 | pass | `bcd23a2` | GitHub Actions CI run `25125162032` passed |
@@ -36,6 +40,7 @@ review_status: draft
 
 ## Open Gaps
 
+- Code, local CI, local E2E, GitHub CI, CodeQL, and basic live route smoke are green at `e92b1c0`.
 - Manual launch gates remain outside code: Supabase SQL application, admin/MFA verification, Google Calendar OAuth, live booking QA, and owner handoff.
 - Review/testimonial proof needs source confirmation before broad public promotion or consulting proof reuse.
 - Sentry remains recommended post-launch ops unless Mario/Tonio decide it becomes mandatory.

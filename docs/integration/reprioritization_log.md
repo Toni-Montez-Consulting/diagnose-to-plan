@@ -10,6 +10,44 @@ review_status: draft
 Use this log after meaningful Practice OS changes so backlog movement is
 deliberate and visible.
 
+## 2026-05-06: DeMario CI Repair And Proof Evidence Refresh
+
+Source:
+
+- DeMario `master` GitHub CI was red after the application-overview docs commit.
+- `demario-pickleball-1` commit `e92b1c0`.
+- GitHub Actions CI run `25413691658` and CodeQL run `25413691307`.
+- `practice-os/efficiency/demario-pickleball-1-evidence-index.md`
+- `practice-os/proof-packets/demario-launch-feedback-social-packet-2026-05-05.md`
+
+Change:
+
+- Repaired stale DeMario tests that drifted against the booking-window date and
+  current admin Availability UI/API shape.
+- Refreshed repo-local DeMario docs so the application overview, launch
+  checklist, setup guide, and outstanding gates match current API routes and
+  Supabase priority migration requirements.
+- Updated DTP proof evidence without changing the public-proof decision: the
+  DeMario lane is technically healthier, but public use still requires Mario's
+  permission, source evidence, screenshot approval, redaction, reviewer, and
+  caveat.
+
+Priority impact:
+
+1. Keep DeMario social/proof prep active, but do not post or promote screenshots
+   until owner permission clears.
+2. Treat DeMario code gates as green at `e92b1c0`; remaining launch work is
+   manual owner/admin proof, Google Calendar, Supabase production checks, and
+   live booking QA.
+3. Keep Node 24 runner/toolchain migration on the developer-maintenance roadmap
+   because GitHub still reports the Node 20 actions deprecation warning.
+
+Next review trigger:
+
+- Mario approves/revises the proof wording or screenshot use.
+- DeMario live booking QA or Google Calendar/Supabase launch gates are completed.
+- GitHub's Node 24 runner transition becomes urgent for this repo.
+
 ## 2026-05-05: No-Server Workspace Dashboard Panel
 
 Source:

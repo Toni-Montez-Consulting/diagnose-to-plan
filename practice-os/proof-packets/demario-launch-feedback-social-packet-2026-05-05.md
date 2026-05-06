@@ -44,6 +44,8 @@ Current internal after-state:
   flows.
 - Mario has admin/handoff docs and operating surfaces for bookings, tasks,
   roadmap, and launch follow-through.
+- The repo-local code gate, Playwright smoke gate, GitHub CI, CodeQL, and basic
+  live route smoke were refreshed on 2026-05-06 at DeMario commit `e92b1c0`.
 - Positive launch feedback has been captured as an internal signal, but source
   evidence and exact wording still need Mario approval before public use.
 
@@ -53,14 +55,19 @@ Current internal after-state:
   - `practice-os/efficiency/demario-pickleball-1-evidence-index.md`
   - `docs/PRACTICE_PROOF_QUEUE_INDEX.md`
   - `demario-pickleball-1/docs/ADMIN_HANDOFF.md`
+  - `demario-pickleball-1/docs/APP_OVERVIEW.md`
   - `demario-pickleball-1/docs/MARIO_ACTION_PLAN.md`
   - `demario-pickleball-1/docs/RELEASE_CHECKLIST.md`
   - `demario-pickleball-1/docs/VENUE_RULES.md`
 - Verification receipt:
-  - DTP evidence index records `npm run ci` pass on 2026-04-30 at commit
-    `bcd23a2`.
-  - This packet did not rerun DeMario code verification because it is a
-    docs/proof approval artifact only.
+  - DTP evidence index records `npm run ci` pass on 2026-05-06 at commit
+    `e92b1c0`.
+  - Local `npm run test:e2e` passed 20 Playwright smoke tests across desktop and
+    mobile projects.
+  - GitHub Actions CI run `25413691658` and CodeQL run `25413691307` passed.
+  - Basic live smoke passed for `/`, `/pay`, `/privacy`, `/terms`,
+    `/admin/login`, unauthenticated `/admin` redirect, and a public availability
+    probe.
 - Screenshot/walkthrough:
   - Pending. Use only screenshots Mario approves.
   - Do not use private admin rows, booking records, student details, payments,
