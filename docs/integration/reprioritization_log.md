@@ -10,6 +10,38 @@ review_status: draft
 Use this log after meaningful Practice OS changes so backlog movement is
 deliberate and visible.
 
+## 2026-05-06: Active Queue Closeout Pass
+
+Source:
+
+- Toni asked to implement the active queue closeout plan across DeMario,
+  Omnexus, consulting, and Architected Strength.
+- `docs/ROADMAP_EXECUTION_BACKLOG.md`
+- `practice-os/kaizen/intake.jsonl`
+
+Change:
+
+- Recorded DeMario as waiting on human-owned public URL capture after the
+  approved builder-journey post goes live.
+- Verified Omnexus PR #562 has green latest checks but remains blocked by
+  required review and exact App Store Connect product-status evidence.
+- Landed consulting PR #3 with the 2026-05-06 public-site readiness receipt,
+  live route smoke, Hub-first intake proof, and remaining manual gates.
+- Merged Architected Strength PR #2 as the repo-local boundary/roadmap note
+  without expanding into assistant-pattern or broader site work.
+
+Priority impact:
+
+1. Remaining human/manual gates are DeMario post URL capture and Omnexus PR
+   review plus App Store Connect status fill.
+2. Consulting public-site readiness is no longer an active DTP queue item.
+3. Architected Strength implementation remains next/later on a fresh branch.
+
+Next review trigger:
+
+- Toni posts DeMario URLs, Omnexus PR #562 receives required review, or
+  App Store Connect status proves an IAP code change is needed.
+
 ## 2026-05-06: DeMario Human Builder-Journey Copy
 
 Source:
