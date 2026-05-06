@@ -42,10 +42,9 @@ review_status: draft
 - Evidence path: GitHub Actions logs, local `npm run ci`, `docs/RELEASE_CHECKLIST.md`, `docs/LAUNCH_OUTSTANDING.md`, `docs/ADMIN_HANDOFF.md`, `docs/MARIO_ACTION_PLAN.md`, and future DTP proof packets
 - Latest receipt: see `practice-os/efficiency/demario-pickleball-1-evidence-index.md`
 - Proof eligibility: Toni-owned text copy was posted on LinkedIn/Instagram per
-  Toni's 2026-05-06 report; exact post URL capture remains pending if durable
-  public-link proof is useful. Command-room proof, testimonials, metrics, and
-  consulting-site reuse still need permission, redaction, reviewer, evidence,
-  and caveat gates.
+  Toni's 2026-05-06 report, and exact public post URLs are recorded in the DTP
+  proof packet. Command-room proof, testimonials, metrics, and consulting-site
+  reuse still need permission, redaction, reviewer, evidence, and caveat gates.
 - Redaction rule: never publish raw booking rows, inquiry rows, phone numbers, emails, payment records, admin screenshots with private data, Supabase/OAuth values, venue agreements, insurance certificates, or student/private testimonial material
 
 ## Automation
@@ -59,6 +58,6 @@ review_status: draft
 ## Next Touch
 
 - Lane: launch gate cleanup, command-room proof packet, and Node/toolchain maintenance
-- Trigger: final public post URLs are available, a venue-routing rule changes, Node 24 migration becomes current, or the consulting proof lane needs owner-approved DeMario evidence
+- Trigger: a venue-routing rule changes, Node 24 migration becomes current, or the consulting proof lane needs owner-approved DeMario evidence
 - Blocker: testimonials, metrics, command-room screenshot proof, booking/payment proof, and consulting-site reuse are blocked until source evidence, permission, redaction, reviewer approval, and launch context are real
-- Next action: capture exact LinkedIn/Instagram post URL(s) if durable public-link proof is useful; do not promote screenshots, metrics, testimonials, or private claims into consulting until a separate proof packet clears them
+- Next action: do not promote screenshots, metrics, testimonials, or private claims into consulting until a separate proof packet clears them

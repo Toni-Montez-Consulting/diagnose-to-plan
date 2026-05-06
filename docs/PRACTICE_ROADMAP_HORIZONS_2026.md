@@ -39,8 +39,8 @@ automation surfaces only when repeated manual pain proves the need.
 | DTP control plane | Kaizen, deep audit, existing-system map, proof queue, offer/proof matrix, gate ledger, docs, CLI, tests, public-safe proof queue updates, and live-intake/DMARC receipts are ready for PR review | keep public DTP commits sanitized and use proof queue before public copy | public repo; no private raw text |
 | Engagement vault | private nested repo is committed and pushed to the approved private vault remote | keep client-kit updates private-first and push only coherent engagement batches | private-client |
 | CCAAP | waiting on owner inputs | wait; update private kit first if replies arrive | private-client; proof gated |
-| DeMario social/proof prep | posted from Toni-owned LinkedIn and Instagram channels | capture exact post URLs only if durable public-link proof is useful | human-owned public communication; private screenshots/metrics remain gated |
-| Omnexus subscriptions | app is approved, but initial subscriptions are not approved | fill the Omnexus App Store subscription checklist from exact App Store Connect statuses/reviewer message, then submit with a new app version if these are first subscriptions | App Store Connect/manual review-state first; code only if evidence shows runtime issue |
+| DeMario social/proof prep | posted from Toni-owned LinkedIn and Instagram channels with exact public URLs recorded | keep private screenshots, metrics, testimonials, booking/admin rows, payment proof, and student data gated | human-owned public communication; private screenshots/metrics remain gated |
+| Omnexus subscriptions | app version `1.0.1` plus monthly/annual subscriptions are submitted and waiting for Apple review per Toni | wait for Apple review result; run live IAP proof if approved, or capture exact reviewer/status evidence before changing code if rejected | App Store Connect/manual review-state first; code only if evidence shows runtime issue |
 | Consulting | share-ready/proof-maturity lane has `/start` qualification, no-widget assistant QA, merged readiness work, and a passed-with-notes live intake smoke | finish human desktop/mobile taste review; add Hub intake archive/delete only if cleanup automation is needed | public-safe only |
 | Architected Strength | clean repo with active public-signal roadmap | reopen a P0/P1 finish/fix pass for positioning, claim hygiene, craft, and validation while keeping it separate from consulting | personal-brand OS; no employer/private material |
 | Hub | PR #68 is the active visible dependency blocker and now has a targeted docs-only plan | execute Hub-local Tailwind 4 fix/migration plan only when activated | runtime support |
@@ -58,12 +58,11 @@ automation surfaces only when repeated manual pain proves the need.
 - Do not build around waiting states. CCAAP waits on owner inputs; Cam and Greg
   have accepted discovery/cadence signals but repo/proof movement stays gated;
   DSE stays COI-gated; Hub PR #68 stays parked.
-- Keep DeMario public proof to the posted, public-safe packet unless exact
-  social URLs are captured or new permissioned proof arrives.
-- Reopen Omnexus IAP support only around the subscription-review decline:
-  verify the App Store Connect status, product metadata, screenshots,
-  availability, review notes, and whether a new app version must carry the
-  first subscriptions before making code changes.
+- Keep DeMario public proof to the posted, public-safe packet and recorded
+  public URLs unless new permissioned proof arrives.
+- Keep Omnexus IAP support in review-watch mode: app version `1.0.1` and the
+  monthly/annual subscriptions are submitted, so wait for Apple's result before
+  making code changes.
 - Make consulting share-ready before redesign: preserve route coverage,
   assistant QA, build/doctor/matrix checks, live intake receipt, manual visual
   QA, and proof readiness.
