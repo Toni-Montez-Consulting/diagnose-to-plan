@@ -10,6 +10,49 @@ review_status: draft
 Use this log after meaningful Practice OS changes so backlog movement is
 deliberate and visible.
 
+## 2026-05-06: Omnexus App Approved, Hold Release For Subscription Review
+
+Source:
+
+- Toni reported that Omnexus app version `1.0.1` is approved and `Pending
+  Developer Release`.
+- Toni reported that monthly and annual subscription products remain `Waiting
+  for Review`.
+- Apple App Store Connect help states first In-App Purchases/subscriptions must
+  be submitted with a new app version, `Waiting for Review` means the IAP was
+  submitted to Apple, and `Approved` means the IAP can go live with its
+  associated app.
+- `practice-os/steward/2026-05-06-operator-review-state-update.md`
+
+Change:
+
+- Moved Omnexus from "wait for app and subscription review" to "app approved,
+  hold developer release while subscriptions wait for review."
+- Preserved the no-code-change boundary until Apple returns exact
+  reviewer/status evidence requiring code.
+- Preserved the private-evidence boundary: do not copy App Store screenshots,
+  reviewer messages, credentials, or private billing/user records into public
+  DTP.
+
+Priority impact:
+
+1. Do not click `Release This Version` while monthly/annual subscriptions remain
+   `Waiting for Review`, unless Apple confirms this is the safe first-IAP path.
+2. If subscriptions approve, release version `1.0.1` and run the post-approval
+   live IAP proof checklist.
+3. If subscriptions reject or move to developer action, capture exact status and
+   reviewer message privately before deciding whether the fix is metadata,
+   availability, App Store Connect attachment, or code.
+4. Architected Strength P0/P1 can proceed as the next build lane only with an
+   Apple-review interrupt rule.
+
+Next review trigger:
+
+- Subscription statuses change from `Waiting for Review`.
+- Apple/App Review sends a reviewer note or Resolution Center message.
+- Toni decides to ask Apple support whether the pending app can safely release
+  before the subscriptions approve.
+
 ## 2026-05-06: Operator Review State Moved To Apple Review Watch
 
 Source:
