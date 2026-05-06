@@ -23,7 +23,10 @@ Omnexus, consulting, and Architected Strength.
   IAP resubmission path can be called complete.
 - Consulting PR #3 merged the public-site readiness recheck into `main` with no
   source behavior changes, green CI, live route smoke, Hub-first intake proof,
-  and manual gates recorded.
+  and manual gates recorded. A 2026-05-06 synthetic live intake smoke then
+  reached the private Hub intake table and was recorded as passed_with_notes.
+- Starter DMARC was added and verified for `tonimontez.co` in monitoring mode:
+  `_dmarc.tonimontez.co TXT "v=DMARC1; p=none; pct=100"`.
 - Architected Strength PR #2 merged into `main` as a repo-local boundary and
   P0/P1 finish-pass roadmap note only.
 
@@ -36,6 +39,12 @@ Omnexus, consulting, and Architected Strength.
   `/work/omnexus` returned 200; `/start` rendered
   `https://onhand.dev/api/intake`; Hub `/health` returned 200 with Supabase
   storage.
+- Consulting live intake smoke: synthetic POST to
+  `https://onhand.dev/api/intake` returned `ok: true`, and the private Hub
+  dashboard found the matching `supabase.intake_submissions` row by summarized
+  fields.
+- DNS: `Resolve-DnsName -Type TXT _dmarc.tonimontez.co` returned
+  `v=DMARC1; p=none; pct=100`.
 - Architected Strength PR #2 checks: `fixtures` and `validate` passed before
   merge.
 - Omnexus PR #562 latest checks were green, but merge state remained blocked by
@@ -49,5 +58,6 @@ Omnexus, consulting, and Architected Strength.
 3. App Store Connect monthly and annual subscription statuses are recorded
    privately, then app version `1.0.1` plus subscriptions are submitted only if
    the exact ASC state allows it.
-4. Consulting still needs one real live test intake, Hub row verification, test
-   row cleanup, and a human desktop/mobile taste pass before broader sharing.
+4. Consulting still needs a human desktop/mobile taste pass before broader
+   sharing. Intake cleanup remains manual/structural because Hub has no intake
+   delete/archive endpoint; the smoke row is clearly labeled test data.

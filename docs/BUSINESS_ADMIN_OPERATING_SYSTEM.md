@@ -53,8 +53,8 @@ Live connector check on 2026-05-04:
 | Gmail connector profile | `founder@tonimontez.co` | verified |
 | Domain MX | `smtp.google.com`, priority `1` | present |
 | Root SPF TXT | `v=spf1 include:_spf.google.com ~all` observed | present |
-| Google DKIM TXT | `google._domainkey.tonimontez.co` observed | present; Admin says authenticating |
-| DMARC TXT | no `_dmarc.tonimontez.co` record observed | needs DNS |
+| Google DKIM TXT | `google._domainkey.tonimontez.co` observed | present in DNS; Admin-console status remains a manual check if needed |
+| DMARC TXT | `_dmarc.tonimontez.co` observed with `v=DMARC1; p=none; pct=100` on 2026-05-06 | present in monitoring mode |
 | Custom service CNAMEs | `mail`, `calendar`, `meet` not observed | optional |
 
 ## Google Workspace Setup Checklist
@@ -64,8 +64,8 @@ Live connector check on 2026-05-04:
 | Founder mailbox | Toni | tested | keep `founder@tonimontez.co` as the business-facing send/reply identity | Toni tested send/receive/reply behavior; Gmail connector returns founder address |
 | MX routing | Toni | configured | leave as-is unless mail delivery fails | DNS shows `smtp.google.com` |
 | SPF | Toni | configured | leave one root SPF record unless another sender is added later | DNS shows `v=spf1 include:_spf.google.com ~all` |
-| DKIM follow-up reminder | Toni | waiting | recheck Google Admin DKIM status by 2026-05-06; do not generate a new record unless Google still cannot verify | DNS has `google._domainkey` TXT; Admin says authenticating |
-| DMARC | Toni | open | add starter monitoring policy after DKIM is active: `v=DMARC1; p=none; pct=100` | no `_dmarc` TXT observed |
+| DKIM follow-up reminder | Toni | dns_present | optionally confirm Google Admin DKIM status; do not generate a new record unless Google still cannot verify | DNS has `google._domainkey` TXT |
+| DMARC | Toni | configured | leave starter monitoring policy at `p=none`; tighten only after separate review | DNS shows `_dmarc` TXT with `v=DMARC1; p=none; pct=100`; receipt: `practice-os/steward/2026-05-06-starter-dmarc-receipt.md` |
 | Calendar connector | Toni | verified | use only for reads or explicitly approved event writes under the founder identity | Calendar connector returns founder address |
 | Appointment schedules | Toni | tested | use the booking pages for qualified calls and keep questions/reminders aligned with the offer | Toni tested bookings and Meet links |
 | Personal busy overlay | Toni | manual setup | share/read personal busy availability into Workspace calendar without exposing event details | Calendar settings |
@@ -152,7 +152,7 @@ other automation surface.
 
 | Lane | Owner | Status | Deadline | Next action | Blocker | Professional needed |
 |---|---|---|---|---|---|---|
-| Google Workspace | Toni | active | 2026-05-08 | add starter DMARC after DKIM Admin verification is settled | `_dmarc` not observed | no |
+| Google Workspace | Toni | active | 2026-05-08 | keep starter DMARC in monitoring mode and optionally confirm Google Admin DKIM status | none for starter DNS policy | no |
 | Calendar / Meet | Toni | tested | 2026-05-08 | use tested booking pages for qualified calls; keep Meet, buffers, reminders, and questions aligned | booking links must stay maintained | no |
 | Apple Reminders capture | Toni | active | 2026-05-10 | keep Apple Reminders as the action layer; use `Consulting` first only if a bridge is later useful | Google Tasks is out of scope | no |
 | LLC readiness | Toni | planning | before first formal contract under entity | choose name, registered agent, mailing address, organizer, tax/pro review path | legal/tax choice | yes |
@@ -160,7 +160,7 @@ other automation surface.
 | Contracts / SOW | Toni + attorney | planning | before paid client expansion | collect template needs and attorney-review questions | attorney review | yes |
 | Insurance | Toni | planning | before higher-risk client work | price E&O/professional liability options | coverage choice | yes |
 | Brand assets | Toni | active | 2026-05-06 | preserve official logo kit path and usage guide | none | no |
-| Operating cadence | Toni | active | weekly | review Business Brain packet and admin blockers | starter DMARC still manual | no |
+| Operating cadence | Toni | active | weekly | review Business Brain packet and admin blockers | none for Workspace starter auth | no |
 
 ## LLC Readiness Prompt
 

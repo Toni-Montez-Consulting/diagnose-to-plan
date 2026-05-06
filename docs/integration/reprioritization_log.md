@@ -543,3 +543,42 @@ Next review trigger:
 - The `tm-skills` systems-health-review work is committed and validated.
 - A repo or client operating system asks for a weakest-system review.
 - The dashboard extension needs reinstall or machine-specific setup notes.
+
+## 2026-05-06: 48-Hour Operator Checkpoint Updated
+
+Source:
+
+- `practice-os/steward/2026-05-06-active-queue-closeout-receipt.md`
+- `practice-os/steward/2026-05-06-consulting-live-intake-receipt.md`
+- `practice-os/steward/2026-05-06-starter-dmarc-receipt.md`
+- private `engagements/` client-kit checkpoint
+
+Change:
+
+- Moved confidential active-lane inbox/calendar reconciliation out of public DTP
+  and into the private engagement vault.
+- Recorded the consulting live-intake smoke as passed with notes: the synthetic
+  intake reached Hub, but cleanup remains structural until Hub has an
+  archive/delete path.
+- Added and verified starter DMARC for `tonimontez.co` in monitoring mode.
+- Kept Omnexus as manual-review-state first: PR checks are green, but required
+  review and App Store Connect status capture remain human gates.
+
+Priority impact:
+
+1. DTP public checkpoint and the private engagement vault are the protected
+   source-of-truth split.
+2. Omnexus PR review plus App Store Connect monthly/annual subscription status
+   capture stays ahead of new build work.
+3. DeMario exact social URL capture and consulting visual taste review are
+   useful but not blockers.
+4. Architected Strength P0/P1 starts only as a separate branch after manual
+   gates are stable.
+
+Next review trigger:
+
+- An eligible reviewer approves Omnexus PR #562.
+- App Store Connect monthly/annual subscription statuses are captured.
+- Toni provides exact DeMario post URLs.
+- Hub gains an intake archive/delete path or Toni decides the labeled smoke row
+  is acceptable as the cleanup boundary.
