@@ -22,7 +22,10 @@ review_status: draft
 - Owns: public lesson site, booking workflow, `/pay`, `/admin`, owner tasks, owner roadmap, developer roadmap, venue-routing rules, admin handoff, booking/inquiry APIs, Supabase launch SQL docs, and local-business launch gates
 - Does not own: DTP's practice roadmap, consulting public proof pages, Hub runtime rows, global skill installation, private DTP engagement kits, or final public proof approval
 - Sensitive data: booking records, inquiry records, student names/emails/phones, admin emails, Supabase keys, Google OAuth tokens, payment memos, venue agreements, insurance/waiver proof, private testimonials, and unapproved screenshots
-- COI/privacy notes: this repo is not Microsoft-adjacent by default, but public proof still requires permission, redaction, reviewer approval, source evidence, and caveats before reuse on the consulting site
+- COI/privacy notes: this repo is not Microsoft-adjacent by default. Toni-owned
+  text posting about the public launch is approved through the DTP proof packet;
+  consulting-site proof reuse, testimonials, metrics, and private screenshots
+  still require source evidence, redaction, reviewer approval, and caveats.
 
 ## Gates
 
@@ -31,13 +34,15 @@ review_status: draft
 - CI gate: GitHub Actions `CI` on `master` runs `npm ci`, `typecheck`, `lint`, tests, build, Playwright browser install, and E2E
 - Release gate: `docs/RELEASE_CHECKLIST.md`, including Supabase SQL, admin/MFA, Google Calendar OAuth, live booking QA, monitoring, and business gates
 - Support gate: `docs/ADMIN_HANDOFF.md`, `docs/MARIO_ACTION_PLAN.md`, `/admin/tasks`, `/admin/roadmap`, and `docs/VENUE_RULES.md`
-- Manual gate: review/testimonial claims, command-room screenshots, and owner walkthroughs need explicit permission before public proof
+- Manual gate: public text copy is cleared in the DTP proof packet; review/testimonial claims, metrics, command-room screenshots, and owner walkthroughs need explicit permission before public proof reuse
 
 ## Evidence
 
 - Evidence path: GitHub Actions logs, local `npm run ci`, `docs/RELEASE_CHECKLIST.md`, `docs/LAUNCH_OUTSTANDING.md`, `docs/ADMIN_HANDOFF.md`, `docs/MARIO_ACTION_PLAN.md`, and future DTP proof packets
 - Latest receipt: see `practice-os/efficiency/demario-pickleball-1-evidence-index.md`
-- Proof eligibility: internal reference only until Mario/client permission, redaction, reviewer, evidence, and caveat gates pass
+- Proof eligibility: Toni-owned text copy is public-safe for LinkedIn/Instagram
+  posting; command-room proof, testimonials, metrics, and consulting-site reuse
+  still need permission, redaction, reviewer, evidence, and caveat gates.
 - Redaction rule: never publish raw booking rows, inquiry rows, phone numbers, emails, payment records, admin screenshots with private data, Supabase/OAuth values, venue agreements, insurance certificates, or student/private testimonial material
 
 ## Automation
@@ -51,6 +56,6 @@ review_status: draft
 ## Next Touch
 
 - Lane: launch gate cleanup, command-room proof packet, and Node/toolchain maintenance
-- Trigger: manual launch gates and proof permissions are complete, a venue-routing rule changes, Node 24 migration becomes current, or the consulting proof lane needs owner-approved DeMario evidence
-- Blocker: public proof is blocked until review/testimonial source evidence, command-room screenshot permission, redaction, reviewer approval, and launch context are real
-- Next action: keep DeMario as a reference implementation; do not promote screenshots or claims into consulting until the DTP proof packet flow clears them
+- Trigger: final public post URLs are available, a venue-routing rule changes, Node 24 migration becomes current, or the consulting proof lane needs owner-approved DeMario evidence
+- Blocker: testimonials, metrics, command-room screenshot proof, booking/payment proof, and consulting-site reuse are blocked until source evidence, permission, redaction, reviewer approval, and launch context are real
+- Next action: use the DTP proof packet for Toni-owned LinkedIn/Instagram text posting; do not promote screenshots, metrics, testimonials, or private claims into consulting until a separate proof packet clears them
