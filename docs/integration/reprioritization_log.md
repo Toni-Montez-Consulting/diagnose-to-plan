@@ -10,6 +10,42 @@ review_status: draft
 Use this log after meaningful Practice OS changes so backlog movement is
 deliberate and visible.
 
+## 2026-05-06: DeMario Public Social Copy Cleared
+
+Source:
+
+- Toni confirmed on 2026-05-06 that he is good to post about Mario's site and
+  that the remaining Mario site work is finished.
+- `practice-os/proof-packets/demario-launch-feedback-social-packet-2026-05-05.md`
+- `docs/PRACTICE_PROOF_QUEUE_INDEX.md`
+- `docs/ROADMAP_EXECUTION_BACKLOG.md`
+
+Change:
+
+- Moved the DeMario launch-feedback packet from permission-gated draft to
+  public-safe text copy for Toni-owned LinkedIn and Instagram posting.
+- Replaced the bland draft with more personal LinkedIn, Instagram, and carousel
+  options grounded in the public site, booking flow, venue routing, payment
+  guidance, and owner/admin workflow.
+- Preserved the privacy boundary: private admin screenshots, student data,
+  payment proof, testimonials, metrics, and consulting-site reuse still need
+  separate source review and redaction.
+
+Priority impact:
+
+1. DeMario social copy is no longer the active blocker; the only remaining
+   action is human posting plus recording final public URL(s).
+2. Keep DeMario public proof limited to the approved text/public-page scope.
+3. Move the next execution queue back to Omnexus subscription review,
+   consulting readiness/proof maturity, and Architected Strength P0/P1.
+
+Next review trigger:
+
+- Toni posts on LinkedIn or Instagram and has final URL(s) to record.
+- Toni wants to reuse the DeMario work on the consulting site as a case study.
+- Toni wants to publish screenshots, testimonials, metrics, or private admin
+  proof beyond the current public-page/text scope.
+
 ## 2026-05-06: DeMario CI Repair And Proof Evidence Refresh
 
 Source:
