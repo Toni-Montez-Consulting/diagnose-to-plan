@@ -36,35 +36,37 @@ automation surfaces only when repeated manual pain proves the need.
 
 | Lane | Current state | Next action | Boundary |
 |---|---|---|---|
-| DTP control plane | Kaizen, deep audit, existing-system map, proof queue, offer/proof matrix, gate ledger, docs, CLI, and tests are ready for packaging | validate safe public DTP work and use proof queue before public copy | public repo; no private raw text |
-| Engagement vault | private nested repo has active changes and no configured remote | commit coherent private vault state locally; push only after approved private remote exists | private-client |
+| DTP control plane | Kaizen, deep audit, existing-system map, proof queue, offer/proof matrix, gate ledger, docs, CLI, tests, public-safe proof queue updates, and live-intake/DMARC receipts are ready for PR review | keep public DTP commits sanitized and use proof queue before public copy | public repo; no private raw text |
+| Engagement vault | private nested repo is committed and pushed to the approved private vault remote | keep client-kit updates private-first and push only coherent engagement batches | private-client |
 | CCAAP | waiting on owner inputs | wait; update private kit first if replies arrive | private-client; proof gated |
-| DeMario social/proof prep | site is live and receiving strong feedback | prepare a permissioned LinkedIn/social proof packet with source evidence, owner-approved wording, redacted screenshots, launch context, and caveat | human-owned public communication; proof gated |
+| DeMario social/proof prep | posted from Toni-owned LinkedIn and Instagram channels | capture exact post URLs only if durable public-link proof is useful | human-owned public communication; private screenshots/metrics remain gated |
 | Omnexus subscriptions | app is approved, but initial subscriptions are not approved | fill the Omnexus App Store subscription checklist from exact App Store Connect statuses/reviewer message, then submit with a new app version if these are first subscriptions | App Store Connect/manual review-state first; code only if evidence shows runtime issue |
-| Consulting | share-ready/proof-maturity lane now has `/start` qualification and no-widget assistant QA | run a focused public-site fix/readiness pass before proof replacement, assistant runtime, or broad redesign | public-safe only |
+| Consulting | share-ready/proof-maturity lane has `/start` qualification, no-widget assistant QA, merged readiness work, and a passed-with-notes live intake smoke | finish human desktop/mobile taste review; add Hub intake archive/delete only if cleanup automation is needed | public-safe only |
 | Architected Strength | clean repo with active public-signal roadmap | reopen a P0/P1 finish/fix pass for positioning, claim hygiene, craft, and validation while keeping it separate from consulting | personal-brand OS; no employer/private material |
 | Hub | PR #68 is the active visible dependency blocker and now has a targeted docs-only plan | execute Hub-local Tailwind 4 fix/migration plan only when activated | runtime support |
 | DSE | sensitive lane | do not touch without explicit COI-aware scope and live validation | COI-gated |
 
 ## Urgent: 1-7 Days
 
-- Package the DTP control-plane upgrade as one coherent public commit: Kaizen
-  CLI, redacted capture, existing-system map, deep audit, docs, and tests.
-- Close private engagement-vault durability with a local private commit; record
-  that pushing is blocked until an approved private remote exists.
+- Preserve the DTP control-plane checkpoint in the public PR: Kaizen CLI,
+  redacted capture, existing-system map, deep audit, docs, tests, proof queue,
+  live-intake receipt, and starter DMARC receipt.
+- Keep private engagement-vault durability on the approved private remote; do
+  not public-commit client kit material.
 - Start every broad work block with `dtp kaizen status --limit 5` and
   `dtp workspace report`.
-- Do not build around waiting states. CCAAP waits on owner inputs; Cam/Greg wait
-  on replies; DSE stays COI-gated; Hub PR #68 stays parked.
-- Make DeMario social-proof prep the first new proof movement: draft copy,
-  inventory permission/evidence/screenshot needs, and keep posting human-owned.
+- Do not build around waiting states. CCAAP waits on owner inputs; Cam and Greg
+  have accepted discovery/cadence signals but repo/proof movement stays gated;
+  DSE stays COI-gated; Hub PR #68 stays parked.
+- Keep DeMario public proof to the posted, public-safe packet unless exact
+  social URLs are captured or new permissioned proof arrives.
 - Reopen Omnexus IAP support only around the subscription-review decline:
   verify the App Store Connect status, product metadata, screenshots,
   availability, review notes, and whether a new app version must carry the
   first subscriptions before making code changes.
-- Make consulting share-ready before redesign: verify intake posture, route
-  coverage, assistant QA, build/doctor/matrix checks, manual visual QA, and
-  proof readiness.
+- Make consulting share-ready before redesign: preserve route coverage,
+  assistant QA, build/doctor/matrix checks, live intake receipt, manual visual
+  QA, and proof readiness.
 - Reopen Architected Strength as a focused finish/fix pass: P0/P1 public signal,
   claim hygiene, visual/content polish, and repo-local gates before assistant
   work.
@@ -83,8 +85,8 @@ automation surfaces only when repeated manual pain proves the need.
 - Harden Kaizen V1 with lightweight saved views for Today, Waiting, Proof Queue,
   and Repo Health; keep Notion as dry-run mirror until one reviewed safe apply is
   explicitly approved.
-- Finish business-admin basics: DMARC after DKIM, Calendar/Meet hygiene, and
-  Apple Reminders-first task flow.
+- Preserve business-admin basics: starter DMARC monitoring, Calendar/Meet
+  hygiene, and Apple Reminders-first task flow.
 
 ## Mid Term: 1-3 Months
 

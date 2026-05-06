@@ -2,14 +2,15 @@
 data_class: P0
 confidential: false
 permission_level: public_safe
-review_status: approved_public_safe
+review_status: posted_public_safe
 ---
 
 # DeMario Launch-Feedback Social Proof Packet
 
-Status: ready for Toni-selected public posting. Toni confirmed on 2026-05-06
-that he is good to post about Mario's site and that the remaining Mario site
-work has been finished.
+Status: posted_public_safe. Toni confirmed on 2026-05-06 that he is good to
+post about Mario's site, that the remaining Mario site work has been finished,
+and that he posted the site on LinkedIn and Instagram. Exact post URLs remain
+pending if Toni wants durable public-link proof.
 
 ## Proof Candidate
 
@@ -21,6 +22,20 @@ work has been finished.
 - Audience: Toni's LinkedIn and Instagram channels.
 - Reviewer: Toni has posting discretion; keep private admin/student/payment
   data out of assets unless separately redacted.
+
+## Publication Record
+
+- Posted status: posted_public_safe
+- Posted date reported: 2026-05-06
+- LinkedIn account: `https://www.linkedin.com/in/toni-montez`
+- Instagram account(s): personal handle `toni.montez`; Architected Strength
+  handle text `architected strength`
+- Exact LinkedIn post URL: pending_toni_url
+- Exact Instagram post URL(s): pending_toni_url
+- Source: Toni reported posting on LinkedIn and Instagram in chat on
+  2026-05-06.
+- Boundary: this record confirms human posting only; it does not add metrics,
+  testimonials, screenshots, private admin records, or business-impact claims.
 
 ## Baseline
 
@@ -48,7 +63,7 @@ Current internal after-state:
 - The repo-local code gate, Playwright smoke gate, GitHub CI, CodeQL, and basic
   live route smoke were refreshed on 2026-05-06 at DeMario commit `e92b1c0`.
 - Toni reported that the remaining Mario site work is complete and that public
-  posting can proceed.
+  posting is complete on LinkedIn and Instagram.
 
 ## Evidence
 
@@ -280,14 +295,16 @@ demariomontezpb.com
 - Payment confirmation remains human-owned until a later payment processor path
   is approved.
 - Refund/cancellation/payment adjustments remain manual.
-- Public posting remains human-owned by Toni.
+- Public URL capture for the final LinkedIn/Instagram post links remains
+  human-owned by Toni.
 - Private admin screenshots remain redaction-gated.
 
 ## Publish Decision
 
-- Status: approved_public_safe
-- Recommended next action: use the recommended LinkedIn draft and recommended
-  Instagram caption with a public homepage screenshot, a booking-flow screenshot,
-  or a short public-page scroll recording.
-- After posting, record the final LinkedIn/Instagram URL(s) back into this
-  packet or the DTP proof queue.
+- Status: posted_public_safe; exact public URL capture pending.
+- Completed action: Toni reported posting on LinkedIn and Instagram on
+  2026-05-06 from Toni-owned channels.
+- Recommended next action: capture the exact LinkedIn/Instagram post URL(s) if
+  durable public-link proof is useful. Keep private admin, booking, payment,
+  student, testimonial, screenshot, and metric material gated unless separately
+  reviewed.

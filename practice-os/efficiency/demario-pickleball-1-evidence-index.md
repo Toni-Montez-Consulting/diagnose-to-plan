@@ -22,19 +22,19 @@ review_status: draft
 | local E2E | 2026-05-06 | pass | `e92b1c0` | `npm run test:e2e`: 20 Playwright smoke tests passed across desktop and mobile projects |
 | live smoke | 2026-05-06 | pass | `e92b1c0` | `https://demariomontezpb.com/`, `/pay`, `/privacy`, `/terms`, and `/admin/login` returned 200; `/admin` redirected to `/admin/login`; availability probe for 2026-05-07 returned 200 JSON |
 | CI | 2026-05-06 | pass | `e92b1c0` | GitHub Actions CI run `25413691658` passed; CodeQL run `25413691307` passed |
-| proof copy | 2026-05-06 | approved_public_safe | DTP branch | Toni confirmed he is good to post about Mario's site; `practice-os/proof-packets/demario-launch-feedback-social-packet-2026-05-05.md` now contains public-safe LinkedIn/Instagram copy |
+| proof copy | 2026-05-06 | posted_url_pending | DTP proof packet | Toni reported posting on LinkedIn and Instagram from Toni-owned channels; exact post URL(s) remain pending if durable public-link proof is useful |
 | local | 2026-04-30 | pass | `bcd23a2` | `npm run ci`: typecheck pass, lint pass, Vitest 15 files / 55 tests pass, `next build` pass |
 | local hygiene | 2026-04-30 | noted | `bcd23a2` | `next build` regenerated `next-env.d.ts` from `.next/dev/types/routes.d.ts` to `.next/types/routes.d.ts`; change was restored to keep the repo clean |
 | CI | 2026-04-29 | pass | `bcd23a2` | GitHub Actions CI run `25125162032` passed |
 | E2E | 2026-04-29 | pass_in_ci | `bcd23a2` | CI installs Chromium and runs `npm run test:e2e`; local E2E not rerun in this touch pass |
 | release | 2026-04-30 | manual_pending | `bcd23a2` | `docs/RELEASE_CHECKLIST.md` still contains Supabase, Google OAuth, live booking QA, monitoring, and business gates |
-| proof | 2026-05-06 | approved_public_safe_for_text | DTP proof packet | text-only Toni-owned LinkedIn/Instagram launch copy is approved for human posting; private admin screenshots, testimonials, metrics, booking/payment proof, and student data remain gated |
+| proof | 2026-05-06 | posted_public_safe_for_text | DTP proof packet | text-only Toni-owned LinkedIn/Instagram launch copy was posted per Toni's report; private admin screenshots, testimonials, metrics, booking/payment proof, and student data remain gated |
 
 ## Proof Candidates
 
 | Claim | Evidence | Permission | Redaction | Reviewer |
 |---|---|---|---|---|
-| Toni built and launched a public site and booking/admin operating path for DeMario's DFW pickleball coaching business | public site, booking workflow, venue-routing docs, release/evidence receipts, `practice-os/proof-packets/demario-launch-feedback-social-packet-2026-05-05.md` | public_safe for Toni-owned text posting | public-safe text; public-page screenshots only | Toni |
+| Toni built and launched a public site and booking/admin operating path for DeMario's DFW pickleball coaching business | public site, booking workflow, venue-routing docs, release/evidence receipts, `practice-os/proof-packets/demario-launch-feedback-social-packet-2026-05-05.md` | posted_public_safe for Toni-owned text posting | public-safe text; public-page screenshots only | Toni |
 | DeMario has a working owner command room with bookings, tasks, owner roadmap, and launch handoff docs | `/admin`, `/admin/tasks`, `/admin/roadmap`, `docs/ADMIN_HANDOFF.md`, `docs/MARIO_ACTION_PLAN.md` | pending Mario approval | pending screenshot/data redaction | pending |
 | The launch flow routes students by venue/platform rules instead of forcing every booking through the site | `docs/VENUE_RULES.md`, booking workflow, booking API guardrails, release checklist | internal_reference | public-safe summary possible; screenshots need review | pending |
 | The repo has strong local and CI gates for controlled launch confidence | `npm run ci`, GitHub Actions CI run `25125162032` | internal_reference | public-safe after no private logs/screenshots | pending |
