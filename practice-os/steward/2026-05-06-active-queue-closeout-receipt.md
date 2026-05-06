@@ -15,8 +15,9 @@ Omnexus, consulting, and Architected Strength.
 
 ## Outcome
 
-- DeMario social proof is public-copy-safe but still waiting on Toni-owned
-  posting and final LinkedIn/Instagram URL capture.
+- DeMario social proof was posted from Toni-owned LinkedIn and Instagram
+  channels on 2026-05-06 per Toni's report; exact post URL capture remains
+  pending only if durable public-link proof is useful.
 - Omnexus PR #562 has green latest checks, but GitHub still requires review and
   App Store Connect product statuses must be filled privately before the manual
   IAP resubmission path can be called complete.
@@ -42,8 +43,8 @@ Omnexus, consulting, and Architected Strength.
 
 ## Remaining Gates
 
-1. Toni posts the DeMario builder-journey copy and records the final public
-   URL(s).
+1. Capture the exact DeMario LinkedIn/Instagram post URL(s) if durable
+   public-link proof is useful.
 2. Omnexus PR #562 receives the required review.
 3. App Store Connect monthly and annual subscription statuses are recorded
    privately, then app version `1.0.1` plus subscriptions are submitted only if
