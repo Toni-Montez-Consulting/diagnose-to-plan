@@ -30,7 +30,9 @@ Omnexus, consulting, and Architected Strength.
 - Starter DMARC was added and verified for `tonimontez.co` in monitoring mode:
   `_dmarc.tonimontez.co TXT "v=DMARC1; p=none; pct=100"`.
 - Architected Strength PR #2 merged into `main` as a repo-local boundary and
-  P0/P1 finish-pass roadmap note only.
+  P0/P1 finish-pass roadmap note; PR #3 then merged the actual P0/P1
+  public-signal finish pass with proof posture, route polish, visual QA, and
+  repo-local gates.
 
 ## Verification
 
@@ -47,8 +49,9 @@ Omnexus, consulting, and Architected Strength.
   fields.
 - DNS: `Resolve-DnsName -Type TXT _dmarc.tonimontez.co` returned
   `v=DMARC1; p=none; pct=100`.
-- Architected Strength PR #2 checks: `fixtures` and `validate` passed before
-  merge.
+- Architected Strength PR #2 and PR #3 checks: `fixtures` and `validate`
+  passed before merge. PR #3 also passed local `pnpm run ci` and visual QA
+  during the finish pass.
 - Omnexus PR #562 merged at commit `0b971aa515bca3f611f7a1c54096479284e2899e`.
 
 ## Remaining Gates
@@ -61,3 +64,6 @@ Omnexus, consulting, and Architected Strength.
 2. Consulting still needs a human desktop/mobile taste pass before broader
    sharing. Intake cleanup remains manual/structural because Hub has no intake
    delete/archive endpoint; the smoke row is clearly labeled test data.
+3. Architected Strength publishing, assistant-pattern work, Azure deploy,
+   Notion writes, consulting copy, and public proof expansion remain gated until
+   separately reopened.

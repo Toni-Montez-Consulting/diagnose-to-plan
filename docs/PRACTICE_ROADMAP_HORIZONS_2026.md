@@ -42,7 +42,7 @@ automation surfaces only when repeated manual pain proves the need.
 | DeMario social/proof prep | posted from Toni-owned LinkedIn and Instagram channels with exact public URLs recorded | keep private screenshots, metrics, testimonials, booking/admin rows, payment proof, and student data gated | human-owned public communication; private screenshots/metrics remain gated |
 | Omnexus subscriptions | app version `1.0.1` is approved and `Pending Developer Release`; monthly/annual subscriptions remain `Waiting for Review` per Toni | hold developer release until subscriptions approve or Apple confirms safe release; then release and run live IAP proof, or capture exact reviewer/status evidence before changing code if rejected | App Store Connect/manual review-state first; code only if evidence shows runtime issue |
 | Consulting | share-ready/proof-maturity lane has `/start` qualification, no-widget assistant QA, merged readiness work, and a passed-with-notes live intake smoke | finish human desktop/mobile taste review; add Hub intake archive/delete only if cleanup automation is needed | public-safe only |
-| Architected Strength | clean repo with active public-signal roadmap | reopen a P0/P1 finish/fix pass for positioning, claim hygiene, craft, and validation while keeping it separate from consulting | personal-brand OS; no employer/private material |
+| Architected Strength | P0/P1 public-signal finish pass merged in PR #3 with repo-local gates and visual QA | keep it as a personal-brand OS/reference candidate; reopen only for publishing, assistant-pattern, deploy, or proof work when those gates are explicit | personal-brand OS; no employer/private material |
 | Hub | PR #68 is the active visible dependency blocker and now has a targeted docs-only plan | execute Hub-local Tailwind 4 fix/migration plan only when activated | runtime support |
 | DSE | sensitive lane | do not touch without explicit COI-aware scope and live validation | COI-gated |
 
@@ -67,9 +67,9 @@ automation surfaces only when repeated manual pain proves the need.
 - Make consulting share-ready before redesign: preserve route coverage,
   assistant QA, build/doctor/matrix checks, live intake receipt, manual visual
   QA, and proof readiness.
-- Reopen Architected Strength as a focused finish/fix pass: P0/P1 public signal,
-  claim hygiene, visual/content polish, and repo-local gates before assistant
-  work.
+- Preserve the completed Architected Strength P0/P1 finish pass and keep
+  publishing, assistant-pattern work, Azure deploy, Notion writes, consulting
+  copy, and public proof expansion behind explicit reopen gates.
 
 ## Short Term: 2-4 Weeks
 
