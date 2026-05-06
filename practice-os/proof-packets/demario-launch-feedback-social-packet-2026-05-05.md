@@ -93,21 +93,30 @@ Public copy may say:
 
 - the site is live;
 - Toni built it for his brother;
+- Toni has been using GitHub Copilot, Codex, and Claude as part of his current
+  developer/creator workflow;
 - it supports lessons, venue routing, booking, payment guidance, admin
   workflow, availability, tasks, and launch operations;
 - DFW pickleball students can check out `https://demariomontezpb.com`.
 
 ## Voice Guardrail
 
-Mario posts must stay plain, specific, and practical. Do not use inspirational,
-gimmicky, motivational, or slogan-like phrasing for this lane.
+Mario posts must stay plain, specific, practical, and human. Do not use
+inspirational, gimmicky, motivational, or slogan-like phrasing for this lane.
 
 Avoid sentiment-led openers, motivational slogans, grand metaphors, and claims
 about what the work means beyond the actual site, booking flow, and owner
 workflow.
 
 Use concrete language instead: what was built, who it serves, what path it
-clarifies, and where people can find it.
+clarifies, how Toni is building lately, and where people can find Mario.
+
+Developer/creator journey framing is allowed when it stays specific:
+
+- name the tools Toni is using;
+- say what they helped him build;
+- keep Toni as the builder, not the tools as the autonomous actor;
+- connect the process back to a real shipped surface.
 
 ## Redaction
 
@@ -135,10 +144,15 @@ Optional text if Toni still wants a courtesy heads-up:
 
 ### Recommended LinkedIn Draft
 
-I finished the new site and booking flow for my brother, DeMario Montez.
+I have been having fun building lately and using GitHub Copilot, Codex, and
+Claude as part of the process.
 
-Mario coaches pickleball in the Dallas-Fort Worth area. The site is built around
-the practical questions students need answered before booking:
+Using those tools, I built a website and booking flow for my brother's
+pickleball business: DeMario Montez Pickleball Coaching.
+
+Mario coaches pickleball in the Dallas-Fort Worth area. He is a 4.70 doubles
+DUPR player, USTA certified, and a TeachMe.To SuperCoach. The site is built
+around the practical questions students need answered before booking:
 
 - what lessons are available;
 - where lessons happen;
@@ -146,41 +160,59 @@ the practical questions students need answered before booking:
 - when a venue platform is required;
 - what to expect around payment and court confirmation.
 
-The owner side is part of the build too: bookings, inquiries, availability,
-tasks, roadmap items, and launch handoff notes are organized so the business has
-a clearer operating path after the site goes live.
+I also built the owner side around the way the business actually runs: bookings,
+inquiries, availability, tasks, roadmap items, and launch handoff notes.
 
-DFW pickleball students can check it out here:
+That has been the most interesting part of this developer/creator stretch for
+me. The tools make it faster to move from idea to working product, but the real
+work is still deciding what the business needs, shaping the flow, and checking
+the details.
+
+If you are in DFW and want to play pickleball or get better, hit up Mario:
 https://demariomontezpb.com
 
 ### Shorter LinkedIn Draft
 
-The new DeMario Montez Pickleball Coaching site is live.
+I have been having fun building lately with GitHub Copilot, Codex, and Claude.
 
-I built the public lesson pages, booking flow, venue-specific routing, payment
-guidance, court-confirmation language, and admin workflow for Mario's DFW
-pickleball coaching business.
+One of the recent projects: a website and booking flow for my brother's DFW
+pickleball coaching business, DeMario Montez Pickleball Coaching.
 
-Site:
+Mario is a 4.70 doubles DUPR player, USTA certified, and a TeachMe.To
+SuperCoach. The site covers lesson options, venue-specific booking, payment
+guidance, court-confirmation language, and an admin workflow for bookings,
+inquiries, availability, tasks, and roadmap items.
+
+DFW pickleball: hit up Mario.
 https://demariomontezpb.com
 
 ### Personal LinkedIn Draft
 
-My brother DeMario coaches pickleball in the Dallas-Fort Worth area. I built
-his new site to make the student path easier to understand and the owner side
-easier to manage.
+I have been spending more time building with GitHub Copilot, Codex, and Claude,
+and I am enjoying the developer/creator process more than I expected.
 
-The site covers lesson options, venue routing, booking, payment guidance, court
-confirmation, admin tasks, availability, and roadmap items.
+The latest thing I shipped is close to home: a website and booking flow for my
+brother Mario's pickleball coaching business.
 
-DFW pickleball students can find it here:
+Mario coaches in the Dallas-Fort Worth area. He is a 4.70 doubles DUPR player,
+USTA certified, and a TeachMe.To SuperCoach.
+
+The site covers lesson options, venue routing, direct booking, payment guidance,
+court confirmation, and the admin side for bookings, inquiries, availability,
+tasks, and roadmap items.
+
+If you are in DFW and want to play pickleball or get better, hit up Mario:
 https://demariomontezpb.com
 
 ### Recommended Instagram Caption
 
-The new DeMario Montez Pickleball Coaching site is live.
+I have been having fun building lately with GitHub Copilot, Codex, and Claude.
 
-I built the site and booking flow for my brother's DFW coaching business.
+Recent project: a website and booking flow for my brother's DFW pickleball
+business.
+
+Mario is a 4.70 doubles DUPR player, USTA certified, and a TeachMe.To
+SuperCoach.
 
 - lesson options
 - booking
@@ -189,30 +221,34 @@ I built the site and booking flow for my brother's DFW coaching business.
 - court confirmation
 - admin workflow behind the scenes
 
+DFW pickleball: hit up Mario.
+
 https://demariomontezpb.com
 
 #pickleball #dfwpickleball #dallaspickleball #smallbusiness #webdesign
 
 ### Short Instagram Caption
 
-New site is live for DeMario Montez Pickleball Coaching.
+Built a site and booking flow for my brother's DFW pickleball coaching business
+using GitHub Copilot, Codex, and Claude as part of the process.
 
-I built the lesson pages, booking path, venue routing, payment guidance, and
-admin workflow for Mario's DFW coaching business.
+Lesson options, booking, venue routing, payment guidance, and admin workflow are
+all in place.
 
-DFW pickleball: demariomontezpb.com
+DFW pickleball: hit up Mario.
+demariomontezpb.com
 
 #pickleball #dfwpickleball #smallbusiness
 
 ### Instagram Carousel Copy
 
-1. DeMario Montez Pickleball Coaching is live.
-2. Built for a DFW pickleball coach.
-3. Public lesson pages.
-4. Venue-specific booking routing.
-5. Payment and court-confirmation guidance.
-6. Admin workflow for bookings, inquiries, availability, and tasks.
-7. DFW pickleball: demariomontezpb.com
+1. I have been building more with GitHub Copilot, Codex, and Claude.
+2. Recent project: my brother's pickleball coaching site.
+3. DeMario Montez Pickleball Coaching is live.
+4. Mario coaches pickleball in the DFW area.
+5. The site covers lessons, booking, venues, and payment guidance.
+6. The owner side covers bookings, inquiries, availability, tasks, and roadmap.
+7. DFW pickleball: hit up Mario.
 
 ## Claims To Avoid Unless Separately Proven
 
@@ -221,6 +257,7 @@ DFW pickleball: demariomontezpb.com
 - "Students love the site."
 - "Automated the business" or anything that implies Mario is not still running
   the relationship side himself.
+- "AI built this by itself" or any claim that removes Toni's role as builder.
 - Inspirational, gimmicky, or slogan-like phrasing for Mario posts.
 - Any student quote, review count, testimonial, booking row, payment proof, or
   private admin screenshot that Toni does not intentionally want to make public.
@@ -230,10 +267,11 @@ DFW pickleball: demariomontezpb.com
 - Canonical standard:
   `practice-os/policies/authentic-voice-and-anti-slop.md`
 - Evidence named in the claim: site launch/readiness, booking route, payment
-  handoff, admin handoff, roadmap/checklist.
+  handoff, admin handoff, roadmap/checklist, developer tool-assisted workflow.
 - Caveat visible in the claim: no measured business impact or private proof is
   claimed.
-- Voice test: plain and concrete; no inspirational or gimmicky framing.
+- Voice test: human, plain, concrete; developer/creator journey is specific and
+  does not overclaim what the tools did.
 - Knowledgeable-reader test: ready for public text posting.
 
 ## What Stayed Manual On Purpose

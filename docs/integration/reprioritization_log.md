@@ -10,6 +10,32 @@ review_status: draft
 Use this log after meaningful Practice OS changes so backlog movement is
 deliberate and visible.
 
+## 2026-05-06: DeMario Human Builder-Journey Copy
+
+Source:
+
+- Toni asked to make the Mario post more human by opening with his current
+  developer/creator process using GitHub Copilot, Codex, and Claude.
+- `practice-os/proof-packets/demario-launch-feedback-social-packet-2026-05-05.md`
+
+Change:
+
+- Reframed the DeMario post around Toni's current builder journey, then moved
+  into Mario's DFW pickleball coaching business and the site features.
+- Added public-safe copy that names GitHub Copilot, Codex, and Claude without
+  implying the tools built the site autonomously.
+- Kept the plain/non-gimmicky Mario voice guardrail and public-proof boundaries.
+
+Priority impact:
+
+1. Use the builder-journey LinkedIn draft as the preferred public post.
+2. Keep the CTA simple: DFW pickleball players should hit up Mario.
+3. Record final post URL(s) after Toni posts.
+
+Next review trigger:
+
+- Toni wants to turn the builder journey into a recurring creator/dev series.
+
 ## 2026-05-06: DeMario Plain Social Voice Correction
 
 Source:
