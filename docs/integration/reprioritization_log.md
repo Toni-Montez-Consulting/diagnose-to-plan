@@ -10,6 +10,43 @@ review_status: draft
 Use this log after meaningful Practice OS changes so backlog movement is
 deliberate and visible.
 
+## 2026-05-06: Operator Review State Moved To Apple Review Watch
+
+Source:
+
+- Toni reported that Omnexus PR #562 was merged.
+- Toni reported that monthly and annual subscription statuses were
+  `Waiting for Review` when submitted.
+- Toni reported that app version `1.0.1` was submitted for review.
+- Toni provided exact DeMario LinkedIn and Instagram post URLs.
+- `practice-os/steward/2026-05-06-operator-review-state-update.md`
+
+Change:
+
+- Moved Omnexus from "submit/attach after PR review" to "wait for Apple review
+  result."
+- Recorded DeMario exact public post URLs and closed the durable-link proof
+  follow-up.
+- Preserved the privacy boundary: no App Store screenshots, reviewer messages,
+  credentials, private app data, post metrics, testimonials, or private
+  screenshots were copied into public DTP.
+
+Priority impact:
+
+1. Omnexus is no longer a repo/code task unless Apple returns exact rejection
+   evidence requiring code.
+2. DeMario social proof is now durable-link recorded and remains public-safe
+   text/post proof only.
+3. The next live manual watch item is Apple's review result.
+4. Consulting taste review, Greg prep, Cam packet wait, CCAAP owner-input wait,
+   and Architected Strength P0/P1 sequencing remain.
+
+Next review trigger:
+
+- Apple approves or rejects app version `1.0.1` and/or the monthly/annual
+  subscriptions.
+- Toni wants to start the Architected Strength P0/P1 finish branch.
+
 ## 2026-05-06: DeMario Social Posting Completed
 
 Source:
@@ -26,24 +63,21 @@ Source:
 Change:
 
 - Moved DeMario launch-feedback social proof from public-copy-ready to
-  posted_url_pending.
+  posted_urls_recorded.
 - Recorded that posting happened from Toni-owned channels without adding
   unsupported metrics, testimonials, private screenshots, admin records,
   payment proof, or business-impact claims.
-- Left exact LinkedIn/Instagram post URL capture as the only remaining
-  durability follow-up.
+- Recorded exact LinkedIn/Instagram post URL capture as complete.
 
 Priority impact:
 
-1. DeMario human posting is no longer an active manual gate.
-2. Exact post URL capture is useful for durable proof tracking, but it is not a
-   blocker to the already-completed posting event.
-3. DeMario consulting-site reuse, screenshots, testimonials, metrics, and
+1. DeMario human posting and durable URL capture are no longer active manual
+   gates.
+2. DeMario consulting-site reuse, screenshots, testimonials, metrics, and
    command-room proof remain separately gated.
 
 Next review trigger:
 
-- Exact LinkedIn/Instagram post URL(s) are available to record.
 - Toni wants to reuse the DeMario work on the consulting site as a case study.
 - Toni wants to publish screenshots, testimonials, metrics, or private admin
   proof beyond the current public-page/text scope.
@@ -60,9 +94,9 @@ Source:
 Change:
 
 - Recorded DeMario as posted from Toni-owned LinkedIn/Instagram channels, with
-  exact public URL capture pending only if durable link proof is useful.
-- Verified Omnexus PR #562 has green latest checks but remains blocked by
-  required review and exact App Store Connect product-status evidence.
+  exact public URLs now captured for durable link proof.
+- Verified Omnexus PR #562 later merged and the App Store Connect posture moved
+  to app version `1.0.1` plus monthly/annual subscriptions waiting for review.
 - Landed consulting PR #3 with the 2026-05-06 public-site readiness receipt,
   live route smoke, Hub-first intake proof, and remaining manual gates.
 - Merged Architected Strength PR #2 as the repo-local boundary/roadmap note
@@ -70,15 +104,15 @@ Change:
 
 Priority impact:
 
-1. Remaining human/manual gates are Omnexus PR review plus App Store Connect
-   status fill; DeMario exact post URL capture is a durable-proof follow-up.
+1. Remaining human/manual gate is Apple review outcome; DeMario exact post URL
+   capture is complete.
 2. Consulting public-site readiness is no longer an active DTP queue item.
 3. Architected Strength implementation remains next/later on a fresh branch.
 
 Next review trigger:
 
-- Exact DeMario post URL(s) become available, Omnexus PR #562 receives required
-  review, or App Store Connect status proves an IAP code change is needed.
+- Apple approves or rejects app version `1.0.1` and/or the monthly/annual
+  subscriptions.
 
 ## 2026-05-06: DeMario Human Builder-Journey Copy
 
@@ -100,7 +134,8 @@ Priority impact:
 
 1. Use the builder-journey LinkedIn draft as the preferred public post.
 2. Keep the CTA simple: DFW pickleball players should hit up Mario.
-3. Posting completed later on 2026-05-06; capture final post URL(s) if useful.
+3. Posting completed later on 2026-05-06; exact public post URLs were recorded
+   after Toni provided them.
 
 Next review trigger:
 
@@ -577,8 +612,7 @@ Priority impact:
 
 Next review trigger:
 
-- An eligible reviewer approves Omnexus PR #562.
-- App Store Connect monthly/annual subscription statuses are captured.
-- Toni provides exact DeMario post URLs.
+- Apple approves or rejects app version `1.0.1` and/or the monthly/annual
+  subscriptions.
 - Hub gains an intake archive/delete path or Toni decides the labeled smoke row
   is acceptable as the cleanup boundary.

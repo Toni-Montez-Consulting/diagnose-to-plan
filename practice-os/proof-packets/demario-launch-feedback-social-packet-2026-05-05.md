@@ -9,8 +9,8 @@ review_status: posted_public_safe
 
 Status: posted_public_safe. Toni confirmed on 2026-05-06 that he is good to
 post about Mario's site, that the remaining Mario site work has been finished,
-and that he posted the site on LinkedIn and Instagram. Exact post URLs remain
-pending if Toni wants durable public-link proof.
+that he posted the site on LinkedIn and Instagram, and that the exact post URLs
+are now recorded for durable public-link proof.
 
 ## Proof Candidate
 
@@ -30,10 +30,12 @@ pending if Toni wants durable public-link proof.
 - LinkedIn account: `https://www.linkedin.com/in/toni-montez`
 - Instagram account(s): personal handle `toni.montez`; Architected Strength
   handle text `architected strength`
-- Exact LinkedIn post URL: pending_toni_url
-- Exact Instagram post URL(s): pending_toni_url
+- Exact LinkedIn post URL:
+  `https://www.linkedin.com/posts/toni-montez_vibecoding-ai-share-7457778664995434496-_YWO`
+- Exact Instagram post URL(s):
+  `https://www.instagram.com/reel/DX_7B34AKFK/`
 - Source: Toni reported posting on LinkedIn and Instagram in chat on
-  2026-05-06.
+  2026-05-06, then provided the exact public post URLs in chat on 2026-05-06.
 - Boundary: this record confirms human posting only; it does not add metrics,
   testimonials, screenshots, private admin records, or business-impact claims.
 
@@ -295,16 +297,14 @@ demariomontezpb.com
 - Payment confirmation remains human-owned until a later payment processor path
   is approved.
 - Refund/cancellation/payment adjustments remain manual.
-- Public URL capture for the final LinkedIn/Instagram post links remains
-  human-owned by Toni.
+- Public URL capture for the final LinkedIn/Instagram post links is complete.
 - Private admin screenshots remain redaction-gated.
 
 ## Publish Decision
 
-- Status: posted_public_safe; exact public URL capture pending.
+- Status: posted_public_safe; exact public URLs recorded.
 - Completed action: Toni reported posting on LinkedIn and Instagram on
-  2026-05-06 from Toni-owned channels.
-- Recommended next action: capture the exact LinkedIn/Instagram post URL(s) if
-  durable public-link proof is useful. Keep private admin, booking, payment,
-  student, testimonial, screenshot, and metric material gated unless separately
+  2026-05-06 from Toni-owned channels, then provided the exact public post URLs.
+- Recommended next action: keep private admin, booking, payment, student,
+  testimonial, screenshot, and metric material gated unless separately
   reviewed.

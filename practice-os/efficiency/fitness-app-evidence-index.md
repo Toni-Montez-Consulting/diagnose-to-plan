@@ -11,13 +11,14 @@ review_status: draft
 
 - Name: `fitness-app` / Omnexus
 - Branch: `main`
-- Last updated: 2026-05-03
-- Reviewer: Omnexus App Store closeout evidence pass
+- Last updated: 2026-05-06
+- Reviewer: Omnexus App Store submission state update
 
 ## Latest Verification
 
 | Lane | Date | Result | Commit | Artifact |
 |---|---|---|---|---|
+| app review / IAP | 2026-05-06 | submitted_waiting_for_review | PR #562 merge `0b971aa`; app version `1.0.1` | Toni reported PR #562 merged, monthly and annual subscriptions were `Waiting for Review` at submission, and app version `1.0.1` was submitted for review with the subscriptions. No code change is authorized unless Apple returns exact reviewer/status evidence requiring it |
 | billing support alert | 2026-05-03 | parked_manual_gate | local runbook update pending | Gmail alert reported Stripe disabled a live webhook endpoint shown as the root domain; live smoke confirmed `https://omnexus.fit/api/health` returns 200, `GET /api/webhook-stripe` returns 405, and unsigned `POST /api/webhook-stripe` returns 400 signature failure; Toni parked Stripe for now, so the later reopen path is Stripe Dashboard endpoint update/re-enable/replay, not app-route code |
 | live proof checklist | 2026-05-01 | pass_with_manual_gates | `deceade8` | `docs/ops/post-approval-live-proof-checklist.md` added and linked from README, Launch Guide, ops docs, post-approval audit, and post-App-Store roadmap; Security Ops run `25198820007`, Build iOS run `25198820004`, and Semgrep run `25198820015` passed; manual proof capture starts on or after 2026-05-02 |
 | local | 2026-05-01 | pass | `65d9ea44` | `npm run typecheck`; `npx vitest run api/export-data.test.ts api/delete-account.test.ts`; `npm run ios:submission-lint:strict`; `npm run verify:local`; `npm run security:secrets`; `git diff --check` |
@@ -47,6 +48,10 @@ review_status: draft
 - Public consulting proof is blocked until a proof packet names the claim, permission, redaction status, reviewer, after-state evidence, and caveat.
 - Public App Store install proof and first-72-hour launch trust checks remain manual after public listing availability on or after 2026-05-02; do not treat App Review approval as business traction proof by itself.
 - External App Store, real-device, provider, support, analytics, billing, and production-data checks remain manual, repo-owned gates.
+- App version `1.0.1` and the monthly/annual subscriptions are waiting on
+  Apple review per Toni's 2026-05-06 update. If approved, run the post-approval
+  live IAP proof checklist. If rejected, capture exact product status and
+  reviewer text privately before changing code.
 - Stripe disabled a live webhook endpoint shown as the root domain on 2026-05-02; the repo-documented route is reachable at `/api/webhook-stripe`, but Stripe is parked per Toni for now. When reopened, Stripe Dashboard endpoint correction, re-enable, event replay, and affected-subscription verification remain manual support gates.
 - GitHub reported an existing Dependabot alert backlog after the push; triage belongs to the Omnexus security backlog and is not a CCAAP launch blocker.
 - DSE remains a separate COI-aware lane and was intentionally not touched.

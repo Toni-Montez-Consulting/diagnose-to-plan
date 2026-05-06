@@ -22,7 +22,7 @@ review_status: draft
 | local E2E | 2026-05-06 | pass | `e92b1c0` | `npm run test:e2e`: 20 Playwright smoke tests passed across desktop and mobile projects |
 | live smoke | 2026-05-06 | pass | `e92b1c0` | `https://demariomontezpb.com/`, `/pay`, `/privacy`, `/terms`, and `/admin/login` returned 200; `/admin` redirected to `/admin/login`; availability probe for 2026-05-07 returned 200 JSON |
 | CI | 2026-05-06 | pass | `e92b1c0` | GitHub Actions CI run `25413691658` passed; CodeQL run `25413691307` passed |
-| proof copy | 2026-05-06 | posted_url_pending | DTP proof packet | Toni reported posting on LinkedIn and Instagram from Toni-owned channels; exact post URL(s) remain pending if durable public-link proof is useful |
+| proof copy | 2026-05-06 | posted_urls_recorded | DTP proof packet | Toni reported posting on LinkedIn and Instagram from Toni-owned channels and provided the exact public post URLs; no metrics, testimonials, private screenshots, booking/payment proof, or student/admin data are added |
 | local | 2026-04-30 | pass | `bcd23a2` | `npm run ci`: typecheck pass, lint pass, Vitest 15 files / 55 tests pass, `next build` pass |
 | local hygiene | 2026-04-30 | noted | `bcd23a2` | `next build` regenerated `next-env.d.ts` from `.next/dev/types/routes.d.ts` to `.next/types/routes.d.ts`; change was restored to keep the repo clean |
 | CI | 2026-04-29 | pass | `bcd23a2` | GitHub Actions CI run `25125162032` passed |

@@ -16,11 +16,11 @@ Omnexus, consulting, and Architected Strength.
 ## Outcome
 
 - DeMario social proof was posted from Toni-owned LinkedIn and Instagram
-  channels on 2026-05-06 per Toni's report; exact post URL capture remains
-  pending only if durable public-link proof is useful.
-- Omnexus PR #562 has green latest checks, but GitHub still requires review and
-  App Store Connect product statuses must be filled privately before the manual
-  IAP resubmission path can be called complete.
+  channels on 2026-05-06 per Toni's report; exact public post URLs are now
+  recorded in the proof packet.
+- Omnexus PR #562 merged on 2026-05-06. Toni reported monthly and annual
+  subscriptions were `Waiting for Review` when submitted, and app version
+  `1.0.1` has been submitted for review.
 - Consulting PR #3 merged the public-site readiness recheck into `main` with no
   source behavior changes, green CI, live route smoke, Hub-first intake proof,
   and manual gates recorded. A 2026-05-06 synthetic live intake smoke then
@@ -47,17 +47,14 @@ Omnexus, consulting, and Architected Strength.
   `v=DMARC1; p=none; pct=100`.
 - Architected Strength PR #2 checks: `fixtures` and `validate` passed before
   merge.
-- Omnexus PR #562 latest checks were green, but merge state remained blocked by
-  required review.
+- Omnexus PR #562 merged at commit `0b971aa515bca3f611f7a1c54096479284e2899e`.
 
 ## Remaining Gates
 
-1. Capture the exact DeMario LinkedIn/Instagram post URL(s) if durable
-   public-link proof is useful.
-2. Omnexus PR #562 receives the required review.
-3. App Store Connect monthly and annual subscription statuses are recorded
-   privately, then app version `1.0.1` plus subscriptions are submitted only if
-   the exact ASC state allows it.
-4. Consulting still needs a human desktop/mobile taste pass before broader
+1. Wait for Apple's review result on Omnexus app version `1.0.1` and the
+   monthly/annual subscriptions. If approved, run the post-approval live IAP
+   proof checklist; if rejected, capture exact reviewer/status evidence
+   privately before changing code.
+2. Consulting still needs a human desktop/mobile taste pass before broader
    sharing. Intake cleanup remains manual/structural because Hub has no intake
    delete/archive endpoint; the smoke row is clearly labeled test data.
