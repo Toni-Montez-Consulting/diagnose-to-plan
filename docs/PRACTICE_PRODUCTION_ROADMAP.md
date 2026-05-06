@@ -144,7 +144,7 @@ The Practice System Documentation Pack is the architecture and audit layer for t
 ### tm-skills
 
 - Separate version-controlled skills repo exists at `C:\Users\tonimontez\tm-skills` with private GitHub remote `Toni-Montez-Consulting/tm-skills`.
-- Phase 1 scope is five SDLC skills: `review-checklist`, `frontend-craft`, `backend-design`, `testing-ladder`, and `delivery-baseline`.
+- Phase 1 scope is six SDLC skills: `review-checklist`, `frontend-craft`, `backend-design`, `testing-ladder`, `delivery-baseline`, and `systems-health-review`.
 - Safe activation checks pass: doctor, freshness, install dry-run, and post-install doctor.
 - Global install was explicitly approved and applied on 2026-04-30 without `-Force`. Windows skill paths use directory junctions because symbolic links required elevation in this environment.
 - External Codex/Claude/Copilot reload and smoke prompts remain manual follow-up gates.
@@ -439,7 +439,7 @@ Build these after the near-term documentation and pilot path are stable.
    - Pin `tm-skills` into one low-risk repo after global discovery works.
    - Use consulting or `demario-pickleball-1` as the first canary only if duplicate-skill behavior is clear.
    - Add stack overlays after Phase 1 proves useful: `stack-astro`, `stack-nextjs`, `stack-swift-ios`, `architecture-doc`, and `codebase-audit`.
-   - Keep stack overlays thin. They should compose with the five base skills, not duplicate them.
+   - Keep stack overlays thin. They should compose with the base skills, not duplicate them.
    - Add a `verification-toolkit` or `release-evidence` overlay only after the DTP CLI pattern has been used in at least two repos.
 
 8. Client Command Room pilot.

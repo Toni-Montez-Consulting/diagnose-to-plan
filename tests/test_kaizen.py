@@ -156,7 +156,7 @@ def test_coi_capture_writes_only_redacted_stub_to_committed_index(tmp_path: Path
 
 def test_status_renders_active_buckets(tmp_path: Path) -> None:
     config = _config(tmp_path)
-    for status in ("inbox", "now", "waiting", "blocked", "parked"):
+    for status in ("inbox", "now", "waiting", "blocked", "parked", "cancelled"):
         run_kaizen_capture(
             config,
             f"Capture {status} item.",
@@ -168,12 +168,55 @@ def test_status_renders_active_buckets(tmp_path: Path) -> None:
     status = run_kaizen_status(config)
     rendered = render_status(status)
 
-    assert status.counts["total"] == 5
+    assert status.counts["total"] == 6
     assert "inbox=1" in rendered
     assert "now=1" in rendered
     assert "waiting=1" in rendered
     assert "blocked=1" in rendered
     assert "parked=1" in rendered
+    assert "cancelled=1" in rendered
+    assert "Capture cancelled item." not in rendered
+
+
+def test_terminal_statuses_round_trip_with_closure_metadata(tmp_path: Path) -> None:
+    config = _config(tmp_path)
+
+    captured = run_kaizen_capture(
+        config,
+        "Old dashboard plan was replaced by the static DTP panel.",
+        status="superseded",
+        sensitivity="internal-only",
+        captured_at=datetime(2026, 5, 4, 10, 0, tzinfo=UTC),
+        closure_reason="static dashboard became canonical",
+        evidence_refs=("docs/WORKSPACE_DASHBOARD_READONLY.md",),
+        superseded_by="docs/workspace-dashboard.html",
+    )
+
+    record = read_kaizen_records(config)[0]
+    rendered = render_status(run_kaizen_status(config, status_filter="superseded"))
+
+    assert captured.record.status == "superseded"
+    assert record.closed_at == "2026-05-04T10:00:00+00:00"
+    assert record.closure_reason == "static dashboard became canonical"
+    assert record.evidence_refs == ("docs/WORKSPACE_DASHBOARD_READONLY.md",)
+    assert record.superseded_by == "docs/workspace-dashboard.html"
+    assert "superseded=1" in rendered
+    assert "Old dashboard plan was replaced" in rendered
+
+
+def test_canceled_alias_normalizes_to_cancelled(tmp_path: Path) -> None:
+    config = _config(tmp_path)
+
+    result = run_kaizen_capture(
+        config,
+        "Canceled spelling should still close the record.",
+        status="canceled",
+        sensitivity="internal-only",
+        captured_at=datetime(2026, 5, 4, 10, 0, tzinfo=UTC),
+    )
+
+    assert result.record.status == "cancelled"
+    assert result.record.closed_at == "2026-05-04T10:00:00+00:00"
 
 
 def test_update_changes_status_and_next_action(tmp_path: Path) -> None:
@@ -226,7 +269,7 @@ def test_status_limit_and_filter(tmp_path: Path) -> None:
     assert "Inbox item 6" in rendered
 
 
-def test_mirror_skips_done_by_default_and_can_include_done(tmp_path: Path) -> None:
+def test_mirror_skips_terminal_by_default_and_can_include_terminal(tmp_path: Path) -> None:
     config = _config(tmp_path)
     run_kaizen_capture(
         config,
@@ -242,13 +285,21 @@ def test_mirror_skips_done_by_default_and_can_include_done(tmp_path: Path) -> No
         sensitivity="internal-only",
         captured_at=datetime(2026, 5, 4, 10, 1, tzinfo=UTC),
     )
+    run_kaizen_capture(
+        config,
+        "Cancelled safe item.",
+        status="cancelled",
+        sensitivity="internal-only",
+        captured_at=datetime(2026, 5, 4, 10, 2, tzinfo=UTC),
+    )
 
     default = run_kaizen_mirror(config)
     include_done = run_kaizen_mirror(config, include_done=True)
 
-    assert default.skipped_done == 1
+    assert default.skipped_done == 2
     assert [row["name"] for row in default.allowed_rows] == ["Now safe item."]
     assert {row["name"] for row in include_done.allowed_rows} == {
+        "Cancelled safe item.",
         "Done safe item.",
         "Now safe item.",
     }
@@ -303,6 +354,34 @@ def test_kaizen_cli_update(tmp_path: Path, monkeypatch) -> None:
     assert update.exit_code == 0
     assert "kaizen updated" in update.output
     assert "waiting" in update.output
+
+
+def test_kaizen_cli_updates_closure_metadata(tmp_path: Path, monkeypatch) -> None:
+    monkeypatch.setenv("DTP_HOME", str(tmp_path))
+    runner = CliRunner()
+    capture = runner.invoke(app, ["kaizen", "capture", "Close this item.", "--json"])
+    record_id = capture.output.split('"id": "')[1].split('"')[0]
+
+    update = runner.invoke(
+        app,
+        [
+            "kaizen",
+            "update",
+            record_id,
+            "--status",
+            "discarded",
+            "--closure-reason",
+            "assistant suggestion had no evidence",
+            "--evidence-ref",
+            "docs/WORKSPACE_DOCS_AND_CHAT_SWEEP_LEDGER_2026-05-05.md",
+            "--json",
+        ],
+    )
+
+    assert update.exit_code == 0
+    assert '"status": "discarded"' in update.output
+    assert '"closure_reason": "assistant suggestion had no evidence"' in update.output
+    assert '"evidence_refs": [' in update.output
 
 
 def test_kaizen_cli_status_preserves_redacted_titles(tmp_path: Path, monkeypatch) -> None:

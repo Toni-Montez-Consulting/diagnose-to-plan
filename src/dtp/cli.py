@@ -40,7 +40,13 @@ from dtp.commands.vault import (
     run_vault_status,
 )
 from dtp.commands.web import run_workbench_server
+from dtp.commands.workspace_dashboard import (
+    DashboardSurface,
+    run_workspace_dashboard,
+    run_workspace_dashboard_validation,
+)
 from dtp.commands.workspace_report import render_workspace_report, run_workspace_report
+from dtp.commands.workspace_tasks import run_workspace_recover, run_workspace_task_add
 from dtp.config import load_config
 from dtp.extract.indexer import ExtractError
 from dtp.extract.recall import RecallResult
@@ -54,6 +60,7 @@ kaizen_app = typer.Typer(no_args_is_help=True, add_completion=False)
 memory_app = typer.Typer(no_args_is_help=True, add_completion=False)
 vault_app = typer.Typer(no_args_is_help=True, add_completion=False)
 workspace_app = typer.Typer(no_args_is_help=True, add_completion=False)
+workspace_task_app = typer.Typer(no_args_is_help=True, add_completion=False)
 console = Console()
 app.add_typer(kit_app, name="kit")
 app.add_typer(redact_app, name="redact")
@@ -62,6 +69,7 @@ app.add_typer(kaizen_app, name="kaizen")
 app.add_typer(memory_app, name="memory")
 app.add_typer(vault_app, name="vault")
 app.add_typer(workspace_app, name="workspace")
+workspace_app.add_typer(workspace_task_app, name="task")
 
 
 @app.command("draft")
@@ -445,7 +453,13 @@ def kaizen_capture_command(
     ] = "auto",
     status: Annotated[
         str,
-        typer.Option("--status", help="Kanban status: inbox, now, waiting, blocked, parked."),
+        typer.Option(
+            "--status",
+            help=(
+                "Kanban status: inbox, now, next, waiting, blocked, parked, done, "
+                "cancelled, superseded, discarded."
+            ),
+        ),
     ] = "inbox",
     sensitivity: Annotated[
         str,
@@ -478,6 +492,22 @@ def kaizen_capture_command(
         list[str] | None,
         typer.Option("--tag", help="Repeatable lightweight tag."),
     ] = None,
+    closed_at: Annotated[
+        str,
+        typer.Option("--closed-at", help="Closure timestamp for terminal records."),
+    ] = "",
+    closure_reason: Annotated[
+        str,
+        typer.Option("--closure-reason", help="Why this terminal record closed."),
+    ] = "",
+    evidence_ref: Annotated[
+        list[str] | None,
+        typer.Option("--evidence-ref", help="Repeatable evidence pointer for terminal records."),
+    ] = None,
+    superseded_by: Annotated[
+        str,
+        typer.Option("--superseded-by", help="Replacement record, story, or artifact."),
+    ] = "",
     json_output: Annotated[
         bool,
         typer.Option("--json", help="Print the captured record as JSON."),
@@ -497,6 +527,10 @@ def kaizen_capture_command(
             notion_target=notion_target,
             next_action=next_action,
             tags=tuple(tag or ()),
+            closed_at=closed_at,
+            closure_reason=closure_reason,
+            evidence_refs=tuple(evidence_ref or ()),
+            superseded_by=superseded_by,
         )
     except KaizenError as error:
         console.print(f"[red]{error}[/red]")
@@ -545,7 +579,13 @@ def kaizen_update_command(
     ] = None,
     status: Annotated[
         str | None,
-        typer.Option("--status", help="New Kanban status."),
+        typer.Option(
+            "--status",
+            help=(
+                "New Kanban status: inbox, now, next, waiting, blocked, parked, done, "
+                "cancelled, superseded, discarded."
+            ),
+        ),
     ] = None,
     sensitivity: Annotated[
         str | None,
@@ -575,6 +615,22 @@ def kaizen_update_command(
         list[str] | None,
         typer.Option("--tag", help="Replace tags with repeated values."),
     ] = None,
+    closed_at: Annotated[
+        str | None,
+        typer.Option("--closed-at", help="Closure timestamp for terminal records."),
+    ] = None,
+    closure_reason: Annotated[
+        str | None,
+        typer.Option("--closure-reason", help="Why this terminal record closed."),
+    ] = None,
+    evidence_ref: Annotated[
+        list[str] | None,
+        typer.Option("--evidence-ref", help="Replace evidence refs with repeated values."),
+    ] = None,
+    superseded_by: Annotated[
+        str | None,
+        typer.Option("--superseded-by", help="Replacement record, story, or artifact."),
+    ] = None,
     json_output: Annotated[
         bool,
         typer.Option("--json", help="Print the updated record as JSON."),
@@ -594,6 +650,10 @@ def kaizen_update_command(
             notion_target=notion_target,
             next_action=next_action,
             tags=tuple(tag) if tag is not None else None,
+            closed_at=closed_at,
+            closure_reason=closure_reason,
+            evidence_refs=tuple(evidence_ref) if evidence_ref is not None else None,
+            superseded_by=superseded_by,
         )
     except KaizenError as error:
         console.print(f"[red]{error}[/red]")
@@ -617,7 +677,10 @@ def kaizen_mirror_command(
     ] = False,
     include_done: Annotated[
         bool,
-        typer.Option("--include-done", help="Include done records in the mirror payload."),
+        typer.Option(
+            "--include-done",
+            help="Include terminal done/cancelled/superseded/discarded records.",
+        ),
     ] = False,
     limit: Annotated[
         int,
@@ -707,6 +770,151 @@ def workspace_report_command(
         typer.echo(json.dumps(report.to_dict(), indent=2))
         return
     typer.echo(render_workspace_report(report), nl=False)
+
+
+@workspace_app.command("dashboard")
+def workspace_dashboard_command(
+    out: Annotated[
+        Path,
+        typer.Option("--out", help="Static HTML dashboard output path."),
+    ] = Path("docs/workspace-dashboard.html"),
+    surface: Annotated[
+        DashboardSurface,
+        typer.Option("--surface", help="Dashboard surface style."),
+    ] = DashboardSurface.browser,
+) -> None:
+    config = load_config()
+    result = run_workspace_dashboard(config, output_path=out, surface=surface)
+    console.print(f"[green]workspace dashboard written[/green] {result.path}")
+    console.print(
+        f"repos={result.repo_count}; active_items={result.active_item_count}; "
+        f"closed_items={result.closed_item_count}; "
+        f"recovery_inbox={result.recovery_inbox_count}; "
+        f"sweep_scopes={result.sweep_scope_count}; "
+        f"proof_candidates={result.proof_candidate_count}"
+    )
+
+
+@workspace_app.command("validate-dashboard")
+def workspace_validate_dashboard_command() -> None:
+    config = load_config()
+    result = run_workspace_dashboard_validation(config)
+    categories = result.summary["categories"]
+    status = "ok" if result.ok else "needs attention"
+    console.print(f"[green]workspace dashboard validation[/green] {status}")
+    console.print(
+        "in_dashboard={in_dashboard}; recovery_inbox={recovery_inbox}; "
+        "excluded_or_redacted={excluded_or_redacted}; duplicate_merged={duplicate_merged}; "
+        "source_missing={source_missing}; count_mismatch={count_mismatch}; "
+        "duplicate_task_ids={duplicate_task_ids}".format(
+            **categories
+        )
+    )
+    console.print(f"json={result.json_path}")
+    console.print(f"markdown={result.markdown_path}")
+    if not result.ok:
+        raise typer.Exit(code=1)
+
+
+@workspace_app.command("recover")
+def workspace_recover_command(
+    dry_run: Annotated[
+        bool,
+        typer.Option("--dry-run", help="Write reviewable recovery candidates to ignored outputs/."),
+    ] = False,
+    apply: Annotated[
+        bool,
+        typer.Option("--apply", help="Import reviewed candidates into the workspace task ledger."),
+    ] = False,
+    approved: Annotated[
+        Path | None,
+        typer.Option("--approved", help="Reviewed candidate JSON from a prior dry run."),
+    ] = None,
+) -> None:
+    if dry_run and apply:
+        console.print("[red]choose either --dry-run or --apply, not both[/red]")
+        raise typer.Exit(code=1)
+    config = load_config()
+    try:
+        result = run_workspace_recover(config, apply=apply, approved_path=approved)
+    except ValueError as error:
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(code=1) from error
+    if apply:
+        console.print(
+            f"[green]workspace recovery imported[/green] {result.imported_count} "
+            f"rows -> {result.ledger_path}"
+        )
+    else:
+        console.print(
+            f"[green]workspace recovery dry-run[/green] {len(result.candidates)} candidates"
+        )
+        if result.dry_run_json_path:
+            console.print(f"json={result.dry_run_json_path}")
+        if result.dry_run_markdown_path:
+            console.print(f"markdown={result.dry_run_markdown_path}")
+    if result.notion_export_path:
+        console.print(f"notion_export={result.notion_export_path}")
+
+
+@workspace_task_app.command("add")
+def workspace_task_add_command(
+    title: Annotated[str, typer.Option("--title", help="Reviewed workspace task title.")],
+    repo: Annotated[str, typer.Option("--repo", help="Owning repo or workspace lane.")],
+    status: Annotated[str, typer.Option("--status", help="Task status.")],
+    priority: Annotated[str, typer.Option("--priority", help="Priority such as P1.")],
+    next_action: Annotated[str, typer.Option("--next-action", help="Next action.")],
+    source_ref: Annotated[str, typer.Option("--source-ref", help="DTP source pointer.")],
+    sensitivity: Annotated[str, typer.Option("--sensitivity", help="Data sensitivity.")],
+    confidence: Annotated[str, typer.Option("--confidence", help="Evidence confidence.")],
+    lane: Annotated[
+        str,
+        typer.Option("--lane", help="Optional lane or workstream."),
+    ] = "Manual Workspace Task",
+    blocked_by: Annotated[
+        str,
+        typer.Option("--blocked-by", help="Optional blocker or gate."),
+    ] = "",
+    evidence_ref: Annotated[
+        str,
+        typer.Option("--evidence-ref", help="Optional evidence pointer."),
+    ] = "",
+    closed_at: Annotated[
+        str,
+        typer.Option("--closed-at", help="Optional closure date for terminal rows."),
+    ] = "",
+    closure_reason: Annotated[
+        str,
+        typer.Option("--closure-reason", help="Optional closure reason."),
+    ] = "",
+    superseded_by: Annotated[
+        str,
+        typer.Option("--superseded-by", help="Optional replacement pointer."),
+    ] = "",
+) -> None:
+    config = load_config()
+    try:
+        task = run_workspace_task_add(
+            config,
+            title=title,
+            repo=repo,
+            status=status,
+            priority=priority,
+            next_action=next_action,
+            source_ref=source_ref,
+            sensitivity=sensitivity,
+            confidence=confidence,
+            lane=lane,
+            blocked_by=blocked_by,
+            evidence_ref=evidence_ref,
+            closed_at=closed_at,
+            closure_reason=closure_reason,
+            superseded_by=superseded_by,
+        )
+    except ValueError as error:
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(code=1) from error
+    console.print(f"[green]workspace task added[/green] {task.id}")
 
 
 @app.command("web")

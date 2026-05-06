@@ -10,6 +10,89 @@ review_status: draft
 Use this log after meaningful Practice OS changes so backlog movement is
 deliberate and visible.
 
+## 2026-05-05: No-Server Workspace Dashboard Panel
+
+Source:
+
+- Toni's request for a visible no-server dashboard inside VS Code or a separate
+  screen because the cross-workspace roadmap state is hard to hold in chat.
+- Existing-extension review: Markdown preview, HTML/Simple Browser previews,
+  and Markdown Kanban tools are viable viewers or board tools but do not own
+  the DTP cross-workspace refresh/source-of-truth boundary.
+- `docs/WORKSPACE_DASHBOARD_READONLY.md`
+- `docs/WORKSPACE_COMMAND_CENTER_V0.md`
+
+Change:
+
+- Kept DTP as the whole-workspace planning source of truth.
+- Added a tiny local VS Code panel as a viewer/manual refresh button for the
+  generated DTP dashboard.
+- Preserved the no-server, no-watcher, no-cloud-call, no-sibling-command
+  boundary.
+
+Priority impact:
+
+1. Use the VS Code panel as the operator cockpit for consulting, Architected
+   Strength, Omnexus, DeMario, Hub, CCAAP, DSE, and related workspace lanes.
+2. Keep generated panel cache in ignored `outputs/workspace-dashboard.html`.
+3. Do not move roadmap ownership into generic Marketplace Kanban syntax.
+
+Next review trigger:
+
+- Toni uses the panel for a few planning sessions and identifies missing
+  filters, sections, repo lanes, or visual grouping.
+
+## 2026-05-05: DeMario Social Proof And Site-Fix Focus
+
+Source:
+
+- Toni's 2026-05-05 roadmap request after DeMario's pickleball site went live
+  and received strong feedback.
+- Toni's 2026-05-05 Omnexus update that App Store approval landed but
+  subscriptions were declined/not approved.
+- Live clean git refresh for `consulting`, `diagnose-to-plan`,
+  `architected-strength`, and `demario-pickleball-1`.
+- `docs/WORKSPACE_ROADMAP_AND_PLANNING_REPORT_2026-05-05.md`
+- `docs/ROADMAP_EXECUTION_BACKLOG.md`
+- `docs/PRACTICE_PROOF_QUEUE_INDEX.md`
+
+Change:
+
+- Promoted DeMario from generic later proof/reference material into an active
+  launch-feedback social/proof packet candidate.
+- Reopened Omnexus as App Store Connect/IAP support around subscription-review
+  resubmission instead of treating approval as fully complete or assuming code
+  changes are required.
+- Reopened the consulting site as a focused fix/readiness pass, not a broad
+  redesign or proof replacement.
+- Reopened Architected Strength as a separate P0/P1 public-signal finish/fix
+  pass before assistant-pattern work.
+- Captured all three items into the Kaizen intake so they do not stay in chat.
+
+Priority impact:
+
+1. First: draft a DeMario LinkedIn/social proof packet with owner-approved
+   wording, source/testimonial evidence, screenshot approvals, redaction,
+   launch context, caveat, and final channel copy before posting.
+2. Second: fill `fitness-app/docs/ops/app-store-subscription-resubmission-checklist-2026-05-05.md`
+   from Omnexus App Store Connect subscription statuses and reviewer message,
+   then choose manual resubmission or a code branch.
+3. Third: run the consulting public-site fix/readiness pass while preserving
+   Steel Ledger and Hub-first intake.
+4. Fourth: run the Architected Strength P0/P1 finish/fix pass while preserving
+   its personal-brand OS boundary.
+5. Still blocked: public proof publishing, private screenshots, autonomous
+   posting, assistant runtime, DSE proof, and broad redesign without accepted
+   scope.
+
+Next review trigger:
+
+- Mario approves or revises the social/proof packet.
+- Omnexus subscription status/reviewer message is inspected.
+- The consulting site pass is scoped for implementation.
+- The Architected Strength finish/fix pass is scoped for implementation.
+- A new positive-feedback or proof signal arrives from any active project.
+
 ## 2026-05-04: Roadmap Alignment Drift Cleanup
 
 Source:
@@ -232,3 +315,32 @@ Next review trigger:
 - A new source thesis/spec/schema file is added.
 - Hosted DTP/schema work resumes.
 - A future implementation prompt relies on the newly referenced source paths.
+
+## 2026-05-05: Systems Health Review Skill Routed
+
+Source:
+
+- `docs/TM_SKILLS_IMPLEMENTATION_ROADMAP.md`
+- `practice-os/templates/activation-routing-map.md`
+
+Change:
+
+- Registered `systems-health-review` as a Phase 1 `tm-skills` diagnostic lane
+  in DTP roadmap surfaces.
+- Routed systems-health prompts to `tm-skills/systems-health-review`.
+- Documented Toni's Windows VS Code extension install fallback for the local
+  workspace dashboard.
+
+Priority impact:
+
+- Keep systems-health review as a review-first diagnostic skill, not a rewrite
+  mandate.
+- Keep DTP as the router/source map while the actual skill implementation lives
+  in `tm-skills`.
+- Keep the dashboard extension local, manual-refresh, and no-server.
+
+Next review trigger:
+
+- The `tm-skills` systems-health-review work is committed and validated.
+- A repo or client operating system asks for a weakest-system review.
+- The dashboard extension needs reinstall or machine-specific setup notes.

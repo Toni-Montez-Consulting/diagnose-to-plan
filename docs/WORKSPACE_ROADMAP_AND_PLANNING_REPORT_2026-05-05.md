@@ -65,7 +65,27 @@ Do not touch this cycle:
 - autonomous client communications;
 - QuickBooks writes or live imports;
 - write-enabled cross-repo command runners;
-- new consulting site scope.
+- broad consulting site redesign or new public proof claims.
+
+## 2026-05-05 Operator Reprioritization Addendum
+
+Toni reopened four practical lanes after this report's original synthesis:
+
+1. DeMario's pickleball site is live and receiving strong feedback, so it should move from generic future proof into a permissioned LinkedIn/social proof-prep packet.
+2. Omnexus is App Store approved, but subscriptions were declined/not approved, so it should reopen as a manual App Store Connect/IAP resubmission lane before any code rewrite.
+3. The consulting site should get a focused fix/readiness pass, not a broad redesign: Hub-first intake, visual QA, route/build checks, proof posture, and Steel Ledger preservation.
+4. Architected Strength should be reopened as its own P0/P1 finish/fix pass: public signal, claim hygiene, positioning, craft, and repo-local gates before assistant-pattern work.
+
+Live intake refresh before this addendum showed `consulting`, `diagnose-to-plan`, `architected-strength`, `fitness-app`, and `demario-pickleball-1` clean against their upstream branches. The addendum changes the next-action queue; it does not approve public proof publishing, private screenshots, autonomous posting, assistant runtime, Omnexus code changes without App Store Connect evidence, or a cross-site redesign.
+
+Updated order:
+
+| Order | Lane | Next action | Gate |
+|---|---|---|---|
+| 1 | DeMario launch-feedback social/proof packet | Draft LinkedIn/social copy and evidence checklist. | Mario-approved wording, testimonial/source evidence, redacted screenshots, launch context, caveat, reviewer, human posting. |
+| 2 | Omnexus subscription-review resubmission | Fill `fitness-app/docs/ops/app-store-subscription-resubmission-checklist-2026-05-05.md` from App Store Connect status/reviewer detail, then decide manual resubmission versus code branch. | Metadata, screenshot, availability, review notes, product IDs, and build/version attachment are verified before code work. |
+| 3 | Consulting public-site fix/readiness | Run focused site QA and fix pass. | Build/route/visual/doctor/matrix evidence and no new proof claims without DTP proof gates. |
+| 4 | Architected Strength finish/fix | Inspect current site against repo roadmap and implement P0/P1 public-signal polish. | Repo-local gates plus clear boundary from consulting and employer/private material. |
 
 ## Evidence Boundary
 
