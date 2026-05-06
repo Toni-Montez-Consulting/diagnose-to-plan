@@ -97,6 +97,18 @@ Public copy may say:
   workflow, availability, tasks, and launch operations;
 - DFW pickleball students can check out `https://demariomontezpb.com`.
 
+## Voice Guardrail
+
+Mario posts must stay plain, specific, and practical. Do not use inspirational,
+gimmicky, motivational, or slogan-like phrasing for this lane.
+
+Avoid sentiment-led openers, motivational slogans, grand metaphors, and claims
+about what the work means beyond the actual site, booking flow, and owner
+workflow.
+
+Use concrete language instead: what was built, who it serves, what path it
+clarifies, and where people can find it.
+
 ## Redaction
 
 - Redaction status: public_copy_safe
@@ -123,82 +135,52 @@ Optional text if Toni still wants a courtesy heads-up:
 
 ### Recommended LinkedIn Draft
 
-Shipping client work is fun. Shipping something for family hits different.
+I finished the new site and booking flow for my brother, DeMario Montez.
 
-I just finished the new site and booking flow for my brother, DeMario Montez.
+Mario coaches pickleball in the Dallas-Fort Worth area. The site is built around
+the practical questions students need answered before booking:
 
-Mario is a Dallas-Fort Worth pickleball coach, and the goal was not just "make a
-nice website." The goal was to build the small operating system around the
-business.
+- what lessons are available;
+- where lessons happen;
+- when to book directly through the site;
+- when a venue platform is required;
+- what to expect around payment and court confirmation.
 
-Students need to understand what he offers, where lessons happen, how to book,
-what happens with payment, and when they need to use a venue platform instead of
-the site.
+The owner side is part of the build too: bookings, inquiries, availability,
+tasks, roadmap items, and launch handoff notes are organized so the business has
+a clearer operating path after the site goes live.
 
-Mario needs the owner side to be clear too: bookings, inquiries, availability,
-tasks, roadmap items, and the daily flow of running the business without every
-detail living in texts.
-
-That is the kind of build I like most. Not overbuilt. Not generic. Just enough
-system to make a real small business easier to run.
-
-If you are in DFW and want to get better at pickleball, check him out:
+DFW pickleball students can check it out here:
 https://demariomontezpb.com
 
 ### Shorter LinkedIn Draft
 
-I got to build this one for my brother.
+The new DeMario Montez Pickleball Coaching site is live.
 
-DeMario Montez Pickleball Coaching is live: a public site, lesson flow, venue
-routing, booking path, payment guidance, and admin workflow for his DFW coaching
-business.
+I built the public lesson pages, booking flow, venue-specific routing, payment
+guidance, court-confirmation language, and admin workflow for Mario's DFW
+pickleball coaching business.
 
-What I like about this project is that it is not trying to replace the human
-part of the business. Mario still coaches, confirms courts, texts students, and
-runs the relationships.
-
-The site just removes confusion around the parts that should be clear:
-
-- what lessons are available
-- where students should book
-- when a venue platform is required
-- how payment works
-- what Mario needs to manage after launch
-
-That is the sweet spot for small-business software: make the path easier without
-flattening the person behind it.
-
-Live now: https://demariomontezpb.com
+Site:
+https://demariomontezpb.com
 
 ### Personal LinkedIn Draft
 
-My brother is one of those people who can see the game before it happens.
+My brother DeMario coaches pickleball in the Dallas-Fort Worth area. I built
+his new site to make the student path easier to understand and the owner side
+easier to manage.
 
-He coaches pickleball with the kind of calm, specific feedback that makes people
-feel like improvement is actually reachable.
+The site covers lesson options, venue routing, booking, payment guidance, court
+confirmation, admin tasks, availability, and roadmap items.
 
-I wanted his site to carry that same energy: clear, practical, local, and easy
-to act on.
-
-So this was not just a landing page. It became a working launch surface:
-lessons, booking, venue routing, payment guidance, court-confirmation language,
-admin tasks, availability, and a simple owner workflow behind the scenes.
-
-I am proud of this one because it feels like what software should do for a small
-business: take the messy operational pieces and turn them into a path people can
-actually use.
-
-DFW pickleball folks, go check out DeMario:
+DFW pickleball students can find it here:
 https://demariomontezpb.com
 
 ### Recommended Instagram Caption
 
-Built this one for my brother.
+The new DeMario Montez Pickleball Coaching site is live.
 
-DeMario Montez Pickleball Coaching is live at demariomontezpb.com.
-
-The goal was not just a clean website. It was a clear path for a real coaching
-business:
+I built the site and booking flow for my brother's DFW coaching business.
 
 - lesson options
 - booking
@@ -206,11 +188,6 @@ business:
 - payment guidance
 - court confirmation
 - admin workflow behind the scenes
-
-Proud of this one. Simple public site on the outside, practical operating system
-underneath.
-
-DFW pickleball people, go check him out.
 
 https://demariomontezpb.com
 
@@ -220,11 +197,8 @@ https://demariomontezpb.com
 
 New site is live for DeMario Montez Pickleball Coaching.
 
-Built the public lesson flow, booking path, venue routing, payment guidance, and
-admin workflow around Mario's coaching business.
-
-Not just a website. A cleaner way for students to book and for Mario to run the
-day-to-day.
+I built the lesson pages, booking path, venue routing, payment guidance, and
+admin workflow for Mario's DFW coaching business.
 
 DFW pickleball: demariomontezpb.com
 
@@ -232,12 +206,12 @@ DFW pickleball: demariomontezpb.com
 
 ### Instagram Carousel Copy
 
-1. Built this one for my brother.
-2. DeMario Montez Pickleball Coaching is live.
-3. The job was not just "make a website."
-4. Students needed a clear path: lessons, locations, booking, payment.
-5. Mario needed the owner side: bookings, inquiries, availability, tasks.
-6. The best tech disappears into the way the business already works.
+1. DeMario Montez Pickleball Coaching is live.
+2. Built for a DFW pickleball coach.
+3. Public lesson pages.
+4. Venue-specific booking routing.
+5. Payment and court-confirmation guidance.
+6. Admin workflow for bookings, inquiries, availability, and tasks.
 7. DFW pickleball: demariomontezpb.com
 
 ## Claims To Avoid Unless Separately Proven
@@ -247,6 +221,7 @@ DFW pickleball: demariomontezpb.com
 - "Students love the site."
 - "Automated the business" or anything that implies Mario is not still running
   the relationship side himself.
+- Inspirational, gimmicky, or slogan-like phrasing for Mario posts.
 - Any student quote, review count, testimonial, booking row, payment proof, or
   private admin screenshot that Toni does not intentionally want to make public.
 
@@ -258,6 +233,7 @@ DFW pickleball: demariomontezpb.com
   handoff, admin handoff, roadmap/checklist.
 - Caveat visible in the claim: no measured business impact or private proof is
   claimed.
+- Voice test: plain and concrete; no inspirational or gimmicky framing.
 - Knowledgeable-reader test: ready for public text posting.
 
 ## What Stayed Manual On Purpose
