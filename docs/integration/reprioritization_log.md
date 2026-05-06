@@ -10,6 +10,35 @@ review_status: draft
 Use this log after meaningful Practice OS changes so backlog movement is
 deliberate and visible.
 
+## 2026-05-06: DeMario Plain Social Voice Correction
+
+Source:
+
+- Toni explicitly said never to use inspirational or gimmicky phrasing for his
+  brother's posts.
+- `practice-os/proof-packets/demario-launch-feedback-social-packet-2026-05-05.md`
+
+Change:
+
+- Added a Mario-specific voice guardrail: plain, specific, practical, and free
+  of inspirational, gimmicky, motivational, or slogan-like phrasing.
+- Replaced the LinkedIn, Instagram, and carousel drafts with direct copy about
+  the site, booking flow, venue routing, payment guidance, and admin workflow.
+- Kept the existing proof/privacy boundary unchanged.
+
+Priority impact:
+
+1. Future DeMario/Mario social copy must start from concrete facts, not
+   sentiment-led framing.
+2. The approved public-safe status still applies to the revised plain-language
+   copy.
+3. Post URL capture remains the only follow-up after Toni posts.
+
+Next review trigger:
+
+- Toni wants another Mario post, carousel, case-study blurb, or consulting-site
+  proof reuse.
+
 ## 2026-05-06: DeMario Public Social Copy Cleared
 
 Source:
