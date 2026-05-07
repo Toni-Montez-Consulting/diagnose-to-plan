@@ -41,6 +41,36 @@ The first wave is draft-only automation:
 | Repo role split | DTP | Done | DTP, consulting, Hub, and `tm-skills` boundaries are explicit |
 | Completed references | DTP | Done | DeMario/Mario and Omnexus are reference projects, not the next pilot |
 
+## P0 Workflow Spine Implementation
+
+The next P0 fix is the Workflow Spine: one canonical, markdown-first operating
+state object for active client/operator work.
+
+Source receipt:
+
+- `practice-os/steward/2026-05-07-workflow-spine-p0-implementation-plan.md`
+
+Order:
+
+1. Define the minimal doc lifecycle vocabulary needed for stale/current labels.
+2. Add a DTP-linked `tm-skills` readiness scorecard without promoting candidate
+   skills or changing global install state.
+3. Create `practice-os/templates/workflow-spine.md`.
+4. Create a Greg Workflow Spine record for launch-readiness discovery.
+5. Create a Cam Workflow Spine record for waiting-on-packet/build readiness.
+6. Label only obvious stale docs; do not move, delete, or broadly archive docs
+   in P0.
+
+Done gate:
+
+- future agents can open one Workflow Spine record for Greg or Cam and know the
+  current state, canonical source files, allowed actions, blocked actions,
+  proof posture, open gates, and next artifact to update.
+
+P1 remains parked until this P0 spine exists: dashboard parsing, completeness
+scores, full archive index, persistent mirrors, hosted workflow updates, vector
+retrieval, and broader lane expansion.
+
 ## P1 Client OS Pilot Wave
 
 Order:
@@ -140,6 +170,8 @@ new repo or service.
 
 This wave is accepted when:
 
+- Workflow Spine P0 exists with lifecycle vocabulary, `tm-skills` readiness
+  scorecard, template, Greg record, Cam record, and obvious stale labels;
 - Greg and CCAAP each have a completed Client OS packet and receipt;
 - Cam is either confirmed into the same loop or explicitly still waiting;
 - Knowledge Base V1 docs and templates exist;

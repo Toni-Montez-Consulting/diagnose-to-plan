@@ -3,6 +3,11 @@ data_class: P0
 confidential: false
 permission_level: internal_only
 review_status: draft
+lifecycle_status: historical_reference
+last_verified: 2026-05-07
+owner: diagnose-to-plan
+superseded_by: docs/WORKSPACE_DASHBOARD_READONLY.md for the daily cockpit surface
+recheck_trigger: before using this as active command-center implementation guidance
 ---
 
 # Workspace Command Center V0
