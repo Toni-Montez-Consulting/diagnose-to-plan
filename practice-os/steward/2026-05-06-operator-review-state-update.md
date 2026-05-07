@@ -10,6 +10,13 @@ review_status: recorded
 
 Status: recorded.
 
+2026-05-07 supersession note: Toni's later App Store Connect check narrowed the
+Omnexus gate. Monthly and annual subscriptions plus the subscription group
+localization are now operator-reported as `Approved`; approved subscriptions do
+not need app-version attachment. The current gate is App Store Connect
+candidate build/version proof for `1.0.1` plus normal metadata, screenshot,
+privacy-label, review-note, reviewer-credential, and final smoke evidence.
+
 ## Source
 
 Toni reported the final manual updates after the 48-hour operator checkpoint:
@@ -20,8 +27,10 @@ Toni reported the final manual updates after the 48-hour operator checkpoint:
 - App version `1.0.1` was submitted for App Review with those subscriptions.
 - App version `1.0.1` was approved and is now `Pending Developer Release` per
   Toni's later 2026-05-06 update.
-- Monthly and annual Omnexus subscription products are still `Waiting for
-  Review` per Toni's later 2026-05-06 update.
+- Monthly and annual Omnexus subscription products were later operator-reported
+  as `Approved` in App Store Connect, along with the subscription group
+  localization. No App Store Connect screenshots or private transaction proof
+  are stored in this repo.
 - DeMario exact public social post URLs were provided for LinkedIn and
   Instagram.
 
@@ -32,26 +41,27 @@ Toni reported the final manual updates after the 48-hour operator checkpoint:
 | PR #562 | merged on 2026-05-06 |
 | Merge commit | `0b971aa515bca3f611f7a1c54096479284e2899e` |
 | App version | `1.0.1` approved; `Pending Developer Release` per Toni |
-| Monthly subscription | `Waiting for Review` per Toni |
-| Annual subscription | `Waiting for Review` per Toni |
-| Current posture | hold developer release until subscriptions approve or Apple explicitly confirms release is safe |
+| Monthly subscription | `Approved` per operator-reported App Store Connect check |
+| Annual subscription | `Approved` per operator-reported App Store Connect check |
+| Current posture | verify selected App Store Connect candidate build/version is `1.0.1`, then complete normal submission/live-proof gates |
 
 Boundary:
 
-- Do not click `Release This Version` while the subscription products are still
-  `Waiting for Review`, unless Apple/App Review explicitly confirms this is the
-  intended safe first-IAP path.
-- Do not make IAP code changes while the subscription products are still
-  `Waiting for Review`.
-- If Apple approves the subscriptions, release app version `1.0.1`, then run
-  the post-approval live IAP proof checklist.
+- Re-open App Store Connect before any submission or developer release and
+  confirm Monthly, Annual, and the subscription group localization still show
+  `Approved`.
+- Do not make IAP code changes or replacement subscription products unless
+  Apple returns exact reviewer/status evidence requiring a runtime or product-ID
+  fix.
+- Do not treat app-version attachment as a blocker for already-approved
+  subscription products.
+- Confirm the selected candidate build/version in App Store Connect is `1.0.1`,
+  then run the post-approval live IAP proof checklist.
 - If Apple rejects, capture the exact product status and reviewer message
   privately before deciding whether the fix is metadata, App Store Connect
   attachment, or code.
-- If the subscriptions remain stuck after the app has been pending developer
-  release for a meaningful review window, use App Store Connect support or the
-  Resolution Center to ask whether first-subscription review needs additional
-  action before release.
+- Keep App Store Connect screenshots, transaction IDs, receipts, private account
+  data, and dashboard proof outside git.
 
 Apple-doc basis checked on 2026-05-06:
 
@@ -81,8 +91,9 @@ Boundary:
 
 ## Where This Leaves The Queue
 
-- Omnexus has moved from "submit/attach" to "app approved, hold developer
-  release while subscriptions wait for Apple review."
+- Omnexus has moved from "app approved, hold developer release while
+  subscriptions wait for Apple review" to "approved subscriptions, verify the
+  `1.0.1` candidate build/version and normal submission/live-proof gates."
 - DeMario URL capture is complete for durable public-link proof.
 - Consulting live intake remains passed with notes; human visual/taste review
   and optional Hub intake archive/delete path remain.
