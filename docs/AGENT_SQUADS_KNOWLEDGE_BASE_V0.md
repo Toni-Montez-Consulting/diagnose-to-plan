@@ -161,12 +161,23 @@ Stop conditions:
 8. Leave a squad handoff receipt with sources, decisions, verification, gates,
    next action, and parked follow-up.
 
-## First Pilot
+## First Pilots
 
-The first pilot is the consulting proof/offer lane.
+The first implementation wave uses two related pilots:
+
+1. the Client OS pilot wave in `docs/CLIENT_OS_PILOT_WAVE_2026-05.md`;
+2. the consulting proof/offer lane.
+
+The Client OS wave proves whether source-indexed packets, draft-only automation,
+approval gates, and handoff receipts work in real operating loops. The
+consulting proof/offer lane proves whether those records can safely guide public
+copy and proof presentation without moving private client material into the
+storefront repo.
 
 Allowed:
 
+- source-indexed preparation for Greg, CCAAP, and Cam in the private engagement
+  vault;
 - source-indexed review of DTP offer/proof docs;
 - business justification scorecard for a consulting offer/proof move;
 - Delivery Squad review of consulting docs or public-site implementation scope;

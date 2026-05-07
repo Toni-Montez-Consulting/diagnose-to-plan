@@ -39,15 +39,21 @@ The companion retrieval and persistence layer is
 "how can Codex rehydrate faster and more reliably?" or "should this move into
 private persistent storage?"
 
+The current strategic backlog layer is
+`docs/PRACTICE_OPERATING_SYSTEM_STRATEGIC_BACKLOG.md`. Use it when the work is
+about sequencing the practice brain, Client OS pilots, Hub/runtime support,
+`tm-skills`, consulting design, vector memory, or FAOS readiness.
+
 ## Current Pressure
 
 The active load includes:
 
-- Cam / SMB marketplace prototype: waiting on requested item packet and using
-  Cameron's personal email for future communication.
-- Greg / TheGrantApp.io: waiting on discovery availability and case-study
-  permission boundaries.
-- CCAAP: waiting on Leah/Tony clarification before site changes or launch work.
+- Greg / TheGrantApp.io: first Client OS pilot, with discovery cadence accepted
+  and proof/permission boundaries still gated.
+- CCAAP: second Client OS pilot, with owner/prototype-review inputs required
+  before launch or proof changes.
+- Cam / SMB marketplace prototype: third Client OS pilot after the active
+  recurring sync and requested item packet state are confirmed.
 - Consulting site: first public assistant pilot candidate, still pre-code.
 - Notion cockpit: active and useful, but not authoritative.
 - Business Brain: useful enough to keep, but still early and manual.

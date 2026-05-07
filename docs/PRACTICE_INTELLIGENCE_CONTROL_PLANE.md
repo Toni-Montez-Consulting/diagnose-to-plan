@@ -20,6 +20,8 @@ cockpit use, tool stewardship, public-assistant gates, and memory promotion.
 
 It does not replace the existing DTP architecture. It sits on top of:
 
+- `docs/PRACTICE_OPERATING_SYSTEM_STRATEGIC_BACKLOG.md`
+- `docs/CLIENT_OS_PILOT_WAVE_2026-05.md`
 - `docs/PRACTICE_MEMORY_CONTROL_PLANE.md`
 - `docs/PRACTICE_MEMORY_OPTIMIZATION_PLAN.md`
 - `docs/PRACTICE_TOOLING_STEWARD.md`
@@ -103,9 +105,9 @@ steward review updates DTP.
 
 | Lane | Current operating state | Next safe move |
 |---|---|---|
-| Cam / SMB marketplace | Waiting on requested item packet; future communication should use Cameron's personal route. | Intake the item packet, then schedule only after time is confirmed. |
-| Greg / TheGrantApp.io | Follow-up sent; waiting on discovery availability and permission boundaries. | Intake reply, then schedule one discovery session. |
-| CCAAP | Clarification sent; waiting on owner-approved launch inputs. | Intake owner clarification before changing the site. |
+| Greg / TheGrantApp.io | First Client OS pilot; discovery cadence accepted, permission/proof boundaries still gated. | Run the 2026-05-08 pilot packet and update private kit first. |
+| CCAAP | Second Client OS pilot; owner-approved launch/proof inputs still gate public movement. | Run the 2026-05-12 prototype-review packet and capture owner decisions before site/proof changes. |
+| Cam / SMB marketplace | Third Client OS pilot after active cadence and item-packet state are confirmed. | Confirm meeting/item-packet state before build, proof, or schedule changes. |
 | Toni / Business Brain | Weekly internal reset is the anchor habit. | Use reset to close stale waiting states and pick three actions. |
 | Consulting public assistant | Manifest and repo-local pre-code corpus/refusal fixtures exist. | Convert fixtures into tests or QA checklist before runtime work. |
 | QuickBooks | Not connected; read-only candidate only. | Use manual export or mark financials unavailable. |

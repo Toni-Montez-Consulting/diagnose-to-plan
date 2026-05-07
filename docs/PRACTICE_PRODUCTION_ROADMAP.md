@@ -27,6 +27,13 @@ is `docs/AGENT_SQUADS_KNOWLEDGE_BASE_V0.md`. Consulting can point here for the
 proof/offer pilot, but DTP owns the squad operating model and future hosted
 persistence.
 
+The 2026-05-07 Practice OS strategic backlog wave is captured in
+`docs/PRACTICE_OPERATING_SYSTEM_STRATEGIC_BACKLOG.md`. It prioritizes real
+Client OS pilots before heavier platform work: Greg first, CCAAP second, Cam
+third after confirmation. Knowledge Base V1, vector memory, Hub readiness,
+`tm-skills` readiness, consulting design audit, and FAOS readiness all route
+through that wave without changing the draft-only automation boundary.
+
 The Google Workspace + Business Admin lane is now a first-class Business Brain
 slice. `docs/BUSINESS_ADMIN_OPERATING_SYSTEM.md` owns the DTP-first planning
 view for `founder@tonimontez.co`, Google Calendar/Meet, Apple Reminders capture,
