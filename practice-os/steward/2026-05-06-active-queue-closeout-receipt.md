@@ -34,6 +34,13 @@ Omnexus, consulting, and Architected Strength.
   public-signal finish pass with proof posture, route polish, visual QA, and
   repo-local gates.
 
+2026-05-07 supersession: the Omnexus subscription-review item later narrowed
+again. Monthly and annual subscriptions are operator-reported as `Approved`;
+the remaining gate is App Store Connect candidate build/version proof for
+`1.0.1` plus normal metadata, screenshots, privacy labels, review notes,
+reviewer credentials, final smoke, and live IAP proof. Do not use the older
+subscription-waiting language as the current blocker.
+
 ## Verification
 
 - Consulting local gates: `npm run build`, `npm run test:routes`,
@@ -56,11 +63,12 @@ Omnexus, consulting, and Architected Strength.
 
 ## Remaining Gates
 
-1. Hold Omnexus app version `1.0.1` in `Pending Developer Release` while the
-   monthly/annual subscriptions remain `Waiting for Review`. If Apple approves
-   the subscriptions, release `1.0.1` and run the post-approval live IAP proof
-   checklist. If Apple rejects the subscriptions, capture exact reviewer/status
-   evidence privately before changing code.
+1. For Omnexus, re-open App Store Connect before submit/release, confirm the
+   Monthly and Annual subscriptions still show `Approved`, confirm the selected
+   candidate build/version is `1.0.1`, then complete the normal metadata,
+   screenshots, privacy labels, review notes, reviewer credentials, final
+   smoke, and post-approval live IAP proof gates. Capture exact reviewer/status
+   evidence privately before any code or product-ID change.
 2. Consulting still needs a human desktop/mobile taste pass before broader
    sharing. Intake cleanup remains manual/structural because Hub has no intake
    delete/archive endpoint; the smoke row is clearly labeled test data.

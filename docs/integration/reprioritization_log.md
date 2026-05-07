@@ -10,6 +10,38 @@ review_status: draft
 Use this log after meaningful Practice OS changes so backlog movement is
 deliberate and visible.
 
+## 2026-05-07: Omnexus Approved Subscriptions Narrow Submit Gate
+
+Source:
+
+- Toni/operator-reported App Store Connect state says Monthly, Annual, and the
+  subscription group localization are `Approved`.
+- The `fitness-app` docs branch records that approved subscriptions do not need
+  app-version attachment just to continue the release workflow.
+- `practice-os/steward/2026-05-06-operator-review-state-update.md`
+
+Change:
+
+- Superseded the older "hold while subscriptions wait for review" queue item.
+- Kept Omnexus as a manual App Store Connect/live-proof gate, not a code task.
+- Narrowed the active release question to: is the selected App Store Connect
+  candidate build/version really `1.0.1`, and are metadata, screenshots,
+  privacy labels, review notes, reviewer credentials, and final smoke ready?
+
+Priority impact:
+
+1. Do Greg Client OS prep first because the May 8 meeting is time-bound.
+2. For Omnexus, re-confirm App Store Connect product approval and candidate
+   build/version before submit/release.
+3. Do not change IAP code, product IDs, or public proof unless fresh App Store
+   Connect/reviewer evidence requires it.
+
+Next review trigger:
+
+- Toni opens App Store Connect and confirms or contradicts the current
+  operator-reported approval/build state.
+- A new App Review message, rejection, or live-proof failure appears.
+
 ## 2026-05-06: Omnexus App Approved, Hold Release For Subscription Review
 
 Source:
