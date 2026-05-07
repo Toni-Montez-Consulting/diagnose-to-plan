@@ -21,6 +21,10 @@ Use this map when a prompt could route to more than one skill, template, process
 - Use `docs/AGENT_SQUADS_KNOWLEDGE_BASE_V0.md` when a prompt asks for squads,
   agent teams, knowledge bases, business justification, approval gates, or
   source-indexed handoffs.
+- Use `docs/PRACTICE_OPERATING_SYSTEM_STRATEGIC_BACKLOG.md` when a prompt asks
+  for the practice operating system, strategic backlog, agent workflow,
+  knowledge base, Hub/tm-skills coordination, consulting design architecture,
+  vector brain, or FAOS sequencing.
 - Keep all gated actions gated: global skill install, hosted DTP implementation, public proof promotion, write-enabled automation, autonomous agents, and production/client data changes.
 
 ## Prompt Activation Matrix
@@ -40,6 +44,9 @@ Use this map when a prompt could route to more than one skill, template, process
 | "new idea", "design idea", "business idea", "development enhancement", "project idea", "can we add this later" | contextual idea intake | `docs/CONTEXTUAL_ACTIVATION_PLAYBOOK.md`, story activation index | classify before implementation |
 | "which agent/skill should this story use", "tie this to Kanban", "activate for this epic" | story activation index | `docs/ROADMAP_STORY_ACTIVATION_INDEX.md`, story activation contract | suggested agents require explicit delegation approval |
 | "squad of agents", "agent squad", "Delivery Squad", "Business Justification Squad", "knowledge base", "knowledge scope", "business justification", "approval gate", "handoff receipt" | Agent Squads + Knowledge Base V0 | `docs/AGENT_SQUADS_KNOWLEDGE_BASE_V0.md`, squad charter, source index, business justification scorecard, approval gate, squad handoff receipt | human-led only; no install, autonomous agents, public proof, client comms, production writes, or repo mutation without gates |
+| "practice OS", "operating system backlog", "client OS pilot", "Greg first", "CCAAP next", "Cam after confirmation" | Practice OS strategic backlog and Client OS pilot wave | `docs/PRACTICE_OPERATING_SYSTEM_STRATEGIC_BACKLOG.md`, `docs/CLIENT_OS_PILOT_WAVE_2026-05.md`, `practice-os/templates/client-os-pilot-packet.md` | private engagement truth stays in the vault; automation is draft-only; public proof waits for gates |
+| "vector brain", "semantic memory", "knowledge base V1", "persistent recall", "source packs" | Practice Knowledge Base V1 and vector brain roadmap | `docs/PRACTICE_KNOWLEDGE_BASE_V1.md`, `docs/PRACTICE_VECTOR_BRAIN_ROADMAP.md`, `practice-os/templates/memory-promotion-record.md` | markdown corpus and privacy/citation evals before retrieval implementation |
+| "architecture review", "component/design-system architecture", "runtime authority", "automation authority", "cross-repo system map" | architecture review packet and automation authority matrix | `docs/PRACTICE_ARCHITECTURE_REVIEW_PACKET_2026-05.md`, `practice-os/templates/architecture-review-packet.md`, `practice-os/templates/automation-authority-matrix.md` | review-first; no new runtime, schema, global install, or write-enabled automation without separate approval |
 | "audit the agent system", "what gaps did we miss", "why did this not activate", "I caught a design hole" | Agentic Performance Gap Review | `docs/PRACTICE_SYSTEM_AGENTIC_PERFORMANCE_GAP_REVIEW.md`, Roadmap Steward review | convert misses into durable artifacts, not autonomy |
 | "can this become proof", "case study", "public claim" | proof/redaction templates | evidence source, asset inventory, claim review | permission, redaction, reviewer required |
 | "client uses Azure/Copilot/Microsoft", "DSE", "COI" | DTP COI screen | data classification and redaction policy; after clearance route to the relevant Azure incubator skill | pause before scoping/coding |
@@ -68,7 +75,12 @@ Use these labels in Roadmap Steward reviews and handoffs:
 - `dtp_practice_skill`
 - `business_brain`
 - `agent_squad_v0`
+- `client_os_pilot`
 - `knowledge_scope`
+- `knowledge_base_v1`
+- `vector_brain_gate`
+- `architecture_review_packet`
+- `automation_authority_matrix`
 - `business_justification_gate`
 - `approval_gate`
 - `contextual_idea_intake`

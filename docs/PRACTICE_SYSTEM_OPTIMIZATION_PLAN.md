@@ -197,23 +197,37 @@ source-indexed knowledge, business justification, and explicit approval gates.
 | Consulting proof/offer pilot | `diagnose-to-plan`, `consulting` | Ready | one proof/offer work item uses source index, scorecard, approval gate, and receipt | run before public proof/offer movement |
 | Hosted squad persistence | hosted DTP | Later | repeated markdown receipts prove the record shapes | preserve markdown fallback |
 
+## Epic M: Practice OS Strategic Backlog Wave
+
+Goal: implement the next strategic wave without turning planning into premature
+platform work.
+
+| Story | Repo | Status | Done Gate | Next Action |
+|---|---|---|---|---|
+| Client OS pilot wave | private `engagements`, sanitized DTP | Active next | Greg and CCAAP packets/receipts complete, Cam confirmed or waiting | run Greg first, CCAAP second, Cam third |
+| Knowledge Base V1 | `diagnose-to-plan` | Ready | markdown-first record types, metadata, validation risks, and hosted scale path documented | test on the pilot wave before doctor enforcement |
+| Vector Brain roadmap | `diagnose-to-plan` | Ready | retrieval path is gated behind corpus, privacy, citation, and refusal tests | no vector implementation yet |
+| Consulting design audit | `consulting` | Active next | UX/design-system audit exists without public proof changes | use audit before changing proof/case-study presentation |
+| Hub and tm-skills readiness | `hub`, `tm-skills` | Ready | repo-local readiness docs record next gates without authority expansion | keep Hub v0.4 and skill smoke as the near-term boundaries |
+| FAOS post-pilot review | `diagnose-to-plan`, future `faos` | Later | two Client OS loops complete before another readiness pass | keep implementation parked |
+
 Gate: squads organize work; they do not authorize autonomous agents, public proof,
 client communication, production writes, or repo mutation.
 
 ## Recommended Next Execution Order
 
-1. Use `docs/PRACTICE_MACHINE_OPERATING_MAP.md` before broad workspace, offer, platform, Hub, proof, or adjacent-project planning.
-2. Run one real client loop through `client-reply-intake` and `recurring-engagement-cadence`.
-3. Use `docs/AGENT_SQUADS_KNOWLEDGE_BASE_V0.md` on the next consulting proof/offer move so the first squad receipt is real.
-4. Fill the private kit with real context, decisions, source material, and one internal proof candidate.
-5. Use `docs/PUBLIC_PROOF_PROMOTION_RUNBOOK.md` on the first real claim.
-6. Use `docs/OFFER_LED_PRACTICE_PACKAGING.md` for the consulting public-copy pass after proof classification.
-7. Keep repo manifests current for DTP, consulting, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus as those lanes are touched.
-8. Keep Hub prompt/registry cross-validation local-first unless private sibling-repo CI access becomes worth the cost.
-9. Keep external `tm-skills` Claude Code/GitHub Copilot smoke tests manual until they can be observed.
-10. Revisit public assistant manifests only after proof/source/refusal gates pass.
-11. Revisit hosted DTP implementation after real pilot records exist.
-12. Run FAOS Phase 0 readiness review after the current active path; do not implement the raw FAOS prompt until the corrections are accepted.
+1. Use `docs/PRACTICE_OPERATING_SYSTEM_STRATEGIC_BACKLOG.md` as the current sequence for this wave.
+2. Run Greg first through the Client OS pilot packet, then CCAAP, then Cam after confirmation.
+3. Record friction into `docs/PRACTICE_KNOWLEDGE_BASE_V1.md` before hosted schema or vector work.
+4. Run the consulting UX/design-system audit now, but keep proof/case-study changes blocked by DTP proof gates.
+5. Add Hub and `tm-skills` readiness notes without expanding authority.
+6. Use `docs/AGENT_SQUADS_KNOWLEDGE_BASE_V0.md` on the next consulting proof/offer move so the first proof/offer squad receipt is real.
+7. Use `docs/PUBLIC_PROOF_PROMOTION_RUNBOOK.md` on the first real claim.
+8. Keep repo manifests current for DTP, consulting, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus as those lanes are touched.
+9. Keep Hub prompt/registry cross-validation local-first unless private sibling-repo CI access becomes worth the cost.
+10. Keep external `tm-skills` Claude Code/GitHub Copilot smoke tests manual until they can be observed.
+11. Revisit public assistant manifests only after proof/source/refusal gates pass.
+12. Revisit hosted DTP, vector memory, and FAOS only after real pilot records exist.
 
 ## Optimization Done Gate
 

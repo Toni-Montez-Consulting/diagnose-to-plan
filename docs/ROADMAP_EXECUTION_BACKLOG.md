@@ -260,6 +260,23 @@ and handoff explicit before hosted persistence or central squad boards exist.
 | Central squad board | hosted DTP | Later | story/handoff receipts prove the interaction model is useful | do not build before repeated receipts |
 | Hosted squad records | hosted DTP | Later | hosted DTP persists squad charter, source index, scorecard, approval gate, and receipt while markdown remains fallback | wait for real V0 operating loops |
 
+## Epic 11B: Practice OS Strategic Backlog And Client OS Pilot Wave
+
+Goal: prove the Practice OS through real draft-only client/operator loops before
+adding heavier hosted, vector, or orchestration infrastructure.
+
+| Story | Repo | Status | Done gate | Next action |
+|---|---|---|---|---|
+| Practice OS strategic backlog | `diagnose-to-plan` | Active next | `docs/PRACTICE_OPERATING_SYSTEM_STRATEGIC_BACKLOG.md` captures P0/P1/P2/P3 sequence, repo roles, draft-only automation, vector path, and FAOS hold | use as the current sequence for this wave |
+| May 2026 Client OS pilot wave | private `engagements`, sanitized DTP | Active next | Greg, CCAAP, and Cam each get a packet/receipt or an explicit waiting-state record without public proof leakage | run Greg first, CCAAP second, Cam after confirmation |
+| Knowledge Base V1 markdown corpus | `diagnose-to-plan` | Ready | V1 doc and templates define source-indexed records, metadata, validation risks, and hosted-DTP scale path | use the Greg/CCAAP loops to test friction before adding doctor gates |
+| Architecture review packet | `diagnose-to-plan`, touched repos | Ready | architecture packet defines ownership, systems-health review, automation authority, and next sequence | use before consulting/Hub/tm-skills cleanup implementation |
+| Consulting UX/design-system audit | `consulting` | Active next | repo-local audit covers CTA clarity, visual polish, proof presentation, component/design-system health, and route/data-flow architecture without public proof changes | keep proof changes blocked until DTP proof gates pass |
+| Hub runtime readiness note | `hub` | Ready | Hub repo records near-term intake/runtime/console hardening without CRM, DTP cockpit, proof, or billing ownership | keep v0.4 hardening first |
+| tm-skills readiness note | `tm-skills` | Ready | repo records doctor/freshness/install preview, untracked skill candidates, and manual external smoke state | do not promote candidate skills or run global install without a separate gate |
+| Vector Brain path | `diagnose-to-plan` | Ready | roadmap defines markdown-first corpus, sanitized local retrieval, hosted/RLS retrieval, and agent-integrated retrieval gates | do not implement retrieval until corpus and privacy evals exist |
+| FAOS post-pilot readiness | `diagnose-to-plan`, future `faos` | Later | at least two Client OS loops complete before another FAOS readiness pass | keep implementation parked |
+
 ## Epic 12: FAOS Agentic Orchestration Substrate
 
 Goal: capture and eventually implement the Frontier Agentic Operating System ideas as a gated orchestration substrate, without replacing DTP, `tm-skills`, Hub, consulting, or repo-local gates.
@@ -360,6 +377,8 @@ Workspace docs/chat sweep overlay: use `docs/WORKSPACE_DOCS_AND_CHAT_SWEEP_LEDGE
 Workspace cockpit/recovery overlay: use `practice-os/workspace/task-ledger.jsonl`, `dtp workspace recover --dry-run`, `dtp workspace dashboard`, and `dtp workspace validate-dashboard` before claiming older active, completed, cancelled, superseded, or unreviewed recovery work is missing from the daily view. Kaizen remains intake; the workspace task ledger is the reviewed operating index; Recovery Inbox accounts for detected but not-yet-reviewed candidates.
 
 Horizon overlay: use `docs/PRACTICE_ROADMAP_HORIZONS_2026.md` for urgent/short/mid/long planning, feature revisits, cadence, and gated future capabilities. It does not replace this backlog; it explains sequencing across time horizons.
+
+2026-05-07 Practice OS strategic backlog overlay: use `docs/PRACTICE_OPERATING_SYSTEM_STRATEGIC_BACKLOG.md`, `docs/CLIENT_OS_PILOT_WAVE_2026-05.md`, `docs/PRACTICE_KNOWLEDGE_BASE_V1.md`, `docs/PRACTICE_VECTOR_BRAIN_ROADMAP.md`, and `docs/PRACTICE_ARCHITECTURE_REVIEW_PACKET_2026-05.md` for the current wave. The sequence is Greg first, CCAAP second, Cam third after confirmation. Automation is draft-only. Consulting gets an audit now; public proof waits for DTP gates. Hub and `tm-skills` get readiness notes, not authority expansion. FAOS and vector implementation stay gated until real loops prove the shapes.
 
 2026-05-05 operator reprioritization, refreshed 2026-05-06: DeMario launch-feedback social/proof prep is posted from Toni-owned LinkedIn and Instagram channels, exact public post URLs are recorded, and private screenshots/testimonials/metrics remain gated. Consulting public-site readiness is recorded and merged in PR #3, and the synthetic live intake smoke reached Hub with cleanup still structural because no intake archive/delete endpoint exists. Starter DMARC is added and verified in monitoring mode. Architected Strength PR #2 merged the repo-local boundary/roadmap note. Omnexus PR #562 is merged, app version `1.0.1` is approved and `Pending Developer Release`, and the monthly/annual subscriptions remain `Waiting for Review` per Toni. The remaining manual queue is Omnexus release hold/subscription review, consulting human taste review, client meeting prep, and owner-input gates. Treat Omnexus subscription work as App Store Connect/manual review-state first until exact rejection details prove code changes are needed. Treat future Architected Strength P0/P1 site work as a separate focused branch, not assistant-pattern work.
 

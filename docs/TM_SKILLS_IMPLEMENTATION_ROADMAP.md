@@ -481,6 +481,12 @@ Updated on 2026-05-05:
 - Added `systems-health-review` as a Phase 1 diagnostic skill for practical weakest-system reviews across intake, data flow, decision logic, observability, protection, memory, recovery, and steady state.
 - Updated the DTP activation routing map so systems-health prompts route to `tm-skills/systems-health-review`.
 
+Updated on 2026-05-07:
+
+- The Practice OS strategic backlog keeps `tm-skills` as the reusable SDLC behavior layer while DTP owns client/proof/COI/roadmap state.
+- `tm-skills/docs/PRACTICE_OS_SKILL_READINESS.md` now records the near-term readiness gates and classifies local candidate skill folders such as `docx`, `pptx`, `xlsx`, `excalidraw`, `expense-report`, `loop`, and `web-artifacts-builder` as parked or candidate material requiring source/license review, frontmatter cleanup, evals, and DTP routing alignment before promotion.
+- Global install, high-risk browser/expense automation, and external Claude Code/GitHub Copilot smoke remain gated.
+
 ## Deferred
 
 - Multi-user skill product.
