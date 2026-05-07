@@ -16,6 +16,7 @@ human gates.
 - Use `docs/CONTEXTUAL_ACTIVATION_PLAYBOOK.md` and `practice-os/templates/contextual-idea-intake.md` when Toni submits a new idea, design, development enhancement, business move, project request, or automation concept.
 - Use `practice-os/templates/roadmap-steward-review.md` before or after major roadmap sessions.
 - Use `practice-os/templates/story-activation-contract.md` when a story needs a one-off activation record.
+- Use `docs/AGENT_SQUADS_KNOWLEDGE_BASE_V0.md` when a story needs Delivery Squad / Business Justification Squad ownership, source-indexed knowledge, approval gates, or a squad handoff receipt.
 - Skills auto-trigger only after the relevant skill layer is installed and available in the tool. Until then, this index is the human/agent routing contract.
 - Suggested agent roles are recommendations, not permission. Subagents are only used when Toni explicitly asks for agent/delegation/parallel work.
 - Every activation must preserve repo boundaries, proof/redaction gates, COI/privacy gates, and no-touch boundaries.
@@ -30,6 +31,13 @@ human gates.
 | `reviewer` | Review/QA pass after implementation | explicit agent/delegation request or external review workflow |
 | `parked-autonomy` | Future steward/agent manager or write-enabled automation | evals, guardrails, hosted queue, and human approval first |
 
+## Squad Vocabulary
+
+| Squad | Meaning | Gate |
+|---|---|---|
+| Delivery Squad | Repo/codebase management, architecture review, implementation scope, tests, verification, and handoff | repo-local gates, approval for mutation/production writes |
+| Business Justification Squad | Buyer/operator problem, workflow fit, value, proof posture, client/operator usefulness, and approval posture | business justification scorecard and approval gate for public/client/value claims |
+
 ## Epic Activation Map
 
 | Epic | Story family | Primary activation | Suggested agent role | Required gates |
@@ -42,6 +50,7 @@ human gates.
 | Workspace Efficiency Layer | repo manifests, evidence indexes, command-center spec/report, affected checks, dependency policy | repo manifest, evidence index, decision record, workspace command-center spec, `dtp workspace report` | `local-codex`; `explorer` for repo-specific discovery only if asked | do not mutate sibling repos without lane readiness; no live git/CI reads or command runner until the V0 report proves useful |
 | Roadmap Steward Loop | steward template, activation map, steward command, hosted queue, agent manager | activation map, steward review, story activation contract | `local-codex`; `parked-autonomy` for future manager | no autonomous edits/status changes; manual loop proves value first |
 | Business Brain / Consulting OS | prospect diagnosis, COI, proposals, comms, operator handoff, source-module templates, business role specs | Business Brain source map, Practice OS command contracts, Thought Inbox, Input Studio, Context Pack, Opportunity Score, Exception Register, Value Ledger, Memory Review Queue, diagnose/COI/proposal/handoff skills, comms kit | `local-codex`; `parked-autonomy` for future business agents | DTP remains source of truth; no autonomous agents, public claims, pricing, employer endorsement, or live integrations without review |
+| Agent Squads + Knowledge Base V0 | Delivery Squad, Business Justification Squad, source-indexed knowledge, scorecards, approval gates, handoff receipts, future central squad board | Agent Squads source map, squad charter, source index, business justification scorecard, approval gate, squad handoff receipt | `local-codex`; `parked-autonomy` for central board/hosted records | human-led only; no install/dependency; public proof, client comms, production writes, and repo mutation require approval gates |
 | Future Intelligence Layer | flight records, research radar, mobile app review journeys, eval garden, red-team lab | lesson capture, mobile app review journey, research radar, agent session record, red-team plan | `local-codex`; `reviewer` for red-team only if asked | human-approved learning; evals before autonomy; primary sources and repo evidence for research/launch learning |
 | First Client Operating Kit Pilot | Mom kit, fit assessment, proof/redaction, handoff/runbook, public proof | Client Operating Kit, Command Room fit, proof/redaction templates, handoff/runbook | `local-codex`; `explorer` only for public/source discovery if asked | private kit stays private; consent/COI first; public proof blocked until review |
 | Adjacent Project Touch Lanes | Omnexus, DeMario, FamilyTrips, DSE, engineering-playbook | repo manifest, portfolio scorecard, proof/COI/privacy lane, repo-specific gates | `local-codex`; `explorer` for scoped repo discovery only if asked | do not disturb active branches; touch only when trigger is ready |
@@ -61,6 +70,7 @@ human gates.
 | Hub prompt/registry validation | "Hub prompts", "registry cross-validation", "prompt ids" | `testing-ladder`, Hub prompt/registry validation story | `local-codex`; `worker` only if asked and write scopes are split | local gates pass in both repos; CI-safe path does not require private siblings unless configured |
 | Custom interface craft gate | "everything should be custom", "make this less generic", "design it like the consulting process", "custom site/app/admin UI" | Custom Interface Craft Standard, custom craft brief, `tm-skills/frontend-craft`, reference maturity model | `local-codex`; `reviewer` only if asked | brief exists or hotfix exception recorded; reference maturity named; visual/mobile checks pass |
 | First Business Brain artifact pass | "Greg prep", "Cameron COI", "Mom/Mario handoff", "diagnose prospect", "draft proposal", "practice comms" | Business Brain source map, command contracts, fixtures, diagnose/COI/proposal/handoff skills, comms kit | `local-codex` | artifacts generated from fixtures, reviewed by Toni before use, lessons captured, no public comms or contracts without human review |
+| Consulting proof/offer squad pilot | "run this through squads", "does this proof/offer make business sense", "what squad owns this", "source-index the consulting proof lane" | Agent Squads + Knowledge Base V0, source index, business justification scorecard, approval gate, squad handoff receipt, proof/offer docs | `local-codex` | DTP owns receipt; consulting remains pointer/public surface; no private data or public proof without gates |
 | First Practice OS template pilot | "use the source material", "run the weekly reset", "capture this idea", "score this opportunity", "what did we learn" | Thought Inbox, Input Studio, Context Pack, Opportunity Score, Exception Register, Value Ledger, Memory Review Queue, reprioritization log | `local-codex` | one real cycle records useful output and friction without making templates doctor-required or adding app behavior |
 
 ## Idea-To-Story Activation
@@ -74,6 +84,7 @@ Use this when the prompt is not yet a backlog story but should be captured.
 | Product/design | contextual idea intake, Custom Interface Craft Standard, `frontend-craft`, Command Room fit if owner-facing | project lane, Client Command Room lane, or Custom Interface Craft Standard | custom craft brief, design spec, visual QA checklist, or implementation |
 | Project/client work | contextual idea intake, Client Operating Kit, COI/consent | Client Operating Kit pilot or adjacent project lane | private kit, handoff, proof packet |
 | Business/offer | contextual idea intake, Practice Production Roadmap | consulting/proof/business-ops lane | decision record or roadmap story |
+| Agent squad / knowledge base | contextual idea intake, activation map, Agent Squads + Knowledge Base V0 | Agent Squads + Knowledge Base V0 lane | squad charter, source index, scorecard, approval gate, or handoff receipt |
 | Proof/case study | contextual idea intake, proof/redaction templates | Proof And Redaction Governance | proof packet, asset inventory, claim review |
 | Research/tooling | contextual idea intake, research radar/spike | Future Intelligence Layer | Adopt/Pilot/Watch/Reject item |
 | Mobile app review/launch learning | mobile app review and launch pattern, lesson capture | Future Intelligence Layer and Adjacent Project Touch Lanes | mobile app review journey, approval closeout, rejection repair log, client launch packet |
@@ -87,6 +98,7 @@ When a backlog story changes status, also check whether one of these needs an up
 - this activation index;
 - `practice-os/templates/activation-routing-map.md`;
 - `practice-os/templates/roadmap-steward-review.md`;
+- `docs/AGENT_SQUADS_KNOWLEDGE_BASE_V0.md` and the squad templates;
 - repo manifest or evidence index;
 - proof/redaction template;
 - custom interface craft standard or custom craft brief;
@@ -99,6 +111,7 @@ When a backlog story changes status, also check whether one of these needs an up
 
 - Do not globally install `tm-skills` unless explicitly approved.
 - Do not spawn agents unless Toni explicitly asks for agents, delegation, or parallel agent work.
+- Do not treat squads as autonomous agents. Squads are ownership, knowledge, justification, approval, and handoff contracts until a separate hosted/agent implementation is accepted.
 - Do not start hosted DTP app implementation from a routing/steward prompt alone.
 - Do not implement the raw FAOS Phase 0 prompt or create a `faos` repo before the FAOS readiness review is accepted.
 - Do not publish or prepare public proof without permission/redaction/reviewer gates.

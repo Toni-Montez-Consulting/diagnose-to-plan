@@ -1,0 +1,211 @@
+---
+data_class: P0
+confidential: false
+permission_level: internal_only
+review_status: draft
+---
+
+# Agent Squads + Knowledge Base V0
+
+Status: DTP-owned operating model for human-led agent squads, source-indexed
+knowledge, business justification, approval gates, and handoff receipts.
+
+Owner: `diagnose-to-plan`
+
+Consulting role: public storefront and proof surface only. Consulting may point
+to this operating model, but it does not own squad state, private knowledge, or
+practice-wide sequencing.
+
+## Thesis
+
+Agent squads are a way to organize work, not a license to create autonomous
+workers. V0 gives future agents a clear operating structure:
+
+- which squad owns the work;
+- what knowledge sources are allowed;
+- what business/operator problem is being solved;
+- what approval is required before continuing;
+- what evidence and handoff receipt must survive the session.
+
+The goal is to make the practice easier to run and easier to trust without
+installing a new framework, moving source of truth out of DTP, or letting model
+roleplay outrun human judgment.
+
+## V0 Boundary
+
+V0 is manual and human-led.
+
+| Area | V0 Decision |
+|---|---|
+| Source of truth | DTP markdown docs and templates |
+| Persistence target | hosted DTP records later, after real receipts prove the shapes |
+| Interaction surface | story activation plus squad handoff receipts |
+| Central squad board | future story, not V0 |
+| External frameworks | inspiration only; no install, dependency, or copied operating state |
+| Agent spawning | only when Toni explicitly asks for agents, delegation, or parallel agent work |
+| Public proof | blocked until evidence, permission, redaction, reviewer, caveat, and approval pass |
+| Client communication | draft/review only unless a human approves sending |
+| Production writes | blocked until repo-local and approval gates pass |
+| Repo mutation | blocked unless the owning repo lane is active and the work is explicitly scoped |
+
+## Inspiration Sources
+
+The linked frameworks are useful patterns, not operating dependencies:
+
+- `https://github.com/bradygaster/squad`: persistent, human-directed agent teams,
+  repo-local role files, decision sharing, and oversight close to the code.
+- `https://github.com/SuperClaude-Org/SuperClaude_Framework`: structured
+  commands, specialized agents/personas, modes, MCP routing, and knowledge docs.
+
+DTP should borrow the durable ideas: persistent roles, explicit knowledge scope,
+commands/modes, approval gates, and routing. DTP should not install either
+framework, copy their repo structure, or imply their agents can act without the
+existing human gates.
+
+## V0 Squads
+
+| Squad | Owns | Does Not Own | Primary Templates |
+|---|---|---|---|
+| Delivery Squad | repo/codebase management, architecture review, implementation scope, tests, verification, release/handoff notes | business value claim by itself, public proof, client comms, production writes without gates | `agent-squad-charter.md`, `knowledge-scope-source-index.md`, `approval-gate.md`, `squad-handoff-receipt.md` |
+| Business Justification Squad | buyer/operator problem, workflow fit, business value, proof posture, usefulness, approval posture | code implementation by itself, unsupported ROI claims, pricing/public offer changes without review | `business-justification-scorecard.md`, `knowledge-scope-source-index.md`, `approval-gate.md`, `squad-handoff-receipt.md` |
+
+Both squads can be active on one story. Delivery decides how the work should be
+built and verified. Business Justification decides why the work deserves time,
+what simpler alternative was considered, and whether it creates useful value.
+
+## Knowledge Base V0
+
+The V0 knowledge base is a source-indexed markdown discipline, not a vector
+database.
+
+Every squad-run story should name:
+
+- authoritative source docs;
+- repo-local files used;
+- private sources that were intentionally excluded;
+- evidence freshness and drift risk;
+- what source would have to change before the conclusion should be revisited.
+
+Source order:
+
+1. Live repo state and accepted DTP docs.
+2. Toni's latest direct instruction.
+3. Repo-local AGENTS.md / `.repo.yml` / roadmap docs.
+4. DTP policies, proof gates, and source-of-truth docs.
+5. Private engagement records only when the current work is allowed to use them.
+6. External frameworks or public research only as cited inspiration.
+
+Blocked sources:
+
+- secrets, credentials, raw private intake, private client financial details,
+  Microsoft confidential material, unredacted logs, unsupported public claims,
+  and chat-only memory that has not been promoted to a durable artifact.
+
+## Business Justification Standard
+
+Every squad-run work item must answer:
+
+1. What business/operator problem is this solving?
+2. Why is this worth doing now?
+3. What existing evidence supports it?
+4. What simpler alternative was considered?
+5. What workflow, revenue, trust, delivery, or maintenance value does it create?
+6. What approval is needed before continuing?
+
+Longer-term ROI belongs at end-of-engagement or post-delivery closeout, after
+real evidence exists. V0 should avoid invented ROI math.
+
+## Approval Gates
+
+Every squad-run item can carry an approval gate with these fields:
+
+- `required_approver`
+- `approval_state`
+- `approval_scope`
+- `stop_conditions`
+- `approved_at`
+- `approved_by`
+- `evidence`
+
+Allowed `approval_state` values:
+
+- `not_required`
+- `pending`
+- `approved`
+- `rejected`
+- `blocked`
+
+Stop conditions:
+
+- public proof, screenshots, case-study language, metrics, or testimonials
+  without proof/redaction gates;
+- client or prospect communication that has not been reviewed;
+- production writes, deploys, billing changes, database changes, live cloud
+  mutations, or credentialed integrations without explicit approval;
+- repo mutation outside the active owning lane;
+- work that changes pricing, public offers, legal/compliance posture, tax or
+  accounting interpretation, or client data handling without human review.
+
+## V0 Workflow
+
+1. Route the prompt through `practice-os/templates/activation-routing-map.md`.
+2. Attach the story to `docs/ROADMAP_STORY_ACTIVATION_INDEX.md` or create a
+   one-off story activation contract.
+3. Select the owning squad or squads.
+4. Fill a knowledge-scope/source index.
+5. Fill the business justification scorecard when value, fit, proof, or client
+   usefulness is involved.
+6. Fill an approval gate if the work touches public proof, client comms,
+   production writes, repo mutation, pricing, private data, or gated automation.
+7. Execute the scoped work.
+8. Leave a squad handoff receipt with sources, decisions, verification, gates,
+   next action, and parked follow-up.
+
+## First Pilot
+
+The first pilot is the consulting proof/offer lane.
+
+Allowed:
+
+- source-indexed review of DTP offer/proof docs;
+- business justification scorecard for a consulting offer/proof move;
+- Delivery Squad review of consulting docs or public-site implementation scope;
+- Business Justification Squad review of buyer problem, workflow fit, proof
+  strength, and client/operator usefulness.
+
+Blocked:
+
+- exposing private client data;
+- publishing proof before proof gates pass;
+- changing public consulting copy from private/unreviewed material;
+- turning consulting into the squad source of truth.
+
+## Future Hosted DTP Records
+
+When V0 receipts prove useful, hosted DTP can persist:
+
+- squad charter;
+- squad assignment;
+- knowledge scope;
+- source index;
+- business justification scorecard;
+- approval gate;
+- squad handoff receipt;
+- central squad board item.
+
+Markdown remains the fallback import/export and recovery surface. Hosted records
+should improve durability and retrieval, not replace the source-index habit.
+
+## Acceptance Checks
+
+A future agent should be able to answer:
+
+- Which squad owns this work item?
+- Which sources are authoritative and which are blocked?
+- What is the business/operator justification?
+- What approval is required before continuing?
+- What stop condition would block public proof, client communication,
+  production writes, or repo mutation?
+- Where is the handoff receipt?
+- Is this a V0 manual workflow, a hosted DTP future record, or a parked central
+  board idea?

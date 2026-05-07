@@ -15,13 +15,14 @@ Optimize in this order:
 1. Make the system understandable from DTP alone.
 2. Make the practice offer-led before making it platform-heavy.
 3. Make the agentic performance loop catch routing, context, skill-trigger, validation, research, safety, and learning gaps.
-4. Make the next real pilot produce evidence.
-5. Make public proof permissioned and receipt-backed.
-6. Expand repo manifests and local pointers only when the repo lane is touched.
-7. Cross-validate Hub prompts and registry before deeper runtime automation.
-8. Install and smoke-test global skills only after approval.
-9. Build hosted DTP only when real artifacts need persistence.
-10. Add steward automation, evals, red-team, and protocols after manual loops prove useful.
+4. Make squad ownership, source scope, business justification, approval, and handoff explicit before central boards or automation.
+5. Make the next real pilot produce evidence.
+6. Make public proof permissioned and receipt-backed.
+7. Expand repo manifests and local pointers only when the repo lane is touched.
+8. Cross-validate Hub prompts and registry before deeper runtime automation.
+9. Install and smoke-test global skills only after approval.
+10. Build hosted DTP only when real artifacts need persistence.
+11. Add steward automation, evals, red-team, and protocols after manual loops prove useful.
 
 ## Epic A: Practice System Documentation Pack
 
@@ -183,19 +184,36 @@ Goal: absorb the FAOS build spec into the practice system as a technically sound
 
 Gate: FAOS work may plan and review now, but implementation is parked until the readiness review is accepted.
 
+## Epic L: Agent Squads + Knowledge Base V0
+
+Goal: make human-led squads useful immediately while preserving DTP ownership,
+source-indexed knowledge, business justification, and explicit approval gates.
+
+| Story | Repo | Status | Done Gate | Next Action |
+|---|---|---|---|---|
+| Squad source map | `diagnose-to-plan` | Done when merged | `docs/AGENT_SQUADS_KNOWLEDGE_BASE_V0.md` defines V0 boundaries, squads, knowledge scope, gates, first pilot, and future persistence | use before squad/KB work |
+| Squad templates | `diagnose-to-plan` | Done when merged | charter, source index, scorecard, approval gate, and handoff receipt templates exist | pilot on consulting proof/offer lane |
+| Consulting pointer | `consulting` | Done when merged | consulting docs route agents back to DTP without duplicating source-of-truth ownership | keep lightweight |
+| Consulting proof/offer pilot | `diagnose-to-plan`, `consulting` | Ready | one proof/offer work item uses source index, scorecard, approval gate, and receipt | run before public proof/offer movement |
+| Hosted squad persistence | hosted DTP | Later | repeated markdown receipts prove the record shapes | preserve markdown fallback |
+
+Gate: squads organize work; they do not authorize autonomous agents, public proof,
+client communication, production writes, or repo mutation.
+
 ## Recommended Next Execution Order
 
 1. Use `docs/PRACTICE_MACHINE_OPERATING_MAP.md` before broad workspace, offer, platform, Hub, proof, or adjacent-project planning.
 2. Run one real client loop through `client-reply-intake` and `recurring-engagement-cadence`.
-3. Fill the private kit with real context, decisions, source material, and one internal proof candidate.
-4. Use `docs/PUBLIC_PROOF_PROMOTION_RUNBOOK.md` on the first real claim.
-5. Use `docs/OFFER_LED_PRACTICE_PACKAGING.md` for the consulting public-copy pass after proof classification.
-6. Keep repo manifests current for DTP, consulting, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus as those lanes are touched.
-7. Keep Hub prompt/registry cross-validation local-first unless private sibling-repo CI access becomes worth the cost.
-8. Keep external `tm-skills` Claude Code/GitHub Copilot smoke tests manual until they can be observed.
-9. Revisit public assistant manifests only after proof/source/refusal gates pass.
-10. Revisit hosted DTP implementation after real pilot records exist.
-11. Run FAOS Phase 0 readiness review after the current active path; do not implement the raw FAOS prompt until the corrections are accepted.
+3. Use `docs/AGENT_SQUADS_KNOWLEDGE_BASE_V0.md` on the next consulting proof/offer move so the first squad receipt is real.
+4. Fill the private kit with real context, decisions, source material, and one internal proof candidate.
+5. Use `docs/PUBLIC_PROOF_PROMOTION_RUNBOOK.md` on the first real claim.
+6. Use `docs/OFFER_LED_PRACTICE_PACKAGING.md` for the consulting public-copy pass after proof classification.
+7. Keep repo manifests current for DTP, consulting, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus as those lanes are touched.
+8. Keep Hub prompt/registry cross-validation local-first unless private sibling-repo CI access becomes worth the cost.
+9. Keep external `tm-skills` Claude Code/GitHub Copilot smoke tests manual until they can be observed.
+10. Revisit public assistant manifests only after proof/source/refusal gates pass.
+11. Revisit hosted DTP implementation after real pilot records exist.
+12. Run FAOS Phase 0 readiness review after the current active path; do not implement the raw FAOS prompt until the corrections are accepted.
 
 ## Optimization Done Gate
 

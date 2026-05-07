@@ -19,6 +19,14 @@ human-reviewed self-improvement for operations, admin, finance, reporting,
 pricing, valuation, legal/compliance issue spotting, and handoff. The canonical
 source map is `docs/BUSINESS_BRAIN_OPERATING_SYSTEM.md`.
 
+The Agent Squads + Knowledge Base V0 lane is now a first-class DTP lane. It
+turns squad ideas into human-led operating contracts: Delivery Squad, Business
+Justification Squad, source-indexed knowledge, approval gates, business
+justification scorecards, and squad handoff receipts. The canonical source map
+is `docs/AGENT_SQUADS_KNOWLEDGE_BASE_V0.md`. Consulting can point here for the
+proof/offer pilot, but DTP owns the squad operating model and future hosted
+persistence.
+
 The Google Workspace + Business Admin lane is now a first-class Business Brain
 slice. `docs/BUSINESS_ADMIN_OPERATING_SYSTEM.md` owns the DTP-first planning
 view for `founder@tonimontez.co`, Google Calendar/Meet, Apple Reminders capture,
@@ -88,6 +96,10 @@ The Practice System Documentation Pack is the architecture and audit layer for t
 - Practice OS includes a required Agentic Performance Gap Review template for recurring audit of prompt routing, context quality, skill triggers, planning continuity, verification, research, safety, and learning-loop conversion.
 - Practice OS includes a Contextual Idea Intake template for progressively turning new ideas/designs/work prompts into the right story, repo lane, template, skill, gate, or parked item.
 - Practice OS includes a Story Activation Contract template, and DTP includes a Roadmap Story Activation Index so every active Kanban lane can point to the right skill/template/agent-role suggestion and gate.
+- Practice OS includes Agent Squads + Knowledge Base V0 templates for squad
+  charters, source-indexed knowledge scope, business justification scorecards,
+  approval gates, and squad handoff receipts. These are manual V0 operating
+  contracts; hosted DTP records and a central squad board remain future stories.
 - Practice OS includes a Roadmap Steward review template for major roadmap sessions; it is enforced by `dtp practice doctor` because it protects roadmap continuity across repos.
 - Practice OS includes Business Brain command contracts, first Controller/General
   Counsel/COO role specs, Greg/Cameron/Mom-Mario fixtures, and a private-first
@@ -217,6 +229,10 @@ The Practice System Documentation Pack is the architecture and audit layer for t
 - Use `practice-os/templates/roadmap-steward-review.md` before or after major roadmap sessions so new ideas become stories, templates, evals, proof items, research radar items, decision records, repo touch passes, or parked items.
 - Keep the Practice System Documentation Pack current when architecture, repo ownership, activation, steward loops, proof governance, or optimization priorities change.
 - Use `docs/FAOS_ORCHESTRATION_ROADMAP.md` and `practice-os/templates/faos-phase-readiness-review.md` before accepting any FAOS, `op` wrapper, Langfuse, Mem0/Letta, Spec-Kit, MCP, subagent, hook, durable execution, or broader agent-orchestration implementation prompt.
+- Use `docs/AGENT_SQUADS_KNOWLEDGE_BASE_V0.md` before turning agent-squad,
+  knowledge-base, business-justification, or approval-gate ideas into execution.
+  V0 interaction happens through story activation and squad handoff receipts;
+  the central squad board and hosted squad records come later.
 - Use `docs/NOTION_MIRROR_V0.md` before connecting Notion MCP, creating Notion databases, or syncing DTP roadmap/proof/repo-health records into Notion. Notion is a mirror and capture surface; DTP remains the source of truth.
 - Add or strengthen templates for proposal/SOW, case-study proof packet, Work Item Spec, and hosted-DTP import/export.
 - Use the Future Intelligence templates opportunistically after real delivery/research sessions; do not make them required gates until they have proven useful.

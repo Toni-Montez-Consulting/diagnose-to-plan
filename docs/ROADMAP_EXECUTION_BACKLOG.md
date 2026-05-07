@@ -32,6 +32,11 @@ Story rules:
 - Roadmap Steward review is a standing preflight/postflight for major roadmap sessions; it keeps ideas, gates, blockers, and repo coverage out of chat memory.
 - Activation routing is the standing prompt-to-process map; it tells future agents which skill, template, gate, or roadmap lane to use without creating autonomy.
 - Story activation is the standing story-to-skill/template/agent-role map; `docs/ROADMAP_STORY_ACTIVATION_INDEX.md` ties each epic/story family to the right assets and gates.
+- Agent Squads + Knowledge Base V0 is the standing squad ownership and
+  source-index discipline. Use `docs/AGENT_SQUADS_KNOWLEDGE_BASE_V0.md` plus
+  the squad templates before agent-squad, knowledge-base, business
+  justification, approval-gate, public-proof, client-communication,
+  production-write, or repo-mutation work continues.
 - Kaizen Kanban capture is the standing intake/index layer. Use `docs/PRACTICE_KAIZEN_KANBAN_SYSTEM.md` and `dtp kaizen capture` for meaningful new ideas, asks, blockers, proof candidates, repo issues, client signals, corrections, and process improvements before promoting them into stories or artifacts.
 - Practice Roadmap Horizons is the standing urgent/short/mid/long overlay. Use `docs/PRACTICE_ROADMAP_HORIZONS_2026.md` when a prompt asks for comprehensive planning, feature revisits, envisioning, or sequencing beyond the current active queue.
 - Agentic performance gap review is the standing audit for whether prompts routed correctly, context was sufficient, skills triggered correctly, verification/research/safety gates happened, and misses became durable learning.
@@ -52,6 +57,11 @@ Story rules:
 Use `docs/ROADMAP_STORY_ACTIVATION_INDEX.md` before starting or advancing a story when the prompt could imply a specific skill, template, agent role, proof gate, COI gate, or repo touch pass.
 
 Use `practice-os/templates/story-activation-contract.md` when a story needs a dedicated one-off activation record.
+
+Use `docs/AGENT_SQUADS_KNOWLEDGE_BASE_V0.md` and
+`practice-os/templates/squad-handoff-receipt.md` when a story needs squad
+ownership, source-indexed knowledge, business justification, approval gates, and
+a handoff receipt.
 
 Use `docs/CONTEXTUAL_ACTIVATION_PLAYBOOK.md` and `practice-os/templates/contextual-idea-intake.md` before promoting a new idea, design, business move, project request, development enhancement, or automation concept into a story.
 
@@ -235,6 +245,20 @@ Goal: document, scrutinize, and optimize the whole consulting operating system w
 | Agentic performance gap review | `diagnose-to-plan` | Done | required review catches prompt routing, context, skill-trigger, verification, research, safety, and learning-loop gaps | run when a miss is caught |
 | Optimization plan | `diagnose-to-plan` | Done | findings convert to epics/stories/gates/owners/sequencing | use to choose next refinements |
 | Documentation propagation lane | all workspace repos | Ready | each repo gets a lightweight pointer or local doc when its lane is touched | do not bulk-edit repos now |
+
+## Epic 11A: Agent Squads + Knowledge Base V0
+
+Goal: make squad ownership, knowledge scope, business justification, approval,
+and handoff explicit before hosted persistence or central squad boards exist.
+
+| Story | Repo | Status | Done gate | Next action |
+|---|---|---|---|---|
+| Agent Squads source map | `diagnose-to-plan` | Done | `docs/AGENT_SQUADS_KNOWLEDGE_BASE_V0.md` defines V0 squads, knowledge scope, approval gates, first pilot, and future persistence boundary | use before squad/KB work |
+| V0 squad templates | `diagnose-to-plan` | Done | squad charter, source index, handoff receipt, business justification scorecard, and approval gate templates exist | pilot on consulting proof/offer lane |
+| Consulting local pointer | `consulting` | Done | consulting docs point future agents back to DTP instead of owning squad state | keep pointer lightweight |
+| Consulting proof/offer pilot | `diagnose-to-plan`, `consulting` | Ready | one consulting proof/offer work item uses source index, scorecard, approval gate, and handoff receipt without exposing private data | run on the next proof/offer move |
+| Central squad board | hosted DTP | Later | story/handoff receipts prove the interaction model is useful | do not build before repeated receipts |
+| Hosted squad records | hosted DTP | Later | hosted DTP persists squad charter, source index, scorecard, approval gate, and receipt while markdown remains fallback | wait for real V0 operating loops |
 
 ## Epic 12: FAOS Agentic Orchestration Substrate
 
