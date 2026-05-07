@@ -17,6 +17,12 @@ not need app-version attachment. The current gate is App Store Connect
 candidate build/version proof for `1.0.1` plus normal metadata, screenshot,
 privacy-label, review-note, reviewer-credential, and final smoke evidence.
 
+2026-05-07 subscription-working note: Toni later confirmed the
+products/subscription issue is fixed and the app now works with subscriptions.
+Treat product approval, product loading, purchase, and in-app subscription state
+as fixed by operator confirmation unless fresh Apple or device evidence
+contradicts it. The current gate is release/live proof, not subscription repair.
+
 ## Source
 
 Toni reported the final manual updates after the 48-hour operator checkpoint:
@@ -43,20 +49,21 @@ Toni reported the final manual updates after the 48-hour operator checkpoint:
 | App version | `1.0.1` approved; `Pending Developer Release` per Toni |
 | Monthly subscription | `Approved` per operator-reported App Store Connect check |
 | Annual subscription | `Approved` per operator-reported App Store Connect check |
-| Current posture | verify selected App Store Connect candidate build/version is `1.0.1`, then complete normal submission/live-proof gates |
+| In-app subscription path | working per Toni's 2026-05-07 operator confirmation |
+| Current posture | verify selected App Store Connect candidate build/version is `1.0.1`, then complete release/live-proof gates |
 
 Boundary:
 
 - Re-open App Store Connect before any submission or developer release and
-  confirm Monthly, Annual, and the subscription group localization still show
-  `Approved`.
+  confirm the selected candidate build/version is `1.0.1`.
 - Do not make IAP code changes or replacement subscription products unless
   Apple returns exact reviewer/status evidence requiring a runtime or product-ID
   fix.
-- Do not treat app-version attachment as a blocker for already-approved
-  subscription products.
-- Confirm the selected candidate build/version in App Store Connect is `1.0.1`,
-  then run the post-approval live IAP proof checklist.
+- Do not treat app-version attachment, product approval, product loading,
+  purchase, or in-app subscription state as the current blocker while the
+  subscription path is operator-confirmed working.
+- Run final smoke, provider/data, observability, first-availability, and
+  status-only release proof before calling the release clean.
 - If Apple rejects, capture the exact product status and reviewer message
   privately before deciding whether the fix is metadata, App Store Connect
   attachment, or code.
@@ -91,9 +98,9 @@ Boundary:
 
 ## Where This Leaves The Queue
 
-- Omnexus has moved from "app approved, hold developer release while
-  subscriptions wait for Apple review" to "approved subscriptions, verify the
-  `1.0.1` candidate build/version and normal submission/live-proof gates."
+- Omnexus has moved from "approved subscriptions, verify the `1.0.1` candidate
+  build/version" to "subscriptions work in-app; finish release/live-proof
+  gates."
 - DeMario URL capture is complete for durable public-link proof.
 - Consulting live intake remains passed with notes; human visual/taste review
   and optional Hub intake archive/delete path remain.

@@ -27,6 +27,10 @@ public proof is approved.
   gate: re-confirm Monthly and Annual are `Approved`, confirm the selected
   candidate build/version is `1.0.1`, then complete normal submission and
   live-proof gates.
+- After this receipt was first created, Toni confirmed the
+  products/subscription issue is fixed and the app now works with
+  subscriptions. The queue is now narrowed again: Omnexus is subscription-fixed
+  and release/live-proof gated, not product/subscription blocked.
 - CCAAP's May 12 review remains an owner-input loop, not a site/proof movement.
   The packet now has a concrete input card for PayPal, contact, meeting, DNS,
   assets, review notes, and proof posture.
@@ -53,7 +57,9 @@ public proof is approved.
 1. Run the Greg May 8 meeting from the meeting brief and fill
    `post-meeting-receipt-2026-05-08.md`.
 2. Open App Store Connect manually before any Omnexus submit/release decision
-   and confirm the live subscription/build state.
+   and confirm the selected `1.0.1` candidate build/version, then complete
+   release/live-proof status notes without storing private App Store,
+   transaction, account, or dashboard proof in DTP.
 3. Run the CCAAP May 12 prototype review only when owner input is available.
 4. Keep Cam waiting until the safe packet arrives or the May 15 confirmation
    sync starts.

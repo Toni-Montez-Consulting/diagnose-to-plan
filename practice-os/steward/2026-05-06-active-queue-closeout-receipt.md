@@ -41,6 +41,15 @@ the remaining gate is App Store Connect candidate build/version proof for
 reviewer credentials, final smoke, and live IAP proof. Do not use the older
 subscription-waiting language as the current blocker.
 
+2026-05-07 second supersession: Toni later confirmed the products/subscription
+issue is fixed and the app now works with subscriptions. Do not use
+subscription review, product approval, product loading, purchase, or in-app
+subscription state as the current blocker unless fresh Apple or device evidence
+contradicts that confirmation. The active Omnexus gate is release/live proof:
+confirm the selected App Store Connect candidate build/version is `1.0.1`, then
+complete final smoke, provider/data, observability, and first-availability
+status notes without storing private proof in DTP.
+
 ## Verification
 
 - Consulting local gates: `npm run build`, `npm run test:routes`,
@@ -63,12 +72,12 @@ subscription-waiting language as the current blocker.
 
 ## Remaining Gates
 
-1. For Omnexus, re-open App Store Connect before submit/release, confirm the
-   Monthly and Annual subscriptions still show `Approved`, confirm the selected
-   candidate build/version is `1.0.1`, then complete the normal metadata,
-   screenshots, privacy labels, review notes, reviewer credentials, final
-   smoke, and post-approval live IAP proof gates. Capture exact reviewer/status
-   evidence privately before any code or product-ID change.
+1. For Omnexus, treat subscriptions as fixed by 2026-05-07 operator
+   confirmation. Before submit/release, re-open App Store Connect to confirm the
+   selected candidate build/version is `1.0.1`, then complete final smoke,
+   provider/data, observability, first-availability, and status-only release
+   proof. Capture exact reviewer/status evidence privately before any code,
+   App Store, product-ID, or release-state change.
 2. Consulting still needs a human desktop/mobile taste pass before broader
    sharing. Intake cleanup remains manual/structural because Hub has no intake
    delete/archive endpoint; the smoke row is clearly labeled test data.

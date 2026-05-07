@@ -10,6 +10,43 @@ review_status: draft
 Use this log after meaningful Practice OS changes so backlog movement is
 deliberate and visible.
 
+## 2026-05-07: Omnexus Subscriptions Working, Release Proof Remains
+
+Source:
+
+- Toni reported that the products/subscription issue is fixed and the app now
+  works with subscriptions.
+- The `fitness-app` docs branch records the in-app subscription path as
+  operator-confirmed working while keeping private App Store, receipt,
+  transaction, entitlement, account, and dashboard proof outside git.
+- `practice-os/efficiency/fitness-app-evidence-index.md`
+
+Change:
+
+- Superseded the older "subscription review is no longer active" waiting item
+  with a clearer release/live-proof waiting item.
+- Treated product approval, product loading, purchase, and in-app subscription
+  state as fixed by operator confirmation.
+- Kept the remaining Omnexus question focused on the `1.0.1` candidate
+  build/version, final smoke, provider/data checks, observability, and
+  first-availability proof.
+
+Priority impact:
+
+1. Greg Client OS prep still stays first because the May 8 meeting is
+   time-bound.
+2. Omnexus is no longer a subscription-products task; it is a release-proof
+   task.
+3. Do not change IAP code, product IDs, App Store settings, public proof, or
+   release state unless Toni approves the manual action or fresh Apple evidence
+   requires it.
+
+Next review trigger:
+
+- Toni is ready to make the App Store release/submission decision.
+- App Store Connect contradicts the current subscription-working state.
+- A live-proof gate fails during final smoke or first-availability checks.
+
 ## 2026-05-07: Omnexus Approved Subscriptions Narrow Submit Gate
 
 Source:
