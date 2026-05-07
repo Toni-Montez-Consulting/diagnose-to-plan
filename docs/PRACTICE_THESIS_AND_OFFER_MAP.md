@@ -15,6 +15,10 @@ This is not public site copy. Use it to decide what the practice is proving,
 which offer lane a client/operator loop belongs to, and what proof can safely
 move toward `consulting` later.
 
+Use `docs/PRACTICE_PUBLIC_OFFER_SEQUENCE.md` for the current decision on which
+offer should lead publicly, which offer should support it, and what public copy
+must wait for proof gates.
+
 ## Thesis
 
 Toni helps founders, operators, and small orgs turn messy digital work into

@@ -36,11 +36,11 @@ automation surfaces only when repeated manual pain proves the need.
 
 | Lane | Current state | Next action | Boundary |
 |---|---|---|---|
-| DTP control plane | Kaizen, deep audit, existing-system map, proof queue, offer/proof matrix, gate ledger, docs, CLI, tests, public-safe proof queue updates, and live-intake/DMARC receipts are ready for PR review | keep public DTP commits sanitized and use proof queue before public copy | public repo; no private raw text |
+| DTP control plane | Kaizen, deep audit, existing-system map, proof queue, thesis/offer map, public-offer sequence, offer/proof matrix, gate ledger, docs, CLI, tests, public-safe proof queue updates, and live-intake/DMARC receipts are ready | keep public DTP commits sanitized and use proof queue before public copy | public repo; no private raw text |
 | Engagement vault | private nested repo is committed and pushed to the approved private vault remote | keep client-kit updates private-first and push only coherent engagement batches | private-client |
 | CCAAP | waiting on owner inputs | wait; update private kit first if replies arrive | private-client; proof gated |
 | DeMario social/proof prep | posted from Toni-owned LinkedIn and Instagram channels with exact public URLs recorded | keep private screenshots, metrics, testimonials, booking/admin rows, payment proof, and student data gated | human-owned public communication; private screenshots/metrics remain gated |
-| Omnexus subscriptions | app version `1.0.1` is approved and `Pending Developer Release`; monthly/annual subscriptions remain `Waiting for Review` per Toni | hold developer release until subscriptions approve or Apple confirms safe release; then release and run live IAP proof, or capture exact reviewer/status evidence before changing code if rejected | App Store Connect/manual review-state first; code only if evidence shows runtime issue |
+| Omnexus subscriptions | subscriptions now work in-app by Toni's 2026-05-07 operator confirmation | confirm the selected App Store Connect candidate build/version is `1.0.1`, then complete normal release/live-proof gates without changing IAP products or code | App Store Connect/manual proof first; code only if evidence shows runtime issue |
 | Consulting | share-ready/proof-maturity lane has `/start` qualification, no-widget assistant QA, merged readiness work, and a passed-with-notes live intake smoke | finish human desktop/mobile taste review; add Hub intake archive/delete only if cleanup automation is needed | public-safe only |
 | Architected Strength | P0/P1 public-signal finish pass merged in PR #3 with repo-local gates and visual QA | keep it as a personal-brand OS/reference candidate; reopen only for publishing, assistant-pattern, deploy, or proof work when those gates are explicit | personal-brand OS; no employer/private material |
 | Hub | PR #68 is the active visible dependency blocker and now has a targeted docs-only plan | execute Hub-local Tailwind 4 fix/migration plan only when activated | runtime support |
@@ -60,10 +60,9 @@ automation surfaces only when repeated manual pain proves the need.
   DSE stays COI-gated; Hub PR #68 stays parked.
 - Keep DeMario public proof to the posted, public-safe packet and recorded
   public URLs unless new permissioned proof arrives.
-- Keep Omnexus IAP support in release-hold mode: app version `1.0.1` is
-  approved and `Pending Developer Release`, but the monthly/annual
-  subscriptions are still `Waiting for Review`. Do not manually release until
-  subscriptions approve or Apple confirms the safe first-IAP release path.
+- Keep Omnexus in release-proof mode: subscriptions now work in-app by Toni's
+  2026-05-07 operator confirmation, so the remaining gate is candidate
+  build/version confirmation plus normal release/live-proof receipts.
 - Make consulting share-ready before redesign: preserve route coverage,
   assistant QA, build/doctor/matrix checks, live intake receipt, manual visual
   QA, and proof readiness.
@@ -79,9 +78,9 @@ automation surfaces only when repeated manual pain proves the need.
   reviewer, caveat, and proof packet before any consulting copy change.
 - Use the DeMario launch-feedback signal to test that pipeline with a real
   human-owned social package before broader case-study promotion.
-- Promote offer clarity from real delivery: use offer-led packaging and the
-  offer-to-proof matrix plus internal offer repertoire before public language
-  changes.
+- Promote offer clarity from real delivery: use the practice thesis, public
+  offer sequence, offer-led packaging, offer-to-proof matrix, and internal
+  offer repertoire before public language changes.
 - Harden Kaizen V1 with lightweight saved views for Today, Waiting, Proof Queue,
   and Repo Health; keep Notion as dry-run mirror until one reviewed safe apply is
   explicitly approved.

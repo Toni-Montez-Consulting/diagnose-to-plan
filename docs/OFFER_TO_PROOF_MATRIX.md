@@ -19,6 +19,7 @@ before `consulting` changes offer claims.
 Use `docs/PRACTICE_THESIS_AND_OFFER_MAP.md` first when deciding which pilot or
 reference project proves which offer lane. Use this matrix second to decide
 which exact proof claims are currently eligible.
+Use `docs/PRACTICE_PUBLIC_OFFER_SEQUENCE.md` when deciding public order.
 
 ## Matrix
 
@@ -45,4 +46,8 @@ The public site can safely get sharper about diagnostic readiness and bad-fit
 work because those are method and qualification claims. It should not add new
 impact, client-outcome, approval, revenue, conversion, or automation claims
 until the queue clears exact proof.
+
+The safest next order is Launch / Proof first, AI Workflow Implementation
+second, and Client OS / Command Room third. That order can be expressed without
+new proof claims if the copy stays at the method/service-pattern level.
 

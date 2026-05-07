@@ -40,6 +40,9 @@ founders, operators, and small orgs turn messy digital work into launch-ready
 systems: clear next actions, practical AI/workflow implementation, proof-safe
 delivery, and usable operating assets. Use it before changing public consulting
 copy or deciding what Greg, CCAAP, Cam, Omnexus, or DeMario are proving.
+`docs/PRACTICE_PUBLIC_OFFER_SEQUENCE.md` now sets the public-order default:
+Launch / Proof leads, AI Workflow Implementation is the wedge, and Client OS /
+Command Room follows only when recurring operating pain justifies it.
 
 The Google Workspace + Business Admin lane is now a first-class Business Brain
 slice. `docs/BUSINESS_ADMIN_OPERATING_SYSTEM.md` owns the DTP-first planning

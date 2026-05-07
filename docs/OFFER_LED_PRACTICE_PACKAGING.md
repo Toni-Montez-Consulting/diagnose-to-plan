@@ -34,7 +34,8 @@ Toni builds practical AI and software operating systems for people and businesse
 
 For the current one-page thesis and pilot-to-offer map, use
 `docs/PRACTICE_THESIS_AND_OFFER_MAP.md` before translating this into public
-`consulting` copy.
+`consulting` copy. For the current public-order decision, use
+`docs/PRACTICE_PUBLIC_OFFER_SEQUENCE.md`.
 
 The practice combines:
 
@@ -256,7 +257,9 @@ When this becomes `consulting` copy:
 
 The next consulting-site pass should:
 
-1. simplify the primary offer language around the three offers above;
+1. sequence the primary offer language according to
+   `docs/PRACTICE_PUBLIC_OFFER_SEQUENCE.md`: Launch / Proof first, AI Workflow
+   Implementation second, Client OS / Command Room third;
 2. update `/start` so intake routes prospects into one of these offers;
 3. keep proof frames honest until proof packets are approved;
 4. keep Hub intake primary and Formspree fallback;
