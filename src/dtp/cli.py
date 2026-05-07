@@ -10,10 +10,18 @@ from rich.console import Console
 from dtp.commands.capture_cmd import run_mentor, run_note, run_story
 from dtp.commands.client_os import (
     ClientOsError,
+    render_bridge_export,
+    render_closeout,
     render_preflight,
     render_scaffold,
+    run_client_os_bridge_export,
+    run_client_os_closeout,
     run_client_os_preflight,
     run_client_os_scaffold,
+    run_client_os_status,
+)
+from dtp.commands.client_os import (
+    render_status as render_client_os_status,
 )
 from dtp.commands.detect import run_detect
 from dtp.commands.draft import run_draft, user_facing_error
@@ -458,6 +466,10 @@ def practice_client_os_preflight_command(
     client: Annotated[str, typer.Argument(help="Client slug or name.")],
     engagement: Annotated[str, typer.Option("--engagement", help="Engagement/project slug.")],
     meeting_date: Annotated[str, typer.Option("--date", help="Meeting date as YYYY-MM-DD.")],
+    profile: Annotated[
+        str,
+        typer.Option("--profile", help="Client OS profile: base, infra, or full."),
+    ] = "base",
 ) -> None:
     config = load_config()
     try:
@@ -466,6 +478,7 @@ def practice_client_os_preflight_command(
             client=client,
             engagement=engagement,
             meeting_date=meeting_date,
+            profile=profile,
         )
     except ClientOsError as error:
         console.print(f"[red]{error}[/red]")
@@ -480,6 +493,10 @@ def practice_client_os_scaffold_command(
     client: Annotated[str, typer.Argument(help="Client slug or name.")],
     engagement: Annotated[str, typer.Option("--engagement", help="Engagement/project slug.")],
     meeting_date: Annotated[str, typer.Option("--date", help="Meeting date as YYYY-MM-DD.")],
+    profile: Annotated[
+        str,
+        typer.Option("--profile", help="Client OS profile: base, infra, or full."),
+    ] = "base",
     force: Annotated[
         bool,
         typer.Option("--force", help="Overwrite existing scaffold files."),
@@ -492,12 +509,103 @@ def practice_client_os_scaffold_command(
             client=client,
             engagement=engagement,
             meeting_date=meeting_date,
+            profile=profile,
             force=force,
         )
     except ClientOsError as error:
         console.print(f"[red]{error}[/red]")
         raise typer.Exit(code=1) from error
     console.print(render_scaffold(result, config.repo_root), end="")
+
+
+@practice_client_os_app.command("status")
+def practice_client_os_status_command(
+    client: Annotated[str, typer.Argument(help="Client slug or name.")],
+    engagement: Annotated[str, typer.Option("--engagement", help="Engagement/project slug.")],
+    meeting_date: Annotated[str, typer.Option("--date", help="Meeting date as YYYY-MM-DD.")],
+    profile: Annotated[
+        str,
+        typer.Option("--profile", help="Client OS profile: base, infra, or full."),
+    ] = "full",
+    json_output: Annotated[
+        bool,
+        typer.Option("--json", help="Print machine-readable cockpit output."),
+    ] = False,
+) -> None:
+    config = load_config()
+    try:
+        result = run_client_os_status(
+            config=config,
+            client=client,
+            engagement=engagement,
+            meeting_date=meeting_date,
+            profile=profile,
+        )
+    except ClientOsError as error:
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(code=1) from error
+    if json_output:
+        typer.echo(json.dumps(result.to_dict(config.repo_root), indent=2, sort_keys=True))
+        return
+    console.print(render_client_os_status(result, config.repo_root), end="")
+
+
+@practice_client_os_app.command("closeout")
+def practice_client_os_closeout_command(
+    client: Annotated[str, typer.Argument(help="Client slug or name.")],
+    engagement: Annotated[str, typer.Option("--engagement", help="Engagement/project slug.")],
+    meeting_date: Annotated[str, typer.Option("--date", help="Meeting date as YYYY-MM-DD.")],
+    json_output: Annotated[
+        bool,
+        typer.Option("--json", help="Print machine-readable closeout output."),
+    ] = False,
+) -> None:
+    config = load_config()
+    try:
+        result = run_client_os_closeout(
+            config=config,
+            client=client,
+            engagement=engagement,
+            meeting_date=meeting_date,
+        )
+    except ClientOsError as error:
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(code=1) from error
+    if json_output:
+        typer.echo(json.dumps(result.to_dict(config.repo_root), indent=2, sort_keys=True))
+    else:
+        console.print(render_closeout(result, config.repo_root), end="")
+    if not result.ok:
+        raise typer.Exit(code=1)
+
+
+@practice_client_os_app.command("bridge-export")
+def practice_client_os_bridge_export_command(
+    client: Annotated[str, typer.Argument(help="Client slug or name.")],
+    engagement: Annotated[str, typer.Option("--engagement", help="Engagement/project slug.")],
+    meeting_date: Annotated[str, typer.Option("--date", help="Meeting date as YYYY-MM-DD.")],
+    json_output: Annotated[
+        bool,
+        typer.Option("--json", help="Print machine-readable dry-run bridge output."),
+    ] = False,
+) -> None:
+    config = load_config()
+    try:
+        result = run_client_os_bridge_export(
+            config=config,
+            client=client,
+            engagement=engagement,
+            meeting_date=meeting_date,
+        )
+    except ClientOsError as error:
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(code=1) from error
+    if json_output:
+        typer.echo(json.dumps(result.to_dict(config.repo_root), indent=2, sort_keys=True))
+    else:
+        console.print(render_bridge_export(result, config.repo_root), end="")
+    if not result.ok:
+        raise typer.Exit(code=1)
 
 
 @kaizen_app.command("capture")
