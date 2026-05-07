@@ -33,6 +33,10 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
 - `docs/PRACTICE_THESIS_AND_OFFER_MAP.md`: internal one-page practice thesis
   and offer map. Use it before deciding which client/operator loop proves which
   offer lane or before translating offer language into `consulting`.
+- `docs/PRACTICE_PUBLIC_OFFER_SEQUENCE.md`: internal sequencing decision for
+  future public consulting copy. Use it to keep Launch / Proof first, AI
+  Workflow Implementation as the wedge, and Client OS / Command Room as the
+  follow-through lane unless Toni explicitly reopens positioning.
 - `docs/OFFER_LED_PRACTICE_PACKAGING.md`: internal offer-packaging source for the first sellable practice offers. Use it before changing `consulting` public copy around offers.
 - `docs/OFFER_TO_PROOF_MATRIX.md`: maps the three V0 offers to existing proof, missing proof, public-copy eligibility, and claims that are not allowed yet.
 - `docs/BUSINESS_ADMIN_OPERATING_SYSTEM.md`: DTP-first operating lane for Toni's own Google Workspace, Calendar/Meet, Apple Reminders capture, LLC readiness, EIN/banking/tax/contract/insurance prompts, brand assets, admin cadence, and sanitized Notion mirror state.
