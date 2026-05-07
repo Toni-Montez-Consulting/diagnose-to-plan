@@ -32,6 +32,10 @@ repeatability, and positioning gates are clear.
 
 Toni builds practical AI and software operating systems for people and businesses that need better execution, not another strategy deck.
 
+For the current one-page thesis and pilot-to-offer map, use
+`docs/PRACTICE_THESIS_AND_OFFER_MAP.md` before translating this into public
+`consulting` copy.
+
 The practice combines:
 
 - custom software implementation;
