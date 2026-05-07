@@ -30,6 +30,9 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
 - `docs/WORKSPACE_OPERATOR_RUNBOOK.md`: safe cross-repo operator runbook. It names command classes, repo roles, verification paths, package managers, deploy ownership, and no-touch boundaries without authorizing a live command runner.
 - `docs/PUBLIC_PROOF_PROMOTION_RUNBOOK.md`: public proof movement path. It reuses the existing proof/redaction templates and blocks public claims until evidence, permission, redaction, reviewer, and caveat gates pass.
 - `docs/PRACTICE_PROOF_QUEUE_INDEX.md`: active proof-candidate queue across CCAAP, Omnexus, DeMario, Hub/intake, Architected Strength, consulting assistant, Business Brain, and DSE. Use it before deciding what proof can move next.
+- `docs/PRACTICE_THESIS_AND_OFFER_MAP.md`: internal one-page practice thesis
+  and offer map. Use it before deciding which client/operator loop proves which
+  offer lane or before translating offer language into `consulting`.
 - `docs/OFFER_LED_PRACTICE_PACKAGING.md`: internal offer-packaging source for the first sellable practice offers. Use it before changing `consulting` public copy around offers.
 - `docs/OFFER_TO_PROOF_MATRIX.md`: maps the three V0 offers to existing proof, missing proof, public-copy eligibility, and claims that are not allowed yet.
 - `docs/BUSINESS_ADMIN_OPERATING_SYSTEM.md`: DTP-first operating lane for Toni's own Google Workspace, Calendar/Meet, Apple Reminders capture, LLC readiness, EIN/banking/tax/contract/insurance prompts, brand assets, admin cadence, and sanitized Notion mirror state.

@@ -16,6 +16,10 @@ Purpose: connect the three V0 offers in
 public-copy eligibility. This is not public site copy. It is the checkpoint
 before `consulting` changes offer claims.
 
+Use `docs/PRACTICE_THESIS_AND_OFFER_MAP.md` first when deciding which pilot or
+reference project proves which offer lane. Use this matrix second to decide
+which exact proof claims are currently eligible.
+
 ## Matrix
 
 | Offer | Existing proof candidates | Missing proof | Public-copy eligibility today | Next proof action | Not allowed yet |

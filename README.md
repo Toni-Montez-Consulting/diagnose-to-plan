@@ -13,6 +13,7 @@ Canonical roadmap:
 - `docs/PRACTICE_KAIZEN_KANBAN_SYSTEM.md` is the DTP-first continuous-improvement loop for capturing and routing meaningful ideas, asks, blockers, proof candidates, repo issues, client signals, corrections, and process improvements.
 - `docs/WORKSPACE_OPERATOR_RUNBOOK.md` names safe cross-repo command classes, repo ownership, verification paths, and no-touch boundaries.
 - `docs/PUBLIC_PROOF_PROMOTION_RUNBOOK.md` is the proof movement gate before any evidence, claim, screenshot, or metric becomes public.
+- `docs/PRACTICE_THESIS_AND_OFFER_MAP.md` is the internal one-page thesis and offer map for deciding what the current pilots prove before public copy changes.
 - `docs/OFFER_LED_PRACTICE_PACKAGING.md` defines the first internal offer packaging source for later consulting-site copy.
 - `docs/CLIENT_COMMAND_ROOM_PATTERN.md` captures the reusable admin/customer portal concept from the DeMario pickleball admin portal for Toni and future client engagements.
 - `docs/CLI_VERIFICATION_AUTOMATION_PATTERN.md` captures the Omnexus-style CLI verification, support, and evidence pattern that should come before heavier hosted product work.

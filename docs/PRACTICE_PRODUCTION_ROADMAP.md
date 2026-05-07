@@ -34,6 +34,13 @@ third after confirmation. Knowledge Base V1, vector memory, Hub readiness,
 `tm-skills` readiness, consulting design audit, and FAOS readiness all route
 through that wave without changing the draft-only automation boundary.
 
+The current practice thesis and offer map is captured in
+`docs/PRACTICE_THESIS_AND_OFFER_MAP.md`. It frames Toni's work as helping
+founders, operators, and small orgs turn messy digital work into launch-ready
+systems: clear next actions, practical AI/workflow implementation, proof-safe
+delivery, and usable operating assets. Use it before changing public consulting
+copy or deciding what Greg, CCAAP, Cam, Omnexus, or DeMario are proving.
+
 The Google Workspace + Business Admin lane is now a first-class Business Brain
 slice. `docs/BUSINESS_ADMIN_OPERATING_SYSTEM.md` owns the DTP-first planning
 view for `founder@tonimontez.co`, Google Calendar/Meet, Apple Reminders capture,
