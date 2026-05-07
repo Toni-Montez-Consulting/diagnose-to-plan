@@ -8,6 +8,13 @@ import typer
 from rich.console import Console
 
 from dtp.commands.capture_cmd import run_mentor, run_note, run_story
+from dtp.commands.client_os import (
+    ClientOsError,
+    render_preflight,
+    render_scaffold,
+    run_client_os_preflight,
+    run_client_os_scaffold,
+)
 from dtp.commands.detect import run_detect
 from dtp.commands.draft import run_draft, user_facing_error
 from dtp.commands.index_cmd import run_index
@@ -56,6 +63,7 @@ app = typer.Typer(no_args_is_help=True, add_completion=False)
 kit_app = typer.Typer(no_args_is_help=True, add_completion=False)
 redact_app = typer.Typer(no_args_is_help=True, add_completion=False)
 practice_app = typer.Typer(no_args_is_help=True, add_completion=False)
+practice_client_os_app = typer.Typer(no_args_is_help=True, add_completion=False)
 kaizen_app = typer.Typer(no_args_is_help=True, add_completion=False)
 memory_app = typer.Typer(no_args_is_help=True, add_completion=False)
 vault_app = typer.Typer(no_args_is_help=True, add_completion=False)
@@ -65,6 +73,7 @@ console = Console()
 app.add_typer(kit_app, name="kit")
 app.add_typer(redact_app, name="redact")
 app.add_typer(practice_app, name="practice")
+practice_app.add_typer(practice_client_os_app, name="client-os")
 app.add_typer(kaizen_app, name="kaizen")
 app.add_typer(memory_app, name="memory")
 app.add_typer(vault_app, name="vault")
@@ -442,6 +451,53 @@ def practice_doctor_command() -> None:
     console.print(render_doctor(result), end="")
     if not result.ok:
         raise typer.Exit(code=1)
+
+
+@practice_client_os_app.command("preflight")
+def practice_client_os_preflight_command(
+    client: Annotated[str, typer.Argument(help="Client slug or name.")],
+    engagement: Annotated[str, typer.Option("--engagement", help="Engagement/project slug.")],
+    meeting_date: Annotated[str, typer.Option("--date", help="Meeting date as YYYY-MM-DD.")],
+) -> None:
+    config = load_config()
+    try:
+        result = run_client_os_preflight(
+            config=config,
+            client=client,
+            engagement=engagement,
+            meeting_date=meeting_date,
+        )
+    except ClientOsError as error:
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(code=1) from error
+    console.print(render_preflight(result, config.repo_root), end="")
+    if not result.ok:
+        raise typer.Exit(code=1)
+
+
+@practice_client_os_app.command("scaffold")
+def practice_client_os_scaffold_command(
+    client: Annotated[str, typer.Argument(help="Client slug or name.")],
+    engagement: Annotated[str, typer.Option("--engagement", help="Engagement/project slug.")],
+    meeting_date: Annotated[str, typer.Option("--date", help="Meeting date as YYYY-MM-DD.")],
+    force: Annotated[
+        bool,
+        typer.Option("--force", help="Overwrite existing scaffold files."),
+    ] = False,
+) -> None:
+    config = load_config()
+    try:
+        result = run_client_os_scaffold(
+            config=config,
+            client=client,
+            engagement=engagement,
+            meeting_date=meeting_date,
+            force=force,
+        )
+    except ClientOsError as error:
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(code=1) from error
+    console.print(render_scaffold(result, config.repo_root), end="")
 
 
 @kaizen_app.command("capture")
