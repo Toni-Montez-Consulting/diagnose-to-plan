@@ -41,8 +41,11 @@ systems: clear next actions, practical AI/workflow implementation, proof-safe
 delivery, and usable operating assets. Use it before changing public consulting
 copy or deciding what Greg, CCAAP, Cam, Omnexus, or DeMario are proving.
 `docs/PRACTICE_PUBLIC_OFFER_SEQUENCE.md` now sets the public-order default:
-Launch / Proof leads, AI Workflow Implementation is the wedge, and Client OS /
-Command Room follows only when recurring operating pain justifies it.
+broad front door, paid Blueprint for unclear/bigger work, Fast Track for clear
+scopes, Custom Implementation SOW for build phases, and AI as a practical lens
+rather than a gimmick. `docs/PRACTICE_BUILDER_LED_OFFER_MODEL.md` preserves the
+current builder-led business model, client fit, pricing posture, proof hierarchy,
+and collaboration rule.
 
 The Google Workspace + Business Admin lane is now a first-class Business Brain
 slice. `docs/BUSINESS_ADMIN_OPERATING_SYSTEM.md` owns the DTP-first planning

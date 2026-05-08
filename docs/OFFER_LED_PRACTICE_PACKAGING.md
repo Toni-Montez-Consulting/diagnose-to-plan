@@ -62,7 +62,9 @@ from the business?
 
 This wedge can lead into:
 
-- Business / AI Operating System Sprint;
+- Business Systems Blueprint;
+- Fast Track or Custom Implementation SOW;
+- Growth, AI, and Operating Systems;
 - workflow diagnosis;
 - custom app or automation builds;
 - client/admin command-room systems;
@@ -71,162 +73,178 @@ This wedge can lead into:
 Public copy can later phrase this as practical AI implementation and utilization
 for real business workflows, once proof and positioning gates are ready.
 
-## Offer Set V0
+## Current Builder-Led Offer Set
 
-Keep the first public offer set to three offers.
+Use `docs/PRACTICE_BUILDER_LED_OFFER_MODEL.md` as the current business model.
+Keep the first public offer set broad and buyer-readable, then route internally
+to the specific engagement shapes.
 
-### 1. Business / AI Operating System Sprint
+### 1. Business Systems Blueprint
 
 Audience:
 
-- founders, operators, solo owners, small teams, and high-agency professionals whose business knowledge lives in scattered notes, meetings, messages, spreadsheets, tools, and mental load.
+- founders, operators, solo owners, and small businesses with an idea,
+  inefficient workflow, AI question, messy digital project, or unclear
+  implementation path.
 
 Painful problem:
 
-- the business has real momentum, but decisions, follow-up, context, proof, and execution are fragmented.
+- the buyer knows the business needs to move, but the path, value case,
+  technical choices, workflow, risks, and build scope are unclear.
 
 Promise:
 
-- turn messy business context into a working operating rhythm, practical AI-assisted workflows, and durable artifacts the owner can actually use.
+- turn the messy problem into a practical implementation roadmap, business value
+  case, technical plan, workflow map, scope options, and recommended SOW.
 
 Deliverables:
 
-- current-state diagnosis;
+- implementation roadmap;
+- business value case / ROI logic;
+- technical plan;
 - workflow map;
-- priority operating loops;
-- AI/tooling opportunity score;
-- starter command or assistant workflow where useful;
-- runbook and handoff packet;
-- proof/redaction and data-boundary notes;
-- next 30-day execution backlog.
+- scope options;
+- risk and dependency register;
+- timeline and budget range;
+- required client inputs/access;
+- success metrics;
+- recommended implementation SOW;
+- what not to build yet.
 
 Repo/tool support:
 
 - DTP Business Brain;
 - Practice OS templates;
 - client reply/cadence patterns;
-- Hub intake/runtime if needed;
-- `tm-skills` only when software delivery work is part of the sprint.
+- Hub intake/runtime if needed.
 
 Proof needed:
 
-- redacted Business Brain or client cadence example;
+- redacted Blueprint sample;
 - before/after workflow map;
-- owner-safe runbook sample;
-- proof packet showing how context became decisions/actions.
+- proof packet showing how messy context became a value-backed implementation
+  plan.
 
 Intentionally not included:
 
 - full SaaS platform build;
 - unmanaged autonomous agents;
 - QuickBooks writes;
-- Notion as source of truth;
-- client portal unless the command-room fit assessment says it is needed.
+- implementation work before the SOW is accepted.
 
 Best first public phrasing:
 
-> I help operators turn scattered business context into working AI/software operating systems: workflows, decisions, runbooks, proof, and tools that make the business easier to run.
+> Before we build, we turn the idea, workflow, or AI question into a clear
+> implementation roadmap, business value case, technical plan, and next-step
+> scope.
 
-### 2. Launch / Proof Hardening Sprint
+### 2. Fast Track / Custom Implementation
 
 Audience:
 
-- founders, client teams, and builders with an app, site, internal tool, or launch surface that is close but not yet trustworthy enough to share broadly.
+- founders, owners, and operators with a clear enough scope to build, fix,
+  launch, or implement now.
 
 Painful problem:
 
-- the product exists, but launch confidence, proof, QA, privacy, support, handoff, and operational readiness are not tight enough.
+- the buyer needs a working site, app, workflow, AI integration, admin system,
+  launch fix, or operating asset, not another round of abstract planning.
 
 Promise:
 
-- turn a near-launch system into a credible launch, review, proof, or handoff package.
+- build or implement the approved system with usable handoff, training,
+  verification, and next-action clarity.
 
 Deliverables:
 
-- launch-readiness audit;
-- hard/advisory/manual gate matrix;
-- local/CI verification path;
-- privacy/security/data-boundary review;
-- launch checklist;
-- owner/operator runbook;
-- proof candidate inventory;
-- first proof packet or redaction queue item.
+- scoped implementation plan;
+- working build/fix/workflow/system;
+- verification checklist;
+- runbook or handoff notes;
+- owner training notes when needed;
+- next-phase backlog.
 
 Repo/tool support:
 
 - Omnexus launch/review patterns;
+- DeMario owner/admin reference;
 - CLI verification automation pattern;
-- mobile app review pattern when applicable;
-- consulting proof standards;
-- DTP proof templates.
+- `tm-skills` when software delivery work is part of the scope;
+- DTP proof templates when public proof could emerge.
 
 Proof needed:
 
 - Omnexus App Store journey, if cleared;
 - Demario launch/admin readiness pattern, if owner-approved;
-- CCAAP launch gates, once owner inputs and permission are complete;
-- redacted verification evidence sample.
+- consulting/DTP system proof;
+- redacted implementation before/after.
 
 Intentionally not included:
 
-- rewriting the product by default;
 - live deploy without explicit approval;
 - public proof without permission;
-- broad platform automation before launch gates are understood.
+- random automations with no operating value;
+- cheap websites or chatbot-for-chatbot's-sake work.
 
 Best first public phrasing:
 
-> I help teams cross the last mile from "it works" to "we can trust it": launch gates, verification, proof, privacy boundaries, runbooks, and owner-ready handoff.
+> When the path is clear enough, I build the website, app, workflow, AI
+> integration, admin system, or launch-ready asset and leave you with something
+> you can understand and use.
 
-### 3. Client Command Room / Workflow System Sprint
+### 3. Growth, AI, And Operating Systems
 
 Audience:
 
-- owners or teams with recurring operational work after launch: bookings, tasks, follow-up, admin routines, content updates, approvals, support, or multi-person handoff.
+- existing businesses and serious operators that want technology, AI, workflow,
+  or operating leverage.
 
 Painful problem:
 
-- work keeps falling into texts, memory, spreadsheets, and manual reminders after the site/app/tool ships.
+- the business is running, but manual work, scattered tools, unclear ownership,
+  inefficient workflows, or underused technology are slowing growth.
 
 Promise:
 
-- create a focused owner-facing command room or workflow system only where recurring operations justify it.
+- modernize the operating workflow and implement practical systems that make the
+  business easier to run, scale, or improve.
 
 Deliverables:
 
+- current-state review;
+- growth/efficiency opportunity map;
+- AI/workflow opportunity score;
 - command-room fit assessment;
-- workflow and role map;
-- owner/admin task model;
-- public/private boundary plan;
-- initial dashboard or checklist concept;
-- handoff rules;
-- verification and support gates;
-- future enhancement backlog.
+- workflow system or implementation roadmap;
+- operating rhythm;
+- measurement plan;
+- handoff and optimization backlog.
 
 Repo/tool support:
 
 - Client Command Room pattern;
 - DeMario admin portal reference;
 - DTP private kits;
-- Hub runtime support only if intake/admin records need a private console;
-- project repo implementation when the fit assessment justifies code.
+- Hub runtime support only if intake/admin records need a private console.
 
 Proof needed:
 
 - DeMario command-room screenshots/walkthrough only after owner permission and redaction;
 - CCAAP owner-launch process after permission;
-- internal command-room fit/spec examples.
+- internal command-room fit/spec examples;
+- AI/ML and Business Brain examples as support, not headline proof.
 
 Intentionally not included:
 
 - portal for every client;
 - CRM/billing/time tracking by default;
 - private client data in public repos;
-- Hub replacing DTP or the client repo.
+- AI where workflow fixes should come first.
 
 Best first public phrasing:
 
-> When a site or app needs an operating layer, I design the owner/admin workflow behind it: tasks, dashboards, handoffs, proof, and support rhythms that keep the thing useful after launch.
+> I help existing businesses find the workflow, AI, and operating-system leverage
+> that can reduce drag and make growth easier to manage.
 
 ## Not Yet Standalone Offers
 
@@ -257,10 +275,10 @@ When this becomes `consulting` copy:
 
 The next consulting-site pass should:
 
-1. sequence the primary offer language according to
-   `docs/PRACTICE_PUBLIC_OFFER_SEQUENCE.md`: Launch / Proof first, AI Workflow
-   Implementation second, Client OS / Command Room third;
-2. update `/start` so intake routes prospects into one of these offers;
+1. lead with the broad front door from
+   `docs/PRACTICE_PUBLIC_OFFER_SEQUENCE.md`;
+2. update `/start` so intake routes prospects into Blueprint, Fast Track,
+   Custom Implementation, Growth/AI/Operating Systems, or not-fit;
 3. keep proof frames honest until proof packets are approved;
 4. keep Hub intake primary and Formspree fallback;
 5. leave DTP private and source-of-truth owned.
@@ -269,9 +287,9 @@ The next consulting-site pass should:
 
 | Offer | Strongest proof candidate | Current status |
 |---|---|---|
-| Business / AI Operating System Sprint | real client cadence/reply loop producing decisions, actions, and handoff | needs next client loop pilot |
-| Launch / Proof Hardening Sprint | Omnexus launch/review journey; Demario launch/admin hardening | strong internal evidence, public permission/review still needed |
-| Client Command Room / Workflow System Sprint | DeMario command room and CCAAP owner workflow | permission and redaction gates still needed |
+| Business Systems Blueprint | DTP/consulting system; Greg/Cam/CCAAP discovery loops | needs redacted Blueprint sample |
+| Fast Track / Custom Implementation | Omnexus launch/review journey; DeMario launch/admin hardening | strong internal evidence, public permission/review still needed |
+| Growth, AI, And Operating Systems | DTP operating system; Business Brain; DeMario/CCAAP command-room patterns; AI/ML work | needs redacted before/after workflow proof |
 
 Use `docs/OFFER_TO_PROOF_MATRIX.md` for the active proof-readiness matrix
 before changing public consulting copy. This source keeps the offer thesis; the

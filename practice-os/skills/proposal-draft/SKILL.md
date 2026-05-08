@@ -19,15 +19,21 @@ not tool novelty.
 - COI verdict
 - case-study/naming rights posture
 - pricing source if Toni has approved one
+- buyer path when known: Focused Blueprint, Business Systems Blueprint, Fast
+  Track Implementation, Custom Implementation SOW, or Advisory / Optimization
 
 # Steps
 
 1. Lead with owner value.
-2. Name deliverables as a Client Operating Kit when appropriate.
-3. Include exclusions and approval boundaries.
-4. Include handoff, runbook, and eval requirements.
-5. Name proof/case-study terms as requested terms, not granted rights.
-6. Keep Builder-path exceptions scoped and subordinate to Operator-path
+2. Preserve the builder-who-consults positioning: strategy must lead to working
+   assets, not a deck dead-end.
+3. Name the buying path: Blueprint for unclear/bigger work, Fast Track for clear
+   scopes, or Custom Implementation SOW for the build phase.
+4. Name deliverables as a Client Operating Kit when appropriate.
+5. Include exclusions and approval boundaries.
+6. Include handoff, runbook, and eval requirements.
+7. Name proof/case-study terms as requested terms, not granted rights.
+8. Keep Builder-path exceptions scoped and subordinate to Operator-path
    positioning.
 
 # Output Format
@@ -52,6 +58,8 @@ Follow `practice-os/commands/draft-proposal.md`:
 - Do not include public case-study rights without approval language.
 - Do not validate product moat, algorithm quality, or revenue impact without
   evidence.
+- Do not sell cheap websites, random automations, chatbot-for-chatbot's-sake, or
+  strategy-only work as flagship offers.
 
 # Human Approval Trigger
 

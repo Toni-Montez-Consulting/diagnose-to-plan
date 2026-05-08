@@ -136,6 +136,13 @@ Clarifying questions should increase resolution, not create friction.
 Most questions are non-blocking. If the answer is missing, make a labeled
 assumption and continue.
 
+For thesis, offer, pricing, positioning, consulting-business strategy, public
+copy, and business-model work, default to a short collaborative discovery pass
+before editing files. Reflect Toni's current point of view, ask one to three
+questions that would materially change the output, synthesize the decision, and
+only then update durable artifacts when Toni asks to capture it or the direction
+is clear. Do not turn strategic conversation into repo churn too early.
+
 Blocking questions are only for:
 
 - safety
