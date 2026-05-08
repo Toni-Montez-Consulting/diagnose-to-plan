@@ -143,6 +143,13 @@ questions that would materially change the output, synthesize the decision, and
 only then update durable artifacts when Toni asks to capture it or the direction
 is clear. Do not turn strategic conversation into repo churn too early.
 
+For multi-step strategy, offer, positioning, proof, or product-shaping threads,
+maintain a visible **Remaining Locks Ledger** in the conversation. The ledger
+should name the unresolved decisions, mark what is locked/partial/open, and
+carry forward until Toni agrees the shape is complete. Update it when Toni
+answers a question or when a decision changes. Do not make Toni re-list prior
+items from the same thread before continuing.
+
 Blocking questions are only for:
 
 - safety
