@@ -220,6 +220,10 @@ Examples:
 
 The next `consulting` copy pass should not become a broad redesign.
 
+Use `docs/PRACTICE_HOMEPAGE_START_AND_BLUEPRINT_COPY_LOCK.md` as the current
+copy source for the homepage, `/start` triage, proof cards, and sample
+Blueprint bridge.
+
 It should:
 
 1. keep the homepage broad enough for founders, operators, and small businesses
