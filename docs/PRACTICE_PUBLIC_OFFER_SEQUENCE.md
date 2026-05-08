@@ -37,6 +37,41 @@ That means the consulting value is not a strategy deck. Toni clarifies the
 business problem, defines the value, maps the workflow, chooses the right
 technology/AI path, and then builds or implements working assets.
 
+## Locked Homepage Spine
+
+Tone:
+
+> Operator-polished builder/advisor.
+
+The site should sound professional, calm, credible, specific, and human. It
+should not sound like a solo cheap website shop or a generic consulting-firm
+deck factory.
+
+Hero:
+
+> Turn unclear ideas, broken workflows, and tech bottlenecks into practical
+> systems that work.
+
+Subhead:
+
+> I'm a builder/advisor for serious founders, operators, and small businesses.
+> I help clarify what needs to happen, map the business value, and implement
+> working digital assets, workflows, AI-enabled systems, or operating tools.
+
+Primary CTA:
+
+> Start With a Fit Call
+
+Homepage section order:
+
+1. Hero: thesis and broad CTA.
+2. Three public doors: Clarify The Path, Build The System, Improve The System.
+3. Blueprint bridge: how unclear work becomes a plan.
+4. Implementation promise: working assets, not a deck dead-end.
+5. Proof: named projects mapped to proof types.
+6. Fit filter: who this is for and not for.
+7. Final CTA: Start With a Fit Call.
+
 ## Why This Sequence
 
 The previous "Launch / Proof first" shorthand was useful but too narrow. The
@@ -53,6 +88,15 @@ the first promise. They are consequences of better systems, clearer workflows,
 practical AI, launch-ready implementation, and owner-operable assets.
 
 ## Public Offer Stack
+
+The three public doors are recognition aids, not rigid packages:
+
+1. Clarify The Path: for ideas, messy workflows, unclear scope, or business
+   problems that need to become a real plan.
+2. Build The System: for sites, apps, workflows, dashboards, AI-enabled tools,
+   admin systems, or operating assets that need to exist and work.
+3. Improve The System: for existing businesses that need less manual drag,
+   better processes, smarter tools, or practical AI/workflow upgrades.
 
 | Public layer | Buyer job | Buying path | Current price posture |
 |---|---|---|---|
@@ -155,6 +199,22 @@ Current proof comfort, from strongest to supporting:
 Use AI/ML as credibility support, not the headline. It helps prove that Toni
 understands model selection, evaluation, grounding, and business-use framing.
 The primary proof is still builder-led implementation and working systems.
+
+Public proof should use this shape:
+
+- named project;
+- proof type;
+- customer relevance.
+
+Examples:
+
+- Omnexus: product/platform proof that shows product build, subscription/app
+  workflow, launch-readiness, and operational repair.
+- DeMario: local business implementation proof that shows booking, payment,
+  admin, service workflow, launch handoff, and owner-operable systems.
+- Consulting system / DTP: operating discipline proof that shows intake,
+  follow-up, proof gates, workflow mapping, planning, and internal systems that
+  mirror the client method.
 
 ## Consulting Site Implication
 

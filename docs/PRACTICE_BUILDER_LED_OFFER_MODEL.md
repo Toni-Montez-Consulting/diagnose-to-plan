@@ -40,6 +40,37 @@ Lead broad:
 This is stronger than leading with one narrow category like websites, AI
 chatbots, automations, or launch proof.
 
+## Homepage Lock
+
+Use an operator-polished builder/advisor tone: professional, specific, human,
+and implementation-first. Avoid both casual freelancer language and
+big-consulting abstraction.
+
+Current homepage thesis:
+
+> Turn unclear ideas, broken workflows, and tech bottlenecks into practical
+> systems that work.
+
+Current supporting copy:
+
+> I'm a builder/advisor for serious founders, operators, and small businesses.
+> I help clarify what needs to happen, map the business value, and implement
+> working digital assets, workflows, AI-enabled systems, or operating tools.
+
+Primary CTA:
+
+> Start With a Fit Call
+
+Public offer doors:
+
+1. Clarify The Path.
+2. Build The System.
+3. Improve The System.
+
+These are public doors, not rigid packages. They help a prospect recognize
+their situation before `/start` routes them into Fit Call, Blueprint, Fast
+Track, Custom Implementation SOW, Advisory / Optimization, or not-fit.
+
 ## Promise
 
 Use "working-assets promise" or "implementation-first consulting" instead of
@@ -85,6 +116,54 @@ A serious Blueprint should include:
 - recommended implementation SOW;
 - handoff/training plan;
 - what not to build yet.
+
+## Blueprint Offer Lock
+
+Use `Blueprint` publicly when the sentence needs to stay simple. Use `Business
+Systems Blueprint` when the page needs a named paid offer.
+
+Positioning:
+
+> For bigger or unclear work, the first paid step is a Blueprint: a practical
+> roadmap, value case, technical plan, workflow map, and implementation
+> recommendation.
+
+The Blueprint should feel like a de-risking step, not homework before the real
+work. It exists to define the right build before the client spends serious
+implementation money.
+
+Public pricing posture:
+
+- the homepage should stay value-first and avoid the full pricing menu;
+- `/start` or a Blueprint page can say Focused Blueprints start at `$500`;
+- larger business/system Blueprints can start at `$1,500+`;
+- implementation is scoped separately after the path is clear;
+- Blueprint fees may be credited toward implementation when a SOW is approved
+  within the agreed window.
+
+Blueprint sample structure:
+
+1. Situation snapshot.
+2. Business problem and desired outcome.
+3. Current workflow or system map.
+4. Friction, risk, and opportunity findings.
+5. Business value case and success metrics.
+6. Recommended technical/workflow path.
+7. Scope options and sequencing.
+8. Inputs, access, assumptions, and dependencies.
+9. What not to build yet.
+10. Recommended next route: no build yet, Fast Track, Custom Implementation
+    SOW, Advisory / Optimization, or parked.
+
+SOW bridge:
+
+- The Blueprint ends with a recommended implementation route, not a vague
+  "next steps" list.
+- A follow-on SOW should reuse the approved Blueprint decisions: scope,
+  exclusions, deliverables, timeline, client inputs, acceptance criteria,
+  handoff/training, and pricing.
+- If the Blueprint shows the work is not worth building yet, that is a valid
+  successful outcome.
 
 ## Client Fit
 

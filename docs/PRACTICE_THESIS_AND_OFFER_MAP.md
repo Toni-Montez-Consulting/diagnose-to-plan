@@ -24,14 +24,24 @@ collaboration memory.
 
 ## Thesis
 
-Toni helps founders, operators, and small orgs turn messy digital work into
-launch-ready systems: clear next actions, practical AI/workflow implementation,
-proof-safe delivery, and usable operating assets.
+Toni helps serious founders, operators, and small businesses turn unclear
+ideas, broken workflows, and tech bottlenecks into practical systems that work.
 
 The practice is not a generic AI automation shop. Toni is the builder who
 consults: a trusted implementation partner who can clarify the business problem,
 define value, map the workflow, choose the right technology/AI path, and build
 or implement working assets.
+
+## Public Doors
+
+Use these as homepage recognition paths before routing the prospect into a
+specific buying path:
+
+| Public door | Visitor situation | Likely route |
+|---|---|---|
+| Clarify The Path | idea, messy workflow, unclear scope, or recurring business problem needs a real plan | Fit Call -> Blueprint |
+| Build The System | site, app, workflow, dashboard, AI-enabled tool, admin system, or operating asset needs to exist and work | Fast Track or Custom Implementation SOW |
+| Improve The System | existing business needs less manual drag, better processes, smarter tools, or practical AI/workflow upgrades | Blueprint -> Implementation -> optional advisory |
 
 ## The Shape
 
@@ -98,11 +108,12 @@ Avoid:
 
 ## Next Decisions
 
-1. Decide when to translate the broad front door + Blueprint/Fast Track buying
-   path into `consulting` public copy.
-2. Pick the first proof packet that can clear evidence, permission, redaction,
+1. Decide when to translate the locked homepage spine and three public doors
+   into `consulting` public copy.
+2. Create one redacted/sample Business Systems Blueprint artifact.
+3. Pick the first proof packet that can clear evidence, permission, redaction,
    reviewer, and caveat gates.
-3. Use Greg, CCAAP, and Cam to sharpen the offer lanes before adding more
+4. Use Greg, CCAAP, and Cam to sharpen the offer lanes before adding more
    architecture.
-4. Keep "implementing and utilizing AI" anchored in real workflow integration,
+5. Keep "implementing and utilizing AI" anchored in real workflow integration,
    not abstract AI strategy.
