@@ -44,6 +44,9 @@ approves more detail.
 
 - `eval-cases.json` stores the first fixture seed for future automated evals.
 - `eval-cases.md` remains the human-readable version for weekly resets.
+- `northline-performance-studio-blueprint-sample.md` is the first public-safe
+  sample Blueprint artifact for the consulting offer. It is fictional demo
+  material, not a client claim.
 - The first real misfire seed is evidence-dossier depth: shallow synthesis with
   too few source/memory citations should become a correction checklist, source
   sweep, and claim ledger instead of another short summary.

@@ -155,6 +155,11 @@ Blueprint sample structure:
 10. Recommended next route: no build yet, Fast Track, Custom Implementation
     SOW, Advisory / Optimization, or parked.
 
+Current sample artifact:
+
+- `practice-os/fixtures/consulting-intelligence/northline-performance-studio-blueprint-sample.md`
+  is the first public-safe fictional Blueprint example.
+
 SOW bridge:
 
 - The Blueprint ends with a recommended implementation route, not a vague

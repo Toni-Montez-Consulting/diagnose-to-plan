@@ -40,11 +40,16 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
 - `docs/PRACTICE_BUILDER_LED_OFFER_MODEL.md`: current builder-led consulting
   business model, including client fit, pricing posture, Blueprint deliverable
   standard, Fast Track split, proof hierarchy, and collaboration memory.
+- `docs/PRACTICE_HOMEPAGE_START_AND_BLUEPRINT_COPY_LOCK.md`: locked internal
+  source for the next consulting homepage, `/start`, proof-card, and Blueprint
+  copy pass. Use before implementing public offer copy.
 - `practice-os/templates/business-systems-blueprint.md`: reusable paid
   Blueprint template and source for a future public-safe sample artifact.
 - `practice-os/templates/remaining-locks-ledger.md`: collaboration pattern for
   carrying unresolved strategy, offer, proof, positioning, and product-shaping
   decisions across turns before durable capture.
+- `practice-os/fixtures/consulting-intelligence/northline-performance-studio-blueprint-sample.md`:
+  public-safe fictional Blueprint sample for a wellness/performance practice.
 - `docs/OFFER_LED_PRACTICE_PACKAGING.md`: internal offer-packaging source for the first sellable practice offers. Use it before changing `consulting` public copy around offers.
 - `docs/OFFER_TO_PROOF_MATRIX.md`: maps the three V0 offers to existing proof, missing proof, public-copy eligibility, and claims that are not allowed yet.
 - `docs/BUSINESS_ADMIN_OPERATING_SYSTEM.md`: DTP-first operating lane for Toni's own Google Workspace, Calendar/Meet, Apple Reminders capture, LLC readiness, EIN/banking/tax/contract/insurance prompts, brand assets, admin cadence, and sanitized Notion mirror state.
