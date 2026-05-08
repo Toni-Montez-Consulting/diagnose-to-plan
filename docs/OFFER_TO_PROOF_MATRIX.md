@@ -19,15 +19,17 @@ before `consulting` changes offer claims.
 Use `docs/PRACTICE_THESIS_AND_OFFER_MAP.md` first when deciding which pilot or
 reference project proves which offer lane. Use this matrix second to decide
 which exact proof claims are currently eligible.
-Use `docs/PRACTICE_PUBLIC_OFFER_SEQUENCE.md` when deciding public order.
+Use `docs/PRACTICE_PUBLIC_OFFER_SEQUENCE.md` when deciding public order. The
+current public order is broad front door first, then Blueprint/Fast Track routing
+through `/start`.
 
 ## Matrix
 
 | Offer | Existing proof candidates | Missing proof | Public-copy eligibility today | Next proof action | Not allowed yet |
 |---|---|---|---|---|---|
-| Business / AI Operating System Sprint | Business Brain fixtures, Greg/Cameron/CCAAP workflow packets, consulting intake architecture, source-backed assistant corpus | redacted before/after example showing messy context becoming decisions, actions, runbook, and 30-day backlog | can describe the diagnostic method and buyer problem; cannot claim client outcomes or autonomous Business Brain capability | seed real-reply evals after the next substantive reply and create one public-safe workflow proof packet | no private client notes, no Notion/private DTP retrieval claims, no QuickBooks or finance automation claims |
-| Launch / Proof Hardening Sprint | Omnexus launch/review journey, DeMario launch/admin readiness, CCAAP launch gates, DTP verification templates | approved public proof packet with baseline, after-state, measurement caveat, and permission | can describe launch gates, verification, proof, privacy boundaries, and handoff as a service pattern | choose first cleared proof packet after CCAAP owner response or internal Omnexus/DeMario review | no App Store/billing/user-data claims beyond reviewed public wording, no live deploy promise without explicit approval |
-| Client Command Room / Workflow System Sprint | DeMario admin surface, consulting `/admin`, Hub console support, CCAAP owner workflow candidate, DTP command-room pattern | one owner-approved walkthrough or redacted command-room spec showing recurring operations after launch | can describe command-room fit assessment and owner/admin workflow design; cannot imply every project gets a portal | promote admin-surface operating-room pattern and use fit assessment before any project portal | no Hub-as-CRM, no portal by default, no private admin screenshots, no billing/time-tracking scope by default |
+| Business Systems Blueprint | DTP/consulting operating system, Business Brain fixtures, Greg/Cameron/CCAAP workflow packets, consulting intake architecture | redacted Blueprint sample showing messy context becoming roadmap, value case, workflow map, risks, and SOW recommendation | can describe the Blueprint method and buyer problem; cannot claim client outcomes or autonomous Business Brain capability | create one public-safe Blueprint sample after the next substantive client loop | no private client notes, no Notion/private DTP retrieval claims, no QuickBooks or finance automation claims |
+| Fast Track / Custom Implementation | Omnexus launch/review journey, DeMario launch/admin readiness, consulting site, DTP verification templates | approved public proof packet with baseline, after-state, measurement caveat, and permission | can describe implementation-first consulting, working assets, verification, handoff, and owner-ready delivery as a service pattern | choose first cleared proof packet after internal Omnexus/DeMario review or CCAAP owner response | no App Store/billing/user-data claims beyond reviewed public wording, no live deploy promise without explicit approval |
+| Growth, AI, And Operating Systems | DeMario admin surface, consulting `/admin`, Hub console support, CCAAP owner workflow candidate, DTP command-room pattern, AI/ML archive | one owner-approved walkthrough or redacted before/after workflow proof showing operating leverage | can describe AI/workflow opportunity scoring, command-room fit assessment, and owner/admin workflow design; cannot imply every project gets AI or a portal | promote admin-surface operating-room pattern and one AI/workflow proof candidate after review | no Hub-as-CRM, no portal by default, no private admin screenshots, no billing/time-tracking scope by default, no AI transformation claims |
 
 ## Copy Gate
 
@@ -47,7 +49,8 @@ work because those are method and qualification claims. It should not add new
 impact, client-outcome, approval, revenue, conversion, or automation claims
 until the queue clears exact proof.
 
-The safest next order is Launch / Proof first, AI Workflow Implementation
-second, and Client OS / Command Room third. That order can be expressed without
-new proof claims if the copy stays at the method/service-pattern level.
+The safest next order is a broad front door followed by `/start` routing into
+Blueprint, Fast Track, Custom Implementation, Growth/AI/Operating Systems, or
+not-fit. That order can be expressed without new proof claims if the copy stays
+at the method/service-pattern level.
 

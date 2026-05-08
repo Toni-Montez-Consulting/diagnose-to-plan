@@ -18,6 +18,9 @@ move toward `consulting` later.
 Use `docs/PRACTICE_PUBLIC_OFFER_SEQUENCE.md` for the current decision on which
 offer should lead publicly, which offer should support it, and what public copy
 must wait for proof gates.
+Use `docs/PRACTICE_BUILDER_LED_OFFER_MODEL.md` for the current builder-led
+business model, pricing posture, client fit, Blueprint/Fast Track split, and
+collaboration memory.
 
 ## Thesis
 
@@ -25,9 +28,10 @@ Toni helps founders, operators, and small orgs turn messy digital work into
 launch-ready systems: clear next actions, practical AI/workflow implementation,
 proof-safe delivery, and usable operating assets.
 
-The practice is not a generic AI automation shop. It is the work of taking a
-messy real-world operating problem and making it clearer, safer, shippable, and
-easier to run.
+The practice is not a generic AI automation shop. Toni is the builder who
+consults: a trusted implementation partner who can clarify the business problem,
+define value, map the workflow, choose the right technology/AI path, and build
+or implement working assets.
 
 ## The Shape
 
@@ -44,9 +48,9 @@ Every good engagement should answer four questions:
 
 | Offer lane | Buyer problem | Core output | Current proof source |
 |---|---|---|---|
-| Launch / Proof Sprint | "This app, site, workflow, or product almost works, but I do not trust it enough to launch or share." | launch gates, verification path, proof packet, handoff checklist, privacy/support boundaries | Omnexus, DeMario, CCAAP |
-| AI Workflow Implementation Sprint | "I know AI could help, but the work is still stuck in scattered tools, manual decisions, and vague automation ideas." | workflow map, practical AI/tooling opportunity score, implementation plan or starter workflow, utilization runbook | Business Brain fixtures, Greg/Cam/CCAAP loops |
-| Client OS / Command Room Sprint | "The thing is live or close, but the owner still needs a place to manage tasks, follow-up, updates, approvals, and next actions." | owner/admin workflow, command-room fit assessment, task model, operating rhythm, support/proof handoff | DeMario admin pattern, CCAAP owner-input lane, DTP templates |
+| Business Systems Blueprint | "I have an idea, inefficient workflow, AI question, or messy digital project, but I do not know the path yet." | implementation roadmap, value case, technical plan, workflow map, risks, budget/timeline, SOW recommendation | DTP/consulting system, Greg/Cam/CCAAP loops |
+| Fast Track / Custom Implementation | "The scope is clear enough to build, fix, launch, or implement now." | working site, app, workflow, AI integration, operating asset, launch/handoff package | Omnexus, DeMario, consulting site, AI/ML work |
+| Growth, AI, And Operating Systems | "The business wants leverage, modernization, practical AI, or better operations." | workflow system, AI/tooling implementation, owner/admin rhythm, measurement, optimization plan | DTP operating system, Business Brain fixtures, command-room patterns |
 
 ## Current Pilots
 
@@ -94,7 +98,8 @@ Avoid:
 
 ## Next Decisions
 
-1. Choose which public offer lane gets the next consulting-site copy pass.
+1. Decide when to translate the broad front door + Blueprint/Fast Track buying
+   path into `consulting` public copy.
 2. Pick the first proof packet that can clear evidence, permission, redaction,
    reviewer, and caveat gates.
 3. Use Greg, CCAAP, and Cam to sharpen the offer lanes before adding more

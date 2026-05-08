@@ -15,8 +15,9 @@ shape, and any COI/proof constraints.
 ## Inputs
 
 - Prospect brief.
-- Selected offer shape: Audit, Operating System, AI Assistant, Launch Sprint,
-  case-study engagement, advisor-only, or parked.
+- Selected offer shape: Focused Blueprint, Business Systems Blueprint, Full
+  Implementation Blueprint, Fast Track Implementation, Custom Implementation
+  SOW, Advisory / Optimization, case-study engagement, advisor-only, or parked.
 - COI screen status.
 - Case-study rights preference when applicable.
 - Pricing source if Toni has approved one.
@@ -53,6 +54,8 @@ reusable fixture, write under `practice-os/fixtures/business-brain/`.
 - Do not quote price unless pricing source or user approval exists.
 - Do not promise outcomes without data.
 - Do not include public case-study rights without explicit approval language.
+- Preserve the builder-who-consults model: every paid engagement should produce
+  working assets, not only strategy.
 - Keep Builder-path exceptions scoped; do not turn them into the flagship.
 - Use operator voice, not generic AI consulting copy.
 

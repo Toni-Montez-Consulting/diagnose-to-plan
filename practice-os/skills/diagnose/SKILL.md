@@ -39,9 +39,11 @@ constraints, pricing, proof rights, or case-study approval.
 2. Name the non-AI fix first.
 3. Separate what works from what is missing.
 4. Record data sensitivity, COI risk, and proof/permission gates.
-5. Write questions that would change the recommended path.
-6. Name the next useful artifact.
-7. Capture skill/template candidates without promoting them automatically.
+5. For prospect/business-model work, decide whether the path is Blueprint, Fast
+   Track, Custom Implementation SOW, Advisory / Optimization, or not-fit.
+6. Write questions that would change the recommended path.
+7. Name the next useful artifact.
+8. Capture skill/template candidates without promoting them automatically.
 
 # Output Format
 

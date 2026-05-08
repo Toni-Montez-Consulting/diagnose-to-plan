@@ -14,128 +14,174 @@ Owner: `diagnose-to-plan`, with later implementation in `consulting`.
 This is not public site copy. It decides what should lead, what should support,
 and what should wait before the next public offer pass.
 
-## Decision
+## Current Decision
 
-Lead the public practice with the Launch / Proof Sprint.
+Lead publicly with the broad promise, not a narrow service category:
 
-Use AI Workflow Implementation as the strategic wedge and differentiator.
+> Toni helps serious founders, operators, and small businesses turn ideas,
+> inefficient workflows, and messy digital projects into clear plans, practical
+> AI/workflow implementation, and working systems.
 
-Use Client OS / Command Room as the follow-through offer when recurring owner or
-team operations justify an operating layer.
+The buying mechanism is:
 
-In plain language:
+1. Free Fit Call for qualification.
+2. Paid Blueprint for unclear, bigger, or custom work.
+3. Fast Track Implementation for clear scopes that are worth Toni's time.
+4. Custom Implementation SOW for the real build/implementation phase.
 
-> Toni helps people get messy digital work launch-ready first. Then, when the
-> workflow proves where leverage exists, Toni implements practical AI, software,
-> and operating assets that make the work easier to run.
+Identity:
+
+> Toni is the builder who consults.
+
+That means the consulting value is not a strategy deck. Toni clarifies the
+business problem, defines the value, maps the workflow, chooses the right
+technology/AI path, and then builds or implements working assets.
 
 ## Why This Sequence
 
-Launch / Proof should lead because it is the easiest offer for a buyer to
-recognize under pressure:
+The previous "Launch / Proof first" shorthand was useful but too narrow. The
+stronger front door is broader:
 
-- "I have a site, app, idea, workflow, or launch surface, but I do not know what
-  is blocking it."
-- "It works in pieces, but I do not trust it enough to share."
-- "I need someone to turn the mess into a clear next-action path."
+- "I have an idea but no clear path."
+- "My business is inefficient."
+- "I want to use AI but do not know where."
+- "My site, app, workflow, or system is broken or stuck."
+- "I need a real operating system for the work."
 
-It also has the strongest near-term proof base:
-
-- Omnexus supports app review, release, auth/billing trust, and launch-proof
-  patterns after redaction and caveat review.
-- DeMario supports public launch, owner workflow, and handoff discipline after
-  the current proof packet boundaries.
-- CCAAP can support nonprofit launch governance after owner inputs and
-  permission.
-
-AI Workflow Implementation should stay close to the front, but it should not be
-the first public frame by itself yet. The stronger version is:
-
-> We find the business workflow first, then implement and utilize AI where it
-> makes the work clearer, faster, or easier to operate.
-
-Client OS / Command Room should be the after-state. It is powerful, but only
-when the work needs recurring follow-up, approvals, tasks, owner visibility, or
-handoff.
+Revenue growth and cost reduction are important outcomes, but they should not be
+the first promise. They are consequences of better systems, clearer workflows,
+practical AI, launch-ready implementation, and owner-operable assets.
 
 ## Public Offer Stack
 
-| Public order | Offer lane | Public job | Proof posture |
+| Public layer | Buyer job | Buying path | Current price posture |
 |---|---|---|---|
-| 1 | Launch / Proof Sprint | Make the messy thing launch-ready, trustworthy, and handoff-ready | strongest internal evidence; public claims still proof-gated |
-| 2 | AI Workflow Implementation Sprint | Implement practical AI/workflow leverage inside a real operating process | describe method now; wait for redacted before/after proof |
-| 3 | Client OS / Command Room Sprint | Give the owner/team a durable place to run recurring work after launch | describe fit assessment now; avoid portal-by-default claims |
+| Broad front door | Help me get this idea, workflow, system, or digital project into motion | Free Fit Call routes the prospect | no price claim required |
+| Business Systems Blueprint | I need clarity, value case, technical path, workflow map, and implementation plan before we build | Paid diagnostic / deposit | Focused Blueprint starts at `$500`; full Blueprint starts at `$1,500+` |
+| Fast Track Implementation | I have a clear scoped implementation that is worth doing now | Direct implementation scope | starts around `$1,500-$3,000` |
+| Custom Implementation SOW | I need Toni to build or implement the approved system | SOW after Blueprint or clear Fast Track | starts around `$5,000+`; grows with scope |
+| Advisory / Optimization | I need ongoing improvement after implementation | optional retainer | starter range `$750-$1,500/mo` |
+
+Pricing is internal guidance until Toni approves public copy. Blueprint fees can
+be credited toward implementation when the client signs a SOW within a defined
+window, such as 30 days.
+
+## Blueprint Deliverables
+
+Every serious Blueprint should produce:
+
+- implementation roadmap;
+- business value case / ROI logic;
+- technical plan;
+- workflow map;
+- scope options, such as phase 1 / phase 2 or good / better / best;
+- risk and dependency register;
+- timeline and budget range;
+- required client inputs and access;
+- success metrics;
+- recommended implementation SOW;
+- handoff or training plan;
+- "what not to build yet" section.
+
+The "what not to build yet" section matters. It proves Toni is helping the
+client avoid waste, not just selling work.
+
+## Internal Engagement Shapes
+
+Keep the public site simple. Use these internal shapes to route real work:
+
+| Shape | Use when | Typical output |
+|---|---|---|
+| Idea-to-Implementation Plan | founder has an idea but no path | Blueprint, value case, roadmap, SOW recommendation |
+| Website/App Launch Build | site/app/product needs a usable first version or finish pass | implementation sprint, launch checklist, handoff |
+| AI Workflow Implementation | client wants AI but does not know where it belongs | workflow map, AI opportunity score, implementation, review loop |
+| Business Operating System Setup | owner work is scattered across memory, texts, tabs, and tools | workflow system, runbook, admin rhythm |
+| Admin Command Room / Owner Dashboard | recurring owner/admin work needs visibility | command-room fit assessment and build/spec |
+| Modernization / Migration Cleanup | existing site/tool/process is outdated or stuck | migration plan, rebuild, cleanup, handoff |
+| Growth And Efficiency Audit | existing business wants leverage, less waste, or scale readiness | value map, workflow fixes, implementation roadmap |
+| Proof, Launch, And Handoff Sprint | work exists but is not ready to share or operate confidently | verification gates, proof packet, launch/handoff assets |
+
+## AI Posture
+
+AI is a lens in every engagement because Toni uses AI in the work. That does not
+mean every client system needs AI.
+
+The professional judgment is:
+
+- sometimes AI belongs in the client workflow;
+- sometimes the workflow, data, process, or ownership needs to be fixed first;
+- sometimes AI is useful behind the scenes for analysis, drafting, QA, or
+  implementation speed but should not become the client's product surface.
+
+Avoid selling random automations, generic chatbots, or "AI transformation"
+without a real workflow, source material, review boundary, and business value.
+
+## Best-Fit Clients
+
+Prioritize committed clients who care about their business and want to grow,
+modernize, or operate better:
+
+- SaaS or startup founders, especially non-technical or semi-technical founders;
+- small-business owners and local operators;
+- professional services;
+- fitness/wellness coaches, trainers, and operators;
+- real estate or local service operators;
+- solo operators with credible businesses or serious ideas;
+- existing businesses that want technology, AI, or operating leverage.
+
+Nonprofit work can fit, but it should not be the primary public lens unless a
+specific proof or relationship makes it strategically useful.
+
+## Bad Fit
+
+Do not optimize the public offer for:
+
+- cheap websites;
+- generic GoDaddy/Wix cleanup with no strategic value;
+- random Zapier-style automations with no operating model;
+- AI chatbot requests for the sake of having a chatbot;
+- vague strategy-only work;
+- tire-kickers;
+- businesses with no seriousness, budget, urgency, or promise.
+
+## Proof Stack
+
+Current proof comfort, from strongest to supporting:
+
+1. Omnexus and DeMario/Mario evidence.
+2. Toni's own consulting/DTP operating system.
+3. AI/ML work and founder/operator background.
+
+Use AI/ML as credibility support, not the headline. It helps prove that Toni
+understands model selection, evaluation, grounding, and business-use framing.
+The primary proof is still builder-led implementation and working systems.
 
 ## Consulting Site Implication
 
-The next `consulting` copy pass should not become a broad redesign. It should
-make the current site hierarchy easier to understand:
+The next `consulting` copy pass should not become a broad redesign.
 
-1. Hero: keep the customer-facing identity, but sharpen the promise around
-   launch-ready systems and clear next actions.
-2. Services: group the work into the three offer lanes above instead of a flat
-   list of equal service types.
-3. Proof: design a case-study/proof structure now, but fill it only with
-   DTP-cleared claims and assets.
-4. `/start`: ask enough to route the prospect into launch/proof, AI workflow,
-   or command-room fit without using internal language.
-5. `/admin`: keep as noindex launcher/status only; do not turn it into the
-   public proof or private cockpit.
+It should:
 
-## Allowed Public Claims Today
+1. keep the homepage broad enough for founders, operators, and small businesses
+   to recognize themselves;
+2. use `/start` to route prospects into Blueprint, Fast Track, or not-fit;
+3. explain that bigger unclear work starts with a paid Blueprint;
+4. preserve "working assets, not strategy deck" as the implementation promise;
+5. include AI as a practical lens, not a black box or gimmick;
+6. avoid project-specific proof unless DTP proof gates clear exact wording and
+   assets.
 
-These are method claims, not outcome claims:
+## Collaboration Rule
 
-- Toni can help identify launch blockers and turn them into a short execution
-  path.
-- Toni builds websites, apps, workflow systems, and practical AI tools around
-  real business constraints.
-- Toni leaves behind operating assets such as maps, runbooks, checklists,
-  proof packets, handoff notes, and next-action plans.
-- Practical AI work starts with source material, workflow boundaries, review
-  points, and owner judgment.
+For thesis, offer, pricing, positioning, and business-model work, future agents
+should ask focused clarifying questions before editing docs or public copy.
 
-## Not Allowed Yet
+The preferred pattern is:
 
-- client outcome claims, revenue claims, approval claims, or conversion claims;
-- private screenshots, testimonials, metrics, admin records, payment records,
-  or dashboard exports;
-- "autonomous agent" claims;
-- generic AI transformation language;
-- implying DTP, Hub, Notion, billing, or portals are automatically part of every
-  project.
+1. reflect Toni's current point of view;
+2. ask one to three questions that would materially change the output;
+3. synthesize the answer into a concise thesis or offer decision;
+4. only then update DTP/consulting artifacts when the direction is clear or Toni
+   explicitly asks to capture it.
 
-## Pilot Learning Map
-
-| Pilot/reference | What to learn for the offer sequence | Follow-up artifact |
-|---|---|---|
-| Greg | Does the founder/product lane convert messy product context into a launch-blocker and soft-launch plan? | post-meeting receipt and public-proof boundary note |
-| CCAAP | Does nonprofit launch work depend most on owner inputs, payment/contact/DNS gates, or proof posture? | owner-input closeout receipt and launch/proof decision |
-| Cameron | Does prototype/business-validation work fit better as launch/proof, AI workflow, or a separate validation sprint? | waiting-state update or build-readiness receipt |
-| Omnexus | Which app-review/release lessons are public-safe enough to support Launch / Proof? | redacted proof packet candidate after release/live proof |
-| DeMario | Which owner workflow and launch handoff facts can support Launch / Proof or Command Room? | keep current social packet narrow; expand only with explicit proof review |
-
-## Next Public-Copy Gate
-
-Before changing public `consulting` copy around offers:
-
-1. Re-read `docs/PRACTICE_THESIS_AND_OFFER_MAP.md`.
-2. Use this sequence as the public order.
-3. Check `docs/OFFER_TO_PROOF_MATRIX.md` for exact claim eligibility.
-4. Run the proof candidate through `docs/PUBLIC_PROOF_PROMOTION_RUNBOOK.md` if
-   any project-specific claim, screenshot, metric, or story is added.
-5. Run the authenticity audit from `practice-os/templates/copy-authenticity-audit.md`.
-6. Validate the consulting site with its repo-local gates.
-
-## Current Recommendation
-
-Do not change the public site yet just because this sequence exists.
-
-Use the next Greg/CCAAP/Cam loop to sharpen buyer language. The first public
-copy pass should happen when one of these is true:
-
-- a proof packet clears exact public wording;
-- a real prospect submission shows confusion that the current site cannot
-  answer;
-- Toni chooses to reposition the front door around Launch / Proof even without
-  project-specific proof claims.
+Do not turn strategic conversation into repo churn too early.
