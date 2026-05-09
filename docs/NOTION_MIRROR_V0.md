@@ -98,6 +98,7 @@ Create these Notion areas manually first. Automation can come later.
 | Client / Pilot Snapshots | redacted summaries from DTP engagement kits | track pilots without exposing raw private material |
 | Proof Queue | proof/redaction templates and packets | see which proof candidates are blocked or ready |
 | Research Radar | `practice-os/templates/research-radar-item.md` | track Adopt, Pilot, Watch, Reject items |
+| Research Arm / Opportunity OS | `docs/RESEARCH_AND_OPPORTUNITY_NOTION_MIRROR_V0.md` | mirror research signals and sanitized opportunity state |
 | Decision Log | decision records and steward receipts | preserve why a path was chosen |
 | Meeting Notes | sanitized meeting summaries | convert conversations into action items |
 
@@ -207,6 +208,21 @@ Properties:
 - `Next Action`
 
 Rule: research does not become implementation until DTP has a story, gate, and owner repo.
+
+### 6. Research Arm And Opportunity OS
+
+Use `docs/RESEARCH_AND_OPPORTUNITY_NOTION_MIRROR_V0.md` for the detailed
+mirror shape for Research Arm signals and Opportunity OS records.
+
+Rules:
+
+- DTP remains the source of truth for research digests, classifications,
+  opportunity records, gates, and steward receipts.
+- Notion may mirror sanitized research and opportunity posture for mobile review.
+- Notion must not become the private relationship ledger, CRM replacement,
+  autonomous outreach queue, or public-proof source.
+- Real client/opportunity detail stays in DTP markdown, the private engagement
+  vault, Gmail, or a future approved private store.
 
 ## Sync Direction
 

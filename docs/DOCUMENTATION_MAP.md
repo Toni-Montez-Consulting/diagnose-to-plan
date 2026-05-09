@@ -65,6 +65,11 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
   warm opportunities, referral paths, fit scoring, capacity protection, and
   sanitized Notion mirror fields. Use it before creating any private
   relationship ledger, CRM replacement, or automated outreach flow.
+- `docs/RESEARCH_AND_OPPORTUNITY_NOTION_MIRROR_V0.md`: detailed Notion mirror
+  design for Research Arm signals and sanitized Opportunity OS state. Use it
+  before creating Notion databases, views, seed rows, or sync behavior for
+  research/opportunity review. DTP remains source of truth and Notion remains a
+  mirror/cockpit.
 - `docs/PRACTICE_SYSTEM_AUDIT_AND_GAP_REVIEW.md`: severity-ranked audit of the current practice system, including proof, private durability, hosted-DTP, prompt/registry, skill-install, documentation propagation, and adjacent-repo gaps.
 - `docs/PRACTICE_SYSTEM_AGENTIC_PERFORMANCE_GAP_REVIEW.md`: recurring audit lens for agentic performance gaps: prompt routing, context quality, skill triggers, planning continuity, verification, research, safety, and learning-loop conversion.
 - `docs/PRACTICE_SYSTEM_OPTIMIZATION_PLAN.md`: audit-to-execution plan that turns system findings into epics, stories, gates, owners, and sequencing.
