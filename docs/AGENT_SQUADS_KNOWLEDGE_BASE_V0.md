@@ -73,6 +73,81 @@ Both squads can be active on one story. Delivery decides how the work should be
 built and verified. Business Justification decides why the work deserves time,
 what simpler alternative was considered, and whether it creates useful value.
 
+## Specialized Agent Roles
+
+Squads are the operating container. Specialized agent roles are the discipline
+lenses inside that container.
+
+The long-term vision is a coordinated system of specialized operational
+intelligences that can contribute expert reasoning, critique, drafting,
+validation, and execution support while staying human-led and approval-gated.
+This should feel like an elite multidisciplinary team, not one generic assistant
+pretending to do everything.
+
+Current DTP-owned role specs live in `practice-os/agents/`:
+
+| Role | Primary Use | Status |
+|---|---|---|
+| Consulting Strategy | practice positioning, offer logic, buyer fit, scope shape, pricing posture, value case, proof posture, and proposal framing | draft |
+| Controller | financial summaries, weekly/monthly close inputs, pipeline arithmetic, and operating metrics | draft |
+| COO | operating rhythm, meeting prep, engagement runbooks, handoffs, and install plans | draft |
+| DevOps / Infrastructure | deployment readiness, CI/CD, environments, runtime boundaries, observability, secrets posture, rollback planning, cost awareness, and operational handoff | draft |
+| External Communications | customer-facing and professional messages, client/prospect email summaries, sendable drafts, and Gmail draft receipts | draft |
+| General Counsel | COI, contracting gates, proof permission, and legal-risk routing | draft |
+| Product Strategy | product direction, user/persona clarity, feature prioritization, launch sequencing, adoption loops, value proposition, roadmap shape, and product-market learning | draft |
+| QA / Audit | verification strategy, regression risk, release readiness, acceptance checks, quality gates, and honest go/no-go language | draft |
+| Software Architecture | system boundaries, module shape, integration design, technical tradeoffs, data flow, runtime authority, and architectural validation | draft |
+| Software Engineering | scoped implementation, repo-grounded code changes, test selection, maintainability, integration safety, and technical handoff | draft |
+| UX / Design | user experience, information architecture, visual hierarchy, interaction quality, responsive behavior, accessibility posture, and design-system fit | draft |
+
+Future candidate roles include PR / Brand Narrative, Internal Review, Data
+Architecture, Web Experience, Compliance, and Research.
+
+Each specialized role must define:
+
+- the domain it owns;
+- the domain it does not own;
+- allowed reads and writes;
+- communication style or output format;
+- collaboration points with other roles;
+- refusal and escalation rules;
+- regression fixtures that prove the behavior stays useful.
+
+Use `practice-os/templates/specialized-agent-role-spec.md` when adding a new
+role so the architecture stays consistent.
+
+Roles do not authorize autonomous action. They improve reasoning, structure,
+review quality, and handoff durability.
+
+## First-Wave Role Boundary
+
+The first wave is now intentionally broad enough to pilot:
+
+- Consulting Strategy
+- External Communications
+- Product Strategy
+- UX / Design
+- Software Architecture
+- Software Engineering
+- DevOps / Infrastructure
+- QA / Audit
+- COO
+- Controller
+- General Counsel
+
+Do not add more roles by default. Run these roles against real work first:
+client emails, Greg/Cam deliverables, consulting site changes, Hub intake,
+Omnexus proof/release gates, and practice operating decisions. Add a new role
+only when a real repeated workflow does not fit the current set.
+
+First public-safe role pilot:
+
+- `practice-os/steward/2026-05-09-first-wave-agent-role-pilot-consulting-site.md`
+
+Use this receipt as the baseline for future role pilots. A good role pilot
+should name the artifact, the sources, the roles used, the decisions locked, the
+questions still open, and the approval-gated actions.
+
 ## Knowledge Base V0
 
 The V0 knowledge base is a source-indexed markdown discipline, not a vector
@@ -166,7 +241,8 @@ Stop conditions:
 The first implementation wave uses two related pilots:
 
 1. the Client OS pilot wave in `docs/CLIENT_OS_PILOT_WAVE_2026-05.md`;
-2. the consulting proof/offer lane.
+2. the consulting proof/offer lane, now including
+   `practice-os/steward/2026-05-09-first-wave-agent-role-pilot-consulting-site.md`.
 
 The Client OS wave proves whether source-indexed packets, draft-only automation,
 approval gates, and handoff receipts work in real operating loops. The

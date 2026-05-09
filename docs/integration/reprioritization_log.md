@@ -10,6 +10,45 @@ review_status: draft
 Use this log after meaningful Practice OS changes so backlog movement is
 deliberate and visible.
 
+## 2026-05-08: AI Agents Report And Legal MCP Saved As Parked Research
+
+Source:
+
+- Toni asked to save Harvey MCP for possible legal work down the road.
+- Toni provided local report pointer:
+  `C:\Users\tonimontez\Downloads\2026 State of AI Agents Report.pdf`.
+- `practice-os/steward/2026-05-08-ai-agents-report-and-legal-mcp-research-radar.md`
+- `practice-os/kaizen/intake.jsonl`
+
+Change:
+
+- Captured Harvey MCP as a parked legal/compliance/tooling research signal, not
+  an implementation or adoption decision.
+- Captured the 2026 State of AI Agents Report as a parked Future Intelligence
+  reference for AI-agent adoption, ROI, implementation barriers,
+  human-in-the-loop operating models, and consulting/practice thesis evidence.
+- Preserved the rule that future public claims need citation review before the
+  report can be used in public consulting copy.
+
+Priority impact:
+
+1. No active queue or client lane changes.
+2. Harvey MCP should only be revisited when a legal/compliance workflow,
+   contract-review lane, policy-review lane, or general-counsel drafting mode is
+   being scoped.
+3. The AI agents report can inform future Practice OS, consulting offer,
+   client education, and agent-workflow work after a citation-safe review.
+4. Do not connect legal tooling, copy private/legal records, publish report
+   claims, or create a production integration from this capture alone.
+
+Next review trigger:
+
+- Toni asks to scope legal/compliance or contract-review workflows.
+- Toni wants AI-agent adoption evidence for consulting copy, a client-facing
+  brief, or Practice OS agent workflow design.
+- Harvey MCP becomes available in the local tool/plugin ecosystem and Toni asks
+  to evaluate it from primary sources.
+
 ## 2026-05-07: Omnexus Subscriptions Working, Release Proof Remains
 
 Source:

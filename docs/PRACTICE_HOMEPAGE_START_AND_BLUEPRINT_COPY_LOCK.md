@@ -24,6 +24,8 @@ This is not live site copy yet. It is the approved working shape from the
 | Proof cards | locked | Use three named proof cards: Omnexus, DeMario, and Consulting System / DTP. Keep them proof-type cards, not full case-study claims. |
 | Homepage copy draft | locked for source | Use the hero, doors, Blueprint bridge, implementation promise, proof cards, fit filter, and CTA below. |
 | Bad-fit and voice | locked | Operator-polished builder/advisor. Filter cheap websites, random automations, chatbot-only requests, vague strategy-only work, and unserious prospects. |
+| Blueprint credit | locked | Public copy should say Blueprint is a paid diagnostic and the fee is credited toward an approved implementation SOW when the work moves forward in the same or similar scope within the agreed window. |
+| Fast Track framing | locked | Public copy should frame Fast Track as contained implementation where the goal, assets, and next step are clear, not as a cheap or budget tier. |
 
 ## Homepage Source Draft
 
@@ -236,5 +238,7 @@ supporting page.
   copy authenticity, visual fit, and proof gates.
 - Keep project claims proof-type based until DTP approves exact public proof
   wording and assets.
-- Keep pricing off the homepage. `/start` or a future Blueprint page may use
-  light "starts at" pricing only after Toni approves exact copy.
+- Keep pricing off the homepage. `/start` or a Blueprint page may say
+  Blueprint is a paid diagnostic and that the fee is credited toward an
+  approved implementation SOW when the scope carries forward. Do not publish
+  exact starting prices unless Toni explicitly approves the amount and context.
