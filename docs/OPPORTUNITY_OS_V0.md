@@ -55,6 +55,8 @@ use AI thoughtfully, and leave with assets they can actually run.
 
 The word "source of truth" needs a split by record type:
 
+Storage boundary decision: `decisions/0010-opportunity-os-private-store-boundary.md`.
+
 | Surface | Owns | Does Not Own |
 |---|---|---|
 | DTP | Opportunity OS method, data contract, scoring rules, approval gates, steward receipts | raw relationship database if it includes private personal details |
@@ -266,6 +268,16 @@ First pilot should create 3-5 sanitized test records using generic labels:
 - future relationship only.
 
 After the schema feels right, decide where private records should live.
+
+Private storage decision:
+
+- use `decisions/0010-opportunity-os-private-store-boundary.md` before creating
+  raw opportunity records, a CRM, a Notion source-of-truth database, Hub/Supabase
+  tables, or a private relationship ledger;
+- for now, keep DTP limited to method, sanitized records, mirror contracts, and
+  steward receipts;
+- private client truth belongs in the private `engagements` lane after an
+  opportunity becomes an active engagement.
 
 First sanitized pilot:
 
