@@ -56,6 +56,15 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
 - `docs/INTERNAL_OFFER_REPERTOIRE_CATALOG.md`: private repertoire catalog for reusable services and delivery patterns discovered through Toni's own operations and client work. Use before turning logos, mission/vision work, Apple Reminders capture bridges, admin systems, command rooms, intake systems, launch hardening, or follow-up queues into public offers.
 - `docs/PRACTICE_SYSTEM_ARCHITECTURE.md`: current-state master architecture for the consulting operating system, including repo ownership, prompt/story activation, intake, proof/redaction, verification, and agent/skill boundaries.
 - `docs/PRACTICE_SYSTEM_FUTURE_STATE.md`: future-state architecture for hosted DTP, steward automation, supervised learning, research radar, repo manifests, command-center planning, and gated agent activation.
+- `docs/RESEARCH_ARM_V0.md`: manual-first research and intelligence loop for
+  turning AI/software/workflow signals into digests, classifications,
+  recommendations, and approval-gated practice updates. Use it before building
+  always-on research agents, scheduled digests, or research-to-roadmap
+  automation.
+- `docs/OPPORTUNITY_OS_V0.md`: relationship-led consulting growth system for
+  warm opportunities, referral paths, fit scoring, capacity protection, and
+  sanitized Notion mirror fields. Use it before creating any private
+  relationship ledger, CRM replacement, or automated outreach flow.
 - `docs/PRACTICE_SYSTEM_AUDIT_AND_GAP_REVIEW.md`: severity-ranked audit of the current practice system, including proof, private durability, hosted-DTP, prompt/registry, skill-install, documentation propagation, and adjacent-repo gaps.
 - `docs/PRACTICE_SYSTEM_AGENTIC_PERFORMANCE_GAP_REVIEW.md`: recurring audit lens for agentic performance gaps: prompt routing, context quality, skill triggers, planning continuity, verification, research, safety, and learning-loop conversion.
 - `docs/PRACTICE_SYSTEM_OPTIMIZATION_PLAN.md`: audit-to-execution plan that turns system findings into epics, stories, gates, owners, and sequencing.
