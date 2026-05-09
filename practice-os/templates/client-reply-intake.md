@@ -34,6 +34,20 @@ Use this when an email reply, meeting note, owner update, text, or casual conver
 
 ## Intake Summary
 
+Default client-email summary format:
+
+1. What they said
+2. What they want
+3. What changed
+4. Recommended response
+5. Next artifact
+
+- Client email ask, in plain English:
+- What the sender appears to want from Toni:
+- What changed:
+- Why it matters now:
+- Recommended Toni response:
+- Recommended operating next step:
 - Public-safe summary:
 - Private/internal summary:
 - Accuracy status: unverified | checked | client_confirmed | owner_confirmed
@@ -43,6 +57,24 @@ Use this when an email reply, meeting note, owner update, text, or casual conver
 - New owner/client actions:
 - New Toni actions:
 - New proof or permission gates:
+
+## External Communications Drafting
+
+- External Communications Agent used:
+- Intended audience: customer | executive | internal stakeholder | technical partner | prospect | vendor/platform support | other
+- Draft tone: warm practical | executive concise | technical precise | consultant advisory | other
+- Draft format: email | meeting recap | sendable cover note | action-request note | support/vendor note | other
+- Headings needed:
+- Bullet list needed:
+- Attachments or linked files:
+- Action items included:
+- Follow-up owner:
+- Send approval status: not_requested | draft_only | pending_toni_review | approved_to_send | sent_by_toni
+- Gmail draft id:
+
+Do not send the message from this template. The External Communications Agent
+may create a Gmail draft when supported and requested, but sending requires
+explicit human approval.
 
 ## DTP Update Checklist
 

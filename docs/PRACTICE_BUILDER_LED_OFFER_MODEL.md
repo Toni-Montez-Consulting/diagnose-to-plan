@@ -93,12 +93,12 @@ Do not guarantee revenue, profit, approvals, conversions, or market outcomes.
 | Focused Blueprint Lite | one narrow question or early idea needs a serious paid read | short action memo and recommended next move | starts at `$500` |
 | Business Systems Blueprint | bigger/custom/unclear work needs discovery before implementation | roadmap, value case, technical plan, workflow map, risk/dependency register, SOW recommendation | starts at `$1,500+` |
 | Full Implementation Blueprint | app, AI workflow, operating system, or multi-part business system | deeper implementation architecture, phases, ROI logic, and SOW | starts at `$3,500+` |
-| Fast Track Implementation | scope is clear and worth doing without a full diagnostic | scoped build/fix/launch/workflow implementation | starts around `$1,500-$3,000` |
+| Fast Track Implementation | goal, assets, and next step are clear enough to proceed without a full diagnostic | contained build/fix/launch/workflow implementation | starts around `$1,500-$3,000` |
 | Custom Implementation SOW | serious build phase after Blueprint or clear Fast Track | working site, app, AI workflow, operating system, admin surface, handoff | starts around `$5,000+` |
 | Advisory / Optimization Retainer | serious client needs ongoing improvement after implementation | advisory, optimization, backlog, measurement, next-phase support | starter range `$750-$1,500/mo` |
 
-Blueprint fees can be credited toward implementation if the client signs a SOW
-within an approved window, such as 30 days.
+Blueprint fees are credited toward implementation when the client signs an
+approved SOW for the same or similar scope within the agreed window.
 
 ## Blueprint Output Standard
 
@@ -135,11 +135,12 @@ implementation money.
 Public pricing posture:
 
 - the homepage should stay value-first and avoid the full pricing menu;
-- `/start` or a Blueprint page can say Focused Blueprints start at `$500`;
-- larger business/system Blueprints can start at `$1,500+`;
+- public copy should position Blueprint as a paid diagnostic rather than lead
+  with exact starting prices;
+- exact starting prices can stay internal until Toni chooses to publish them;
 - implementation is scoped separately after the path is clear;
-- Blueprint fees may be credited toward implementation when a SOW is approved
-  within the agreed window.
+- Blueprint fees are credited toward implementation when an approved SOW for
+  the same or similar scope is signed within the agreed window.
 
 Blueprint sample structure:
 

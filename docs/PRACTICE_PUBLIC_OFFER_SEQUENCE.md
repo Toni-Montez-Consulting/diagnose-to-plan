@@ -25,8 +25,9 @@ Lead publicly with the broad promise, not a narrow service category:
 The buying mechanism is:
 
 1. Free Fit Call for qualification.
-2. Paid Blueprint for unclear, bigger, or custom work.
-3. Fast Track Implementation for clear scopes that are worth Toni's time.
+2. Paid Blueprint as the default next step for unclear, bigger, or custom work.
+3. Fast Track Implementation for contained scopes where the goal, assets, and
+   next step are already clear.
 4. Custom Implementation SOW for the real build/implementation phase.
 
 Identity:
@@ -101,14 +102,15 @@ The three public doors are recognition aids, not rigid packages:
 | Public layer | Buyer job | Buying path | Current price posture |
 |---|---|---|---|
 | Broad front door | Help me get this idea, workflow, system, or digital project into motion | Free Fit Call routes the prospect | no price claim required |
-| Business Systems Blueprint | I need clarity, value case, technical path, workflow map, and implementation plan before we build | Paid diagnostic / deposit | Focused Blueprint starts at `$500`; full Blueprint starts at `$1,500+` |
-| Fast Track Implementation | I have a clear scoped implementation that is worth doing now | Direct implementation scope | starts around `$1,500-$3,000` |
+| Business Systems Blueprint | I need clarity, value case, technical path, workflow map, and implementation plan before we build | Paid diagnostic / deposit | public copy should say paid diagnostic credited toward implementation; internal starts can be `$500+` for focused work and `$1,500+` for larger work |
+| Fast Track Implementation | I have a contained implementation where the goal, assets, and next step are already clear | Direct implementation scope | starts around `$1,500-$3,000` internally; do not frame publicly as a cheap tier |
 | Custom Implementation SOW | I need Toni to build or implement the approved system | SOW after Blueprint or clear Fast Track | starts around `$5,000+`; grows with scope |
 | Advisory / Optimization | I need ongoing improvement after implementation | optional retainer | starter range `$750-$1,500/mo` |
 
-Pricing is internal guidance until Toni approves public copy. Blueprint fees can
-be credited toward implementation when the client signs a SOW within a defined
-window, such as 30 days.
+Pricing is internal guidance until Toni approves public copy. If a client moves
+forward from a Blueprint into an implementation SOW, the Blueprint fee should be
+credited automatically toward the approved SOW when the work is the same or
+similar scope and the SOW is signed within the agreed window.
 
 ## Blueprint Deliverables
 
