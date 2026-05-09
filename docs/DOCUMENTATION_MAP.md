@@ -20,6 +20,10 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
 - `decisions/`: ADR-lite decision records for DTP. Use this directory when prompts ask for ADRs unless a future accepted repo-structure decision moves ADRs.
 - `docs/adr/README.md`: pointer explaining that DTP's active ADR convention is `decisions/`, preventing duplicate ADR systems.
 - `decisions/0009-workspace-control-plane-boundaries.md`: accepted boundary decision for DTP as practice source of truth, `engagements` as private client truth, Hub as runtime support, consulting as cleared-proof surface, assistant gates, and parked write-enabled cross-repo runners.
+- `decisions/0010-opportunity-os-private-store-boundary.md`: accepted boundary
+  decision for Opportunity OS private storage. Use it before creating raw
+  opportunity records, a CRM, a Notion source-of-truth database, Hub/Supabase
+  tables, or a private relationship ledger.
 - `docs/source/practice_os_build_spec_v0_1.md`: additive source spec for the Practice OS capture -> learn loop and MVP modules. Preserve it; convert it into integration docs/templates/backlog items instead of editing it directly.
 - `docs/source/ai_implementation_layer_thesis_and_build_spec_v0_1.md`: additive company thesis and implementation-layer source material. Preserve its strategic language and use it as source for positioning, offer design, client discovery, and internal product development.
 - `database/schema/practice_os_schema_v0_1.sql`: additive starter schema source for future Practice OS records. Do not run it as a migration until it is reconciled with Hosted DTP Phase 0.
