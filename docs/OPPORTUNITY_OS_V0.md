@@ -267,6 +267,17 @@ First pilot should create 3-5 sanitized test records using generic labels:
 
 After the schema feels right, decide where private records should live.
 
+First sanitized pilot:
+
+- `practice-os/opportunities/sanitized-test-records-2026-05-09.md`
+
+Pilot readout:
+
+- the schema helps separate relationship warmth from actual opportunity quality;
+- capacity risk needs to stay visible before enthusiasm turns into scope;
+- scores are useful only as advisory signal;
+- real names should wait for an approved private storage boundary.
+
 ## Acceptance Criteria
 
 V0 works if:

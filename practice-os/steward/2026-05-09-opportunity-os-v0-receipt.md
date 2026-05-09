@@ -38,11 +38,19 @@ Rejected:
 
 - `docs/OPPORTUNITY_OS_V0.md`
 - `practice-os/templates/opportunity-os-record.md`
+- `practice-os/opportunities/README.md`
+- `practice-os/opportunities/sanitized-test-records-2026-05-09.md`
 
 ## Next Pilot
 
-Create 3-5 sanitized test records with generic labels before entering real
-names. Use those to test whether the fields, scoring, and capacity guard work.
+Created five sanitized test records with generic labels before entering real
+names. Use those to test whether the fields, scoring, capacity guard, and
+Notion mirror bands work.
+
+Next pilot step:
+
+- design the sanitized Notion mirror view from the test-record summary;
+- do not enter real names until private storage is chosen.
 
 ## Validation
 
