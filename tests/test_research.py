@@ -80,6 +80,38 @@ def test_research_steward_cli_outputs_recommendations(tmp_path: Path, monkeypatc
     assert "read-only recommendation" in result.output
 
 
+def test_research_steward_omits_accepted_digests_and_promoted_patterns(
+    tmp_path: Path,
+) -> None:
+    config = _config(tmp_path)
+    run_evolution_new(
+        config,
+        title="Promoted research pattern should not stay in the active queue",
+        kind="research-pattern",
+        state="promoted",
+    )
+    digest_dir = tmp_path / "practice-os" / "research" / "digests"
+    digest_dir.mkdir(parents=True)
+    digest_path = digest_dir / "2026-05-10-accepted-digest.md"
+    digest_path.write_text(
+        "# Research Arm Digest - Accepted digest\n\n"
+        "Status: accepted\n\n"
+        "## Digest Summary\n\n"
+        "Accepted internal research.\n",
+        encoding="utf-8",
+        newline="\n",
+    )
+
+    result = run_research_steward_review(config, limit=10)
+    rendered = render_research_steward_review(result, tmp_path)
+
+    assert result.pattern_candidate_count == 0
+    assert result.digest_count == 0
+    assert "Promoted research pattern should not stay" not in rendered
+    assert "Accepted digest" not in rendered
+    assert "Recommendations\n- none" in rendered
+
+
 def _config(root: Path) -> DtpConfig:
     return DtpConfig(
         repo_root=root,
