@@ -107,12 +107,15 @@ Current internal-OS next action from the first operating review:
   AI/platform source and Microsoft 2026 Work Trend Index as a consulting /
   business source, then promoted reviewed source-freshness records into a
   decision record and pattern candidate.
-- The next action is to run one more role pilot, ideally External
-  Communications or Consulting Strategy, then decide whether to add structured
-  source configs, deduplication, source snapshots, richer search parsing, or
-  the first machine-readable agent source-pack file. Do not implement a
-  scheduled workflow until dry-run queues prove useful and a new
-  autonomy-readiness review is accepted.
+- `practice-os/steward/2026-05-10-external-communications-source-policy-pilot.md`
+  records the second role pilot. It converted reviewed source evidence into
+  draft-only prospect, executive, and client-education language with explicit
+  send/public-proof gates.
+- The next action is to run one more role pilot, ideally Consulting Strategy,
+  then decide whether to add structured source configs, deduplication, source
+  snapshots, richer search parsing, or the first machine-readable agent
+  source-pack file. Do not implement a scheduled workflow until dry-run queues
+  prove useful and a new autonomy-readiness review is accepted.
 
 ## P1 Client OS Pilot Wave
 
