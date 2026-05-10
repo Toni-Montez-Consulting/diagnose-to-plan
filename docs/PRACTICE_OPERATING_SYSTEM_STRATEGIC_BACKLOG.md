@@ -92,10 +92,14 @@ Current internal-OS next action from the first operating review:
 - `docs/RESEARCH_SOURCE_FRESHNESS_DRY_RUN_V0.md` now defines the source subset,
   output schema, dry-run queue path, validation command, blocked-source
   behavior, and human review states.
-- The next artifact should be a local dry-run command or script that accepts
-  source snapshots/operator notes and emits schema-validated queue items under
-  ignored `outputs/research-source-freshness/`. Do not implement a scheduled
-  workflow until that dry-run command produces useful low-noise queues and a new
+- `dtp research source-freshness` is now the local dry-run command. It accepts
+  source snapshots/operator notes, URLs, optional public fetches, and search
+  packets/results, then emits schema-validated queue items under ignored
+  `outputs/research-source-freshness/`.
+- The next action is to run a small real source-freshness dry run, review noise
+  and usefulness, then decide whether to add structured source configs,
+  deduplication, source snapshots, or richer search parsing. Do not implement a
+  scheduled workflow until dry-run queues prove useful and a new
   autonomy-readiness review is accepted.
 
 ## P1 Client OS Pilot Wave

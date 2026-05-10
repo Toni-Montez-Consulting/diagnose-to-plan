@@ -96,6 +96,8 @@ suggests a reusable consulting principle or client artifact.
 Use `docs/RESEARCH_SOURCE_FRESHNESS_DRY_RUN_V0.md` when the question is not
 whether to adopt a source-backed decision yet, but whether the source list
 itself has changed, gone stale, or produced a reviewable freshness finding.
+Use `dtp research source-freshness` to create the ignored dry-run queue from
+operator notes, source URLs, optional public fetches, or search queries.
 
 ## Knowledge Base Maintenance Rule
 
