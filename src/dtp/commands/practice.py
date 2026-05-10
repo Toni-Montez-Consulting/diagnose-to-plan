@@ -49,11 +49,15 @@ REQUIRED_TEMPLATES = (
     "correction-checklist-for-toni.md",
     "business-brain-weekly-operating-packet.md",
     "idea-evolution-record.md",
+    "knowledge-base-event-record.md",
+    "research-decision-record.md",
     "research-pattern-candidate.md",
 )
 REQUIRED_DOCS = (
     "PRACTICE_KAIZEN_KANBAN_SYSTEM.md",
     "PRACTICE_EVOLUTION_SYSTEM_V0.md",
+    "RESEARCH_ARM_SOURCE_LIST_V0.md",
+    "KNOWLEDGE_BASE_EVENT_WORKFLOWS_V0.md",
 )
 REQUIRED_KAIZEN_FILES = (
     "README.md",

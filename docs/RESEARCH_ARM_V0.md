@@ -61,6 +61,14 @@ Initial source signals came from Toni's founder-email captures on 2026-05-09:
 These are source prompts for the system, not automatic proof for public claims.
 Public claims still need primary-source review, caveats, and approval.
 
+Recurring source list:
+
+- `docs/RESEARCH_ARM_SOURCE_LIST_V0.md`
+
+The source list defines the default recurring sources, source tiers, review
+triggers, and public-claim boundary. It is a research input map, not an
+autonomous crawler.
+
 ## V0 Operating Loop
 
 V0 is intentionally small:
@@ -79,6 +87,18 @@ Minimum loop:
 ```text
 source signal -> digest -> recommendation -> approval -> implementation proposal
 ```
+
+The default trigger is event-based, not scheduled. Use the loop when Toni saves
+or forwards a signal, a client question needs evidence, a platform used by the
+practice changes, a knowledge base feels stale, or a recurring practice pattern
+appears.
+
+Use `practice-os/templates/research-decision-record.md` when the research event
+requires an adopt, pilot, watch, reject, or park decision.
+
+Use `docs/KNOWLEDGE_BASE_EVENT_WORKFLOWS_V0.md` when the research event implies
+a broader knowledge-base update across memory, operations, project execution,
+agent roles, messaging, or repo-local docs.
 
 ## Research Steward Layer
 
@@ -100,11 +120,13 @@ changes, client communication, Notion sync, or autonomous runtime.
 
 Allowed without separate approval:
 
+- maintain the recurring source list;
 - search and read public sources;
 - summarize source material;
 - compare sources;
 - classify signals;
 - draft digests;
+- draft research decision records;
 - recommend next actions;
 - propose repo/doc/template updates;
 - create research radar items;

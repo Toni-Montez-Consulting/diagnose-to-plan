@@ -24,6 +24,10 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
   decision for Opportunity OS private storage. Use it before creating raw
   opportunity records, a CRM, a Notion source-of-truth database, Hub/Supabase
   tables, or a private relationship ledger.
+- `decisions/0011-event-based-research-and-knowledge-base-maintenance.md`:
+  accepted decision for recurring Research Arm sources, simple research
+  decision records, and event-based knowledge-base maintenance across memory,
+  operations, project execution, and agent-system updates.
 - `docs/source/practice_os_build_spec_v0_1.md`: additive source spec for the Practice OS capture -> learn loop and MVP modules. Preserve it; convert it into integration docs/templates/backlog items instead of editing it directly.
 - `docs/source/ai_implementation_layer_thesis_and_build_spec_v0_1.md`: additive company thesis and implementation-layer source material. Preserve its strategic language and use it as source for positioning, offer design, client discovery, and internal product development.
 - `database/schema/practice_os_schema_v0_1.sql`: additive starter schema source for future Practice OS records. Do not run it as a migration until it is reconciled with Hosted DTP Phase 0.
@@ -32,6 +36,10 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
 - `docs/PRACTICE_MACHINE_OPERATING_MAP.md`: offer-led compression map for the whole practice machine. Use it before broad cross-repo plans, business-system changes, proof strategy, Hub expansion, hosted DTP decisions, or public-offer changes.
 - `docs/PRACTICE_KAIZEN_KANBAN_SYSTEM.md`: DTP-first continuous-improvement intake/index loop. Use it before trusting chat memory with new ideas, asks, blockers, proof candidates, repo issues, client signals, corrections, process improvements, completed work, cancelled work, superseded work, or discarded assistant suggestions.
 - `docs/PRACTICE_EVOLUTION_SYSTEM_V0.md`: human-gated evolution spine for turning raw ideas, collaboration patterns, research observations, messaging language, and client lessons into reviewed memory, pattern candidates, playbook rules, or parked/superseded records. Use it when an idea should not be captured once and forgotten.
+- `docs/KNOWLEDGE_BASE_EVENT_WORKFLOWS_V0.md`: event-based maintenance rule for
+  updating, refining, expanding, or intentionally not updating knowledge bases
+  across research, memory management, operations, project execution, client
+  signals, proof, and agent-system misses.
 - `docs/practice-evolution-dashboard.html`: generated internal status dashboard
   for Practice Evolution records and research-pattern candidates. Regenerate
   with `dtp evolution dashboard`; it reads local markdown records only and does
@@ -71,6 +79,11 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
 - `practice-os/templates/research-pattern-candidate.md`: Research Arm companion
   template for converting research signals, field notes, and business
   observations into reusable consulting pattern candidates.
+- `practice-os/templates/research-decision-record.md`: simple adopt, pilot,
+  watch, reject, or park record for source-backed research decisions.
+- `practice-os/templates/knowledge-base-event-record.md`: simple event record
+  for knowledge-base maintenance across research, memory, operations, project
+  execution, client signals, proof, and agent-system misses.
 - `practice-os/comms/private/messaging-knowledge-base-2026-05-10.md`: internal
   messaging knowledge base for owner-bottleneck language, short pitch variants,
   claims/metaphor candidates, and visual seeds before any public-copy gate.
@@ -97,6 +110,10 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
   recommendations, and approval-gated practice updates. Use it before building
   always-on research agents, scheduled digests, or research-to-roadmap
   automation.
+- `docs/RESEARCH_ARM_SOURCE_LIST_V0.md`: recurring, event-triggered Research
+  Arm source list. Use it when Toni asks what sources to watch, forwards a
+  research signal, needs evidence for an AI/platform/workflow claim, or wants
+  current source candidates without creating an autonomous research crawler.
 - `docs/OPPORTUNITY_OS_V0.md`: relationship-led consulting growth system for
   warm opportunities, referral paths, fit scoring, capacity protection, and
   sanitized Notion mirror fields. Use it before creating any private
@@ -299,6 +316,15 @@ Do not update `hub-prompts` or `hub-registry` just because the roadmap changes. 
   promotion, parking, rejection, or bounded experiments. It is a read-only
   recommendation surface and cannot authorize public claims, offer changes,
   tool installs, repo changes, client communication, or autonomous runtime.
+- Use `docs/RESEARCH_ARM_SOURCE_LIST_V0.md` and
+  `practice-os/templates/research-decision-record.md` when Toni asks for a
+  recurring source list, current AI/news/source candidates, or a reviewed
+  adopt/pilot/watch/reject/park decision from a research signal.
+- Use `docs/KNOWLEDGE_BASE_EVENT_WORKFLOWS_V0.md` and
+  `practice-os/templates/knowledge-base-event-record.md` when Toni says a
+  knowledge base, operating pattern, memory-management practice, project
+  execution habit, or agent-system behavior should be updated, refined,
+  expanded, operationalized, parked, or superseded.
 - Use the Question Checkpoint Rule before and during substantial strategy,
   product, business, offer, positioning, Practice OS, agent-system, workspace,
   or build threads. Questions are part of how Toni learns and steers; do not
