@@ -75,6 +75,7 @@ artifact:
 .\.venv\Scripts\dtp.exe evolution new --from-kaizen kzn-YYYYMMDD-slug-hash
 .\.venv\Scripts\dtp.exe evolution new "Owners buy clarity before automation" --kind research-pattern
 .\.venv\Scripts\dtp.exe evolution status
+.\.venv\Scripts\dtp.exe evolution dashboard
 ```
 
 The command creates:
@@ -86,6 +87,12 @@ The command creates:
 This is an operator workflow, not an autonomous promotion engine. The draft
 still needs review before it becomes decision memory, pattern memory, playbook
 memory, public copy, or implementation work.
+
+`dtp evolution dashboard` writes the internal status dashboard to
+`docs/practice-evolution-dashboard.html` by default. The dashboard is a local
+visibility layer for states, sources, lanes, and review posture. It does not
+change public copy, write Notion, contact clients, read secrets, or promote
+memory.
 
 ## Memory Levels
 
@@ -192,15 +199,19 @@ Accepted playbook memory:
   records the question-checkpoint rule as a standing collaboration protocol for
   substantial strategy/build work.
 
-### 4. Visible Cockpit Later
+### 4. Status Dashboard Now, Review Room Later
 
 The current accepted sequence is iterative:
 
 1. Keep the former path now: CLI/operator-first capture and review records.
-2. Plan the latter path later: a visible cockpit/dashboard once two or three
-   real evolution records prove the right fields, views, and review rhythm.
+2. Add the lightweight status dashboard now because multiple real records exist
+   and Toni wants visibility without a larger cockpit.
+3. Plan the latter path later: a richer review room only if real usage proves
+   that batch review, promotion decisions, or mirror-safe summaries need more
+   than status visibility.
 
-Do not build the cockpit before the record workflow has real usage evidence.
+Do not build the richer review room before the record workflow has real usage
+evidence.
 
 ## Promotion Decision
 

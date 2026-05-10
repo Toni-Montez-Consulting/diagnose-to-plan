@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Practice Evolution Dashboard</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f8f5;
+      --ink: #17201b;
+      --muted: #5b645f;
+      --panel: #ffffff;
+      --line: #d9ded7;
+      --green: #2f6d4f;
+      --blue: #275d8c;
+      --amber: #9b6828;
+      --rose: #994c4c;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font: 15px/1.5 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+    }
+    main {
+      width: min(1180px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 32px 0 48px;
+    }
+    header {
+      display: grid;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    h1, h2 {
+      margin: 0;
+      line-height: 1.15;
+      letter-spacing: 0;
+    }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.1rem; }
+    p { margin: 0; }
+    .muted { color: var(--muted); }
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 12px;
+      margin: 18px 0;
+    }
+    .metric {
+      display: grid;
+      gap: 4px;
+      min-height: 92px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      border-radius: 8px;
+    }
+    .metric strong { font-size: 1.85rem; }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin: 18px 0;
+    }
+    input[type="search"] {
+      flex: 1 1 280px;
+      min-height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 8px 12px;
+      font: inherit;
+      background: var(--panel);
+      color: var(--ink);
+    }
+    button {
+      min-height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 8px 12px;
+      font: inherit;
+      background: var(--panel);
+      color: var(--ink);
+      cursor: pointer;
+    }
+    button.active {
+      border-color: var(--green);
+      color: #fff;
+      background: var(--green);
+    }
+    section {
+      margin-top: 22px;
+    }
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+    }
+    table {
+      width: 100%;
+      min-width: 920px;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 12px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      font-size: 0.78rem;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+    tr:last-child td { border-bottom: 0; }
+    a { color: var(--blue); }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      padding: 3px 8px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--ink);
+      background: #fafbf8;
+      white-space: nowrap;
+    }
+    .pill.review { border-color: #d9b26f; color: var(--amber); }
+    .pill.idea { border-color: #a9c8b7; color: var(--green); }
+    .pill.research { border-color: #a8bdd4; color: var(--blue); }
+    .path { font-size: 0.86rem; color: var(--muted); }
+    .empty-row { color: var(--muted); }
+    .boundary {
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+    }
+    .boundary ul {
+      margin: 8px 0 0;
+      padding-left: 20px;
+    }
+    @media (max-width: 720px) {
+      main { width: min(100vw - 20px, 1180px); padding-top: 20px; }
+      h1 { font-size: 1.55rem; }
+      .metric { min-height: 82px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="muted">Generated 2026-05-10 02:02 UTC</p>
+      <h1>Practice Evolution Dashboard</h1>
+      <p class="muted">
+        Static status view for idea records, meta-patterns, and research-pattern
+        candidates. It reads local DTP markdown only and does not publish,
+        sync, mutate client data, or promote memory by itself.
+      </p>
+    </header>
+
+    <section class="summary" aria-label="Evolution summary">
+      <div class="metric"><span>Total records</span><strong>5</strong></div>
+      <div class="metric"><span>Idea records</span><strong>4</strong></div>
+      <div class="metric"><span>Research candidates</span><strong>1</strong></div>
+      <div class="metric"><span>Needs review</span><strong>3</strong></div>
+    </section>
+
+    <section>
+      <h2>State Filters</h2>
+      <div class="toolbar" aria-label="Dashboard filters">
+        <input id="evolution-search" type="search"
+          placeholder="Search records, states, sources, lanes, and paths">
+        <button type="button" class="active" data-state-filter="">All states</button>
+        <button type="button" data-state-filter="draft">Draft (1)</button>
+<button type="button" data-state-filter="parked">Parked (1)</button>
+<button type="button" data-state-filter="pattern_candidate">Pattern Candidate (1)</button>
+<button type="button" data-state-filter="playbook_memory">Playbook Memory (1)</button>
+<button type="button" data-state-filter="working_memory">Working Memory (1)</button>
+      </div>
+      <p id="filter-status" class="muted">Showing all evolution records.</p>
+    </section>
+
+    <section>
+      <h2>Record Register</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Record</th>
+              <th>Kind</th>
+              <th>State</th>
+              <th>Created</th>
+              <th>Source</th>
+              <th>Lane</th>
+              <th>Sensitivity</th>
+              <th>Mirror</th>
+            </tr>
+          </thead>
+          <tbody id="record-register">
+            <tr data-state="pattern_candidate" data-kind="idea"
+    data-search="multiple record evolution rehearsal pattern idea pattern_candidate codex diagnose-to-plan internal-only no practice-os/evolution/records/2026-05-10-multiple-record-evolution-rehearsal-pattern.md">
+      <td>
+        <a href="../practice-os/evolution/records/2026-05-10-multiple-record-evolution-rehearsal-pattern.md">Multiple record evolution rehearsal pattern</a> <span class="pill review">review</span>
+        <div class="path">practice-os/evolution/records/2026-05-10-multiple-record-evolution-rehearsal-pattern.md</div>
+      </td>
+      <td><span class="pill idea">Idea</span></td>
+      <td><span class="pill">pattern_candidate</span></td>
+      <td>2026-05-10</td>
+      <td>codex</td>
+      <td>diagnose-to-plan</td>
+      <td>internal-only</td>
+      <td>no</td>
+    </tr>
+<tr data-state="parked" data-kind="idea"
+    data-search="practice evolution review room later idea parked codex diagnose-to-plan internal-only no practice-os/evolution/records/2026-05-10-practice-evolution-review-room-later.md">
+      <td>
+        <a href="../practice-os/evolution/records/2026-05-10-practice-evolution-review-room-later.md">Practice Evolution review room later</a>
+        <div class="path">practice-os/evolution/records/2026-05-10-practice-evolution-review-room-later.md</div>
+      </td>
+      <td><span class="pill idea">Idea</span></td>
+      <td><span class="pill">parked</span></td>
+      <td>2026-05-10</td>
+      <td>codex</td>
+      <td>diagnose-to-plan</td>
+      <td>internal-only</td>
+      <td>no</td>
+    </tr>
+<tr data-state="working_memory" data-kind="idea"
+    data-search="practice evolution status dashboard v0 idea working_memory codex diagnose-to-plan internal-only no practice-os/evolution/records/2026-05-10-practice-evolution-status-dashboard-v0.md">
+      <td>
+        <a href="../practice-os/evolution/records/2026-05-10-practice-evolution-status-dashboard-v0.md">Practice Evolution status dashboard V0</a> <span class="pill review">review</span>
+        <div class="path">practice-os/evolution/records/2026-05-10-practice-evolution-status-dashboard-v0.md</div>
+      </td>
+      <td><span class="pill idea">Idea</span></td>
+      <td><span class="pill">working_memory</span></td>
+      <td>2026-05-10</td>
+      <td>codex</td>
+      <td>diagnose-to-plan</td>
+      <td>internal-only</td>
+      <td>no</td>
+    </tr>
+<tr data-state="playbook_memory" data-kind="idea"
+    data-search="question checkpoint rule for substantial strategy/build work idea playbook_memory codex diagnose-to-plan internal-only yes practice-os/evolution/records/2026-05-10-question-checkpoint-rule-for-substantial-strategy-build-work.md">
+      <td>
+        <a href="../practice-os/evolution/records/2026-05-10-question-checkpoint-rule-for-substantial-strategy-build-work.md">Question Checkpoint Rule for substantial strategy/build work</a>
+        <div class="path">practice-os/evolution/records/2026-05-10-question-checkpoint-rule-for-substantial-strategy-build-work.md</div>
+      </td>
+      <td><span class="pill idea">Idea</span></td>
+      <td><span class="pill">playbook_memory</span></td>
+      <td>2026-05-10</td>
+      <td>codex</td>
+      <td>diagnose-to-plan</td>
+      <td>internal-only</td>
+      <td>yes</td>
+    </tr>
+<tr data-state="draft" data-kind="research-pattern"
+    data-search="status visibility prevents lightweight capture drift research-pattern draft codex diagnose-to-plan internal-only no practice-os/research/pattern-candidates/2026-05-10-status-visibility-prevents-lightweight-capture-drift.md">
+      <td>
+        <a href="../practice-os/research/pattern-candidates/2026-05-10-status-visibility-prevents-lightweight-capture-drift.md">Status visibility prevents lightweight capture drift</a> <span class="pill review">review</span>
+        <div class="path">practice-os/research/pattern-candidates/2026-05-10-status-visibility-prevents-lightweight-capture-drift.md</div>
+      </td>
+      <td><span class="pill research">Research</span></td>
+      <td><span class="pill">draft</span></td>
+      <td>2026-05-10</td>
+      <td>codex</td>
+      <td>diagnose-to-plan</td>
+      <td>internal-only</td>
+      <td>no</td>
+    </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="boundary">
+      <h2>Scale Path</h2>
+      <ul>
+        <li>Status dashboard now: counts, filters, search, and source links.</li>
+        <li>Review room later: promotion queue, reviewer decisions, and batch receipts.</li>
+        <li>Mirror later: sanitized Notion cockpit only after explicit review.</li>
+      </ul>
+    </section>
+  </main>
+  <script>
+    const rows = [...document.querySelectorAll("#record-register tr[data-state]")];
+    const search = document.getElementById("evolution-search");
+    const buttons = [...document.querySelectorAll("[data-state-filter]")];
+    const status = document.getElementById("filter-status");
+    let activeState = "";
+
+    function applyFilters() {
+      const query = search.value.trim().toLowerCase();
+      let shown = 0;
+      rows.forEach((row) => {
+        const stateMatch = !activeState || row.dataset.state === activeState;
+        const queryMatch = !query || row.dataset.search.includes(query);
+        const visible = stateMatch && queryMatch;
+        row.hidden = !visible;
+        if (visible) shown += 1;
+      });
+      status.textContent = `Showing ${shown} of ${rows.length} evolution records.`;
+    }
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        activeState = button.dataset.stateFilter || "";
+        buttons.forEach((item) => item.classList.toggle("active", item === button));
+        applyFilters();
+      });
+    });
+    search.addEventListener("input", applyFilters);
+  </script>
+</body>
+</html>

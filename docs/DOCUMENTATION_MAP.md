@@ -32,6 +32,10 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
 - `docs/PRACTICE_MACHINE_OPERATING_MAP.md`: offer-led compression map for the whole practice machine. Use it before broad cross-repo plans, business-system changes, proof strategy, Hub expansion, hosted DTP decisions, or public-offer changes.
 - `docs/PRACTICE_KAIZEN_KANBAN_SYSTEM.md`: DTP-first continuous-improvement intake/index loop. Use it before trusting chat memory with new ideas, asks, blockers, proof candidates, repo issues, client signals, corrections, process improvements, completed work, cancelled work, superseded work, or discarded assistant suggestions.
 - `docs/PRACTICE_EVOLUTION_SYSTEM_V0.md`: human-gated evolution spine for turning raw ideas, collaboration patterns, research observations, messaging language, and client lessons into reviewed memory, pattern candidates, playbook rules, or parked/superseded records. Use it when an idea should not be captured once and forgotten.
+- `docs/practice-evolution-dashboard.html`: generated internal status dashboard
+  for Practice Evolution records and research-pattern candidates. Regenerate
+  with `dtp evolution dashboard`; it reads local markdown records only and does
+  not promote memory, publish proof, sync Notion, or touch clients.
 - `docs/WORKSPACE_OPERATOR_RUNBOOK.md`: safe cross-repo operator runbook. It names command classes, repo roles, verification paths, package managers, deploy ownership, and no-touch boundaries without authorizing a live command runner.
 - `docs/PUBLIC_PROOF_PROMOTION_RUNBOOK.md`: public proof movement path. It reuses the existing proof/redaction templates and blocks public claims until evidence, permission, redaction, reviewer, and caveat gates pass.
 - `docs/PRACTICE_PROOF_QUEUE_INDEX.md`: active proof-candidate queue across CCAAP, Omnexus, DeMario, Hub/intake, Architected Strength, consulting assistant, Business Brain, and DSE. Use it before deciding what proof can move next.
@@ -276,8 +280,9 @@ Do not update `hub-prompts` or `hub-registry` just because the roadmap changes. 
 - Use `docs/PRACTICE_KAIZEN_KANBAN_SYSTEM.md` and `dtp kaizen capture` when a new idea, feature, engagement signal, ask, blocker, proof candidate, correction, repo issue, process improvement, completed task, cancelled task, superseded task, or discarded suggestion should survive beyond the current chat.
 - Use `docs/PRACTICE_EVOLUTION_SYSTEM_V0.md` and `practice-os/templates/idea-evolution-record.md` when a captured idea, collaboration meta-pattern, messaging line, or agent behavior needs a path from raw capture into reviewed memory, a reusable pattern, a template, or an explicit parked/superseded state.
 - Use `dtp evolution new --from-kaizen RECORD_ID` when a Kaizen capture is ready
-  to become a reviewable idea-evolution draft. Use `dtp evolution status` to
-  see generated evolution records and research-pattern candidates.
+  to become a reviewable idea-evolution draft. Use `dtp evolution status` or
+  `dtp evolution dashboard` to see generated evolution records and
+  research-pattern candidates.
 - Use the Question Checkpoint Rule before and during substantial strategy,
   product, business, offer, positioning, Practice OS, agent-system, workspace,
   or build threads. Questions are part of how Toni learns and steers; do not

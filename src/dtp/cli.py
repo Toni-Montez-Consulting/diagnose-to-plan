@@ -30,6 +30,7 @@ from dtp.commands.evolution import (
     EvolutionError,
     render_evolution_new,
     render_evolution_status,
+    run_evolution_dashboard,
     run_evolution_new,
     run_evolution_status,
 )
@@ -938,6 +939,18 @@ def evolution_status_command() -> None:
     config = load_config()
     result = run_evolution_status(config)
     console.print(render_evolution_status(result, config.repo_root), end="")
+
+
+@evolution_app.command("dashboard")
+def evolution_dashboard_command(
+    out: Annotated[
+        Path,
+        typer.Option("--out", help="Static HTML dashboard output path."),
+    ] = Path("docs/practice-evolution-dashboard.html"),
+) -> None:
+    config = load_config()
+    result = run_evolution_dashboard(config, output_path=out)
+    console.print(f"[green]practice evolution dashboard written[/green] {result.path}")
 
 
 @memory_app.command("status")
