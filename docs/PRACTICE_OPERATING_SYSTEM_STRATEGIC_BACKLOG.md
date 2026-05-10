@@ -131,13 +131,17 @@ Current internal-OS next action from the first operating review:
   records the seventh role pilot. It made DevOps / Infrastructure
   runtime-evidence-led, rollback-aware, observability-aware, cost-aware, and
   explicit that deployment readiness is not deployment authority.
-- The next action is to decide whether source packs now need structured schema
-  validation, a dashboard view, source-pack freshness status, or a CLI
-  validation command before more role pilots are added. If continuing role
-  pilots, Product Strategy, UX / Design, Web Experience, General Counsel,
-  Compliance, Data Architecture, and Controller are strong next candidates. Do
-  not implement a scheduled workflow until dry-run queues prove useful and a
-  new autonomy-readiness review is accepted.
+- `practice-os/steward/2026-05-10-source-pack-schema-cli-validation.md`
+  records the validation slice that made source-pack shape drift visible in
+  `dtp practice source-packs validate` and `dtp practice doctor`.
+- Source-pack contract validation is now implemented through
+  `dtp practice source-packs validate` and enforced by `dtp practice doctor`.
+  The next action is to choose between a source-pack freshness/status dashboard
+  or another role pilot. If continuing role pilots, Product Strategy,
+  UX / Design, Web Experience, General Counsel, Compliance, Data Architecture,
+  and Controller are strong next candidates. Do not implement a scheduled
+  workflow until dry-run queues prove useful and a new autonomy-readiness
+  review is accepted.
 
 ## P1 Client OS Pilot Wave
 

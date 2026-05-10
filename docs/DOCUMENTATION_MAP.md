@@ -61,6 +61,9 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
 - `decisions/0021-devops-infrastructure-source-pack.md`: accepted decision for
   promoting DevOps / Infrastructure into the source-pack file after its
   runtime-evidence and mutation-gate source-policy pilot.
+- `decisions/0022-source-pack-schema-cli-validation.md`: accepted decision for
+  validating source packs through `dtp practice source-packs validate` and
+  `dtp practice doctor` before more role-pack scale.
 - `docs/source/practice_os_build_spec_v0_1.md`: additive source spec for the Practice OS capture -> learn loop and MVP modules. Preserve it; convert it into integration docs/templates/backlog items instead of editing it directly.
 - `docs/source/ai_implementation_layer_thesis_and_build_spec_v0_1.md`: additive company thesis and implementation-layer source material. Preserve its strategic language and use it as source for positioning, offer design, client discovery, and internal product development.
 - `database/schema/practice_os_schema_v0_1.sql`: additive starter schema source for future Practice OS records. Do not run it as a migration until it is reconciled with Hosted DTP Phase 0.
@@ -187,6 +190,9 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
   Architecture, Software Engineering, QA / Audit, and DevOps / Infrastructure.
   It encodes source posture, allowed web sources, blocked sources, default
   outputs, and promotion gates without granting runtime authority.
+- `docs/AGENT_SOURCE_PACK_SCHEMA_V0.md`: source-pack contract doc for required
+  fields, authority-boundary flags, evidence tiers, validator scope, and future
+  dashboard growth.
 - `practice-os/fixtures/consulting-intelligence/northline-performance-studio-blueprint-sample.md`:
   public-safe fictional Blueprint sample for a wellness/performance practice.
 - `docs/OFFER_LED_PRACTICE_PACKAGING.md`: internal offer-packaging source for the first sellable practice offers. Use it before changing `consulting` public copy around offers.

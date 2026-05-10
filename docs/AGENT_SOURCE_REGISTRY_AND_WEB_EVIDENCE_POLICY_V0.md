@@ -154,6 +154,15 @@ practice-os/research/source-packs/agent-source-packs.v0.json
 The source-pack file should not add new authority. It should encode this policy
 for tools, dashboards, stewards, and future automation.
 
+Validation is documented in `docs/AGENT_SOURCE_PACK_SCHEMA_V0.md` and enforced
+by:
+
+```powershell
+.\.venv\Scripts\dtp.exe practice source-packs validate
+```
+
+`dtp practice doctor` also runs the same source-pack contract check.
+
 V0 includes the roles proven by source-policy pilots:
 
 - Research Steward / Research Arm;
@@ -404,9 +413,7 @@ The DevOps decision:
 
 Next iteration:
 
-1. Decide whether the source pack needs JSON schema validation or a CLI
-   validation command before more roles are added.
-2. Decide whether a dashboard should show source-pack freshness by role.
-3. If continuing role pilots, choose Product Strategy, UX / Design, Web
+1. Decide whether a dashboard should show source-pack freshness by role.
+2. If continuing role pilots, choose Product Strategy, UX / Design, Web
    Experience, General Counsel, Compliance, Data Architecture, Controller, or
    another repeated-gap role.

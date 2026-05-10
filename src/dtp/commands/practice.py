@@ -3,6 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from pathlib import Path
 
+from dtp.commands.source_packs import run_source_pack_validation
 from dtp.config import DtpConfig
 from dtp.skills_loader import SkillValidationError, load_skill
 
@@ -60,6 +61,7 @@ REQUIRED_DOCS = (
     "PRACTICE_KAIZEN_KANBAN_SYSTEM.md",
     "PRACTICE_EVOLUTION_SYSTEM_V0.md",
     "AGENT_SOURCE_REGISTRY_AND_WEB_EVIDENCE_POLICY_V0.md",
+    "AGENT_SOURCE_PACK_SCHEMA_V0.md",
     "RESEARCH_ARM_SOURCE_LIST_V0.md",
     "RESEARCH_SOURCE_FRESHNESS_DRY_RUN_V0.md",
     "KNOWLEDGE_BASE_EVENT_WORKFLOWS_V0.md",
@@ -116,6 +118,7 @@ def run_practice_doctor(config: DtpConfig) -> DoctorResult:
         checks,
         problems,
     )
+    _check_source_pack_schema(config, checks, problems)
     _check_practice_skills(root / "skills", checks, problems)
     _check_gitignore(config.repo_root / ".gitignore", checks, problems)
 
@@ -156,6 +159,16 @@ def _check_practice_skills(root: Path, checks: list[str], problems: list[str]) -
             problems.append(str(error))
             continue
         checks.append(f"practice skill {name}")
+
+
+def _check_source_pack_schema(
+    config: DtpConfig,
+    checks: list[str],
+    problems: list[str],
+) -> None:
+    result = run_source_pack_validation(config)
+    checks.extend(result.checks)
+    problems.extend(result.problems)
 
 
 def _check_gitignore(path: Path, checks: list[str], problems: list[str]) -> None:

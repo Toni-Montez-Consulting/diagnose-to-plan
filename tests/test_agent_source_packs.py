@@ -1,7 +1,15 @@
 from __future__ import annotations
 
 import json
+from collections.abc import Callable
 from pathlib import Path
+from typing import Any
+
+from dtp.commands.source_packs import (
+    render_source_pack_validation,
+    run_source_pack_validation,
+)
+from dtp.config import load_config
 
 
 def test_agent_source_packs_v0_contract(repo_root: Path) -> None:
@@ -128,3 +136,88 @@ def test_agent_source_packs_v0_contract(repo_root: Path) -> None:
         for source in devops["primary_sources"]
     )
     assert any(source["id"] == "nist-csf" for source in devops["primary_sources"])
+
+
+def test_source_pack_validator_accepts_current_contract(repo_root: Path) -> None:
+    result = run_source_pack_validation(load_config(repo_root))
+
+    assert result.ok is True
+    assert result.role_ids == (
+        "research-steward",
+        "external-communications",
+        "consulting-strategy",
+        "software-architecture",
+        "software-engineering",
+        "qa-audit",
+        "devops-infrastructure",
+    )
+    assert any("source pack authority boundary locked" in check for check in result.checks)
+    assert any("source pack packs validated: 7" in check for check in result.checks)
+    assert "source-pack validation: ok" in render_source_pack_validation(
+        result,
+        repo_root,
+    )
+
+
+def test_source_pack_validator_rejects_missing_required_top_level_field(
+    repo_root: Path,
+    tmp_path: Path,
+) -> None:
+    def mutate(payload: dict[str, Any]) -> None:
+        payload.pop("governing_rule")
+
+    path = _write_mutated_source_pack(repo_root, tmp_path, mutate)
+
+    result = run_source_pack_validation(load_config(repo_root), path=path)
+
+    assert result.ok is False
+    assert any("$ missing field: governing_rule" in problem for problem in result.problems)
+
+
+def test_source_pack_validator_rejects_duplicate_role_id(
+    repo_root: Path,
+    tmp_path: Path,
+) -> None:
+    def mutate(payload: dict[str, Any]) -> None:
+        payload["packs"][1]["role_id"] = payload["packs"][0]["role_id"]
+
+    path = _write_mutated_source_pack(repo_root, tmp_path, mutate)
+
+    result = run_source_pack_validation(load_config(repo_root), path=path)
+
+    assert result.ok is False
+    assert any("duplicate role id" in problem for problem in result.problems)
+
+
+def test_source_pack_validator_rejects_incomplete_primary_source(
+    repo_root: Path,
+    tmp_path: Path,
+) -> None:
+    def mutate(payload: dict[str, Any]) -> None:
+        payload["packs"][0]["primary_sources"][0].pop("evidence_limit")
+
+    path = _write_mutated_source_pack(repo_root, tmp_path, mutate)
+
+    result = run_source_pack_validation(load_config(repo_root), path=path)
+
+    assert result.ok is False
+    assert any("missing field: evidence_limit" in problem for problem in result.problems)
+
+
+def _write_mutated_source_pack(
+    repo_root: Path,
+    tmp_path: Path,
+    mutate: Callable[[dict[str, Any]], None],
+) -> Path:
+    source = (
+        repo_root
+        / "practice-os"
+        / "research"
+        / "source-packs"
+        / "agent-source-packs.v0.json"
+    )
+    payload = json.loads(source.read_text(encoding="utf-8"))
+    mutate(payload)
+    path = tmp_path / "agent-source-packs.v0.json"
+    path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+    return path

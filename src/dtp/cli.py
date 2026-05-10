@@ -66,6 +66,10 @@ from dtp.commands.research_source_freshness import (
     run_research_source_freshness_dry_run,
 )
 from dtp.commands.skills_cmd import run_validate
+from dtp.commands.source_packs import (
+    render_source_pack_validation,
+    run_source_pack_validation,
+)
 from dtp.commands.synthesize import run_synthesize
 from dtp.commands.vault import (
     VaultError,
@@ -92,6 +96,7 @@ kit_app = typer.Typer(no_args_is_help=True, add_completion=False)
 redact_app = typer.Typer(no_args_is_help=True, add_completion=False)
 practice_app = typer.Typer(no_args_is_help=True, add_completion=False)
 practice_client_os_app = typer.Typer(no_args_is_help=True, add_completion=False)
+practice_source_packs_app = typer.Typer(no_args_is_help=True, add_completion=False)
 kaizen_app = typer.Typer(no_args_is_help=True, add_completion=False)
 evolution_app = typer.Typer(no_args_is_help=True, add_completion=False)
 memory_app = typer.Typer(no_args_is_help=True, add_completion=False)
@@ -104,6 +109,7 @@ app.add_typer(kit_app, name="kit")
 app.add_typer(redact_app, name="redact")
 app.add_typer(practice_app, name="practice")
 practice_app.add_typer(practice_client_os_app, name="client-os")
+practice_app.add_typer(practice_source_packs_app, name="source-packs")
 app.add_typer(kaizen_app, name="kaizen")
 app.add_typer(evolution_app, name="evolution")
 app.add_typer(memory_app, name="memory")
@@ -481,6 +487,20 @@ def practice_doctor_command() -> None:
     config = load_config()
     result = run_practice_doctor(config)
     console.print(render_doctor(result), end="")
+    if not result.ok:
+        raise typer.Exit(code=1)
+
+
+@practice_source_packs_app.command("validate")
+def practice_source_packs_validate_command(
+    path: Annotated[
+        Path | None,
+        typer.Option("--path", help="Optional source-pack path to validate."),
+    ] = None,
+) -> None:
+    config = load_config()
+    result = run_source_pack_validation(config, path=path)
+    console.print(render_source_pack_validation(result, config.repo_root), end="")
     if not result.ok:
         raise typer.Exit(code=1)
 
