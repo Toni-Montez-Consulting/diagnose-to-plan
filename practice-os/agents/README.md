@@ -29,6 +29,8 @@ human judgment is required.
   quality, client reply summaries, sendable drafts, and Gmail draft receipts.
 - `general-counsel.md` - COI, contracting gates, proof permission, and
   legal-risk routing.
+- `memory-steward.md` - memory visibility, promotion/parking recommendations,
+  source-of-truth checks, drift risk, and human-gated memory levels.
 - `qa-audit.md` - verification strategy, regression risk, release readiness,
   acceptance checks, quality gates, and honest go/no-go language.
 - `product-strategy.md` - product direction, user/persona clarity, feature

@@ -36,6 +36,10 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
   for Practice Evolution records and research-pattern candidates. Regenerate
   with `dtp evolution dashboard`; it reads local markdown records only and does
   not promote memory, publish proof, sync Notion, or touch clients.
+- `practice-os/agents/memory-steward.md`: first active Memory Steward role spec
+  for read-only memory visibility, promotion/parking recommendations,
+  source-of-truth checks, drift risk, and human-gated memory levels. Use it
+  with `dtp memory steward`.
 - `docs/WORKSPACE_OPERATOR_RUNBOOK.md`: safe cross-repo operator runbook. It names command classes, repo roles, verification paths, package managers, deploy ownership, and no-touch boundaries without authorizing a live command runner.
 - `docs/PUBLIC_PROOF_PROMOTION_RUNBOOK.md`: public proof movement path. It reuses the existing proof/redaction templates and blocks public claims until evidence, permission, redaction, reviewer, and caveat gates pass.
 - `docs/PRACTICE_PROOF_QUEUE_INDEX.md`: active proof-candidate queue across CCAAP, Omnexus, DeMario, Hub/intake, Architected Strength, consulting assistant, Business Brain, and DSE. Use it before deciding what proof can move next.
@@ -283,6 +287,9 @@ Do not update `hub-prompts` or `hub-registry` just because the roadmap changes. 
   to become a reviewable idea-evolution draft. Use `dtp evolution status` or
   `dtp evolution dashboard` to see generated evolution records and
   research-pattern candidates.
+- Use `dtp memory steward` when Toni asks what should be remembered, promoted,
+  parked, superseded, or reviewed. It is a read-only recommendation surface and
+  cannot promote memory, sync Notion, change public copy, or touch clients.
 - Use the Question Checkpoint Rule before and during substantial strategy,
   product, business, offer, positioning, Practice OS, agent-system, workspace,
   or build threads. Questions are part of how Toni learns and steers; do not

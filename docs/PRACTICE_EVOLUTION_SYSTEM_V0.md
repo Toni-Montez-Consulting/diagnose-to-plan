@@ -152,9 +152,13 @@ Apply only the lenses that materially improve the record:
 | General Counsel | Does this touch legal, proof, permission, COI, privacy, or contracting risk? |
 | COO | Does this improve operating cadence, handoff, or accountability? |
 
-V0 does not create new autonomous Practice Steward or Memory Steward agents.
-Those are functions performed through this loop, Kaizen, templates, and steward
-receipts.
+V0 does not create autonomous Practice Steward or Memory Steward agents.
+Memory Steward now exists as a DTP role spec and read-only recommendation
+command, but it is still human-led and approval-gated. Practice Steward remains
+a function performed through this loop, Kaizen, templates, and steward receipts.
+
+Use `dtp memory steward` when the question is what should be remembered,
+promoted, parked, superseded, or left alone.
 
 ## Pilot Lanes
 
