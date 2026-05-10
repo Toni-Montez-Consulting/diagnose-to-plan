@@ -127,6 +127,12 @@ the event through `docs/KNOWLEDGE_BASE_EVENT_WORKFLOWS_V0.md`. The squad can
 recommend the update, but the decision and artifact still need human-gated
 review.
 
+When a role or squad workflow looks ready to move beyond human-led review, use
+`docs/AUTONOMY_READINESS_LADDER_V0.md` and
+`practice-os/templates/autonomy-readiness-review.md` before changing its
+authority. The ladder is the bridge from role/squad reasoning to future
+read-only, draft-only, supervised, scheduled, or bounded autonomous behavior.
+
 ## First-Wave Role Boundary
 
 The first wave is now intentionally broad enough to pilot:
@@ -319,6 +325,11 @@ should improve durability and retrieval, not replace the source-index habit.
 ## Future Autonomous Agent Path
 
 Autonomous agents are a future target for the practice, not a V0 assumption.
+
+Use `docs/AUTONOMY_READINESS_LADDER_V0.md` as the sequencing gate for this
+path. This squad model defines who should think about the work; the autonomy
+ladder defines what the workflow is allowed to do, what evidence it needs, and
+what approval is required before it moves up a level.
 
 The likely path is:
 

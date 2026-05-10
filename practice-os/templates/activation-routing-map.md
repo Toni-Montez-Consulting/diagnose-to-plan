@@ -21,6 +21,10 @@ Use this map when a prompt could route to more than one skill, template, process
 - Use `docs/AGENT_SQUADS_KNOWLEDGE_BASE_V0.md` when a prompt asks for squads,
   agent teams, knowledge bases, business justification, approval gates, or
   source-indexed handoffs.
+- Use `docs/AUTONOMY_READINESS_LADDER_V0.md` when a prompt asks for autonomous
+  agents, semi-autonomous workflows, scheduled stewards, an agent manager,
+  read-only agents, draft-only agents, bounded autonomy, or whether a workflow
+  can move up in authority.
 - Use `docs/PRACTICE_EVOLUTION_SYSTEM_V0.md` when a prompt says an idea,
   collaboration pattern, research observation, messaging line, or agent
   behavior should not be forgotten and may need to mature beyond basic Kaizen
@@ -57,6 +61,7 @@ Use this map when a prompt could route to more than one skill, template, process
 | "new idea", "design idea", "business idea", "development enhancement", "project idea", "can we add this later" | contextual idea intake | `docs/CONTEXTUAL_ACTIVATION_PLAYBOOK.md`, story activation index | classify before implementation |
 | "which agent/skill should this story use", "tie this to Kanban", "activate for this epic" | story activation index | `docs/ROADMAP_STORY_ACTIVATION_INDEX.md`, story activation contract | suggested agents require explicit delegation approval |
 | "squad of agents", "agent squad", "Delivery Squad", "Business Justification Squad", "knowledge base", "knowledge scope", "business justification", "approval gate", "handoff receipt" | Agent Squads + Knowledge Base V0 | `docs/AGENT_SQUADS_KNOWLEDGE_BASE_V0.md`, squad charter, source index, business justification scorecard, approval gate, squad handoff receipt | human-led only; no install, autonomous agents, public proof, client comms, production writes, or repo mutation without gates |
+| "autonomy readiness", "autonomy ladder", "autonomous agent", "semi-autonomous", "read-only agent", "draft-only agent", "bounded autonomous workflow", "scheduled steward", "what can be autonomous", "move this up the ladder" | Autonomy Readiness Ladder | `docs/AUTONOMY_READINESS_LADDER_V0.md`, `practice-os/templates/autonomy-readiness-review.md`, Agent Squads + Knowledge Base V0, FAOS orchestration roadmap | classify current/target autonomy level first; no scheduled, write-enabled, live, client-facing, public-proof, financial, legal, production, or external action without accepted readiness review |
 | "don't forget this", "dont forget this", "meta-pattern", "idea evolution", "this worked well", "do this again", "collaboration pattern", "practice evolution", "make sure this becomes how we work" | Practice Evolution System V0 | `docs/PRACTICE_EVOLUTION_SYSTEM_V0.md`, `practice-os/templates/idea-evolution-record.md`, `practice-os/templates/remaining-locks-ledger.md`, `practice-os/templates/memory-promotion-record.md` | capture broadly, promote deliberately; no autonomous self-learning, public/client changes, or playbook-memory promotion without review |
 | "show captured ideas", "practice evolution dashboard", "evolution status", "what is waiting for review", "which patterns are parked", "what did we capture" | Practice Evolution status dashboard | `dtp evolution status`, `dtp evolution dashboard`, `docs/practice-evolution-dashboard.html` | visibility only; dashboard does not promote memory, sync Notion, or authorize implementation |
 | "memory steward", "memory agent", "what should be remembered", "what should be promoted", "what should be parked", "review memory", "memory queue" | Memory Steward | `practice-os/agents/memory-steward.md`, `dtp memory steward`, `docs/practice-evolution-dashboard.html`, `practice-os/templates/memory-promotion-record.md` | read-only recommendations; no autonomous self-learning, Notion sync, public/client action, or playbook promotion without Toni approval |
@@ -88,7 +93,7 @@ Use this map when a prompt could route to more than one skill, template, process
 | "agent failed", "lesson learned", "make this self-learning" | lesson capture and eval candidate | agent session record | human approves skill/eval updates |
 | "lost connection", "stream disconnected", "reconnecting", "command timed out", "timeout", "resume from where we were", "what happened before the disconnect" | Session Rehydration Checklist plus Agentic Performance Gap Review when repeated | `practice-os/templates/session-rehydration-checklist.md`, `practice-os/templates/agentic-performance-gap-review.md` | verify live files/logs/git/processes before claiming status; capture timeout/disconnect in the ledger |
 | "App Store approved", "app review", "TestFlight", "Play Console", "mobile launch journey", "store rejection" | mobile app review and launch pattern | `docs/MOBILE_APP_REVIEW_AND_LAUNCH_PATTERN.md`, `practice-os/templates/mobile-app-review-journey.md` | no credentials/private store screenshots in git; public proof stays gated |
-| "FAOS", "Frontier Agentic Operating System", "agent operating system", "agent orchestration substrate", "op wrapper", "Langfuse/Mem0/Letta", "Spec-Kit Phase 0" | FAOS orchestration roadmap | `practice-os/templates/faos-phase-readiness-review.md`, Agentic Performance Gap Review, Roadmap Steward review | roadmap/research only unless Phase 0A readiness review is accepted; do not create `faos` repo or mutate DTP/skills automatically |
+| "FAOS", "Frontier Agentic Operating System", "agent operating system", "agent orchestration substrate", "op wrapper", "Langfuse/Mem0/Letta", "Spec-Kit Phase 0" | FAOS orchestration roadmap plus Autonomy Readiness Ladder | `practice-os/templates/faos-phase-readiness-review.md`, `docs/AUTONOMY_READINESS_LADDER_V0.md`, `practice-os/templates/autonomy-readiness-review.md`, Agentic Performance Gap Review, Roadmap Steward review | roadmap/research only unless Phase 0A and autonomy readiness reviews are accepted; do not create `faos` repo, mutate DTP/skills, or move workflows above A3 automatically |
 | "red-team this AI flow", "guardrails", "prompt injection" | AI red-team plan | OWASP/NIST/OpenAI guardrail references | before public/write-enabled AI |
 | "feature flag", "kill switch", "rollback plan" | feature flag/kill switch plan | release trust/supply-chain baseline | required for risky client-facing automation |
 | "which repo should this touch", "all apps covered?" | repo manifest and portfolio scorecard | workspace roadmap/backlog | do not force churn into every repo |
@@ -96,7 +101,7 @@ Use this map when a prompt could route to more than one skill, template, process
 | "new agent role", "create a specialized agent", "add an agent persona", "define an agent domain" | Specialized Agent Role Spec | `practice-os/templates/specialized-agent-role-spec.md`, `docs/AGENT_SQUADS_KNOWLEDGE_BASE_V0.md`, agent role index | role spec only first; no autonomous runtime, tool install, or public behavior change without review |
 | "add more agents", "more roles", "agent org chart", "expand the agent roster" | First-Wave Role Boundary | `docs/AGENT_SQUADS_KNOWLEDGE_BASE_V0.md` first-wave role boundary | do not add roles by default; pilot the existing role set on real work unless a repeated gap is proven |
 | "pilot the roles", "test the agent roles", "run the squad on this", "use the first-wave roles" | First-Wave Agent Role Pilot | `docs/AGENT_SQUADS_KNOWLEDGE_BASE_V0.md`, `practice-os/steward/2026-05-09-first-wave-agent-role-pilot-consulting-site.md` | produce a role-pass receipt with sources, decisions, open questions, and approval gates; do not add autonomous runtime |
-| "build an agent manager", "autonomous steward", "self-modifying skills" | parked/gated automation | Roadmap Steward V0 and Future Intelligence | manual loop, evals, guardrails first |
+| "build an agent manager", "autonomous steward", "self-modifying skills" | Autonomy Readiness Ladder, then parked/gated automation if authority is not ready | `docs/AUTONOMY_READINESS_LADDER_V0.md`, `practice-os/templates/autonomy-readiness-review.md`, Roadmap Steward V0, Future Intelligence | classify current/target autonomy first; self-modifying skills stay blocked until evals, guardrails, human review, rollback, and explicit approval exist |
 
 ## Classification Labels
 
@@ -114,6 +119,9 @@ Use these labels in Roadmap Steward reviews and handoffs:
 - `ux_design_agent`
 - `qa_audit_agent`
 - `agent_squad_v0`
+- `autonomy_readiness_ladder`
+- `autonomy_readiness_review`
+- `bounded_autonomy_candidate`
 - `client_os_pilot`
 - `knowledge_scope`
 - `knowledge_base_v1`
@@ -152,6 +160,10 @@ Use these labels in Roadmap Steward reviews and handoffs:
 - When a knowledge-base maintenance event changes a default workflow, source of
   truth, or approval path, update `docs/KNOWLEDGE_BASE_EVENT_WORKFLOWS_V0.md`
   and leave a steward receipt.
+- When a workflow is proposed for read-only, draft-only, supervised, scheduled,
+  live, or autonomous authority, update or reference
+  `docs/AUTONOMY_READINESS_LADDER_V0.md` and leave an autonomy readiness review
+  before authority expands.
 - When a new repo lane is added to the workspace roadmap, add or update the relevant routing row.
 - When a new idea introduces a new roadmap lane, business direction, design pattern, agent behavior, or recurring trigger, capture it through contextual idea intake before promoting it.
 - When a backlog story changes status or ownership, check whether `docs/ROADMAP_STORY_ACTIVATION_INDEX.md` needs a matching activation update.
