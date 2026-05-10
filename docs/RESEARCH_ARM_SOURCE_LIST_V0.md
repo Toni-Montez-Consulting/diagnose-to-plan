@@ -104,6 +104,12 @@ operator notes, source URLs, optional public fetches, or search queries.
 The Research Arm can recommend updates to knowledge bases. It does not silently
 rewrite them.
 
+When a research signal is tied to a specialized agent role, apply
+`docs/AGENT_SOURCE_REGISTRY_AND_WEB_EVIDENCE_POLICY_V0.md` before promoting the
+finding. The source list tells the Research Arm what to watch. The source
+registry tells each agent role which evidence posture, source type, and blocked
+action applies.
+
 When a source implies a durable update, route it through
 `docs/KNOWLEDGE_BASE_EVENT_WORKFLOWS_V0.md`.
 

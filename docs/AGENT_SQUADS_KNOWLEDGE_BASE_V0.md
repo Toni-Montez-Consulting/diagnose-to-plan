@@ -209,6 +209,28 @@ Source order:
 5. Private engagement records only when the current work is allowed to use them.
 6. External frameworks or public research only as cited inspiration.
 
+## Web Evidence And Role Source Registry
+
+All current and future specialized roles may use web search when the work needs
+current facts, domain evidence, or credible outside context. The governing
+policy is `docs/AGENT_SOURCE_REGISTRY_AND_WEB_EVIDENCE_POLICY_V0.md`.
+
+That policy adds a role-level source registry for the broader roster, including
+research, memory, consulting strategy, communications, product, UX/design, web
+experience, engineering, architecture, DevOps, QA, COO, Controller, business
+admin, legal, compliance, data architecture, PR/brand narrative, and future
+squad functions.
+
+The rule stays the same:
+
+> Search can inform the agent. Search cannot authorize action by itself.
+
+Use official, primary, standards, or directly observed sources first when facts
+matter. Use broad search for discovery, framing, examples, and source finding.
+Treat broad search results as low-confidence until corroborated. Use
+`dtp research source-freshness` when a source check or search packet should
+survive as reviewable evidence.
+
 Blocked sources:
 
 - secrets, credentials, raw private intake, private client financial details,

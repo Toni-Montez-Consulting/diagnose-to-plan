@@ -43,6 +43,7 @@ The first wave is draft-only automation:
 | Work | Owner | Status | Done gate |
 |---|---|---|---|
 | Agent Squads + Knowledge Base V0 | DTP | Done | source map, templates, approval gates, and receipt pattern merged |
+| Agent Source Registry + Web Evidence Policy V0 | DTP | Done | all current and future roles can use web search under source tiers, role source posture, and promotion gates |
 | Consulting squad pointer | consulting | Done | public repo points future proof/offer work back to DTP |
 | Repo role split | DTP | Done | DTP, consulting, Hub, and `tm-skills` boundaries are explicit |
 | Autonomy Readiness Ladder V0 | DTP | Done | autonomy levels, candidate workflows, readiness gates, template, and receipt pattern exist |
@@ -96,11 +97,17 @@ Current internal-OS next action from the first operating review:
   source snapshots/operator notes, URLs, optional public fetches, and search
   packets/results, then emits schema-validated queue items under ignored
   `outputs/research-source-freshness/`.
+- `docs/AGENT_SOURCE_REGISTRY_AND_WEB_EVIDENCE_POLICY_V0.md` now defines the
+  role-level evidence policy for all current and future agent functions. It
+  allows broad web search while keeping official/primary sources first and
+  requiring human-gated promotion before public, client, legal, finance,
+  runtime, or repo-authority changes.
 - The next action is to run a small real source-freshness dry run, review noise
   and usefulness, then decide whether to add structured source configs,
-  deduplication, source snapshots, or richer search parsing. Do not implement a
-  scheduled workflow until dry-run queues prove useful and a new
-  autonomy-readiness review is accepted.
+  deduplication, source snapshots, richer search parsing, or the first
+  machine-readable agent source-pack file. Do not implement a scheduled
+  workflow until dry-run queues prove useful and a new autonomy-readiness
+  review is accepted.
 
 ## P1 Client OS Pilot Wave
 
