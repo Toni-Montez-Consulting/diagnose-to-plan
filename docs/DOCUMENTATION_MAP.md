@@ -92,6 +92,10 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
 - `docs/PRACTICE_BUILDER_LED_OFFER_MODEL.md`: current builder-led consulting
   business model, including client fit, pricing posture, Blueprint deliverable
   standard, Fast Track split, proof hierarchy, and collaboration memory.
+- `docs/PRACTICE_OFFER_STRATEGY_SOURCE_POLICY_PILOT_2026-05-10.md`: internal
+  Consulting Strategy pilot for translating reviewed source-backed AI/workflow
+  language into offer logic, buyer-fit filters, Blueprint routing, Fast Track
+  criteria, and public-copy boundaries.
 - `docs/PRACTICE_HOMEPAGE_START_AND_BLUEPRINT_COPY_LOCK.md`: locked internal
   source for the next consulting homepage, `/start`, proof-card, and Blueprint
   copy pass. Use before implementing public offer copy.

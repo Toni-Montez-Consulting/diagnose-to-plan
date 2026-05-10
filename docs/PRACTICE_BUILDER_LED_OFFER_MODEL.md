@@ -216,6 +216,32 @@ Internal shapes:
 - growth and efficiency audit;
 - proof, launch, and handoff sprint.
 
+## Source-Backed AI Offer Strategy
+
+Current strategy source:
+
+- `docs/PRACTICE_OFFER_STRATEGY_SOURCE_POLICY_PILOT_2026-05-10.md`
+
+AI should not become the public front-door category by itself. Keep the broad
+front door centered on unclear ideas, broken workflows, and tech bottlenecks.
+
+Use AI as a practical implementation capability inside the offer model:
+
+- unclear AI/workflow questions route to Business Systems Blueprint;
+- contained, low-risk AI/workflow tasks may route to Fast Track;
+- custom AI-enabled builds need approved scope, source/data boundaries,
+  human-review points, acceptance criteria, handoff, and rollback/kill-switch
+  posture when risk requires it;
+- existing businesses that want leverage route through Growth, AI, and
+  Operating Systems only when the workflow and value case are clear enough to
+  justify the work.
+
+Do not sell AI as magic, transformation, or chatbot-first work. The working
+line is:
+
+> figure out where AI belongs in the work, then build the operating asset
+> around it.
+
 ## Proof Hierarchy
 
 Tier 1:

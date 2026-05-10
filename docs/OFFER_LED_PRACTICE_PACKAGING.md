@@ -73,6 +73,18 @@ This wedge can lead into:
 Public copy can later phrase this as practical AI implementation and utilization
 for real business workflows, once proof and positioning gates are ready.
 
+The current source-backed strategy pilot is
+`docs/PRACTICE_OFFER_STRATEGY_SOURCE_POLICY_PILOT_2026-05-10.md`.
+It clarifies that AI should stay workflow-first in the offer model:
+
+- route unclear AI/workflow opportunities to Business Systems Blueprint;
+- use Fast Track only when the workflow, source material, review owner, and
+  risk boundary are already clear;
+- keep chatbot-only and random automation asks in the bad-fit lane unless a
+  real operating workflow appears;
+- do not use Microsoft, OpenAI, or other external sources as proof of Toni's
+  outcomes.
+
 ## Current Builder-Led Offer Set
 
 Use `docs/PRACTICE_BUILDER_LED_OFFER_MODEL.md` as the current business model.
