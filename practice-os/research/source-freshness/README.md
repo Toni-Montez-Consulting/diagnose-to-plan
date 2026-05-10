@@ -5,7 +5,7 @@ permission_level: internal_only
 review_status: draft
 ---
 
-# Research Source Freshness Reviews
+# Research Source Freshness
 
 This folder stores reviewed source-freshness items that should survive in DTP.
 
@@ -13,6 +13,12 @@ Raw dry-run output belongs under ignored `outputs/research-source-freshness/`.
 Only promote sanitized, reviewed items here.
 
 Use `practice-os/templates/research-source-freshness-item.md`.
+
+Promoted reviewed items live in:
+
+```text
+practice-os/research/source-freshness/reviews/
+```
 
 ## Rules
 

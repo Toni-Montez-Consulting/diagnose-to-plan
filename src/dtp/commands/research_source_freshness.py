@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import html
 import json
+import os
 import re
 from collections.abc import Callable
 from dataclasses import asdict, dataclass
@@ -478,7 +479,20 @@ def _next_run_id(jsonl_path: Path, date_slug: str) -> str:
         count = sum(
             1 for line in jsonl_path.read_text(encoding="utf-8").splitlines() if line.strip()
         )
-    return f"rsf-{date_slug}-{count + 1:03d}"
+    marker_dir = jsonl_path.parent / ".run-ids"
+    marker_dir.mkdir(parents=True, exist_ok=True)
+    candidate_number = count + 1
+    while True:
+        candidate = f"rsf-{date_slug}-{candidate_number:03d}"
+        marker_path = marker_dir / f"{candidate}.lock"
+        try:
+            marker_fd = os.open(marker_path, os.O_CREAT | os.O_EXCL | os.O_WRONLY)
+        except FileExistsError:
+            candidate_number += 1
+            continue
+        with os.fdopen(marker_fd, "w", encoding="utf-8", newline="\n") as handle:
+            handle.write(candidate + "\n")
+        return candidate
 
 
 def _append_jsonl(path: Path, item: SourceFreshnessItem) -> None:

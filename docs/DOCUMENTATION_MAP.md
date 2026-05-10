@@ -111,6 +111,9 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
 - `practice-os/templates/research-source-freshness-item.md`: promoted reviewed
   item template for source freshness findings that should survive beyond raw
   ignored dry-run output.
+- `practice-os/research/decisions/`: reviewed research decisions created from
+  source-backed signals. Use for adopt, pilot, watch, reject, or park outcomes
+  that should survive beyond a digest or one-off chat.
 - `practice-os/templates/knowledge-base-event-record.md`: simple event record
   for knowledge-base maintenance across research, memory, operations, project
   execution, client signals, proof, and agent-system misses.
@@ -138,6 +141,9 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
 - `practice-os/research/source-freshness/`: reviewed Research source freshness
   records promoted from ignored dry-run output. Raw run output belongs under
   ignored `outputs/research-source-freshness/`.
+- `practice-os/research/source-freshness/reviews/`: promoted source-freshness
+  findings that passed human review and should remain visible to future
+  stewards.
 - `practice-os/fixtures/consulting-intelligence/northline-performance-studio-blueprint-sample.md`:
   public-safe fictional Blueprint sample for a wellness/performance practice.
 - `docs/OFFER_LED_PRACTICE_PACKAGING.md`: internal offer-packaging source for the first sellable practice offers. Use it before changing `consulting` public copy around offers.
