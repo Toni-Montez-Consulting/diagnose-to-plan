@@ -25,6 +25,9 @@ Use this map when a prompt could route to more than one skill, template, process
   agents, semi-autonomous workflows, scheduled stewards, an agent manager,
   read-only agents, draft-only agents, bounded autonomy, or whether a workflow
   can move up in authority.
+- Use `docs/PRACTICE_OPERATING_REVIEW_LOOP_V0.md` when a prompt asks to review
+  everything, find what is next, continue moving forward, recover after a
+  disconnect, or check whether captured ideas are being revisited.
 - Use `docs/PRACTICE_EVOLUTION_SYSTEM_V0.md` when a prompt says an idea,
   collaboration pattern, research observation, messaging line, or agent
   behavior should not be forgotten and may need to mature beyond basic Kaizen
@@ -51,6 +54,7 @@ Use this map when a prompt could route to more than one skill, template, process
 | "add auth/schema/API/storage", "design hosted boundary", "smallest backend" | `tm-skills/backend-design` | `docs/HOSTED_DTP_PHASE_0.md` for hosted DTP | boundary accepted before implementation |
 | "what tests should run", "CI failed", "verification depth" | `tm-skills/testing-ladder` | repo manifest, evidence index, verification pattern | hard gates stay hard |
 | "validate branch", "what is left", "committed/pushed?", "prepare handoff" | `tm-skills/delivery-baseline` | evidence index, git status, CI status | do not commit/push unless requested |
+| "where are we", "review everything", "what is next", "keep moving forward", "what has been done", "are we losing ideas", "continue from here" | Practice Operating Review Loop | `docs/PRACTICE_OPERATING_REVIEW_LOOP_V0.md`, `practice-os/templates/practice-operating-review.md`, Kaizen status, evolution status, Memory Steward, Research Steward, practice doctor | produce decisions and next actions; do not use the review loop to bypass public/client/tool/runtime/autonomy gates |
 | "run a systems health review", "review this like a living system", "check the weakest system", "what system is unhealthy here?", "find the intake, memory, recovery, and immune risks" | `tm-skills/systems-health-review` | repo manifests, code, docs, prompts, logs, runbooks, workflow maps | review-first; sequence fix now vs queue; no rewrite unless structurally unsalvageable |
 | "what is next on the roadmap", "keep everything aligned", "capture this idea" | Roadmap Steward review | `docs/ROADMAP_EXECUTION_BACKLOG.md` | update status only with real evidence |
 | "Business Brain", "Consulting OS", "business agents", "practice comms", "diagnose prospect", "draft proposal", "operator handoff" | Business Brain source map and Practice OS command contracts | `docs/BUSINESS_BRAIN_OPERATING_SYSTEM.md`, `practice-os/commands/`, `practice-os/agents/`, `practice-os/comms/`, `practice-os/fixtures/business-brain/` | DTP is source of truth; no public proof, pricing, live integrations, or autonomous agents without gates |
@@ -110,6 +114,7 @@ Use these labels in Roadmap Steward reviews and handoffs:
 - `global_sdlc_skill`
 - `dtp_practice_skill`
 - `business_brain`
+- `practice_operating_review_loop`
 - `consulting_strategy_agent`
 - `external_communications_agent`
 - `product_strategy_agent`
@@ -164,6 +169,10 @@ Use these labels in Roadmap Steward reviews and handoffs:
   live, or autonomous authority, update or reference
   `docs/AUTONOMY_READINESS_LADDER_V0.md` and leave an autonomy readiness review
   before authority expands.
+- When a review uncovers stale captures, unresolved steward recommendations,
+  missing decisions, or unclear next actions, use
+  `docs/PRACTICE_OPERATING_REVIEW_LOOP_V0.md` and leave a
+  `practice-operating-review` receipt if priorities or gates changed.
 - When a new repo lane is added to the workspace roadmap, add or update the relevant routing row.
 - When a new idea introduces a new roadmap lane, business direction, design pattern, agent behavior, or recurring trigger, capture it through contextual idea intake before promoting it.
 - When a backlog story changes status or ownership, check whether `docs/ROADMAP_STORY_ACTIVATION_INDEX.md` needs a matching activation update.

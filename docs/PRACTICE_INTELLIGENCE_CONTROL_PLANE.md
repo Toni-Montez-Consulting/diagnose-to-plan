@@ -26,6 +26,7 @@ It does not replace the existing DTP architecture. It sits on top of:
 - `docs/PRACTICE_MEMORY_OPTIMIZATION_PLAN.md`
 - `docs/KNOWLEDGE_BASE_EVENT_WORKFLOWS_V0.md`
 - `docs/AUTONOMY_READINESS_LADDER_V0.md`
+- `docs/PRACTICE_OPERATING_REVIEW_LOOP_V0.md`
 - `docs/PRACTICE_TOOLING_STEWARD.md`
 - `docs/CLIENT_REPLY_INTAKE_OPERATING_PATTERN.md`
 - `docs/RECURRING_CLIENT_CADENCE_OPERATING_PATTERN.md`
@@ -84,6 +85,7 @@ protects the right gate.
 | Durable memory candidate | memory review queue | none or sanitized status | human approval before pattern/playbook memory |
 | Knowledge-base maintenance event | `docs/KNOWLEDGE_BASE_EVENT_WORKFLOWS_V0.md` plus owning source doc/template | sanitized changed/parked status | human-gated; no autonomous promotion or public/client action |
 | Autonomy candidate | `docs/AUTONOMY_READINESS_LADDER_V0.md` plus `practice-os/templates/autonomy-readiness-review.md` | readiness level/status only | no scheduled, write-enabled, live, or external action until readiness review is accepted |
+| Broad status/review request | `docs/PRACTICE_OPERATING_REVIEW_LOOP_V0.md` plus `practice-os/templates/practice-operating-review.md` | sanitized next-action/status only | review can recommend action but does not bypass proof/client/tool/runtime/autonomy gates |
 | Repo implementation | owning repo plan/spec | repo-health summary | repo-local gates and no-touch boundaries |
 
 If an input can fit more than one row, choose the row with the highest risk
@@ -174,6 +176,9 @@ Before finishing a meaningful work block:
 4. Update the roadmap/backlog when priority or story state changed.
 5. Run the appropriate DTP checks.
 6. Commit tracked DTP infrastructure when it is meant to be durable.
+
+For broad "where are we?" or "what is next?" reviews, use
+`docs/PRACTICE_OPERATING_REVIEW_LOOP_V0.md` before creating new work.
 
 ## Non-Goals
 

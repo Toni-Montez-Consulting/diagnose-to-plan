@@ -32,6 +32,10 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
   autonomy levels, first autonomy candidates, readiness gates, and the rule
   that future scheduled, write-enabled, live, or external agent workflows must
   pass an autonomy readiness review before authority expands.
+- `decisions/0013-practice-operating-review-loop.md`: accepted decision for the
+  recurring Practice Operating Review Loop that turns Kaizen, evolution,
+  memory, research, KB-event, status, and autonomy signals into explicit
+  decisions and next actions.
 - `docs/source/practice_os_build_spec_v0_1.md`: additive source spec for the Practice OS capture -> learn loop and MVP modules. Preserve it; convert it into integration docs/templates/backlog items instead of editing it directly.
 - `docs/source/ai_implementation_layer_thesis_and_build_spec_v0_1.md`: additive company thesis and implementation-layer source material. Preserve its strategic language and use it as source for positioning, offer design, client discovery, and internal product development.
 - `database/schema/practice_os_schema_v0_1.sql`: additive starter schema source for future Practice OS records. Do not run it as a migration until it is reconciled with Hosted DTP Phase 0.
@@ -49,6 +53,10 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
   bounded scheduled workflow, bounded live action, or high-trust autonomy. Use
   it before building autonomous agents, scheduled stewards, an agent manager,
   or any workflow that changes authority beyond normal scoped repo execution.
+- `docs/PRACTICE_OPERATING_REVIEW_LOOP_V0.md`: internal operating cadence for
+  reviewing Kaizen, Practice Evolution, Memory Steward, Research Steward,
+  Knowledge Base Event Workflow, status dashboard, and Autonomy Readiness
+  signals so captured ideas become decisions instead of stale notes.
 - `docs/practice-evolution-dashboard.html`: generated internal status dashboard
   for Practice Evolution records and research-pattern candidates. Regenerate
   with `dtp evolution dashboard`; it reads local markdown records only and does
@@ -97,6 +105,10 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
   classifying current/target autonomy levels, allowed sources/actions,
   privacy, evals, audit logging, rollback, override, cost, and promotion
   decision before a workflow becomes more autonomous.
+- `practice-os/templates/practice-operating-review.md`: review-loop template
+  for daily light checks, weekly operating reviews, post-disconnect recovery,
+  source checks, decisions, next actions, parked items, steward
+  recommendations, autonomy candidates, gates, and validation.
 - `practice-os/comms/private/messaging-knowledge-base-2026-05-10.md`: internal
   messaging knowledge base for owner-bottleneck language, short pitch variants,
   claims/metaphor candidates, and visual seeds before any public-copy gate.
@@ -344,6 +356,12 @@ Do not update `hub-prompts` or `hub-registry` just because the roadmap changes. 
   a semi-autonomous workflow, a read-only agent, draft-only agent, scheduled
   source/KB/status review, or any workflow that should move up an autonomy
   level.
+- Use `docs/PRACTICE_OPERATING_REVIEW_LOOP_V0.md` and
+  `practice-os/templates/practice-operating-review.md` when Toni asks "where
+  are we?", "review everything", "what is next?", "keep moving forward", asks
+  whether ideas are being lost, or needs a post-disconnect/status recovery
+  pass across Kaizen, Practice Evolution, Memory Steward, Research Steward, KB
+  events, status surfaces, and autonomy candidates.
 - Use the Question Checkpoint Rule before and during substantial strategy,
   product, business, offer, positioning, Practice OS, agent-system, workspace,
   or build threads. Questions are part of how Toni learns and steers; do not
