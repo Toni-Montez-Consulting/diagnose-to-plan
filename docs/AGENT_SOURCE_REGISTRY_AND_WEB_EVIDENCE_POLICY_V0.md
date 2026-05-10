@@ -282,16 +282,33 @@ The pilot produced:
 - a send checklist for source-backed AI implementation language;
 - messaging knowledge base updates that remain internal-only.
 
+## Third Pilot
+
+The third pilot is recorded in:
+
+```text
+practice-os/steward/2026-05-10-consulting-strategy-source-policy-pilot.md
+```
+
+It tested whether Consulting Strategy could turn source-backed AI/workflow
+language into offer logic, buyer-fit criteria, Blueprint routing, and public
+copy boundaries.
+
+The strategy decision:
+
+- do not lead publicly with AI as a standalone category;
+- keep the front door broad around unclear ideas, broken workflows, and tech
+  bottlenecks;
+- route unclear AI/workflow opportunities to Business Systems Blueprint;
+- allow Fast Track only for contained low-risk AI/workflow implementation;
+- preserve public-copy and proof gates.
+
 ## Open Follow-Up
 
 Next iteration:
 
-1. Run one more role pilot before creating the machine-readable source-pack
-   file. Consulting Strategy is the strongest next candidate because it tests
-   how source evidence shapes offer and buyer-fit reasoning without
-   overclaiming.
-2. Create the machine-readable source-pack file after repeated role workflows
-   prove the fields.
-3. Add role-specific source examples to the active role specs when repeated use
+1. Create the first machine-readable source-pack file from the three proven
+   pilots: Research Steward, External Communications, and Consulting Strategy.
+2. Add role-specific source examples to the active role specs when repeated use
    proves which sources are actually helpful.
-4. Decide whether a dashboard should show source-pack freshness by role.
+3. Decide whether a dashboard should show source-pack freshness by role.

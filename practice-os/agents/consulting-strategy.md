@@ -112,3 +112,5 @@ Every recommendation should answer:
 - Blueprint vs Fast Track routing decision.
 - Greg/Cam/CCAAP proof posture and client-fit decisions.
 - Omnexus and DeMario proof-source positioning.
+- Source-backed AI/workflow offer strategy that routes unclear AI questions to
+  Blueprint without turning Toni into a generic AI consultancy.

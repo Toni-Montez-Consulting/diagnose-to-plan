@@ -111,11 +111,14 @@ Current internal-OS next action from the first operating review:
   records the second role pilot. It converted reviewed source evidence into
   draft-only prospect, executive, and client-education language with explicit
   send/public-proof gates.
-- The next action is to run one more role pilot, ideally Consulting Strategy,
-  then decide whether to add structured source configs, deduplication, source
-  snapshots, richer search parsing, or the first machine-readable agent
-  source-pack file. Do not implement a scheduled workflow until dry-run queues
-  prove useful and a new autonomy-readiness review is accepted.
+- `practice-os/steward/2026-05-10-consulting-strategy-source-policy-pilot.md`
+  records the third role pilot. It converted source-backed AI/workflow language
+  into offer logic, buyer-fit rules, Blueprint routing, and public-copy gates.
+- The next action is to create the first small machine-readable source-pack
+  file from the three proven pilots, then decide whether to add structured
+  source configs, deduplication, source snapshots, richer search parsing, or
+  source-pack freshness status. Do not implement a scheduled workflow until
+  dry-run queues prove useful and a new autonomy-readiness review is accepted.
 
 ## P1 Client OS Pilot Wave
 
