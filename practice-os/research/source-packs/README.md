@@ -19,11 +19,12 @@ authority.
 practice-os/research/source-packs/agent-source-packs.v0.json
 ```
 
-V0 includes only the three roles proven by source-policy pilots:
+V0 includes the roles proven by source-policy pilots:
 
 - Research Steward / Research Arm;
 - External Communications;
-- Consulting Strategy.
+- Consulting Strategy;
+- Software Architecture.
 
 ## Rules
 

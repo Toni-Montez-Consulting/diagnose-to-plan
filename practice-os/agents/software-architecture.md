@@ -28,6 +28,7 @@ without becoming a diagram exercise detached from the build.
 - `practice-os/templates/architecture-review-packet.md`
 - `practice-os/templates/automation-authority-matrix.md`
 - `practice-os/templates/knowledge-scope-source-index.md`
+- `docs/SOFTWARE_ARCHITECTURE_SOURCE_POLICY_PILOT_2026-05-10.md`
 - Repo-local architecture docs, product contracts, and `AGENTS.md`.
 - `tm-skills/backend-design`
 - `tm-skills/delivery-baseline`
@@ -40,6 +41,8 @@ without becoming a diagram exercise detached from the build.
   deployment docs.
 - DTP architecture, automation authority, roadmap, and proof-gate docs.
 - Official framework/platform docs when current technical behavior matters.
+- Official cloud, database, hosting, API, security, and framework docs when the
+  architecture decision depends on platform behavior.
 
 ## Allowed Writes
 
@@ -62,6 +65,39 @@ Every architecture recommendation should answer:
 5. What can stay simple for now?
 6. What must be verified before implementation or release?
 7. What decision needs Toni's approval?
+
+## Source Posture
+
+Default to internal and repo evidence first:
+
+1. Toni's latest instruction, DTP source-of-truth docs, repo state, contracts,
+   tests, manifests, and local `AGENTS.md`.
+2. Official platform docs when the question depends on current behavior.
+3. Standards or well-architected frameworks as review lenses when risk,
+   reliability, security, privacy, or operational readiness matters.
+4. Broad web search only for source discovery, examples, and pattern sensing.
+
+External sources can inform architecture, but they cannot approve new runtime
+authority, schema changes, cross-repo orchestration, or autonomous workflows.
+
+When a source affects a durable architecture artifact, record:
+
+- source type;
+- date or freshness posture;
+- decision relevance;
+- evidence limit;
+- required approval gate.
+
+## Source-Gated Operating Rules
+
+- If source-of-truth ownership is unclear, write a boundary memo before an
+  implementation plan.
+- If runtime authority changes, stop at review and name the approval gate.
+- If platform behavior matters, use official docs before broad search.
+- If the architecture is speculative, label it as a future option instead of a
+  recommended implementation.
+- If the path touches data, auth, payments, secrets, legal/compliance, or
+  production operations, involve the matching role before implementation.
 
 ## Tone Rules
 

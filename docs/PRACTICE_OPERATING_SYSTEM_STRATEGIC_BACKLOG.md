@@ -115,13 +115,17 @@ Current internal-OS next action from the first operating review:
   records the third role pilot. It converted source-backed AI/workflow language
   into offer logic, buyer-fit rules, Blueprint routing, and public-copy gates.
 - `practice-os/research/source-packs/agent-source-packs.v0.json` is now the
-  first small machine-readable source-pack file, covering only the three proven
-  pilots.
-- The next action is to run the next real role pilot or decide whether source
-  packs now need structured schema validation, a dashboard view, source-pack
-  freshness status, or a CLI validation command. Do not implement a scheduled
-  workflow until dry-run queues prove useful and a new autonomy-readiness
-  review is accepted.
+  first small machine-readable source-pack file. It now covers Research
+  Steward, External Communications, Consulting Strategy, and Software
+  Architecture.
+- `practice-os/steward/2026-05-10-software-architecture-source-policy-pilot.md`
+  records the fourth role pilot. It made Software Architecture boundary-first,
+  official-doc-aware, and runtime-authority-gated before implementation.
+- The next action is to pilot Software Engineering against the Software
+  Architecture handoff boundary or decide whether source packs now need
+  structured schema validation, a dashboard view, source-pack freshness status,
+  or a CLI validation command. Do not implement a scheduled workflow until
+  dry-run queues prove useful and a new autonomy-readiness review is accepted.
 
 ## P1 Client OS Pilot Wave
 
