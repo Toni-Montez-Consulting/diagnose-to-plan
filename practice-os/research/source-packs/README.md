@@ -26,7 +26,8 @@ V0 includes the roles proven by source-policy pilots:
 - Consulting Strategy;
 - Software Architecture;
 - Software Engineering;
-- QA / Audit.
+- QA / Audit;
+- DevOps / Infrastructure.
 
 ## Rules
 

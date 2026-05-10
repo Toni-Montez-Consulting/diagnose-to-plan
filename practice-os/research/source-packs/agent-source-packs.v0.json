@@ -747,6 +747,198 @@
         "cross-repo implementation order"
       ],
       "next_review_trigger": "first release-readiness, visual QA, security, accessibility, privacy, deploy, rollback, or go/no-go review that exposes a missing evidence type"
+    },
+    {
+      "role_id": "devops-infrastructure",
+      "role_name": "DevOps / Infrastructure Agent",
+      "source_pack_version": "0.1.0",
+      "status": "pilot_proven",
+      "last_reviewed_at": "2026-05-10",
+      "pilot_artifacts": [
+        "practice-os/steward/2026-05-10-devops-infrastructure-source-policy-pilot.md",
+        "docs/DEVOPS_INFRASTRUCTURE_SOURCE_POLICY_PILOT_2026-05-10.md",
+        "practice-os/agents/devops-infrastructure.md",
+        "docs/QA_AUDIT_SOURCE_POLICY_PILOT_2026-05-10.md",
+        "practice-os/agents/qa-audit.md",
+        "docs/SOFTWARE_ARCHITECTURE_SOURCE_POLICY_PILOT_2026-05-10.md",
+        "docs/SOFTWARE_ENGINEERING_SOURCE_POLICY_PILOT_2026-05-10.md"
+      ],
+      "primary_sources": [
+        {
+          "id": "devops-infrastructure-role",
+          "tier": 0,
+          "type": "agent_role_spec",
+          "path_or_url": "practice-os/agents/devops-infrastructure.md",
+          "use": "deployment readiness, CI/CD, environments, cloud/runtime boundaries, observability, rollback, cost, secrets posture, and operational handoff",
+          "evidence_limit": "does not authorize deploys, live config changes, cloud mutation, secrets mutation, billing, DNS, OAuth, database changes, or production readiness approval"
+        },
+        {
+          "id": "devops-infrastructure-source-policy-pilot",
+          "tier": 0,
+          "type": "internal_pilot",
+          "path_or_url": "docs/DEVOPS_INFRASTRUCTURE_SOURCE_POLICY_PILOT_2026-05-10.md",
+          "use": "runtime-evidence posture, deployment proof layers, rollback and observability standards, and mutation gates",
+          "evidence_limit": "internal-only and readiness recommendation only"
+        },
+        {
+          "id": "qa-audit-source-policy-pilot",
+          "tier": 0,
+          "type": "internal_qa_handoff",
+          "path_or_url": "docs/QA_AUDIT_SOURCE_POLICY_PILOT_2026-05-10.md",
+          "use": "go/no-go evidence, missing evidence, manual gates, residual risk, and claim-scoped proof posture",
+          "evidence_limit": "QA evidence must still be mapped to the deployment/runtime surface"
+        },
+        {
+          "id": "software-architecture-source-policy-pilot",
+          "tier": 0,
+          "type": "internal_architecture_handoff",
+          "path_or_url": "docs/SOFTWARE_ARCHITECTURE_SOURCE_POLICY_PILOT_2026-05-10.md",
+          "use": "runtime boundary, source-of-truth, ownership, schema, and cross-repo handoff context",
+          "evidence_limit": "does not authorize runtime or platform changes by itself"
+        },
+        {
+          "id": "software-engineering-source-policy-pilot",
+          "tier": 0,
+          "type": "internal_engineering_handoff",
+          "path_or_url": "docs/SOFTWARE_ENGINEERING_SOURCE_POLICY_PILOT_2026-05-10.md",
+          "use": "implementation scope, build commands, tests, CI, and engineering handoff evidence",
+          "evidence_limit": "implementation evidence is not live runtime proof"
+        },
+        {
+          "id": "repo-runtime-evidence",
+          "tier": 0,
+          "type": "repo_source",
+          "path_or_url": "repo CI/CD files, deployment configs, package scripts, env docs, build logs, release notes, monitoring notes, rollback notes, and handoff receipts",
+          "use": "direct evidence for what runtime path exists, what was exercised, and what operational gaps remain",
+          "evidence_limit": "must be checked live and proves only the exact surface exercised"
+        },
+        {
+          "id": "github-actions-run-logs",
+          "tier": 1,
+          "type": "official_ci_docs",
+          "path_or_url": "https://docs.github.com/en/actions/how-tos/monitor-workflows/use-workflow-run-logs",
+          "use": "workflow-run log review and remote CI evidence posture when GitHub Actions status matters",
+          "evidence_limit": "does not prove hosted production behavior or client approval"
+        },
+        {
+          "id": "vercel-production-checklist",
+          "tier": 1,
+          "type": "official_hosting_docs",
+          "path_or_url": "https://vercel.com/docs/production-checklist",
+          "use": "production-readiness checklist context when Vercel runtime is in scope",
+          "evidence_limit": "does not authorize deployment or production config changes"
+        },
+        {
+          "id": "supabase-database-migrations",
+          "tier": 1,
+          "type": "official_database_docs",
+          "path_or_url": "https://supabase.com/docs/guides/deployment/database-migrations",
+          "use": "database migration posture when Supabase/Postgres migration behavior is in scope",
+          "evidence_limit": "does not authorize production migrations or data writes"
+        },
+        {
+          "id": "supabase-cli-docs",
+          "tier": 1,
+          "type": "official_platform_cli_docs",
+          "path_or_url": "https://supabase.com/docs/guides/local-development/cli/getting-started",
+          "use": "Supabase CLI command posture for local or migration workflows",
+          "evidence_limit": "does not prove hosted project state without live evidence"
+        },
+        {
+          "id": "azure-well-architected-operational-excellence",
+          "tier": 1,
+          "type": "official_cloud_architecture_docs",
+          "path_or_url": "https://learn.microsoft.com/en-us/azure/well-architected/operational-excellence/",
+          "use": "operational excellence lenses when Azure runtime or migration planning is in scope",
+          "evidence_limit": "does not prove Azure adoption or authorize resource changes"
+        },
+        {
+          "id": "aws-well-architected-operational-excellence",
+          "tier": 1,
+          "type": "official_cloud_architecture_docs",
+          "path_or_url": "https://docs.aws.amazon.com/wellarchitected/latest/operational-excellence-pillar/welcome.html",
+          "use": "operational excellence lenses when AWS runtime or migration planning is in scope",
+          "evidence_limit": "does not prove AWS adoption or authorize resource changes"
+        },
+        {
+          "id": "google-cloud-operational-excellence",
+          "tier": 1,
+          "type": "official_cloud_architecture_docs",
+          "path_or_url": "https://cloud.google.com/architecture/framework/operational-excellence",
+          "use": "operational excellence lenses when Google Cloud runtime or migration planning is in scope",
+          "evidence_limit": "does not prove Google Cloud adoption or authorize resource changes"
+        },
+        {
+          "id": "nist-csf",
+          "tier": 2,
+          "type": "official_security_framework",
+          "path_or_url": "https://www.nist.gov/cyberframework",
+          "use": "security and operational-risk control lenses when infrastructure risk is in scope",
+          "evidence_limit": "does not create a compliance certification or legal assurance"
+        },
+        {
+          "id": "cis-controls",
+          "tier": 2,
+          "type": "official_security_controls",
+          "path_or_url": "https://www.cisecurity.org/controls",
+          "use": "security-control context for infrastructure hardening and operational-risk review",
+          "evidence_limit": "does not create a security assurance or compliance certification"
+        }
+      ],
+      "allowed_web_sources": [
+        "repo-local CI/CD, deployment, environment, monitoring, rollback, and handoff evidence first",
+        "Software Architecture, Software Engineering, and QA / Audit handoff artifacts",
+        "official platform, cloud, database, hosting, CI, identity, security, observability, status, provider-limit, and IaC docs",
+        "official changelogs, status pages, advisories, and limits docs when current provider behavior matters",
+        "broad search for source discovery and unfamiliar operational-risk categories only"
+      ],
+      "search_posture": {
+        "default": "repo_runtime_evidence_then_official_platform_docs",
+        "broad_web_confidence": "low_until_repo_or_primary_source_corroborated",
+        "preferred_queries": [
+          "site:<official-domain> <platform> production checklist",
+          "site:<official-domain> <platform> deployment logs",
+          "site:<official-domain> <database> migrations production",
+          "site:<official-domain> <cloud provider> operational excellence",
+          "site:<official-domain> <provider> rollback environment variables",
+          "site:<official-domain> <provider> limits quotas status"
+        ]
+      },
+      "blocked_sources": [
+        "provider marketing pages as architecture authority",
+        "invented cloud state",
+        "uninspected dashboards or logs",
+        "old dashboard memory presented as current",
+        "secrets or credentials",
+        "private client logs or infrastructure not opened by Toni",
+        "Microsoft confidential or day-job context",
+        "broad web claims used as deploy-readiness evidence",
+        "unsupported production-readiness, security, compliance, privacy, legal, or cost claims"
+      ],
+      "default_outputs": [
+        "infrastructure readiness plan",
+        "CI/CD review",
+        "deployment runbook",
+        "rollback plan",
+        "environment inventory",
+        "secret inventory without values",
+        "live-proof checklist",
+        "observability checklist",
+        "cost and operational-risk note",
+        "release-readiness handoff"
+      ],
+      "promotion_required_for": [
+        "production deploys",
+        "cloud, hosting, DNS, OAuth, billing, database, CI/CD permission, webhook, integration, or secret mutation",
+        "schema, migration, backup, restore, retention, or data-access changes",
+        "production readiness claims",
+        "public proof movement",
+        "client-facing release communication",
+        "legal, finance, compliance, privacy, security, medical, or regulated assurance",
+        "autonomy level changes",
+        "cross-repo implementation order"
+      ],
+      "next_review_trigger": "first real deploy-readiness, runtime-proof, rollback, observability, environment, secret, cost, or platform-migration review that exposes a missing evidence type"
     }
   ]
 }

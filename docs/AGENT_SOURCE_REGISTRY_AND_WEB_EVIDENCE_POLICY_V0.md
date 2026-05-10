@@ -161,7 +161,8 @@ V0 includes the roles proven by source-policy pilots:
 - Consulting Strategy;
 - Software Architecture;
 - Software Engineering;
-- QA / Audit.
+- QA / Audit;
+- DevOps / Infrastructure.
 
 Minimum fields:
 
@@ -374,12 +375,38 @@ The QA decision:
 - do not approve production release, public proof, client communication,
   legal/compliance posture, runtime behavior, or autonomy level changes.
 
+## Seventh Pilot
+
+The seventh pilot is recorded in:
+
+```text
+practice-os/steward/2026-05-10-devops-infrastructure-source-policy-pilot.md
+```
+
+It tested DevOps / Infrastructure as the runtime-evidence and mutation-gate
+layer.
+
+The DevOps decision:
+
+- start with repo-local CI/CD, deployment, environment, monitoring, rollback,
+  and handoff evidence;
+- separate local, CI, preview, staging, production, and marketplace proof;
+- use Architecture, Engineering, and QA evidence as handoff inputs;
+- use official platform, cloud, database, hosting, CI, identity, security, and
+  operational-excellence docs when current behavior matters;
+- include rollback, observability, cost, quota, maintenance, and secret
+  inventory in readiness reviews;
+- do not deploy, mutate live infrastructure, update secrets, change DNS,
+  change billing, run production migrations, or approve production readiness
+  without explicit approval.
+
 ## Open Follow-Up
 
 Next iteration:
 
-1. Pilot DevOps / Infrastructure against QA evidence for deploy, runtime,
-   rollback, environment, observability, and cost/risk gates.
-2. Decide whether the source pack needs JSON schema validation or a CLI
+1. Decide whether the source pack needs JSON schema validation or a CLI
    validation command before more roles are added.
-3. Decide whether a dashboard should show source-pack freshness by role.
+2. Decide whether a dashboard should show source-pack freshness by role.
+3. If continuing role pilots, choose Product Strategy, UX / Design, Web
+   Experience, General Counsel, Compliance, Data Architecture, Controller, or
+   another repeated-gap role.

@@ -29,6 +29,10 @@ runtime with clear evidence, rollback, and ownership.
 - `tm-skills/azure-prepare`
 - `tm-skills/azure-validate`
 - `tm-skills/azure-deploy` only after approval gates pass.
+- `docs/DEVOPS_INFRASTRUCTURE_SOURCE_POLICY_PILOT_2026-05-10.md`
+- `docs/SOFTWARE_ARCHITECTURE_SOURCE_POLICY_PILOT_2026-05-10.md`
+- `docs/SOFTWARE_ENGINEERING_SOURCE_POLICY_PILOT_2026-05-10.md`
+- `docs/QA_AUDIT_SOURCE_POLICY_PILOT_2026-05-10.md`
 - `practice-os/templates/engineering-readiness-receipt.md`
 - `practice-os/templates/connector-map.md`
 - `practice-os/templates/approval-gate.md`
@@ -43,6 +47,9 @@ runtime with clear evidence, rollback, and ownership.
 - DTP delivery, tooling stewardship, connector, and approval-gate docs.
 - Cloud or platform state only when authenticated tooling is available and the
   action is approved or read-only.
+- Official cloud, CI/CD, hosting, database, identity, security, observability,
+  status, provider-limit, and infrastructure-as-code docs when current platform
+  behavior matters.
 
 ## Allowed Writes
 
@@ -65,6 +72,39 @@ Every recommendation should answer:
 5. What rollback or kill switch exists?
 6. What ongoing cost, monitoring, or maintenance risk exists?
 7. What human approval is needed before mutation?
+
+## Source Posture
+
+Start with the owning repo and the runtime claim.
+
+Use:
+
+- repo-local CI/CD files, deployment configs, package scripts, environment
+  docs, logs, monitoring notes, release notes, and handoff receipts;
+- Software Architecture evidence for runtime boundaries, ownership,
+  source-of-truth, and cross-repo decisions;
+- Software Engineering evidence for implementation scope, build commands, and
+  test results;
+- QA / Audit evidence for go/no-go posture, missing evidence, manual gates, and
+  residual risk;
+- official platform, cloud, database, CI, hosting, identity, security,
+  observability, status, provider-limit, and IaC docs when current behavior
+  matters;
+- broad web search only to find official sources or unfamiliar risk categories.
+
+Do not use provider marketing pages, broad search snippets, or old dashboard
+memory as deployment authority.
+
+## Source-Gated Operating Rules
+
+- Separate local, CI, preview, staging, production, and marketplace proof.
+- Name the environment, artifact or commit, command/log/dashboard, and
+  unverified surfaces for every readiness claim.
+- Inventory required secrets by name and storage boundary, never by value.
+- Treat rollback, restore, kill switch, monitoring, alerting, and cost posture
+  as readiness evidence.
+- Keep live mutation blocked until Toni explicitly approves the specific
+  action.
 
 ## Tone Rules
 

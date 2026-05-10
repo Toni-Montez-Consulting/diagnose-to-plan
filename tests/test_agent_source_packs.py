@@ -25,6 +25,7 @@ def test_agent_source_packs_v0_contract(repo_root: Path) -> None:
         "software-architecture",
         "software-engineering",
         "qa-audit",
+        "devops-infrastructure",
     }
 
     for pack in payload["packs"]:
@@ -104,3 +105,26 @@ def test_agent_source_packs_v0_contract(repo_root: Path) -> None:
         source["id"] == "owasp-wstg" for source in qa_audit["primary_sources"]
     )
     assert any(source["id"] == "wcag-22" for source in qa_audit["primary_sources"])
+
+    devops = next(
+        pack for pack in payload["packs"] if pack["role_id"] == "devops-infrastructure"
+    )
+    assert "production deploys" in devops["promotion_required_for"]
+    assert (
+        "cloud, hosting, DNS, OAuth, billing, database, CI/CD permission, webhook, "
+        "integration, or secret mutation"
+    ) in devops["promotion_required_for"]
+    assert "production readiness claims" in devops["promotion_required_for"]
+    assert any(
+        source["id"] == "devops-infrastructure-source-policy-pilot"
+        for source in devops["primary_sources"]
+    )
+    assert any(
+        source["id"] == "vercel-production-checklist"
+        for source in devops["primary_sources"]
+    )
+    assert any(
+        source["id"] == "supabase-database-migrations"
+        for source in devops["primary_sources"]
+    )
+    assert any(source["id"] == "nist-csf" for source in devops["primary_sources"])
