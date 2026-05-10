@@ -142,10 +142,10 @@ the ambition without treating every role as autonomous or live.
 
 ## Source-Pack Rules
 
-Machine-readable source packs should come later after this policy proves useful
-in real workflows.
+Machine-readable source packs encode this policy after real role workflows prove
+the shape.
 
-Expected future location:
+Current V0 location:
 
 ```text
 practice-os/research/source-packs/agent-source-packs.v0.json
@@ -153,6 +153,12 @@ practice-os/research/source-packs/agent-source-packs.v0.json
 
 The source-pack file should not add new authority. It should encode this policy
 for tools, dashboards, stewards, and future automation.
+
+V0 includes only the three roles proven by source-policy pilots:
+
+- Research Steward / Research Arm;
+- External Communications;
+- Consulting Strategy.
 
 Minimum fields:
 
@@ -307,8 +313,8 @@ The strategy decision:
 
 Next iteration:
 
-1. Create the first machine-readable source-pack file from the three proven
-   pilots: Research Steward, External Communications, and Consulting Strategy.
-2. Add role-specific source examples to the active role specs when repeated use
+1. Add role-specific source examples to the active role specs when repeated use
    proves which sources are actually helpful.
-3. Decide whether a dashboard should show source-pack freshness by role.
+2. Decide whether a dashboard should show source-pack freshness by role.
+3. Decide whether V0 needs a JSON schema or CLI validation command after the
+   next role pilot.

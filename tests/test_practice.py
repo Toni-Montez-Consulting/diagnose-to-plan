@@ -55,4 +55,5 @@ def test_practice_doctor_passes_repo_contract(repo_root: Path) -> None:
     assert any("doc PRACTICE_OPERATING_REVIEW_LOOP_V0.md" in check for check in result.checks)
     assert any("kaizen README.md" in check for check in result.checks)
     assert any("kaizen intake.jsonl" in check for check in result.checks)
+    assert any("source pack agent-source-packs.v0.json" in check for check in result.checks)
     assert any("practice skill diagnose" in check for check in result.checks)
