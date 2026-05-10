@@ -24,7 +24,8 @@ V0 includes the roles proven by source-policy pilots:
 - Research Steward / Research Arm;
 - External Communications;
 - Consulting Strategy;
-- Software Architecture.
+- Software Architecture;
+- Software Engineering.
 
 ## Rules
 

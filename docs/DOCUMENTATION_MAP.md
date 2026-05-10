@@ -52,6 +52,9 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
 - `decisions/0018-software-architecture-source-pack.md`: accepted decision for
   promoting Software Architecture into the source-pack file after its
   boundary-first source-policy pilot.
+- `decisions/0019-software-engineering-source-pack.md`: accepted decision for
+  promoting Software Engineering into the source-pack file after its
+  repo-grounded implementation source-policy pilot.
 - `docs/source/practice_os_build_spec_v0_1.md`: additive source spec for the Practice OS capture -> learn loop and MVP modules. Preserve it; convert it into integration docs/templates/backlog items instead of editing it directly.
 - `docs/source/ai_implementation_layer_thesis_and_build_spec_v0_1.md`: additive company thesis and implementation-layer source material. Preserve its strategic language and use it as source for positioning, offer design, client discovery, and internal product development.
 - `database/schema/practice_os_schema_v0_1.sql`: additive starter schema source for future Practice OS records. Do not run it as a migration until it is reconciled with Hosted DTP Phase 0.
@@ -105,6 +108,10 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
 - `docs/SOFTWARE_ARCHITECTURE_SOURCE_POLICY_PILOT_2026-05-10.md`: internal
   Software Architecture pilot for boundary-first source posture, official-docs
   use, runtime-authority gates, and implementation handoff boundaries.
+- `docs/SOFTWARE_ENGINEERING_SOURCE_POLICY_PILOT_2026-05-10.md`: internal
+  Software Engineering pilot for implementation authority, repo-first source
+  posture, architecture escalation, official tool-doc use, and verification
+  gates.
 - `docs/PRACTICE_HOMEPAGE_START_AND_BLUEPRINT_COPY_LOCK.md`: locked internal
   source for the next consulting homepage, `/start`, proof-card, and Blueprint
   copy pass. Use before implementing public offer copy.
@@ -164,9 +171,9 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
 - `practice-os/research/source-packs/agent-source-packs.v0.json`: first
   machine-readable source-pack file for pilot-proven agent roles, including
   Research Steward, External Communications, Consulting Strategy, and Software
-  Architecture. It encodes source posture, allowed web sources, blocked
-  sources, default outputs, and promotion gates without granting runtime
-  authority.
+  Architecture, and Software Engineering. It encodes source posture, allowed
+  web sources, blocked sources, default outputs, and promotion gates without
+  granting runtime authority.
 - `practice-os/fixtures/consulting-intelligence/northline-performance-studio-blueprint-sample.md`:
   public-safe fictional Blueprint sample for a wellness/performance practice.
 - `docs/OFFER_LED_PRACTICE_PACKAGING.md`: internal offer-packaging source for the first sellable practice offers. Use it before changing `consulting` public copy around offers.

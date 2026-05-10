@@ -468,6 +468,148 @@
         "public or client-facing architecture claims"
       ],
       "next_review_trigger": "first real architecture review that changes runtime, schema, cross-repo boundary, hosted DTP plan, or implementation handoff"
+    },
+    {
+      "role_id": "software-engineering",
+      "role_name": "Software Engineering Agent",
+      "source_pack_version": "0.1.0",
+      "status": "pilot_proven",
+      "last_reviewed_at": "2026-05-10",
+      "pilot_artifacts": [
+        "practice-os/steward/2026-05-10-software-engineering-source-policy-pilot.md",
+        "docs/SOFTWARE_ENGINEERING_SOURCE_POLICY_PILOT_2026-05-10.md",
+        "practice-os/agents/software-engineering.md",
+        "docs/SOFTWARE_ARCHITECTURE_SOURCE_POLICY_PILOT_2026-05-10.md",
+        "practice-os/agents/software-architecture.md"
+      ],
+      "primary_sources": [
+        {
+          "id": "software-engineering-role",
+          "tier": 0,
+          "type": "agent_role_spec",
+          "path_or_url": "practice-os/agents/software-engineering.md",
+          "use": "scoped implementation, repo-grounded code changes, test selection, integration safety, and technical handoff",
+          "evidence_limit": "does not authorize production writes, deploys, schema changes, or cross-repo churn"
+        },
+        {
+          "id": "software-engineering-source-policy-pilot",
+          "tier": 0,
+          "type": "internal_pilot",
+          "path_or_url": "docs/SOFTWARE_ENGINEERING_SOURCE_POLICY_PILOT_2026-05-10.md",
+          "use": "repo-grounded source posture, coding authority rule, escalation gates, and verification ladder",
+          "evidence_limit": "internal-only and implementation-scope only"
+        },
+        {
+          "id": "software-architecture-source-policy-pilot",
+          "tier": 0,
+          "type": "internal_architecture_handoff",
+          "path_or_url": "docs/SOFTWARE_ARCHITECTURE_SOURCE_POLICY_PILOT_2026-05-10.md",
+          "use": "boundary-first handoff rule for runtime, schema, source-of-truth, autonomy, and cross-repo changes",
+          "evidence_limit": "does not authorize implementation by itself"
+        },
+        {
+          "id": "repo-local-instructions",
+          "tier": 0,
+          "type": "repo_source",
+          "path_or_url": "repo AGENTS.md, .repo.yml, package scripts, tests, docs, CI, and recent commits",
+          "use": "owning repo behavior, local constraints, command surface, and nearby implementation patterns",
+          "evidence_limit": "must be checked live in the owning repo before implementation"
+        },
+        {
+          "id": "github-actions-workflow-syntax",
+          "tier": 1,
+          "type": "official_ci_docs",
+          "path_or_url": "https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions",
+          "use": "current GitHub Actions workflow syntax and CI behavior when CI changes are in scope",
+          "evidence_limit": "does not authorize CI mutation without repo scope and verification"
+        },
+        {
+          "id": "pytest-getting-started",
+          "tier": 1,
+          "type": "official_test_framework_docs",
+          "path_or_url": "https://docs.pytest.org/en/stable/getting-started.html",
+          "use": "pytest command behavior and test expectations when Python test behavior is in scope",
+          "evidence_limit": "does not replace repo-specific tests or fixtures"
+        },
+        {
+          "id": "ruff-linter-docs",
+          "tier": 1,
+          "type": "official_linter_docs",
+          "path_or_url": "https://docs.astral.sh/ruff/linter/",
+          "use": "Ruff lint behavior and configuration expectations when Python linting is in scope",
+          "evidence_limit": "does not override repo pyproject configuration"
+        },
+        {
+          "id": "npm-package-json-docs",
+          "tier": 1,
+          "type": "official_package_manager_docs",
+          "path_or_url": "https://docs.npmjs.com/cli/v11/configuring-npm/package-json",
+          "use": "package metadata and scripts structure when Node package behavior is in scope",
+          "evidence_limit": "does not authorize dependency changes or package publication"
+        },
+        {
+          "id": "npm-scripts-docs",
+          "tier": 1,
+          "type": "official_package_manager_docs",
+          "path_or_url": "https://docs.npmjs.com/cli/v11/using-npm/scripts/",
+          "use": "npm script lifecycle behavior when package scripts or build commands are in scope",
+          "evidence_limit": "does not authorize dependency, build, or release changes by itself"
+        }
+      ],
+      "allowed_web_sources": [
+        "repo-local instructions, scripts, tests, CI, and nearby code first",
+        "DTP source-of-truth docs when practice, proof, client, or cross-repo scope is involved",
+        "Software Architecture handoff artifacts for boundary changes",
+        "official library, framework, package-manager, CI, and tool docs",
+        "official changelogs and security advisories when dependency behavior matters",
+        "official platform docs when implementation depends on current platform behavior",
+        "broad search for source discovery, examples, and failure-mode research only"
+      ],
+      "search_posture": {
+        "default": "repo_first_then_official_tool_docs",
+        "broad_web_confidence": "low_until_repo_or_official_corroborated",
+        "preferred_queries": [
+          "site:<official-domain> <library> docs <feature>",
+          "site:<official-domain> <tool> changelog <version>",
+          "site:<official-domain> <framework> migration <feature>",
+          "<package> security advisory official",
+          "<error message> official docs"
+        ]
+      },
+      "blocked_sources": [
+        "generic Stack Overflow or forum answers as authority",
+        "AI-generated code without source trail or repo fit",
+        "blog snippets copied without understanding",
+        "private client code or logs not opened by Toni",
+        "secrets or credentials",
+        "Microsoft confidential or day-job context",
+        "dependency examples that conflict with local repo patterns",
+        "broad web claims used to justify framework adoption"
+      ],
+      "default_outputs": [
+        "scoped implementation plan",
+        "code/docs/scripts/tests patch",
+        "test plan",
+        "verification summary",
+        "engineering readiness receipt",
+        "PR body",
+        "handoff note",
+        "bug-risk note"
+      ],
+      "promotion_required_for": [
+        "production writes",
+        "deploys",
+        "schema or migration changes",
+        "runtime behavior",
+        "database, cloud, DNS, OAuth, billing, or secret mutation",
+        "payment, subscription, entitlement, auth, account recovery, or privacy behavior",
+        "cross-repo orchestration",
+        "new framework or platform adoption",
+        "autonomy level changes",
+        "public proof",
+        "client communication"
+      ],
+      "next_review_trigger": "first implementation pass that exposes a missing escalation rule, cross-repo handoff, or verification evidence gap"
     }
   ]
 }

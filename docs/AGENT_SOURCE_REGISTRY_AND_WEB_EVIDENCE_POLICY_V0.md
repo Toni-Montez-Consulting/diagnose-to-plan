@@ -159,7 +159,8 @@ V0 includes the roles proven by source-policy pilots:
 - Research Steward / Research Arm;
 - External Communications;
 - Consulting Strategy;
-- Software Architecture.
+- Software Architecture;
+- Software Engineering.
 
 Minimum fields:
 
@@ -330,11 +331,32 @@ The architecture decision:
 - require approval before schema, runtime, cloud, cross-repo, or autonomy
   changes.
 
+## Fifth Pilot
+
+The fifth pilot is recorded in:
+
+```text
+practice-os/steward/2026-05-10-software-engineering-source-policy-pilot.md
+```
+
+It tested Software Engineering as the repo-grounded implementation layer.
+
+The engineering decision:
+
+- code can move when Toni approved implementation, the owning repo is clear,
+  and the change stays inside scope;
+- repo instructions, nearby patterns, package scripts, tests, CI, and recent
+  commits are the first implementation sources;
+- official docs clarify current tool behavior;
+- architecture handoff is required before source-of-truth, schema, runtime,
+  autonomy, or cross-repo changes;
+- green local checks are implementation evidence, not live production proof.
+
 ## Open Follow-Up
 
 Next iteration:
 
-1. Pilot Software Engineering against this architecture handoff boundary.
+1. Pilot QA / Audit against Software Engineering's verification outputs.
 2. Decide whether the source pack needs JSON schema validation or a CLI
    validation command before more roles are added.
 3. Decide whether a dashboard should show source-pack freshness by role.

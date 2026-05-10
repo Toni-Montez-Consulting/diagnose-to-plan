@@ -23,6 +23,7 @@ def test_agent_source_packs_v0_contract(repo_root: Path) -> None:
         "external-communications",
         "consulting-strategy",
         "software-architecture",
+        "software-engineering",
     }
 
     for pack in payload["packs"]:
@@ -65,4 +66,23 @@ def test_agent_source_packs_v0_contract(repo_root: Path) -> None:
     assert any(
         source["id"] == "vercel-production-checklist"
         for source in software_architecture["primary_sources"]
+    )
+
+    software_engineering = next(
+        pack for pack in payload["packs"] if pack["role_id"] == "software-engineering"
+    )
+    assert "production writes" in software_engineering["promotion_required_for"]
+    assert "deploys" in software_engineering["promotion_required_for"]
+    assert "cross-repo orchestration" in software_engineering["promotion_required_for"]
+    assert any(
+        source["id"] == "software-engineering-source-policy-pilot"
+        for source in software_engineering["primary_sources"]
+    )
+    assert any(
+        source["id"] == "github-actions-workflow-syntax"
+        for source in software_engineering["primary_sources"]
+    )
+    assert any(
+        source["id"] == "pytest-getting-started"
+        for source in software_engineering["primary_sources"]
     )
