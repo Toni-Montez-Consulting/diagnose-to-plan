@@ -24,6 +24,7 @@ def test_agent_source_packs_v0_contract(repo_root: Path) -> None:
         "consulting-strategy",
         "software-architecture",
         "software-engineering",
+        "qa-audit",
     }
 
     for pack in payload["packs"]:
@@ -86,3 +87,20 @@ def test_agent_source_packs_v0_contract(repo_root: Path) -> None:
         source["id"] == "pytest-getting-started"
         for source in software_engineering["primary_sources"]
     )
+
+    qa_audit = next(pack for pack in payload["packs"] if pack["role_id"] == "qa-audit")
+    assert "production release approval" in qa_audit["promotion_required_for"]
+    assert "public proof movement" in qa_audit["promotion_required_for"]
+    assert "client-facing claims or communication" in qa_audit["promotion_required_for"]
+    assert any(
+        source["id"] == "qa-audit-source-policy-pilot"
+        for source in qa_audit["primary_sources"]
+    )
+    assert any(
+        source["id"] == "playwright-best-practices"
+        for source in qa_audit["primary_sources"]
+    )
+    assert any(
+        source["id"] == "owasp-wstg" for source in qa_audit["primary_sources"]
+    )
+    assert any(source["id"] == "wcag-22" for source in qa_audit["primary_sources"])

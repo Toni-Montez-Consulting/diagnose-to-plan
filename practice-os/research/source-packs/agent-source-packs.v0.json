@@ -610,6 +610,143 @@
         "client communication"
       ],
       "next_review_trigger": "first implementation pass that exposes a missing escalation rule, cross-repo handoff, or verification evidence gap"
+    },
+    {
+      "role_id": "qa-audit",
+      "role_name": "QA / Audit Agent",
+      "source_pack_version": "0.1.0",
+      "status": "pilot_proven",
+      "last_reviewed_at": "2026-05-10",
+      "pilot_artifacts": [
+        "practice-os/steward/2026-05-10-qa-audit-source-policy-pilot.md",
+        "docs/QA_AUDIT_SOURCE_POLICY_PILOT_2026-05-10.md",
+        "practice-os/agents/qa-audit.md",
+        "docs/SOFTWARE_ENGINEERING_SOURCE_POLICY_PILOT_2026-05-10.md",
+        "practice-os/agents/software-engineering.md"
+      ],
+      "primary_sources": [
+        {
+          "id": "qa-audit-role",
+          "tier": 0,
+          "type": "agent_role_spec",
+          "path_or_url": "practice-os/agents/qa-audit.md",
+          "use": "verification strategy, regression risk, release readiness, acceptance checks, quality gates, and go/no-go language",
+          "evidence_limit": "does not authorize production release, public proof, client communication, legal/compliance approval, or runtime action"
+        },
+        {
+          "id": "qa-audit-source-policy-pilot",
+          "tier": 0,
+          "type": "internal_pilot",
+          "path_or_url": "docs/QA_AUDIT_SOURCE_POLICY_PILOT_2026-05-10.md",
+          "use": "claim-scoped evidence posture, manual gate separation, residual-risk language, and approval boundaries",
+          "evidence_limit": "internal-only and go/no-go recommendation only"
+        },
+        {
+          "id": "software-engineering-source-policy-pilot",
+          "tier": 0,
+          "type": "internal_engineering_handoff",
+          "path_or_url": "docs/SOFTWARE_ENGINEERING_SOURCE_POLICY_PILOT_2026-05-10.md",
+          "use": "implementation evidence, verification ladder, escalation boundaries, and engineering readiness context",
+          "evidence_limit": "engineering evidence must still be matched to the QA claim being made"
+        },
+        {
+          "id": "repo-verification-evidence",
+          "tier": 0,
+          "type": "repo_source",
+          "path_or_url": "repo tests, CI logs, build output, screenshots, route checks, diffs, docs, and handoff receipts",
+          "use": "direct evidence for what was exercised, what passed, what failed, and what remains unproven",
+          "evidence_limit": "must be checked live and proves only the exact surface exercised"
+        },
+        {
+          "id": "playwright-best-practices",
+          "tier": 1,
+          "type": "official_browser_test_docs",
+          "path_or_url": "https://playwright.dev/docs/best-practices",
+          "use": "browser, route, locator, and user-visible testing posture when visual or interaction behavior is in scope",
+          "evidence_limit": "does not replace repo-specific screenshots, routes, or acceptance checks"
+        },
+        {
+          "id": "pytest-how-to",
+          "tier": 1,
+          "type": "official_test_framework_docs",
+          "path_or_url": "https://docs.pytest.org/en/stable/how-to/index.html",
+          "use": "pytest behavior, fixtures, and test posture when Python test evidence is in scope",
+          "evidence_limit": "does not replace local test output or repo fixtures"
+        },
+        {
+          "id": "github-actions-run-logs",
+          "tier": 1,
+          "type": "official_ci_docs",
+          "path_or_url": "https://docs.github.com/en/actions/how-tos/monitor-workflows/use-workflow-run-logs",
+          "use": "workflow-run log review and remote CI evidence posture when GitHub Actions status matters",
+          "evidence_limit": "does not prove hosted production behavior or client approval"
+        },
+        {
+          "id": "owasp-wstg",
+          "tier": 2,
+          "type": "official_security_testing_guide",
+          "path_or_url": "https://owasp.org/www-project-web-security-testing-guide/",
+          "use": "security testing lenses and risk categories when security claims are in scope",
+          "evidence_limit": "does not create a security assurance or compliance certification"
+        },
+        {
+          "id": "wcag-22",
+          "tier": 2,
+          "type": "accessibility_standard",
+          "path_or_url": "https://www.w3.org/TR/WCAG22/",
+          "use": "accessibility evidence posture when accessibility or inclusive UX claims are in scope",
+          "evidence_limit": "does not prove full accessibility conformance without scoped testing"
+        }
+      ],
+      "allowed_web_sources": [
+        "acceptance criteria, repo state, diffs, tests, CI, logs, screenshots, route checks, and handoff receipts first",
+        "Software Engineering evidence and implementation receipts",
+        "official test-framework, browser automation, CI, platform, security, accessibility, and standards docs",
+        "official changelogs and security advisories when current tool or risk behavior matters",
+        "broad search for source discovery and unfamiliar risk categories only"
+      ],
+      "search_posture": {
+        "default": "evidence_first_then_official_quality_sources",
+        "broad_web_confidence": "low_until_repo_or_primary_source_corroborated",
+        "preferred_queries": [
+          "site:<official-domain> <test tool> docs <behavior>",
+          "site:<official-domain> <platform> logs <workflow>",
+          "site:owasp.org <risk topic> testing guide",
+          "site:w3.org WCAG <accessibility topic>",
+          "<error message> official docs"
+        ]
+      },
+      "blocked_sources": [
+        "invented test results",
+        "invented CI status",
+        "invented screenshots",
+        "uninspected logs or screenshots",
+        "stale CI presented as current",
+        "private client material not opened by Toni",
+        "secrets or credentials",
+        "broad web claims used as go/no-go evidence",
+        "unsupported accessibility, security, privacy, legal, compliance, or production-readiness claims"
+      ],
+      "default_outputs": [
+        "review findings",
+        "verification plan",
+        "go/no-go note",
+        "release-readiness receipt",
+        "acceptance checklist",
+        "risk register",
+        "residual-risk summary",
+        "process-miss or performance-gap review"
+      ],
+      "promotion_required_for": [
+        "production release approval",
+        "public proof movement",
+        "client-facing claims or communication",
+        "legal, finance, compliance, privacy, security, medical, or regulated assurance",
+        "deployment, database, cloud, DNS, OAuth, billing, or secret mutation",
+        "autonomy level changes",
+        "cross-repo implementation order"
+      ],
+      "next_review_trigger": "first release-readiness, visual QA, security, accessibility, privacy, deploy, rollback, or go/no-go review that exposes a missing evidence type"
     }
   ]
 }

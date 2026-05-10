@@ -160,7 +160,8 @@ V0 includes the roles proven by source-policy pilots:
 - External Communications;
 - Consulting Strategy;
 - Software Architecture;
-- Software Engineering.
+- Software Engineering;
+- QA / Audit.
 
 Minimum fields:
 
@@ -352,11 +353,33 @@ The engineering decision:
   autonomy, or cross-repo changes;
 - green local checks are implementation evidence, not live production proof.
 
+## Sixth Pilot
+
+The sixth pilot is recorded in:
+
+```text
+practice-os/steward/2026-05-10-qa-audit-source-policy-pilot.md
+```
+
+It tested QA / Audit as the evidence-to-claim layer.
+
+The QA decision:
+
+- start with the exact claim being made;
+- match tests, CI, logs, screenshots, route checks, and receipts to that claim;
+- separate verified passes, confirmed failures, manual gates, missing evidence,
+  residual risk, and queued follow-up;
+- use official testing, browser, CI, security, accessibility, and platform docs
+  when the claim depends on current tool or standard behavior;
+- do not approve production release, public proof, client communication,
+  legal/compliance posture, runtime behavior, or autonomy level changes.
+
 ## Open Follow-Up
 
 Next iteration:
 
-1. Pilot QA / Audit against Software Engineering's verification outputs.
+1. Pilot DevOps / Infrastructure against QA evidence for deploy, runtime,
+   rollback, environment, observability, and cost/risk gates.
 2. Decide whether the source pack needs JSON schema validation or a CLI
    validation command before more roles are added.
 3. Decide whether a dashboard should show source-pack freshness by role.
