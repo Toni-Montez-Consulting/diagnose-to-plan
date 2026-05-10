@@ -36,6 +36,9 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
   recurring Practice Operating Review Loop that turns Kaizen, evolution,
   memory, research, KB-event, status, and autonomy signals into explicit
   decisions and next actions.
+- `decisions/0014-research-source-freshness-dry-run.md`: accepted decision for
+  the first Research source freshness dry-run surface. Use it before building a
+  source freshness command, sweep, queue, scheduled workflow, or crawler.
 - `docs/source/practice_os_build_spec_v0_1.md`: additive source spec for the Practice OS capture -> learn loop and MVP modules. Preserve it; convert it into integration docs/templates/backlog items instead of editing it directly.
 - `docs/source/ai_implementation_layer_thesis_and_build_spec_v0_1.md`: additive company thesis and implementation-layer source material. Preserve its strategic language and use it as source for positioning, offer design, client discovery, and internal product development.
 - `database/schema/practice_os_schema_v0_1.sql`: additive starter schema source for future Practice OS records. Do not run it as a migration until it is reconciled with Hosted DTP Phase 0.
@@ -98,6 +101,9 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
   observations into reusable consulting pattern candidates.
 - `practice-os/templates/research-decision-record.md`: simple adopt, pilot,
   watch, reject, or park record for source-backed research decisions.
+- `practice-os/templates/research-source-freshness-item.md`: promoted reviewed
+  item template for source freshness findings that should survive beyond raw
+  ignored dry-run output.
 - `practice-os/templates/knowledge-base-event-record.md`: simple event record
   for knowledge-base maintenance across research, memory, operations, project
   execution, client signals, proof, and agent-system misses.
@@ -122,6 +128,9 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
   and practical/ambitious path framing.
 - `practice-os/research/pattern-candidates/`: generated research and
   field-observation pattern candidates.
+- `practice-os/research/source-freshness/`: reviewed Research source freshness
+  records promoted from ignored dry-run output. Raw run output belongs under
+  ignored `outputs/research-source-freshness/`.
 - `practice-os/fixtures/consulting-intelligence/northline-performance-studio-blueprint-sample.md`:
   public-safe fictional Blueprint sample for a wellness/performance practice.
 - `docs/OFFER_LED_PRACTICE_PACKAGING.md`: internal offer-packaging source for the first sellable practice offers. Use it before changing `consulting` public copy around offers.
@@ -139,6 +148,10 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
   Arm source list. Use it when Toni asks what sources to watch, forwards a
   research signal, needs evidence for an AI/platform/workflow claim, or wants
   current source candidates without creating an autonomous research crawler.
+- `docs/RESEARCH_SOURCE_FRESHNESS_DRY_RUN_V0.md`: dry-run specification for
+  checking a narrow approved source subset and producing reviewable source
+  freshness findings. Use it before any scheduled source sweep, crawler, digest
+  automation, source monitor, or research-source freshness command.
 - `docs/OPPORTUNITY_OS_V0.md`: relationship-led consulting growth system for
   warm opportunities, referral paths, fit scoring, capacity protection, and
   sanitized Notion mirror fields. Use it before creating any private
@@ -345,6 +358,11 @@ Do not update `hub-prompts` or `hub-registry` just because the roadmap changes. 
   `practice-os/templates/research-decision-record.md` when Toni asks for a
   recurring source list, current AI/news/source candidates, or a reviewed
   adopt/pilot/watch/reject/park decision from a research signal.
+- Use `docs/RESEARCH_SOURCE_FRESHNESS_DRY_RUN_V0.md` and
+  `practice-os/templates/research-source-freshness-item.md` when Toni asks for
+  source freshness, a source sweep, source monitor, research-source dry run,
+  stale research checks, keeping research current, or a scheduled research
+  source workflow. The default output is a review queue, not an action.
 - Use `docs/KNOWLEDGE_BASE_EVENT_WORKFLOWS_V0.md` and
   `practice-os/templates/knowledge-base-event-record.md` when Toni says a
   knowledge base, operating pattern, memory-management practice, project

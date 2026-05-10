@@ -54,11 +54,13 @@ REQUIRED_TEMPLATES = (
     "knowledge-base-event-record.md",
     "research-decision-record.md",
     "research-pattern-candidate.md",
+    "research-source-freshness-item.md",
 )
 REQUIRED_DOCS = (
     "PRACTICE_KAIZEN_KANBAN_SYSTEM.md",
     "PRACTICE_EVOLUTION_SYSTEM_V0.md",
     "RESEARCH_ARM_SOURCE_LIST_V0.md",
+    "RESEARCH_SOURCE_FRESHNESS_DRY_RUN_V0.md",
     "KNOWLEDGE_BASE_EVENT_WORKFLOWS_V0.md",
     "AUTONOMY_READINESS_LADDER_V0.md",
     "PRACTICE_OPERATING_REVIEW_LOOP_V0.md",

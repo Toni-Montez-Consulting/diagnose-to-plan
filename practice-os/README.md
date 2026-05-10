@@ -62,6 +62,8 @@ Practice Evolution System:
   `dtp evolution new`.
 - `research/pattern-candidates/` holds generated Research Arm pattern
   candidates from `dtp evolution new --kind research-pattern`.
+- `research/source-freshness/` holds reviewed Research source freshness items
+  promoted from ignored dry-run queues.
 - V0 is human-gated: capture broadly, promote deliberately, and do not treat raw
   capture as reusable playbook memory.
 
@@ -117,6 +119,8 @@ Future Intelligence templates:
 - `templates/research-pattern-candidate.md` turns research signals, field notes,
   and observed business behavior into possible operator patterns before
   promotion into `patterns/`.
+- `templates/research-source-freshness-item.md` captures reviewed source
+  freshness findings after the dry-run queue is human reviewed.
 - `templates/lesson-capture.md` turns delivery outcomes and failures into reusable lessons.
 - `templates/research-radar-item.md` tracks AI/dev signals as `Adopt`, `Pilot`, `Watch`, or `Reject`.
 - `templates/research-spike.md` scopes a bounded tool/protocol/framework investigation.
