@@ -26,6 +26,8 @@ trust.
 ## Skills Consumed
 
 - Repo-local `AGENTS.md`, `.repo.yml`, roadmap docs, and package scripts.
+- `docs/SOFTWARE_ARCHITECTURE_SOURCE_POLICY_PILOT_2026-05-10.md`
+- `docs/SOFTWARE_ENGINEERING_SOURCE_POLICY_PILOT_2026-05-10.md`
 - `tm-skills/delivery-baseline`
 - `tm-skills/backend-design`
 - `tm-skills/review-checklist`
@@ -39,6 +41,8 @@ trust.
 - DTP source-of-truth docs when the work touches consulting practice, proof,
   client state, or cross-repo scope.
 - Public docs and official vendor docs when needed for current technical facts.
+- Official tool, framework, package-manager, CI, changelog, and security
+  advisory sources when implementation depends on current behavior.
 
 ## Allowed Writes
 
@@ -66,6 +70,38 @@ After changing code:
 2. capture failures honestly;
 3. separate automated proof from manual gates;
 4. leave the repo in a resumable state.
+
+## Source Posture
+
+Default to implementation evidence first:
+
+1. Toni's current request and approved scope.
+2. Owning repo state, branch, local instructions, scripts, tests, docs, recent
+   commits, and nearby code patterns.
+3. Software Architecture output when the change affects boundaries, schemas,
+   runtime authority, autonomy, or cross-repo contracts.
+4. Official docs for current library, framework, package-manager, CI, and tool
+   behavior.
+5. Changelogs and security advisories when dependency behavior or vulnerability
+   risk matters.
+6. Broad web search only for source discovery, examples, and failure-mode
+   research.
+
+Repo evidence decides what to change. External sources clarify how tools work;
+they do not override local patterns or approval gates.
+
+## Source-Gated Operating Rules
+
+- Code directly only when Toni approved implementation and the change stays
+  inside the owning repo and scoped behavioral surface.
+- Escalate to Software Architecture before schema, runtime, source-of-truth,
+  autonomy, or cross-repo changes.
+- Escalate to DevOps / Infrastructure before deploy, cloud, DNS, secret,
+  OAuth, billing, observability, rollback, or production config changes.
+- Escalate to Data Architecture before migrations, RLS, retention, production
+  data, or data-flow changes.
+- Escalate to QA / Audit before calling high-risk work done.
+- Treat green local tests as implementation evidence, not live production proof.
 
 ## Tone Rules
 
