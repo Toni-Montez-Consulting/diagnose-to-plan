@@ -42,6 +42,10 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
 - `decisions/0015-research-source-freshness-local-command.md`: accepted
   decision for the local `dtp research source-freshness` command that writes
   ignored review queues from notes, URLs, optional fetches, and search packets.
+- `decisions/0016-agent-source-registry-web-evidence-policy.md`: accepted
+  decision for letting all current and future agent roles use web search under
+  a role-level source registry, evidence tiers, and human-gated promotion
+  policy.
 - `docs/source/practice_os_build_spec_v0_1.md`: additive source spec for the Practice OS capture -> learn loop and MVP modules. Preserve it; convert it into integration docs/templates/backlog items instead of editing it directly.
 - `docs/source/ai_implementation_layer_thesis_and_build_spec_v0_1.md`: additive company thesis and implementation-layer source material. Preserve its strategic language and use it as source for positioning, offer design, client discovery, and internal product development.
 - `database/schema/practice_os_schema_v0_1.sql`: additive starter schema source for future Practice OS records. Do not run it as a migration until it is reconciled with Hosted DTP Phase 0.
@@ -175,6 +179,10 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
   receipts, consulting proof/offer pilot routing, specialized first-wave role
   specs, and future hosted DTP squad records. External Squad/SuperClaude-style
   frameworks stay inspiration-only.
+- `docs/AGENT_SOURCE_REGISTRY_AND_WEB_EVIDENCE_POLICY_V0.md`: DTP-owned source
+  registry and web-evidence policy for current and future agent roles. Use it
+  when a role, function, or squad needs web search, credible external sources,
+  evidence tiers, source-freshness promotion, or a future source-pack boundary.
 - `practice-os/steward/2026-05-09-first-wave-agent-role-pilot-consulting-site.md`:
   first public-safe pilot receipt for applying the first-wave specialized roles
   to the consulting site, `/start`, `/blueprint`, and builder-led offer posture.
@@ -408,6 +416,11 @@ Do not update `hub-prompts` or `hub-registry` just because the roadmap changes. 
   squads, agent teams, knowledge bases, business justification, approval gates,
   handoff receipts, or source-indexed squad work. Consulting may point to this
   doc, but DTP remains the source of truth.
+- Use `docs/AGENT_SOURCE_REGISTRY_AND_WEB_EVIDENCE_POLICY_V0.md` when a prompt
+  asks whether agents can search the web, what credible sources a role should
+  use, how broad search should be trusted, how source packs should be shaped,
+  or how web evidence can be promoted into research, memory, messaging,
+  architecture, product, client, legal, finance, or operations artifacts.
 - Use `docs/PRACTICE_OPERATING_SYSTEM_STRATEGIC_BACKLOG.md` and
   `docs/CLIENT_OS_PILOT_WAVE_2026-05.md` when Toni asks to organize the
   practice OS, pick the next client/operator loop, or sequence Greg, CCAAP, Cam,

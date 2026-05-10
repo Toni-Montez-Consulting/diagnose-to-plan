@@ -44,6 +44,10 @@ def test_practice_doctor_passes_repo_contract(repo_root: Path) -> None:
     assert any("template research-decision-record.md" in check for check in result.checks)
     assert any("template research-source-freshness-item.md" in check for check in result.checks)
     assert any("doc PRACTICE_KAIZEN_KANBAN_SYSTEM.md" in check for check in result.checks)
+    assert any(
+        "doc AGENT_SOURCE_REGISTRY_AND_WEB_EVIDENCE_POLICY_V0.md" in check
+        for check in result.checks
+    )
     assert any("doc RESEARCH_ARM_SOURCE_LIST_V0.md" in check for check in result.checks)
     assert any("doc RESEARCH_SOURCE_FRESHNESS_DRY_RUN_V0.md" in check for check in result.checks)
     assert any("doc KNOWLEDGE_BASE_EVENT_WORKFLOWS_V0.md" in check for check in result.checks)

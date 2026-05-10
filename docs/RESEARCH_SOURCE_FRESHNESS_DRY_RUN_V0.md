@@ -82,6 +82,8 @@ Default behavior is conservative:
 - Search result pages are not fetched unless `--search-web` is passed.
 - Local/private hosts are blocked.
 - Search results are low-confidence until reviewed against primary sources.
+- Agent-role source checks should follow
+  `docs/AGENT_SOURCE_REGISTRY_AND_WEB_EVIDENCE_POLICY_V0.md` before promotion.
 - Output stays under ignored `outputs/research-source-freshness/`.
 - Human review is required before creating a decision record, digest, pattern
   candidate, implementation review, public claim, client message, or repo task.
