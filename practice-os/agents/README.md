@@ -31,6 +31,8 @@ human judgment is required.
   legal-risk routing.
 - `memory-steward.md` - memory visibility, promotion/parking recommendations,
   source-of-truth checks, drift risk, and human-gated memory levels.
+- `research-steward.md` - research-signal classification, evidence limits,
+  Research Arm artifact recommendations, and public-claim gates.
 - `qa-audit.md` - verification strategy, regression risk, release readiness,
   acceptance checks, quality gates, and honest go/no-go language.
 - `product-strategy.md` - product direction, user/persona clarity, feature

@@ -59,6 +59,7 @@ from dtp.commands.memory import (
 from dtp.commands.practice import render_doctor, run_practice_doctor
 from dtp.commands.recall import run_recall
 from dtp.commands.redact import REDACT_PROFILES, RedactionError, run_redact_check
+from dtp.commands.research import render_research_steward_review, run_research_steward_review
 from dtp.commands.skills_cmd import run_validate
 from dtp.commands.synthesize import run_synthesize
 from dtp.commands.vault import (
@@ -89,6 +90,7 @@ practice_client_os_app = typer.Typer(no_args_is_help=True, add_completion=False)
 kaizen_app = typer.Typer(no_args_is_help=True, add_completion=False)
 evolution_app = typer.Typer(no_args_is_help=True, add_completion=False)
 memory_app = typer.Typer(no_args_is_help=True, add_completion=False)
+research_app = typer.Typer(no_args_is_help=True, add_completion=False)
 vault_app = typer.Typer(no_args_is_help=True, add_completion=False)
 workspace_app = typer.Typer(no_args_is_help=True, add_completion=False)
 workspace_task_app = typer.Typer(no_args_is_help=True, add_completion=False)
@@ -100,6 +102,7 @@ practice_app.add_typer(practice_client_os_app, name="client-os")
 app.add_typer(kaizen_app, name="kaizen")
 app.add_typer(evolution_app, name="evolution")
 app.add_typer(memory_app, name="memory")
+app.add_typer(research_app, name="research")
 app.add_typer(vault_app, name="vault")
 app.add_typer(workspace_app, name="workspace")
 workspace_app.add_typer(workspace_task_app, name="task")
@@ -977,6 +980,18 @@ def memory_steward_command(
     config = load_config()
     result = run_memory_steward_review(config, limit=limit)
     console.print(render_memory_steward_review(result, config.repo_root), end="", markup=False)
+
+
+@research_app.command("steward")
+def research_steward_command(
+    limit: Annotated[
+        int,
+        typer.Option("--limit", help="Maximum recommendation rows to emit."),
+    ] = 10,
+) -> None:
+    config = load_config()
+    result = run_research_steward_review(config, limit=limit)
+    console.print(render_research_steward_review(result, config.repo_root), end="", markup=False)
 
 
 @vault_app.command("init")
