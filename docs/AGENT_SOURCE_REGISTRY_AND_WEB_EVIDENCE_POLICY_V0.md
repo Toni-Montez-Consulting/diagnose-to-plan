@@ -263,13 +263,33 @@ autonomy level.
 The pilot also surfaced and fixed a local dry-run run-id collision risk when
 two source-freshness checks are run in parallel.
 
+## Second Pilot
+
+The second pilot is recorded in:
+
+```text
+practice-os/steward/2026-05-10-external-communications-source-policy-pilot.md
+```
+
+It tested whether the External Communications Agent could translate reviewed
+source evidence into clear, client-safe language without sending a message,
+changing public copy, or implying unsupported proof.
+
+The pilot produced:
+
+- a reusable internal communications artifact;
+- prospect, executive, and client-education draft blocks;
+- a send checklist for source-backed AI implementation language;
+- messaging knowledge base updates that remain internal-only.
+
 ## Open Follow-Up
 
 Next iteration:
 
 1. Run one more role pilot before creating the machine-readable source-pack
-   file. External Communications or Consulting Strategy are the strongest next
-   candidates.
+   file. Consulting Strategy is the strongest next candidate because it tests
+   how source evidence shapes offer and buyer-fit reasoning without
+   overclaiming.
 2. Create the machine-readable source-pack file after repeated role workflows
    prove the fields.
 3. Add role-specific source examples to the active role specs when repeated use

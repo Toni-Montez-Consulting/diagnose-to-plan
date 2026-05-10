@@ -86,6 +86,9 @@ Internal working claims:
 - AI is used strategically where it makes the work smoother, faster, or more
   cost-effective.
 - Human review and business judgment stay built into the system.
+- AI should make the workflow clearer and easier to operate. It should not make
+  the business harder to understand.
+- AI is useful when it is attached to real work someone owns.
 
 Future public-copy candidates:
 
@@ -157,6 +160,23 @@ operating rhythm.
 
 Lead with practical adoption. AI is useful when attached to a real workflow and
 kept under human review.
+
+## Source-Backed Internal Language
+
+Source: `practice-os/comms/private/external-communications-source-policy-pilot-2026-05-10.md`
+
+Use this language internally for draft-only prospect replies, client education
+notes, and Blueprint explanations:
+
+- Do not start by asking which AI tool the client wants. Start by finding the
+  work that is slow, unclear, manual, or stuck in someone's head.
+- AI belongs where it can support a real workflow: intake, drafting, review,
+  routing, organizing, analysis, follow-up, or decision support.
+- Human judgment should stay built into the system.
+- The point is not to make the business more automated at all costs. The point
+  is to make the work clearer, smoother, and easier to operate.
+
+Do not use this as public proof or claim language until reviewed.
 
 ## Internal Use Rule
 

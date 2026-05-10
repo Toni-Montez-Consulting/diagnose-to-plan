@@ -161,3 +161,5 @@ outputs into clean external messages.
 - CCAAP owner-input ask.
 - Consulting fit-call response for a qualified prospect.
 - Vendor/platform support note requiring technical precision.
+- Source-backed AI implementation explainer that uses reviewed research for
+  clarity without turning it into unsupported public proof.

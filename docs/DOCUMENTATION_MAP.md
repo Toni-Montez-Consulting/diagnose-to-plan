@@ -128,6 +128,10 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
 - `practice-os/comms/private/messaging-knowledge-base-2026-05-10.md`: internal
   messaging knowledge base for owner-bottleneck language, short pitch variants,
   claims/metaphor candidates, and visual seeds before any public-copy gate.
+- `practice-os/comms/private/external-communications-source-policy-pilot-2026-05-10.md`:
+  internal draft-only communication pilot for translating reviewed AI/platform
+  and consulting/business source evidence into prospect, executive, and
+  client-education language without public claims or send approval.
 - `practice-os/evolution/README.md`: operator guide for `dtp evolution new`
   and `dtp evolution status`.
 - `practice-os/evolution/records/`: generated idea, collaboration, messaging,
