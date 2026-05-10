@@ -112,6 +112,10 @@ Reusable memory starts only after review. Raw capture is not playbook memory.
 
 - Keep a visible working ledger during strategy, offer, proof, positioning,
   product-shaping, or long planning threads.
+- Treat meaningful research, memory, operations, project-execution, client,
+  proof, or agent-system events as knowledge-base maintenance triggers. Route
+  those events through `docs/KNOWLEDGE_BASE_EVENT_WORKFLOWS_V0.md` instead of
+  relying on chat memory.
 - Ask clarifying questions when they materially improve the output or help Toni
   understand where the work is going. Keep most questions non-blocking and
   momentum-preserving.
@@ -132,6 +136,8 @@ Reusable memory starts only after review. Raw capture is not playbook memory.
 - Treat squads and agent roles as review lenses unless Toni explicitly asks for
   delegated agent work.
 - Let research propose updates, not authorize them.
+- Let source lists and decision records keep the practice current without
+  pretending the Research Arm is autonomous.
 - Let messaging drafts inform future copy, not silently change public surfaces.
 - Use client work as evidence only after permission, redaction, and proof gates.
 - Close, supersede, or park ideas explicitly so they do not linger forever.
@@ -166,6 +172,13 @@ Use `dtp research steward` when the question is what research signal, digest,
 pattern candidate, or research-flavored Kaizen row needs review, promotion,
 parking, rejection, or a bounded experiment.
 
+Use `practice-os/templates/research-decision-record.md` when a source-backed
+event should become an adopt, pilot, watch, reject, or park decision.
+
+Use `practice-os/templates/knowledge-base-event-record.md` when a broader
+memory, operations, project-execution, or agent-system event changes a
+knowledge surface or needs an explicit no-update decision.
+
 ## Pilot Lanes
 
 ### 1. Messaging Knowledge Base
@@ -196,6 +209,22 @@ Research pattern candidates should state:
 - possible artifacts;
 - evidence limits;
 - next experiment.
+
+Research signals should start from the recurring source list when applicable:
+`docs/RESEARCH_ARM_SOURCE_LIST_V0.md`.
+
+Research decisions should use
+`practice-os/templates/research-decision-record.md` when they change what the
+practice adopts, pilots, watches, rejects, or parks.
+
+### 2A. Knowledge-Base Event Maintenance
+
+Use `docs/KNOWLEDGE_BASE_EVENT_WORKFLOWS_V0.md` when Toni says a knowledge
+base, operating pattern, memory-management path, or project-execution practice
+needs to be updated, refined, expanded, or operationalized.
+
+This lane keeps assistance active without giving autonomous authority to
+Research Arm, Memory Steward, or other squad lenses.
 
 ### 3. Meta-Pattern Evolution
 

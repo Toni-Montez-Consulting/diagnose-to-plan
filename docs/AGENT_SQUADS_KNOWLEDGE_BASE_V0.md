@@ -121,6 +121,12 @@ role so the architecture stays consistent.
 Roles do not authorize autonomous action. They improve reasoning, structure,
 review quality, and handoff durability.
 
+When a squad lens reveals that a knowledge base, agent role, operating rule,
+source list, memory practice, or project-execution pattern should change, route
+the event through `docs/KNOWLEDGE_BASE_EVENT_WORKFLOWS_V0.md`. The squad can
+recommend the update, but the decision and artifact still need human-gated
+review.
+
 ## First-Wave Role Boundary
 
 The first wave is now intentionally broad enough to pilot:
@@ -139,7 +145,11 @@ The first wave is now intentionally broad enough to pilot:
 - Memory Steward
 - Research Steward
 
-Do not add more roles by default. Memory Steward was added because Toni
+This boundary is a sequencing rule, not a ceiling. Toni's long-term direction
+is still a larger agent ecosystem with more squads, more specialized roles, and
+eventually autonomous agents where autonomy is useful and safe.
+
+Do not add more roles by default in V0. Memory Steward was added because Toni
 explicitly chose it as the first more active assistant behavior after the
 Practice Evolution dashboard. Research Steward was added next because the
 Research Arm already had repeated source signals, templates, digests, and
@@ -148,6 +158,20 @@ roles against real work first: client emails, Greg/Cam deliverables, consulting
 site changes, Hub intake, Omnexus proof/release gates, research digests, and
 practice operating decisions. Add another new role only when a real repeated
 workflow does not fit the current set.
+
+Future expansion should preserve ambition while proving need:
+
+- add more roles when a repeated workflow needs a distinct discipline;
+- add more squads when work naturally needs a stable multi-role operating
+  container;
+- add semi-autonomous behavior first for read-only research, memory review,
+  status surfacing, source freshness checks, and validation recommendations;
+- add write-enabled or action-taking autonomy only after source scope,
+  permissions, evals, audit logs, rollback, approval gates, and privacy
+  boundaries are proven.
+
+The point is not to avoid autonomous agents. The point is to earn autonomy in
+layers so future agents can be trusted with more of the practice.
 
 First public-safe role pilot:
 
@@ -291,6 +315,40 @@ When V0 receipts prove useful, hosted DTP can persist:
 
 Markdown remains the fallback import/export and recovery surface. Hosted records
 should improve durability and retrieval, not replace the source-index habit.
+
+## Future Autonomous Agent Path
+
+Autonomous agents are a future target for the practice, not a V0 assumption.
+
+The likely path is:
+
+1. Read-only stewards: research, memory, status, proof, and repo-health
+   recommendations.
+2. Draft-only operators: email drafts, proposal drafts, client packets,
+   implementation plans, source indexes, and validation plans.
+3. Supervised action workers: scoped repo edits, test runs, dashboard
+   regeneration, Notion mirror drafts, and PR preparation after explicit
+   approval.
+4. Bounded autonomous workflows: recurring source review, stale-doc detection,
+   knowledge-base freshness checks, and validation sweeps with audit logs.
+5. Action-taking autonomy only after rollback, permissions, secrets posture,
+   proof/privacy gates, evals, and human override are proven.
+
+Candidate future squads include:
+
+- Research and Intelligence Squad
+- Memory and Knowledge Stewardship Squad
+- External Communications Squad
+- Client Delivery Squad
+- Product and Growth Strategy Squad
+- Engineering Delivery Squad
+- Architecture and Infrastructure Squad
+- QA, Risk, and Compliance Squad
+- Finance and Operations Squad
+- Brand, Narrative, and Content Squad
+
+Each future squad still needs a source scope, approval model, evidence
+standard, handoff receipt, and clear stop conditions.
 
 ## Acceptance Checks
 

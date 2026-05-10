@@ -16,6 +16,12 @@ Owner repo: `diagnose-to-plan`
 Knowledge Base V1 is not a vector database. It is the source discipline that
 makes vector retrieval useful later.
 
+Knowledge-base maintenance starts with event-based markdown updates, not
+autonomous agents. Use `docs/KNOWLEDGE_BASE_EVENT_WORKFLOWS_V0.md` when a
+research signal, memory pattern, operating workflow, client reply, project
+execution lesson, or agent-system miss should update, refine, expand, park, or
+supersede a knowledge surface.
+
 V1 should help a future agent answer:
 
 - what is authoritative;
@@ -37,6 +43,7 @@ V1 should help a future agent answer:
 | Architecture Review Packet | maps systems, ownership, risks, and next sequence | DTP system docs | repo-local docs if implementation-specific |
 | Automation Authority Matrix | clarifies draft/read/write/act boundaries | DTP docs and templates | private runbooks when sensitive |
 | Memory Promotion Record | promotes raw facts into reusable patterns | DTP steward/pattern docs | private vault for sensitive examples |
+| Knowledge Base Event Record | explains why a knowledge surface changed or did not change after a meaningful event | `practice-os/templates/knowledge-base-event-record.md` outputs and steward receipts | private vault when the trigger is client-sensitive |
 
 ## Minimum Metadata
 
@@ -51,6 +58,8 @@ Every V1 record should carry:
 - next review trigger;
 - blocked sources;
 - action authority.
+- event trigger and decision record when a knowledge-base update is source- or
+  workflow-driven.
 
 ## Validation Rules
 

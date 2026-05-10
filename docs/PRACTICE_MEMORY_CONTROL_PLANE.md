@@ -39,6 +39,12 @@ The companion retrieval and persistence layer is
 "how can Codex rehydrate faster and more reliably?" or "should this move into
 private persistent storage?"
 
+The companion event-maintenance layer is
+`docs/KNOWLEDGE_BASE_EVENT_WORKFLOWS_V0.md`. Use it when a research signal,
+client reply, memory pattern, operating workflow, project-execution lesson, or
+agent-system miss should update, refine, expand, park, or supersede a knowledge
+surface.
+
 The current strategic backlog layer is
 `docs/PRACTICE_OPERATING_SYSTEM_STRATEGIC_BACKLOG.md`. Use it when the work is
 about sequencing the practice brain, Client OS pilots, Hub/runtime support,
@@ -73,6 +79,7 @@ Use these objects instead of relying on chat memory.
 | Proof candidate | project result, screenshot, outcome, client quote | proof packet and redaction queue | proof gate status only |
 | Connector | Notion, Gmail, Calendar, QuickBooks, GitHub | `practice-os/templates/connector-map.md` plus runbook | capability/status summary only |
 | Session receipt | major implementation/review sprint | `practice-os/steward/*.md` | latest status / next action |
+| Knowledge-base event | research signal, workflow lesson, project-execution pattern, agent-system miss | `practice-os/templates/knowledge-base-event-record.md` output plus owning doc/template update | sanitized status only |
 
 ## Priority 1 Loop
 
