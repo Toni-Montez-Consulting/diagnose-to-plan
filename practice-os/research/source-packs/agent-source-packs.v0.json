@@ -320,6 +320,154 @@
         "new standalone offer category"
       ],
       "next_review_trigger": "public consulting copy pass, pricing publication decision, or first AI/workflow prospect routed through Blueprint"
+    },
+    {
+      "role_id": "software-architecture",
+      "role_name": "Software Architecture Agent",
+      "source_pack_version": "0.1.0",
+      "status": "pilot_proven",
+      "last_reviewed_at": "2026-05-10",
+      "pilot_artifacts": [
+        "practice-os/steward/2026-05-10-software-architecture-source-policy-pilot.md",
+        "docs/SOFTWARE_ARCHITECTURE_SOURCE_POLICY_PILOT_2026-05-10.md",
+        "practice-os/agents/software-architecture.md",
+        "practice-os/templates/architecture-review-packet.md",
+        "practice-os/templates/automation-authority-matrix.md"
+      ],
+      "primary_sources": [
+        {
+          "id": "software-architecture-role",
+          "tier": 0,
+          "type": "agent_role_spec",
+          "path_or_url": "practice-os/agents/software-architecture.md",
+          "use": "system boundaries, module shape, integration design, runtime authority, technical tradeoffs, and architecture validation",
+          "evidence_limit": "does not authorize implementation, schema changes, runtime behavior, or cross-repo orchestration"
+        },
+        {
+          "id": "software-architecture-source-policy-pilot",
+          "tier": 0,
+          "type": "internal_pilot",
+          "path_or_url": "docs/SOFTWARE_ARCHITECTURE_SOURCE_POLICY_PILOT_2026-05-10.md",
+          "use": "boundary-first source posture, official-docs rule, runtime-authority gate, and handoff boundaries",
+          "evidence_limit": "internal-only and review-first"
+        },
+        {
+          "id": "architecture-review-packet",
+          "tier": 0,
+          "type": "internal_template",
+          "path_or_url": "practice-os/templates/architecture-review-packet.md",
+          "use": "source index, system map, ownership boundaries, systems health, automation authority, and sequence",
+          "evidence_limit": "template creates review structure, not approval"
+        },
+        {
+          "id": "automation-authority-matrix",
+          "tier": 0,
+          "type": "internal_template",
+          "path_or_url": "practice-os/templates/automation-authority-matrix.md",
+          "use": "authority levels, allowed sources, output destinations, approval requirements, and stop conditions",
+          "evidence_limit": "does not elevate authority by itself"
+        },
+        {
+          "id": "practice-system-architecture",
+          "tier": 0,
+          "type": "internal_architecture_doc",
+          "path_or_url": "docs/PRACTICE_SYSTEM_ARCHITECTURE.md",
+          "use": "current-state repo boundaries, system ownership, prompt activation, intake, proof, and agent/skill boundaries",
+          "evidence_limit": "current-state DTP architecture only"
+        },
+        {
+          "id": "azure-well-architected-framework",
+          "tier": 1,
+          "type": "official_cloud_architecture_docs",
+          "path_or_url": "https://learn.microsoft.com/en-us/azure/well-architected/",
+          "use": "cloud architecture review lenses and reliability/security/operations framing when Azure is in scope",
+          "evidence_limit": "does not prove Azure adoption or authorize deployment"
+        },
+        {
+          "id": "aws-well-architected-framework",
+          "tier": 1,
+          "type": "official_cloud_architecture_docs",
+          "path_or_url": "https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html",
+          "use": "cloud architecture review lenses when AWS is in scope",
+          "evidence_limit": "does not prove AWS adoption or authorize deployment"
+        },
+        {
+          "id": "google-cloud-architecture-framework",
+          "tier": 1,
+          "type": "official_cloud_architecture_docs",
+          "path_or_url": "https://cloud.google.com/architecture/framework",
+          "use": "cloud architecture review lenses when Google Cloud is in scope",
+          "evidence_limit": "does not prove Google Cloud adoption or authorize deployment"
+        },
+        {
+          "id": "supabase-rls-docs",
+          "tier": 1,
+          "type": "official_database_docs",
+          "path_or_url": "https://supabase.com/docs/guides/database/postgres/row-level-security",
+          "use": "RLS and database boundary checks when Supabase/Postgres policy behavior is in scope",
+          "evidence_limit": "does not authorize production migration or data access"
+        },
+        {
+          "id": "vercel-production-checklist",
+          "tier": 1,
+          "type": "official_hosting_docs",
+          "path_or_url": "https://vercel.com/docs/production-checklist",
+          "use": "deployment-readiness and production verification context when Vercel runtime is in scope",
+          "evidence_limit": "does not authorize deploys or production config changes"
+        }
+      ],
+      "allowed_web_sources": [
+        "DTP source-of-truth docs first",
+        "repo source, tests, contracts, manifests, and local instructions",
+        "official framework and platform docs",
+        "official cloud architecture docs when the cloud path is in scope",
+        "official database, hosting, API, auth, payment, and security docs when platform behavior matters",
+        "standards and governance bodies for risk and control lenses",
+        "broad search for source discovery and pattern sensing only"
+      ],
+      "search_posture": {
+        "default": "repo_and_internal_first_then_official_platform_docs",
+        "broad_web_confidence": "low_until_official_or_repo_corroborated",
+        "preferred_queries": [
+          "site:<official-domain> <platform> architecture <topic>",
+          "site:<official-domain> <framework> migration <feature>",
+          "<platform> official docs <runtime behavior>",
+          "<database> official docs RLS policy <topic>",
+          "<cloud provider> well architected <pillar> official"
+        ]
+      },
+      "blocked_sources": [
+        "generic architecture blogs as authority",
+        "competitor architecture diagrams without context",
+        "AI-generated architecture summaries without source trail",
+        "private client systems not opened by Toni",
+        "secrets or credentials",
+        "Microsoft confidential or day-job context",
+        "broad web claims used to justify platform adoption"
+      ],
+      "default_outputs": [
+        "architecture review packet",
+        "system boundary memo",
+        "ADR-style decision record",
+        "integration plan",
+        "runtime authority matrix update",
+        "data-flow note",
+        "implementation-ready architecture brief",
+        "risk and verification checklist"
+      ],
+      "promotion_required_for": [
+        "implementation",
+        "schema or migration changes",
+        "runtime behavior",
+        "production data access",
+        "cross-repo orchestration",
+        "new framework or platform adoption",
+        "hosted service creation",
+        "autonomy level changes",
+        "cloud, DNS, billing, deploy, database, or secret mutation",
+        "public or client-facing architecture claims"
+      ],
+      "next_review_trigger": "first real architecture review that changes runtime, schema, cross-repo boundary, hosted DTP plan, or implementation handoff"
     }
   ]
 }

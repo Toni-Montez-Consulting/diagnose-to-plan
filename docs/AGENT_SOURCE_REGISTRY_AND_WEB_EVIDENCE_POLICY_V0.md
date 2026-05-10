@@ -154,11 +154,12 @@ practice-os/research/source-packs/agent-source-packs.v0.json
 The source-pack file should not add new authority. It should encode this policy
 for tools, dashboards, stewards, and future automation.
 
-V0 includes only the three roles proven by source-policy pilots:
+V0 includes the roles proven by source-policy pilots:
 
 - Research Steward / Research Arm;
 - External Communications;
-- Consulting Strategy.
+- Consulting Strategy;
+- Software Architecture.
 
 Minimum fields:
 
@@ -309,12 +310,31 @@ The strategy decision:
 - allow Fast Track only for contained low-risk AI/workflow implementation;
 - preserve public-copy and proof gates.
 
+## Fourth Pilot
+
+The fourth pilot is recorded in:
+
+```text
+practice-os/steward/2026-05-10-software-architecture-source-policy-pilot.md
+```
+
+It tested Software Architecture as the boundary and runtime-authority decision
+layer.
+
+The architecture decision:
+
+- start with DTP, repo state, contracts, tests, and Toni's latest direction;
+- use official platform docs for current technical behavior;
+- treat cloud well-architected frameworks as review lenses, not mandates;
+- use broad web search for source discovery only;
+- require approval before schema, runtime, cloud, cross-repo, or autonomy
+  changes.
+
 ## Open Follow-Up
 
 Next iteration:
 
-1. Add role-specific source examples to the active role specs when repeated use
-   proves which sources are actually helpful.
-2. Decide whether a dashboard should show source-pack freshness by role.
-3. Decide whether V0 needs a JSON schema or CLI validation command after the
-   next role pilot.
+1. Pilot Software Engineering against this architecture handoff boundary.
+2. Decide whether the source pack needs JSON schema validation or a CLI
+   validation command before more roles are added.
+3. Decide whether a dashboard should show source-pack freshness by role.

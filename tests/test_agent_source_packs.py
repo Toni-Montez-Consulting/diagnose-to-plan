@@ -22,6 +22,7 @@ def test_agent_source_packs_v0_contract(repo_root: Path) -> None:
         "research-steward",
         "external-communications",
         "consulting-strategy",
+        "software-architecture",
     }
 
     for pack in payload["packs"]:
@@ -50,4 +51,18 @@ def test_agent_source_packs_v0_contract(repo_root: Path) -> None:
     assert any(
         source["id"] == "offer-strategy-source-policy-pilot"
         for source in consulting_strategy["primary_sources"]
+    )
+
+    software_architecture = next(
+        pack for pack in payload["packs"] if pack["role_id"] == "software-architecture"
+    )
+    assert "runtime behavior" in software_architecture["promotion_required_for"]
+    assert "schema or migration changes" in software_architecture["promotion_required_for"]
+    assert any(
+        source["id"] == "software-architecture-source-policy-pilot"
+        for source in software_architecture["primary_sources"]
+    )
+    assert any(
+        source["id"] == "vercel-production-checklist"
+        for source in software_architecture["primary_sources"]
     )
