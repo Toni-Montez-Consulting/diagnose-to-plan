@@ -25,6 +25,14 @@ from dtp.commands.client_os import (
 )
 from dtp.commands.detect import run_detect
 from dtp.commands.draft import run_draft, user_facing_error
+from dtp.commands.evolution import (
+    EVOLUTION_KINDS,
+    EvolutionError,
+    render_evolution_new,
+    render_evolution_status,
+    run_evolution_new,
+    run_evolution_status,
+)
 from dtp.commands.index_cmd import run_index
 from dtp.commands.kaizen import (
     KaizenError,
@@ -73,6 +81,7 @@ redact_app = typer.Typer(no_args_is_help=True, add_completion=False)
 practice_app = typer.Typer(no_args_is_help=True, add_completion=False)
 practice_client_os_app = typer.Typer(no_args_is_help=True, add_completion=False)
 kaizen_app = typer.Typer(no_args_is_help=True, add_completion=False)
+evolution_app = typer.Typer(no_args_is_help=True, add_completion=False)
 memory_app = typer.Typer(no_args_is_help=True, add_completion=False)
 vault_app = typer.Typer(no_args_is_help=True, add_completion=False)
 workspace_app = typer.Typer(no_args_is_help=True, add_completion=False)
@@ -83,6 +92,7 @@ app.add_typer(redact_app, name="redact")
 app.add_typer(practice_app, name="practice")
 practice_app.add_typer(practice_client_os_app, name="client-os")
 app.add_typer(kaizen_app, name="kaizen")
+app.add_typer(evolution_app, name="evolution")
 app.add_typer(memory_app, name="memory")
 app.add_typer(vault_app, name="vault")
 app.add_typer(workspace_app, name="workspace")
@@ -861,6 +871,73 @@ def kaizen_mirror_command(
         console.print(f"[red]{error}[/red]")
         raise typer.Exit(code=1) from error
     typer.echo(render_mirror(result), nl=False)
+
+
+@evolution_app.command("new")
+def evolution_new_command(
+    title: Annotated[
+        str | None,
+        typer.Argument(help="Idea or research-pattern title. Optional with --from-kaizen."),
+    ] = None,
+    kind: Annotated[
+        str,
+        typer.Option("--kind", help=f"One of: {', '.join(EVOLUTION_KINDS)}."),
+    ] = "idea",
+    from_kaizen: Annotated[
+        str,
+        typer.Option("--from-kaizen", help="Optional Kaizen record ID to turn into a draft."),
+    ] = "",
+    lane: Annotated[
+        str,
+        typer.Option("--lane", help="Owning repo or practice lane."),
+    ] = "diagnose-to-plan",
+    sensitivity: Annotated[
+        str,
+        typer.Option("--sensitivity", help="Data sensitivity label."),
+    ] = "internal-only",
+    state: Annotated[
+        str,
+        typer.Option(
+            "--state",
+            help=(
+                "Initial state. Defaults to raw_capture for ideas and draft "
+                "for research patterns."
+            ),
+        ),
+    ] = "",
+    source: Annotated[
+        str,
+        typer.Option("--source", help="Source label such as codex, gmail, meeting, research."),
+    ] = "codex",
+    force: Annotated[
+        bool,
+        typer.Option("--force", help="Overwrite an existing generated draft."),
+    ] = False,
+) -> None:
+    config = load_config()
+    try:
+        result = run_evolution_new(
+            config,
+            title=title or "",
+            kind=kind,
+            from_kaizen=from_kaizen,
+            lane=lane,
+            sensitivity=sensitivity,
+            state=state,
+            source=source,
+            force=force,
+        )
+    except EvolutionError as error:
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(code=1) from error
+    console.print(render_evolution_new(result, config.repo_root), end="")
+
+
+@evolution_app.command("status")
+def evolution_status_command() -> None:
+    config = load_config()
+    result = run_evolution_status(config)
+    console.print(render_evolution_status(result, config.repo_root), end="")
 
 
 @memory_app.command("status")

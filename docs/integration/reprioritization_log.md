@@ -10,6 +10,90 @@ review_status: draft
 Use this log after meaningful Practice OS changes so backlog movement is
 deliberate and visible.
 
+## 2026-05-10: Question Checkpoint Rule Promoted
+
+Source:
+
+- Toni clarified that questions are part of how he learns what Codex is doing,
+  where the work is going, and how to steer substantial work.
+- `AGENTS.md`
+- `docs/PRACTICE_EVOLUTION_SYSTEM_V0.md`
+- `practice-os/evolution/records/2026-05-10-question-checkpoint-rule-for-substantial-strategy-build-work.md`
+- `practice-os/kaizen/intake.jsonl`
+
+Change:
+
+- Promoted the Question Checkpoint Rule to playbook memory for substantial
+  strategy/build work.
+- Locked the default protocol: compact ledger, state what Codex thinks is being
+  built and why, ask one to three non-blocking questions, show practical and
+  ambitious paths, build with labeled assumptions, and ask again before a new
+  meaningful layer.
+- Kept the current Practice Evolution System CLI/operator-first, with a visible
+  cockpit/dashboard planned only after real record usage.
+
+Priority impact:
+
+1. Future DTP/practice/consulting strategy and build threads should include
+   question checkpoints by default.
+2. Small mechanical tasks and urgent safe fixes do not need the full protocol.
+3. The visible cockpit remains a later iteration, not the next immediate build.
+
+Next review trigger:
+
+- Three substantial threads have used the protocol.
+- Toni says questions are too heavy, too light, too late, or not helping him
+  steer.
+- The Practice Evolution cockpit/dashboard is reopened for implementation.
+
+## 2026-05-10: Practice Evolution System V0 Added
+
+Source:
+
+- Toni asked for meta-patterns, idea evolution, messaging language, research
+  signals, and useful collaboration practices to stop getting captured once and
+  forgotten.
+- `docs/PRACTICE_EVOLUTION_SYSTEM_V0.md`
+- `practice-os/templates/idea-evolution-record.md`
+- `practice-os/templates/research-pattern-candidate.md`
+- `practice-os/comms/private/messaging-knowledge-base-2026-05-10.md`
+- `practice-os/kaizen/intake.jsonl`
+
+Change:
+
+- Added an internal Practice Evolution System that captures broadly and
+  promotes deliberately.
+- Added templates for idea evolution records and research/field-observation
+  pattern candidates.
+- Added an internal-only messaging knowledge base for owner-bottleneck language,
+  explanation lengths, claims, metaphors, visual seeds, and future public-copy
+  candidates.
+- Routed "don't forget this", meta-pattern, messaging system, pitch system,
+  and research-pattern prompts into DTP artifacts instead of leaving them in
+  chat.
+- Preserved the boundary that Notion is a cockpit/mirror, consulting is the
+  public storefront, and public/client/runtime changes require separate gates.
+
+Priority impact:
+
+1. The first slice is done as internal OS infrastructure, not site copy,
+   Notion automation, client communication, or runtime behavior.
+2. Meta-pattern, messaging, and research-pattern ideas can now be captured as
+   raw or working memory without becoming immediate builds.
+3. Playbook memory still requires human-gated promotion and evidence.
+4. Future consulting-site copy can consume the messaging knowledge base only
+   after a public-copy/proof/positioning review.
+
+Next review trigger:
+
+- Toni says a collaboration pattern "worked well" or should become how Codex
+  works across projects.
+- Toni sends new messaging language, pitch language, metaphors, or visual
+  asset ideas.
+- A research article, report, or field observation should become a reusable
+  consulting pattern candidate.
+- The Notion mirror/cockpit is ready to reflect sanitized statuses from DTP.
+
 ## 2026-05-08: AI Agents Report And Legal MCP Saved As Parked Research
 
 Source:
