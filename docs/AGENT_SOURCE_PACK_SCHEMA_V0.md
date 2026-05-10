@@ -111,13 +111,32 @@ The validator does not check live web freshness, source quality, public-copy
 eligibility, or whether a role should be promoted. Those remain human-gated
 stewardship decisions.
 
+## Status Dashboard
+
+The first scalable layer now consumes the validator result:
+
+```powershell
+.\.venv\Scripts\dtp.exe practice source-packs status
+.\.venv\Scripts\dtp.exe practice source-packs dashboard
+```
+
+The status command summarizes role freshness, source counts, promotion gates,
+and validation problems. The dashboard command writes:
+
+```text
+docs/source-pack-status-dashboard.html
+```
+
+This remains a local read-only view. It does not check live web freshness,
+promote sources, approve role behavior, sync Notion, or authorize external
+actions.
+
 ## Future Growth
 
-The next scalable layer should consume the same validator result rather than
-invent a second contract:
+Future layers should keep consuming the same validator/status model rather than
+inventing a second contract:
 
-- source-pack freshness dashboard;
-- role-by-role review status;
 - source decay / stale source prompts;
+- live source-freshness evidence after review;
 - broader squad roster coverage;
 - autonomy-readiness evidence gates.

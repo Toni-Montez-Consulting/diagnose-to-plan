@@ -40,6 +40,19 @@ Source packs are validated by the local DTP CLI:
 `dtp practice doctor` also runs the source-pack validator. The validation
 contract is documented in `docs/AGENT_SOURCE_PACK_SCHEMA_V0.md`.
 
+## Status Dashboard
+
+Source-pack freshness and role coverage can be reviewed locally:
+
+```powershell
+.\.venv\Scripts\dtp.exe practice source-packs status
+.\.venv\Scripts\dtp.exe practice source-packs dashboard
+```
+
+The dashboard command writes `docs/source-pack-status-dashboard.html`. It is a
+read-only status surface for role freshness, source counts, promotion gates, and
+validation problems. It does not promote sources or authorize actions.
+
 ## Rules
 
 - DTP remains the source of truth.
@@ -66,6 +79,8 @@ When updating, also check:
 - `docs/AGENT_SOURCE_REGISTRY_AND_WEB_EVIDENCE_POLICY_V0.md`;
 - `docs/AGENT_SOURCE_PACK_SCHEMA_V0.md`;
 - `dtp practice source-packs validate`;
+- `dtp practice source-packs status`;
+- `dtp practice source-packs dashboard`;
 - `docs/DOCUMENTATION_MAP.md`;
 - `docs/PRACTICE_OPERATING_SYSTEM_STRATEGIC_BACKLOG.md`;
 - `practice-os/templates/activation-routing-map.md` if prompt routing changes;

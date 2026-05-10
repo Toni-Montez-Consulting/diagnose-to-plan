@@ -64,6 +64,9 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
 - `decisions/0022-source-pack-schema-cli-validation.md`: accepted decision for
   validating source packs through `dtp practice source-packs validate` and
   `dtp practice doctor` before more role-pack scale.
+- `decisions/0023-source-pack-status-dashboard.md`: accepted decision for the
+  read-only source-pack status/dashboard layer that summarizes role freshness,
+  source counts, and promotion gates without adding authority.
 - `docs/source/practice_os_build_spec_v0_1.md`: additive source spec for the Practice OS capture -> learn loop and MVP modules. Preserve it; convert it into integration docs/templates/backlog items instead of editing it directly.
 - `docs/source/ai_implementation_layer_thesis_and_build_spec_v0_1.md`: additive company thesis and implementation-layer source material. Preserve its strategic language and use it as source for positioning, offer design, client discovery, and internal product development.
 - `database/schema/practice_os_schema_v0_1.sql`: additive starter schema source for future Practice OS records. Do not run it as a migration until it is reconciled with Hosted DTP Phase 0.
@@ -89,6 +92,10 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
   for Practice Evolution records and research-pattern candidates. Regenerate
   with `dtp evolution dashboard`; it reads local markdown records only and does
   not promote memory, publish proof, sync Notion, or touch clients.
+- `docs/source-pack-status-dashboard.html`: generated internal status dashboard
+  for agent source packs. Regenerate with `dtp practice source-packs dashboard`;
+  it reads the local source-pack JSON and validator only and does not promote
+  sources, publish proof, sync Notion, or authorize role actions.
 - `practice-os/agents/memory-steward.md`: first active Memory Steward role spec
   for read-only memory visibility, promotion/parking recommendations,
   source-of-truth checks, drift risk, and human-gated memory levels. Use it

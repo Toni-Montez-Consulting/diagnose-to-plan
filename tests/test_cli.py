@@ -61,6 +61,29 @@ def test_practice_source_packs_validate_command() -> None:
     assert "source pack packs validated: 7" in result.output
 
 
+def test_practice_source_packs_status_command() -> None:
+    result = CliRunner().invoke(app, ["practice", "source-packs", "status"])
+
+    assert result.exit_code == 0
+    assert "Source Pack Status" in result.output
+    assert "roles: 7" in result.output
+    assert "research-steward: current" in result.output
+
+
+def test_practice_source_packs_dashboard_command(tmp_path: Path) -> None:
+    output = tmp_path / "source-pack-status-dashboard.html"
+
+    result = CliRunner().invoke(
+        app,
+        ["practice", "source-packs", "dashboard", "--out", str(output)],
+    )
+
+    assert result.exit_code == 0
+    assert output.exists()
+    assert "roles=7" in result.output
+    assert "Source Pack Status Dashboard" in output.read_text(encoding="utf-8")
+
+
 def test_draft_accepts_output_alias(repo_root: Path) -> None:
     destination = repo_root / "outputs" / "cli-output-alias.md"
     if destination.exists():
