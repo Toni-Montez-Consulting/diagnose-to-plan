@@ -11,8 +11,8 @@ RESEARCH_STEWARD_BOUNDARY = (
     "research can recommend; it cannot authorize public claims, offer changes, "
     "tool installs, repo changes, client communication, or autonomous runtime"
 )
-RESEARCH_PATTERN_REVIEW_STATES = {"draft", "reviewed", "promoted", "parked"}
-RESEARCH_DIGEST_REVIEW_STATES = {"draft", "reviewed", "accepted", "parked"}
+RESEARCH_PATTERN_REVIEW_STATES = {"draft", "reviewed", "parked"}
+RESEARCH_DIGEST_REVIEW_STATES = {"draft", "reviewed", "parked"}
 KAIZEN_RESEARCH_STATUSES = {"inbox", "now", "next", "waiting", "blocked", "parked"}
 RESEARCH_TAGS = {
     "research",

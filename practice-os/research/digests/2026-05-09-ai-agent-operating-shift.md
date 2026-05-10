@@ -10,7 +10,7 @@ cadence: ad_hoc
 
 Date: 2026-05-09
 Reviewer: Toni
-Status: draft
+Status: accepted
 
 ## Digest Summary
 
@@ -103,8 +103,8 @@ Plain-language version Toni could use:
 - Decision: Pilot
 - Confidence: medium
 - Relevant repos: `diagnose-to-plan`, `consulting`
-- Next review: after one Opportunity OS V0 spec and one additional Research Arm
-  digest
+- Next review: after one additional Research Arm digest or a concrete client
+  explanation needs public-source review
 
 ## Proposed Artifact
 
@@ -113,10 +113,12 @@ Accepted:
 - Research Arm V0 spec.
 - Research Arm digest template.
 - Consulting repo pointer.
+- Opportunity OS V0 spec.
 
 Next:
 
-- Opportunity OS V0 spec.
+- Use Research Steward to choose the next research item: finish another digest,
+  create a radar item, open a bounded spike, or leave the item parked.
 
 Later:
 
@@ -136,7 +138,9 @@ Later:
 
 ## Next Action
 
-Create Opportunity OS V0 as a separate source-of-truth and data-boundary spec.
+Use this accepted digest as internal support for Research Arm, Opportunity OS,
+and human-led agent-squad work. Do not convert it into public claims, site copy,
+tool adoption, or client deliverables until the specific destination is reviewed.
 
 ## Notion Mirror Summary
 
@@ -148,11 +152,12 @@ If yes:
 - Classification: Pilot
 - Why it matters: turns AI/software/workflow research into practical,
   approval-gated practice improvements.
-- Next action: create Opportunity OS V0.
+- Next action: choose the next research item through `dtp research steward`.
 - DTP source path: `practice-os/research/digests/2026-05-09-ai-agent-operating-shift.md`
 
 ## Notes
 
-This digest proves the manual loop. It does not authorize scheduled agents,
-browser automation, source scraping, public claims, or repo changes beyond the
-approved Research Arm artifacts.
+This digest proved the manual loop and supported the already-created
+Opportunity OS V0 spec. It does not authorize scheduled agents, browser
+automation, source scraping, public claims, or repo changes beyond the approved
+Research Arm and Opportunity OS artifacts.
