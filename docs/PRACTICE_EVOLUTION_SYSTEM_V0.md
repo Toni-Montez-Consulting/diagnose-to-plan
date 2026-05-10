@@ -105,8 +105,21 @@ Reusable memory starts only after review. Raw capture is not playbook memory.
 
 - Keep a visible working ledger during strategy, offer, proof, positioning,
   product-shaping, or long planning threads.
-- Ask clarifying questions when they materially improve the output, but keep
-  most questions non-blocking and momentum-preserving.
+- Ask clarifying questions when they materially improve the output or help Toni
+  understand where the work is going. Keep most questions non-blocking and
+  momentum-preserving.
+- Use question checkpoints for substantial strategy/build work:
+  1. Start with a compact ledger.
+  2. State what the agent thinks it is building, why it matters, and the likely
+     path.
+  3. Ask one to three questions that help Toni steer, learn, or increase
+     resolution before the next meaningful layer.
+  4. Offer the practical path and the ambitious path when a meaningful fork
+     exists.
+  5. Build the next useful slice with labeled assumptions if the answers are
+     not required to proceed.
+  6. Ask checkpoint questions again before moving into a new meaningful layer
+     on longer builds.
 - Preserve the ambition of the idea before reducing it to risks.
 - Separate prototype thinking from production authority.
 - Treat squads and agent roles as review lenses unless Toni explicitly asks for
@@ -172,6 +185,22 @@ Research pattern candidates should state:
 Use `practice-os/templates/idea-evolution-record.md` when a collaboration move,
 agent behavior, process tweak, repeated mistake, or new system idea should be
 developed beyond Kaizen capture.
+
+Accepted playbook memory:
+
+- `practice-os/evolution/records/2026-05-10-question-checkpoint-rule-for-substantial-strategy-build-work.md`
+  records the question-checkpoint rule as a standing collaboration protocol for
+  substantial strategy/build work.
+
+### 4. Visible Cockpit Later
+
+The current accepted sequence is iterative:
+
+1. Keep the former path now: CLI/operator-first capture and review records.
+2. Plan the latter path later: a visible cockpit/dashboard once two or three
+   real evolution records prove the right fields, views, and review rhythm.
+
+Do not build the cockpit before the record workflow has real usage evidence.
 
 ## Promotion Decision
 

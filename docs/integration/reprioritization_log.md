@@ -10,6 +10,42 @@ review_status: draft
 Use this log after meaningful Practice OS changes so backlog movement is
 deliberate and visible.
 
+## 2026-05-10: Question Checkpoint Rule Promoted
+
+Source:
+
+- Toni clarified that questions are part of how he learns what Codex is doing,
+  where the work is going, and how to steer substantial work.
+- `AGENTS.md`
+- `docs/PRACTICE_EVOLUTION_SYSTEM_V0.md`
+- `practice-os/evolution/records/2026-05-10-question-checkpoint-rule-for-substantial-strategy-build-work.md`
+- `practice-os/kaizen/intake.jsonl`
+
+Change:
+
+- Promoted the Question Checkpoint Rule to playbook memory for substantial
+  strategy/build work.
+- Locked the default protocol: compact ledger, state what Codex thinks is being
+  built and why, ask one to three non-blocking questions, show practical and
+  ambitious paths, build with labeled assumptions, and ask again before a new
+  meaningful layer.
+- Kept the current Practice Evolution System CLI/operator-first, with a visible
+  cockpit/dashboard planned only after real record usage.
+
+Priority impact:
+
+1. Future DTP/practice/consulting strategy and build threads should include
+   question checkpoints by default.
+2. Small mechanical tasks and urgent safe fixes do not need the full protocol.
+3. The visible cockpit remains a later iteration, not the next immediate build.
+
+Next review trigger:
+
+- Three substantial threads have used the protocol.
+- Toni says questions are too heavy, too light, too late, or not helping him
+  steer.
+- The Practice Evolution cockpit/dashboard is reopened for implementation.
+
 ## 2026-05-10: Practice Evolution System V0 Added
 
 Source:

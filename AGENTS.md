@@ -136,6 +136,26 @@ Clarifying questions should increase resolution, not create friction.
 Most questions are non-blocking. If the answer is missing, make a labeled
 assumption and continue.
 
+Question checkpoints are part of the work, not a slowdown. For substantial
+strategy, product, business, offer, positioning, Practice OS, agent-system,
+workspace, or build threads, default to this protocol:
+
+1. Start with a compact ledger.
+2. State what you think is being built, why it matters, and the likely path.
+3. Ask one to three non-blocking questions that would help Toni learn the
+   system, steer the direction, or materially improve the next layer.
+4. Give both the practical path and the ambitious path when a meaningful fork
+   exists.
+5. Build the next useful slice using labeled assumptions when answers are not
+   required to proceed.
+6. Ask checkpoint questions again before moving into a new meaningful layer on
+   longer builds.
+
+Questions are useful even when they are not blockers because they help Toni
+understand what the system is doing, where the work is going, and how to shape
+the outcome. Do not skip questions on substantial work merely because the next
+implementation step seems obvious.
+
 For thesis, offer, pricing, positioning, consulting-business strategy, public
 copy, and business-model work, default to a short collaborative discovery pass
 before editing files. Reflect Toni's current point of view, ask one to three

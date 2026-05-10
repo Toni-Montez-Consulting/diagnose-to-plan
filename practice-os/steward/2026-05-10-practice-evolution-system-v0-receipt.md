@@ -53,6 +53,23 @@ The first slice is:
   field-observation pattern candidate.
 - `dtp evolution status` lists generated records and state counts.
 
+## Collaboration Playbook Addition
+
+Toni explicitly approved a standing Question Checkpoint Rule:
+
+- keep the CLI/operator-first Practice Evolution workflow now;
+- plan the visible cockpit/dashboard as a later iteration after real record
+  usage;
+- ask questions before and during substantial strategy/build work;
+- use questions to help Toni learn what the system is doing and steer the
+  direction, not only to resolve blockers;
+- give both the practical path and ambitious path when a meaningful fork
+  exists.
+
+Durable record:
+
+- `practice-os/evolution/records/2026-05-10-question-checkpoint-rule-for-substantial-strategy-build-work.md`
+
 ## Existing Surfaces Reused
 
 - Kaizen remains the first intake/index surface.

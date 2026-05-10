@@ -66,6 +66,10 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
   and `dtp evolution status`.
 - `practice-os/evolution/records/`: generated idea, collaboration, messaging,
   agent-behavior, and meta-pattern evolution records.
+- `practice-os/evolution/records/2026-05-10-question-checkpoint-rule-for-substantial-strategy-build-work.md`:
+  playbook-memory rule for asking questions before and during substantial
+  strategy/build work, while preserving momentum through labeled assumptions
+  and practical/ambitious path framing.
 - `practice-os/research/pattern-candidates/`: generated research and
   field-observation pattern candidates.
 - `practice-os/fixtures/consulting-intelligence/northline-performance-studio-blueprint-sample.md`:
@@ -274,6 +278,10 @@ Do not update `hub-prompts` or `hub-registry` just because the roadmap changes. 
 - Use `dtp evolution new --from-kaizen RECORD_ID` when a Kaizen capture is ready
   to become a reviewable idea-evolution draft. Use `dtp evolution status` to
   see generated evolution records and research-pattern candidates.
+- Use the Question Checkpoint Rule before and during substantial strategy,
+  product, business, offer, positioning, Practice OS, agent-system, workspace,
+  or build threads. Questions are part of how Toni learns and steers; do not
+  skip them merely because the next implementation step seems obvious.
 - Use `docs/WORKSPACE_OPERATOR_RUNBOOK.md` before running commands or changing files across repo boundaries. It keeps `dtp workspace report` read-only and avoids accidental deploy/migration/source-of-truth drift.
 - Use `dtp workspace recover --dry-run` before claiming older completed, active, blocked, parked, cancelled, or superseded work is missing from the cockpit. Review the ignored output, then import approved rows with `dtp workspace recover --apply --approved PATH`.
 - Use `docs/PUBLIC_PROOF_PROMOTION_RUNBOOK.md` before moving any screenshot, claim, metric, client/project artifact, internal system evidence, or proof candidate toward public consulting copy.
