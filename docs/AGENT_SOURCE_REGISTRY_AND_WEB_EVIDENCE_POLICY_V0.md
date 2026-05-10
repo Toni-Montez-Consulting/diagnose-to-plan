@@ -242,14 +242,36 @@ This policy is useful if future agents can:
   legal, finance, privacy, security, repo, and runtime gates;
 - add future source packs without changing the source-of-truth boundary.
 
+## First Pilot
+
+The first pilot is recorded in:
+
+```text
+practice-os/steward/2026-05-10-agent-source-policy-first-pilot.md
+```
+
+It tested:
+
+- OpenAI Agents SDK docs as a Tier 1 AI/platform source;
+- Microsoft 2026 Work Trend Index as a Tier 3 consulting/business source.
+
+The pilot confirmed the source registry can produce reviewed source-freshness
+items, a research decision record, and a research pattern candidate without
+changing public copy, client communication, tooling, runtime behavior, or
+autonomy level.
+
+The pilot also surfaced and fixed a local dry-run run-id collision risk when
+two source-freshness checks are run in parallel.
+
 ## Open Follow-Up
 
 Next iteration:
 
-1. Create the machine-readable source-pack file after at least one real role
-   workflow uses this policy.
-2. Add role-specific source examples to the active role specs when repeated use
+1. Run one more role pilot before creating the machine-readable source-pack
+   file. External Communications or Consulting Strategy are the strongest next
+   candidates.
+2. Create the machine-readable source-pack file after repeated role workflows
+   prove the fields.
+3. Add role-specific source examples to the active role specs when repeated use
    proves which sources are actually helpful.
-3. Run a small Research Steward dry run against one current AI/platform source
-   and one consulting/business source.
 4. Decide whether a dashboard should show source-pack freshness by role.

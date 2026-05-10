@@ -114,6 +114,7 @@ Raw dry-run output should go to ignored local output first:
 ```text
 outputs/research-source-freshness/source-freshness-YYYY-MM-DD.jsonl
 outputs/research-source-freshness/source-freshness-YYYY-MM-DD.md
+outputs/research-source-freshness/.run-ids/
 ```
 
 Reviewed source-freshness items that should survive in git can be promoted to:
@@ -237,11 +238,13 @@ It:
    queries;
 3. emits JSONL and Markdown dry-run queue files under
    `outputs/research-source-freshness/`;
-4. validates queue item fields and states;
-5. prints a short human review summary;
-6. can optionally fetch public URL excerpts or public search-result pages;
-7. blocks local/private URL fetches;
-8. does not schedule, sync, send, install, promote, or mutate tracked repo
+4. reserves run ids under ignored `.run-ids/` marker files before writing queue
+   items, so parallel operator-triggered runs do not reuse the same id;
+5. validates queue item fields and states;
+6. prints a short human review summary;
+7. can optionally fetch public URL excerpts or public search-result pages;
+8. blocks local/private URL fetches;
+9. does not schedule, sync, send, install, promote, or mutate tracked repo
    artifacts from findings.
 
 More advanced browsing, deduplication, source diffing, and scheduling can come

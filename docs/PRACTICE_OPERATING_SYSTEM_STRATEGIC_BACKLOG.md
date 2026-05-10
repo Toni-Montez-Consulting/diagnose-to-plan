@@ -102,12 +102,17 @@ Current internal-OS next action from the first operating review:
   allows broad web search while keeping official/primary sources first and
   requiring human-gated promotion before public, client, legal, finance,
   runtime, or repo-authority changes.
-- The next action is to run a small real source-freshness dry run, review noise
-  and usefulness, then decide whether to add structured source configs,
-  deduplication, source snapshots, richer search parsing, or the first
-  machine-readable agent source-pack file. Do not implement a scheduled
-  workflow until dry-run queues prove useful and a new autonomy-readiness
-  review is accepted.
+- `practice-os/steward/2026-05-10-agent-source-policy-first-pilot.md` records
+  the first source-policy pilot. It tested OpenAI Agents SDK docs as an
+  AI/platform source and Microsoft 2026 Work Trend Index as a consulting /
+  business source, then promoted reviewed source-freshness records into a
+  decision record and pattern candidate.
+- The next action is to run one more role pilot, ideally External
+  Communications or Consulting Strategy, then decide whether to add structured
+  source configs, deduplication, source snapshots, richer search parsing, or
+  the first machine-readable agent source-pack file. Do not implement a
+  scheduled workflow until dry-run queues prove useful and a new
+  autonomy-readiness review is accepted.
 
 ## P1 Client OS Pilot Wave
 

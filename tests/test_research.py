@@ -223,6 +223,26 @@ def test_source_freshness_blocks_private_url_fetch(tmp_path: Path) -> None:
     assert "local or private hosts are blocked" in payload["evidence"][1]["reason"]
 
 
+def test_source_freshness_run_id_skips_reserved_marker(tmp_path: Path) -> None:
+    config = _config(tmp_path)
+    marker_dir = tmp_path / "outputs" / "research-source-freshness" / ".run-ids"
+    marker_dir.mkdir(parents=True)
+    (marker_dir / "rsf-2026-05-10-001.lock").write_text(
+        "rsf-2026-05-10-001\n",
+        encoding="utf-8",
+        newline="\n",
+    )
+
+    result = run_research_source_freshness_dry_run(
+        config,
+        source_name="Reserved marker check",
+        notes=("Make sure reserved ids are skipped.",),
+        now=datetime(2026, 5, 10, 13, 15, tzinfo=UTC),
+    )
+
+    assert result.item.run_id == "rsf-2026-05-10-002"
+
+
 def test_source_freshness_cli_writes_dry_run_queue(tmp_path: Path, monkeypatch) -> None:
     monkeypatch.setenv("DTP_HOME", str(tmp_path))
     runner = CliRunner()
