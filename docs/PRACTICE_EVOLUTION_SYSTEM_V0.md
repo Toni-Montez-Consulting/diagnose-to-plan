@@ -151,14 +151,20 @@ Apply only the lenses that materially improve the record:
 | QA / Audit | What evidence or regression test would prove this works? |
 | General Counsel | Does this touch legal, proof, permission, COI, privacy, or contracting risk? |
 | COO | Does this improve operating cadence, handoff, or accountability? |
+| Research Steward | Does this research signal need a digest, pattern candidate, radar item, spike, or evidence-limit review? |
 
-V0 does not create autonomous Practice Steward or Memory Steward agents.
-Memory Steward now exists as a DTP role spec and read-only recommendation
-command, but it is still human-led and approval-gated. Practice Steward remains
-a function performed through this loop, Kaizen, templates, and steward receipts.
+V0 does not create autonomous Practice Steward, Memory Steward, or Research
+Steward agents. Memory Steward and Research Steward now exist as DTP role specs
+and read-only recommendation commands, but they are still human-led and
+approval-gated. Practice Steward remains a function performed through this loop,
+Kaizen, templates, and steward receipts.
 
 Use `dtp memory steward` when the question is what should be remembered,
 promoted, parked, superseded, or left alone.
+
+Use `dtp research steward` when the question is what research signal, digest,
+pattern candidate, or research-flavored Kaizen row needs review, promotion,
+parking, rejection, or a bounded experiment.
 
 ## Pilot Lanes
 

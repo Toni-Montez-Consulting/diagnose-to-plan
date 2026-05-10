@@ -40,6 +40,10 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
   for read-only memory visibility, promotion/parking recommendations,
   source-of-truth checks, drift risk, and human-gated memory levels. Use it
   with `dtp memory steward`.
+- `practice-os/agents/research-steward.md`: second active steward role spec
+  for read-only research-signal classification, evidence limits, Research Arm
+  artifact recommendations, and public-claim gates. Use it with
+  `dtp research steward`.
 - `docs/WORKSPACE_OPERATOR_RUNBOOK.md`: safe cross-repo operator runbook. It names command classes, repo roles, verification paths, package managers, deploy ownership, and no-touch boundaries without authorizing a live command runner.
 - `docs/PUBLIC_PROOF_PROMOTION_RUNBOOK.md`: public proof movement path. It reuses the existing proof/redaction templates and blocks public claims until evidence, permission, redaction, reviewer, and caveat gates pass.
 - `docs/PRACTICE_PROOF_QUEUE_INDEX.md`: active proof-candidate queue across CCAAP, Omnexus, DeMario, Hub/intake, Architected Strength, consulting assistant, Business Brain, and DSE. Use it before deciding what proof can move next.
@@ -290,6 +294,11 @@ Do not update `hub-prompts` or `hub-registry` just because the roadmap changes. 
 - Use `dtp memory steward` when Toni asks what should be remembered, promoted,
   parked, superseded, or reviewed. It is a read-only recommendation surface and
   cannot promote memory, sync Notion, change public copy, or touch clients.
+- Use `dtp research steward` when Toni asks what research signals, digests,
+  research-pattern candidates, or research-flavored Kaizen items need review,
+  promotion, parking, rejection, or bounded experiments. It is a read-only
+  recommendation surface and cannot authorize public claims, offer changes,
+  tool installs, repo changes, client communication, or autonomous runtime.
 - Use the Question Checkpoint Rule before and during substantial strategy,
   product, business, offer, positioning, Practice OS, agent-system, workspace,
   or build threads. Questions are part of how Toni learns and steers; do not

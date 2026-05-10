@@ -80,6 +80,22 @@ Minimum loop:
 source signal -> digest -> recommendation -> approval -> implementation proposal
 ```
 
+## Research Steward Layer
+
+Research Steward is the read-only review surface for this loop.
+
+Use:
+
+```powershell
+.\.venv\Scripts\dtp.exe research steward
+```
+
+It reads Research Arm digests, research-pattern candidates, and
+research-flavored Kaizen rows, then recommends whether each item should be
+finished, promoted, parked, rejected, or converted into a bounded experiment.
+It does not authorize public claims, offer changes, tool installs, repo
+changes, client communication, Notion sync, or autonomous runtime.
+
 ## Authority Boundary
 
 Allowed without separate approval:

@@ -95,6 +95,7 @@ Current DTP-owned role specs live in `practice-os/agents/`:
 | External Communications | customer-facing and professional messages, client/prospect email summaries, sendable drafts, and Gmail draft receipts | draft |
 | General Counsel | COI, contracting gates, proof permission, and legal-risk routing | draft |
 | Memory Steward | memory visibility, promotion/parking recommendations, source-of-truth checks, drift risk, and human-gated memory levels | draft |
+| Research Steward | research-signal classification, evidence limits, Research Arm artifact recommendations, and public-claim gates | draft |
 | Product Strategy | product direction, user/persona clarity, feature prioritization, launch sequencing, adoption loops, value proposition, roadmap shape, and product-market learning | draft |
 | QA / Audit | verification strategy, regression risk, release readiness, acceptance checks, quality gates, and honest go/no-go language | draft |
 | Software Architecture | system boundaries, module shape, integration design, technical tradeoffs, data flow, runtime authority, and architectural validation | draft |
@@ -102,7 +103,7 @@ Current DTP-owned role specs live in `practice-os/agents/`:
 | UX / Design | user experience, information architecture, visual hierarchy, interaction quality, responsive behavior, accessibility posture, and design-system fit | draft |
 
 Future candidate roles include PR / Brand Narrative, Internal Review, Data
-Architecture, Web Experience, Compliance, and Research.
+Architecture, Web Experience, and Compliance.
 
 Each specialized role must define:
 
@@ -136,13 +137,17 @@ The first wave is now intentionally broad enough to pilot:
 - Controller
 - General Counsel
 - Memory Steward
+- Research Steward
 
 Do not add more roles by default. Memory Steward was added because Toni
 explicitly chose it as the first more active assistant behavior after the
-Practice Evolution dashboard. Run these roles against real work first: client
-emails, Greg/Cam deliverables, consulting site changes, Hub intake, Omnexus
-proof/release gates, and practice operating decisions. Add another new role only
-when a real repeated workflow does not fit the current set.
+Practice Evolution dashboard. Research Steward was added next because the
+Research Arm already had repeated source signals, templates, digests, and
+pattern candidates that needed a read-only recommendation layer. Run these
+roles against real work first: client emails, Greg/Cam deliverables, consulting
+site changes, Hub intake, Omnexus proof/release gates, research digests, and
+practice operating decisions. Add another new role only when a real repeated
+workflow does not fit the current set.
 
 First public-safe role pilot:
 
