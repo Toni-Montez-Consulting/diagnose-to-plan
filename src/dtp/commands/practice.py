@@ -73,6 +73,9 @@ REQUIRED_KAIZEN_FILES = (
 REQUIRED_EVOLUTION_FILES = (
     "README.md",
 )
+REQUIRED_SOURCE_PACKS = (
+    "agent-source-packs.v0.json",
+)
 REQUIRED_SKILLS = (
     "diagnose",
     "plan-roadmap",
@@ -106,6 +109,13 @@ def run_practice_doctor(config: DtpConfig) -> DoctorResult:
     _check_files(config.repo_root / "docs", REQUIRED_DOCS, "doc", checks, problems)
     _check_files(root / "kaizen", REQUIRED_KAIZEN_FILES, "kaizen", checks, problems)
     _check_files(root / "evolution", REQUIRED_EVOLUTION_FILES, "evolution", checks, problems)
+    _check_files(
+        root / "research" / "source-packs",
+        REQUIRED_SOURCE_PACKS,
+        "source pack",
+        checks,
+        problems,
+    )
     _check_practice_skills(root / "skills", checks, problems)
     _check_gitignore(config.repo_root / ".gitignore", checks, problems)
 

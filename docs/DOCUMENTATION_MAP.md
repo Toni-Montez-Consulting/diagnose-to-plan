@@ -46,6 +46,9 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
   decision for letting all current and future agent roles use web search under
   a role-level source registry, evidence tiers, and human-gated promotion
   policy.
+- `decisions/0017-agent-source-packs-v0.md`: accepted decision for the first
+  machine-readable agent source-pack file covering the three proven roles:
+  Research Steward, External Communications, and Consulting Strategy.
 - `docs/source/practice_os_build_spec_v0_1.md`: additive source spec for the Practice OS capture -> learn loop and MVP modules. Preserve it; convert it into integration docs/templates/backlog items instead of editing it directly.
 - `docs/source/ai_implementation_layer_thesis_and_build_spec_v0_1.md`: additive company thesis and implementation-layer source material. Preserve its strategic language and use it as source for positioning, offer design, client discovery, and internal product development.
 - `database/schema/practice_os_schema_v0_1.sql`: additive starter schema source for future Practice OS records. Do not run it as a migration until it is reconciled with Hosted DTP Phase 0.
@@ -152,6 +155,10 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
 - `practice-os/research/source-freshness/reviews/`: promoted source-freshness
   findings that passed human review and should remain visible to future
   stewards.
+- `practice-os/research/source-packs/agent-source-packs.v0.json`: first
+  machine-readable source-pack file for pilot-proven agent roles. It encodes
+  source posture, allowed web sources, blocked sources, default outputs, and
+  promotion gates without granting runtime authority.
 - `practice-os/fixtures/consulting-intelligence/northline-performance-studio-blueprint-sample.md`:
   public-safe fictional Blueprint sample for a wellness/performance practice.
 - `docs/OFFER_LED_PRACTICE_PACKAGING.md`: internal offer-packaging source for the first sellable practice offers. Use it before changing `consulting` public copy around offers.

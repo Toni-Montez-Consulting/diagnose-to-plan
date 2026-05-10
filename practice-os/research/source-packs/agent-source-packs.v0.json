@@ -1,0 +1,325 @@
+{
+  "schema_version": "agent-source-packs.v0",
+  "review_status": "accepted_v0",
+  "owner_repo": "diagnose-to-plan",
+  "created_at": "2026-05-10",
+  "updated_at": "2026-05-10",
+  "policy_doc": "docs/AGENT_SOURCE_REGISTRY_AND_WEB_EVIDENCE_POLICY_V0.md",
+  "governing_rule": "Search can inform every agent. Search cannot authorize action by itself.",
+  "authority_boundary": {
+    "adds_authority": false,
+    "allows_web_search": true,
+    "allows_autonomous_actions": false,
+    "requires_human_promotion": true
+  },
+  "evidence_tiers": [
+    {
+      "tier": 0,
+      "label": "internal_and_direct",
+      "confidence_posture": "high for internal direction; public use still gated"
+    },
+    {
+      "tier": 1,
+      "label": "official_or_primary",
+      "confidence_posture": "medium to high after review"
+    },
+    {
+      "tier": 2,
+      "label": "standards_governance_security_research",
+      "confidence_posture": "medium to high after applicability review"
+    },
+    {
+      "tier": 3,
+      "label": "reputable_secondary_or_market_research",
+      "confidence_posture": "low to medium until corroborated"
+    },
+    {
+      "tier": 4,
+      "label": "loose_discovery",
+      "confidence_posture": "low; inspiration and source discovery only"
+    }
+  ],
+  "packs": [
+    {
+      "role_id": "research-steward",
+      "role_name": "Research Steward / Research Arm",
+      "source_pack_version": "0.1.0",
+      "status": "pilot_proven",
+      "last_reviewed_at": "2026-05-10",
+      "pilot_artifacts": [
+        "practice-os/steward/2026-05-10-agent-source-policy-first-pilot.md",
+        "practice-os/research/source-freshness/reviews/2026-05-10-openai-agents-sdk-source-policy-pilot.md",
+        "practice-os/research/source-freshness/reviews/2026-05-10-microsoft-work-trend-index-source-policy-pilot.md",
+        "practice-os/research/decisions/2026-05-10-openai-agents-sdk-source-policy-watch.md",
+        "practice-os/research/pattern-candidates/2026-05-10-ai-implementation-is-operating-model-redesign.md"
+      ],
+      "primary_sources": [
+        {
+          "id": "agent-source-registry-policy",
+          "tier": 0,
+          "type": "internal_policy",
+          "path_or_url": "docs/AGENT_SOURCE_REGISTRY_AND_WEB_EVIDENCE_POLICY_V0.md",
+          "use": "governs source quality, source promotion, broad web trust, and blocked actions",
+          "evidence_limit": "does not authorize public claims, client communication, runtime behavior, or autonomy"
+        },
+        {
+          "id": "research-arm-source-list",
+          "tier": 0,
+          "type": "internal_source_list",
+          "path_or_url": "docs/RESEARCH_ARM_SOURCE_LIST_V0.md",
+          "use": "recurring source candidates and event-triggered research posture",
+          "evidence_limit": "source list does not create decisions without review"
+        },
+        {
+          "id": "research-source-freshness-dry-run",
+          "tier": 0,
+          "type": "internal_command_spec",
+          "path_or_url": "docs/RESEARCH_SOURCE_FRESHNESS_DRY_RUN_V0.md",
+          "use": "dry-run queue shape and local evidence capture command",
+          "evidence_limit": "dry-run output is review evidence only"
+        },
+        {
+          "id": "openai-agents-sdk-docs",
+          "tier": 1,
+          "type": "official_ai_platform_docs",
+          "path_or_url": "https://platform.openai.com/docs/guides/agents-sdk",
+          "use": "agent architecture, guardrail, tracing, and eval posture",
+          "evidence_limit": "does not prove DTP should adopt the SDK or expand autonomy"
+        },
+        {
+          "id": "microsoft-work-trend-index-2026",
+          "tier": 3,
+          "type": "business_research_report",
+          "path_or_url": "https://www.microsoft.com/en-us/worklab/work-trend-index/agents-human-agency-and-the-opportunity-for-every-organization",
+          "use": "business framing for AI adoption, human agency, and operating-model redesign",
+          "evidence_limit": "does not prove Toni's offer, ROI, client demand, or public outcomes"
+        }
+      ],
+      "allowed_web_sources": [
+        "official product docs",
+        "release notes and changelogs",
+        "standards and security bodies",
+        "reputable research reports",
+        "broad search for source discovery and trend sensing only"
+      ],
+      "search_posture": {
+        "default": "official_first",
+        "broad_web_confidence": "low_until_corroborated",
+        "preferred_queries": [
+          "site:<official-domain> <topic>",
+          "<vendor/product> official docs <feature>",
+          "<standard body> <topic> guidance",
+          "<domain> benchmark report <year> source"
+        ]
+      },
+      "blocked_sources": [
+        "secrets",
+        "raw private client material",
+        "Microsoft confidential or day-job context",
+        "private relationship records",
+        "raw Gmail unless Toni explicitly opens the message",
+        "unsourced social claims as action evidence"
+      ],
+      "default_outputs": [
+        "research digest",
+        "research decision record",
+        "research pattern candidate",
+        "source-freshness review item",
+        "guardrail review recommendation"
+      ],
+      "promotion_required_for": [
+        "public claims",
+        "client communications",
+        "offer changes",
+        "tool installs",
+        "repo changes",
+        "runtime behavior",
+        "autonomy level changes",
+        "Notion sync"
+      ],
+      "next_review_trigger": "new source-policy pilot, source-list change, or source-pack schema change"
+    },
+    {
+      "role_id": "external-communications",
+      "role_name": "External Communications Agent",
+      "source_pack_version": "0.1.0",
+      "status": "pilot_proven",
+      "last_reviewed_at": "2026-05-10",
+      "pilot_artifacts": [
+        "practice-os/steward/2026-05-10-external-communications-source-policy-pilot.md",
+        "practice-os/comms/private/external-communications-source-policy-pilot-2026-05-10.md",
+        "practice-os/comms/private/messaging-knowledge-base-2026-05-10.md"
+      ],
+      "primary_sources": [
+        {
+          "id": "external-communications-role",
+          "tier": 0,
+          "type": "agent_role_spec",
+          "path_or_url": "practice-os/agents/external-communications.md",
+          "use": "drafting standards, summary rule, tone, allowed writes, and send gates",
+          "evidence_limit": "does not authorize sending or client action"
+        },
+        {
+          "id": "authentic-voice-policy",
+          "tier": 0,
+          "type": "internal_policy",
+          "path_or_url": "practice-os/policies/authentic-voice-and-anti-slop.md",
+          "use": "prevents generic AI writing, unsupported claims, and over-polished language",
+          "evidence_limit": "policy shapes language but does not prove external facts"
+        },
+        {
+          "id": "external-comms-source-policy-pilot",
+          "tier": 0,
+          "type": "internal_pilot",
+          "path_or_url": "practice-os/comms/private/external-communications-source-policy-pilot-2026-05-10.md",
+          "use": "source-safe AI implementation language and send checklist",
+          "evidence_limit": "draft-only and internal-only until Toni approves use"
+        },
+        {
+          "id": "messaging-knowledge-base",
+          "tier": 0,
+          "type": "internal_messaging_source",
+          "path_or_url": "practice-os/comms/private/messaging-knowledge-base-2026-05-10.md",
+          "use": "owner-bottleneck language, claims candidates, and internal pitch variants",
+          "evidence_limit": "not public copy or proof"
+        }
+      ],
+      "allowed_web_sources": [
+        "official sources for factual references",
+        "primary source docs for technical claims",
+        "audience context sources",
+        "source-verified external references when a message includes claims"
+      ],
+      "search_posture": {
+        "default": "source_check_only_when_claim_or_context_requires_it",
+        "broad_web_confidence": "low_until_primary_source_review",
+        "preferred_queries": [
+          "site:<official-domain> <recipient/company/topic>",
+          "<technical claim> official docs",
+          "<regulatory or policy topic> official guidance"
+        ]
+      },
+      "blocked_sources": [
+        "raw Gmail outside the approved task",
+        "private client data not opened by Toni",
+        "secrets",
+        "unsupported proof claims",
+        "AI-generated summaries without a source trail"
+      ],
+      "default_outputs": [
+        "email summary",
+        "draft email",
+        "executive update",
+        "client education note",
+        "send checklist",
+        "Gmail draft receipt only when requested"
+      ],
+      "promotion_required_for": [
+        "sending",
+        "Gmail draft creation unless Toni asks",
+        "public copy",
+        "client-facing claims",
+        "legal or finance language",
+        "proof movement",
+        "calendar or client action"
+      ],
+      "next_review_trigger": "first real source-backed client or prospect email using this language"
+    },
+    {
+      "role_id": "consulting-strategy",
+      "role_name": "Consulting Strategy Agent",
+      "source_pack_version": "0.1.0",
+      "status": "pilot_proven",
+      "last_reviewed_at": "2026-05-10",
+      "pilot_artifacts": [
+        "practice-os/steward/2026-05-10-consulting-strategy-source-policy-pilot.md",
+        "docs/PRACTICE_OFFER_STRATEGY_SOURCE_POLICY_PILOT_2026-05-10.md",
+        "docs/PRACTICE_BUILDER_LED_OFFER_MODEL.md",
+        "docs/OFFER_LED_PRACTICE_PACKAGING.md"
+      ],
+      "primary_sources": [
+        {
+          "id": "consulting-strategy-role",
+          "tier": 0,
+          "type": "agent_role_spec",
+          "path_or_url": "practice-os/agents/consulting-strategy.md",
+          "use": "offer logic, buyer fit, scope shape, proof posture, and proposal framing",
+          "evidence_limit": "does not publish positioning or approve claims"
+        },
+        {
+          "id": "practice-thesis-offer-map",
+          "tier": 0,
+          "type": "internal_strategy_doc",
+          "path_or_url": "docs/PRACTICE_THESIS_AND_OFFER_MAP.md",
+          "use": "core thesis, public doors, offer lanes, and proof posture",
+          "evidence_limit": "internal source, not public site copy"
+        },
+        {
+          "id": "builder-led-offer-model",
+          "tier": 0,
+          "type": "internal_offer_model",
+          "path_or_url": "docs/PRACTICE_BUILDER_LED_OFFER_MODEL.md",
+          "use": "Blueprint, Fast Track, Custom SOW, pricing posture, client fit, and proof hierarchy",
+          "evidence_limit": "pricing and proof remain gated"
+        },
+        {
+          "id": "offer-strategy-source-policy-pilot",
+          "tier": 0,
+          "type": "internal_pilot",
+          "path_or_url": "docs/PRACTICE_OFFER_STRATEGY_SOURCE_POLICY_PILOT_2026-05-10.md",
+          "use": "workflow-first AI offer strategy, Blueprint routing, and bad-fit rules",
+          "evidence_limit": "does not approve public copy or AI-specific offer page"
+        },
+        {
+          "id": "microsoft-work-trend-index-2026",
+          "tier": 3,
+          "type": "business_research_report",
+          "path_or_url": "https://www.microsoft.com/en-us/worklab/work-trend-index/agents-human-agency-and-the-opportunity-for-every-organization",
+          "use": "context for AI as operating-model redesign",
+          "evidence_limit": "does not prove Toni's outcomes, market demand, or ROI"
+        }
+      ],
+      "allowed_web_sources": [
+        "DTP source-of-truth docs first",
+        "consulting packaging examples as context",
+        "SMB and startup research",
+        "pricing benchmarks as internal context only",
+        "market reports after evidence-limit review"
+      ],
+      "search_posture": {
+        "default": "internal_first_then_source_checked_context",
+        "broad_web_confidence": "low_until_corroborated",
+        "preferred_queries": [
+          "<buyer segment> workflow bottleneck research",
+          "<offer type> consulting packaging examples",
+          "<industry> implementation pricing benchmark",
+          "<AI adoption> small business workflow official report"
+        ]
+      },
+      "blocked_sources": [
+        "unsupported ROI claims",
+        "private client facts without permission",
+        "exact pricing from weak benchmarks as public copy",
+        "competitor copy used as proof",
+        "social hype about AI as demand evidence"
+      ],
+      "default_outputs": [
+        "offer strategy note",
+        "buyer-fit filter",
+        "bad-fit filter",
+        "Blueprint routing guidance",
+        "proof-safe public-copy brief",
+        "pricing posture memo"
+      ],
+      "promotion_required_for": [
+        "public offer copy",
+        "pricing publication",
+        "proof claims",
+        "client-facing proposal commitments",
+        "ROI or savings claims",
+        "new standalone offer category"
+      ],
+      "next_review_trigger": "public consulting copy pass, pricing publication decision, or first AI/workflow prospect routed through Blueprint"
+    }
+  ]
+}
