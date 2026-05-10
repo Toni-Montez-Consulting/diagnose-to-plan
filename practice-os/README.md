@@ -45,6 +45,22 @@ Kaizen Kanban:
   transcript, payment, DSE, and unreviewed proof material stays out of mirror
   payloads.
 
+Practice Evolution System:
+
+- `../docs/PRACTICE_EVOLUTION_SYSTEM_V0.md` is the internal operating spine for
+  turning raw ideas, collaboration patterns, research observations, messaging
+  language, and client lessons into reviewed memory or parked follow-up.
+- `templates/idea-evolution-record.md` matures a Kaizen capture into a reviewed
+  decision, pattern candidate, playbook rule, or explicit parked/superseded
+  item.
+- `templates/research-pattern-candidate.md` turns research signals and real-world
+  observations into reusable consulting pattern candidates instead of loose
+  summaries.
+- `comms/private/messaging-knowledge-base-2026-05-10.md` holds internal
+  messaging language before any public-copy or proof gate.
+- V0 is human-gated: capture broadly, promote deliberately, and do not treat raw
+  capture as reusable playbook memory.
+
 Activation routing:
 
 - `templates/activation-routing-map.md` maps prompt shapes to the right `tm-skills` skill, DTP Practice OS skill, template, roadmap lane, proof gate, COI gate, research/eval artifact, repo touch pass, or parked automation path.
@@ -94,6 +110,9 @@ Proof and redaction templates:
 
 Future Intelligence templates:
 
+- `templates/research-pattern-candidate.md` turns research signals, field notes,
+  and observed business behavior into possible operator patterns before
+  promotion into `patterns/`.
 - `templates/lesson-capture.md` turns delivery outcomes and failures into reusable lessons.
 - `templates/research-radar-item.md` tracks AI/dev signals as `Adopt`, `Pilot`, `Watch`, or `Reject`.
 - `templates/research-spike.md` scopes a bounded tool/protocol/framework investigation.

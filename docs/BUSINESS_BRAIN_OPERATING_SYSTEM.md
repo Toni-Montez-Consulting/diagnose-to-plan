@@ -124,6 +124,10 @@ this slice except through existing roadmap boundaries.
   `practice-os/templates/business-justification-scorecard.md`. Use it before a
   Business Brain idea changes public offer/proof posture, client/operator
   workflow, or meaningful delivery priority.
+- Practice evolution now uses `docs/PRACTICE_EVOLUTION_SYSTEM_V0.md` when raw
+  ideas, collaboration patterns, research observations, messaging language, or
+  client lessons need to mature beyond Kaizen capture without becoming
+  uncontrolled self-learning, public copy, or autonomous agent behavior.
 - Notion remains a cockpit and mobile mirror. DTP owns the source artifacts,
   decision gates, evidence notes, and private/public boundary.
 

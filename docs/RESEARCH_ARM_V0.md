@@ -156,6 +156,14 @@ Every digest should include:
 - approval gate;
 - next review date.
 
+When the source is an observed business behavior, client/operator story,
+market pattern, field note, or recurring workflow signal rather than only a
+link or report, use
+`practice-os/templates/research-pattern-candidate.md` before promoting the
+lesson to `practice-os/patterns/`. The pattern candidate should preserve the
+evidence limit, consulting translation, possible client artifact, and next
+experiment instead of treating one observation as a reusable truth.
+
 ## Classification
 
 Use the existing research radar language:
@@ -174,6 +182,7 @@ These are workstreams, not new autonomous roles yet.
 |---|---|---|
 | Research Arm | collect and synthesize external AI/software/workflow signals | active V0 |
 | Practice Intelligence | translate research into offers, diagnostics, and client explanations | manual V0 |
+| Pattern Extraction | turn real-world observations and research signals into reusable consulting pattern candidates | manual V0 |
 | Repo Quality | find stale docs, conflicting instructions, and drift | future/manual |
 | Roadmap Signal | suggest what should move, park, or become a template | manual V0 |
 | Content Signal | create raw content seeds without polished social slop | future/manual |

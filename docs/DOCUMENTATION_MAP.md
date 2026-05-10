@@ -31,6 +31,7 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
 - `docs/PRACTICE_ROADMAP_HORIZONS_2026.md`: urgent/short/mid/long horizon overlay for the practice roadmap. Use it to decide what should happen now, what should be improved next, and which future capabilities remain gated.
 - `docs/PRACTICE_MACHINE_OPERATING_MAP.md`: offer-led compression map for the whole practice machine. Use it before broad cross-repo plans, business-system changes, proof strategy, Hub expansion, hosted DTP decisions, or public-offer changes.
 - `docs/PRACTICE_KAIZEN_KANBAN_SYSTEM.md`: DTP-first continuous-improvement intake/index loop. Use it before trusting chat memory with new ideas, asks, blockers, proof candidates, repo issues, client signals, corrections, process improvements, completed work, cancelled work, superseded work, or discarded assistant suggestions.
+- `docs/PRACTICE_EVOLUTION_SYSTEM_V0.md`: human-gated evolution spine for turning raw ideas, collaboration patterns, research observations, messaging language, and client lessons into reviewed memory, pattern candidates, playbook rules, or parked/superseded records. Use it when an idea should not be captured once and forgotten.
 - `docs/WORKSPACE_OPERATOR_RUNBOOK.md`: safe cross-repo operator runbook. It names command classes, repo roles, verification paths, package managers, deploy ownership, and no-touch boundaries without authorizing a live command runner.
 - `docs/PUBLIC_PROOF_PROMOTION_RUNBOOK.md`: public proof movement path. It reuses the existing proof/redaction templates and blocks public claims until evidence, permission, redaction, reviewer, and caveat gates pass.
 - `docs/PRACTICE_PROOF_QUEUE_INDEX.md`: active proof-candidate queue across CCAAP, Omnexus, DeMario, Hub/intake, Architected Strength, consulting assistant, Business Brain, and DSE. Use it before deciding what proof can move next.
@@ -52,6 +53,15 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
 - `practice-os/templates/remaining-locks-ledger.md`: collaboration pattern for
   carrying unresolved strategy, offer, proof, positioning, and product-shaping
   decisions across turns before durable capture.
+- `practice-os/templates/idea-evolution-record.md`: review template for maturing
+  Kaizen captures into working memory, decision memory, pattern candidates,
+  pattern memory, playbook memory, or explicit parked/superseded outcomes.
+- `practice-os/templates/research-pattern-candidate.md`: Research Arm companion
+  template for converting research signals, field notes, and business
+  observations into reusable consulting pattern candidates.
+- `practice-os/comms/private/messaging-knowledge-base-2026-05-10.md`: internal
+  messaging knowledge base for owner-bottleneck language, short pitch variants,
+  claims/metaphor candidates, and visual seeds before any public-copy gate.
 - `practice-os/fixtures/consulting-intelligence/northline-performance-studio-blueprint-sample.md`:
   public-safe fictional Blueprint sample for a wellness/performance practice.
 - `docs/OFFER_LED_PRACTICE_PACKAGING.md`: internal offer-packaging source for the first sellable practice offers. Use it before changing `consulting` public copy around offers.
@@ -254,6 +264,7 @@ Do not update `hub-prompts` or `hub-registry` just because the roadmap changes. 
 - Public proof must be redacted, permissioned, and evidence-backed before moving into consulting.
 - Use `docs/PRACTICE_MACHINE_OPERATING_MAP.md` before broad workspace, offer-led, platform, Hub, DTP, prompt/skill, proof, or adjacent-project planning. It decides whether the work is `Now`, `Next`, `Later`, or `Hold`.
 - Use `docs/PRACTICE_KAIZEN_KANBAN_SYSTEM.md` and `dtp kaizen capture` when a new idea, feature, engagement signal, ask, blocker, proof candidate, correction, repo issue, process improvement, completed task, cancelled task, superseded task, or discarded suggestion should survive beyond the current chat.
+- Use `docs/PRACTICE_EVOLUTION_SYSTEM_V0.md` and `practice-os/templates/idea-evolution-record.md` when a captured idea, collaboration meta-pattern, messaging line, or agent behavior needs a path from raw capture into reviewed memory, a reusable pattern, a template, or an explicit parked/superseded state.
 - Use `docs/WORKSPACE_OPERATOR_RUNBOOK.md` before running commands or changing files across repo boundaries. It keeps `dtp workspace report` read-only and avoids accidental deploy/migration/source-of-truth drift.
 - Use `dtp workspace recover --dry-run` before claiming older completed, active, blocked, parked, cancelled, or superseded work is missing from the cockpit. Review the ignored output, then import approved rows with `dtp workspace recover --apply --approved PATH`.
 - Use `docs/PUBLIC_PROOF_PROMOTION_RUNBOOK.md` before moving any screenshot, claim, metric, client/project artifact, internal system evidence, or proof candidate toward public consulting copy.
@@ -261,6 +272,7 @@ Do not update `hub-prompts` or `hub-registry` just because the roadmap changes. 
 - Use `docs/BUSINESS_ADMIN_OPERATING_SYSTEM.md` when Google Workspace, Calendar/Meet, Apple Reminders capture, LLC readiness, EIN/banking/tax, contracts, insurance, brand assets, or business overhead need durable planning state.
 - Use `docs/INTERNAL_OFFER_REPERTOIRE_CATALOG.md` before turning a newly delivered asset, system, logo kit, mission/vision sprint, admin room, command room, launch hardening pass, or follow-up queue into an offer candidate.
 - Use `practice-os/templates/activation-routing-map.md` when skill triggers, templates, roadmap lanes, proof gates, COI gates, research/eval artifacts, or repo touch lanes need prompt-based routing.
+- Use `practice-os/templates/research-pattern-candidate.md` when a research signal, field note, or business observation needs to become a reusable consulting pattern candidate instead of a one-off summary.
 - Use `docs/BUSINESS_BRAIN_OPERATING_SYSTEM.md` and `practice-os/commands/` when the prompt asks for Business Brain, Consulting OS, business agents, practice comms, diagnose-prospect, COI, proposal, or operator-handoff work.
 - Use `docs/PRACTICE_INTELLIGENCE_CONTROL_PLANE.md` at the start of broad work blocks that combine clients, repos, Notion, Gmail, Calendar, QuickBooks ideas, public assistant planning, memory, or tooling decisions. It tells future agents how to rehydrate, route inputs, choose artifacts, and avoid unsafe action.
 - Use `practice-os/templates/agentic-performance-gap-review.md` when a prompt, session, skill change, research adoption, or roadmap move reveals a possible agentic performance gap.

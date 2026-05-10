@@ -9,6 +9,11 @@ review_status: reviewed
 
 Reviewed patterns live here. Raw candidates stay in `extracts/`.
 
+Research and field-observation candidates should use
+`practice-os/templates/research-pattern-candidate.md` before promotion so a
+single observation does not become a playbook rule without evidence, limits,
+and a next experiment.
+
 Initial pattern files:
 
 - `customer-inquiry-bottleneck.md`

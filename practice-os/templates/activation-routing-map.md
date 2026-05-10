@@ -21,6 +21,10 @@ Use this map when a prompt could route to more than one skill, template, process
 - Use `docs/AGENT_SQUADS_KNOWLEDGE_BASE_V0.md` when a prompt asks for squads,
   agent teams, knowledge bases, business justification, approval gates, or
   source-indexed handoffs.
+- Use `docs/PRACTICE_EVOLUTION_SYSTEM_V0.md` when a prompt says an idea,
+  collaboration pattern, research observation, messaging line, or agent
+  behavior should not be forgotten and may need to mature beyond basic Kaizen
+  capture.
 - Use `docs/PRACTICE_OPERATING_SYSTEM_STRATEGIC_BACKLOG.md` when a prompt asks
   for the practice operating system, strategic backlog, agent workflow,
   knowledge base, Hub/tm-skills coordination, consulting design architecture,
@@ -46,6 +50,8 @@ Use this map when a prompt could route to more than one skill, template, process
 | "new idea", "design idea", "business idea", "development enhancement", "project idea", "can we add this later" | contextual idea intake | `docs/CONTEXTUAL_ACTIVATION_PLAYBOOK.md`, story activation index | classify before implementation |
 | "which agent/skill should this story use", "tie this to Kanban", "activate for this epic" | story activation index | `docs/ROADMAP_STORY_ACTIVATION_INDEX.md`, story activation contract | suggested agents require explicit delegation approval |
 | "squad of agents", "agent squad", "Delivery Squad", "Business Justification Squad", "knowledge base", "knowledge scope", "business justification", "approval gate", "handoff receipt" | Agent Squads + Knowledge Base V0 | `docs/AGENT_SQUADS_KNOWLEDGE_BASE_V0.md`, squad charter, source index, business justification scorecard, approval gate, squad handoff receipt | human-led only; no install, autonomous agents, public proof, client comms, production writes, or repo mutation without gates |
+| "don't forget this", "dont forget this", "meta-pattern", "idea evolution", "this worked well", "do this again", "collaboration pattern", "practice evolution", "make sure this becomes how we work" | Practice Evolution System V0 | `docs/PRACTICE_EVOLUTION_SYSTEM_V0.md`, `practice-os/templates/idea-evolution-record.md`, `practice-os/templates/remaining-locks-ledger.md`, `practice-os/templates/memory-promotion-record.md` | capture broadly, promote deliberately; no autonomous self-learning, public/client changes, or playbook-memory promotion without review |
+| "messaging system", "pitch system", "how I explain what I do", "owner bottleneck language", "claims library", "metaphor library", "visual asset seeds" | Messaging Knowledge Base | `docs/PRACTICE_EVOLUTION_SYSTEM_V0.md`, `practice-os/comms/private/messaging-knowledge-base-2026-05-10.md`, External Communications Agent, Consulting Strategy Agent | internal only until public-copy, proof, positioning, and destination gates pass |
 | "practice OS", "operating system backlog", "client OS pilot", "Greg first", "CCAAP next", "Cam after confirmation" | Practice OS strategic backlog and Client OS pilot wave | `docs/PRACTICE_OPERATING_SYSTEM_STRATEGIC_BACKLOG.md`, `docs/CLIENT_OS_PILOT_WAVE_2026-05.md`, `practice-os/templates/client-os-pilot-packet.md` | private engagement truth stays in the vault; automation is draft-only; public proof waits for gates |
 | "vector brain", "semantic memory", "knowledge base V1", "persistent recall", "source packs" | Practice Knowledge Base V1 and vector brain roadmap | `docs/PRACTICE_KNOWLEDGE_BASE_V1.md`, `docs/PRACTICE_VECTOR_BRAIN_ROADMAP.md`, `practice-os/templates/memory-promotion-record.md` | markdown corpus and privacy/citation evals before retrieval implementation |
 | "architecture review", "component/design-system architecture", "runtime authority", "automation authority", "cross-repo system map" | architecture review packet and automation authority matrix | `docs/PRACTICE_ARCHITECTURE_REVIEW_PACKET_2026-05.md`, `practice-os/templates/architecture-review-packet.md`, `practice-os/templates/automation-authority-matrix.md` | review-first; no new runtime, schema, global install, or write-enabled automation without separate approval |
@@ -66,7 +72,7 @@ Use this map when a prompt could route to more than one skill, template, process
 | "does this need a portal", "command room", "owner dashboard" | Command Room fit assessment | Command Room spec if fit passes | checklist/no surface is allowed |
 | "new client kit", "Mom nonprofit", "engagement plan" | Client Operating Kit | diagnose, plan, consent, data inventory | private engagement material stays private |
 | "research this tool/protocol", "should we adopt X" | research radar or research spike | Future Intelligence layer | classify Adopt/Pilot/Watch/Reject |
-| "research arm", "research agent", "AI research digest", "keep me current", "what changed in AI", "turn research into practice updates", "source digest" | Research Arm V0 | `docs/RESEARCH_ARM_V0.md`, `docs/RESEARCH_AND_OPPORTUNITY_NOTION_MIRROR_V0.md`, `practice-os/templates/research-arm-digest.md`, `practice-os/templates/research-radar-item.md`, `practice-os/templates/research-spike.md` | research can recommend work, but cannot authorize public claims, offer changes, tool installs, repo changes, or autonomous runtime |
+| "research arm", "research agent", "AI research digest", "keep me current", "what changed in AI", "turn research into practice updates", "source digest", "research pattern", "pattern extraction", "business observation", "field note pattern" | Research Arm V0 | `docs/RESEARCH_ARM_V0.md`, `docs/RESEARCH_AND_OPPORTUNITY_NOTION_MIRROR_V0.md`, `practice-os/templates/research-arm-digest.md`, `practice-os/templates/research-radar-item.md`, `practice-os/templates/research-spike.md`, `practice-os/templates/research-pattern-candidate.md` | research and field notes can become pattern candidates, but cannot authorize public claims, offer changes, tool installs, repo changes, or autonomous runtime |
 | "Opportunity OS", "relationship system", "warm lead", "relationship map", "referral map", "operator opportunity", "high-trust consulting growth", "consulting CRM", "private relationship ledger", "Notion mirror for opportunities", "research/opportunity Notion mirror" | Opportunity OS V0 | `docs/OPPORTUNITY_OS_V0.md`, `decisions/0010-opportunity-os-private-store-boundary.md`, `docs/RESEARCH_AND_OPPORTUNITY_NOTION_MIRROR_V0.md`, `practice-os/templates/opportunity-os-record.md` | no raw private relationship ledger in consulting repo; no automated outreach; Notion is mirror only |
 | "agent failed", "lesson learned", "make this self-learning" | lesson capture and eval candidate | agent session record | human approves skill/eval updates |
 | "lost connection", "stream disconnected", "reconnecting", "command timed out", "timeout", "resume from where we were", "what happened before the disconnect" | Session Rehydration Checklist plus Agentic Performance Gap Review when repeated | `practice-os/templates/session-rehydration-checklist.md`, `practice-os/templates/agentic-performance-gap-review.md` | verify live files/logs/git/processes before claiming status; capture timeout/disconnect in the ledger |
@@ -107,6 +113,9 @@ Use these labels in Roadmap Steward reviews and handoffs:
 - `approval_gate`
 - `contextual_idea_intake`
 - `custom_interface_craft`
+- `practice_evolution_system`
+- `messaging_knowledge_base`
+- `research_pattern_candidate`
 - `practice_os_template`
 - `roadmap_backlog_story`
 - `proof_redaction_gate`
