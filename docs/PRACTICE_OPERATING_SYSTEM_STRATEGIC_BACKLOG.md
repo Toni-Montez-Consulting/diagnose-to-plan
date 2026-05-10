@@ -22,6 +22,12 @@ trust, and easier for agents to help with. The near-term system is not a public
 product, CRM, autonomous agent manager, or generic knowledge base. It is a
 source-indexed operating loop with receipts.
 
+This does not flatten the long-term ambition. Toni wants a larger squad system
+and eventually autonomous agents where they are genuinely useful. The near-term
+answer is to prove the operating loop first, then move repeated workflows up
+`docs/AUTONOMY_READINESS_LADDER_V0.md` when the source scope, evals, audit
+logs, rollback, privacy boundary, and approval gates are ready.
+
 The first wave is draft-only automation:
 
 - agents prepare briefs, packets, audits, source indexes, PR notes, and next
@@ -39,6 +45,7 @@ The first wave is draft-only automation:
 | Agent Squads + Knowledge Base V0 | DTP | Done | source map, templates, approval gates, and receipt pattern merged |
 | Consulting squad pointer | consulting | Done | public repo points future proof/offer work back to DTP |
 | Repo role split | DTP | Done | DTP, consulting, Hub, and `tm-skills` boundaries are explicit |
+| Autonomy Readiness Ladder V0 | DTP | Done | autonomy levels, candidate workflows, readiness gates, template, and receipt pattern exist |
 | Completed references | DTP | Done | DeMario/Mario and Omnexus are reference projects, not the next pilot |
 
 ## P0 Workflow Spine Implementation
@@ -166,6 +173,12 @@ FAOS stays readiness/review work until at least two Client OS pilot loops are
 complete. The next FAOS move is a separate command/version/readiness pass, not a
 new repo or service.
 
+Any FAOS workflow that would become scheduled, write-enabled, live, or
+externally mutating must pass the Autonomy Readiness Ladder first. The first
+likely candidates are read-only Research/Memory/Status workflows, then
+draft-only communications and local validation sweeps, not client-facing,
+payment, legal, public-proof, or production actions.
+
 ## Acceptance
 
 This wave is accepted when:
@@ -175,6 +188,8 @@ This wave is accepted when:
 - Greg and CCAAP each have a completed Client OS packet and receipt;
 - Cam is either confirmed into the same loop or explicitly still waiting;
 - Knowledge Base V1 docs and templates exist;
+- autonomy candidates are classified through the Autonomy Readiness Ladder
+  before any autonomous runtime or write-enabled workflow is proposed;
 - Hub and `tm-skills` have repo-local readiness notes without authority creep;
 - consulting has a UX/design-system audit without premature proof publishing;
 - the backlog reflects this order;

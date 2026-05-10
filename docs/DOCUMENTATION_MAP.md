@@ -28,6 +28,10 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
   accepted decision for recurring Research Arm sources, simple research
   decision records, and event-based knowledge-base maintenance across memory,
   operations, project execution, and agent-system updates.
+- `decisions/0012-autonomy-readiness-ladder.md`: accepted decision for staged
+  autonomy levels, first autonomy candidates, readiness gates, and the rule
+  that future scheduled, write-enabled, live, or external agent workflows must
+  pass an autonomy readiness review before authority expands.
 - `docs/source/practice_os_build_spec_v0_1.md`: additive source spec for the Practice OS capture -> learn loop and MVP modules. Preserve it; convert it into integration docs/templates/backlog items instead of editing it directly.
 - `docs/source/ai_implementation_layer_thesis_and_build_spec_v0_1.md`: additive company thesis and implementation-layer source material. Preserve its strategic language and use it as source for positioning, offer design, client discovery, and internal product development.
 - `database/schema/practice_os_schema_v0_1.sql`: additive starter schema source for future Practice OS records. Do not run it as a migration until it is reconciled with Hosted DTP Phase 0.
@@ -40,6 +44,11 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
   updating, refining, expanding, or intentionally not updating knowledge bases
   across research, memory management, operations, project execution, client
   signals, proof, and agent-system misses.
+- `docs/AUTONOMY_READINESS_LADDER_V0.md`: staged autonomy gate for moving
+  workflows from manual to read-only, draft-only, supervised local execution,
+  bounded scheduled workflow, bounded live action, or high-trust autonomy. Use
+  it before building autonomous agents, scheduled stewards, an agent manager,
+  or any workflow that changes authority beyond normal scoped repo execution.
 - `docs/practice-evolution-dashboard.html`: generated internal status dashboard
   for Practice Evolution records and research-pattern candidates. Regenerate
   with `dtp evolution dashboard`; it reads local markdown records only and does
@@ -84,6 +93,10 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
 - `practice-os/templates/knowledge-base-event-record.md`: simple event record
   for knowledge-base maintenance across research, memory, operations, project
   execution, client signals, proof, and agent-system misses.
+- `practice-os/templates/autonomy-readiness-review.md`: review template for
+  classifying current/target autonomy levels, allowed sources/actions,
+  privacy, evals, audit logging, rollback, override, cost, and promotion
+  decision before a workflow becomes more autonomous.
 - `practice-os/comms/private/messaging-knowledge-base-2026-05-10.md`: internal
   messaging knowledge base for owner-bottleneck language, short pitch variants,
   claims/metaphor candidates, and visual seeds before any public-copy gate.
@@ -325,6 +338,12 @@ Do not update `hub-prompts` or `hub-registry` just because the roadmap changes. 
   knowledge base, operating pattern, memory-management practice, project
   execution habit, or agent-system behavior should be updated, refined,
   expanded, operationalized, parked, or superseded.
+- Use `docs/AUTONOMY_READINESS_LADDER_V0.md` and
+  `practice-os/templates/autonomy-readiness-review.md` when Toni asks for
+  autonomous agents, more agent squads, an agent manager, a recurring steward,
+  a semi-autonomous workflow, a read-only agent, draft-only agent, scheduled
+  source/KB/status review, or any workflow that should move up an autonomy
+  level.
 - Use the Question Checkpoint Rule before and during substantial strategy,
   product, business, offer, positioning, Practice OS, agent-system, workspace,
   or build threads. Questions are part of how Toni learns and steers; do not
@@ -360,7 +379,13 @@ Do not update `hub-prompts` or `hub-registry` just because the roadmap changes. 
   `practice-os/templates/architecture-review-packet.md`, and
   `practice-os/templates/automation-authority-matrix.md` before expanding
   cross-repo automation authority or architecture surface.
-- Use `docs/FAOS_ORCHESTRATION_ROADMAP.md` and `practice-os/templates/faos-phase-readiness-review.md` before accepting any FAOS, `op` wrapper, Langfuse, Mem0/Letta, Spec-Kit, MCP, subagent, hook, durable execution, or agent-orchestration implementation prompt.
+- Use `docs/FAOS_ORCHESTRATION_ROADMAP.md`,
+  `practice-os/templates/faos-phase-readiness-review.md`,
+  `docs/AUTONOMY_READINESS_LADDER_V0.md`, and
+  `practice-os/templates/autonomy-readiness-review.md` before accepting any
+  FAOS, `op` wrapper, Langfuse, Mem0/Letta, Spec-Kit, MCP, subagent, hook,
+  durable execution, scheduled agent workflow, or agent-orchestration
+  implementation prompt.
 - Use `docs/NOTION_MIRROR_V0.md` and `practice-os/templates/notion-cockpit-audit.md` before connecting Notion MCP, creating/updating Notion databases, rebuilding cockpit views, or syncing DTP roadmap/proof/repo-health records into Notion. Notion is a mobile mirror and capture surface; DTP remains source of truth.
 - Use `docs/PRACTICE_MEMORY_CONTROL_PLANE.md` and `practice-os/templates/memory-control-checkpoint.md` when Toni asks whether the system can remember/handle everything, when a new connector like QuickBooks enters scope, or when multiple workstreams risk living only in chat.
 - Use `docs/PRACTICE_MEMORY_OPTIMIZATION_PLAN.md`, `practice-os/templates/session-rehydration-checklist.md`, and `practice-os/templates/memory-source-index.md` when Toni asks about persistent memory, better recall, context loss, source-aware rehydration, vector storage, private retrieval, MCP recall, or whether Codex can handle the operating load.

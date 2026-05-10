@@ -48,6 +48,7 @@ REQUIRED_TEMPLATES = (
     "notion-cockpit-audit.md",
     "correction-checklist-for-toni.md",
     "business-brain-weekly-operating-packet.md",
+    "autonomy-readiness-review.md",
     "idea-evolution-record.md",
     "knowledge-base-event-record.md",
     "research-decision-record.md",
@@ -58,6 +59,7 @@ REQUIRED_DOCS = (
     "PRACTICE_EVOLUTION_SYSTEM_V0.md",
     "RESEARCH_ARM_SOURCE_LIST_V0.md",
     "KNOWLEDGE_BASE_EVENT_WORKFLOWS_V0.md",
+    "AUTONOMY_READINESS_LADDER_V0.md",
 )
 REQUIRED_KAIZEN_FILES = (
     "README.md",

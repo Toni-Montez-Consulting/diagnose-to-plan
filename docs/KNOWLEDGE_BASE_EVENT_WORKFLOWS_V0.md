@@ -110,7 +110,9 @@ role only after repeated use proves the current role set cannot cover the gap.
 When repeated events show that a lens needs to become a role, squad, scheduled
 workflow, or semi-autonomous function, capture that through a knowledge-base
 event record and route it to Agent Squads, Practice Evolution, or FAOS
-readiness.
+readiness. If the request would move any workflow beyond human-led review, also
+route it through `docs/AUTONOMY_READINESS_LADDER_V0.md` and
+`practice-os/templates/autonomy-readiness-review.md` before changing authority.
 
 ## Knowledge Base Destinations
 
@@ -123,6 +125,7 @@ readiness.
 | `docs/PRACTICE_MEMORY_CONTROL_PLANE.md` | chat-to-source memory durability and control-plane boundaries |
 | `docs/PRACTICE_INTELLIGENCE_CONTROL_PLANE.md` | broad rehydration and input routing across clients, repos, tools, and knowledge |
 | `docs/AGENT_SQUADS_KNOWLEDGE_BASE_V0.md` | human-led squad contracts, source-indexed handoffs, approval gates |
+| `docs/AUTONOMY_READINESS_LADDER_V0.md` | staged readiness gate for read-only, draft-only, supervised, scheduled, live, or autonomous workflows |
 | `practice-os/agents/` | role specs and read-only steward guidance |
 | `practice-os/templates/` | repeatable forms, receipts, reviews, and records |
 | `practice-os/comms/private/` | internal messaging and external-communications knowledge |
@@ -136,6 +139,8 @@ Use:
   adopt/pilot/watch/reject/park decisions.
 - `practice-os/templates/knowledge-base-event-record.md` for broad maintenance
   events that update or intentionally do not update a knowledge base.
+- `practice-os/templates/autonomy-readiness-review.md` when a maintenance event
+  suggests a workflow should move up the autonomy ladder.
 - `practice-os/templates/idea-evolution-record.md` for meta-patterns,
   collaboration practices, and ideas that should mature.
 - `practice-os/templates/agentic-performance-gap-review.md` for system misses.

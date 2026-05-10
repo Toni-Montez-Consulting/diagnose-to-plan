@@ -34,6 +34,9 @@ It also overlaps with work that already exists in DTP:
 - Roadmap Steward Loop: current story, repo lane, gate, blocker, and follow-up continuity.
 - Agentic Performance Gap Review: recurring audit of routing, context, skill trigger, verification, research, safety, and learning misses.
 - Future Intelligence Layer: lessons, research radar, eval candidates, flight records, and supervised learning.
+- Autonomy Readiness Ladder: staged path from manual work to read-only
+  recommendation, draft-only operation, supervised execution, bounded
+  scheduled workflows, bounded live action, and high-trust autonomy.
 - Workspace Efficiency Layer: repo manifests, evidence indexes, command-center planning, dependency maintenance, and starter baselines.
 - `tm-skills`: installed cross-repo SDLC skills and trigger evals.
 
@@ -121,6 +124,8 @@ Purpose: convert the build spec into an executable, corrected implementation pla
 Required outputs:
 
 - Completed `practice-os/templates/faos-phase-readiness-review.md`.
+- Completed `practice-os/templates/autonomy-readiness-review.md` for any
+  workflow that FAOS would move above A3 supervised local execution.
 - Decision on separate `faos` repo versus DTP extension. Default: separate `C:\Users\tonimontez\code\faos` repo if approved.
 - Corrected compose architecture for Langfuse v3 and memory services.
 - Trace schema and redaction policy.
@@ -167,6 +172,10 @@ Keep the FAOS phase names as future stories, but gate each phase behind real nee
 Before any FAOS Phase 0 build prompt is accepted, these gates must be true:
 
 - [ ] Phase 0A readiness review is complete and accepted.
+- [ ] Every proposed autonomous workflow has a current and requested autonomy
+      level from `docs/AUTONOMY_READINESS_LADDER_V0.md`.
+- [ ] No workflow is moved above A3 without an accepted autonomy readiness
+      review.
 - [ ] Langfuse compose architecture is corrected against current official docs.
 - [ ] Mem0 and Letta storage model is isolated and migration-safe.
 - [ ] `uv`-only package flow is documented.
