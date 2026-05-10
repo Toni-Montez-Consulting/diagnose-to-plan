@@ -53,6 +53,14 @@ def test_skills_validate_command() -> None:
     assert "validated 4 skills" in result.output
 
 
+def test_practice_source_packs_validate_command() -> None:
+    result = CliRunner().invoke(app, ["practice", "source-packs", "validate"])
+
+    assert result.exit_code == 0
+    assert "source-pack validation: ok" in result.output
+    assert "source pack packs validated: 7" in result.output
+
+
 def test_draft_accepts_output_alias(repo_root: Path) -> None:
     destination = repo_root / "outputs" / "cli-output-alias.md"
     if destination.exists():

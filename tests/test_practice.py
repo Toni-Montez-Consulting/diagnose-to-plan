@@ -48,6 +48,7 @@ def test_practice_doctor_passes_repo_contract(repo_root: Path) -> None:
         "doc AGENT_SOURCE_REGISTRY_AND_WEB_EVIDENCE_POLICY_V0.md" in check
         for check in result.checks
     )
+    assert any("doc AGENT_SOURCE_PACK_SCHEMA_V0.md" in check for check in result.checks)
     assert any("doc RESEARCH_ARM_SOURCE_LIST_V0.md" in check for check in result.checks)
     assert any("doc RESEARCH_SOURCE_FRESHNESS_DRY_RUN_V0.md" in check for check in result.checks)
     assert any("doc KNOWLEDGE_BASE_EVENT_WORKFLOWS_V0.md" in check for check in result.checks)
@@ -56,4 +57,6 @@ def test_practice_doctor_passes_repo_contract(repo_root: Path) -> None:
     assert any("kaizen README.md" in check for check in result.checks)
     assert any("kaizen intake.jsonl" in check for check in result.checks)
     assert any("source pack agent-source-packs.v0.json" in check for check in result.checks)
+    assert any("source pack schema version" in check for check in result.checks)
+    assert any("source pack packs validated" in check for check in result.checks)
     assert any("practice skill diagnose" in check for check in result.checks)

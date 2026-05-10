@@ -29,6 +29,17 @@ V0 includes the roles proven by source-policy pilots:
 - QA / Audit;
 - DevOps / Infrastructure.
 
+## Validation
+
+Source packs are validated by the local DTP CLI:
+
+```powershell
+.\.venv\Scripts\dtp.exe practice source-packs validate
+```
+
+`dtp practice doctor` also runs the source-pack validator. The validation
+contract is documented in `docs/AGENT_SOURCE_PACK_SCHEMA_V0.md`.
+
 ## Rules
 
 - DTP remains the source of truth.
@@ -53,6 +64,8 @@ Update this folder when:
 When updating, also check:
 
 - `docs/AGENT_SOURCE_REGISTRY_AND_WEB_EVIDENCE_POLICY_V0.md`;
+- `docs/AGENT_SOURCE_PACK_SCHEMA_V0.md`;
+- `dtp practice source-packs validate`;
 - `docs/DOCUMENTATION_MAP.md`;
 - `docs/PRACTICE_OPERATING_SYSTEM_STRATEGIC_BACKLOG.md`;
 - `practice-os/templates/activation-routing-map.md` if prompt routing changes;
