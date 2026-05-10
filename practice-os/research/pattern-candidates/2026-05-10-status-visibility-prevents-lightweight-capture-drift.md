@@ -15,7 +15,7 @@ review_status: draft
 - Source type: research
 - Sensitivity: internal-only
 - Reviewer: Toni
-- Status: draft
+- Status: promoted
 - Owning repo/lane: diagnose-to-plan
 - Source Kaizen id: 
 
@@ -70,10 +70,10 @@ review_status: draft
 
 ## Promotion Decision
 
-- Recommended state: draft
+- Recommended state: promoted
 - Reviewer: Toni
-- Approved state:
-- Destination if promoted: practice-os/patterns/ or docs/PRACTICE_EVOLUTION_SYSTEM_V0.md
+- Approved state: promoted
+- Destination if promoted: practice-os/patterns/status-surface-before-scale.md
 
 ## Notion Mirror Summary
 
@@ -88,5 +88,8 @@ If yes:
 
 ## Notes
 
-Promote only reviewed, redacted, reusable judgment into
-`practice-os/patterns/`.
+Promoted internally on 2026-05-10 as
+`practice-os/patterns/status-surface-before-scale.md`.
+
+This remains internal-only. It can later become a high-level client explanation,
+but public copy, claims, examples, and proof require the normal review gates.

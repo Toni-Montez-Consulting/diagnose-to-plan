@@ -21,3 +21,6 @@ Initial pattern files:
 - `proposal-turnaround-bottleneck.md`
 - `mobile-app-review-to-launch.md` (draft from Omnexus App Store approval learning; keep internal until reviewed)
 - `admin-surface-operating-room.md` (draft pattern for public proof surface outside, protected operating room inside, and handoff record after shipping)
+- `status-surface-before-scale.md` (internal operating pattern for making
+  captured ideas, research signals, and agent/steward queues visible before
+  scaling dashboards, mirrors, automation, or client-facing systems)
