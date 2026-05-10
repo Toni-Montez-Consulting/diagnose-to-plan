@@ -71,6 +71,7 @@ Use this map when a prompt could route to more than one skill, template, process
 | "memory steward", "memory agent", "what should be remembered", "what should be promoted", "what should be parked", "review memory", "memory queue" | Memory Steward | `practice-os/agents/memory-steward.md`, `dtp memory steward`, `docs/practice-evolution-dashboard.html`, `practice-os/templates/memory-promotion-record.md` | read-only recommendations; no autonomous self-learning, Notion sync, public/client action, or playbook promotion without Toni approval |
 | "messaging system", "pitch system", "how I explain what I do", "owner bottleneck language", "claims library", "metaphor library", "visual asset seeds" | Messaging Knowledge Base | `docs/PRACTICE_EVOLUTION_SYSTEM_V0.md`, `practice-os/comms/private/messaging-knowledge-base-2026-05-10.md`, External Communications Agent, Consulting Strategy Agent | internal only until public-copy, proof, positioning, and destination gates pass |
 | "recurring source list", "source list", "AI source list", "research sources", "what sources should we watch", "source candidate", "keep me current on AI news", "research decision record" | Research Arm Source List | `docs/RESEARCH_ARM_SOURCE_LIST_V0.md`, `practice-os/templates/research-decision-record.md`, `docs/RESEARCH_ARM_V0.md`, Research Steward | event-based by default; source review does not authorize public claims, client comms, repo changes, tool installs, or runtime behavior |
+| "source freshness", "research source freshness", "source sweep", "source monitor", "research-source dry run", "dry-run research sources", "keep sources fresh", "stale research check", "scheduled research source workflow" | Research Source Freshness Dry-Run V0 | `docs/RESEARCH_SOURCE_FRESHNESS_DRY_RUN_V0.md`, `docs/RESEARCH_ARM_SOURCE_LIST_V0.md`, `practice-os/templates/research-source-freshness-item.md`, Research Steward, Autonomy Readiness Ladder | dry-run queue first; no browsing, scheduling, crawler, Notion sync, public claims, client comms, tool installs, or repo mutation until separately approved |
 | "event-based workflow", "update the knowledge base", "refine the knowledge base", "expand the knowledge base", "operationalize this", "memory management pattern", "project execution pattern", "knowledge base maintenance", "KB update" | Knowledge Base Event Workflow | `docs/KNOWLEDGE_BASE_EVENT_WORKFLOWS_V0.md`, `practice-os/templates/knowledge-base-event-record.md`, Practice Evolution System, Memory Steward, Research Steward | human-gated maintenance only; no autonomous self-learning, Notion source-of-truth shift, public/client action, or playbook promotion without review |
 | "practice OS", "operating system backlog", "client OS pilot", "Greg first", "CCAAP next", "Cam after confirmation" | Practice OS strategic backlog and Client OS pilot wave | `docs/PRACTICE_OPERATING_SYSTEM_STRATEGIC_BACKLOG.md`, `docs/CLIENT_OS_PILOT_WAVE_2026-05.md`, `practice-os/templates/client-os-pilot-packet.md` | private engagement truth stays in the vault; automation is draft-only; public proof waits for gates |
 | "vector brain", "semantic memory", "knowledge base V1", "persistent recall", "source packs" | Practice Knowledge Base V1 and vector brain roadmap | `docs/PRACTICE_KNOWLEDGE_BASE_V1.md`, `docs/PRACTICE_VECTOR_BRAIN_ROADMAP.md`, `practice-os/templates/memory-promotion-record.md` | markdown corpus and privacy/citation evals before retrieval implementation |
@@ -142,6 +143,7 @@ Use these labels in Roadmap Steward reviews and handoffs:
 - `research_pattern_candidate`
 - `research_decision_record`
 - `research_source_list`
+- `research_source_freshness`
 - `research_steward`
 - `knowledge_base_event_workflow`
 - `practice_os_template`
@@ -160,8 +162,10 @@ Use these labels in Roadmap Steward reviews and handoffs:
 
 - When a `tm-skills` trigger description, trigger eval, or expected behavior changes, update this map or record why no map update is needed.
 - When a DTP Practice OS template becomes required by `dtp practice doctor`, add it to this map if a future prompt should route to it.
-- When a recurring source, source list, or research-decision workflow changes,
-  update `docs/RESEARCH_ARM_SOURCE_LIST_V0.md` and this map.
+- When a recurring source, source list, research-decision workflow, or
+  source-freshness dry-run workflow changes, update
+  `docs/RESEARCH_ARM_SOURCE_LIST_V0.md`,
+  `docs/RESEARCH_SOURCE_FRESHNESS_DRY_RUN_V0.md`, and this map as applicable.
 - When a knowledge-base maintenance event changes a default workflow, source of
   truth, or approval path, update `docs/KNOWLEDGE_BASE_EVENT_WORKFLOWS_V0.md`
   and leave a steward receipt.

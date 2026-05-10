@@ -40,7 +40,9 @@ Use the list when one of these events happens:
 - Toni asks to keep current without manually maintaining every source.
 
 Default cadence is event-based. A scheduled sweep is optional and must be
-explicitly requested or tied to a defined digest window.
+explicitly requested or tied to a defined digest window. Before any scheduled
+source workflow exists, run the dry-run queue shape in
+`docs/RESEARCH_SOURCE_FRESHNESS_DRY_RUN_V0.md`.
 
 ## Source Tiers
 
@@ -90,6 +92,10 @@ decision or should be adopted, piloted, watched, rejected, or parked.
 
 Use `practice-os/templates/research-pattern-candidate.md` when the source
 suggests a reusable consulting principle or client artifact.
+
+Use `docs/RESEARCH_SOURCE_FRESHNESS_DRY_RUN_V0.md` when the question is not
+whether to adopt a source-backed decision yet, but whether the source list
+itself has changed, gone stale, or produced a reviewable freshness finding.
 
 ## Knowledge Base Maintenance Rule
 
