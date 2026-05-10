@@ -38,6 +38,7 @@ def test_practice_doctor_passes_repo_contract(repo_root: Path) -> None:
         "template business-brain-weekly-operating-packet.md" in check
         for check in result.checks
     )
+    assert any("template practice-operating-review.md" in check for check in result.checks)
     assert any("template autonomy-readiness-review.md" in check for check in result.checks)
     assert any("template knowledge-base-event-record.md" in check for check in result.checks)
     assert any("template research-decision-record.md" in check for check in result.checks)
@@ -45,6 +46,7 @@ def test_practice_doctor_passes_repo_contract(repo_root: Path) -> None:
     assert any("doc RESEARCH_ARM_SOURCE_LIST_V0.md" in check for check in result.checks)
     assert any("doc KNOWLEDGE_BASE_EVENT_WORKFLOWS_V0.md" in check for check in result.checks)
     assert any("doc AUTONOMY_READINESS_LADDER_V0.md" in check for check in result.checks)
+    assert any("doc PRACTICE_OPERATING_REVIEW_LOOP_V0.md" in check for check in result.checks)
     assert any("kaizen README.md" in check for check in result.checks)
     assert any("kaizen intake.jsonl" in check for check in result.checks)
     assert any("practice skill diagnose" in check for check in result.checks)

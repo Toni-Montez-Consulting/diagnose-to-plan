@@ -46,6 +46,7 @@ The first wave is draft-only automation:
 | Consulting squad pointer | consulting | Done | public repo points future proof/offer work back to DTP |
 | Repo role split | DTP | Done | DTP, consulting, Hub, and `tm-skills` boundaries are explicit |
 | Autonomy Readiness Ladder V0 | DTP | Done | autonomy levels, candidate workflows, readiness gates, template, and receipt pattern exist |
+| Practice Operating Review Loop V0 | DTP | Done | daily-light and weekly-review cadence exists for turning captured signals into decisions |
 | Completed references | DTP | Done | DeMario/Mario and Omnexus are reference projects, not the next pilot |
 
 ## P0 Workflow Spine Implementation
@@ -77,6 +78,11 @@ Done gate:
 P1 remains parked until this P0 spine exists: dashboard parsing, completeness
 scores, full archive index, persistent mirrors, hosted workflow updates, vector
 retrieval, and broader lane expansion.
+
+Use `docs/PRACTICE_OPERATING_REVIEW_LOOP_V0.md` after each substantial internal
+OS pass so the Workflow Spine, Kaizen, Evolution, Memory Steward, Research
+Steward, KB-event, and Autonomy surfaces produce decisions instead of passive
+status.
 
 ## P1 Client OS Pilot Wave
 
@@ -190,6 +196,8 @@ This wave is accepted when:
 - Knowledge Base V1 docs and templates exist;
 - autonomy candidates are classified through the Autonomy Readiness Ladder
   before any autonomous runtime or write-enabled workflow is proposed;
+- the Practice Operating Review Loop is used to decide what gets promoted,
+  parked, built, piloted, rejected, or superseded after major internal OS work;
 - Hub and `tm-skills` have repo-local readiness notes without authority creep;
 - consulting has a UX/design-system audit without premature proof publishing;
 - the backlog reflects this order;
