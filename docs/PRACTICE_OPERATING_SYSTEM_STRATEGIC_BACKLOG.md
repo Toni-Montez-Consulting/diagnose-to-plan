@@ -84,6 +84,15 @@ OS pass so the Workflow Spine, Kaizen, Evolution, Memory Steward, Research
 Steward, KB-event, and Autonomy surfaces produce decisions instead of passive
 status.
 
+Current internal-OS next action from the first operating review:
+
+- `practice-os/steward/2026-05-10-autonomy-readiness-review-internal-candidates.md`
+  approves Research source freshness as the first autonomy candidate to move
+  forward, but only as a dry-run design. The next artifact should define the
+  source subset, output schema, dry-run queue path, fixtures, validation command,
+  blocked-source behavior, and human review states. Do not implement a scheduled
+  workflow until that dry-run surface is reviewed.
+
 ## P1 Client OS Pilot Wave
 
 Order:
