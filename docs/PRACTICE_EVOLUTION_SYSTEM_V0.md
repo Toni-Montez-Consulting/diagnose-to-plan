@@ -65,6 +65,28 @@ raw signal -> Kaizen capture -> idea evolution record -> review lenses
 The loop should increase resolution without turning every idea into immediate
 work.
 
+## CLI Workflow
+
+Use the CLI when a captured idea is ready to become a reviewable working
+artifact:
+
+```powershell
+.\.venv\Scripts\dtp.exe evolution new "Keep a visible ledger in strategy threads"
+.\.venv\Scripts\dtp.exe evolution new --from-kaizen kzn-YYYYMMDD-slug-hash
+.\.venv\Scripts\dtp.exe evolution new "Owners buy clarity before automation" --kind research-pattern
+.\.venv\Scripts\dtp.exe evolution status
+```
+
+The command creates:
+
+- idea and meta-pattern records in `practice-os/evolution/records/`;
+- research and field-observation candidates in
+  `practice-os/research/pattern-candidates/`.
+
+This is an operator workflow, not an autonomous promotion engine. The draft
+still needs review before it becomes decision memory, pattern memory, playbook
+memory, public copy, or implementation work.
+
 ## Memory Levels
 
 Use the existing Practice OS memory ladder:

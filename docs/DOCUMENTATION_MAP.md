@@ -62,6 +62,12 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
 - `practice-os/comms/private/messaging-knowledge-base-2026-05-10.md`: internal
   messaging knowledge base for owner-bottleneck language, short pitch variants,
   claims/metaphor candidates, and visual seeds before any public-copy gate.
+- `practice-os/evolution/README.md`: operator guide for `dtp evolution new`
+  and `dtp evolution status`.
+- `practice-os/evolution/records/`: generated idea, collaboration, messaging,
+  agent-behavior, and meta-pattern evolution records.
+- `practice-os/research/pattern-candidates/`: generated research and
+  field-observation pattern candidates.
 - `practice-os/fixtures/consulting-intelligence/northline-performance-studio-blueprint-sample.md`:
   public-safe fictional Blueprint sample for a wellness/performance practice.
 - `docs/OFFER_LED_PRACTICE_PACKAGING.md`: internal offer-packaging source for the first sellable practice offers. Use it before changing `consulting` public copy around offers.
@@ -265,6 +271,9 @@ Do not update `hub-prompts` or `hub-registry` just because the roadmap changes. 
 - Use `docs/PRACTICE_MACHINE_OPERATING_MAP.md` before broad workspace, offer-led, platform, Hub, DTP, prompt/skill, proof, or adjacent-project planning. It decides whether the work is `Now`, `Next`, `Later`, or `Hold`.
 - Use `docs/PRACTICE_KAIZEN_KANBAN_SYSTEM.md` and `dtp kaizen capture` when a new idea, feature, engagement signal, ask, blocker, proof candidate, correction, repo issue, process improvement, completed task, cancelled task, superseded task, or discarded suggestion should survive beyond the current chat.
 - Use `docs/PRACTICE_EVOLUTION_SYSTEM_V0.md` and `practice-os/templates/idea-evolution-record.md` when a captured idea, collaboration meta-pattern, messaging line, or agent behavior needs a path from raw capture into reviewed memory, a reusable pattern, a template, or an explicit parked/superseded state.
+- Use `dtp evolution new --from-kaizen RECORD_ID` when a Kaizen capture is ready
+  to become a reviewable idea-evolution draft. Use `dtp evolution status` to
+  see generated evolution records and research-pattern candidates.
 - Use `docs/WORKSPACE_OPERATOR_RUNBOOK.md` before running commands or changing files across repo boundaries. It keeps `dtp workspace report` read-only and avoids accidental deploy/migration/source-of-truth drift.
 - Use `dtp workspace recover --dry-run` before claiming older completed, active, blocked, parked, cancelled, or superseded work is missing from the cockpit. Review the ignored output, then import approved rows with `dtp workspace recover --apply --approved PATH`.
 - Use `docs/PUBLIC_PROOF_PROMOTION_RUNBOOK.md` before moving any screenshot, claim, metric, client/project artifact, internal system evidence, or proof candidate toward public consulting copy.

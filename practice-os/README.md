@@ -58,6 +58,10 @@ Practice Evolution System:
   summaries.
 - `comms/private/messaging-knowledge-base-2026-05-10.md` holds internal
   messaging language before any public-copy or proof gate.
+- `evolution/records/` holds generated idea/meta-pattern review drafts from
+  `dtp evolution new`.
+- `research/pattern-candidates/` holds generated Research Arm pattern
+  candidates from `dtp evolution new --kind research-pattern`.
 - V0 is human-gated: capture broadly, promote deliberately, and do not treat raw
   capture as reusable playbook memory.
 

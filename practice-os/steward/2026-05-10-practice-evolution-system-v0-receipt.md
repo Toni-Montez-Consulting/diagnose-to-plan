@@ -39,6 +39,19 @@ The first slice is:
 - `practice-os/templates/idea-evolution-record.md`
 - `practice-os/templates/research-pattern-candidate.md`
 - `practice-os/comms/private/messaging-knowledge-base-2026-05-10.md`
+- `practice-os/evolution/README.md`
+- `practice-os/evolution/records/`
+- `practice-os/research/pattern-candidates/`
+- `src/dtp/commands/evolution.py`
+
+## CLI Surface
+
+- `dtp evolution new "..."` creates an idea/meta-pattern evolution draft.
+- `dtp evolution new --from-kaizen RECORD_ID` turns a Kaizen capture into a
+  reviewable evolution record.
+- `dtp evolution new "..." --kind research-pattern` creates a research or
+  field-observation pattern candidate.
+- `dtp evolution status` lists generated records and state counts.
 
 ## Existing Surfaces Reused
 
@@ -79,6 +92,11 @@ Completed after implementation:
   `next`, or `inbox` items remain, and the three parked evolution/messaging/
   research-pattern records are closed to DTP evidence.
 - `git diff --check`: passed.
+- `.\.venv\Scripts\dtp.exe evolution status`: passed.
+- `.\.venv\Scripts\python.exe -m pytest tests/test_evolution.py tests/test_cli.py tests/test_practice.py`:
+  passed.
+- `.\.venv\Scripts\python.exe -m pytest`: passed.
+- `.\.venv\Scripts\python.exe -m ruff check src tests`: passed.
 - Targeted routing search confirmed triggers for `Practice Evolution System`,
   `idea-evolution-record`, `research-pattern-candidate`, messaging knowledge
   base, meta-pattern, and "don't forget this" prompts.

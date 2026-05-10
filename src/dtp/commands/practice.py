@@ -48,13 +48,19 @@ REQUIRED_TEMPLATES = (
     "notion-cockpit-audit.md",
     "correction-checklist-for-toni.md",
     "business-brain-weekly-operating-packet.md",
+    "idea-evolution-record.md",
+    "research-pattern-candidate.md",
 )
 REQUIRED_DOCS = (
     "PRACTICE_KAIZEN_KANBAN_SYSTEM.md",
+    "PRACTICE_EVOLUTION_SYSTEM_V0.md",
 )
 REQUIRED_KAIZEN_FILES = (
     "README.md",
     "intake.jsonl",
+)
+REQUIRED_EVOLUTION_FILES = (
+    "README.md",
 )
 REQUIRED_SKILLS = (
     "diagnose",
@@ -88,6 +94,7 @@ def run_practice_doctor(config: DtpConfig) -> DoctorResult:
     _check_files(root / "templates", REQUIRED_TEMPLATES, "template", checks, problems)
     _check_files(config.repo_root / "docs", REQUIRED_DOCS, "doc", checks, problems)
     _check_files(root / "kaizen", REQUIRED_KAIZEN_FILES, "kaizen", checks, problems)
+    _check_files(root / "evolution", REQUIRED_EVOLUTION_FILES, "evolution", checks, problems)
     _check_practice_skills(root / "skills", checks, problems)
     _check_gitignore(config.repo_root / ".gitignore", checks, problems)
 
