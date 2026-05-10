@@ -117,18 +117,22 @@ Current internal-OS next action from the first operating review:
 - `practice-os/research/source-packs/agent-source-packs.v0.json` is now the
   first small machine-readable source-pack file. It now covers Research
   Steward, External Communications, Consulting Strategy, and Software
-  Architecture, and Software Engineering.
+  Architecture, Software Engineering, and QA / Audit.
 - `practice-os/steward/2026-05-10-software-architecture-source-policy-pilot.md`
   records the fourth role pilot. It made Software Architecture boundary-first,
   official-doc-aware, and runtime-authority-gated before implementation.
 - `practice-os/steward/2026-05-10-software-engineering-source-policy-pilot.md`
   records the fifth role pilot. It made Software Engineering repo-first,
   implementation-forward, architecture-aware, and verification-led.
-- The next action is to pilot QA / Audit against Software Engineering's
-  verification outputs or decide whether source packs now need structured
-  schema validation, a dashboard view, source-pack freshness status, or a CLI
-  validation command. Do not implement a scheduled workflow until dry-run
-  queues prove useful and a new autonomy-readiness review is accepted.
+- `practice-os/steward/2026-05-10-qa-audit-source-policy-pilot.md` records the
+  sixth role pilot. It made QA / Audit evidence-led, claim-scoped, manual-gate
+  aware, and explicit about go/no-go limits.
+- The next action is to pilot DevOps / Infrastructure against QA evidence for
+  deploy readiness, runtime proof, rollback posture, environment inventory,
+  observability, and cost/risk review, or decide whether source packs now need
+  structured schema validation, a dashboard view, source-pack freshness status,
+  or a CLI validation command. Do not implement a scheduled workflow until
+  dry-run queues prove useful and a new autonomy-readiness review is accepted.
 
 ## P1 Client OS Pilot Wave
 

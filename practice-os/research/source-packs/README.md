@@ -25,7 +25,8 @@ V0 includes the roles proven by source-policy pilots:
 - External Communications;
 - Consulting Strategy;
 - Software Architecture;
-- Software Engineering.
+- Software Engineering;
+- QA / Audit.
 
 ## Rules
 

@@ -28,6 +28,8 @@ future agent.
 - `tm-skills/review-checklist`
 - `tm-skills/delivery-baseline`
 - `tm-skills/testing-ladder`
+- `docs/QA_AUDIT_SOURCE_POLICY_PILOT_2026-05-10.md`
+- `docs/SOFTWARE_ENGINEERING_SOURCE_POLICY_PILOT_2026-05-10.md`
 - `practice-os/templates/engineering-readiness-receipt.md`
 - `practice-os/templates/approval-gate.md`
 - `practice-os/templates/agentic-performance-gap-review.md`
@@ -40,6 +42,9 @@ future agent.
 - DTP proof gates, roadmap state, client-kit status, and handoff receipts.
 - User-provided transcripts, emails, and meeting notes when QA concerns involve
   client-facing deliverables.
+- Official testing, browser automation, CI, security, accessibility, platform,
+  and standards docs when a claim depends on current tool behavior or external
+  guidance.
 
 ## Allowed Writes
 
@@ -64,6 +69,36 @@ For every review, separate:
 
 Lead with findings when reviewing code or release readiness. For planning or
 operating-system work, lead with the go/no-go read, then the evidence.
+
+## Source Posture
+
+Start with the claim being made, then match evidence to that claim.
+
+Use:
+
+- the active request, acceptance criteria, repo state, diff, and local
+  instructions;
+- Software Engineering evidence for what changed and what was verified;
+- local tests, CI, logs, build output, screenshots, route checks, and handoff
+  receipts;
+- official test-framework, browser automation, CI, security, accessibility,
+  platform, or standards docs when those claims matter;
+- broad web search only to find primary sources or unfamiliar risk categories.
+
+Do not let broad search results, narrow tests, or generic best practices become
+approval evidence by themselves.
+
+## Source-Gated Operating Rules
+
+- Match evidence to claim: a build proves build readiness, not visual quality;
+  a screenshot proves one viewport/state, not every responsive path.
+- Verify the exact surface when the claim depends on route behavior, hosted
+  behavior, security posture, accessibility posture, or visual quality.
+- Manual gates stay manual: QA can name the gate and recommend the next action,
+  but cannot approve it.
+- Missing evidence is not always failure; decide whether it blocks this step or
+  belongs in queued follow-up.
+- Repeated process misses become Agentic Performance Gap Review candidates.
 
 ## Tone Rules
 
