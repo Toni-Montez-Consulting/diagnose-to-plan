@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Source Pack Status Dashboard</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f7f2;
+      --ink: #18211c;
+      --muted: #5d675f;
+      --panel: #ffffff;
+      --line: #dce2da;
+      --green: #28664a;
+      --amber: #8a6424;
+      --red: #944040;
+      --blue: #285c84;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system,
+        BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.45;
+    }
+    main { max-width: 1180px; margin: 0 auto; padding: 28px; }
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 20px;
+    }
+    h1 { font-size: 30px; margin: 0 0 6px; }
+    h2 { font-size: 18px; margin: 0 0 12px; }
+    p { margin: 0; }
+    .muted { color: var(--muted); }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .metric, section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+    .metric { padding: 14px; }
+    .metric strong { display: block; font-size: 24px; }
+    section { padding: 16px; margin-top: 14px; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th, td {
+      text-align: left;
+      vertical-align: top;
+      padding: 10px;
+      border-bottom: 1px solid var(--line);
+    }
+    th {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+    .pill {
+      display: inline-block;
+      border-radius: 999px;
+      padding: 3px 8px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .current { background: #dfeee5; color: var(--green); }
+    .review_soon { background: #f5ead4; color: var(--amber); }
+    .stale, .date_missing { background: #f5dddd; color: var(--red); }
+    .ok { color: var(--green); font-weight: 700; }
+    .needs-work { color: var(--red); font-weight: 700; }
+    code {
+      background: #eef1ec;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      padding: 2px 5px;
+    }
+    ul { margin: 0; padding-left: 20px; }
+    @media (max-width: 800px) {
+      main { padding: 18px; }
+      .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      table { display: block; overflow-x: auto; white-space: nowrap; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>Source Pack Status Dashboard</h1>
+        <p class="muted">
+          Generated 2026-05-10 18:07 UTC from <code>practice-os/research/source-packs/agent-source-packs.v0.json</code>.
+        </p>
+      </div>
+      <p class="ok">validation: ok</p>
+    </header>
+
+    <div class="grid">
+      <div class="metric">
+        <span class="muted">Roles</span><strong>7</strong>
+      </div>
+      <div class="metric">
+        <span class="muted">Primary Sources</span>
+        <strong>57</strong>
+      </div>
+      <div class="metric">
+        <span class="muted">Updated</span><strong>2026-05-10</strong>
+      </div>
+      <div class="metric">
+        <span class="muted">Freshness</span><strong>current: 7</strong>
+      </div>
+    </div>
+
+    <section>
+      <h2>Role Status</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Role</th>
+            <th>Freshness</th>
+            <th>Reviewed</th>
+            <th>Sources</th>
+            <th>Strong</th>
+            <th>Discovery</th>
+            <th>Web</th>
+            <th>Blocked</th>
+            <th>Gates</th>
+            <th>Next Review Trigger</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+  <td><strong>Research Steward / Research Arm</strong><br><span class="muted">research-steward</span></td>
+  <td><span class="pill current">current</span></td>
+  <td>2026-05-10 (0d)</td>
+  <td>5</td>
+  <td>4</td>
+  <td>1</td>
+  <td>5</td>
+  <td>6</td>
+  <td>8</td>
+  <td>new source-policy pilot, source-list change, or source-pack schema change</td>
+</tr>
+<tr>
+  <td><strong>External Communications Agent</strong><br><span class="muted">external-communications</span></td>
+  <td><span class="pill current">current</span></td>
+  <td>2026-05-10 (0d)</td>
+  <td>4</td>
+  <td>4</td>
+  <td>0</td>
+  <td>4</td>
+  <td>5</td>
+  <td>7</td>
+  <td>first real source-backed client or prospect email using this language</td>
+</tr>
+<tr>
+  <td><strong>Consulting Strategy Agent</strong><br><span class="muted">consulting-strategy</span></td>
+  <td><span class="pill current">current</span></td>
+  <td>2026-05-10 (0d)</td>
+  <td>5</td>
+  <td>4</td>
+  <td>1</td>
+  <td>5</td>
+  <td>5</td>
+  <td>6</td>
+  <td>public consulting copy pass, pricing publication decision, or first AI/workflow prospect routed through Blueprint</td>
+</tr>
+<tr>
+  <td><strong>Software Architecture Agent</strong><br><span class="muted">software-architecture</span></td>
+  <td><span class="pill current">current</span></td>
+  <td>2026-05-10 (0d)</td>
+  <td>10</td>
+  <td>10</td>
+  <td>0</td>
+  <td>7</td>
+  <td>7</td>
+  <td>10</td>
+  <td>first real architecture review that changes runtime, schema, cross-repo boundary, hosted DTP plan, or implementation handoff</td>
+</tr>
+<tr>
+  <td><strong>Software Engineering Agent</strong><br><span class="muted">software-engineering</span></td>
+  <td><span class="pill current">current</span></td>
+  <td>2026-05-10 (0d)</td>
+  <td>9</td>
+  <td>9</td>
+  <td>0</td>
+  <td>7</td>
+  <td>8</td>
+  <td>11</td>
+  <td>first implementation pass that exposes a missing escalation rule, cross-repo handoff, or verification evidence gap</td>
+</tr>
+<tr>
+  <td><strong>QA / Audit Agent</strong><br><span class="muted">qa-audit</span></td>
+  <td><span class="pill current">current</span></td>
+  <td>2026-05-10 (0d)</td>
+  <td>9</td>
+  <td>9</td>
+  <td>0</td>
+  <td>5</td>
+  <td>9</td>
+  <td>7</td>
+  <td>first release-readiness, visual QA, security, accessibility, privacy, deploy, rollback, or go/no-go review that exposes a missing evidence type</td>
+</tr>
+<tr>
+  <td><strong>DevOps / Infrastructure Agent</strong><br><span class="muted">devops-infrastructure</span></td>
+  <td><span class="pill current">current</span></td>
+  <td>2026-05-10 (0d)</td>
+  <td>15</td>
+  <td>15</td>
+  <td>0</td>
+  <td>5</td>
+  <td>9</td>
+  <td>9</td>
+  <td>first real deploy-readiness, runtime-proof, rollback, observability, environment, secret, cost, or platform-migration review that exposes a missing evidence type</td>
+</tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Validation Problems</h2>
+      <ul>
+        <li>No validation problems.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Operating Boundary</h2>
+      <p>
+        Source packs inform roles. They do not authorize actions, public
+        claims, sends, legal/finance/compliance assurances, repo mutation,
+        production deployment, or autonomous runtime behavior.
+      </p>
+    </section>
+  </main>
+</body>
+</html>

@@ -134,10 +134,16 @@ Current internal-OS next action from the first operating review:
 - `practice-os/steward/2026-05-10-source-pack-schema-cli-validation.md`
   records the validation slice that made source-pack shape drift visible in
   `dtp practice source-packs validate` and `dtp practice doctor`.
+- `practice-os/steward/2026-05-10-source-pack-status-dashboard.md` records the
+  read-only status/dashboard slice that made role freshness, source counts, and
+  promotion gates visible without adding authority.
 - Source-pack contract validation is now implemented through
   `dtp practice source-packs validate` and enforced by `dtp practice doctor`.
-  The next action is to choose between a source-pack freshness/status dashboard
-  or another role pilot. If continuing role pilots, Product Strategy,
+  Source-pack status is now available through
+  `dtp practice source-packs status` and
+  `dtp practice source-packs dashboard`. The next action is to choose between
+  connecting reviewed source-freshness evidence into the dashboard or
+  continuing role pilots. If continuing role pilots, Product Strategy,
   UX / Design, Web Experience, General Counsel, Compliance, Data Architecture,
   and Controller are strong next candidates. Do not implement a scheduled
   workflow until dry-run queues prove useful and a new autonomy-readiness

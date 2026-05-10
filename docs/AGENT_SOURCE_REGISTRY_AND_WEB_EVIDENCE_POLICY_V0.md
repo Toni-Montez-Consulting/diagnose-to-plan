@@ -163,6 +163,16 @@ by:
 
 `dtp practice doctor` also runs the same source-pack contract check.
 
+Status visibility is available through:
+
+```powershell
+.\.venv\Scripts\dtp.exe practice source-packs status
+.\.venv\Scripts\dtp.exe practice source-packs dashboard
+```
+
+Those commands summarize role freshness, source counts, and promotion gates.
+They do not promote evidence or authorize role actions.
+
 V0 includes the roles proven by source-policy pilots:
 
 - Research Steward / Research Arm;
@@ -413,7 +423,8 @@ The DevOps decision:
 
 Next iteration:
 
-1. Decide whether a dashboard should show source-pack freshness by role.
+1. Decide whether reviewed source-freshness records should feed dashboard
+   warnings.
 2. If continuing role pilots, choose Product Strategy, UX / Design, Web
    Experience, General Counsel, Compliance, Data Architecture, Controller, or
    another repeated-gap role.

@@ -67,7 +67,10 @@ from dtp.commands.research_source_freshness import (
 )
 from dtp.commands.skills_cmd import run_validate
 from dtp.commands.source_packs import (
+    render_source_pack_status,
     render_source_pack_validation,
+    run_source_pack_dashboard,
+    run_source_pack_status,
     run_source_pack_validation,
 )
 from dtp.commands.synthesize import run_synthesize
@@ -502,6 +505,45 @@ def practice_source_packs_validate_command(
     result = run_source_pack_validation(config, path=path)
     console.print(render_source_pack_validation(result, config.repo_root), end="")
     if not result.ok:
+        raise typer.Exit(code=1)
+
+
+@practice_source_packs_app.command("status")
+def practice_source_packs_status_command(
+    path: Annotated[
+        Path | None,
+        typer.Option("--path", help="Optional source-pack path to inspect."),
+    ] = None,
+) -> None:
+    config = load_config()
+    result = run_source_pack_status(config, path=path)
+    console.print(render_source_pack_status(result, config.repo_root), end="")
+    if not result.validation.ok:
+        raise typer.Exit(code=1)
+
+
+@practice_source_packs_app.command("dashboard")
+def practice_source_packs_dashboard_command(
+    path: Annotated[
+        Path | None,
+        typer.Option("--path", help="Optional source-pack path to inspect."),
+    ] = None,
+    out: Annotated[
+        Path | None,
+        typer.Option("--out", "--output", help="Output HTML path inside this repo."),
+    ] = None,
+) -> None:
+    config = load_config()
+    result = run_source_pack_dashboard(config, path=path, output_path=out)
+    try:
+        relative = result.path.relative_to(config.repo_root).as_posix()
+    except ValueError:
+        relative = str(result.path)
+    console.print(
+        f"[green]wrote[/green] {relative} "
+        f"(roles={result.role_count}, validation={'ok' if result.validation_ok else 'needs work'})"
+    )
+    if not result.validation_ok:
         raise typer.Exit(code=1)
 
 

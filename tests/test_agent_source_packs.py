@@ -2,11 +2,16 @@ from __future__ import annotations
 
 import json
 from collections.abc import Callable
+from datetime import date
 from pathlib import Path
 from typing import Any
 
 from dtp.commands.source_packs import (
+    render_source_pack_dashboard,
+    render_source_pack_status,
     render_source_pack_validation,
+    run_source_pack_dashboard,
+    run_source_pack_status,
     run_source_pack_validation,
 )
 from dtp.config import load_config
@@ -157,6 +162,58 @@ def test_source_pack_validator_accepts_current_contract(repo_root: Path) -> None
         result,
         repo_root,
     )
+
+
+def test_source_pack_status_summarizes_role_freshness(repo_root: Path) -> None:
+    result = run_source_pack_status(load_config(repo_root), today=date(2026, 5, 10))
+
+    assert result.ok is True
+    assert result.freshness_counts == {"current": 7}
+    assert result.primary_source_count >= 7
+    assert result.role_statuses[0].role_id == "research-steward"
+    assert result.role_statuses[0].freshness == "current"
+
+    rendered = render_source_pack_status(result, repo_root)
+    assert "Source Pack Status" in rendered
+    assert "research-steward: current" in rendered
+    assert "source packs inform roles" in rendered
+
+
+def test_source_pack_status_marks_stale_role(repo_root: Path, tmp_path: Path) -> None:
+    def mutate(payload: dict[str, Any]) -> None:
+        payload["packs"][0]["last_reviewed_at"] = "2025-01-01"
+
+    path = _write_mutated_source_pack(repo_root, tmp_path, mutate)
+
+    result = run_source_pack_status(
+        load_config(repo_root),
+        path=path,
+        today=date(2026, 5, 10),
+    )
+
+    assert result.role_statuses[0].freshness == "stale"
+    assert result.freshness_counts["stale"] == 1
+
+
+def test_source_pack_dashboard_writes_internal_html(
+    repo_root: Path,
+    tmp_path: Path,
+) -> None:
+    result = run_source_pack_dashboard(
+        load_config(repo_root),
+        output_path=tmp_path / "source-pack-status-dashboard.html",
+        today=date(2026, 5, 10),
+    )
+
+    assert result.validation_ok is True
+    assert result.role_count == 7
+    assert result.path.exists()
+    assert "Source Pack Status Dashboard" in result.html
+    assert "research-steward" in result.html
+    assert "Source packs inform roles" in result.html
+
+    status = run_source_pack_status(load_config(repo_root), today=date(2026, 5, 10))
+    assert "current" in render_source_pack_dashboard(status, repo_root)
 
 
 def test_source_pack_validator_rejects_missing_required_top_level_field(

@@ -3,7 +3,10 @@
 from __future__ import annotations
 
 import json
+from collections import Counter
 from dataclasses import dataclass
+from datetime import UTC, date, datetime
+from html import escape
 from pathlib import Path
 from typing import Any
 
@@ -14,6 +17,7 @@ DEFAULT_SOURCE_PACK_PATH = Path(
 )
 EXPECTED_SCHEMA_VERSION = "agent-source-packs.v0"
 EXPECTED_EVIDENCE_TIERS = {0, 1, 2, 3, 4}
+DEFAULT_SOURCE_PACK_DASHBOARD_PATH = Path("docs/source-pack-status-dashboard.html")
 
 
 @dataclass(frozen=True)
@@ -25,6 +29,54 @@ class SourcePackValidationResult:
     checks: tuple[str, ...]
     problems: tuple[str, ...]
     role_ids: tuple[str, ...]
+
+
+@dataclass(frozen=True)
+class SourcePackRoleStatus:
+    """Dashboard-ready role summary derived from the source pack."""
+
+    role_id: str
+    role_name: str
+    status: str
+    freshness: str
+    last_reviewed_at: str
+    review_age_days: int | None
+    primary_source_count: int
+    strong_source_count: int
+    discovery_source_count: int
+    allowed_web_source_count: int
+    blocked_source_count: int
+    promotion_gate_count: int
+    pilot_artifact_count: int
+    search_default: str
+    broad_web_confidence: str
+    next_review_trigger: str
+
+
+@dataclass(frozen=True)
+class SourcePackStatusResult:
+    """Read-only status view of the source-pack system."""
+
+    ok: bool
+    path: Path
+    validation: SourcePackValidationResult
+    schema_version: str
+    review_status: str
+    updated_at: str
+    role_statuses: tuple[SourcePackRoleStatus, ...]
+    freshness_counts: dict[str, int]
+    primary_source_count: int
+
+
+@dataclass(frozen=True)
+class SourcePackDashboardResult:
+    """Generated source-pack dashboard artifact."""
+
+    path: Path
+    html: str
+    role_count: int
+    stale_or_review_count: int
+    validation_ok: bool
 
 
 def run_source_pack_validation(
@@ -143,6 +195,304 @@ def render_source_pack_validation(
             lines.append(f"- {problem}")
 
     return "\n".join(lines) + "\n"
+
+
+def run_source_pack_status(
+    config: DtpConfig,
+    *,
+    path: Path | None = None,
+    today: date | None = None,
+) -> SourcePackStatusResult:
+    """Build a read-only status model from the source pack and validator."""
+
+    validation = run_source_pack_validation(config, path=path)
+    payload = _read_source_pack_payload(validation.path)
+    status_today = today or datetime.now(UTC).date()
+    role_statuses = _build_role_statuses(payload, status_today)
+    freshness_counts = dict(sorted(Counter(role.freshness for role in role_statuses).items()))
+    primary_source_count = sum(role.primary_source_count for role in role_statuses)
+
+    return SourcePackStatusResult(
+        ok=validation.ok and bool(role_statuses),
+        path=validation.path,
+        validation=validation,
+        schema_version=_as_str(payload.get("schema_version")) if payload else "",
+        review_status=_as_str(payload.get("review_status")) if payload else "",
+        updated_at=_as_str(payload.get("updated_at")) if payload else "",
+        role_statuses=role_statuses,
+        freshness_counts=freshness_counts,
+        primary_source_count=primary_source_count,
+    )
+
+
+def render_source_pack_status(result: SourcePackStatusResult, repo_root: Path) -> str:
+    """Render the source-pack status result for terminal use."""
+
+    freshness = ", ".join(
+        f"{key}={value}" for key, value in result.freshness_counts.items()
+    )
+    lines = [
+        "Source Pack Status",
+        f"path: {_display_path(repo_root, result.path)}",
+        f"validation: {'ok' if result.validation.ok else 'needs work'}",
+        f"schema: {result.schema_version or 'unknown'}",
+        f"review_status: {result.review_status or 'unknown'}",
+        f"updated_at: {result.updated_at or 'unknown'}",
+        f"roles: {len(result.role_statuses)}",
+        f"primary_sources: {result.primary_source_count}",
+        f"freshness: {freshness or 'none'}",
+        "",
+        "Role Status",
+    ]
+
+    if not result.role_statuses:
+        lines.append("- none")
+    for role in result.role_statuses:
+        age = "unknown age" if role.review_age_days is None else f"{role.review_age_days}d"
+        lines.append(
+            "- "
+            f"{role.role_id}: {role.freshness}; "
+            f"reviewed {role.last_reviewed_at or 'unknown'} ({age}); "
+            f"sources={role.primary_source_count}; "
+            f"promotion_gates={role.promotion_gate_count}; "
+            f"next={role.next_review_trigger or 'not recorded'}"
+        )
+
+    if result.validation.problems:
+        lines.append("")
+        lines.append("Validation Problems")
+        lines.extend(f"- {problem}" for problem in result.validation.problems)
+
+    lines.append("")
+    lines.append(
+        "Boundary: source packs inform roles; they do not authorize actions, "
+        "public claims, sends, or runtime changes."
+    )
+    return "\n".join(lines) + "\n"
+
+
+def run_source_pack_dashboard(
+    config: DtpConfig,
+    *,
+    path: Path | None = None,
+    output_path: Path | None = None,
+    today: date | None = None,
+) -> SourcePackDashboardResult:
+    """Render the source-pack status dashboard as a local HTML artifact."""
+
+    status = run_source_pack_status(config, path=path, today=today)
+    html = render_source_pack_dashboard(status, config.repo_root)
+    destination = _resolve_path(
+        config.repo_root,
+        output_path or DEFAULT_SOURCE_PACK_DASHBOARD_PATH,
+    )
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    destination.write_text(html, encoding="utf-8", newline="\n")
+    stale_or_review_count = sum(
+        1
+        for role in status.role_statuses
+        if role.freshness in {"review_soon", "stale", "date_missing"}
+    )
+    return SourcePackDashboardResult(
+        path=destination,
+        html=html,
+        role_count=len(status.role_statuses),
+        stale_or_review_count=stale_or_review_count,
+        validation_ok=status.validation.ok,
+    )
+
+
+def render_source_pack_dashboard(
+    result: SourcePackStatusResult,
+    repo_root: Path,
+    *,
+    generated_at: datetime | None = None,
+) -> str:
+    """Render source-pack status as a static dashboard."""
+
+    generated = (generated_at or datetime.now(UTC)).strftime("%Y-%m-%d %H:%M UTC")
+    freshness_counts = ", ".join(
+        f"{key}: {value}" for key, value in result.freshness_counts.items()
+    )
+    role_rows = "\n".join(_render_role_row(role) for role in result.role_statuses)
+    if not role_rows:
+        role_rows = '<tr><td colspan="10">No role packs found.</td></tr>'
+    problem_rows = "\n".join(
+        f"<li>{escape(problem)}</li>" for problem in result.validation.problems
+    )
+    if not problem_rows:
+        problem_rows = "<li>No validation problems.</li>"
+    display_path = escape(_display_path(repo_root, result.path))
+    validation_class = "ok" if result.validation.ok else "needs-work"
+    validation_label = "ok" if result.validation.ok else "needs work"
+    role_count = len(result.role_statuses)
+    updated_at = escape(result.updated_at or "unknown")
+    freshness_label = escape(freshness_counts or "none")
+
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Source Pack Status Dashboard</title>
+  <style>
+    :root {{
+      color-scheme: light;
+      --bg: #f6f7f2;
+      --ink: #18211c;
+      --muted: #5d675f;
+      --panel: #ffffff;
+      --line: #dce2da;
+      --green: #28664a;
+      --amber: #8a6424;
+      --red: #944040;
+      --blue: #285c84;
+    }}
+    * {{ box-sizing: border-box; }}
+    body {{
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system,
+        BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.45;
+    }}
+    main {{ max-width: 1180px; margin: 0 auto; padding: 28px; }}
+    header {{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 20px;
+    }}
+    h1 {{ font-size: 30px; margin: 0 0 6px; }}
+    h2 {{ font-size: 18px; margin: 0 0 12px; }}
+    p {{ margin: 0; }}
+    .muted {{ color: var(--muted); }}
+    .grid {{
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-bottom: 16px;
+    }}
+    .metric, section {{
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }}
+    .metric {{ padding: 14px; }}
+    .metric strong {{ display: block; font-size: 24px; }}
+    section {{ padding: 16px; margin-top: 14px; }}
+    table {{ width: 100%; border-collapse: collapse; font-size: 14px; }}
+    th, td {{
+      text-align: left;
+      vertical-align: top;
+      padding: 10px;
+      border-bottom: 1px solid var(--line);
+    }}
+    th {{
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }}
+    .pill {{
+      display: inline-block;
+      border-radius: 999px;
+      padding: 3px 8px;
+      font-size: 12px;
+      font-weight: 700;
+    }}
+    .current {{ background: #dfeee5; color: var(--green); }}
+    .review_soon {{ background: #f5ead4; color: var(--amber); }}
+    .stale, .date_missing {{ background: #f5dddd; color: var(--red); }}
+    .ok {{ color: var(--green); font-weight: 700; }}
+    .needs-work {{ color: var(--red); font-weight: 700; }}
+    code {{
+      background: #eef1ec;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      padding: 2px 5px;
+    }}
+    ul {{ margin: 0; padding-left: 20px; }}
+    @media (max-width: 800px) {{
+      main {{ padding: 18px; }}
+      .grid {{ grid-template-columns: repeat(2, minmax(0, 1fr)); }}
+      table {{ display: block; overflow-x: auto; white-space: nowrap; }}
+    }}
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>Source Pack Status Dashboard</h1>
+        <p class="muted">
+          Generated {escape(generated)} from <code>{display_path}</code>.
+        </p>
+      </div>
+      <p class="{validation_class}">validation: {validation_label}</p>
+    </header>
+
+    <div class="grid">
+      <div class="metric">
+        <span class="muted">Roles</span><strong>{role_count}</strong>
+      </div>
+      <div class="metric">
+        <span class="muted">Primary Sources</span>
+        <strong>{result.primary_source_count}</strong>
+      </div>
+      <div class="metric">
+        <span class="muted">Updated</span><strong>{updated_at}</strong>
+      </div>
+      <div class="metric">
+        <span class="muted">Freshness</span><strong>{freshness_label}</strong>
+      </div>
+    </div>
+
+    <section>
+      <h2>Role Status</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Role</th>
+            <th>Freshness</th>
+            <th>Reviewed</th>
+            <th>Sources</th>
+            <th>Strong</th>
+            <th>Discovery</th>
+            <th>Web</th>
+            <th>Blocked</th>
+            <th>Gates</th>
+            <th>Next Review Trigger</th>
+          </tr>
+        </thead>
+        <tbody>
+          {role_rows}
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Validation Problems</h2>
+      <ul>
+        {problem_rows}
+      </ul>
+    </section>
+
+    <section>
+      <h2>Operating Boundary</h2>
+      <p>
+        Source packs inform roles. They do not authorize actions, public
+        claims, sends, legal/finance/compliance assurances, repo mutation,
+        production deployment, or autonomous runtime behavior.
+      </p>
+    </section>
+  </main>
+</body>
+</html>
+"""
 
 
 def _validate_authority_boundary(
@@ -432,3 +782,120 @@ def _display_path(repo_root: Path, path: Path) -> str:
         return path.relative_to(repo_root).as_posix()
     except ValueError:
         return str(path)
+
+
+def _read_source_pack_payload(path: Path) -> dict[str, Any]:
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {}
+    if isinstance(payload, dict):
+        return payload
+    return {}
+
+
+def _build_role_statuses(
+    payload: dict[str, Any],
+    today: date,
+) -> tuple[SourcePackRoleStatus, ...]:
+    roles: list[SourcePackRoleStatus] = []
+    for pack in _mapping_list(payload.get("packs")):
+        primary_sources = _mapping_list(pack.get("primary_sources"))
+        allowed_web_sources = _string_list(pack.get("allowed_web_sources"))
+        blocked_sources = _string_list(pack.get("blocked_sources"))
+        promotion_gates = _string_list(pack.get("promotion_required_for"))
+        pilot_artifacts = _string_list(pack.get("pilot_artifacts"))
+        search_posture = pack.get("search_posture")
+        if not isinstance(search_posture, dict):
+            search_posture = {}
+        last_reviewed = _as_str(pack.get("last_reviewed_at"))
+        age_days = _review_age_days(last_reviewed, today)
+        roles.append(
+            SourcePackRoleStatus(
+                role_id=_as_str(pack.get("role_id")),
+                role_name=_as_str(pack.get("role_name")),
+                status=_as_str(pack.get("status")),
+                freshness=_freshness(age_days),
+                last_reviewed_at=last_reviewed,
+                review_age_days=age_days,
+                primary_source_count=len(primary_sources),
+                strong_source_count=sum(
+                    1
+                    for source in primary_sources
+                    if isinstance(source.get("tier"), int) and source["tier"] <= 2
+                ),
+                discovery_source_count=sum(
+                    1
+                    for source in primary_sources
+                    if isinstance(source.get("tier"), int) and source["tier"] >= 3
+                ),
+                allowed_web_source_count=len(allowed_web_sources),
+                blocked_source_count=len(blocked_sources),
+                promotion_gate_count=len(promotion_gates),
+                pilot_artifact_count=len(pilot_artifacts),
+                search_default=_as_str(search_posture.get("default")),
+                broad_web_confidence=_as_str(search_posture.get("broad_web_confidence")),
+                next_review_trigger=_as_str(pack.get("next_review_trigger")),
+            )
+        )
+    return tuple(roles)
+
+
+def _render_role_row(role: SourcePackRoleStatus) -> str:
+    age = "" if role.review_age_days is None else f" ({role.review_age_days}d)"
+    role_label = escape(role.role_name or role.role_id)
+    role_id = escape(role.role_id)
+    freshness = escape(role.freshness)
+    freshness_label = escape(role.freshness.replace("_", " "))
+    reviewed = escape(role.last_reviewed_at or "unknown")
+    next_review = escape(role.next_review_trigger or "not recorded")
+    return f"""<tr>
+  <td><strong>{role_label}</strong><br><span class="muted">{role_id}</span></td>
+  <td><span class="pill {freshness}">{freshness_label}</span></td>
+  <td>{reviewed}{escape(age)}</td>
+  <td>{role.primary_source_count}</td>
+  <td>{role.strong_source_count}</td>
+  <td>{role.discovery_source_count}</td>
+  <td>{role.allowed_web_source_count}</td>
+  <td>{role.blocked_source_count}</td>
+  <td>{role.promotion_gate_count}</td>
+  <td>{next_review}</td>
+</tr>"""
+
+
+def _review_age_days(value: str, today: date) -> int | None:
+    if not value:
+        return None
+    try:
+        reviewed = date.fromisoformat(value)
+    except ValueError:
+        return None
+    return (today - reviewed).days
+
+
+def _freshness(age_days: int | None) -> str:
+    if age_days is None:
+        return "date_missing"
+    if age_days <= 30:
+        return "current"
+    if age_days <= 90:
+        return "review_soon"
+    return "stale"
+
+
+def _mapping_list(value: Any) -> list[dict[str, Any]]:
+    if not isinstance(value, list):
+        return []
+    return [item for item in value if isinstance(item, dict)]
+
+
+def _string_list(value: Any) -> list[str]:
+    if not isinstance(value, list):
+        return []
+    return [item for item in value if isinstance(item, str) and item.strip()]
+
+
+def _as_str(value: Any) -> str:
+    if isinstance(value, str):
+        return value.strip()
+    return ""

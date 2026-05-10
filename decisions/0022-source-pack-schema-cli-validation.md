@@ -51,8 +51,9 @@ The schema contract is documented in `docs/AGENT_SOURCE_PACK_SCHEMA_V0.md`.
 
 ## Follow-Up
 
-Next choose one:
+Superseded follow-up:
 
-- build a lightweight source-pack freshness/status dashboard; or
+- the lightweight source-pack freshness/status dashboard is now tracked by
+  `decisions/0023-source-pack-status-dashboard.md`;
 - continue role pilots for Product Strategy, UX / Design, Web Experience,
   General Counsel, Compliance, Data Architecture, or Controller.
