@@ -39,6 +39,9 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
 - `decisions/0014-research-source-freshness-dry-run.md`: accepted decision for
   the first Research source freshness dry-run surface. Use it before building a
   source freshness command, sweep, queue, scheduled workflow, or crawler.
+- `decisions/0015-research-source-freshness-local-command.md`: accepted
+  decision for the local `dtp research source-freshness` command that writes
+  ignored review queues from notes, URLs, optional fetches, and search packets.
 - `docs/source/practice_os_build_spec_v0_1.md`: additive source spec for the Practice OS capture -> learn loop and MVP modules. Preserve it; convert it into integration docs/templates/backlog items instead of editing it directly.
 - `docs/source/ai_implementation_layer_thesis_and_build_spec_v0_1.md`: additive company thesis and implementation-layer source material. Preserve its strategic language and use it as source for positioning, offer design, client discovery, and internal product development.
 - `database/schema/practice_os_schema_v0_1.sql`: additive starter schema source for future Practice OS records. Do not run it as a migration until it is reconciled with Hosted DTP Phase 0.
@@ -150,8 +153,10 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
   current source candidates without creating an autonomous research crawler.
 - `docs/RESEARCH_SOURCE_FRESHNESS_DRY_RUN_V0.md`: dry-run specification for
   checking a narrow approved source subset and producing reviewable source
-  freshness findings. Use it before any scheduled source sweep, crawler, digest
-  automation, source monitor, or research-source freshness command.
+  freshness findings. It now also documents the local
+  `dtp research source-freshness` command. Use it before any scheduled source
+  sweep, crawler, digest automation, source monitor, or source-freshness
+  promotion.
 - `docs/OPPORTUNITY_OS_V0.md`: relationship-led consulting growth system for
   warm opportunities, referral paths, fit scoring, capacity protection, and
   sanitized Notion mirror fields. Use it before creating any private

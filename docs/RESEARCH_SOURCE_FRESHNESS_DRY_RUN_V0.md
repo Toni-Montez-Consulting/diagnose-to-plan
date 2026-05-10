@@ -7,7 +7,7 @@ review_status: draft
 
 # Research Source Freshness Dry-Run V0
 
-Status: dry-run specification, not runtime automation
+Status: dry-run specification plus local dry-run command
 
 Owner repo: `diagnose-to-plan`
 
@@ -18,7 +18,9 @@ autonomy-readiness approval to move Research source freshness forward as the
 first internal autonomy candidate.
 
 This document defines the dry-run surface before any scheduled workflow,
-crawler, Notion sync, digest automation, or source-monitoring runtime exists.
+crawler, Notion sync, digest automation, or autonomous source-monitoring
+runtime exists. The local command can write review queues under ignored
+`outputs/`, but those queues are evidence only.
 
 Core rule:
 
@@ -51,6 +53,38 @@ This is not:
 - an offer/pricing updater;
 - a tool-install trigger;
 - a repo-changing workflow.
+
+## Local Command
+
+Use the local command when Toni asks to check source freshness, capture operator
+notes, inspect a pasted URL, or search for source evidence:
+
+```powershell
+.\.venv\Scripts\dtp.exe research source-freshness `
+  --source-id openai-api-codex-changelog `
+  --note "Check whether agent tooling guidance changed." `
+  --url "https://developers.openai.com/api/docs/changelog" `
+  --query "OpenAI Codex changelog agents evals"
+```
+
+The command supports:
+
+- operator notes with `--note`;
+- pasted source URL metadata with `--url`;
+- optional public URL excerpt fetching with `--fetch-url`;
+- search packets with `--query`;
+- optional public search result fetching with `--search-web`;
+- official-source-first search URL generation by default.
+
+Default behavior is conservative:
+
+- URL content is not fetched unless `--fetch-url` is passed.
+- Search result pages are not fetched unless `--search-web` is passed.
+- Local/private hosts are blocked.
+- Search results are low-confidence until reviewed against primary sources.
+- Output stays under ignored `outputs/research-source-freshness/`.
+- Human review is required before creating a decision record, digest, pattern
+  candidate, implementation review, public claim, client message, or repo task.
 
 ## Source Subset For First Dry Run
 
@@ -186,28 +220,39 @@ For a future CLI dry-run implementation, add tests that verify:
 - dry-run writes only to ignored `outputs/` unless explicitly promoted;
 - no Notion, Gmail, client, public, or repo mutation side effects occur.
 
-## First Implementation Candidate
+## Implemented Local Dry-Run Command
 
-The first build candidate should be a local dry-run command or script that:
+The first local command is:
 
-1. reads a static source-subset config from this doc or a DTP-owned data file;
-2. accepts a manually supplied source snapshot or operator notes;
-3. emits a dry-run queue file under `outputs/research-source-freshness/`;
+```powershell
+.\.venv\Scripts\dtp.exe research source-freshness
+```
+
+It:
+
+1. uses the source subset above for known `--source-id` values;
+2. accepts manually supplied source snapshots, operator notes, URLs, and search
+   queries;
+3. emits JSONL and Markdown dry-run queue files under
+   `outputs/research-source-freshness/`;
 4. validates queue item fields and states;
 5. prints a short human review summary;
-6. does not browse, schedule, sync, send, install, or mutate external systems.
+6. can optionally fetch public URL excerpts or public search-result pages;
+7. blocks local/private URL fetches;
+8. does not schedule, sync, send, install, promote, or mutate tracked repo
+   artifacts from findings.
 
-Browsing current public source pages can come later, after the operator-only
-queue shape is proven.
+More advanced browsing, deduplication, source diffing, and scheduling can come
+later, after the command produces useful low-noise queues.
 
 ## Promotion Gate
 
-Move from dry-run spec to implementation only when:
+The spec-to-command gate is satisfied for a local dry-run only:
 
 - Toni accepts the source subset;
 - the output schema is stable enough for a first command;
-- test fixtures exist for unchanged, meaningful, noisy, blocked, and stale
-  source cases;
+- tests cover notes, URL metadata, public URL fetch excerpts, blocked local
+  URLs, and CLI output;
 - the implementation is local-only and dry-run by default.
 
 Move from dry-run command to scheduled workflow only after:

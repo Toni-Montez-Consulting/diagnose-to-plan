@@ -60,6 +60,11 @@ from dtp.commands.practice import render_doctor, run_practice_doctor
 from dtp.commands.recall import run_recall
 from dtp.commands.redact import REDACT_PROFILES, RedactionError, run_redact_check
 from dtp.commands.research import render_research_steward_review, run_research_steward_review
+from dtp.commands.research_source_freshness import (
+    ResearchSourceFreshnessError,
+    render_source_freshness_dry_run,
+    run_research_source_freshness_dry_run,
+)
 from dtp.commands.skills_cmd import run_validate
 from dtp.commands.synthesize import run_synthesize
 from dtp.commands.vault import (
@@ -992,6 +997,98 @@ def research_steward_command(
     config = load_config()
     result = run_research_steward_review(config, limit=limit)
     console.print(render_research_steward_review(result, config.repo_root), end="", markup=False)
+
+
+@research_app.command("source-freshness")
+def research_source_freshness_command(
+    source_id: Annotated[
+        str,
+        typer.Option("--source-id", help="Source subset id, or manual-source by default."),
+    ] = "",
+    source_name: Annotated[
+        str,
+        typer.Option("--source-name", help="Human-readable source name for manual sources."),
+    ] = "",
+    source_tier: Annotated[
+        int | None,
+        typer.Option("--source-tier", help="Source tier 0-4. Defaults from known source id."),
+    ] = None,
+    source_url_or_path: Annotated[
+        str,
+        typer.Option("--source-url-or-path", help="Canonical source URL or DTP path."),
+    ] = "",
+    notes: Annotated[
+        list[str] | None,
+        typer.Option("--note", help="Operator note to include. Can be repeated."),
+    ] = None,
+    urls: Annotated[
+        list[str] | None,
+        typer.Option("--url", help="URL metadata to include. Can be repeated."),
+    ] = None,
+    queries: Annotated[
+        list[str] | None,
+        typer.Option("--query", help="Search query to include. Can be repeated."),
+    ] = None,
+    fetch_urls: Annotated[
+        bool,
+        typer.Option("--fetch-url/--no-fetch-url", help="Fetch public URL excerpts for --url."),
+    ] = False,
+    search_web: Annotated[
+        bool,
+        typer.Option("--search-web/--no-search-web", help="Fetch a public search result page."),
+    ] = False,
+    official_first: Annotated[
+        bool,
+        typer.Option(
+            "--official-first/--broad-first",
+            help="Generate official-domain search URLs before the broad web query.",
+        ),
+    ] = True,
+    freshness_state: Annotated[
+        str,
+        typer.Option("--freshness-state", help="Dry-run freshness classification."),
+    ] = "needs_manual_review",
+    recommended_action: Annotated[
+        str,
+        typer.Option("--recommended-action", help="Recommended human review action."),
+    ] = "watch",
+    change_summary: Annotated[
+        str,
+        typer.Option("--change-summary", help="Short source-change summary."),
+    ] = "",
+    why_it_matters: Annotated[
+        str,
+        typer.Option("--why-it-matters", help="Practice relevance."),
+    ] = "",
+    evidence_limit: Annotated[
+        str,
+        typer.Option("--evidence-limit", help="What this dry run does not prove."),
+    ] = "",
+) -> None:
+    config = load_config()
+    try:
+        result = run_research_source_freshness_dry_run(
+            config,
+            source_id=source_id,
+            source_name=source_name,
+            source_tier=source_tier,
+            source_url_or_path=source_url_or_path,
+            notes=tuple(notes or ()),
+            urls=tuple(urls or ()),
+            queries=tuple(queries or ()),
+            fetch_urls=fetch_urls,
+            search_web=search_web,
+            official_first=official_first,
+            freshness_state=freshness_state,
+            recommended_action=recommended_action,
+            change_summary=change_summary,
+            why_it_matters=why_it_matters,
+            evidence_limit=evidence_limit,
+        )
+    except ResearchSourceFreshnessError as error:
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(code=1) from error
+    console.print(render_source_freshness_dry_run(result, config.repo_root), end="", markup=False)
 
 
 @vault_app.command("init")
