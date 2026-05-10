@@ -30,6 +30,7 @@ from dtp.commands.evolution import (
     EvolutionError,
     render_evolution_new,
     render_evolution_status,
+    run_evolution_dashboard,
     run_evolution_new,
     run_evolution_status,
 )
@@ -49,7 +50,12 @@ from dtp.commands.kaizen import (
 )
 from dtp.commands.kit import KIT_KINDS, KitError, render_status, run_kit_new, run_kit_status
 from dtp.commands.lesson import run_lesson
-from dtp.commands.memory import render_memory_status, run_memory_status
+from dtp.commands.memory import (
+    render_memory_status,
+    render_memory_steward_review,
+    run_memory_status,
+    run_memory_steward_review,
+)
 from dtp.commands.practice import render_doctor, run_practice_doctor
 from dtp.commands.recall import run_recall
 from dtp.commands.redact import REDACT_PROFILES, RedactionError, run_redact_check
@@ -940,13 +946,37 @@ def evolution_status_command() -> None:
     console.print(render_evolution_status(result, config.repo_root), end="")
 
 
+@evolution_app.command("dashboard")
+def evolution_dashboard_command(
+    out: Annotated[
+        Path,
+        typer.Option("--out", help="Static HTML dashboard output path."),
+    ] = Path("docs/practice-evolution-dashboard.html"),
+) -> None:
+    config = load_config()
+    result = run_evolution_dashboard(config, output_path=out)
+    console.print(f"[green]practice evolution dashboard written[/green] {result.path}")
+
+
 @memory_app.command("status")
 def memory_status_command() -> None:
     config = load_config()
     result = run_memory_status(config)
-    console.print(render_memory_status(result, config.repo_root), end="")
+    console.print(render_memory_status(result, config.repo_root), end="", markup=False)
     if not result.ok:
         raise typer.Exit(code=1)
+
+
+@memory_app.command("steward")
+def memory_steward_command(
+    limit: Annotated[
+        int,
+        typer.Option("--limit", help="Maximum recommendation rows to emit."),
+    ] = 10,
+) -> None:
+    config = load_config()
+    result = run_memory_steward_review(config, limit=limit)
+    console.print(render_memory_steward_review(result, config.repo_root), end="", markup=False)
 
 
 @vault_app.command("init")

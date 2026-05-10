@@ -4,6 +4,7 @@ import re
 from collections import Counter
 from dataclasses import dataclass
 from datetime import UTC, datetime
+from html import escape
 from pathlib import Path
 
 from dtp.commands.kaizen import KaizenRecord, read_kaizen_records
@@ -41,6 +42,29 @@ class EvolutionStatus:
     idea_records: tuple[Path, ...]
     research_candidates: tuple[Path, ...]
     state_counts: dict[str, int]
+
+
+@dataclass(frozen=True)
+class EvolutionItem:
+    path: Path
+    kind: str
+    title: str
+    state: str
+    sensitivity: str
+    source: str
+    created: str
+    lane: str
+    safe_to_mirror: str
+    next_review_trigger: str
+
+
+@dataclass(frozen=True)
+class EvolutionDashboard:
+    path: Path
+    html: str
+    item_count: int
+    state_counts: dict[str, int]
+    needs_review_count: int
 
 
 def run_evolution_new(
@@ -105,17 +129,44 @@ def run_evolution_new(
 def run_evolution_status(config: DtpConfig) -> EvolutionStatus:
     idea_records = tuple(sorted(_idea_records_dir(config).glob("*.md")))
     research_candidates = tuple(sorted(_research_candidates_dir(config).glob("*.md")))
-    counts: Counter[str] = Counter()
-
-    for path in idea_records:
-        counts[_extract_value(path, "- Current state:") or "unknown"] += 1
-    for path in research_candidates:
-        counts[_extract_value(path, "- Status:") or "unknown"] += 1
+    counts: Counter[str] = Counter(item.state for item in read_evolution_items(config))
 
     return EvolutionStatus(
         idea_records=idea_records,
         research_candidates=research_candidates,
         state_counts=dict(sorted(counts.items())),
+    )
+
+
+def read_evolution_items(config: DtpConfig) -> tuple[EvolutionItem, ...]:
+    items: list[EvolutionItem] = []
+    for path in sorted(_idea_records_dir(config).glob("*.md")):
+        items.append(_read_evolution_item(path, kind="idea"))
+    for path in sorted(_research_candidates_dir(config).glob("*.md")):
+        items.append(_read_evolution_item(path, kind="research-pattern"))
+    return tuple(sorted(items, key=lambda item: (item.created, item.title, item.kind)))
+
+
+def run_evolution_dashboard(
+    config: DtpConfig,
+    *,
+    output_path: Path | None = None,
+) -> EvolutionDashboard:
+    items = read_evolution_items(config)
+    path = _resolve_output_path(
+        config.repo_root,
+        output_path or Path("docs/practice-evolution-dashboard.html"),
+    )
+    html = render_evolution_dashboard(items, config.repo_root)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(html, encoding="utf-8", newline="\n")
+    state_counts: Counter[str] = Counter(item.state for item in items)
+    return EvolutionDashboard(
+        path=path,
+        html=html,
+        item_count=len(items),
+        state_counts=dict(sorted(state_counts.items())),
+        needs_review_count=sum(1 for item in items if _needs_review(item)),
     )
 
 
@@ -160,6 +211,279 @@ def render_evolution_status(result: EvolutionStatus, repo_root: Path) -> str:
     else:
         lines.append("- none")
     return "\n".join(lines) + "\n"
+
+
+def render_evolution_dashboard(
+    items: tuple[EvolutionItem, ...],
+    repo_root: Path,
+    *,
+    generated_at: datetime | None = None,
+) -> str:
+    generated = (generated_at or datetime.now(UTC)).strftime("%Y-%m-%d %H:%M UTC")
+    state_counts: Counter[str] = Counter(item.state for item in items)
+    kind_counts: Counter[str] = Counter(item.kind for item in items)
+    idea_count = kind_counts.get("idea", 0)
+    research_count = kind_counts.get("research-pattern", 0)
+    review_count = sum(1 for item in items if _needs_review(item))
+    rows = "\n".join(_render_dashboard_row(item, repo_root) for item in items)
+    if not rows:
+        rows = (
+            '<tr class="empty-row"><td colspan="8">'
+            "No evolution records found yet.</td></tr>"
+        )
+    state_filters = "\n".join(
+        _render_filter_button(state, count)
+        for state, count in sorted(state_counts.items())
+    )
+    if not state_filters:
+        state_filters = '<p class="muted">No states to filter yet.</p>'
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Practice Evolution Dashboard</title>
+  <style>
+    :root {{
+      color-scheme: light;
+      --bg: #f7f8f5;
+      --ink: #17201b;
+      --muted: #5b645f;
+      --panel: #ffffff;
+      --line: #d9ded7;
+      --green: #2f6d4f;
+      --blue: #275d8c;
+      --amber: #9b6828;
+      --rose: #994c4c;
+    }}
+    * {{ box-sizing: border-box; }}
+    body {{
+      margin: 0;
+      font: 15px/1.5 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+    }}
+    main {{
+      width: min(1180px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 32px 0 48px;
+    }}
+    header {{
+      display: grid;
+      gap: 12px;
+      margin-bottom: 24px;
+    }}
+    h1, h2 {{
+      margin: 0;
+      line-height: 1.15;
+      letter-spacing: 0;
+    }}
+    h1 {{ font-size: 2rem; }}
+    h2 {{ font-size: 1.1rem; }}
+    p {{ margin: 0; }}
+    .muted {{ color: var(--muted); }}
+    .summary {{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 12px;
+      margin: 18px 0;
+    }}
+    .metric {{
+      display: grid;
+      gap: 4px;
+      min-height: 92px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      border-radius: 8px;
+    }}
+    .metric strong {{ font-size: 1.85rem; }}
+    .toolbar {{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin: 18px 0;
+    }}
+    input[type="search"] {{
+      flex: 1 1 280px;
+      min-height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 8px 12px;
+      font: inherit;
+      background: var(--panel);
+      color: var(--ink);
+    }}
+    button {{
+      min-height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 8px 12px;
+      font: inherit;
+      background: var(--panel);
+      color: var(--ink);
+      cursor: pointer;
+    }}
+    button.active {{
+      border-color: var(--green);
+      color: #fff;
+      background: var(--green);
+    }}
+    section {{
+      margin-top: 22px;
+    }}
+    .table-wrap {{
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+    }}
+    table {{
+      width: 100%;
+      min-width: 920px;
+      border-collapse: collapse;
+    }}
+    th, td {{
+      padding: 12px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }}
+    th {{
+      font-size: 0.78rem;
+      color: var(--muted);
+      text-transform: uppercase;
+    }}
+    tr:last-child td {{ border-bottom: 0; }}
+    a {{ color: var(--blue); }}
+    .pill {{
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      padding: 3px 8px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--ink);
+      background: #fafbf8;
+      white-space: nowrap;
+    }}
+    .pill.review {{ border-color: #d9b26f; color: var(--amber); }}
+    .pill.idea {{ border-color: #a9c8b7; color: var(--green); }}
+    .pill.research {{ border-color: #a8bdd4; color: var(--blue); }}
+    .path {{ font-size: 0.86rem; color: var(--muted); }}
+    .empty-row {{ color: var(--muted); }}
+    .boundary {{
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+    }}
+    .boundary ul {{
+      margin: 8px 0 0;
+      padding-left: 20px;
+    }}
+    @media (max-width: 720px) {{
+      main {{ width: min(100vw - 20px, 1180px); padding-top: 20px; }}
+      h1 {{ font-size: 1.55rem; }}
+      .metric {{ min-height: 82px; }}
+    }}
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="muted">Generated {escape(generated)}</p>
+      <h1>Practice Evolution Dashboard</h1>
+      <p class="muted">
+        Static status view for idea records, meta-patterns, and research-pattern
+        candidates. It reads local DTP markdown only and does not publish,
+        sync, mutate client data, or promote memory by itself.
+      </p>
+    </header>
+
+    <section class="summary" aria-label="Evolution summary">
+      <div class="metric"><span>Total records</span><strong>{len(items)}</strong></div>
+      <div class="metric"><span>Idea records</span><strong>{idea_count}</strong></div>
+      <div class="metric"><span>Research candidates</span><strong>{research_count}</strong></div>
+      <div class="metric"><span>Needs review</span><strong>{review_count}</strong></div>
+    </section>
+
+    <section>
+      <h2>State Filters</h2>
+      <div class="toolbar" aria-label="Dashboard filters">
+        <input id="evolution-search" type="search"
+          placeholder="Search records, states, sources, lanes, and paths">
+        <button type="button" class="active" data-state-filter="">All states</button>
+        {state_filters}
+      </div>
+      <p id="filter-status" class="muted">Showing all evolution records.</p>
+    </section>
+
+    <section>
+      <h2>Record Register</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Record</th>
+              <th>Kind</th>
+              <th>State</th>
+              <th>Created</th>
+              <th>Source</th>
+              <th>Lane</th>
+              <th>Sensitivity</th>
+              <th>Mirror</th>
+            </tr>
+          </thead>
+          <tbody id="record-register">
+            {rows}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="boundary">
+      <h2>Scale Path</h2>
+      <ul>
+        <li>Status dashboard now: counts, filters, search, and source links.</li>
+        <li>Review room later: promotion queue, reviewer decisions, and batch receipts.</li>
+        <li>Mirror later: sanitized Notion cockpit only after explicit review.</li>
+      </ul>
+    </section>
+  </main>
+  <script>
+    const rows = [...document.querySelectorAll("#record-register tr[data-state]")];
+    const search = document.getElementById("evolution-search");
+    const buttons = [...document.querySelectorAll("[data-state-filter]")];
+    const status = document.getElementById("filter-status");
+    let activeState = "";
+
+    function applyFilters() {{
+      const query = search.value.trim().toLowerCase();
+      let shown = 0;
+      rows.forEach((row) => {{
+        const stateMatch = !activeState || row.dataset.state === activeState;
+        const queryMatch = !query || row.dataset.search.includes(query);
+        const visible = stateMatch && queryMatch;
+        row.hidden = !visible;
+        if (visible) shown += 1;
+      }});
+      status.textContent = `Showing ${{shown}} of ${{rows.length}} evolution records.`;
+    }}
+
+    buttons.forEach((button) => {{
+      button.addEventListener("click", () => {{
+        activeState = button.dataset.stateFilter || "";
+        buttons.forEach((item) => item.classList.toggle("active", item === button));
+        applyFilters();
+      }});
+    }});
+    search.addEventListener("input", applyFilters);
+  </script>
+</body>
+</html>
+"""
 
 
 def _normalize_kind(kind: str) -> str:
@@ -215,6 +539,103 @@ def _idea_records_dir(config: DtpConfig) -> Path:
 
 def _research_candidates_dir(config: DtpConfig) -> Path:
     return config.practice_os_dir / "research" / "pattern-candidates"
+
+
+def _resolve_output_path(repo_root: Path, output_path: Path) -> Path:
+    return output_path if output_path.is_absolute() else repo_root / output_path
+
+
+def _read_evolution_item(path: Path, *, kind: str) -> EvolutionItem:
+    text = path.read_text(encoding="utf-8")
+    if kind == "research-pattern":
+        title = _extract_title(text, "# Research Pattern Candidate - ")
+        state = _extract_text_value(text, "- Status:") or "unknown"
+        next_review_trigger = _extract_text_value(
+            text,
+            "- What signal would confirm it is useful:",
+        )
+    else:
+        title = _extract_title(text, "# Idea Evolution Record - ")
+        state = _extract_text_value(text, "- Current state:") or "unknown"
+        next_review_trigger = _extract_text_value(text, "- Next review trigger:")
+    return EvolutionItem(
+        path=path,
+        kind=kind,
+        title=title or path.stem,
+        state=state,
+        sensitivity=_extract_text_value(text, "- Sensitivity:") or "unknown",
+        source=_extract_text_value(text, "- Source:") or "unknown",
+        created=_extract_text_value(text, "- Created:") or "unknown",
+        lane=_extract_text_value(text, "- Owning repo/lane:") or "unknown",
+        safe_to_mirror=_extract_text_value(text, "Safe to mirror:") or "unknown",
+        next_review_trigger=next_review_trigger,
+    )
+
+
+def _extract_title(text: str, prefix: str) -> str:
+    for line in text.splitlines():
+        if line.startswith(prefix):
+            return line.removeprefix(prefix).strip()
+    return ""
+
+
+def _extract_text_value(text: str, prefix: str) -> str:
+    for line in text.splitlines():
+        if line.startswith(prefix):
+            return line.removeprefix(prefix).strip()
+    return ""
+
+
+def _needs_review(item: EvolutionItem) -> bool:
+    return item.state in {
+        "raw_capture",
+        "working_memory",
+        "decision_memory",
+        "pattern_candidate",
+        "draft",
+        "reviewed",
+    }
+
+
+def _render_filter_button(state: str, count: int) -> str:
+    label = state.replace("_", " ").replace("-", " ").title()
+    return (
+        f'<button type="button" data-state-filter="{escape(state)}">'
+        f"{escape(label)} ({count})</button>"
+    )
+
+
+def _render_dashboard_row(item: EvolutionItem, repo_root: Path) -> str:
+    relative = item.path.relative_to(repo_root).as_posix()
+    kind_label = "Research" if item.kind == "research-pattern" else "Idea"
+    kind_class = "research" if item.kind == "research-pattern" else "idea"
+    review = ' <span class="pill review">review</span>' if _needs_review(item) else ""
+    search_text = " ".join(
+        [
+            item.title,
+            item.kind,
+            item.state,
+            item.source,
+            item.lane,
+            item.sensitivity,
+            item.safe_to_mirror,
+            relative,
+        ]
+    ).lower()
+    return f"""<tr data-state="{escape(item.state)}" data-kind="{escape(item.kind)}"
+    data-search="{escape(search_text)}">
+      <td>
+        <a href="../{escape(relative)}">{escape(item.title)}</a>{review}
+        <div class="path">{escape(relative)}</div>
+      </td>
+      <td><span class="pill {kind_class}">{escape(kind_label)}</span></td>
+      <td><span class="pill">{escape(item.state)}</span></td>
+      <td>{escape(item.created)}</td>
+      <td>{escape(item.source)}</td>
+      <td>{escape(item.lane)}</td>
+      <td>{escape(item.sensitivity)}</td>
+      <td>{escape(item.safe_to_mirror)}</td>
+    </tr>"""
 
 
 def _render_idea_record(
