@@ -17,7 +17,7 @@ plan, CRM import, or commitment to pursue work.
 
 | Record | Archetype | Status | Score | Decision | Next Action |
 |---|---|---|---:|---|---|
-| opp-test-001 | Established operator with app/system need | soon | 32 | active nurture / fit call candidate | stay warm; revisit when capacity opens |
+| opp-test-001 | Established operator with app/system need | soon | 32 | active nurture / Diagnostic Call candidate | stay warm; revisit when capacity opens |
 | opp-test-002 | Local services operator with workflow bottlenecks | soon | 30 | stay warm and learn more | ask lightweight systems questions when natural |
 | opp-test-003 | Professional services / marketing operator | later | 29 | stay warm and learn more | watch for internal reporting or client workflow pain |
 | opp-test-004 | Real estate operator with pipeline opportunity | later | 26 | park with reminder | learn more before proposing anything |
@@ -80,7 +80,7 @@ plan, CRM import, or commitment to pursue work.
 
 Total: 32
 
-Decision: active nurture / fit call candidate
+Decision: active nurture / Diagnostic Call candidate
 
 ### Capacity Guard
 

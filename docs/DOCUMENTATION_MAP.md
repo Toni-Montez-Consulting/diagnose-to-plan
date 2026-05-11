@@ -127,8 +127,8 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
   offer lane or before translating offer language into `consulting`.
 - `docs/PRACTICE_PUBLIC_OFFER_SEQUENCE.md`: internal sequencing decision for
   future public consulting copy. Use it to keep the broad front door,
-  Blueprint/Fast Track buying path, builder-led identity, and proof gates
-  aligned before public site changes.
+  Diagnostic Call/Blueprint/Fast Track buying path, builder-led identity, and
+  proof gates aligned before public site changes.
 - `docs/PRACTICE_BUILDER_LED_OFFER_MODEL.md`: current builder-led consulting
   business model, including client fit, pricing posture, Blueprint deliverable
   standard, Fast Track split, proof hierarchy, and collaboration memory.
@@ -152,7 +152,8 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
   inventory without values, and mutation gates.
 - `docs/PRACTICE_HOMEPAGE_START_AND_BLUEPRINT_COPY_LOCK.md`: locked internal
   source for the next consulting homepage, `/start`, proof-card, and Blueprint
-  copy pass. Use before implementing public offer copy.
+  copy pass, including the Diagnostic Call public label. Use before
+  implementing public offer copy.
 - `docs/PRACTICE_HOMEPAGE_SMALL_TEAM_ADVANTAGE_COPY_BRIEF.md`: internal
   public-copy brief for adding the Small Team Advantage / "why now" section to
   the next consulting homepage copy pass without replacing the hero or turning
@@ -351,8 +352,8 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
 - `practice-os/templates/engineering-readiness-receipt.md`: repo/project checkpoint receipt for branch, commit SHA, worktree state, commands, results, security/dependency notes, manual QA, known issues, owner decision, and next action.
 - `practice-os/templates/live-intake-receipt.md`: repeatable receipt for human-approved live consulting-to-Hub intake smokes, Hub row verification, test-record cleanup, and proof boundary notes.
 - `practice-os/templates/prospect-intake-triage.md`: DTP triage template for summarizing a real or synthetic prospect intake, choosing a fit/offer route, selecting the next Practice OS artifact, and recording follow-up approval gates without copying raw Hub rows into tracked docs.
-- `docs/PROSPECT_FOLLOW_UP_DRAFTING_PLAYBOOK_V0.md`: draft-only follow-up playbook for turning prospect triage into fit-call, paid Blueprint, or park/decline messages while preserving send, pricing, proof, calendar, and private-data approval gates.
-- `practice-os/templates/prospect-fit-call-follow-up.md`: prospect follow-up template for a reviewable fit-call or advisory conversation draft.
+- `docs/PROSPECT_FOLLOW_UP_DRAFTING_PLAYBOOK_V0.md`: draft-only follow-up playbook for turning prospect triage into Diagnostic Call, paid Blueprint, or park/decline messages while preserving send, pricing, proof, calendar, and private-data approval gates. It locks the public booking-link policy: intake first, then approved Diagnostic Call link after submission when configured.
+- `practice-os/templates/prospect-fit-call-follow-up.md`: prospect follow-up template for a reviewable Diagnostic Call or advisory conversation draft; it keeps `fit-call` as the internal route value for now.
 - `practice-os/templates/prospect-paid-blueprint-follow-up.md`: prospect follow-up template for a reviewable paid Blueprint diagnostic draft without exact pricing unless approved.
 - `practice-os/templates/prospect-park-or-decline-follow-up.md`: prospect follow-up template for a respectful no-build-yet, parked, or bad-fit draft.
 - `practice-os/templates/business-admin-item.md`: reusable item contract for business/admin overhead lanes.

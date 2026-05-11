@@ -58,7 +58,7 @@ and consulting as the public storefront.
 ## Business Value Preserved
 
 - Intake now leads to a decision instead of only a stored row.
-- The workflow separates fit-call, paid Blueprint, Fast Track, Custom SOW,
+- The workflow separates Diagnostic Call (`fit-call` internally), paid Blueprint, Fast Track, Custom SOW,
   advisory, parked, and bad-fit paths.
 - Follow-up remains human-reviewed.
 - Hub remains runtime support instead of becoming a CRM.
@@ -96,8 +96,8 @@ None block this slice.
 Useful next checkpoint questions:
 
 1. Should the first real intake triage produce a paid Blueprint artifact by
-   default, or only after a fit-call confirmation?
+   default, or only after a Diagnostic Call confirmation?
 2. Should Hub eventually show a "DTP triage status" field, or should that stay
    manual until several real intakes prove the need?
-3. Which route should get first-class treatment next: fit-call follow-up,
+3. Which route should get first-class treatment next: Diagnostic Call follow-up,
    Blueprint outline, or decline/park response?

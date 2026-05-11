@@ -921,3 +921,37 @@ Next review trigger:
 - Toni approves or rejects the default Blueprint language.
 - Two or three real drafts reveal repeated missing routes, examples, or
   status fields.
+
+## 2026-05-11: Diagnostic Call Booking Link Policy Locked
+
+Source:
+
+- `docs/PROSPECT_FOLLOW_UP_DRAFTING_PLAYBOOK_V0.md`
+- `practice-os/templates/prospect-fit-call-follow-up.md`
+- `docs/LIVE_INTAKE_TO_PRACTICE_OS_WORKFLOW_V0.md`
+- `docs/BUSINESS_ADMIN_OPERATING_SYSTEM.md`
+
+Change:
+
+- Locked `Diagnostic Call` as the public scheduling label.
+- Preserved `fit-call` as the internal route value until a later schema/template
+  rename is worth doing.
+- Chose intake-first booking: the public `/start` page may show the approved
+  Diagnostic Call booking link only after intake submission.
+- Kept manual scheduling as a fallback, not the default.
+
+Priority impact:
+
+1. Consulting can add a post-submit booking CTA without changing Hub authority
+   or creating a fake booking link.
+2. The booking link should be environment-configured and absent when no real
+   URL is available.
+3. The next selectivity change should wait until real volume or bad-fit calls
+   prove the need.
+
+Next review trigger:
+
+- The first live prospect books through the post-submit Diagnostic Call path.
+- Toni wants the booking link hidden behind manual review.
+- The internal route vocabulary becomes confusing enough to justify renaming
+  `fit-call` files and route values.

@@ -64,7 +64,7 @@ Total:
 
 Decision:
 
-- active nurture / fit call candidate
+- active nurture / Diagnostic Call candidate
 - stay warm and learn more
 - park with reminder
 - ignore / no active follow-up

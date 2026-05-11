@@ -168,7 +168,7 @@ Score lightly. This is advisory, not a boss.
 
 Suggested decision:
 
-- 32+ total: active nurture or fit call candidate.
+- 32+ total: active nurture or Diagnostic Call candidate.
 - 24-31: stay warm and learn more.
 - 16-23: park with reminder.
 - below 16: ignore or no active follow-up.

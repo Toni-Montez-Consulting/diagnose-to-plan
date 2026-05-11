@@ -33,7 +33,8 @@ reasoning, or collapsing every route into "book a call."
 Add a draft-only prospect follow-up kit:
 
 - one playbook for choosing the follow-up path;
-- one fit-call follow-up template;
+- one Diagnostic Call follow-up template using the existing `fit-call`
+  internal route;
 - one paid Blueprint follow-up template;
 - one park-or-decline follow-up template;
 - roadmap and documentation-map pointers.
@@ -103,11 +104,16 @@ kit needs more routes, examples, or Hub/Notion status support.
 
 ## Open Questions
 
-These are non-blocking:
+Resolved on 2026-05-11:
 
-1. Should the first real intake default to a fit call before a paid Blueprint
-   pitch, or should strong high-intent cases go straight to Blueprint language?
-2. Should Toni maintain one approved booking link for all fit calls, or keep
-   scheduling manual until volume proves the need?
-3. Should we later add a Fast Track follow-up template, or wait until a real
+- Use `Diagnostic Call` as the public label.
+- Show the approved booking link after intake submission, not before.
+- Keep intake as the first assessment layer.
+- Keep manual scheduling as the fallback, not the default.
+
+Still non-blocking:
+
+1. Should strong high-intent cases receive paid Blueprint language in addition
+   to the Diagnostic Call link?
+2. Should we later add a Fast Track follow-up template, or wait until a real
    intake proves a small implementation scope?

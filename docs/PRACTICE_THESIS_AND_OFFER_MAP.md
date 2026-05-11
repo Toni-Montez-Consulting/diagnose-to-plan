@@ -39,7 +39,7 @@ specific buying path:
 
 | Public door | Visitor situation | Likely route |
 |---|---|---|
-| Clarify The Path | idea, messy workflow, unclear scope, or recurring business problem needs a real plan | Fit Call -> Blueprint |
+| Clarify The Path | idea, messy workflow, unclear scope, or recurring business problem needs a real plan | Diagnostic Call -> Blueprint |
 | Build The System | site, app, workflow, dashboard, AI-enabled tool, admin system, or operating asset needs to exist and work | Fast Track or Custom Implementation SOW |
 | Improve The System | existing business needs less manual drag, better processes, smarter tools, or practical AI/workflow upgrades | Blueprint -> Implementation -> optional advisory |
 
