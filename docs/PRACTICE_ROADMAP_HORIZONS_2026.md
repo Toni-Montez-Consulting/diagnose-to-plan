@@ -57,7 +57,8 @@ automation surfaces only when repeated manual pain proves the need.
   `dtp workspace report`.
 - Do not build around waiting states. CCAAP waits on owner inputs; Cam and Greg
   have accepted discovery/cadence signals but repo/proof movement stays gated;
-  DSE stays COI-gated; Hub PRs #77 and #78 stay parked until a targeted
+  Greg Part 1 closeout is ready and waits on response/Part 2 rather than more
+  prep; DSE stays COI-gated; Hub PRs #77 and #78 stay parked until a targeted
   Hub-local fix pass.
 - Keep DeMario public proof to the posted, public-safe packet and recorded
   public URLs unless new permissioned proof arrives.
