@@ -20,6 +20,9 @@ human judgment is required.
   arithmetic, and operating metrics.
 - `coo.md` - operating rhythm, meeting prep, engagement runbooks, handoffs, and
   install plans.
+- `business-pattern-steward.md` - internal business-agent lane for learning
+  from firms, industries, markets, and innovation moves, then extracting
+  reusable operator/business patterns under review.
 - `consulting-strategy.md` - practice positioning, offer logic, buyer fit,
   scope shape, pricing posture, value case, proof posture, and proposal framing.
 - `devops-infrastructure.md` - deployment readiness, CI/CD, environments,

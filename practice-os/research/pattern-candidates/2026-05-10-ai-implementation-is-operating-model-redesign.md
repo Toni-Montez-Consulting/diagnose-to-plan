@@ -2,7 +2,7 @@
 data_class: P0
 confidential: false
 permission_level: internal_only
-review_status: draft
+review_status: accepted
 ---
 
 # Research Pattern Candidate - AI implementation is operating-model redesign
@@ -15,7 +15,7 @@ review_status: draft
 - Source type: research
 - Sensitivity: internal-only
 - Reviewer: Toni
-- Status: draft
+- Status: pattern_candidate
 
 ## Observation
 
@@ -96,7 +96,7 @@ review_status: draft
 
 - Recommended state: pattern_candidate
 - Reviewer: Toni
-- Approved state:
+- Approved state: pattern_candidate
 - Destination if promoted: messaging knowledge base, Blueprint template, or
   practice pattern
 

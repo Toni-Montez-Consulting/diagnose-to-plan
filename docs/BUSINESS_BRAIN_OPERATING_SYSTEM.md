@@ -128,6 +128,12 @@ this slice except through existing roadmap boundaries.
   ideas, collaboration patterns, research observations, messaging language, or
   client lessons need to mature beyond Kaizen capture without becoming
   uncontrolled self-learning, public copy, or autonomous agent behavior.
+- The internal business-agent lane now uses
+  `practice-os/agents/business-pattern-steward.md` when Toni wants the practice
+  to learn from how other firms, industries, infrastructure providers,
+  consultancies, or operators do business and innovate. Use it to extract
+  reusable business patterns from outside examples while Research Steward owns
+  source quality and Consulting Strategy owns offer/client translation.
 - Notion remains a cockpit and mobile mirror. DTP owns the source artifacts,
   decision gates, evidence notes, and private/public boundary.
 

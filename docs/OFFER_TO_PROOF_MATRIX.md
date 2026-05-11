@@ -28,7 +28,7 @@ through `/start`.
 | Offer | Existing proof candidates | Missing proof | Public-copy eligibility today | Next proof action | Not allowed yet |
 |---|---|---|---|---|---|
 | Business Systems Blueprint | DTP/consulting operating system, Business Brain fixtures, Greg/Cameron/CCAAP workflow packets, consulting intake architecture | redacted Blueprint sample showing messy context becoming roadmap, value case, workflow map, risks, and SOW recommendation | can describe the Blueprint method and buyer problem; cannot claim client outcomes or autonomous Business Brain capability | create one public-safe Blueprint sample after the next substantive client loop | no private client notes, no Notion/private DTP retrieval claims, no QuickBooks or finance automation claims |
-| Fast Track / Custom Implementation | Omnexus launch/review journey, DeMario launch/admin readiness, consulting site, DTP verification templates | approved public proof packet with baseline, after-state, measurement caveat, and permission | can describe implementation-first consulting, working assets, verification, handoff, and owner-ready delivery as a service pattern | choose first cleared proof packet after internal Omnexus/DeMario review or CCAAP owner response | no App Store/billing/user-data claims beyond reviewed public wording, no live deploy promise without explicit approval |
+| Fast Track / Custom Implementation | Omnexus launch/review journey, DeMario launch/admin readiness, consulting site, DTP verification templates | approved public proof packet with baseline, after-state, measurement caveat, and permission | can describe implementation-first consulting, working assets, verification, handoff, and owner-ready delivery as a service pattern | use `practice-os/proof-packets/demario-consulting-proof-prep-2026-05-10.md` for the first narrow homepage proof-card upgrade; full case study waits | no App Store/billing/user-data claims beyond reviewed public wording, no live deploy promise without explicit approval |
 | Growth, AI, And Operating Systems | DeMario admin surface, consulting `/admin`, Hub console support, CCAAP owner workflow candidate, DTP command-room pattern, AI/ML archive | one owner-approved walkthrough or redacted before/after workflow proof showing operating leverage | can describe AI/workflow opportunity scoring, command-room fit assessment, and owner/admin workflow design; cannot imply every project gets AI or a portal | promote admin-surface operating-room pattern and one AI/workflow proof candidate after review | no Hub-as-CRM, no portal by default, no private admin screenshots, no billing/time-tracking scope by default, no AI transformation claims |
 
 ## Copy Gate
@@ -53,4 +53,10 @@ The safest next order is a broad front door followed by `/start` routing into
 Blueprint, Fast Track, Custom Implementation, Growth/AI/Operating Systems, or
 not-fit. That order can be expressed without new proof claims if the copy stays
 at the method/service-pattern level.
+
+2026-05-10 update: DeMario is the first proof lane prepared for a narrow
+public-site upgrade because the local-business implementation story is concrete
+and easy to understand. Public claim review and copy authenticity review passed
+for the DeMario homepage proof card only. Richer screenshots, testimonials,
+metrics, admin surfaces, or a dedicated case-study page remain gated.
 

@@ -65,10 +65,12 @@ multiple repos or client lanes.
 3. Check Practice Evolution records that need review.
 4. Check Memory Steward recommendations.
 5. Check Research Steward recommendations.
-6. Check Knowledge Base Event Workflow triggers.
-7. Check Autonomy Readiness candidates.
-8. Decide one to three next actions.
-9. Leave a review receipt when decisions or priorities changed.
+6. Check Business Pattern Steward routes when firm, industry, innovation,
+   infrastructure, or market observations were captured.
+7. Check Knowledge Base Event Workflow triggers.
+8. Check Autonomy Readiness candidates.
+9. Decide one to three next actions.
+10. Leave a review receipt when decisions or priorities changed.
 
 ## Decision Types
 
