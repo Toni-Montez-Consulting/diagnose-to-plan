@@ -59,7 +59,7 @@ Current supporting copy:
 
 Primary CTA:
 
-> Start With a Fit Call
+> Start With a Diagnostic
 
 Public offer doors:
 
@@ -68,7 +68,7 @@ Public offer doors:
 3. Improve The System.
 
 These are public doors, not rigid packages. They help a prospect recognize
-their situation before `/start` routes them into Fit Call, Blueprint, Fast
+their situation before `/start` routes them into Diagnostic Call, Blueprint, Fast
 Track, Custom Implementation SOW, Advisory / Optimization, or not-fit.
 
 ## Promise
@@ -89,7 +89,7 @@ Do not guarantee revenue, profit, approvals, conversions, or market outcomes.
 
 | Path | Use when | Output | Internal starter price |
 |---|---|---|---|
-| Free Fit Call | qualification, fit, urgency, seriousness, rough path | route to Blueprint, Fast Track, or not-fit | free |
+| Free Diagnostic Call | qualification, fit, urgency, seriousness, rough path | route to Blueprint, Fast Track, or not-fit | free |
 | Focused Blueprint Lite | one narrow question or early idea needs a serious paid read | short action memo and recommended next move | starts at `$500` |
 | Business Systems Blueprint | bigger/custom/unclear work needs discovery before implementation | roadmap, value case, technical plan, workflow map, risk/dependency register, SOW recommendation | starts at `$1,500+` |
 | Full Implementation Blueprint | app, AI workflow, operating system, or multi-part business system | deeper implementation architecture, phases, ROI logic, and SOW | starts at `$3,500+` |

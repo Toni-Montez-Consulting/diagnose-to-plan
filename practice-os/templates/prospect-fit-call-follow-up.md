@@ -6,10 +6,11 @@ permission_level: internal_only
 review_status: draft
 ---
 
-# Prospect Fit-Call Follow-Up
+# Prospect Diagnostic Call Follow-Up
 
 Use this when a prospect intake triage recommends `fit-call`, `advisory`, or a
 conversation before choosing Blueprint, Fast Track, Custom SOW, or no-build-yet.
+Public copy should call this a `Diagnostic Call`.
 
 Do not send from this template. Draft only. Toni must approve the final message.
 
@@ -21,6 +22,7 @@ Do not send from this template. Draft only. Toni must approve the final message.
 - Triage path:
 - Intake source:
 - Recommended route:
+- Public call label: Diagnostic Call
 - Contact channel:
 - Scheduling link approved:
 - Gmail draft allowed:
@@ -38,7 +40,7 @@ Do not send from this template. Draft only. Toni must approve the final message.
 
 - Context anchor from intake:
 - Plain-language read of the problem:
-- Why a fit call is useful:
+- Why a Diagnostic Call is useful:
 - What the call should decide:
 - Questions to ask before or during the call:
   - Question 1:
@@ -58,8 +60,9 @@ Hi [Name],
 Thanks for reaching out and sharing the context around [specific problem or
 goal].
 
-My read is that the useful next step is a short fit call, not a generic proposal
-yet. I want to understand the current workflow, what is already working, where
+My read is that the useful next step is a short Diagnostic Call, not a generic
+proposal yet. I will review your intake first so we can use the time well. On
+the call, I want to confirm the current workflow, what is already working, where
 the friction is showing up, and whether this is best handled as a focused
 Blueprint, a small implementation pass, a larger custom scope, or something to
 park until the timing is better.
@@ -70,7 +73,8 @@ Before we talk, the main things I would want to clarify are:
 - [question 2]
 - [question 3]
 
-If that sounds useful, [scheduling instruction or approved link].
+If that sounds useful, [approved Diagnostic Call booking link or scheduling
+instruction].
 
 Best,
 

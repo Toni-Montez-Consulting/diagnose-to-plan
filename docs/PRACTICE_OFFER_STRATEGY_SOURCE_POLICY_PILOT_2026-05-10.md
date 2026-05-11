@@ -231,12 +231,12 @@ AI offer page. It is a clearer AI posture inside existing sections:
 
 | Prospect signal | Best route | Reason |
 |---|---|---|
-| "I have an idea and think AI could help." | Fit Call -> Blueprint | idea, workflow, data, and value need definition first |
-| "We repeat this manual task every week and know who reviews it." | Fit Call -> Fast Track if scope is narrow | enough clarity may exist to build a contained implementation |
-| "Our operation is scattered and we want AI leverage." | Fit Call -> Blueprint -> Custom SOW | workflow and operating model need diagnosis before build |
-| "Can you add a chatbot to my site?" | Fit Call only if there is a real workflow; otherwise not-fit | chatbot alone is not the offer |
+| "I have an idea and think AI could help." | Diagnostic Call -> Blueprint | idea, workflow, data, and value need definition first |
+| "We repeat this manual task every week and know who reviews it." | Diagnostic Call -> Fast Track if scope is narrow | enough clarity may exist to build a contained implementation |
+| "Our operation is scattered and we want AI leverage." | Diagnostic Call -> Blueprint -> Custom SOW | workflow and operating model need diagnosis before build |
+| "Can you add a chatbot to my site?" | Diagnostic Call only if there is a real workflow; otherwise not-fit | chatbot alone is not the offer |
 | "We need AI to make decisions for us." | likely not-fit or gated review | human judgment and review boundaries are required |
-| "We need a working system and know what it should do." | Fit Call -> Fast Track or Custom SOW | scope clarity can shorten discovery |
+| "We need a working system and know what it should do." | Diagnostic Call -> Fast Track or Custom SOW | scope clarity can shorten discovery |
 
 ## Proof Posture
 

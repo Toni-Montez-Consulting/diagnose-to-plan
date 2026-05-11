@@ -24,7 +24,7 @@ Lead publicly with the broad promise, not a narrow service category:
 
 The buying mechanism is:
 
-1. Free Fit Call for qualification.
+1. Free Diagnostic Call for qualification.
 2. Paid Blueprint as the default next step for unclear, bigger, or custom work.
 3. Fast Track Implementation for contained scopes where the goal, assets, and
    next step are already clear.
@@ -42,7 +42,7 @@ technology/AI path, and then builds or implements working assets.
 
 Move the public practice in this order:
 
-1. Client clarity: make `/start` explain what the Fit Call decides and why a
+1. Client clarity: make `/start` explain what the Diagnostic Call decides and why a
    Blueprint, implementation scope, advisory path, simpler fix, or pause can all
    be legitimate outcomes.
 2. Proof preparation: refine DeMario first as the clearest public-safe local
@@ -83,7 +83,7 @@ Subhead:
 
 Primary CTA:
 
-> Start With a Fit Call
+> Start With a Diagnostic
 
 Homepage section order:
 
@@ -95,7 +95,7 @@ Homepage section order:
 5. Implementation promise: working assets, not a deck dead-end.
 6. Proof: named projects mapped to proof types.
 7. Fit filter: who this is for and not for.
-8. Final CTA: Start With a Fit Call.
+8. Final CTA: Start With a Diagnostic.
 
 Use `docs/PRACTICE_HOMEPAGE_SMALL_TEAM_ADVANTAGE_COPY_BRIEF.md` as the source
 for the "why now" section. Keep "Small Team Advantage" as the internal pillar
@@ -129,7 +129,7 @@ The three public doors are recognition aids, not rigid packages:
 
 | Public layer | Buyer job | Buying path | Current price posture |
 |---|---|---|---|
-| Broad front door | Help me get this idea, workflow, system, or digital project into motion | Free Fit Call routes the prospect | no price claim required |
+| Broad front door | Help me get this idea, workflow, system, or digital project into motion | Free Diagnostic Call routes the prospect | no price claim required |
 | Business Systems Blueprint | I need clarity, value case, technical path, workflow map, and implementation plan before we build | Paid diagnostic / deposit | public copy should say paid diagnostic credited toward implementation; internal starts can be `$500+` for focused work and `$1,500+` for larger work |
 | Fast Track Implementation | I have a contained implementation where the goal, assets, and next step are already clear | Direct implementation scope | starts around `$1,500-$3,000` internally; do not frame publicly as a cheap tier |
 | Custom Implementation SOW | I need Toni to build or implement the approved system | SOW after Blueprint or clear Fast Track | starts around `$5,000+`; grows with scope |
@@ -269,7 +269,7 @@ It should:
 
 1. keep the homepage broad enough for founders, operators, and small businesses
    to recognize themselves;
-2. use `/start` to route prospects into Blueprint, Fast Track, or not-fit;
+2. use `/start` to route prospects into Diagnostic Call, Blueprint, Fast Track, or not-fit;
 3. explain that bigger unclear work starts with a paid Blueprint;
 4. preserve "working assets, not strategy deck" as the implementation promise;
 5. include AI as a practical lens, not a black box or gimmick;

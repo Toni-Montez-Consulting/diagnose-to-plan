@@ -160,6 +160,11 @@ No message is sent automatically.
 Use `docs/PROSPECT_FOLLOW_UP_DRAFTING_PLAYBOOK_V0.md` after triage when a
 prospect-facing draft is needed.
 
+Public scheduling label: `Diagnostic Call`. The intake should do the first
+assessment; the call confirms the problem, constraints, trust fit, and next
+artifact. The public booking link can appear after intake submission when the
+approved URL is configured.
+
 Allowed next paths:
 
 - draft a reply for Toni to review;
@@ -177,7 +182,7 @@ Default draft templates:
 
 | Follow-up path | Template |
 |---|---|
-| fit call / advisory conversation | `practice-os/templates/prospect-fit-call-follow-up.md` |
+| Diagnostic Call / advisory conversation | `practice-os/templates/prospect-fit-call-follow-up.md` |
 | paid Blueprint / diagnostic path | `practice-os/templates/prospect-paid-blueprint-follow-up.md` |
 | no-build-yet / parked / bad-fit | `practice-os/templates/prospect-park-or-decline-follow-up.md` |
 

@@ -43,7 +43,7 @@ working digital assets, workflows, AI-enabled systems, or operating tools.
 
 Primary CTA:
 
-> Start With a Fit Call
+> Start With a Diagnostic
 
 Secondary CTA:
 
@@ -80,7 +80,7 @@ If you know something needs to move but you are not sure what to build first,
 we start by defining the business problem, the value of solving it, the
 workflow behind it, and the smartest next step.
 
-Likely route: Fit Call -> Blueprint.
+Likely route: Diagnostic Call -> Blueprint.
 
 #### Build The System
 
@@ -173,7 +173,7 @@ commitment.
 
 ### Final CTA
 
-Start with a Fit Call.
+Start with a Diagnostic Call.
 
 Bring the messy context. We'll sort out whether the right next step is a
 Blueprint, Fast Track implementation, a custom SOW, advisory support, or not
@@ -190,8 +190,8 @@ It should answer:
 > serious conversation.
 
 Latest decision: `/start` is the client-clarity surface before stronger proof
-or conversion work. It should help the visitor understand what the Fit Call
-decides: whether the next move is a Blueprint, Fast Track implementation,
+or conversion work. It should help the visitor understand what the Diagnostic
+Call decides: whether the next move is a Blueprint, Fast Track implementation,
 Custom Implementation SOW, advisory path, simpler fix, or deliberate pause.
 The page should make "not building yet" feel like legitimate professional
 judgment, not a failure to sell.
