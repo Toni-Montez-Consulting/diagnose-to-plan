@@ -75,6 +75,7 @@ protects the right gate.
 | Input | Primary destination | Mirror | Gate |
 |---|---|---|---|
 | Client reply | private kit reply intake | sanitized client snapshot | no calendar/build/proof changes until extracted |
+| Prospect intake | prospect-intake triage plus selected Practice OS artifact | sanitized next-action/status only | no client communication, proof, production write, or integration expansion before approval |
 | Meeting notes | private kit meeting notes plus extraction | sanitized meeting status | mark AI notes unverified until checked |
 | Rough idea | Thought Inbox or Input Studio | Idea Inbox summary | no implementation until classified |
 | Client/source artifact | private kit source-material index | waiting/action summary only | classify sensitivity before use |

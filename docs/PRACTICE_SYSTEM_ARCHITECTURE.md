@@ -129,7 +129,7 @@ sequenceDiagram
     Prospect->>Consulting: Visits /start and submits diagnostic intake
     Consulting->>Hub: Sends intake request when endpoint is configured
     Hub->>Console: Stores operational intake record
-    Console->>DTP: Operator decides whether intake becomes Practice OS work
+    Console->>DTP: Operator creates triage from summarized intake fields
     DTP->>Kit: Creates or updates private kit when accepted
     DTP->>Consulting: Only redacted, permissioned proof can return public
 ```
@@ -139,6 +139,10 @@ Current boundary:
 - Consulting collects and presents. It does not own private engagement records.
 - Hub receives and operates runtime records. It does not own DTP methodology or public proof.
 - DTP diagnoses, plans, redacts, governs, and promotes only reviewed proof.
+- `docs/LIVE_INTAKE_TO_PRACTICE_OS_WORKFLOW_V0.md` and
+  `practice-os/templates/prospect-intake-triage.md` define the manual V0 bridge
+  from Hub row to fit decision, offer route, next artifact, approval gate, and
+  handoff receipt.
 
 ## Proof And Redaction Flow
 
