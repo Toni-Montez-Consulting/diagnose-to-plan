@@ -29,6 +29,12 @@ clearly.
 AI can help, but the tool is not the strategy. The value is judgment,
 sequencing, translation, implementation, and clean handoff.
 
+Small teams now have more leverage than ever because AI, cloud services,
+coding agents, no-code/low-code tools, APIs, and modern app workflows make
+building more accessible. That does not make judgment less important. It makes
+judgment more important: what to build first, what to buy, what to leave
+manual, what to automate, and what system the business can actually run.
+
 ## Short Versions
 
 ### 10 Seconds
@@ -71,6 +77,7 @@ use it.
 | Owner bottleneck | Too much important work depends on one person's memory and judgment. | Strongest plain-English buyer pain. |
 | Software thinking without a software team | Bring engineering-style clarity, sequencing, and systems design to businesses that do not have that function. | Good differentiator. |
 | Judgment before tools | Tools, AI, and automations follow the business problem. | Avoids generic AI consultancy language. |
+| Small Team Advantage | Small teams can now operate with bigger-business leverage if they turn work into clear systems instead of chasing tools. | Good belief pillar and future public-copy section, not the whole hero yet. |
 | Build and hand off | Every engagement should produce tangible assets. | Reinforces implementation guarantee. |
 | AI as leverage | AI helps organize, draft, analyze, route, and reduce drag. | Human-in-the-loop stays explicit. |
 | System survives absence | The business should become less dependent on Toni and less dependent on the owner remembering everything. | Useful for trust. |
@@ -89,6 +96,14 @@ Internal working claims:
 - AI should make the workflow clearer and easier to operate. It should not make
   the business harder to understand.
 - AI is useful when it is attached to real work someone owns.
+- Small teams have more leverage than ever, but leverage compounds only when
+  the work becomes a system.
+- AI did not make building easy. It made deciding more important.
+- The next small business advantage is not automation. It is operating clarity.
+- Small businesses do not need enterprise AI strategy. They need a better way
+  to run the work.
+- The best AI use case is usually not the flashiest one. It is the thing that
+  removes load from the owner.
 
 Future public-copy candidates:
 
@@ -96,6 +111,8 @@ Future public-copy candidates:
 - Get the business out of your head.
 - Build the system your business runs on.
 - Turn owner memory into operating rhythm.
+- Build the systems of a larger company without the overhead.
+- Not more tools. Not a strategy deck. A working system your business can run.
 
 Do not publish as claims without review:
 
@@ -115,6 +132,9 @@ Useful metaphors:
 - a business runbook instead of business folklore;
 - practical systems instead of tool sprawl;
 - map the workflow before buying the tool.
+- small-team leverage without bigger-business overhead;
+- deciding what matters before building what is possible;
+- the owner as the current router for too much of the business.
 
 Avoid:
 
@@ -138,6 +158,8 @@ Avoid:
   specs, systems, and operating assets.
 - Messy Operations To Repeatable System: scattered inputs become an owned
   workflow.
+- Small Team Advantage: a small team moving from tool sprawl to a clear system
+  that captures work, assigns ownership, and reduces owner load.
 
 ## Audience Notes
 
@@ -146,10 +168,22 @@ Avoid:
 Lead with owner bottleneck, clarity, and handoff. Avoid technical depth until
 they ask.
 
+Internal narrative primer:
+
+- `practice-os/comms/private/local-service-owner-narrative-2026-05-10.md`
+
+Use this primer to keep local-service language grounded in owner pressure,
+operating clarity, and working assets. Do not treat the fictional composite as
+public proof or a real client story.
+
 ### Startup Founder
 
 Lead with idea-to-working-system, launch readiness, product clarity, and build
 sequencing.
+
+Emphasize that modern tools make the first useful version more reachable, but
+the important founder problem is still deciding what to build first and what
+wrong turns to avoid.
 
 ### Professional Services
 
@@ -160,6 +194,9 @@ operating rhythm.
 
 Lead with practical adoption. AI is useful when attached to a real workflow and
 kept under human review.
+
+Use the Small Team Advantage lens: AI should help the business operate with
+more clarity and less drag, not add a pile of tools that nobody owns.
 
 ## Source-Backed Internal Language
 

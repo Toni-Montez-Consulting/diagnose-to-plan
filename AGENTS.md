@@ -170,6 +170,12 @@ carry forward until Toni agrees the shape is complete. Update it when Toni
 answers a question or when a decision changes. Do not make Toni re-list prior
 items from the same thread before continuing.
 
+For mixed strategy-plus-implementation threads, do not let the implementation
+plan, validation summary, or repo-state closeout replace the ledger. Keep the
+Remaining Locks Ledger visible through execution and final response. If
+unresolved strategic locks remain, show the next clarifying questions; if no
+question is blocking execution, say that explicitly before continuing.
+
 Blocking questions are only for:
 
 - safety

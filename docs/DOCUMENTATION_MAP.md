@@ -104,9 +104,24 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
   for read-only research-signal classification, evidence limits, Research Arm
   artifact recommendations, and public-claim gates. Use it with
   `dtp research steward`.
+- `practice-os/agents/business-pattern-steward.md`: internal business-agent
+  role spec for learning from firms, industries, markets, operating models, and
+  innovation moves, then extracting reusable operator/business patterns under
+  review.
 - `docs/WORKSPACE_OPERATOR_RUNBOOK.md`: safe cross-repo operator runbook. It names command classes, repo roles, verification paths, package managers, deploy ownership, and no-touch boundaries without authorizing a live command runner.
 - `docs/PUBLIC_PROOF_PROMOTION_RUNBOOK.md`: public proof movement path. It reuses the existing proof/redaction templates and blocks public claims until evidence, permission, redaction, reviewer, and caveat gates pass.
 - `docs/PRACTICE_PROOF_QUEUE_INDEX.md`: active proof-candidate queue across CCAAP, Omnexus, DeMario, Hub/intake, Architected Strength, consulting assistant, Business Brain, and DSE. Use it before deciding what proof can move next.
+- `practice-os/proof-packets/demario-consulting-proof-prep-2026-05-10.md`:
+  prepared proof brief for the first narrow DeMario consulting-site proof-card
+  upgrade. It allows public-safe local-business implementation language while
+  keeping screenshots, testimonials, metrics, private admin data, booking rows,
+  payment proof, and full case-study treatment gated.
+- `practice-os/proof-packets/demario-homepage-card-public-claim-review-2026-05-10.md`
+  and
+  `practice-os/proof-packets/demario-homepage-card-copy-authenticity-audit-2026-05-10.md`:
+  approved exact DeMario homepage proof-card wording only. Use them before any
+  future edit to that card; do not treat them as approval for a case-study page,
+  screenshots, testimonials, metrics, private admin material, or payment proof.
 - `docs/PRACTICE_THESIS_AND_OFFER_MAP.md`: internal one-page practice thesis
   and offer map. Use it before deciding which client/operator loop proves which
   offer lane or before translating offer language into `consulting`.
@@ -138,6 +153,10 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
 - `docs/PRACTICE_HOMEPAGE_START_AND_BLUEPRINT_COPY_LOCK.md`: locked internal
   source for the next consulting homepage, `/start`, proof-card, and Blueprint
   copy pass. Use before implementing public offer copy.
+- `docs/PRACTICE_HOMEPAGE_SMALL_TEAM_ADVANTAGE_COPY_BRIEF.md`: internal
+  public-copy brief for adding the Small Team Advantage / "why now" section to
+  the next consulting homepage copy pass without replacing the hero or turning
+  the site into generic AI-consultancy copy.
 - `practice-os/templates/business-systems-blueprint.md`: reusable paid
   Blueprint template and source for a future public-safe sample artifact.
 - `practice-os/templates/remaining-locks-ledger.md`: collaboration pattern for
@@ -149,6 +168,10 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
 - `practice-os/templates/research-pattern-candidate.md`: Research Arm companion
   template for converting research signals, field notes, and business
   observations into reusable consulting pattern candidates.
+- `practice-os/templates/business-pattern-candidate.md`: Business Pattern
+  Steward template for testing whether a firm, industry, founder, consultancy,
+  infrastructure, or market observation contains a transferable business lesson
+  for Toni's practice.
 - `practice-os/templates/research-decision-record.md`: simple adopt, pilot,
   watch, reject, or park record for source-backed research decisions.
 - `practice-os/templates/research-source-freshness-item.md`: promoted reviewed
@@ -171,6 +194,14 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
 - `practice-os/comms/private/messaging-knowledge-base-2026-05-10.md`: internal
   messaging knowledge base for owner-bottleneck language, short pitch variants,
   claims/metaphor candidates, and visual seeds before any public-copy gate.
+- `practice-os/comms/private/local-service-owner-narrative-2026-05-10.md`:
+  internal local-service owner narrative primer. Use it before turning the
+  fictional local service composite into Northline Blueprint sample language,
+  `/start` triage language, homepage copy, or client education.
+- `practice-os/comms/private/small-team-advantage-positioning-memo-2026-05-10.md`:
+  internal belief-pillar memo for the Small Team Advantage positioning idea.
+  Use it before adding a "why now" section, content theme, AI Upgrade Audit
+  language, or public-copy candidates around small-team leverage.
 - `practice-os/comms/private/external-communications-source-policy-pilot-2026-05-10.md`:
   internal draft-only communication pilot for translating reviewed AI/platform
   and consulting/business source evidence into prospect, executive, and
@@ -468,6 +499,10 @@ Do not update `hub-prompts` or `hub-registry` just because the roadmap changes. 
 - Use `practice-os/templates/activation-routing-map.md` when skill triggers, templates, roadmap lanes, proof gates, COI gates, research/eval artifacts, or repo touch lanes need prompt-based routing.
 - Use `practice-os/templates/research-pattern-candidate.md` when a research signal, field note, or business observation needs to become a reusable consulting pattern candidate instead of a one-off summary.
 - Use `docs/BUSINESS_BRAIN_OPERATING_SYSTEM.md` and `practice-os/commands/` when the prompt asks for Business Brain, Consulting OS, business agents, practice comms, diagnose-prospect, COI, proposal, or operator-handoff work.
+- Use `practice-os/agents/business-pattern-steward.md` when a prompt mentions a
+  business agent, firm/industry lessons, innovation patterns, business-model
+  patterns, infrastructure narratives, or translating how other companies do
+  business into internal practice learning.
 - Use `docs/PRACTICE_INTELLIGENCE_CONTROL_PLANE.md` at the start of broad work blocks that combine clients, repos, Notion, Gmail, Calendar, QuickBooks ideas, public assistant planning, memory, or tooling decisions. It tells future agents how to rehydrate, route inputs, choose artifacts, and avoid unsafe action.
 - Use `practice-os/templates/agentic-performance-gap-review.md` when a prompt, session, skill change, research adoption, or roadmap move reveals a possible agentic performance gap.
 - Use `docs/CONTEXTUAL_ACTIVATION_PLAYBOOK.md` and `practice-os/templates/contextual-idea-intake.md` when a new idea, design, business move, development enhancement, project request, or automation concept needs classification before implementation.

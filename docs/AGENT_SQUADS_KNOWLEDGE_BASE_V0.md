@@ -88,6 +88,7 @@ Current DTP-owned role specs live in `practice-os/agents/`:
 
 | Role | Primary Use | Status |
 |---|---|---|
+| Business Pattern Steward | internal business-agent lane for learning from firms, industries, operating models, infrastructure moves, and innovation patterns, then extracting reusable operator/business lessons under review | draft |
 | Consulting Strategy | practice positioning, offer logic, buyer fit, scope shape, pricing posture, value case, proof posture, and proposal framing | draft |
 | Controller | financial summaries, weekly/monthly close inputs, pipeline arithmetic, and operating metrics | draft |
 | COO | operating rhythm, meeting prep, engagement runbooks, handoffs, and install plans | draft |
@@ -138,6 +139,7 @@ read-only, draft-only, supervised, scheduled, or bounded autonomous behavior.
 The first wave is now intentionally broad enough to pilot:
 
 - Consulting Strategy
+- Business Pattern Steward
 - External Communications
 - Product Strategy
 - UX / Design
@@ -159,7 +161,11 @@ Do not add more roles by default in V0. Memory Steward was added because Toni
 explicitly chose it as the first more active assistant behavior after the
 Practice Evolution dashboard. Research Steward was added next because the
 Research Arm already had repeated source signals, templates, digests, and
-pattern candidates that needed a read-only recommendation layer. Run these
+pattern candidates that needed a read-only recommendation layer. Business
+Pattern Steward was added because Toni identified a repeated workflow that did
+not cleanly fit research alone: learn from how firms, industries, infrastructure
+providers, consultancies, and operators do business, then extract reusable
+business patterns for the practice. Run these
 roles against real work first: client emails, Greg/Cam deliverables, consulting
 site changes, Hub intake, Omnexus proof/release gates, research digests, and
 practice operating decisions. Add another new role only when a real repeated

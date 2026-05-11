@@ -38,6 +38,28 @@ That means the consulting value is not a strategy deck. Toni clarifies the
 business problem, defines the value, maps the workflow, chooses the right
 technology/AI path, and then builds or implements working assets.
 
+## 2026-05-10 Sequencing Decision
+
+Move the public practice in this order:
+
+1. Client clarity: make `/start` explain what the Fit Call decides and why a
+   Blueprint, implementation scope, advisory path, simpler fix, or pause can all
+   be legitimate outcomes.
+2. Proof preparation: refine DeMario first as the clearest public-safe local
+   business implementation lane, while keeping all owner/admin/payment/booking
+   data, screenshots, testimonials, and metrics gated unless separately
+   reviewed.
+3. Offer conversion: tighten offer language only after the visitor path and
+   proof posture are easier to understand.
+
+Small Team Advantage remains a supporting "why now" pillar. It should not
+replace the builder-led implementation thesis.
+
+The private DTP/agent-squad/research machinery should stay private. Public copy
+may show the discipline behind the work through principles, evidence gates,
+handoff quality, and owner-operable outcomes, but not through internal
+templates, source-pack mechanics, or role recipes.
+
 ## Locked Homepage Spine
 
 Tone:
@@ -66,12 +88,18 @@ Primary CTA:
 Homepage section order:
 
 1. Hero: thesis and broad CTA.
-2. Three public doors: Clarify The Path, Build The System, Improve The System.
-3. Blueprint bridge: how unclear work becomes a plan.
-4. Implementation promise: working assets, not a deck dead-end.
-5. Proof: named projects mapped to proof types.
-6. Fit filter: who this is for and not for.
-7. Final CTA: Start With a Fit Call.
+2. Why now: Small Team Advantage, framed as small-team leverage plus
+   judgment-before-tools.
+3. Three public doors: Clarify The Path, Build The System, Improve The System.
+4. Blueprint bridge: how unclear work becomes a plan.
+5. Implementation promise: working assets, not a deck dead-end.
+6. Proof: named projects mapped to proof types.
+7. Fit filter: who this is for and not for.
+8. Final CTA: Start With a Fit Call.
+
+Use `docs/PRACTICE_HOMEPAGE_SMALL_TEAM_ADVANTAGE_COPY_BRIEF.md` as the source
+for the "why now" section. Keep "Small Team Advantage" as the internal pillar
+name unless Toni explicitly approves it as a public heading.
 
 ## Why This Sequence
 
@@ -191,6 +219,17 @@ Do not optimize the public offer for:
 - businesses with no seriousness, budget, urgency, or promise.
 
 ## Proof Stack
+
+Current proof movement priority:
+
+1. DeMario/Mario as the first lane to prepare for public-safe clarity because
+   local business implementation is concrete and easy for prospects to
+   understand.
+2. Omnexus as deeper product/platform proof once the app-review, billing,
+   release, and privacy caveats are safely separated.
+3. Toni's own consulting/DTP operating system as method proof at the principle
+   level, not as exposed internal machinery.
+4. AI/ML work and founder/operator background as supporting credibility.
 
 Current proof comfort, from strongest to supporting:
 

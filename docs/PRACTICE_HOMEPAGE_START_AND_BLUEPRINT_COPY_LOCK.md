@@ -26,6 +26,9 @@ This is not live site copy yet. It is the approved working shape from the
 | Bad-fit and voice | locked | Operator-polished builder/advisor. Filter cheap websites, random automations, chatbot-only requests, vague strategy-only work, and unserious prospects. |
 | Blueprint credit | locked | Public copy should say Blueprint is a paid diagnostic and the fee is credited toward an approved implementation SOW when the work moves forward in the same or similar scope within the agreed window. |
 | Fast Track framing | locked | Public copy should frame Fast Track as contained implementation where the goal, assets, and next step are clear, not as a cheap or budget tier. |
+| Small Team Advantage / Why Now section | implemented 2026-05-10 | Added a supporting "why now" section after the hero and before the three public doors in `consulting/src/pages/index.astro`. Use `docs/PRACTICE_HOMEPAGE_SMALL_TEAM_ADVANTAGE_COPY_BRIEF.md` before future refinements. |
+| Client clarity before proof/conversion | locked 2026-05-10 | Move next through `/start` clarity first, DeMario public-safe proof preparation second, and offer-conversion tightening third. |
+| Private method visibility | locked 2026-05-10 | Public surfaces may show discipline, principles, gates, and handoff outcomes. Do not expose the internal squad/research/source-pack machinery as public recipe copy. |
 
 ## Homepage Source Draft
 
@@ -45,6 +48,26 @@ Primary CTA:
 Secondary CTA:
 
 > See How The Work Starts
+
+### Why Now / Small Team Advantage
+
+Recommended placement: directly after the hero and before the three public
+doors.
+
+Recommended heading:
+
+**Small teams have more leverage than ever.**
+
+AI, cloud tools, APIs, and modern app workflows make it possible to build
+systems that used to require a bigger team. But leverage does not come from
+adding more tools. It comes from knowing what to build first, what to leave
+alone, and how to turn the work into something the business can actually run.
+
+That is where I help: clarify the bottleneck, sequence the work, build the
+useful version, and hand it off cleanly.
+
+Use `docs/PRACTICE_HOMEPAGE_SMALL_TEAM_ADVANTAGE_COPY_BRIEF.md` as the source
+for alternate copy, public boundaries, and implementation guidance.
 
 ### Three Doors
 
@@ -165,6 +188,13 @@ It should answer:
 
 > Tell me what you're trying to move, what's stuck, and whether this is worth a
 > serious conversation.
+
+Latest decision: `/start` is the client-clarity surface before stronger proof
+or conversion work. It should help the visitor understand what the Fit Call
+decides: whether the next move is a Blueprint, Fast Track implementation,
+Custom Implementation SOW, advisory path, simpler fix, or deliberate pause.
+The page should make "not building yet" feel like legitimate professional
+judgment, not a failure to sell.
 
 Use these questions:
 
