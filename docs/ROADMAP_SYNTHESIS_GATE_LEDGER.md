@@ -17,7 +17,7 @@ activating them as build work.
 | Candidate | Why important | Blocked until | Allowed next action |
 |---|---|---|---|
 | CCAAP first public proof packet | clearest client operating-kit pilot | Leah/Tony inputs, permission, assets, redaction, reviewer, proof caveat | wait, then create asset inventory and proof packet |
-| Hub PR #68 Tailwind migration | visible Hub dependency blocker | Hub-local validation and targeted migration/fix plan | use `hub/docs/PR68_TAILWIND4_MIGRATION_PLAN.md` |
+| Hub PRs #77/#78 dependency blockers | current Hub runtime-maintenance blockers after #74/#75/#76 merged | Hub-local validation and targeted framework/Tailwind fix pass | keep blocked until a focused Hub branch reproduces and clears failing gates |
 | Azure Readiness Kit extraction | strong signal-to-action product lane | COI-aware scope, live repo validation, permission, redaction, reviewer | keep DSE boundary-level only; use tm-skills acceptance criteria for reusable skills |
 | AI Gateway Cost Control Pack | potentially useful Foundry/runtime governance offer | clear buyer, proof, product boundary, and Azure skill foundation | park as future discovery; do not present as public offer or implementation |
 | Hosted DTP normal-workflow promotion | private records could reduce manual friction | one more real operating loop with markdown fallback, backup/export, RLS, private-data rules | repeat a real loop, record friction, then decide |

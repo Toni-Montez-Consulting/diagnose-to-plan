@@ -329,7 +329,7 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
 - `docs/CUSTOM_INTERFACE_CRAFT_STANDARD.md`: hard practice-wide rule for fully custom authored UI work across public sites, apps, admin portals, proof surfaces, and assistant-facing interfaces. Use it before broad UI implementation or reference promotion.
 - `docs/CONTEXTUAL_ACTIVATION_PLAYBOOK.md`: idea-to-roadmap routing contract for classifying new ideas, designs, development enhancements, project work, business moves, proof candidates, research items, and automation concepts.
 - `docs/ROADMAP_EXECUTION_BACKLOG.md`: Kanban-style epic/story execution view for the roadmap, with status, Done gates, and next actions.
-- `docs/ROADMAP_SYNTHESIS_GATE_LEDGER.md`: gate ledger for blocked/speculative synthesis candidates, including CCAAP public proof, Hub PR #68, Azure readiness extraction, Hosted DTP promotion, manual availability, Architected Strength assistant pattern, and FAOS revisit.
+- `docs/ROADMAP_SYNTHESIS_GATE_LEDGER.md`: gate ledger for blocked/speculative synthesis candidates, including CCAAP public proof, current Hub dependency blockers, Azure readiness extraction, Hosted DTP promotion, manual availability, Architected Strength assistant pattern, and FAOS revisit.
 - `docs/ROADMAP_STORY_ACTIVATION_INDEX.md`: story-to-skill/template/agent routing index for the Kanban backlog; use it when a roadmap story needs the right activation path.
 - `docs/CROSS_SITE_ASSISTANT_ARCHITECTURE_BRIEF.md`: governed cross-site assistant pattern for public website assistants and authenticated admin/operator assistants. Read before implementing any chatbot, assistant widget, private retrieval, admin helper, or assistant gateway.
 - `docs/assistant-manifests/consulting-public-v0.md`: first public assistant pilot manifest for the consulting site. It names approved public route sources, blocked private sources, handoff route, refusal rules, logging/analytics boundary, and launch gate without authorizing implementation.
@@ -352,7 +352,7 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
 - `practice-os/templates/engineering-readiness-receipt.md`: repo/project checkpoint receipt for branch, commit SHA, worktree state, commands, results, security/dependency notes, manual QA, known issues, owner decision, and next action.
 - `practice-os/templates/live-intake-receipt.md`: repeatable receipt for human-approved live consulting-to-Hub intake smokes, Hub row verification, test-record cleanup, and proof boundary notes.
 - `practice-os/templates/prospect-intake-triage.md`: DTP triage template for summarizing a real or synthetic prospect intake, choosing a fit/offer route, selecting the next Practice OS artifact, and recording follow-up approval gates without copying raw Hub rows into tracked docs.
-- `docs/PROSPECT_FOLLOW_UP_DRAFTING_PLAYBOOK_V0.md`: draft-only follow-up playbook for turning prospect triage into Diagnostic Call, paid Blueprint, or park/decline messages while preserving send, pricing, proof, calendar, and private-data approval gates. It locks the public booking-link policy: intake first, then approved Diagnostic Call link after submission when configured.
+- `docs/PROSPECT_FOLLOW_UP_DRAFTING_PLAYBOOK_V0.md`: draft-only follow-up playbook for turning prospect triage into Diagnostic Call, paid Blueprint, or park/decline messages while preserving send, pricing, proof, calendar, and private-data approval gates. It locks the public booking-link policy: intake first, then the approved Diagnostic Call link after submission.
 - `practice-os/templates/prospect-fit-call-follow-up.md`: prospect follow-up template for a reviewable Diagnostic Call or advisory conversation draft; it keeps `fit-call` as the internal route value for now.
 - `practice-os/templates/prospect-paid-blueprint-follow-up.md`: prospect follow-up template for a reviewable paid Blueprint diagnostic draft without exact pricing unless approved.
 - `practice-os/templates/prospect-park-or-decline-follow-up.md`: prospect follow-up template for a respectful no-build-yet, parked, or bad-fit draft.
@@ -421,7 +421,7 @@ The Hub repo owns runtime support for intake, private console records, Supabase 
 - `docs/PRACTICE_OS_RUNTIME_READINESS.md`: Hub-local readiness note for Practice
   OS runtime support, preserving Hub as intake/runtime support rather than DTP
   source truth.
-- `docs/PR68_TAILWIND4_MIGRATION_PLAN.md`: targeted plan for the parked Tailwind 4 dependency PR; use before reopening or replacing Hub PR #68.
+- `docs/PR68_TAILWIND4_MIGRATION_PLAN.md`: historical targeted plan for the old parked Tailwind 4 dependency PR. The current visible Hub dependency blockers are PR #77 and PR #78; use this plan as background only when reopening Tailwind work.
 - `docs/PLAYBOOK.md`: pointer to the external engineering playbook.
 - `docs/audit-2026-04-22.md` and `docs/audits/`: historical Hub audit surfaces and backlog context.
 
