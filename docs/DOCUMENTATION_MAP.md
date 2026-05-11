@@ -351,6 +351,10 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
 - `practice-os/templates/engineering-readiness-receipt.md`: repo/project checkpoint receipt for branch, commit SHA, worktree state, commands, results, security/dependency notes, manual QA, known issues, owner decision, and next action.
 - `practice-os/templates/live-intake-receipt.md`: repeatable receipt for human-approved live consulting-to-Hub intake smokes, Hub row verification, test-record cleanup, and proof boundary notes.
 - `practice-os/templates/prospect-intake-triage.md`: DTP triage template for summarizing a real or synthetic prospect intake, choosing a fit/offer route, selecting the next Practice OS artifact, and recording follow-up approval gates without copying raw Hub rows into tracked docs.
+- `docs/PROSPECT_FOLLOW_UP_DRAFTING_PLAYBOOK_V0.md`: draft-only follow-up playbook for turning prospect triage into fit-call, paid Blueprint, or park/decline messages while preserving send, pricing, proof, calendar, and private-data approval gates.
+- `practice-os/templates/prospect-fit-call-follow-up.md`: prospect follow-up template for a reviewable fit-call or advisory conversation draft.
+- `practice-os/templates/prospect-paid-blueprint-follow-up.md`: prospect follow-up template for a reviewable paid Blueprint diagnostic draft without exact pricing unless approved.
+- `practice-os/templates/prospect-park-or-decline-follow-up.md`: prospect follow-up template for a respectful no-build-yet, parked, or bad-fit draft.
 - `practice-os/templates/business-admin-item.md`: reusable item contract for business/admin overhead lanes.
 - `practice-os/templates/calendar-policy.md`: reusable policy surface for external meeting identity, Google Meet defaults, timezone, approval, and connector gates.
 - `practice-os/templates/offer-catalog-item.md`: reusable offer-candidate contract for turning real delivery patterns into internal catalog entries before public promotion.

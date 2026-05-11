@@ -884,3 +884,40 @@ Next review trigger:
 - Three intakes use the triage template.
 - Toni asks to connect Gmail, Calendar, Notion, Hub console triage status, or
   hosted DTP records to the workflow.
+
+## 2026-05-11: Prospect Follow-Up Drafting Kit Added
+
+Source:
+
+- `docs/PROSPECT_FOLLOW_UP_DRAFTING_PLAYBOOK_V0.md`
+- `practice-os/templates/prospect-fit-call-follow-up.md`
+- `practice-os/templates/prospect-paid-blueprint-follow-up.md`
+- `practice-os/templates/prospect-park-or-decline-follow-up.md`
+- `practice-os/steward/2026-05-11-prospect-follow-up-drafting-kit-receipt.md`
+
+Change:
+
+- Added a draft-only follow-up playbook for converting prospect intake triage
+  into reviewable external messages.
+- Added first-class templates for fit-call, paid Blueprint, and
+  no-build-yet/parked/bad-fit follow-up routes.
+- Updated roadmap, documentation map, live-intake workflow, and control-plane
+  routing so follow-up drafting stays connected to DTP triage and approval
+  gates.
+
+Priority impact:
+
+1. The next real prospect intake can now move from Hub record to DTP triage to
+   a reviewable draft without relying on chat memory.
+2. The practice has a clearer first-response loop without adding CRM behavior,
+   auto-send, exact pricing, calendar actions, public proof, or hosted-DTP
+   expansion.
+3. Fast Track follow-up language should wait for a real small-scope intake
+   before becoming a template.
+
+Next review trigger:
+
+- A real prospect intake uses the follow-up kit.
+- Toni approves or rejects the default Blueprint language.
+- Two or three real drafts reveal repeated missing routes, examples, or
+  status fields.
