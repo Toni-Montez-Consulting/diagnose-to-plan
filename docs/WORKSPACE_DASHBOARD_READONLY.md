@@ -260,7 +260,7 @@ button. Keep DTP as the source of truth.
 |---|---|---|---|---|
 | `diagnose-to-plan` | Practice OS source of truth | source docs, templates, Kaizen, workspace report, proof queue active | keep roadmap/proof queue current | no private raw engagement material in public repo |
 | `consulting` | public storefront and proof surface | share-ready path plus assistant QA and qualification pass | build, route smoke, doctor, matrix, manual visual QA | Hub endpoint proof and proof-gated assets |
-| `hub` | runtime/intake support | manifests and evidence exist; PR #68 visible blocker | use docs-only Tailwind 4 plan before code | runtime validation and PR-local checks |
+| `hub` | runtime/intake support | manifests and evidence exist; PRs #77/#78 visible blockers after #74/#75/#76 merged | run a focused Hub-local framework/Tailwind fix pass before merge | runtime validation and PR-local checks |
 | `ccaap-site` | client launch/proof candidate | waiting owner inputs | collect PayPal/contact/DNS/assets/review/proof decision | permission, redaction, owner approval |
 | `fitness-app` / Omnexus | mobile launch proof candidate | strong internal evidence | review proof candidates privately | privacy, billing, app/user-data caveats |
 | `demario-pickleball-1` | command-room proof candidate | owner-safe launch/admin reference | proof only after owner permission and redaction | private admin/booking/payment data |

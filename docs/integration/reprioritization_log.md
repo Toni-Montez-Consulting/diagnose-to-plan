@@ -955,3 +955,38 @@ Next review trigger:
 - Toni wants the booking link hidden behind manual review.
 - The internal route vocabulary becomes confusing enough to justify renaming
   `fit-call` files and route values.
+
+## 2026-05-11: Live Funnel Closeout And Hub Dependency Triage
+
+Source:
+
+- `practice-os/steward/2026-05-11-live-funnel-closeout-receipt.md`
+- `practice-os/efficiency/consulting-evidence-index.md`
+- `practice-os/efficiency/hub-evidence-index.md`
+- `docs/ROADMAP_EXECUTION_BACKLOG.md`
+
+Change:
+
+- Confirmed the approved Diagnostic Call booking link is live only after
+  `/start` intake submission.
+- Submitted one browser-based synthetic production intake through
+  `https://tonimontez.co/start`.
+- Verified the matching Hub row through the protected dashboard by summarized
+  fields only.
+- Recorded that Hub still lacks intake archive/delete support.
+- Merged green Hub dependency PRs #74, #75, and #76; kept PRs #77 and #78
+  blocked because build/typecheck gates fail.
+
+Priority impact:
+
+1. Future agents should not reopen booking-link configuration as pending work.
+2. The live buyer path is proved enough to move the remaining consulting gate
+   to visual/taste QA and real prospect learning.
+3. Hub dependency maintenance stays separate from consulting/DTP proof and
+   public-site strategy.
+
+Next review trigger:
+
+- A real prospect submits intake or books through the Diagnostic Call link.
+- Toni decides intake cleanup automation is worth a Hub runtime change.
+- Hub PR #77 or #78 is explicitly reopened for a targeted fix pass.

@@ -71,7 +71,8 @@ Hub into a CRM or copying raw private rows into tracked docs.
 `docs/PROSPECT_FOLLOW_UP_DRAFTING_PLAYBOOK_V0.md` and the prospect follow-up
 templates extend that loop into draft-only Diagnostic Call, paid Blueprint, and
 park/decline responses. The public booking path is intake first, then approved
-Diagnostic Call link after submission when configured; no auto-send, pricing,
+Diagnostic Call link after submission. The approved Google Calendar Diagnostic
+Call URL is live in production as of 2026-05-11; no auto-send, pricing,
 calendar event creation, proof, or production authority is added.
 
 The Practice OS thesis/spec/schema source material is preserved in
@@ -183,8 +184,14 @@ The Practice System Documentation Pack is the architecture and audit layer for t
 
 - `tonimontez.co` is the public storefront/proof surface.
 - `/start` is the high-intent diagnostic path.
+- Production `/start` is configured with Hub-first intake plus the approved
+  post-submit Diagnostic Call booking URL.
 - `/admin` is a noindex public-safe command room and launcher for Hub/DTP links; it does not render private records.
 - Public proof is currently framed around Omnexus, SuperKart, AI/ML work, and redacted/private-boundary artifacts.
+- Live-funnel evidence has a 2026-05-11 receipt: normal `/start` hides the
+  booking CTA, post-submit shows the approved booking CTA, and Hub verified the
+  synthetic intake row by summarized fields only. Hub still lacks an intake
+  archive/delete tool, so cleanup remains a recorded limitation.
 - The main remaining gap is proof maturity: real/redacted source material and receipt-style case-study packets.
 
 ### Hub
@@ -192,6 +199,9 @@ The Practice System Documentation Pack is the architecture and audit layer for t
 - Hub is the private Vercel/Supabase runtime for intake, admin console records, captures, runs, briefings, projects, prompts, and webhook receipts.
 - Consulting intake routes into Hub through `PUBLIC_CONSULTING_INTAKE_ENDPOINT`.
 - Hub owns runtime records and operator review, not DTP engagement kits.
+- 2026-05-11 dependency triage merged green PRs #74, #75, and #76; PRs #77
+  and #78 remain open because build/typecheck gates fail and need a targeted
+  Hub-local fix pass.
 - Hub should not become the DTP cockpit, CRM, billing surface, client portal, or generalized project management app unless the manual process proves a real bottleneck.
 
 ### tm-skills

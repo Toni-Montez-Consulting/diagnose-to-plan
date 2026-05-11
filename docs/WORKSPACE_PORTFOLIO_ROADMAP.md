@@ -1016,7 +1016,7 @@ Preflight: use the Practice System Documentation Pack as the current/future/audi
 6. Use Notion Mirror V0 as the phone cockpit/inbox for waiting-on items, but run steward triage before DTP source-of-truth changes.
 7. Use consulting as the first governed public assistant pilot and keep Architected Strength as a later assistant-pattern candidate; do not migrate Architected Strength into consulting.
 8. Keep the cross-site assistant lane at architecture/manifest level until the consulting public manifest, source corpus, refusal policy, analytics/logging plan, and handoff route are accepted.
-9. Keep Hub dependency PRs #54/#56/#61 parked until one is explicitly selected with a migration/security plan; PRs #59 and #55 no longer block the queue. Older PR #52 is no longer in the active visible queue.
+9. Keep Hub dependency PRs #77/#78 parked until a focused Hub-local framework/Tailwind fix pass reproduces and clears the failing gates; PRs #74/#75/#76 are merged and older PR #68 is superseded as a visible blocker.
 10. Keep Hub prompt/registry cross-validation local-first; decide private sibling-repo CI access only if it becomes worth the operational cost.
 11. Keep repo manifests current as touched lanes change; DTP, consulting, Architected Strength, Hub, `hub-prompts`, `hub-registry`, `tm-skills`, DeMario, CCAAP, FamilyTrips, engineering-playbook, and `fitness-app` / Omnexus now have manifests/evidence indexes.
 12. Run the next adjacent-project touch pass only when its trigger is ready; `dse-content` remains excluded unless explicitly selected with COI-aware scope.

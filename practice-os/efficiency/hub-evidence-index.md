@@ -11,14 +11,16 @@ review_status: draft
 
 - Name: `hub`
 - Branch: `main`
-- Last updated: 2026-05-06
-- Reviewer: Consulting live intake smoke pass
+- Last updated: 2026-05-11
+- Reviewer: Live funnel closeout and dependency triage pass
 
 ## Latest Verification
 
 | Lane | Date | Result | Commit | Artifact |
 |---|---|---|---|---|
 | local | 2026-05-03 | pass | current branch | `.prettierignore` now excludes `supabase/.temp/`; `pnpm verify` passed end to end: Prettier check, ESLint, build, typecheck, and tests |
+| dependency | 2026-05-11 | pass | `d8478c6` | Hub PRs #74, #75, and #76 merged after remote CI/security checks passed; local `hub/main` fast-forwarded cleanly to `origin/main` |
+| support | 2026-05-11 | passed_with_notes | live production | Browser consulting intake smoke created synthetic row `DTP live intake smoke 20260511T131132Z`; protected Hub dashboard verified row suffix `165e0a8e`, source `tonimontez.co`, triage version `practice-start-v1`, and status `new` by summarized fields only |
 | support | 2026-05-06 | passed_with_notes | live production | Synthetic consulting intake POST returned `ok: true`; Hub dashboard verified the matching intake row by summarized fields. Receipt: `practice-os/steward/2026-05-06-consulting-live-intake-receipt.md` |
 | local | 2026-04-30 | pass | cross-repo prompt lane | `hub-prompts npm test`; `hub-registry npm run validate`, `npm run validate:manifests`, `npm run validate:prompt-ids`, `npm test`; negative missing-id check failed as expected |
 | CI | 2026-04-30 | pass | `ded15ad` | `ci` run `25167610722`; `security` run `25167610677`; `CodeQL` run `25167609842` |
@@ -39,7 +41,7 @@ review_status: draft
 
 - Prompt id cross-validation is implemented as a local workspace gate in `hub-registry`; repo-scoped CI remains intentionally thin.
 - Full portfolio manifest and prompt-id validation are local-only until CI has explicit safe access to private sibling repos.
-- Dependabot PRs #59 and #55 are merged. PR #56 remains parked as a separate OpenAI 6.x migration review; PRs #54 and #61 remain parked until their failing gates are debugged intentionally. Older PR #52 is no longer in the active visible queue.
+- Dependabot PRs #59, #55, #74, #75, and #76 are merged. Current blocked PRs are #77 (`@hono/zod-openapi` 1.4.0, build-test failures) and #78 (Tailwind 4.3.0, typecheck/build-test failures). Do not merge either without a targeted Hub-local fix pass.
 - Live consulting intake smoke has a controlled receipt. Cleanup remains
   structural because Hub does not expose an intake archive/delete endpoint; the
   synthetic row is clearly labeled test data and no raw private row data is

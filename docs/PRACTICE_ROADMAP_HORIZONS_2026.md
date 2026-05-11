@@ -41,9 +41,9 @@ automation surfaces only when repeated manual pain proves the need.
 | CCAAP | waiting on owner inputs | wait; update private kit first if replies arrive | private-client; proof gated |
 | DeMario social/proof prep | posted from Toni-owned LinkedIn and Instagram channels with exact public URLs recorded | keep private screenshots, metrics, testimonials, booking/admin rows, payment proof, and student data gated | human-owned public communication; private screenshots/metrics remain gated |
 | Omnexus subscriptions | subscriptions now work in-app by Toni's 2026-05-07 operator confirmation | confirm the selected App Store Connect candidate build/version is `1.0.1`, then complete normal release/live-proof gates without changing IAP products or code | App Store Connect/manual proof first; code only if evidence shows runtime issue |
-| Consulting | share-ready/proof-maturity lane has `/start` qualification, no-widget assistant QA, merged readiness work, and a passed-with-notes live intake smoke | finish human desktop/mobile taste review; add Hub intake archive/delete only if cleanup automation is needed | public-safe only |
+| Consulting | share-ready/proof-maturity lane has `/start` qualification, no-widget assistant QA, merged readiness work, live post-submit Diagnostic Call URL, and a passed-with-notes browser intake smoke verified in Hub by summarized fields | finish human desktop/mobile taste review; add Hub intake archive/delete only if cleanup automation becomes worth it | public-safe only |
 | Architected Strength | P0/P1 public-signal finish pass merged in PR #3 with repo-local gates and visual QA | keep it as a personal-brand OS/reference candidate; reopen only for publishing, assistant-pattern, deploy, or proof work when those gates are explicit | personal-brand OS; no employer/private material |
-| Hub | PR #68 is the active visible dependency blocker and now has a targeted docs-only plan | execute Hub-local Tailwind 4 fix/migration plan only when activated | runtime support |
+| Hub | green dependency PRs #74, #75, and #76 are merged; PRs #77 and #78 are the active blocked dependency lane | execute targeted Hub-local fix passes only when activated; do not merge failing Hono/Tailwind PRs blindly | runtime support |
 | DSE | sensitive lane | do not touch without explicit COI-aware scope and live validation | COI-gated |
 
 ## Urgent: 1-7 Days
@@ -57,7 +57,8 @@ automation surfaces only when repeated manual pain proves the need.
   `dtp workspace report`.
 - Do not build around waiting states. CCAAP waits on owner inputs; Cam and Greg
   have accepted discovery/cadence signals but repo/proof movement stays gated;
-  DSE stays COI-gated; Hub PR #68 stays parked.
+  DSE stays COI-gated; Hub PRs #77 and #78 stay parked until a targeted
+  Hub-local fix pass.
 - Keep DeMario public proof to the posted, public-safe packet and recorded
   public URLs unless new permissioned proof arrives.
 - Keep Omnexus in release-proof mode: subscriptions now work in-app by Toni's
@@ -125,7 +126,7 @@ automation surfaces only when repeated manual pain proves the need.
 | Workspace report | optional live repo/PR adapters behind explicit read-only gates | V0 report is used often enough that live refresh saves time |
 | Engagement kits | better reply intake, owner-input trackers, proof readiness, private vault snapshots | private vault durability is settled |
 | Consulting | proof-backed offer pages, manual visual QA checklist, share-ready route matrix, noindex admin refinements | proof and offer language are source-backed |
-| Hub | runtime current-state clarity, intake health checks, prompt/registry validation, PR #68 plan | selected runtime bottleneck exists |
+| Hub | runtime current-state clarity, intake health checks, prompt/registry validation, blocked PRs #77/#78 fix pass | selected runtime bottleneck exists |
 | Hosted DTP | private records, export, evidence, redaction, review queues | markdown fallback becomes painful |
 
 ## Cadence

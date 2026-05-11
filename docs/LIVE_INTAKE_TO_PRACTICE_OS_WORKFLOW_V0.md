@@ -162,8 +162,8 @@ prospect-facing draft is needed.
 
 Public scheduling label: `Diagnostic Call`. The intake should do the first
 assessment; the call confirms the problem, constraints, trust fit, and next
-artifact. The public booking link can appear after intake submission when the
-approved URL is configured.
+artifact. The approved public booking link is configured in production as of
+2026-05-11 and should appear only after intake submission.
 
 Allowed next paths:
 
