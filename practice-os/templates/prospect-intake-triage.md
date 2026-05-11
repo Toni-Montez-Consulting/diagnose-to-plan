@@ -123,6 +123,8 @@ Options:
 
 - Recommended next message type: fit-call invite / clarifying questions /
   Blueprint pitch / parked note / decline note / other
+- Follow-up playbook: `docs/PROSPECT_FOLLOW_UP_DRAFTING_PLAYBOOK_V0.md`
+- Follow-up template path:
 - Draft needed:
 - Gmail draft allowed:
 - Calendar action allowed:

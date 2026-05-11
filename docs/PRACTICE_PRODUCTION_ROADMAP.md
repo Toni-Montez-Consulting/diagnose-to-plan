@@ -68,6 +68,10 @@ intake to operator action. It uses
 `tonimontez.co/start` submission stored by Hub into a fit decision, offer route,
 next Practice OS artifact, approval gate, and handoff receipt without turning
 Hub into a CRM or copying raw private rows into tracked docs.
+`docs/PROSPECT_FOLLOW_UP_DRAFTING_PLAYBOOK_V0.md` and the prospect follow-up
+templates extend that loop into draft-only fit-call, paid Blueprint, and
+park/decline responses without auto-send, pricing, calendar, proof, or
+production authority.
 
 The Practice OS thesis/spec/schema source material is preserved in
 `docs/source/` and `database/schema/` and integrated through
@@ -141,6 +145,10 @@ The Practice System Documentation Pack is the architecture and audit layer for t
 - Practice OS includes the Live Intake To Practice OS Workflow and Prospect
   Intake Triage template so a live Hub intake can become a fit/route/artifact
   decision without expanding Hub authority or depending on chat memory.
+- Practice OS includes a Prospect Follow-Up Drafting Playbook plus fit-call,
+  paid Blueprint, and park/decline templates so triaged prospect inquiries can
+  become reviewable drafts without auto-send, price, proof, calendar, or
+  production commitments.
 - Practice OS source material is preserved in canonical source paths, with
   source index, integration map, concept registry, conflict register,
   reprioritization log, source-material ADR, and schema reconciliation docs.

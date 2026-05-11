@@ -157,6 +157,9 @@ Choose one primary artifact. Do not create all of them by default.
 
 No message is sent automatically.
 
+Use `docs/PROSPECT_FOLLOW_UP_DRAFTING_PLAYBOOK_V0.md` after triage when a
+prospect-facing draft is needed.
+
 Allowed next paths:
 
 - draft a reply for Toni to review;
@@ -169,6 +172,14 @@ Allowed next paths:
 - decline politely.
 
 Every follow-up should name the next concrete decision, not just "let's chat."
+
+Default draft templates:
+
+| Follow-up path | Template |
+|---|---|
+| fit call / advisory conversation | `practice-os/templates/prospect-fit-call-follow-up.md` |
+| paid Blueprint / diagnostic path | `practice-os/templates/prospect-paid-blueprint-follow-up.md` |
+| no-build-yet / parked / bad-fit | `practice-os/templates/prospect-park-or-decline-follow-up.md` |
 
 ## Step 6: Capture Approval Gates
 
