@@ -91,6 +91,7 @@ Goal: make owner/operator command-room decisions repeatable without building por
 | Capture Client Command Room pattern | `diagnose-to-plan` | Done | pattern doc plus fit/spec templates exist and practice doctor passes | use on first pilot |
 | First Command Room fit assessment | `diagnose-to-plan` | Done | Mom nonprofit private kit has a completed fit assessment | handoff checklist first; revisit portal only if owner workflow pain is proven |
 | Owner call-to-action extraction | `diagnose-to-plan` | Done | reusable template plus Mom action packet and extraction ledger exist | use after owner calls before mutating project repos |
+| Live intake to Practice OS workflow | `diagnose-to-plan` | Done | DTP operating pattern and prospect-intake triage template explain how Hub intake becomes fit, offer-route, artifact, approval-gate, and handoff decisions | use on the next real prospect intake before expanding Hub, Notion, email, or hosted DTP behavior |
 | Admin-surface operating-room pattern | `diagnose-to-plan` | Done | `practice-os/patterns/admin-surface-operating-room.md` promotes the public-proof-outside/protected-operations-inside/handoff-record pattern | use with fit assessment before building portals |
 | Client Command Room implementation | candidate project repo | Later | fit assessment says build, owner workflow is real, support/evidence exists | keep optional |
 | Command-room proof packet | `consulting` plus source repo | Later | screenshots/walkthroughs redacted and permissioned | wait for real pilot |

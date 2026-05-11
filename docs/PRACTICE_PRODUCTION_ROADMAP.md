@@ -61,6 +61,14 @@ session rehydration and input routing. It uses
 ideas, proof claims, tool requests, assistant plans, finance/admin ideas, and
 memory candidates should land before any infrastructure expands.
 
+The Live Intake To Practice OS Workflow is the V0 bridge from working runtime
+intake to operator action. It uses
+`docs/LIVE_INTAKE_TO_PRACTICE_OS_WORKFLOW_V0.md` and
+`practice-os/templates/prospect-intake-triage.md` to turn a
+`tonimontez.co/start` submission stored by Hub into a fit decision, offer route,
+next Practice OS artifact, approval gate, and handoff receipt without turning
+Hub into a CRM or copying raw private rows into tracked docs.
+
 The Practice OS thesis/spec/schema source material is preserved in
 `docs/source/` and `database/schema/` and integrated through
 `docs/integration/`. It is additive source material, not an override of the
@@ -130,6 +138,9 @@ The Practice System Documentation Pack is the architecture and audit layer for t
 - Practice OS includes the Practice Intelligence Control Plane so broad
   client/infrastructure sessions can rehydrate from DTP, git, Gmail, Calendar,
   Notion, steward receipts, and active kit statuses before acting.
+- Practice OS includes the Live Intake To Practice OS Workflow and Prospect
+  Intake Triage template so a live Hub intake can become a fit/route/artifact
+  decision without expanding Hub authority or depending on chat memory.
 - Practice OS source material is preserved in canonical source paths, with
   source index, integration map, concept registry, conflict register,
   reprioritization log, source-material ADR, and schema reconciliation docs.

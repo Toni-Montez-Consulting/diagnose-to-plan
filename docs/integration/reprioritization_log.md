@@ -851,3 +851,36 @@ Next review trigger:
   subscriptions.
 - Hub gains an intake archive/delete path or Toni decides the labeled smoke row
   is acceptable as the cleanup boundary.
+
+## 2026-05-11: Live Intake Operator Workflow Added
+
+Source:
+
+- `docs/LIVE_INTAKE_TO_PRACTICE_OS_WORKFLOW_V0.md`
+- `practice-os/templates/prospect-intake-triage.md`
+- `practice-os/steward/2026-05-11-live-intake-operator-workflow-receipt.md`
+
+Change:
+
+- Added the DTP-owned workflow for turning a live `tonimontez.co/start`
+  submission stored in Hub into a fit decision, offer route, Practice OS
+  artifact, approval gate, and handoff receipt.
+- Added the reusable Prospect Intake Triage template.
+- Updated roadmap, docs map, and system architecture pointers so the workflow
+  is discoverable before future Hub, Notion, Gmail, or hosted-DTP expansion.
+
+Priority impact:
+
+1. Use the manual triage workflow on the next real prospect intake before
+   adding more runtime behavior.
+2. Keep Hub as runtime support and DTP as source of truth until repeated manual
+   friction proves a hosted or console enhancement is worth building.
+3. Treat client follow-up, public proof, production writes, and integration
+   expansion as separate approval-gated actions.
+
+Next review trigger:
+
+- A real prospect intake arrives.
+- Three intakes use the triage template.
+- Toni asks to connect Gmail, Calendar, Notion, Hub console triage status, or
+  hosted DTP records to the workflow.
