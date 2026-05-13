@@ -24,3 +24,6 @@ Initial pattern files:
 - `status-surface-before-scale.md` (internal operating pattern for making
   captured ideas, research signals, and agent/steward queues visible before
   scaling dashboards, mirrors, automation, or client-facing systems)
+- `surface-translation-standard.md` (draft pattern for translating internal
+  build notes, admin mechanics, and launch gates into audience-safe public,
+  editor, owner, and client-facing surfaces)

@@ -55,6 +55,8 @@ future agent.
 - Risk registers and open-question lists.
 - Engineering readiness receipts.
 - Agentic performance gap reviews when a process miss is identified.
+- Surface translation reviews when internal build notes, prototype language, or
+  agent instructions appear in public, owner-facing, or editor-facing surfaces.
 
 ## QA Standard
 
@@ -99,6 +101,10 @@ approval evidence by themselves.
 - Missing evidence is not always failure; decide whether it blocks this step or
   belongs in queued follow-up.
 - Repeated process misses become Agentic Performance Gap Review candidates.
+- Repeated surface-quality misses become reusable pattern updates. If the same
+  problem recurs, route it through
+  `practice-os/patterns/surface-translation-standard.md` or the local
+  `surface-translation-standard` skill.
 
 ## Tone Rules
 

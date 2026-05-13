@@ -35,6 +35,9 @@ advisor.
   review state.
 - Preserving internal-only status until a public/client/legal/proof gate is
   explicitly passed.
+- Capturing repeated operating improvements, including surface translation and
+  admin/editor workflow lessons, as reusable patterns instead of leaving them
+  stale in chat.
 
 ## Does Not Own
 
@@ -61,6 +64,9 @@ advisor.
 8. Keep the pattern internal until Toni approves promotion.
 9. Ask clarifying questions when the business implication is unclear, but do not
    stall obvious capture or review work.
+10. When a repeated fix improves a user-facing or owner-facing surface, check
+    whether `practice-os/patterns/surface-translation-standard.md` should be
+    referenced, updated, or promoted.
 
 ## Allowed Reads
 

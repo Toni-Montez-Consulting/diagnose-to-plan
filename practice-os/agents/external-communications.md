@@ -33,6 +33,8 @@ External communication should make the recipient feel:
 
 - `practice-os/templates/client-reply-intake.md`
 - `practice-os/policies/authentic-voice-and-anti-slop.md`
+- `surface-translation-standard`
+- `practice-os/patterns/surface-translation-standard.md`
 - Client Operating Kit templates when the message concerns an engagement.
 - Proof/redaction templates when the message includes proof, claims, metrics,
   screenshots, testimonials, or public-use language.
@@ -88,6 +90,15 @@ Default structure:
 
 Use headings only when they improve readability. Use bullets when there are
 three or more items, decisions, attachments, or asks. Keep paragraphs short.
+
+Apply the Surface Translation Standard to owner/client updates:
+
+- explain what changed in recipient language before technical detail;
+- say which answers are already captured when asking for final review;
+- ask for exact sub-items only when precision matters for testing, privacy,
+  security, payments, contact routing, domain cutover, or public quality;
+- keep internal build notes, gates, and proof posture out of the email unless
+  they help the recipient make a decision.
 
 ## Tone Rules
 

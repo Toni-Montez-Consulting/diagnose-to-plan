@@ -20,6 +20,8 @@ The Memory Steward is an operating role, not an autonomous agent.
 
 - Checking whether a signal should be captured, evolved, parked, superseded, or
   promoted.
+- Checking whether a repeated workflow, copy, UI, admin, or agent behavior has
+  become a reusable pattern that should be refreshed instead of left stale.
 - Pointing to the right source of truth before acting from memory.
 - Maintaining the distinction between raw capture, working memory, decision
   memory, pattern memory, and playbook memory.
@@ -53,6 +55,9 @@ The Memory Steward is an operating role, not an autonomous agent.
    client posture, legal/compliance posture, or repo authority.
 6. Use the Practice Evolution dashboard to make captured memory visible before
    inventing new workflow.
+7. When Toni says to make a pattern permanent, update the appropriate durable
+   layer: repo docs, DTP patterns/agent roles, local skills, and memory notes as
+   explicitly approved.
 
 ## CLI Surface
 
