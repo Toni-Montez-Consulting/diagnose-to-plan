@@ -19,6 +19,10 @@ The future system should feel like an operating cockpit for the practice:
   approval, and handoff queryable without replacing human gates.
 - The Roadmap Steward becomes progressively more automated only after the manual loop proves useful.
 - Notion becomes a mobile mirror and idea inbox for daily review, while DTP remains the operating source of truth.
+- CMS/editor tooling stays decision-led: Git, Sanity, Supabase, Payload,
+  Directus, Strapi, Tina, Decap, visual builders, enterprise headless CMS
+  tools, Notion, or custom admin surfaces are chosen per repo instead of
+  becoming a blanket workspace platform.
 - Site-scoped assistants become a governed public/admin pattern only after manifests, source corpora, privacy boundaries, refusal policies, analytics, and human handoff paths are accepted.
 - Self-learning stays supervised: lessons can propose evals, checklists, skills, and roadmap changes, but humans approve changes.
 - Mobile app review and launch journeys become reusable client-app launch packets only after source evidence is redacted and private reviewer/user data is excluded.
@@ -77,6 +81,7 @@ Target principles:
 | Decision | context, chosen path, alternatives, consequences, related engagement/artifact/evidence |
 | Steward item | active story, repo lane, blocker, gate, follow-up, status |
 | Research item | source, classification, relevance, risk, next review, linked story |
+| Editor tooling decision | repo/lane, owner persona, content types, public/private boundary, candidate tool, review/publish gate, cost/role status, and implementation posture |
 
 Out of scope for Phase 0:
 

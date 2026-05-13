@@ -57,6 +57,7 @@ Without a steward loop, the stack can drift into one of two bad states:
 | Browser / QA | Playwright, browser tools | Does this improve visible proof and regression confidence? |
 | Business finance | QuickBooks | Can this be read-only and summary-first without exposing sensitive financials? |
 | Design/proof | Canva, image tools, Figma | Does this produce permissioned, evidence-backed artifacts rather than generic assets? |
+| CMS / owner editing | Sanity, Payload, Directus, Strapi, Tina, Decap, Builder.io, Contentful, Hygraph, Webflow, Framer, Notion | Does this solve a real public-content editing workflow without moving private data, launch config, proof gates, or app state into the wrong source of truth? |
 | Data/runtime | Supabase, Hub, hosted DTP | Does this support real workflows without duplicating source-of-truth state? |
 | Research / docs | web search, Context7, official docs | Does this improve current technical decisions with primary/current sources? |
 | Agent infrastructure | MCP, skills, subagents, FAOS later | Is there enough repeated pain and eval coverage to justify more agency? |
@@ -96,6 +97,7 @@ Use one of these decisions:
 | Google Calendar | Useful for internal reset and confirmed meetings | `keep_active` with no client invite until confirmed |
 | GitHub/local git | Core repo execution surface | `keep_active` |
 | Canva/design tools | Potential visual/proof support | `research` before proof use |
+| Sanity / CMS-editor tooling | Useful for CCAAP updates/photos and possible future public-content workflows | `park` broadly; use `docs/CMS_EDITOR_TOOLING_DECISION_LADDER.md` before any new implementation |
 | QuickBooks | Future financial input | `blocked` until read-only connector boundary is accepted |
 | Hosted DTP | Future private operating app | `park` until real records justify implementation |
 | FAOS/agent substrate | Future orchestration candidate | `park` until readiness review/evals exist |

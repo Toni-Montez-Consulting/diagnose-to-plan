@@ -201,6 +201,11 @@ Near-term work:
   live-intake evidence without expanding authority.
 - `tm-skills`: run doctor/freshness/install preview, classify untracked skill
   candidates, and keep external smoke manual until reloads are observed.
+- CMS/editor tooling: keep `docs/CMS_EDITOR_TOOLING_DECISION_LADDER.md` as the
+  planning-only route for Sanity/CMS/owner-editor/page-builder decisions.
+  CCAAP is the first proof of need; do not create a reusable skill or broader
+  implementation lane until at least one more project shows the same repeated
+  owner-editing pattern.
 
 ## P2 Consulting Design And Architecture Cleanup
 

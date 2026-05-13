@@ -29,17 +29,18 @@ This is not live site copy yet. It is the approved working shape from the
 | Small Team Advantage / Why Now section | implemented 2026-05-10 | Added a supporting "why now" section after the hero and before the three public doors in `consulting/src/pages/index.astro`. Use `docs/PRACTICE_HOMEPAGE_SMALL_TEAM_ADVANTAGE_COPY_BRIEF.md` before future refinements. |
 | Client clarity before proof/conversion | locked 2026-05-10 | Move next through `/start` clarity first, DeMario public-safe proof preparation second, and offer-conversion tightening third. |
 | Private method visibility | locked 2026-05-10 | Public surfaces may show discipline, principles, gates, and handoff outcomes. Do not expose the internal squad/research/source-pack machinery as public recipe copy. |
+| Brand thesis and firm name | locked 2026-05-13 | Use "Turn the work in your head into systems your business can actually run" as the current public anchor. Open audience language to people starting or running a business. Use `Montez & Co` as the public firm name while legal/entity, domain, email, and client-communication changes remain separately gated. |
 
 ## Homepage Source Draft
 
 ### Hero
 
-**Turn unclear ideas, broken workflows, and tech bottlenecks into practical
-systems that work.**
+**Turn the work in your head into systems your business can actually run.**
 
-I'm a builder/advisor for serious founders, operators, and small businesses. I
-help clarify what needs to happen, map the business value, and implement
-working digital assets, workflows, AI-enabled systems, or operating tools.
+I'm a builder/advisor for people starting or running a business. Whether the
+work is a new idea or an existing operation, I help clarify what needs to
+happen, map the business value, and implement working digital assets,
+workflows, AI-enabled systems, or operating tools.
 
 Primary CTA:
 
@@ -73,7 +74,7 @@ for alternate copy, public boundaries, and implementation guidance.
 
 #### Clarify The Path
 
-For ideas, messy workflows, unclear scope, or business problems that need to
+For new ideas, messy workflows, unclear scope, or business problems that need to
 become a real plan.
 
 If you know something needs to move but you are not sure what to build first,
@@ -158,7 +159,7 @@ operating assets instead of loose notes and scattered execution.
 
 ### Fit Filter
 
-This is a good fit if you are serious about moving something real:
+This is a good fit if you are carrying work that needs a system:
 
 - you have an idea but need a path;
 - your current workflow is messy or too manual;
@@ -186,8 +187,8 @@ intake form.
 
 It should answer:
 
-> Tell me what you're trying to move, what's stuck, and whether this is worth a
-> serious conversation.
+> Tell me what you're trying to move, what's stuck, and whether this should
+> become a real next step.
 
 Latest decision: `/start` is the client-clarity surface before stronger proof
 or conversion work. It should help the visitor understand what the Diagnostic

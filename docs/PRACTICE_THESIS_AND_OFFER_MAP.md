@@ -24,8 +24,8 @@ collaboration memory.
 
 ## Thesis
 
-Toni helps serious founders, operators, and small businesses turn unclear
-ideas, broken workflows, and tech bottlenecks into practical systems that work.
+Toni helps people starting or running a business turn unclear ideas, messy
+workflows, and owner-held knowledge into practical systems people can use.
 
 The practice is not a generic AI automation shop. Toni is the builder who
 consults: a trusted implementation partner who can clarify the business problem,

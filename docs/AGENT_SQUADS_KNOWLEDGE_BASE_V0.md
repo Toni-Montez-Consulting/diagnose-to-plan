@@ -73,6 +73,15 @@ Both squads can be active on one story. Delivery decides how the work should be
 built and verified. Business Justification decides why the work deserves time,
 what simpler alternative was considered, and whether it creates useful value.
 
+CMS/editor decisions should use both squad lenses before becoming build work.
+Business Justification verifies that owner editing solves a real workflow
+rather than tool curiosity. Delivery verifies that Git, Sanity, Supabase,
+Payload, Directus, Strapi, Tina, Decap, Builder.io, Contentful, Hygraph,
+Webflow, Framer, Notion, or custom admin choices fit the repo boundary, data
+sensitivity, role model, launch gates, and verification path. The shared planning source is
+`docs/CMS_EDITOR_TOOLING_DECISION_LADDER.md`; no squad recommendation
+authorizes a CMS implementation by itself.
+
 ## Specialized Agent Roles
 
 Squads are the operating container. Specialized agent roles are the discipline

@@ -84,6 +84,8 @@ current DTP architecture.
 
 The reusable admin/customer portal concept is captured as the Client Command Room pattern. It is inspired by the `demario-pickleball-1` admin portal and should guide future owner-facing operating rooms for Toni, clients, and selected engagements. Start with `practice-os/templates/client-command-room-fit-assessment.md`, then use `practice-os/templates/client-command-room-spec.md` only when the fit assessment says to build. See `docs/CLIENT_COMMAND_ROOM_PATTERN.md`.
 
+The CMS and owner-editor tooling lane is captured in `docs/CMS_EDITOR_TOOLING_DECISION_LADDER.md`. It turns the CCAAP Sanity lesson into a broader planning rule for when to use Git/static content, Sanity, Supabase, Payload, Directus, Strapi, Tina, Decap, Builder.io, Contentful, Hygraph, Webflow, Framer, Notion, or custom admin surfaces. This is a backburner planning lane until repeated owner-editing workflows prove the need; it does not authorize adding a CMS, inviting editors, paying for a tier, or moving source of truth out of Git/DTP.
+
 The reusable verification/support automation concept is captured as the CLI Verification And Automation pattern. It is inspired by the Omnexus / `fitness-app` toolkit and should guide infrastructure-first doctor, matrix, local gate, release gate, support gate, and evidence artifacts before heavier hosted product work. See `docs/CLI_VERIFICATION_AUTOMATION_PATTERN.md`.
 
 The reusable mobile app review and launch concept is captured as the Mobile App Review And Launch pattern. It is inspired by the Omnexus App Store approval journey and should guide future client-app launch packets, review-note discipline, rejection-to-story repair loops, approval closeouts, and first-72-hour trust checks. See `docs/MOBILE_APP_REVIEW_AND_LAUNCH_PATTERN.md`.
@@ -120,6 +122,7 @@ The Practice System Documentation Pack is the architecture and audit layer for t
 - `dtp index`, `detect`, `lesson`, `recall`, and `synthesize` support Extract Through Synthesis.
 - `practice-os/` contains reusable policies, templates, operator Skills, and reviewed Bottleneck Patterns.
 - Practice OS includes Client Command Room fit/spec templates so future engagements can decide between a command room, a handoff checklist, no private surface, or a deferred revisit before building portal UI.
+- Practice OS includes the CMS and Editor Tooling Decision Ladder so future owner-edited content requests can be classified as Git/static content, Sanity, Supabase app data, custom/open-source admin, visual page builder, enterprise headless CMS, Notion mirror, parked, or blocked before implementation starts.
 - Practice OS includes optional Future Intelligence templates for lessons, research radar items, research spikes, portfolio scorecards, agent session records, AI red-team plans, feature flag/kill switch plans, and supply-chain baselines.
 - Practice OS includes a mobile app review journey template seeded from Omnexus approval learning so future app builds can capture store review, native device, billing, privacy, and launch evidence without storing private reviewer or user data.
 - Practice OS includes optional Workspace Efficiency templates for repo manifests, evidence indexes, decision records, workspace command-center planning, dependency maintenance, toolchain pinning, CI cache planning, and project starter baselines.
@@ -564,6 +567,7 @@ Build these only after repeated usage proves the need.
   build commands. No FAOS repo, `op` wrapper, trace store, or memory substrate
   is created by the readiness review.
 - Heavier customer portals after the lightweight Client Command Room pattern proves value across multiple engagements.
+- CMS/editor tooling skill or reusable assessment template after CCAAP plus at least one more real project proves the pattern and the tool-choice triggers are stable.
 - Notion MCP/API sync after the manual Notion mirror proves useful and Toni completes OAuth; start with DTP-to-Notion dry-run export before write-enabled sync.
 - Secondary repo-local documentation after the DTP master system docs settle and the relevant repo lane is touched.
 
@@ -593,6 +597,7 @@ Do not build these into the near-term practice.
 - Auto-send client/customer communications.
 - Auto-remediation that changes production, databases, billing, or client data without explicit review.
 - Client-side autonomous routines.
+- Broad CMS adoption or visual page builders across repos before a CMS/editor fit assessment proves owner-editing value, source-of-truth boundaries, cost, roles, and verification.
 - Regulated-data verticals.
 - Microsoft-conflict-prone offers.
 - Public claims that depend on private client material without written permission.

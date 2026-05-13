@@ -18,9 +18,9 @@ and what should wait before the next public offer pass.
 
 Lead publicly with the broad promise, not a narrow service category:
 
-> Toni helps serious founders, operators, and small businesses turn ideas,
-> inefficient workflows, and messy digital projects into clear plans, practical
-> AI/workflow implementation, and working systems.
+> Montez & Co helps people starting or running a business turn unclear ideas,
+> messy workflows, and owner-held knowledge into clear plans, practical
+> AI/workflow implementation, and working systems people can use.
 
 The buying mechanism is:
 
@@ -32,7 +32,7 @@ The buying mechanism is:
 
 Identity:
 
-> Toni is the builder who consults.
+> Toni is the builder who consults behind Montez & Co.
 
 That means the consulting value is not a strategy deck. Toni clarifies the
 business problem, defines the value, maps the workflow, chooses the right
@@ -60,6 +60,39 @@ may show the discipline behind the work through principles, evidence gates,
 handoff quality, and owner-operable outcomes, but not through internal
 templates, source-pack mechanics, or role recipes.
 
+## 2026-05-11 Brand Thesis Opening Decision
+
+Open the public audience language beyond established businesses only. The
+practice should invite people who are starting, shaping, or improving a
+business without using `serious operators` as the primary public filter.
+
+Current public anchor:
+
+> Turn the work in your head into systems your business can actually run.
+
+Broader support line:
+
+> Help people start, shape, and improve businesses by turning unclear ideas,
+> messy workflows, and owner-held knowledge into practical systems people can
+> use.
+
+Decision notes:
+
+- `Montez & Co` is the locked public firm name and is live in the `consulting`
+  repo as of 2026-05-13.
+- Keep Toni visible as the founder/expert, but avoid making the emotional brand
+  depend on `Toni Montez Consulting`.
+- Use `docs/PRACTICE_BRAND_NAMING_BRIEF_V2.md` as the naming decision record
+  before changing legal/entity naming, domain/email posture, client
+  communications, or brand assets outside the approved public-site rollout.
+- Treat AI as a leverage layer inside practical systems, not the whole public
+  identity.
+- Use inclusive public audience language: people starting or running a
+  business, owners, founders, local operators, small teams, and clients carrying
+  too much work in their head.
+- Keep the elite expert-practice feel through judgment, craft, clarity, and
+  diagnostic depth instead of exclusionary audience wording.
+
 ## Locked Homepage Spine
 
 Tone:
@@ -72,14 +105,13 @@ deck factory.
 
 Hero:
 
-> Turn unclear ideas, broken workflows, and tech bottlenecks into practical
-> systems that work.
+> Turn the work in your head into systems your business can actually run.
 
 Subhead:
 
-> I'm a builder/advisor for serious founders, operators, and small businesses.
-> I help clarify what needs to happen, map the business value, and implement
-> working digital assets, workflows, AI-enabled systems, or operating tools.
+> I'm a builder/advisor for people starting or running a business. I help
+> clarify what needs to happen, map the business value, and implement working
+> digital assets, workflows, AI-enabled systems, or operating tools.
 
 Primary CTA:
 
@@ -120,7 +152,7 @@ practical AI, launch-ready implementation, and owner-operable assets.
 
 The three public doors are recognition aids, not rigid packages:
 
-1. Clarify The Path: for ideas, messy workflows, unclear scope, or business
+1. Clarify The Path: for new ideas, messy workflows, unclear scope, or business
    problems that need to become a real plan.
 2. Build The System: for sites, apps, workflows, dashboards, AI-enabled tools,
    admin systems, or operating assets that need to exist and work.

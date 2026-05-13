@@ -10,6 +10,191 @@ review_status: draft
 Use this log after meaningful Practice OS changes so backlog movement is
 deliberate and visible.
 
+## 2026-05-12: CMS And Editor Tooling Moved To Backburner Planning Lane
+
+Source:
+
+- Toni asked whether Sanity could fit elsewhere in the workspace and whether
+  similar tools could help build better products.
+- Toni then clarified that the idea should be added to the broader roadmap,
+  skills, agent work, and planning only, with implementation on the backburner.
+- `docs/CMS_EDITOR_TOOLING_DECISION_LADDER.md`
+
+Change:
+
+- Added a DTP-owned CMS/editor decision ladder for choosing between Git/static
+  content, Sanity, Supabase app data, Payload, Directus, Strapi, Tina, Decap,
+  Builder.io, Contentful, Hygraph, Webflow, Framer, Notion mirror, or custom
+  admin surfaces.
+- Routed CMS/editor/page-builder prompts through Tooling Steward, Software
+  Architecture, Product Strategy, UX / Design, QA / Audit, DevOps /
+  Infrastructure, External Communications, and `tm-skills/backend-design` as
+  needed.
+- Added `cms-editor-fit` as a parked future `tm-skills` concept only, not a
+  skill folder or implementation request.
+- Preserved CCAAP as the first proof of need while blocking broad CMS adoption
+  until another project shows the same repeated owner-editing pattern.
+
+Priority impact:
+
+1. Future Sanity/CMS/editor questions should now start with fit assessment and
+   source-of-truth boundaries, not implementation.
+2. CCAAP can keep its V1 `/admin` lane without turning every repo into a CMS
+   migration candidate.
+3. The next real CMS/editor work item must name owner persona, content types,
+   public/private boundary, cost/roles, review/publish gate, and verification
+   before build work starts.
+
+Next review trigger:
+
+- Another project besides CCAAP asks for non-technical owner editing.
+- Toni asks to compare Sanity/Payload/Directus/Strapi/Tina/Decap/Builder.io/
+  Contentful/Hygraph/Webflow/Framer/Notion with current docs for a specific
+  repo.
+- CCAAP Leah/Tony use `/admin` enough to produce an owner-editor handoff
+  pattern.
+
+## 2026-05-12: CCAAP V1 Owner Editor Promoted To Launch Blocker
+
+Source:
+
+- Toni clarified that the meeting transcript's admin/content-management item is
+  not optional for later; it needs to be addressed as part of V1.
+- `ccaap-site/docs/V1_ADMIN_WORKFLOW.md`
+- `ccaap-site/src/sanity/schemaTypes/`
+- `practice-os/efficiency/ccaap-site-evidence-index.md`
+
+Change:
+
+- Superseded the earlier post-launch CMS/editor posture for CCAAP.
+- Added Sanity Studio at `/admin` as the V1 owner-editing path for updates and
+  photos only.
+- Kept board, meetings, PayPal, contact routing, resources, payment records,
+  member records, private notes, form submissions, and credentials outside the
+  editor scope.
+- Preserved review-before-publish: public pages query only approved and
+  published Sanity content.
+- Kept Leah/Tony editor invitations approval-gated until Toni or the owners
+  approve adding them to the editor.
+
+Priority impact:
+
+1. CCAAP V1 launch readiness now includes a working `/admin` editor workflow,
+   not only Git-backed Toni updates.
+2. Sanity project setup, Vercel environment variables, editor access, and
+   approved-content publish smoke are launch gates.
+3. Production DNS remains blocked until payment/contact/meeting/media/DNS,
+   admin workflow, and owner approval gates are closed.
+
+Next review trigger:
+
+- Sanity project creation/env setup succeeds or fails and needs operator
+  intervention.
+- Leah/Tony approve editor invitations.
+- Vercel Git auto-deploy is repaired and previews rebuild from Git.
+
+## 2026-05-11: Practice Brand Round 3E-3I Source Mining Added
+
+Source:
+
+- Toni confirmed the naming priority stack as compounding human capability,
+  disciplined ambition, and builder-led delivery.
+- Privacy-safe review of selected `founder@tonimontez.co` self-forwarded notes
+  and existing DTP source thesis docs.
+- `docs/PRACTICE_BRAND_NAMING_BRIEF_V2.md`
+
+Change:
+
+- Added a Round 3E founder-language source board to the practice naming brief.
+- Converted private founder notes into public-safe naming patterns without
+  quoting client-specific or private email content.
+- Added a reaction-test candidate set led by `Capien`, `Synesis`, `Noetia`, and
+  `Aptum`.
+- Demoted `Telic` from the lead pressure-test position after Toni's reaction
+  that it felt too short and did not create enough founder pull.
+- Narrowed the next branch after Toni reacted positively to `Synesis` and
+  `Noetia`, because they feel rooted, intellectual, human, and less like
+  visible word-combination names.
+- Added Round 3F as a rooted intellectual / human consequence pass, with
+  `Synesis`, `Noesis`, `Noetia`, `Sensus`, and `Capax` as the best reaction
+  set before any clearance work.
+- Added Round 3G as an Anthropic-style Greek / Greek-derived source-root branch,
+  including `Synesis` / `Noesis`, `Dynamis`, `Ergon` / `Poiesis`, and
+  `Heuristic`.
+- Captured Toni's off-the-dome `Synetic` / `Synestic` branch: `Synetic`
+  validates the sound/meaning instinct but appears collision-heavy in adjacent
+  AI/consulting spaces; `Synestic` remains a reaction seed, not a finalist.
+- Added Round 3H as a back-to-the-drawing-board reset after the `Synetic`
+  collision disappointment. The reset keeps the qualities of `Synetic`
+  (intelligent, active, serious, human-adjacent understanding in motion) while
+  stopping the search from chasing weaker `Syn-` variants.
+- Separated Greek-rooted source concepts from direct candidate names:
+  maieutic idea-birth, potential-to-actual, work made real, practical
+  discovery, and disciplined capability.
+- Added Round 3I as a Latin/Roman source branch led by the thesis sentence
+  "capability becoming real through disciplined understanding and building."
+- Recorded that `Conatus` / `Conari`, `Molior`, `Capax`, `Auctor` / `Artifex` /
+  `Opifex`, and `Efficere` / `Actus` are the strongest source concepts from
+  this branch.
+- Recorded the light scan result that raw Latin/Roman roots are conceptually
+  useful but too crowded across adjacent AI, software, consulting, workflow,
+  and implementation categories to advance as direct finalists without deeper
+  clearance.
+- Added Round 3J as the first synthesis pass around Toni's deeper founder code:
+  relentless, loving, AVO as private origin, IWPWE / persisting without
+  exception, battle, and love.
+- Demoted `Valent` from the active lead set after Toni confirmed it does not
+  hit harder than `Conatus`.
+- Promoted `Conara`, `Tenara`, `Coratus`, `Inceptis`, and `Ingenta` as the
+  current Round 3J reaction set for "relentless care turned into working
+  systems."
+- Captured Toni's later reaction that Round 3J was a dead end. Do not keep
+  refining `Conara`, `Tenara`, `Coratus`, `Inceptis`, `Ingenta`, `Yuktis`,
+  `Nishara`, or `Renara` unless Toni explicitly reopens one.
+- Added Round 3K as a sound-first reset. The next pass should allow both simple
+  real English words and invented words, then backfill meaning only after a
+  name creates founder pull.
+
+Priority impact:
+
+1. Keep the public site and logo unchanged until Toni reacts to Round 3E and a
+   name creates real founder pull.
+2. Continue naming from human capability plus intelligence before doing legal,
+   domain, social, or visual identity work.
+3. Avoid visible compound names in the next pass; prefer rooted intellectual
+   words or coined names whose construction is invisible.
+4. Use founder pull before clearance: only scan domains, social, and trademark
+   surfaces after one or two names survive reaction testing.
+5. Treat Greek roots as source material, not automatic final names.
+6. Do not settle for weaker cousin names after a liked name proves
+   collision-heavy; preserve the felt qualities and restart from adjacent roots.
+7. Keep DTP as the durable naming source and consulting as the eventual public
+   consumer.
+8. Treat raw Latin/Roman roots as source material rather than direct brand
+   candidates unless one later earns founder pull and passes real clearance.
+9. Make Round 3J an English-feeling or lightly coined synthesis from
+   **striving + making real + capability**, not another list of direct Latin
+   words.
+10. Keep AVO, IWPWE, battle, and love as founder-origin material unless Toni
+    later chooses to expose part of that story publicly.
+11. Test the next name set against **relentless care**, not just abstract
+    intelligence or classical-root cleverness.
+12. Stop source-root mining for now. The naming process should prioritize
+    sound, memorability, credibility, and Toni's willingness to say the name out
+    loud.
+13. Allow simple real English words in Round 3K; do not force every name to be
+    coined or etymologically defensible.
+
+Next review trigger:
+
+- Toni reacts to the Round 3E candidate set.
+- A candidate creates enough energy to justify clearance research.
+- Toni asks to branch into a new source-root lane.
+- Toni reacts to the Round 3I root concepts and the Round 3J synthesis prompt.
+- Toni asks to generate Round 3K sound-first names.
+- Toni reacts to Round 3K and identifies any name that creates founder pull
+  before explanation.
+
 ## 2026-05-10: Question Checkpoint Rule Promoted
 
 Source:
@@ -990,3 +1175,178 @@ Next review trigger:
 - A real prospect submits intake or books through the Diagnostic Call link.
 - Toni decides intake cleanup automation is worth a Hub runtime change.
 - Hub PR #77 or #78 is explicitly reopened for a targeted fix pass.
+
+## 2026-05-12: CCAAP Prototype Review Moves To Vercel Launch Packet
+
+Source:
+
+- `engagements/mom-nonprofit/site-rebuild/post-meeting-receipt-2026-05-12.md`
+- `engagements/mom-nonprofit/site-rebuild/decision-log.md`
+- `practice-os/efficiency/ccaap-site-evidence-index.md`
+- `ccaap-site/docs/OWNER_LAUNCH_PACKET_2026-05-12.md`
+
+Change:
+
+- Captured the May 12 prototype review as launch-packet direction, not final
+  production approval.
+- Switched the CCAAP hosting path from Cloudflare Pages to Vercel because Toni
+  manages current web operations there and the static Astro site does not need
+  Cloudflare-specific behavior.
+- Preserved the remaining gates: PayPal donation/membership URLs, contact
+  routing/spam choice, meeting label/destination, DNS/current-site access,
+  approved logo/photos/resources/board media, Leah/Tony preview approval, and
+  proof posture.
+
+Priority impact:
+
+1. CCAAP moves from generic owner-input wait to a concrete Vercel launch packet
+   and implementation queue.
+2. Public site updates can proceed only for owner-safe docs/config and design
+   follow-up; production values still wait on approved inputs.
+3. Public proof remains blocked by permission, redaction, reviewer, evidence,
+   and caveat despite positive verbal review feedback.
+
+Next review trigger:
+
+- Exact owner-approved PayPal/contact/meeting/DNS/assets values arrive.
+- Vercel preview is connected and ready for Leah/Tony review.
+- Toni explicitly opens the next CCAAP visual/design implementation pass.
+
+## 2026-05-12: CCAAP PayPal Candidates Staged, Launch Gate Preserved
+
+Source:
+
+- `engagements/mom-nonprofit/site-rebuild/email-scan-extraction-2026-05-12.md`
+- `engagements/mom-nonprofit/site-rebuild/owner-follow-up-draft-2026-05-12.md`
+- `practice-os/efficiency/ccaap-site-evidence-index.md`
+- `ccaap-site/src/content/settings/site.json`
+
+Change:
+
+- Converted the fresh Gmail scan into a private extraction receipt and
+  sendable follow-up draft.
+- Staged the owner-provided PayPal donation and membership candidates in the
+  CCAAP site repo with `paymentStatus: candidate`.
+- Preserved launch blocking by keeping payment candidate status out of
+  production verification and leaving contact, meeting, board/media, asset,
+  DNS, preview approval, and proof gates open.
+
+Priority impact:
+
+1. The next CCAAP implementation pass can test the Join/Donate page flow
+   without inventing payment values.
+2. The owner follow-up is now narrower: meeting URL, contact/spam preference,
+   logo/source files, homepage image, board photos, graphics folder, Wix invite,
+   DNS registrar, and proof posture.
+3. CCAAP remains a launch candidate, not a production-ready site.
+
+Next review trigger:
+
+- Leah/Tony confirm the staged PayPal routes are stable for production.
+- The meeting URL conflict is resolved.
+- Required assets or no-photo launch decision arrive.
+
+## 2026-05-12: CCAAP Board Photos And Bios Staged, Identity Gate Preserved
+
+Source:
+
+- Resent Gmail `Pictures` messages surfaced as inline image payloads.
+- `engagements/mom-nonprofit/site-rebuild/assets/board-photos-2026-05-12/source-manifest.md`
+- `practice-os/efficiency/ccaap-site-evidence-index.md`
+- `ccaap-site/src/content/board/`
+
+Change:
+
+- Staged eight resent board-photo candidates in private DTP asset intake.
+- Copied clear named photo candidates into the public prototype asset folder.
+- Rendered Tony-provided board bios as draft owner-review content.
+- Assigned only the exact Vernell Gregg filename match in the board page and
+  left generic or mismatched images unassigned.
+- Staged `info@citizensandparents.org` as a candidate public contact route
+  while keeping spam/routing approval as a launch blocker.
+
+Priority impact:
+
+1. The next preview can show real board content without pretending media is
+   production-approved.
+2. The owner follow-up should not ask for PayPal values or board bios again.
+3. The remaining board ask is narrower: confirm final copy, photo identity
+   assignments, and photo approval.
+
+Next review trigger:
+
+- Leah/Tony review the staged board page.
+- Generic or mismatched photo identities are confirmed.
+- Contact spam/routing preference is approved.
+
+## 2026-05-12: CCAAP Layout Review, Footer Polish, And Parent Draft Created
+
+Source:
+
+- `ccaap-site/docs/SITE_REVIEW_2026-05-12.md`
+- `practice-os/efficiency/ccaap-site-evidence-index.md`
+- Gmail draft `r-8887800189854309482`
+
+Change:
+
+- Reworked the prototype layout system so desktop and laptop margins are wider
+  and subpage headings no longer feel pinched.
+- Redesigned the footer as a lighter civic information band with clearer
+  navigation and quieter prototype status.
+- Staged Dad's Google Meet evidence as the meeting candidate instead of
+  re-asking for the link, while keeping production launch blocked by final
+  review.
+- Created a new Gmail draft to Tony and Leah with the completed work and the
+  remaining owner asks.
+
+Priority impact:
+
+1. The next parent-facing review can focus on approvals and assets, not
+   re-explaining the prototype.
+2. The meeting ask is narrowed to final review of the staged destination.
+3. Site polish is now a review artifact with local validation evidence.
+
+Next review trigger:
+
+- Toni reviews/approves or edits Gmail draft `r-8887800189854309482`.
+- Leah/Tony provide logo, homepage image, board photo approvals, PayPal/contact
+  confirmation, spam preference, DNS/Wix path, or resource files.
+
+## 2026-05-12: CCAAP Vercel Prototype Published And Parent Draft Clarified
+
+Source:
+
+- `ccaap-site/docs/SITE_REVIEW_2026-05-12.md`
+- `ccaap-site/docs/LAUNCH_CHECKLIST.md`
+- `practice-os/efficiency/ccaap-site-evidence-index.md`
+- Gmail draft `r-8887800189854309482`
+
+Change:
+
+- Published the CCAAP launch-candidate prototype to Vercel at
+  `https://ccaap-site.vercel.app`.
+- Route-smoked all public pages on the live Vercel URL.
+- Updated the parent draft so the remaining asks explain why exact
+  confirmations are still needed for testing, security, privacy, payment
+  safety, contact routing, meeting access, and long-term maintenance.
+- Reaffirmed that the meeting transcript/admin-content item was captured:
+  first launch remains Toni-managed and Git-backed, while owner-editable
+  updates/posts/photos workflow is a post-launch CMS/editor decision unless
+  Leah needs direct editing sooner.
+- Recorded the deployment caveat that the Vercel project is live, but GitHub
+  auto-deploy connection failed during CLI setup and still needs repair.
+
+Priority impact:
+
+1. Leah/Tony can review the real prototype URL without waiting for DNS changes.
+2. Parent follow-up now separates already-captured direction from exact
+   launch confirmations.
+3. The admin/content-management registration question is preserved as a
+   deliberate post-launch workflow decision, not an omitted requirement.
+
+Next review trigger:
+
+- Toni approves, edits, or sends Gmail draft `r-8887800189854309482`.
+- GitHub auto-deploy is connected in Vercel.
+- Leah/Tony decide whether direct owner editing is needed before launch or can
+  wait until after launch.

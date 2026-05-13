@@ -24,10 +24,9 @@ Make the idea visible soon as a supporting "why now" section.
 
 Do not replace the homepage hero.
 
-Keep the hero:
+Current hero anchor:
 
-> Turn unclear ideas, broken workflows, and tech bottlenecks into practical
-> systems that work.
+> Turn the work in your head into systems your business can actually run.
 
 Add the new section directly after the hero and before the three public doors.
 That placement lets the visitor understand the market shift before choosing
@@ -55,8 +54,8 @@ Write for both audiences at the same time:
 
 The common buyer signal is:
 
-> serious operator with business intent, limited internal technical capacity,
-> and a need for judgment plus implementation.
+> person starting or running a business with real intent, limited internal
+> technical capacity, and a need for judgment plus implementation.
 
 ## Recommended Section Copy
 

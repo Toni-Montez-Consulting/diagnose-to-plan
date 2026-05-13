@@ -49,6 +49,9 @@ Use this map when a prompt could route to more than one skill, template, process
   for the practice operating system, strategic backlog, agent workflow,
   knowledge base, Hub/tm-skills coordination, consulting design architecture,
   vector brain, or FAOS sequencing.
+- Use `docs/CMS_EDITOR_TOOLING_DECISION_LADDER.md` when a prompt asks where
+  Sanity, a CMS, an owner editor, content management, image/update posting, or
+  `/admin` publishing workflow should fit across repos.
 - Keep all gated actions gated: global skill install, hosted DTP implementation, public proof promotion, write-enabled automation, autonomous agents, and production/client data changes.
 
 ## Prompt Activation Matrix
@@ -99,6 +102,7 @@ Use this map when a prompt could route to more than one skill, template, process
 | "Azure diagnostics", "Azure cost", "Azure RBAC", "Azure resource lookup" | matching Azure incubator skill | `azure-diagnostics`, `azure-cost`, `azure-rbac`, `azure-resource-lookup` | read-only by default; do not infer live resource truth without evidence |
 | "Entra app registration", "Entra agent identity", "Microsoft Foundry hosted agent" | matching Entra/Foundry incubator skill | `entra-app-registration`, `entra-agent-id`, `microsoft-foundry` | identity, tenant, credentials, eval, trace, and approval boundaries first |
 | "does this need a portal", "command room", "owner dashboard" | Command Room fit assessment | Command Room spec if fit passes | checklist/no surface is allowed |
+| "Sanity", "CMS", "content management", "owner editor", "post updates/photos", "where should editors log in", "should this use a page builder" | CMS and Editor Tooling Decision Ladder plus Tooling Steward | `docs/CMS_EDITOR_TOOLING_DECISION_LADDER.md`, `docs/PRACTICE_TOOLING_STEWARD.md`, Software Architecture, Product Strategy, UX / Design, QA / Audit, DevOps / Infrastructure as needed | planning-only until a repo lane opens implementation; no accounts, paid tiers, editor invites, env vars, public publishing, or source-of-truth movement without approval |
 | "new client kit", "Mom nonprofit", "engagement plan" | Client Operating Kit | diagnose, plan, consent, data inventory | private engagement material stays private |
 | "research this tool/protocol", "should we adopt X" | research radar or research spike | Future Intelligence layer | classify Adopt/Pilot/Watch/Reject |
 | "research arm", "research agent", "research steward", "research queue", "AI research digest", "keep me current", "what changed in AI", "turn research into practice updates", "source digest", "research pattern", "pattern extraction", "business observation", "field note pattern" | Research Arm V0 and Research Steward | `docs/RESEARCH_ARM_V0.md`, `practice-os/agents/research-steward.md`, `dtp research steward`, `docs/RESEARCH_AND_OPPORTUNITY_NOTION_MIRROR_V0.md`, `practice-os/templates/research-arm-digest.md`, `practice-os/templates/research-radar-item.md`, `practice-os/templates/research-spike.md`, `practice-os/templates/research-pattern-candidate.md` | research and field notes can become pattern candidates, but cannot authorize public claims, offer changes, tool installs, repo changes, client communication, or autonomous runtime |
@@ -142,6 +146,7 @@ Use these labels in Roadmap Steward reviews and handoffs:
 - `vector_brain_gate`
 - `architecture_review_packet`
 - `automation_authority_matrix`
+- `cms_editor_tooling_decision`
 - `business_justification_gate`
 - `approval_gate`
 - `contextual_idea_intake`
@@ -199,6 +204,9 @@ Use these labels in Roadmap Steward reviews and handoffs:
   `docs/PRACTICE_OPERATING_REVIEW_LOOP_V0.md` and leave a
   `practice-operating-review` receipt if priorities or gates changed.
 - When a new repo lane is added to the workspace roadmap, add or update the relevant routing row.
+- When a CMS/editor/page-builder decision changes, update
+  `docs/CMS_EDITOR_TOOLING_DECISION_LADDER.md`, the Tooling Steward surface, and
+  any affected story/skill routing before implementation.
 - When a new idea introduces a new roadmap lane, business direction, design pattern, agent behavior, or recurring trigger, capture it through contextual idea intake before promoting it.
 - When a backlog story changes status or ownership, check whether `docs/ROADMAP_STORY_ACTIVATION_INDEX.md` needs a matching activation update.
 - When a prompt repeatedly misroutes, capture the miss in a lesson, eval, `tm-skills/MISFIRES.md`, or Roadmap Steward review.
