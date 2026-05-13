@@ -34,7 +34,7 @@ the next proof gate in `docs/PUBLIC_PROOF_PROMOTION_RUNBOOK.md`.
 |---|---|---|---|---|---|---|
 | CCAAP baseline and after-state owner flow | `ccaap-site`, private DTP kit | `practice-os/efficiency/ccaap-site-evidence-index.md`; `practice-os/steward/2026-05-04-kaizen-existing-system-map.md` | Launch / Proof Hardening Sprint; Client Command Room / Workflow System Sprint | `needs_permission` | wait for Leah/Tony inputs, then inventory baseline, after-state, screenshots, and owner-approved wording | owner permission, authentic assets, launch review, redaction, reviewer, caveat |
 | Omnexus launch and review journey | `fitness-app` / Omnexus | `practice-os/efficiency/fitness-app-evidence-index.md`; `docs/MOBILE_APP_REVIEW_AND_LAUNCH_PATTERN.md` | Launch / Proof Hardening Sprint | `needs_redaction` | separate public-safe app-review proof from private app, billing, account, support, and dashboard records | app/privacy caveats, no private user data, source review, reviewer, approved wording |
-| DeMario launch-feedback social packet | `demario-pickleball-1`, DTP proof lane, human-owned social channels | `practice-os/proof-packets/demario-launch-feedback-social-packet-2026-05-05.md`; `practice-os/proof-packets/demario-consulting-proof-prep-2026-05-10.md`; `practice-os/proof-packets/demario-homepage-card-public-claim-review-2026-05-10.md`; `practice-os/proof-packets/demario-homepage-card-copy-authenticity-audit-2026-05-10.md`; `practice-os/efficiency/demario-pickleball-1-evidence-index.md`; `practice-os/kaizen/intake.jsonl#kzn-20260505-demario-pickleball-site-is-live-an-29574ac8` | Launch / Proof Hardening Sprint; Client Command Room / Workflow System Sprint; practice proof signal | `approved_public_safe_for_card` | homepage proof card may use the approved wording; keep full case study and richer assets gated | plain/non-gimmicky Mario voice, no unsupported metrics, no autonomous-tool overclaim, no private admin/booking/payment data, private screenshots/testimonials require separate source review |
+| DeMario launch-feedback social packet | `demario-pickleball-1`, DTP proof lane, human-owned social channels | `practice-os/proof-packets/demario-launch-feedback-social-packet-2026-05-05.md`; `practice-os/proof-packets/demario-consulting-proof-prep-2026-05-10.md`; `practice-os/proof-packets/demario-homepage-card-public-claim-review-2026-05-10.md`; `practice-os/proof-packets/demario-homepage-card-copy-authenticity-audit-2026-05-10.md`; `practice-os/proof-packets/consulting-demario-proof-card-rollout-receipt-2026-05-13.md`; `practice-os/efficiency/demario-pickleball-1-evidence-index.md`; `practice-os/kaizen/intake.jsonl#kzn-20260505-demario-pickleball-site-is-live-an-29574ac8` | Launch / Proof Hardening Sprint; Client Command Room / Workflow System Sprint; practice proof signal | `deployed_public_safe_for_card` | card is live on the Montez & Co homepage; next move is asset inventory and permission review only if Toni wants a richer case study | plain/non-gimmicky Mario voice, no unsupported metrics, no autonomous-tool overclaim, no private admin/booking/payment data, private screenshots/testimonials require separate source review |
 | DeMario launch/admin command room | `demario-pickleball-1` | `practice-os/efficiency/demario-pickleball-1-evidence-index.md`; `docs/CLIENT_COMMAND_ROOM_PATTERN.md` | Client Command Room / Workflow System Sprint; Launch / Proof Hardening Sprint | `needs_permission` | collect owner-approved walkthrough candidates and redact booking/admin/payment details | owner permission, private admin redaction, caveat, reviewer |
 | Consulting Hub-first intake route | `consulting`, `hub` | `practice-os/efficiency/consulting-evidence-index.md`; `practice-os/efficiency/hub-evidence-index.md`; `practice-os/steward/2026-05-06-consulting-live-intake-receipt.md`; `hub/docs/CONSULTING_CONSOLE_FULL_STACK.md` | Business Systems Blueprint; proof of operating discipline | `restricted_internal` | keep as private runtime-support evidence; add a Hub intake archive/delete path before calling cleanup automated | no private row screenshots, no secrets, no public proof claim from private Hub rows, DTP receipt |
 | Architected Strength assistant/reference lane | `architected-strength` | `practice-os/efficiency/architected-strength-evidence-index.md`; `docs/assistant-manifests/architected-strength-public-v0.md` | later public assistant pattern candidate | `parked` | wait for consulting assistant source/refusal QA to prove the pattern first | consulting pilot acceptance, repo-local corpus, refusal tests, logging boundary |
@@ -44,16 +44,19 @@ the next proof gate in `docs/PUBLIC_PROOF_PROMOTION_RUNBOOK.md`.
 
 ## Next Review Queue
 
-1. DeMario is the first public-safe proof lane to prepare next because it is
-   concrete local-business implementation proof: booking, payment flow,
-   availability, owner admin, launch handoff, and service-business systems. The
-   lane is preparation only; stronger public claims still require exact wording,
-   evidence, permission, redaction, reviewer, and caveat.
+1. DeMario is the first public-safe proof lane promoted to the consulting
+   homepage because it is concrete local-business implementation proof:
+   booking, payment flow, availability, owner admin, launch handoff, and
+   service-business systems. The live card is the approved public limit;
+   stronger public claims still require exact wording, evidence, permission,
+   redaction, reviewer, and caveat.
 2. `practice-os/proof-packets/demario-consulting-proof-prep-2026-05-10.md`
-   prepares a narrow homepage proof-card upgrade. Claim review and copy
-   authenticity review passed for the card wording only. It does not approve a
-   full case study, screenshots, private admin material, testimonials, metrics,
-   or business-impact claims.
+   prepared the narrow homepage proof-card upgrade, and
+   `practice-os/proof-packets/consulting-demario-proof-card-rollout-receipt-2026-05-13.md`
+   records that the card is live. Claim review and copy authenticity review
+   passed for the card wording only. This does not approve a full case study,
+   screenshots, private admin material, testimonials, metrics, or
+   business-impact claims.
 3. DeMario launch feedback was posted from Toni-owned LinkedIn and Instagram
    channels on 2026-05-06 per Toni's report, and exact public post URLs are now
    recorded. Private admin screenshots, testimonials, student data, metrics,
