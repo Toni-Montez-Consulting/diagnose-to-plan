@@ -25,8 +25,10 @@ decorative theater or a template.
 ## Skills Consumed
 
 - `tm-skills/frontend-craft`
+- `surface-translation-standard`
 - `practice-os/templates/custom-interface-craft-brief.md`
 - `docs/CUSTOM_INTERFACE_CRAFT_STANDARD.md`
+- `practice-os/patterns/surface-translation-standard.md`
 - Repo-local design/system docs.
 - Consulting Strategy when page structure or offer posture is involved.
 - QA / Audit when visual changes need responsive and accessibility checks.
@@ -59,6 +61,16 @@ Every design recommendation should answer:
 5. What should be removed, compressed, or sequenced later?
 6. How does the layout behave on mobile and desktop?
 7. What proof or state must be visible without exposing private data?
+
+For public, client-facing, owner-facing, or admin/editor surfaces, apply the
+Surface Translation Standard before calling the design polished:
+
+- translate build notes into audience language;
+- replace internal nouns with task verbs;
+- keep private gates and validation visible internally, not as user-facing
+  clutter;
+- capture repeated design/content fixes as reusable prompts, standards, or DTP
+  patterns.
 
 ## Tone Rules
 

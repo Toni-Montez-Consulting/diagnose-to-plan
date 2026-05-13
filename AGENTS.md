@@ -92,6 +92,14 @@ The system should be simple, fast, structured, and practical.
 The product is not generic AI consulting software. It is an implementation
 system for turning business context into working systems.
 
+Apply the Surface Translation Standard when work moves from internal system
+logic into a public, client-facing, owner-facing, or editor-facing surface. The
+operator may need gates, ledgers, schemas, deploy notes, and approval states;
+the user should see the next action in their language. Repeated fixes should be
+captured in `practice-os/patterns/surface-translation-standard.md`, the
+appropriate agent role, a repo-local standard, or a local skill so the pattern
+does not go stale.
+
 Preserve these strategic concepts:
 
 - AI/software implementation layer

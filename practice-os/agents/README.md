@@ -50,3 +50,11 @@ human judgment is required.
 - `ux-design.md` - user experience, information architecture, visual hierarchy,
   interaction quality, responsive behavior, accessibility posture, and
   design-system fit.
+
+## Shared Standards
+
+- `practice-os/patterns/surface-translation-standard.md` - shared pattern for
+  translating internal build notes, admin mechanics, and launch gates into
+  audience-safe public, editor, owner, and client-facing surfaces. Use it with
+  UX / Design, External Communications, QA / Audit, Business Pattern Steward,
+  and Memory Steward when repeated improvements should become reusable.
