@@ -487,6 +487,18 @@ Updated on 2026-05-07:
 - `tm-skills/docs/PRACTICE_OS_SKILL_READINESS.md` now records the near-term readiness gates and classifies local candidate skill folders such as `docx`, `pptx`, `xlsx`, `excalidraw`, `expense-report`, `loop`, and `web-artifacts-builder` as parked or candidate material requiring source/license review, frontmatter cleanup, evals, and DTP routing alignment before promotion.
 - Global install, high-risk browser/expense automation, and external Claude Code/GitHub Copilot smoke remain gated.
 
+Updated on 2026-05-12:
+
+- Added `cms-editor-fit` as a parked future skill candidate only. The planning
+  source lives in `docs/CMS_EDITOR_TOOLING_DECISION_LADDER.md`, and the skill
+  should not be created until CCAAP plus at least one more project prove a
+  repeated need for tool-agnostic CMS/editor selection guidance.
+- The candidate would help agents choose between Git/static content, Sanity,
+  Supabase app data, Payload, Directus, Strapi, Tina, Decap, Builder.io,
+  Contentful, Hygraph, Webflow, Framer, Notion mirror, or custom admin surfaces
+  while preserving DTP source-of-truth, privacy, proof, owner-approval, and
+  implementation gates.
+
 ## Deferred
 
 - Multi-user skill product.
@@ -495,6 +507,8 @@ Updated on 2026-05-07:
 - Skill telemetry beyond local evals and `MISFIRES.md`.
 - DTP `skills-keeper` automation before there is real misfire/update history.
 - Stack overlays before the base skills prove useful.
+- `cms-editor-fit` skill before repeated CMS/editor decisions produce stable
+  trigger examples, anti-triggers, output evals, and DTP routing evidence.
 
 ## Implementation Prompt For A Future Chat
 

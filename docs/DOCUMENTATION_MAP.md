@@ -158,6 +158,11 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
   public-copy brief for adding the Small Team Advantage / "why now" section to
   the next consulting homepage copy pass without replacing the hero or turning
   the site into generic AI-consultancy copy.
+- `docs/PRACTICE_BRAND_NAMING_BRIEF_V2.md`: naming decision record for
+  `Montez & Co`, preserving the "turn the work in your head into systems your
+  business can actually run" thesis and separating the approved `consulting`
+  public-site rollout from legal/entity, trademark, domain/email, client
+  communication, and sibling-repo brand changes.
 - `practice-os/templates/business-systems-blueprint.md`: reusable paid
   Blueprint template and source for a future public-safe sample artifact.
 - `practice-os/templates/remaining-locks-ledger.md`: collaboration pattern for
@@ -306,6 +311,7 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
 - `docs/PRACTICE_MEMORY_CONTROL_PLANE.md`: Priority 1 operating layer for keeping ideas, replies, meetings, blockers, proof gates, connector plans, and session receipts out of chat-only memory. Use before expanding Notion, QuickBooks, hosted DTP, or agent automation.
 - `docs/PRACTICE_MEMORY_OPTIMIZATION_PLAN.md`: retrieval and persistence ladder for making Codex rehydration reliable before adding hosted storage, vector retrieval, MCP recall, or a private Business Brain assistant.
 - `docs/PRACTICE_TOOLING_STEWARD.md`: connector/plugin/tool evaluation pattern. Use before adding, removing, piloting, or expanding access for plugins, MCP servers, OAuth apps, CLIs, hosted tools, or business integrations.
+- `docs/CMS_EDITOR_TOOLING_DECISION_LADDER.md`: planning lane for deciding when owner-edited public content should stay Git/static, use Sanity, use Supabase/app data, use Payload/Directus/Strapi/custom admin, use a visual builder, use enterprise headless CMS, mirror through Notion, park, or block. Use before implementing a CMS, editor, `/admin`, owner photo/update workflow, or content-management skill.
 - `docs/integration/source_index.md`: source-material inventory for the Practice OS thesis/spec/schema files and external DOCX duplicate.
 - `docs/integration/integration_map.md`: map from new source concepts to existing DTP architecture, current support, gaps, and additive-first implementation sequence.
 - `docs/integration/concept_registry.md`: named concept registry preserving the thesis language, memory levels, Input Studio, opportunity scoring, anti-slop review, value ledger, and related ideas.
@@ -548,6 +554,7 @@ Do not update `hub-prompts` or `hub-registry` just because the roadmap changes. 
 - Use `docs/PRACTICE_MEMORY_CONTROL_PLANE.md` and `practice-os/templates/memory-control-checkpoint.md` when Toni asks whether the system can remember/handle everything, when a new connector like QuickBooks enters scope, or when multiple workstreams risk living only in chat.
 - Use `docs/PRACTICE_MEMORY_OPTIMIZATION_PLAN.md`, `practice-os/templates/session-rehydration-checklist.md`, and `practice-os/templates/memory-source-index.md` when Toni asks about persistent memory, better recall, context loss, source-aware rehydration, vector storage, private retrieval, MCP recall, or whether Codex can handle the operating load.
 - Use `docs/PRACTICE_TOOLING_STEWARD.md` and `practice-os/templates/tooling-steward-review.md` when Toni asks about plugins/tools, missing connectors, whether a tool is worth keeping, or whether to add/remove/park a tool.
+- Use `docs/CMS_EDITOR_TOOLING_DECISION_LADDER.md` when Toni asks where Sanity or a CMS/editor should fit across repos, whether a project needs owner-managed posts/photos/resources, or whether a future `tm-skills` CMS/editor-fit skill should exist. Keep it planning-only until a project lane explicitly opens implementation.
 - Use `docs/CLIENT_REPLY_INTAKE_OPERATING_PATTERN.md` before turning Gmail replies, meeting notes, owner updates, or casual owner-approved facts into DTP state, Notion cockpit changes, calendar invites, build work, or proof movement.
 - Use `docs/CROSS_SITE_ASSISTANT_ARCHITECTURE_BRIEF.md` before implementing public website assistants, admin assistants, assistant manifests, private retrieval, or assistant gateway/runtime behavior.
 - Use `docs/assistant-manifests/consulting-public-v0.md` as the first public assistant pilot manifest; implementation still needs repo-local source corpus, refusal tests, logging review, and launch gates.

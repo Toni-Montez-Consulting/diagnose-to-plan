@@ -21,8 +21,9 @@ Optimize in this order:
 7. Expand repo manifests and local pointers only when the repo lane is touched.
 8. Cross-validate Hub prompts and registry before deeper runtime automation.
 9. Install and smoke-test global skills only after approval.
-10. Build hosted DTP only when real artifacts need persistence.
-11. Add steward automation, evals, red-team, and protocols after manual loops prove useful.
+10. Treat CMS/editor tooling as a fit decision before implementation.
+11. Build hosted DTP only when real artifacts need persistence.
+12. Add steward automation, evals, red-team, and protocols after manual loops prove useful.
 
 ## Epic A: Practice System Documentation Pack
 
@@ -124,6 +125,7 @@ Goal: make reusable SDLC skills actually available to future sessions.
 | Reload tools | Codex/Claude/Copilot | Review | tools see expected skills | external reloads remain manual |
 | Smoke-test discovery | `tm-skills` plus tools | Review | trigger prompts activate correct skills | record misfires |
 | Choose canary | one repo | Later | no duplicate trigger confusion | pick low-risk repo |
+| CMS/editor-fit skill candidate | `tm-skills`, DTP | Parked | two real projects prove repeated CMS/editor decision need and DTP ladder has stable triggers/evals | keep planning in `docs/CMS_EDITOR_TOOLING_DECISION_LADDER.md`; do not create skill yet |
 
 Gate: no global install without explicit approval.
 

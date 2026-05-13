@@ -27,6 +27,11 @@ The practical thesis is:
 19. Build the Business Brain as the business-practice counterpart to the SDLC
     learning loop: command contracts, business agent roles, fixtures, comms,
     runbooks, lessons, evals, and human-reviewed self-improvement.
+20. Treat CMS/editor tooling as a decision ladder, not a default implementation:
+    use Git/static content, Sanity, Supabase, Payload, Directus, Strapi,
+    Tina, Decap, Builder.io, Contentful, Hygraph, Webflow, Framer, Notion, or
+    custom admin only when the repo's owner-editing workflow, data boundary,
+    cost, role model, and verification path justify it.
 
 ## Scope
 
@@ -108,6 +113,8 @@ An item should be delayed or cut if it mostly creates:
 - Efficiency tooling that hides repo boundaries or makes agents skip required local evidence.
 - Notion sync that duplicates source-of-truth state or stores private/sensitive material outside approved DTP/vault boundaries.
 - Generic templates, default component-library assemblies, or copied unfinished references standing in for project-specific interface design.
+- CMS/editor/page-builder adoption that moves private data, launch gates, proof
+  approval, app state, or repo configuration into the wrong source of truth.
 
 ## Future Intelligence Layer
 

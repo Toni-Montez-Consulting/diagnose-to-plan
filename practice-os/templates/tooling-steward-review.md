@@ -35,6 +35,16 @@ integrations before adding more infrastructure.
 |---|---|---|---|---|
 |  |  |  |  |  |
 
+## CMS / Editor Fit Check
+
+Use this only when the review includes Sanity, a CMS, owner editing, public
+content management, page builders, or `/admin` publishing workflows. Pair with
+`docs/CMS_EDITOR_TOOLING_DECISION_LADDER.md`.
+
+| Repo / lane | Content owner | Content types | Public/private boundary | Candidate decision | Implementation posture |
+|---|---|---|---|---|---|
+|  | Toni / owner / client / mixed |  |  | git_static / sanity_structured_public_content / supabase_app_data / custom_or_open_source_admin / git_backed_editor / visual_page_builder / enterprise_headless_cms / notion_mirror_only / park / blocked | planning_only / ready_after_approval / blocked |
+
 ## Remove Or Park
 
 | Tool | Reason | Disable path | Follow-up |
