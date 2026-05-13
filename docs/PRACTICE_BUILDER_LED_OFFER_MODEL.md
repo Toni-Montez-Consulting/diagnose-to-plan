@@ -33,9 +33,9 @@ operating-system setup. The common thread is implementation:
 
 Lead broad:
 
-> I help serious founders, operators, and small businesses turn ideas,
-> inefficient workflows, and messy digital projects into clear plans, practical
-> AI/workflow implementation, and working systems.
+> I help people starting or running a business turn unclear ideas, messy
+> workflows, and owner-held knowledge into clear plans, practical AI/workflow
+> implementation, and working systems people can use.
 
 This is stronger than leading with one narrow category like websites, AI
 chatbots, automations, or launch proof.
@@ -48,14 +48,13 @@ big-consulting abstraction.
 
 Current homepage thesis:
 
-> Turn unclear ideas, broken workflows, and tech bottlenecks into practical
-> systems that work.
+> Turn the work in your head into systems your business can actually run.
 
 Current supporting copy:
 
-> I'm a builder/advisor for serious founders, operators, and small businesses.
-> I help clarify what needs to happen, map the business value, and implement
-> working digital assets, workflows, AI-enabled systems, or operating tools.
+> I'm a builder/advisor for people starting or running a business. I help
+> clarify what needs to happen, map the business value, and implement working
+> digital assets, workflows, AI-enabled systems, or operating tools.
 
 Primary CTA:
 

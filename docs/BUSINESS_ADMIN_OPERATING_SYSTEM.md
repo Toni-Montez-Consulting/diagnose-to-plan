@@ -191,6 +191,17 @@ Current official logo kit:
 
 `C:\Users\tonimontez\Pictures\Toni-Montez-Official-Logo-Kit\2026-05-04`
 
+Current naming work:
+
+- Working source: `docs/PRACTICE_BRAND_NAMING_BRIEF_V2.md`
+- Public firm name: `Montez & Co`
+- Direction: use a company-led name with Toni visible as founder/expert.
+- Public voice pattern: `Montez & Co helps turn the work in your head into
+  systems your business can actually run.`
+- Status: approved for the `consulting` public-site rollout as of 2026-05-13;
+  legal/entity naming, trademark clearance, domain/email changes, client
+  communications, and sibling repo brand changes remain separately gated.
+
 Current brand language:
 
 - Primary slogan: `Get the Work Out of Your Head.`
