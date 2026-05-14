@@ -139,6 +139,27 @@ pattern learning, but public proof, real prospect conversion, hosted assistant
 runtime, authenticated admin workflows, and Hub cleanup automation remain
 separate gates.
 
+## Friction Review
+
+First friction review:
+
+- `practice-os/steward/2026-05-14-uat-receipt-friction-review.md`
+
+Decision: keep the base UAT receipt canonical. Do not create narrower templates
+or `tm-skills` behavior yet.
+
+V0.1 operating modes:
+
+| Mode | Use when | Current rule |
+|---|---|---|
+| Proof-readiness | a funnel, launch, case-study, public claim, or proof candidate needs evidence boundaries | use the base receipt and emphasize proof/redaction/permission gates |
+| Boundary-only | a manifest, no-runtime assistant, noindex route, source-corpus rule, or "do not build yet" lane needs acceptance | use the base receipt, mark inapplicable journey rows as skipped, and state what cannot be proven |
+| Operator-surface | an admin launcher, command room, dashboard, or internal task surface needs acceptance | use the base receipt and emphasize privacy, no-private-data rendering, handoff, and future stale-state risk |
+
+These are modes, not separate templates. Create a narrower template only after
+another meaningful receipt outside the current consulting boundary cluster
+shows repeated friction.
+
 ## Done Criteria
 
 A UAT pass is complete when:
@@ -164,7 +185,8 @@ After repeated use, consider:
 - `tm-skills` behavior only after real usage proves stable triggers and
   expected outputs.
 
-Second-wave read after three consulting receipts: do not create `tm-skills`
-behavior yet. The next useful refinement is a small review of receipt friction:
-whether public assistant, operator-surface, and proof-readiness receipts need
-separate lighter variants or whether the base receipt stays flexible enough.
+Second-wave read after three consulting receipts and the friction review: do
+not create `tm-skills` behavior yet. Keep the base receipt canonical, use the
+V0.1 operating modes above, and wait for one more meaningful non-consulting,
+client-handoff, app-release, visual/design, proof, or assistant-runtime receipt
+before splitting templates.
