@@ -76,8 +76,8 @@ review_status: draft
 
 ## Next Experiment
 
-- Where to test this next: A future client command-room fit assessment or consulting proof/admin review.
-- What signal would confirm it is useful: Operators use the page to reach the right system without needing a separate explanation.
+- Where to test this next: A future client command-room fit assessment or a repeated operator-surface UAT receipt.
+- What signal would confirm it is useful: The first UAT receipt supports the noindex launcher boundary; repeat value is confirmed if operators use the page to reach the right system without needing a separate explanation.
 - What signal would make us drop it: The page becomes stale, duplicative, or confusing.
 
 ## Promotion Decision

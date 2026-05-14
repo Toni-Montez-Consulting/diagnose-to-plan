@@ -127,13 +127,17 @@ UAT Kit V0 should learn from the first Consulting Workspace OS pattern scan:
 The first practical use should be consulting or another already-active lane.
 Do not bulk-apply this kit across inactive repos.
 
-First pilot receipt:
+Pilot receipts:
 
 - `practice-os/steward/2026-05-14-consulting-live-funnel-uat-pilot-receipt.md`
+- `practice-os/steward/2026-05-14-consulting-public-assistant-uat-receipt.md`
+- `practice-os/steward/2026-05-14-consulting-admin-command-room-uat-receipt.md`
 
-Pilot result: `pass_with_caveats`. The consulting live-funnel lane is internally
-usable as operational evidence and pattern input, but public proof, real
-prospect conversion, and Hub intake cleanup automation remain separate gates.
+Pilot results so far are `pass_with_caveats`. The receipts support internal
+operational confidence, assistant/runtime boundary clarity, and operator-surface
+pattern learning, but public proof, real prospect conversion, hosted assistant
+runtime, authenticated admin workflows, and Hub cleanup automation remain
+separate gates.
 
 ## Done Criteria
 
@@ -159,3 +163,8 @@ After repeated use, consider:
 - a client handoff UAT variant;
 - `tm-skills` behavior only after real usage proves stable triggers and
   expected outputs.
+
+Second-wave read after three consulting receipts: do not create `tm-skills`
+behavior yet. The next useful refinement is a small review of receipt friction:
+whether public assistant, operator-surface, and proof-readiness receipts need
+separate lighter variants or whether the base receipt stays flexible enough.

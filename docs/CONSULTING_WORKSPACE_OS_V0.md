@@ -380,14 +380,17 @@ Canonical sources:
 - `practice-os/templates/uat-receipt.md`
 - `practice-os/steward/2026-05-14-uat-kit-v0-receipt.md`
 - `practice-os/steward/2026-05-14-consulting-live-funnel-uat-pilot-receipt.md`
+- `practice-os/steward/2026-05-14-consulting-public-assistant-uat-receipt.md`
+- `practice-os/steward/2026-05-14-consulting-admin-command-room-uat-receipt.md`
 
 Keep the kit manual and docs-first until repeated receipts prove what should
 become a narrower visual QA, design integrity, mobile app, client handoff, or
 agent-skill artifact.
 
-First pilot result: the consulting live-funnel / proof-readiness receipt landed
-as `pass_with_caveats`, which preserves internal operational confidence without
-turning synthetic smoke evidence into public proof.
+Pilot result: three consulting UAT receipts landed as `pass_with_caveats`,
+covering live-funnel proof-readiness, public assistant/no-runtime boundaries,
+and noindex admin command-room boundaries without turning internal evidence into
+public proof or runtime authority.
 
 ### Phase 4: Playbook Modules
 

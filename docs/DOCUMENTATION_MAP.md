@@ -339,6 +339,8 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
 - `docs/UAT_KIT_V0.md`: manual DTP-owned UAT standard for checking meaningful user journeys, mobile/desktop states, errors, empty states, privacy/proof boundaries, AI output, handoff, evidence, and caveats before shipping or handing off work.
 - `practice-os/templates/uat-receipt.md`: reusable receipt template for UAT evidence, claim limits, repo gates, manual checks, Integrity Layer notes, caveats, and final pass/hold/block decision.
 - `practice-os/steward/2026-05-14-consulting-live-funnel-uat-pilot-receipt.md`: first UAT Kit pilot receipt, applied to the consulting live-funnel/proof-readiness lane with a `pass_with_caveats` decision.
+- `practice-os/steward/2026-05-14-consulting-public-assistant-uat-receipt.md`: UAT Kit pilot receipt for the consulting public assistant no-widget/no-runtime source and refusal boundary.
+- `practice-os/steward/2026-05-14-consulting-admin-command-room-uat-receipt.md`: UAT Kit pilot receipt for the consulting `/admin` noindex/public-safe command-room boundary.
 - `docs/CONTEXTUAL_ACTIVATION_PLAYBOOK.md`: idea-to-roadmap routing contract for classifying new ideas, designs, development enhancements, project work, business moves, proof candidates, research items, and automation concepts.
 - `docs/ROADMAP_EXECUTION_BACKLOG.md`: Kanban-style epic/story execution view for the roadmap, with status, Done gates, and next actions.
 - `docs/ROADMAP_SYNTHESIS_GATE_LEDGER.md`: gate ledger for blocked/speculative synthesis candidates, including CCAAP public proof, current Hub dependency blockers, Azure readiness extraction, Hosted DTP promotion, manual availability, Architected Strength assistant pattern, and FAOS revisit.
