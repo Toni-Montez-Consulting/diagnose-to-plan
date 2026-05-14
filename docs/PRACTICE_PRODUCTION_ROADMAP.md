@@ -174,6 +174,8 @@ The Practice System Documentation Pack is the architecture and audit layer for t
   journeys, handoffs, public surfaces, operator surfaces, app releases,
   AI-assisted workflows, proof surfaces, and pattern candidates can record
   acceptance evidence, caveats, privacy/proof boundaries, and final decisions.
+  The first consulting live-funnel pilot landed as `pass_with_caveats`, keeping
+  internal operational confidence separate from public proof.
 - Practice OS includes the Live Intake To Practice OS Workflow and Prospect
   Intake Triage template so a live Hub intake can become a fit/route/artifact
   decision without expanding Hub authority or depending on chat memory.
