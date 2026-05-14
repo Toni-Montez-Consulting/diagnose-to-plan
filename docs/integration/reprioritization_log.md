@@ -1541,3 +1541,39 @@ Next review trigger:
 - A real prospect intake needs triage and follow-up.
 - A future receipt feels too heavy, too light, or unclear enough to justify a
   narrower visual QA, design integrity, mobile app, or client handoff variant.
+
+## 2026-05-14: UAT Kit Second-Wave Consulting Pilots Completed
+
+Source:
+
+- `practice-os/steward/2026-05-14-consulting-public-assistant-uat-receipt.md`
+- `practice-os/steward/2026-05-14-consulting-admin-command-room-uat-receipt.md`
+- `docs/assistant-manifests/consulting-public-v0.md`
+- `practice-os/patterns/admin-surface-operating-room.md`
+- `practice-os/research/pattern-candidates/2026-05-14-noindex-admin-command-room-boundary.md`
+
+Change:
+
+- Applied UAT Kit V0 to two additional consulting lanes:
+  public assistant/no-runtime boundary and noindex admin command-room boundary.
+- Recorded current consulting repo gates: assistant QA, route smoke, build,
+  doctor, and gitleaks.
+- Kept assistant runtime, authenticated admin workflows, public proof, Hub
+  runtime work, hosted DTP, private-vault work, and `tm-skills` behavior out of
+  scope.
+
+Priority impact:
+
+1. UAT Kit V0 now has three consulting receipts across proof-readiness,
+   AI-assistant planning, and operator-surface boundaries.
+2. All three landed as `pass_with_caveats`, which is a useful signal: the base
+   UAT receipt is doing its job by preserving limits instead of inflating
+   readiness.
+3. The next move is not skill creation yet; review receipt friction and decide
+   whether narrower variants are warranted.
+
+Next review trigger:
+
+- A fourth UAT receipt repeats the same caveat shape.
+- A runtime assistant or authenticated admin workflow is explicitly reopened.
+- Toni asks whether UAT Kit should become a reusable `tm-skills` behavior.
