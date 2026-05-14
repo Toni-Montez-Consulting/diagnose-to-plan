@@ -119,8 +119,10 @@ Internal DTP sources used:
 
 1. Use the Launch Momentum Receipt only after the Greg meeting if Toni decides
    to capture the soft-launch signal.
-2. Use the Environment Ledger and Platform Preview Receipt on the next Hub
-   runtime/dependency cleanup lane.
+2. First use complete: Hub dependency cleanup was captured in
+   `practice-os/steward/2026-05-14-hub-dependency-cleanup-platform-preview-receipt.md`
+   and
+   `practice-os/steward/2026-05-14-hub-dependency-cleanup-environment-ledger.md`.
 3. Use the Data Boundary Ledger on the next Omnexus release-proof or Hub data
    cleanup lane.
 4. Use the Client Handoff Console Spec when CCAAP, DeMario, or another client
