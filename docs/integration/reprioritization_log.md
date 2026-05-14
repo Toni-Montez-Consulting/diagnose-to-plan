@@ -10,6 +10,50 @@ review_status: draft
 Use this log after meaningful Practice OS changes so backlog movement is
 deliberate and visible.
 
+## 2026-05-13: Consulting Workspace OS And Requirements Gatherer V1 Added
+
+Source:
+
+- Toni's self-email idea for a Consulting Workspace OS.
+- Toni's requirement that the plan add a systematic Requirements Gatherer
+  without removing the Workspace OS idea.
+- `docs/CONSULTING_WORKSPACE_OS_V0.md`
+- `practice-os/templates/requirements-gathering-brief.md`
+- `practice-os/templates/requirements-decision-ledger.md`
+- `practice-os/steward/2026-05-13-consulting-workspace-os-requirements-gatherer-v1.md`
+- `practice-os/kaizen/intake.jsonl`
+
+Change:
+
+- Added a DTP-owned Consulting Workspace OS V0 plan that keeps the system
+  internal, additive, and source-of-truth aligned.
+- Added Requirements Gatherer V1 as the first new module: risk-based
+  activation, Micro/Standard/Deep/Workshop tiers, 5-6 question batches,
+  escalation with permission, build-ready brief output, and memory promotion
+  boundaries.
+- Added durable templates for requirements briefs and decision ledgers.
+- Kept `tm-skills` as a future skill candidate only after the DTP protocol has
+  been reviewed once.
+- Preserved the boundary that consulting is the first pilot, while public copy,
+  app code, Hub runtime, hosted DTP, global installs, and proof publication
+  remain untouched.
+
+Priority impact:
+
+1. Future substantial requests should use Requirements Gatherer instead of ad
+   hoc clarifying questions when discovery would materially improve the build.
+2. Consulting is the first pattern-scan pilot for the Workspace OS, but DTP
+   remains the source of truth.
+3. The next implementation move is to pilot Requirements Gatherer on real
+   requests and run the consulting pattern scan, not to build dashboards,
+   hosted workflow, or a `tm-skills` skill immediately.
+
+Next review trigger:
+
+- Three meaningful requests use Requirements Gatherer.
+- Toni says the gatherer is too heavy, too light, or still not asking enough.
+- The consulting pattern scan produces reusable pattern candidates.
+
 ## 2026-05-12: CMS And Editor Tooling Moved To Backburner Planning Lane
 
 Source:
@@ -99,7 +143,7 @@ Source:
 
 - Toni confirmed the naming priority stack as compounding human capability,
   disciplined ambition, and builder-led delivery.
-- Privacy-safe review of selected `founder@tonimontez.co` self-forwarded notes
+- Privacy-safe review of selected founder-mailbox self-forwarded notes
   and existing DTP source thesis docs.
 - `docs/PRACTICE_BRAND_NAMING_BRIEF_V2.md`
 
@@ -792,7 +836,7 @@ Source:
 
 - Toni's Google Workspace + Business Admin Operating Plan
 - Toni's Apple Reminders capture request
-- `founder@tonimontez.co` live workspace identity target
+- Founder mailbox live workspace identity target
 - `docs/BUSINESS_BRAIN_OPERATING_SYSTEM.md`
 - `docs/NOTION_MIRROR_V0.md`
 - `docs/OFFER_LED_PRACTICE_PACKAGING.md`
@@ -813,7 +857,7 @@ Change:
 
 Priority impact:
 
-1. `founder@tonimontez.co` is the active identity for external meetings.
+1. The founder mailbox is the active identity for external meetings.
 2. Google Calendar/Meet connector, booking pages, Meet links, and mailbox flow
    are tested; only starter DMARC remains in the Workspace auth lane.
 3. Apple Reminders remains the task/action layer; Google Tasks is out of scope
@@ -1262,7 +1306,7 @@ Change:
 - Rendered Tony-provided board bios as draft owner-review content.
 - Assigned only the exact Vernell Gregg filename match in the board page and
   left generic or mismatched images unassigned.
-- Staged `info@citizensandparents.org` as a candidate public contact route
+- Staged the CCAAP public contact mailbox as a candidate public contact route
   while keeping spam/routing approval as a launch blocker.
 
 Priority impact:
@@ -1350,3 +1394,78 @@ Next review trigger:
 - GitHub auto-deploy is connected in Vercel.
 - Leah/Tony decide whether direct owner editing is needed before launch or can
   wait until after launch.
+
+## 2026-05-14: Integrity Layer Added To Consulting Workspace OS
+
+Source:
+
+- Toni's Integrity Layer / Craft Standard concept.
+- `docs/CONSULTING_WORKSPACE_OS_V0.md`
+- `practice-os/policies/integrity-layer-craft-standard.md`
+- `practice-os/templates/pre-ship-integrity-gate.md`
+
+Change:
+
+- Promoted the quality thesis into DTP as an internal Integrity Layer, not a
+  public marketing claim or parallel `_system` tree.
+- Added a practical Craft Standard for truth, usefulness, restraint, handoff,
+  durability, clarity, and AI-output judgment under pressure.
+- Added the first Pre-Ship Integrity Gate template for meaningful public,
+  client-facing, operator-facing, AI-assisted, data-sensitive, or reusable work.
+- Wired the layer into the Consulting Workspace OS, documentation map,
+  production roadmap, backlog, and steward receipt.
+
+Priority impact:
+
+1. Requirements Gatherer now handles discovery while Integrity Layer handles
+   quality and handoff posture before ship.
+2. The next consulting pattern scan should include integrity questions before
+   any pattern candidate is promoted.
+3. UAT Kit V0 should include quality/integrity UAT instead of only technical
+   pass/fail checks.
+
+Next review trigger:
+
+- A public, client-facing, operator-facing, AI-assisted, or reusable artifact is
+  ready to ship.
+- The consulting pilot pattern scan produces promotion candidates.
+- Toni says the standard feels too heavy, too abstract, too soft, or not
+  strong enough.
+
+## 2026-05-14: First Consulting Workspace OS Pattern Scan Completed
+
+Source:
+
+- `practice-os/efficiency/consulting-evidence-index.md`
+- `practice-os/steward/2026-05-11-live-funnel-closeout-receipt.md`
+- `practice-os/steward/2026-05-11-live-intake-operator-workflow-receipt.md`
+- `docs/CONSULTING_WORKSPACE_OS_V0.md`
+
+Change:
+
+- Created four internal draft pattern candidates from the consulting/Hub live
+  funnel evidence:
+  - Hub-first intake with DTP source of truth.
+  - Post-submit Diagnostic Call gating.
+  - Noindex admin command-room boundary.
+  - Proof/readiness receipt with synthetic-intake cleanup debt.
+- Applied the Integrity Layer to each draft through misuse risk, dependency
+  risk, clarity/complexity, proof required, simpler version, safer version, and
+  documentation-before-ship checks.
+- Kept all four candidates in draft state under
+  `practice-os/research/pattern-candidates/`; none were promoted to
+  `practice-os/patterns/`.
+
+Priority impact:
+
+1. The Consulting Workspace OS has now completed its first lean pilot scan.
+2. The next Workspace OS proof point is real-use review, not more pattern
+   inventory.
+3. Requirements Gatherer should be applied on the next two meaningful requests
+   before `tm-skills` skill creation is reconsidered.
+
+Next review trigger:
+
+- A real prospect intake uses the Hub-first intake and Diagnostic Call route.
+- A client/admin surface needs a command-room boundary decision.
+- UAT Kit V0 starts and can reuse the proof/readiness receipt candidate.

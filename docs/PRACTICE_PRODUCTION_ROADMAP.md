@@ -49,7 +49,7 @@ and collaboration rule.
 
 The Google Workspace + Business Admin lane is now a first-class Business Brain
 slice. `docs/BUSINESS_ADMIN_OPERATING_SYSTEM.md` owns the DTP-first planning
-view for `founder@tonimontez.co`, Google Calendar/Meet, Apple Reminders capture,
+view for the founder mailbox, Google Calendar/Meet, Apple Reminders capture,
 LLC readiness, EIN/banking/tax/contracts/insurance prompts, brand assets, and
 admin cadence. `docs/INTERNAL_OFFER_REPERTOIRE_CATALOG.md` captures reusable
 capabilities from Toni's own operations and client work before they become
@@ -60,6 +60,18 @@ session rehydration and input routing. It uses
 `docs/PRACTICE_INTELLIGENCE_CONTROL_PLANE.md` to decide where new replies,
 ideas, proof claims, tool requests, assistant plans, finance/admin ideas, and
 memory candidates should land before any infrastructure expands.
+
+The Consulting Workspace OS V0 is captured in
+`docs/CONSULTING_WORKSPACE_OS_V0.md`. It preserves Toni's idea for an internal
+operating layer that makes every build improve the next one, with consulting as
+the first pilot and DTP as the source of truth. Its first new module is the
+Requirements Gatherer: a risk-sized discovery protocol that turns clarifying
+questions into Micro, Standard, Deep, or Workshop requirements cycles, then
+produces a build-ready brief and decision ledger before meaningful work starts.
+It also includes the Integrity Layer: a craft and quality standard for truth,
+usefulness, restraint, durability, handoff, AI usage, and strength under
+pressure. It does not create a parallel `_system` tree, change public copy, or
+create a `tm-skills` skill until the DTP protocol has been reviewed once.
 
 The Live Intake To Practice OS Workflow is the V0 bridge from working runtime
 intake to operator action. It uses
@@ -147,6 +159,14 @@ The Practice System Documentation Pack is the architecture and audit layer for t
 - Practice OS includes the Practice Intelligence Control Plane so broad
   client/infrastructure sessions can rehydrate from DTP, git, Gmail, Calendar,
   Notion, steward receipts, and active kit statuses before acting.
+- Practice OS includes the Consulting Workspace OS V0 and Requirements Gatherer
+  V1 planning layer so cross-project work can use tiered requirements
+  discovery, question batching, escalation, build-ready briefs, and decision
+  ledgers before implementation.
+- Practice OS includes the Integrity Layer Craft Standard and Pre-Ship
+  Integrity Gate so meaningful public, client-facing, operator-facing,
+  AI-assisted, data-sensitive, or reusable work can be checked for truth,
+  usefulness, restraint, durability, clarity, and handoff before ship.
 - Practice OS includes the Live Intake To Practice OS Workflow and Prospect
   Intake Triage template so a live Hub intake can become a fit/route/artifact
   decision without expanding Hub authority or depending on chat memory.
