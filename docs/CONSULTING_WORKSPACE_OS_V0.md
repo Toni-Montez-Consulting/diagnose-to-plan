@@ -92,7 +92,7 @@ This slice is intentionally additive.
 | Pattern loop | Reviewed bottleneck patterns exist, but consulting-specific delivery patterns are not yet scanned as a batch | Use consulting as the first scoped pattern scan |
 | Requirements gathering | Question checkpoint rule exists, but not a full tiered requirements protocol | Add Requirements Gatherer V1 in this plan |
 | Integrity / craft standard | Custom UI, proof, handoff, and anti-slop rules exist, but the deeper quality standard is scattered | Add Integrity Layer V0 and a Pre-Ship Integrity Gate |
-| UAT and visual QA kit | Verification and craft standards exist, but reusable UAT package is not yet consolidated | Make UAT Kit the first follow-on module |
+| UAT and visual QA kit | UAT Kit V0 now exists as a manual DTP standard and receipt template | Pilot it on the next meaningful consulting, app-release, client-handoff, or proof-readiness check |
 | Tool registry | Tooling Steward exists, but tool-choice facts are not yet a reusable registry | Keep as later module after pattern loop |
 | Design reference vault | Custom craft standard exists, but reusable reference/component rules are early | Keep as later module after UAT Kit |
 | Skill packaging | `tm-skills` exists, but Requirements Gatherer is not yet a skill | Defer skill until protocol survives one review |
@@ -371,6 +371,18 @@ language, pricing, or a `tm-skills` behavior change.
   manual gates, and evidence receipts into one reusable package.
 - Include Quality and Integrity UAT checks from the Integrity Layer.
 - Start with consulting and one app or client project.
+
+Status: V0 added on 2026-05-14.
+
+Canonical sources:
+
+- `docs/UAT_KIT_V0.md`
+- `practice-os/templates/uat-receipt.md`
+- `practice-os/steward/2026-05-14-uat-kit-v0-receipt.md`
+
+Keep the kit manual and docs-first until repeated receipts prove what should
+become a narrower visual QA, design integrity, mobile app, client handoff, or
+agent-skill artifact.
 
 ### Phase 4: Playbook Modules
 

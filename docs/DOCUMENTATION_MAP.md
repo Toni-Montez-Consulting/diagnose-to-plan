@@ -336,6 +336,8 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
 - `docs/CONSULTING_WORKSPACE_OS_V0.md`: DTP-owned internal operating-system map for the Consulting Workspace OS, Requirements Gatherer V1, and Integrity Layer V0. Use it when Toni asks agents to gather requirements more deeply, when a cross-project request needs risk-sized discovery, when work needs a truth/usefulness/restraint/handoff gate, or when consulting work should become reusable patterns without creating a parallel `_system` tree.
 - `practice-os/policies/integrity-layer-craft-standard.md`: internal quality standard for the Consulting Workspace OS. Use it when a build, handoff, public claim, AI-assisted output, pattern, UAT pass, design review, or client/operator surface needs the deeper craft standard underneath process.
 - `practice-os/templates/pre-ship-integrity-gate.md`: checklist template for meaningful public, client-facing, operator-facing, AI-assisted, data-sensitive, or reusable work before launch, handoff, proof publication, app release, or pattern promotion.
+- `docs/UAT_KIT_V0.md`: manual DTP-owned UAT standard for checking meaningful user journeys, mobile/desktop states, errors, empty states, privacy/proof boundaries, AI output, handoff, evidence, and caveats before shipping or handing off work.
+- `practice-os/templates/uat-receipt.md`: reusable receipt template for UAT evidence, claim limits, repo gates, manual checks, Integrity Layer notes, caveats, and final pass/hold/block decision.
 - `docs/CONTEXTUAL_ACTIVATION_PLAYBOOK.md`: idea-to-roadmap routing contract for classifying new ideas, designs, development enhancements, project work, business moves, proof candidates, research items, and automation concepts.
 - `docs/ROADMAP_EXECUTION_BACKLOG.md`: Kanban-style epic/story execution view for the roadmap, with status, Done gates, and next actions.
 - `docs/ROADMAP_SYNTHESIS_GATE_LEDGER.md`: gate ledger for blocked/speculative synthesis candidates, including CCAAP public proof, current Hub dependency blockers, Azure readiness extraction, Hosted DTP promotion, manual availability, Architected Strength assistant pattern, and FAOS revisit.
@@ -515,6 +517,10 @@ Do not update `hub-prompts` or `hub-registry` just because the roadmap changes. 
   `practice-os/templates/pre-ship-integrity-gate.md` when meaningful work needs
   a truth, usefulness, restraint, durability, handoff, AI-usage, or
   pattern-promotion check before shipping or reuse.
+- Use `docs/UAT_KIT_V0.md` and `practice-os/templates/uat-receipt.md` when a
+  meaningful user journey, handoff, public surface, operator surface, app
+  release, AI-assisted workflow, proof surface, or pattern candidate needs
+  acceptance evidence and caveats.
 - Use `docs/WORKSPACE_OPERATOR_RUNBOOK.md` before running commands or changing files across repo boundaries. It keeps `dtp workspace report` read-only and avoids accidental deploy/migration/source-of-truth drift.
 - Use `dtp workspace recover --dry-run` before claiming older completed, active, blocked, parked, cancelled, or superseded work is missing from the cockpit. Review the ignored output, then import approved rows with `dtp workspace recover --apply --approved PATH`.
 - Use `docs/PUBLIC_PROOF_PROMOTION_RUNBOOK.md` before moving any screenshot, claim, metric, client/project artifact, internal system evidence, or proof candidate toward public consulting copy.

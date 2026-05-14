@@ -1469,3 +1469,41 @@ Next review trigger:
 - A real prospect intake uses the Hub-first intake and Diagnostic Call route.
 - A client/admin surface needs a command-room boundary decision.
 - UAT Kit V0 starts and can reuse the proof/readiness receipt candidate.
+
+## 2026-05-14: UAT Kit V0 Added
+
+Source:
+
+- `docs/CONSULTING_WORKSPACE_OS_V0.md`
+- `practice-os/policies/integrity-layer-craft-standard.md`
+- `practice-os/templates/pre-ship-integrity-gate.md`
+- `practice-os/research/pattern-candidates/2026-05-14-proof-readiness-receipt-with-cleanup-debt.md`
+- `docs/PRACTICE_VERIFICATION_SPINE.md`
+- `docs/QA_AUDIT_SOURCE_POLICY_PILOT_2026-05-10.md`
+
+Change:
+
+- Added `docs/UAT_KIT_V0.md` as the manual DTP-owned UAT standard for
+  meaningful user journeys, mobile/desktop states, error and empty states,
+  privacy/proof boundaries, AI-output review, handoff, evidence, and caveats.
+- Added `practice-os/templates/uat-receipt.md` as the reusable evidence receipt.
+- Added a steward receipt at
+  `practice-os/steward/2026-05-14-uat-kit-v0-receipt.md`.
+- Wired UAT Kit V0 into the Consulting Workspace OS, documentation map,
+  production roadmap, and execution backlog.
+
+Priority impact:
+
+1. Workspace OS now has discovery, integrity, and UAT layers.
+2. The next meaningful launch, app-release, client-handoff, proof-readiness, or
+   pattern-promotion check can produce a UAT receipt instead of a chat-only QA
+   summary.
+3. `tm-skills` behavior remains deferred until real UAT receipts prove stable
+   triggers and expected outputs.
+
+Next review trigger:
+
+- A UAT receipt feels too heavy or too light.
+- A public/client/operator-facing ship decision lacks enough evidence.
+- A repeated visual QA, design integrity, mobile-app, or handoff check deserves
+  its own narrower template.
