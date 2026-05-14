@@ -70,8 +70,11 @@ questions into Micro, Standard, Deep, or Workshop requirements cycles, then
 produces a build-ready brief and decision ledger before meaningful work starts.
 It also includes the Integrity Layer: a craft and quality standard for truth,
 usefulness, restraint, durability, handoff, AI usage, and strength under
-pressure. It does not create a parallel `_system` tree, change public copy, or
-create a `tm-skills` skill until the DTP protocol has been reviewed once.
+pressure. UAT Kit V0 now adds the manual acceptance layer for user journeys,
+mobile/desktop behavior, error and empty states, proof/privacy boundaries,
+evidence, caveats, and handoff readiness. This lane does not create a parallel
+`_system` tree, change public copy, or create a `tm-skills` skill until the DTP
+protocol has been reviewed through real use.
 
 The Live Intake To Practice OS Workflow is the V0 bridge from working runtime
 intake to operator action. It uses
@@ -167,6 +170,10 @@ The Practice System Documentation Pack is the architecture and audit layer for t
   Integrity Gate so meaningful public, client-facing, operator-facing,
   AI-assisted, data-sensitive, or reusable work can be checked for truth,
   usefulness, restraint, durability, clarity, and handoff before ship.
+- Practice OS includes UAT Kit V0 and a reusable UAT receipt so meaningful
+  journeys, handoffs, public surfaces, operator surfaces, app releases,
+  AI-assisted workflows, proof surfaces, and pattern candidates can record
+  acceptance evidence, caveats, privacy/proof boundaries, and final decisions.
 - Practice OS includes the Live Intake To Practice OS Workflow and Prospect
   Intake Triage template so a live Hub intake can become a fit/route/artifact
   decision without expanding Hub authority or depending on chat memory.
