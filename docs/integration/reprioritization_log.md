@@ -1507,3 +1507,37 @@ Next review trigger:
 - A public/client/operator-facing ship decision lacks enough evidence.
 - A repeated visual QA, design integrity, mobile-app, or handoff check deserves
   its own narrower template.
+
+## 2026-05-14: First UAT Kit Pilot Completed
+
+Source:
+
+- `docs/UAT_KIT_V0.md`
+- `practice-os/templates/uat-receipt.md`
+- `practice-os/steward/2026-05-14-consulting-live-funnel-uat-pilot-receipt.md`
+- `practice-os/efficiency/consulting-evidence-index.md`
+- `practice-os/steward/2026-05-11-live-funnel-closeout-receipt.md`
+
+Change:
+
+- Applied UAT Kit V0 to the consulting live-funnel / proof-readiness lane.
+- Recorded current consulting repo gates: build, route smoke, assistant QA,
+  doctor, matrix, and gitleaks.
+- Preserved the May 11 production live-funnel receipt as source evidence
+  without running a new production intake submission.
+- Recorded the UAT decision as `pass_with_caveats`.
+
+Priority impact:
+
+1. UAT Kit V0 is no longer only a template; it has one real consulting pilot.
+2. The Workspace OS now has a working example of Requirements Gatherer,
+   Integrity Layer, and UAT Kit behavior in the same lane.
+3. Public proof and Hub cleanup stay separate from internal operational
+   confidence.
+
+Next review trigger:
+
+- One or two more meaningful UAT receipts are created.
+- A real prospect intake needs triage and follow-up.
+- A future receipt feels too heavy, too light, or unclear enough to justify a
+  narrower visual QA, design integrity, mobile app, or client handoff variant.

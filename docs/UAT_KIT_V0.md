@@ -127,6 +127,14 @@ UAT Kit V0 should learn from the first Consulting Workspace OS pattern scan:
 The first practical use should be consulting or another already-active lane.
 Do not bulk-apply this kit across inactive repos.
 
+First pilot receipt:
+
+- `practice-os/steward/2026-05-14-consulting-live-funnel-uat-pilot-receipt.md`
+
+Pilot result: `pass_with_caveats`. The consulting live-funnel lane is internally
+usable as operational evidence and pattern input, but public proof, real
+prospect conversion, and Hub intake cleanup automation remain separate gates.
+
 ## Done Criteria
 
 A UAT pass is complete when:

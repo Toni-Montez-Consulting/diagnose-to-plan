@@ -76,8 +76,8 @@ review_status: draft
 
 ## Next Experiment
 
-- Where to test this next: UAT Kit V0 and the next live runtime smoke with cleanup or rollback implications.
-- What signal would confirm it is useful: A future agent can distinguish launch readiness, proof readiness, and cleanup debt from the receipt alone.
+- Where to test this next: One or two more UAT receipts on app-release, client-handoff, proof-readiness, or operator-surface checks.
+- What signal would confirm it is useful: The first UAT pilot already preserved a `pass_with_caveats` decision; repeat value is confirmed if future agents can distinguish launch readiness, proof readiness, and cleanup debt from the receipt alone.
 - What signal would make us drop it: The receipt becomes stale or never informs follow-up decisions.
 
 ## Promotion Decision
