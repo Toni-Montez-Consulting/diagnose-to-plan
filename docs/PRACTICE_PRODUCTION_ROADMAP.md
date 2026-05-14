@@ -490,6 +490,19 @@ Complete these before treating the practice as ready for soft launch.
    - Use `docs/PRACTICE_SYSTEM_OPTIMIZATION_PLAN.md` to convert findings into epics, stories, Done gates, and repo-specific execution.
    - Propagate lightweight local pointers into other repos only when their touch lane is active.
 
+16. Use Platform Operating Patterns V0 as the bridge between tool inspiration
+    and practice behavior.
+   - Use `docs/PLATFORM_OPERATING_PATTERNS_V0.md` before turning
+     Vercel/Supabase-style ideas into repo work.
+   - Use preview receipts for readiness claims, environment ledgers for
+     hosted/runtime state, data boundary ledgers for Supabase/Postgres/auth or
+     storage, client handoff console specs for owner-facing surfaces, and
+     launch momentum receipts only after a real launch signal is safe to
+     capture.
+   - Keep this manual/docs-first. Do not mandate a stack, mutate production,
+     publish proof, or create `tm-skills` behavior until repeated use proves
+     the pattern.
+
 ## Mid Term
 
 Build these after the near-term documentation and pilot path are stable.
