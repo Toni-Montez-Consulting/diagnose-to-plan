@@ -499,6 +499,26 @@ Updated on 2026-05-12:
   while preserving DTP source-of-truth, privacy, proof, owner-approval, and
   implementation gates.
 
+Updated on 2026-05-13:
+
+- Added Requirements Gatherer as a future `tm-skills` skill candidate only.
+  The canonical protocol lives in
+  `docs/CONSULTING_WORKSPACE_OS_V0.md`, with DTP templates for the
+  requirements brief and decision ledger.
+- Do not create a `requirements-gatherer` skill folder until the DTP protocol
+  has been used and reviewed at least once across meaningful work.
+
+Updated on 2026-05-14:
+
+- Added the Integrity Layer / Craft Standard as a DTP-owned policy first, not a
+  `tm-skills` skill. The canonical standard lives in
+  `practice-os/policies/integrity-layer-craft-standard.md`, with
+  `practice-os/templates/pre-ship-integrity-gate.md` as the first operating
+  template.
+- Do not create Integrity Layer skill behavior until the pre-ship gate has been
+  applied in real consulting/pattern/UAT work and reviewed for weight,
+  triggers, anti-triggers, and expected outputs.
+
 ## Deferred
 
 - Multi-user skill product.
@@ -507,6 +527,11 @@ Updated on 2026-05-12:
 - Skill telemetry beyond local evals and `MISFIRES.md`.
 - DTP `skills-keeper` automation before there is real misfire/update history.
 - Stack overlays before the base skills prove useful.
+- `requirements-gatherer` skill before the DTP protocol has one reviewed pilot
+  cycle, stable trigger/anti-trigger examples, and expected-output evals.
+- Integrity Layer skill behavior before the DTP policy and pre-ship gate have
+  real reviewed usage, stable trigger/anti-trigger examples, and expected-output
+  evals.
 - `cms-editor-fit` skill before repeated CMS/editor decisions produce stable
   trigger examples, anti-triggers, output evals, and DTP routing evidence.
 
