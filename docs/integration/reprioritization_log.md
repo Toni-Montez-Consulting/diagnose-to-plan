@@ -1577,3 +1577,40 @@ Next review trigger:
 - A fourth UAT receipt repeats the same caveat shape.
 - A runtime assistant or authenticated admin workflow is explicitly reopened.
 - Toni asks whether UAT Kit should become a reusable `tm-skills` behavior.
+
+## 2026-05-14: Greg Part 2 Meeting Prep Added
+
+Source:
+
+- `engagements/greg-thegrantapp/case-study-sprint/active-workflow-spine.md`
+- `engagements/greg-thegrantapp/case-study-sprint/post-meeting-receipt-2026-05-08.md`
+- `engagements/greg-thegrantapp/case-study-sprint/ux-trust-review-notes-2026-05-09.md`
+- `engagements/greg-thegrantapp/case-study-sprint/source-material-index.md`
+- `practice-os/templates/launch-momentum-receipt.md`
+- Gmail message `19e261fcc7d837b9`
+
+Change:
+
+- Added `meeting-brief-2026-05-15.md` for Greg's Part 2 /
+  launch-momentum review.
+- Updated the Greg active workflow spine so the next action is the May 15
+  soft-launch/ad signal review and private Launch Momentum Receipt decision.
+- Added a source-index pointer for Toni's 2026-05-14 self-sent Greg notes email
+  with ten inline PNGs, while keeping the images out of git.
+
+Priority impact:
+
+1. Greg is the active next client-operating lane after the docs/protocol
+   cleanup.
+2. The next move is a meeting-readable brief, not a public proof packet or
+   product-build scope.
+3. Launch Momentum Receipt remains the likely next artifact only after Greg
+   confirms the soft-launch facts, evidence limits, redaction needs, and next
+   decision.
+
+Next review trigger:
+
+- The May 15 Greg meeting completes.
+- Greg confirms what the Facebook/ad signal proves and what it does not prove.
+- Toni chooses whether to create the private Launch Momentum Receipt or convert
+  the UX Trust Review Notes into a client-facing mini-deliverable.
