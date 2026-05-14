@@ -1431,3 +1431,41 @@ Next review trigger:
 - The consulting pilot pattern scan produces promotion candidates.
 - Toni says the standard feels too heavy, too abstract, too soft, or not
   strong enough.
+
+## 2026-05-14: First Consulting Workspace OS Pattern Scan Completed
+
+Source:
+
+- `practice-os/efficiency/consulting-evidence-index.md`
+- `practice-os/steward/2026-05-11-live-funnel-closeout-receipt.md`
+- `practice-os/steward/2026-05-11-live-intake-operator-workflow-receipt.md`
+- `docs/CONSULTING_WORKSPACE_OS_V0.md`
+
+Change:
+
+- Created four internal draft pattern candidates from the consulting/Hub live
+  funnel evidence:
+  - Hub-first intake with DTP source of truth.
+  - Post-submit Diagnostic Call gating.
+  - Noindex admin command-room boundary.
+  - Proof/readiness receipt with synthetic-intake cleanup debt.
+- Applied the Integrity Layer to each draft through misuse risk, dependency
+  risk, clarity/complexity, proof required, simpler version, safer version, and
+  documentation-before-ship checks.
+- Kept all four candidates in draft state under
+  `practice-os/research/pattern-candidates/`; none were promoted to
+  `practice-os/patterns/`.
+
+Priority impact:
+
+1. The Consulting Workspace OS has now completed its first lean pilot scan.
+2. The next Workspace OS proof point is real-use review, not more pattern
+   inventory.
+3. Requirements Gatherer should be applied on the next two meaningful requests
+   before `tm-skills` skill creation is reconsidered.
+
+Next review trigger:
+
+- A real prospect intake uses the Hub-first intake and Diagnostic Call route.
+- A client/admin surface needs a command-room boundary decision.
+- UAT Kit V0 starts and can reuse the proof/readiness receipt candidate.

@@ -329,6 +329,17 @@ cards from already-proven work:
 The output should be a small set of internal pattern candidates, not public copy
 or new consulting-site changes.
 
+First lean scan completed on 2026-05-14 as internal draft candidates:
+
+- `practice-os/research/pattern-candidates/2026-05-14-hub-first-intake-dtp-source-of-truth.md`
+- `practice-os/research/pattern-candidates/2026-05-14-post-submit-diagnostic-call-gating.md`
+- `practice-os/research/pattern-candidates/2026-05-14-noindex-admin-command-room-boundary.md`
+- `practice-os/research/pattern-candidates/2026-05-14-proof-readiness-receipt-with-cleanup-debt.md`
+
+These are not promoted playbook patterns. Review them after real use before
+moving anything into `practice-os/patterns/`, public copy, client advice, offer
+language, pricing, or a `tm-skills` behavior change.
+
 ## Long-Term Roadmap
 
 ### Phase 0: Map And Lock V0
