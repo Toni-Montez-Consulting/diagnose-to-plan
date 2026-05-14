@@ -178,6 +178,11 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
   Steward template for testing whether a firm, industry, founder, consultancy,
   infrastructure, or market observation contains a transferable business lesson
   for Toni's practice.
+- `practice-os/templates/platform-preview-receipt.md`,
+  `environment-ledger.md`, `data-boundary-ledger.md`,
+  `client-handoff-console-spec.md`, and `launch-momentum-receipt.md`:
+  Platform Operating Patterns templates for preview evidence, environment
+  state, data boundaries, handoff consoles, and launch-signal capture.
 - `practice-os/templates/research-decision-record.md`: simple adopt, pilot,
   watch, reject, or park record for source-backed research decisions.
 - `practice-os/templates/research-source-freshness-item.md`: promoted reviewed
@@ -338,6 +343,8 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
 - `practice-os/templates/pre-ship-integrity-gate.md`: checklist template for meaningful public, client-facing, operator-facing, AI-assisted, data-sensitive, or reusable work before launch, handoff, proof publication, app release, or pattern promotion.
 - `docs/UAT_KIT_V0.md`: manual DTP-owned UAT standard for checking meaningful user journeys, mobile/desktop states, errors, empty states, privacy/proof boundaries, AI output, handoff, evidence, and caveats before shipping or handing off work.
 - `practice-os/templates/uat-receipt.md`: reusable receipt template for UAT evidence, claim limits, repo gates, manual checks, Integrity Layer notes, caveats, and final pass/hold/block decision.
+- `docs/PLATFORM_OPERATING_PATTERNS_V0.md`: DTP-owned manual layer for extracting Vercel/Supabase-style operating behavior into tool-neutral practice patterns: preview-to-production claim levels, environment ledgers, data boundary ledgers, client handoff consoles, pattern/template libraries, and launch momentum receipts.
+- `practice-os/steward/2026-05-14-platform-operating-patterns-v0.md`: receipt for the Platform Operating Patterns V0 docs/protocol slice, including the soft-launch hold boundary for Greg and the first safe follow-up lanes.
 - `practice-os/steward/2026-05-14-consulting-live-funnel-uat-pilot-receipt.md`: first UAT Kit pilot receipt, applied to the consulting live-funnel/proof-readiness lane with a `pass_with_caveats` decision.
 - `practice-os/steward/2026-05-14-consulting-public-assistant-uat-receipt.md`: UAT Kit pilot receipt for the consulting public assistant no-widget/no-runtime source and refusal boundary.
 - `practice-os/steward/2026-05-14-consulting-admin-command-room-uat-receipt.md`: UAT Kit pilot receipt for the consulting `/admin` noindex/public-safe command-room boundary.
@@ -526,6 +533,10 @@ Do not update `hub-prompts` or `hub-registry` just because the roadmap changes. 
   meaningful user journey, handoff, public surface, operator surface, app
   release, AI-assisted workflow, proof surface, or pattern candidate needs
   acceptance evidence and caveats.
+- Use `docs/PLATFORM_OPERATING_PATTERNS_V0.md` and its templates when a lane
+  needs Vercel/Supabase-style operating discipline without runtime changes:
+  preview evidence, environment state, data boundaries, handoff consoles, or
+  launch momentum capture.
 - Use `docs/WORKSPACE_OPERATOR_RUNBOOK.md` before running commands or changing files across repo boundaries. It keeps `dtp workspace report` read-only and avoids accidental deploy/migration/source-of-truth drift.
 - Use `dtp workspace recover --dry-run` before claiming older completed, active, blocked, parked, cancelled, or superseded work is missing from the cockpit. Review the ignored output, then import approved rows with `dtp workspace recover --apply --approved PATH`.
 - Use `docs/PUBLIC_PROOF_PROMOTION_RUNBOOK.md` before moving any screenshot, claim, metric, client/project artifact, internal system evidence, or proof candidate toward public consulting copy.

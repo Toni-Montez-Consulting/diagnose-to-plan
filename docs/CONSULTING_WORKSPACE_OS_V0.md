@@ -94,6 +94,7 @@ This slice is intentionally additive.
 | Integrity / craft standard | Custom UI, proof, handoff, and anti-slop rules exist, but the deeper quality standard is scattered | Add Integrity Layer V0 and a Pre-Ship Integrity Gate |
 | UAT and visual QA kit | UAT Kit V0 now exists as a manual DTP standard and receipt template | Pilot it on the next meaningful consulting, app-release, client-handoff, or proof-readiness check |
 | Tool registry | Tooling Steward exists, but tool-choice facts are not yet a reusable registry | Keep as later module after pattern loop |
+| Platform operating patterns | Vercel/Supabase-style behaviors are useful, but not yet translated into tool-neutral practice patterns | Add Platform Operating Patterns V0 as manual templates and draft pattern candidates |
 | Design reference vault | Custom craft standard exists, but reusable reference/component rules are early | Keep as later module after UAT Kit |
 | Skill packaging | `tm-skills` exists, but Requirements Gatherer is not yet a skill | Defer skill until protocol survives one review |
 | Dashboard or hosted workflow | Many docs exist, but no need for more UI before the manual loop is useful | Keep dashboard/hosted surfaces later |
@@ -402,9 +403,37 @@ for proof-readiness, boundary-only, and operator-surface receipts. Do not create
 separate UAT variants or `tm-skills` behavior until one more meaningful receipt
 outside the current consulting boundary cluster proves repeated friction.
 
+### Phase 3A: Platform Operating Patterns V0
+
+- Extract the useful operating behavior from Vercel and Supabase without making
+  them mandatory tools.
+- Add manual templates for preview receipts, environment ledgers, data boundary
+  ledgers, client handoff consoles, and launch momentum receipts.
+- Add draft pattern candidates for preview-to-production, environment control,
+  data boundaries, client handoff consoles, and launch momentum capture.
+- Keep Greg's current soft-launch evidence deferred until after the next
+  meeting and permission/redaction review.
+
+Status: V0 added on 2026-05-14.
+
+Canonical sources:
+
+- `docs/PLATFORM_OPERATING_PATTERNS_V0.md`
+- `practice-os/templates/platform-preview-receipt.md`
+- `practice-os/templates/environment-ledger.md`
+- `practice-os/templates/data-boundary-ledger.md`
+- `practice-os/templates/client-handoff-console-spec.md`
+- `practice-os/templates/launch-momentum-receipt.md`
+- `practice-os/steward/2026-05-14-platform-operating-patterns-v0.md`
+
+Keep the patterns manual and tool-neutral until at least one real Hub,
+Omnexus, CCAAP, or Greg follow-up lane proves which pieces should become
+reviewed patterns or skill behavior.
+
 ### Phase 4: Playbook Modules
 
 - Tool registry and tool-choice rubric.
+- Platform operating patterns promoted from V0 only after real receipts.
 - Design reference vault and anti-generic UI rules.
 - Design integrity review, client-duty rules, and AI usage standard if repeated
   work proves separate artifacts are useful.
