@@ -392,6 +392,16 @@ covering live-funnel proof-readiness, public assistant/no-runtime boundaries,
 and noindex admin command-room boundaries without turning internal evidence into
 public proof or runtime authority.
 
+Friction review:
+
+- `practice-os/steward/2026-05-14-uat-receipt-friction-review.md`
+- `practice-os/steward/2026-05-14-workspace-os-uat-rollout-agent-flight-record.md`
+
+Decision: keep the base UAT receipt canonical and use lightweight V0.1 modes
+for proof-readiness, boundary-only, and operator-surface receipts. Do not create
+separate UAT variants or `tm-skills` behavior until one more meaningful receipt
+outside the current consulting boundary cluster proves repeated friction.
+
 ### Phase 4: Playbook Modules
 
 - Tool registry and tool-choice rubric.
