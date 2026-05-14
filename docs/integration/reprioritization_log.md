@@ -1614,3 +1614,41 @@ Next review trigger:
 - Greg confirms what the Facebook/ad signal proves and what it does not prove.
 - Toni chooses whether to create the private Launch Momentum Receipt or convert
   the UX Trust Review Notes into a client-facing mini-deliverable.
+
+## 2026-05-14: Portfolio Idea Recovery Sweep V0 Added
+
+Source:
+
+- Toni asked for a portfolio recovery exercise to find ideas, concepts,
+  patterns, preferences, and product lanes that may have been missed.
+- `dtp workspace recover --dry-run` generated 331 recovery candidates.
+- `docs/WORKSPACE_DASHBOARD_READONLY.md` defines recovery as a read-only lead
+  source unless reviewed rows are explicitly applied.
+
+Change:
+
+- Created `docs/PORTFOLIO_IDEA_RECOVERY_SWEEP_V0.md` as a tracked DTP recovery
+  ledger for reviewed lead summaries, source pointers, sensitivity, confidence,
+  duplicate status, destination, Toni review decision, and next action.
+- Created ignored local packet
+  `outputs/portfolio-idea-recovery-open-internal-2026-05-14.md` for fuller
+  review context that should not be committed as source-of-truth material.
+- Added the recovery ledger to `docs/DOCUMENTATION_MAP.md`.
+
+Priority impact:
+
+1. Run recovery in reviewed batches of about 25 candidates instead of importing
+   broad transcript material into durable docs.
+2. First-batch categories are agent rules and product ideas.
+3. Raw transcripts stay out of tracked docs; source pointers and reviewed
+   summaries are the durable record.
+4. Omnexus runtime work remains separate; the next Omnexus lane is still
+   nutrition input/data-consistency unless Toni's review changes the priority.
+
+Next review trigger:
+
+- Toni reviews the first batch and marks each row keep, kill, later, rewrite,
+  merge, or promoted.
+- Promoted rows move to Kaizen intake, roadmap/backlog, pattern candidates,
+  `tm-skills`, repo `AGENTS.md`, or private/client vault only when the
+  destination is explicit.
