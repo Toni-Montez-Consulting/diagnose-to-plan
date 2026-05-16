@@ -427,6 +427,12 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
   success/support, and domain-specific operations as P0 gaps, and blocks public
   packaging, connectors, dashboards, and automation until manual use proves the
   pattern.
+- `practice-os/steward/2026-05-16-greg-bos-domain-audit.md`: sanitized receipt
+  for the first real BOS domain audit on Greg. It keeps private audit details
+  in ignored `engagements/`, confirms the BOS map is useful, and routes the
+  next safe Greg artifact toward a Campaign Ops / paid-social readiness packet
+  without authorizing sends, ads, public proof, connectors, or live-system
+  changes.
 - `docs/CONTEXTUAL_ACTIVATION_PLAYBOOK.md`: idea-to-roadmap routing contract for classifying new ideas, designs, development enhancements, project work, business moves, proof candidates, research items, and automation concepts.
 - `docs/ROADMAP_EXECUTION_BACKLOG.md`: Kanban-style epic/story execution view for the roadmap, with status, Done gates, and next actions.
 - `docs/ROADMAP_SYNTHESIS_GATE_LEDGER.md`: gate ledger for blocked/speculative synthesis candidates, including CCAAP public proof, current Hub dependency blockers, Azure readiness extraction, Hosted DTP promotion, manual availability, Architected Strength assistant pattern, and FAOS revisit.
