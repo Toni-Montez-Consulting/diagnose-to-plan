@@ -174,6 +174,11 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
 - `practice-os/templates/research-pattern-candidate.md`: Research Arm companion
   template for converting research signals, field notes, and business
   observations into reusable consulting pattern candidates.
+- `practice-os/research/pattern-candidates/2026-05-16-mdash-ai-governance-operating-loops.md`:
+  internal MDASH-inspired pattern candidate for treating AI governance as clear
+  operating lanes around models, tools, human review, validation, and handoff.
+  It is not public copy, compliance advice, runtime authority, or a FAOS build
+  trigger.
 - `practice-os/templates/business-pattern-candidate.md`: Business Pattern
   Steward template for testing whether a firm, industry, founder, consultancy,
   infrastructure, or market observation contains a transferable business lesson
@@ -220,6 +225,11 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
   classifying current/target autonomy levels, allowed sources/actions,
   privacy, evals, audit logging, rollback, override, cost, and promotion
   decision before a workflow becomes more autonomous.
+- `practice-os/templates/ai-operating-loop-readiness-review.md`: manual
+  readiness review for AI governance, clear-lane, human-in-the-loop, model
+  orchestration, or AI-infrastructure workflow ideas. Use it before proposing
+  public copy, compliance claims, connectors, runtime implementation, FAOS,
+  source-pack automation, or autonomy expansion.
 - `practice-os/templates/practice-operating-review.md`: review-loop template
   for daily light checks, weekly operating reviews, post-disconnect recovery,
   source checks, decisions, next actions, parked items, steward
@@ -653,6 +663,12 @@ Do not update `hub-prompts` or `hub-registry` just because the roadmap changes. 
 - Use `docs/OFFER_LED_PRACTICE_PACKAGING.md` before updating the public consulting offer narrative.
 - Use `docs/BUSINESS_ADMIN_OPERATING_SYSTEM.md` when Google Workspace, Calendar/Meet, Apple Reminders capture, LLC readiness, EIN/banking/tax, contracts, insurance, brand assets, or business overhead need durable planning state.
 - Use `docs/BUSINESS_OPERATING_SYSTEM_COVERAGE_MAP.md` and `practice-os/templates/business-operating-system-domain-audit.md` when Toni asks for complete business operations coverage, what parts of a business are missing, a client business audit, operating-system gaps, or a domain-by-domain map across marketing, sales, finance, delivery, support, legal/risk, people/vendor, reporting, launch, and domain-specific operations. Keep it manual-first; do not infer public copy, software, Hub, Notion, QuickBooks, dashboards, connectors, or automation.
+- Use `practice-os/templates/ai-operating-loop-readiness-review.md` when Toni
+  asks about AI governance, clear lanes, human-in-the-loop AI, model
+  orchestration, the system around a model, MDASH-like inspiration, or AI
+  infrastructure attached to a business workflow. Keep it internal and
+  manual-first; do not infer public copy, compliance advice, runtime work,
+  connectors, FAOS, source-pack automation, or autonomy expansion.
 - Use `docs/INTERNAL_OFFER_REPERTOIRE_CATALOG.md` before turning a newly delivered asset, system, logo kit, mission/vision sprint, admin room, command room, launch hardening pass, or follow-up queue into an offer candidate.
 - Use `practice-os/templates/activation-routing-map.md` when skill triggers, templates, roadmap lanes, proof gates, COI gates, research/eval artifacts, or repo touch lanes need prompt-based routing.
 - Use `practice-os/templates/research-pattern-candidate.md` when a research signal, field note, or business observation needs to become a reusable consulting pattern candidate instead of a one-off summary.

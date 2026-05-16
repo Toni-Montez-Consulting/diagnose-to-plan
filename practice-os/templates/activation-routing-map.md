@@ -25,6 +25,9 @@ Use this map when a prompt could route to more than one skill, template, process
   agents, semi-autonomous workflows, scheduled stewards, an agent manager,
   read-only agents, draft-only agents, bounded autonomy, or whether a workflow
   can move up in authority.
+- Use `practice-os/templates/ai-operating-loop-readiness-review.md` when a
+  prompt asks about AI governance, clear lanes, human-in-the-loop AI, model
+  orchestration, or AI infrastructure around a business workflow.
 - Use `docs/PRACTICE_OPERATING_REVIEW_LOOP_V0.md` when a prompt asks to review
   everything, find what is next, continue moving forward, recover after a
   disconnect, or check whether captured ideas are being revisited.
@@ -76,6 +79,7 @@ Use this map when a prompt could route to more than one skill, template, process
 | "which agent/skill should this story use", "tie this to Kanban", "activate for this epic" | story activation index | `docs/ROADMAP_STORY_ACTIVATION_INDEX.md`, story activation contract | suggested agents require explicit delegation approval |
 | "squad of agents", "agent squad", "Delivery Squad", "Business Justification Squad", "knowledge base", "knowledge scope", "business justification", "approval gate", "handoff receipt" | Agent Squads + Knowledge Base V0 | `docs/AGENT_SQUADS_KNOWLEDGE_BASE_V0.md`, squad charter, source index, business justification scorecard, approval gate, squad handoff receipt | human-led only; no install, autonomous agents, public proof, client comms, production writes, or repo mutation without gates |
 | "autonomy readiness", "autonomy ladder", "autonomous agent", "semi-autonomous", "read-only agent", "draft-only agent", "bounded autonomous workflow", "scheduled steward", "what can be autonomous", "move this up the ladder" | Autonomy Readiness Ladder | `docs/AUTONOMY_READINESS_LADDER_V0.md`, `practice-os/templates/autonomy-readiness-review.md`, Agent Squads + Knowledge Base V0, FAOS orchestration roadmap | classify current/target autonomy level first; no scheduled, write-enabled, live, client-facing, public-proof, financial, legal, production, or external action without accepted readiness review |
+| "AI governance", "clear lanes", "safe path fastest path", "human-in-the-loop AI", "model orchestration", "system around the model", "AI infrastructure", "MDASH" | AI Operating Loop Readiness Review | `practice-os/templates/ai-operating-loop-readiness-review.md`, `practice-os/research/pattern-candidates/2026-05-16-mdash-ai-governance-operating-loops.md`, Autonomy Readiness, DevOps / Infrastructure, Agent Squads, UAT Kit, Integrity Layer, Business Operating System Coverage Map | internal/manual first; no public copy, compliance advice, runtime, connector, source-pack automation, FAOS, or autonomy increase without the matching gate |
 | "don't forget this", "dont forget this", "meta-pattern", "idea evolution", "this worked well", "do this again", "collaboration pattern", "practice evolution", "make sure this becomes how we work" | Practice Evolution System V0 | `docs/PRACTICE_EVOLUTION_SYSTEM_V0.md`, `practice-os/templates/idea-evolution-record.md`, `practice-os/templates/remaining-locks-ledger.md`, `practice-os/templates/memory-promotion-record.md` | capture broadly, promote deliberately; no autonomous self-learning, public/client changes, or playbook-memory promotion without review |
 | "show captured ideas", "practice evolution dashboard", "evolution status", "what is waiting for review", "which patterns are parked", "what did we capture" | Practice Evolution status dashboard | `dtp evolution status`, `dtp evolution dashboard`, `docs/practice-evolution-dashboard.html` | visibility only; dashboard does not promote memory, sync Notion, or authorize implementation |
 | "memory steward", "memory agent", "what should be remembered", "what should be promoted", "what should be parked", "review memory", "memory queue" | Memory Steward | `practice-os/agents/memory-steward.md`, `dtp memory steward`, `docs/practice-evolution-dashboard.html`, `practice-os/templates/memory-promotion-record.md` | read-only recommendations; no autonomous self-learning, Notion sync, public/client action, or playbook promotion without Toni approval |
@@ -139,6 +143,7 @@ Use these labels in Roadmap Steward reviews and handoffs:
 - `agent_squad_v0`
 - `autonomy_readiness_ladder`
 - `autonomy_readiness_review`
+- `ai_operating_loop_readiness`
 - `bounded_autonomy_candidate`
 - `client_os_pilot`
 - `knowledge_scope`
@@ -199,6 +204,10 @@ Use these labels in Roadmap Steward reviews and handoffs:
   live, or autonomous authority, update or reference
   `docs/AUTONOMY_READINESS_LADDER_V0.md` and leave an autonomy readiness review
   before authority expands.
+- When an AI governance, model orchestration, or human-in-the-loop workflow
+  pattern changes, update the AI Operating Loop readiness template, routing row,
+  and a steward receipt before public copy, runtime, automation, or compliance
+  language moves.
 - When a review uncovers stale captures, unresolved steward recommendations,
   missing decisions, or unclear next actions, use
   `docs/PRACTICE_OPERATING_REVIEW_LOOP_V0.md` and leave a

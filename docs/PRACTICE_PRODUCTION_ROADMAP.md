@@ -81,6 +81,16 @@ stays internal and proof-gated: no ad-account access, budget movement,
 automated ad publishing, ROAS promises, or public offer copy until a real lane,
 starting with Greg, proves the packet useful.
 
+AI Governance Operating Loops are now captured as an internal MDASH-inspired
+pattern lane in
+`practice-os/research/pattern-candidates/2026-05-16-mdash-ai-governance-operating-loops.md`.
+The current thesis is that the model is the engine, but the system around the
+model is the business value: source boundaries, human review, validation,
+proof, escalation, and handoff. This stays manual and review-first through
+`practice-os/templates/ai-operating-loop-readiness-review.md`; it does not
+authorize public copy, compliance advice, runtime implementation, FAOS,
+connectors, source-pack automation, or autonomy expansion.
+
 The Practice Intelligence Control Plane is the V0 operating layer for broad
 session rehydration and input routing. It uses
 `docs/PRACTICE_INTELLIGENCE_CONTROL_PLANE.md` to decide where new replies,
