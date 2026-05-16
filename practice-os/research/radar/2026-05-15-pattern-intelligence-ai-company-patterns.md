@@ -55,18 +55,19 @@ operation.
 
 ## Proposed Next Action
 
-Run one manual company-pattern study. Use Glean first because it already has a
-Business Memory OS diagnostic artifact, then decide whether to create a
-dedicated company-pattern study template.
+Review the first manual company-pattern study:
+
+- `practice-os/research/pattern-candidates/2026-05-15-glean-business-memory-company-pattern-study.md`
+
+Use the review to decide whether Pattern Intelligence needs a dedicated
+company-pattern study template or should stay as occasional research-pattern
+capture.
 
 ## Acceptance To Move Forward
 
-- One company study names the pain solved, workflow collapsed, transferable
-  pattern, small-business translation, consulting artifact, evidence limit, and
-  parked idea.
-- The study produces at least one useful artifact candidate.
-- Toni reviews whether the fields were useful before any template, public copy,
-  or automation work expands.
+- First study produced: Glean Business Memory company-pattern study.
+- Still required: Toni reviews whether the fields were useful before any
+  template, public copy, or automation work expands.
 
 ## Notes
 

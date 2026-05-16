@@ -29,6 +29,9 @@ small businesses, and what artifact Toni should create from the insight.
 | Toni founder email: `Research continued` | field_note | 2026-05-15 | Gmail message `19e2e2bdad7c5c27` | high | Primary internal source for Pattern Intelligence and research-to-offer loop. |
 | Toni founder email: `Glean insights` | field_note | 2026-05-15 | Gmail message `19e2d48bcb86c1b3` | high | Prior source for Business Memory OS and the Glean pattern. |
 | Business Memory OS pattern candidate | internal artifact | 2026-05-15 | `practice-os/research/pattern-candidates/2026-05-15-business-memory-os-small-business-knowledge-layer.md` | high | Existing DTP translation of the Glean insight into a small-business knowledge-layer diagnostic. |
+| Glean official product site | official_docs | 2026-05-15 | https://www.glean.com/ | medium | Public source for Glean's assistant, agents, search, connectors, and permissions positioning. |
+| Glean Knowledge Graph docs | official_docs | 2026-05-15 | https://docs.glean.com/security/knowledge-graph | medium | Public source for content, people, activity, and permissions-aware knowledge graph framing. |
+| Glean company-pattern study | internal artifact | 2026-05-15 | `practice-os/research/pattern-candidates/2026-05-15-glean-business-memory-company-pattern-study.md` | high | First Pattern Intelligence pilot output. |
 
 ## What Changed
 
@@ -55,6 +58,8 @@ small businesses, and what artifact Toni should create from the insight.
 - It creates a bridge between Research Steward and Business Pattern Steward:
   research finds the signal; business-pattern extraction translates the
   signal into operator judgment.
+- The first Glean company-pattern study now exists, so the next question is
+  whether the study fields are useful enough to become a reusable template.
 
 ## Hype Filter
 
@@ -86,7 +91,7 @@ What may be hype, premature, or not relevant:
 | Client education | Gives Toni plain ways to explain where work is going without overhyping AI. | Draft client explanations only after source-specific review. |
 | Delivery workflow | Research should create assets, not passive notes. | Use a standard company-pattern study template before creating implementation work. |
 | Agent / prompt behavior | Research Steward and Business Pattern Steward should route company examples into pattern candidates. | Keep roles manual and approval-gated; no autonomous company crawler. |
-| Roadmap / backlog | Converts the first Research Radar item from ready to done and adds a next manual loop. | Use one company-pattern study as the next research exercise. |
+| Roadmap / backlog | Converts the first company-pattern study from planned to review. | Review the Glean study before creating a template or more studies. |
 | Proof / case-study posture | Company research is not client proof. | Keep examples internal until claims and sources are reviewed. |
 
 ## Client Explanation
@@ -116,14 +121,16 @@ Accepted now:
 - Research pattern candidate for the research-to-offer loop.
 - Research Arm and source-list pointers.
 
+Produced:
+
+- Glean company-pattern study:
+  `practice-os/research/pattern-candidates/2026-05-15-glean-business-memory-company-pattern-study.md`
+
 Next:
 
 - Create a reusable company-pattern study template if one more study proves the
   fields.
-- Run one manual study on Glean, Granola, Harvey, Sierra, Cursor/Lovable, n8n,
-  Lindy, or Gamma.
-- Convert the study into one diagnostic question, one artifact candidate, and
-  one parked idea.
+- Review the Glean study fields before running another company.
 
 Later:
 
@@ -145,11 +152,8 @@ Later:
 
 ## Next Action
 
-Pilot the Pattern Intelligence loop manually on one company pattern. The output
-should be one useful artifact, not a broad market report.
-
-Recommended first manual study: Glean, because Business Memory OS already has a
-diagnostic artifact and can prove the loop end to end.
+Review the produced Glean company-pattern study. The output should stay as one
+useful artifact candidate, not a broad market report or public offer claim.
 
 ## Notion Mirror Summary
 
@@ -161,7 +165,8 @@ If yes:
 - Classification: Pilot
 - Why it matters: turns AI/company research into practical diagnostics,
   workflows, templates, and offer logic instead of passive news tracking.
-- Next action: run one manual company-pattern study and produce one artifact.
+- Next action: review the Glean company-pattern study before template or public
+  offer expansion.
 - DTP source path:
   `practice-os/research/digests/2026-05-15-pattern-intelligence-research-arm.md`
 
@@ -169,4 +174,5 @@ If yes:
 
 This digest does not authorize public claims, scheduled research agents, public
 site changes, or new product work. It authorizes the internal manual research
-loop as the next small test.
+loop as a manual test. The first Glean pilot now exists, but it still needs
+Toni review before promotion.

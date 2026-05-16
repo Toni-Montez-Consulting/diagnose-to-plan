@@ -90,11 +90,11 @@ judgment.
 
 ## Next Experiment
 
-- Where to test this next: run one Glean company-pattern study and connect it
-  to the existing Business Memory OS diagnostic.
-- What signal would confirm it is useful: the study produces a clearer
-  diagnostic question, a better client explanation, and one reusable artifact
-  without creating extra platform work.
+- Where to test this next: first pilot produced in
+  `practice-os/research/pattern-candidates/2026-05-15-glean-business-memory-company-pattern-study.md`.
+- What signal would confirm it is useful: Toni reviews the study and confirms
+  the fields create a clearer diagnostic question, a better client explanation,
+  and one reusable artifact without creating extra platform work.
 - What signal would make us drop it: the study becomes a generic company
   summary, hype list, or tool-shopping exercise.
 
@@ -121,6 +121,6 @@ If yes:
 
 ## Notes
 
-This pattern should stay internal until at least one reviewed study proves the
-loop is useful. Promotion should be based on artifact quality, not the
-interestingness of the company being studied.
+This pattern should stay internal. The first Glean study exists, but promotion
+still depends on Toni's review of artifact quality, not the interestingness of
+the company being studied.

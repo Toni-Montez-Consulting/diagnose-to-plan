@@ -10,6 +10,76 @@ review_status: draft
 Use this log after meaningful Practice OS changes so backlog movement is
 deliberate and visible.
 
+## 2026-05-15: Ridgewell Repo Foundation And Greg Support Packets
+
+Source:
+
+- `practice-os/steward/2026-05-15-ridgewell-org-repo-and-initialization-receipt.md`
+- `practice-os/steward/2026-05-15-greg-support-lane-receipt.md`
+- `engagements/cameron-mckesson/smb-ma-platform/repository-workspace-plan.md`
+- `engagements/greg-thegrantapp/case-study-sprint/launch-momentum-receipt-2026-05-15.md`
+
+Change:
+
+- Created the verified private Ridgewell org repo and initialized only
+  guardrail files.
+- Updated the Cam private kit locally so the org repo is the source of truth,
+  while app code, live data, and Cameron access remain blocked.
+- Drafted Greg's private App Store/TestFlight readiness packet and soft-launch
+  operating dashboard in the ignored engagement kit.
+
+Priority impact:
+
+1. Ridgewell can move to mock-data visual prototype scaffolding only after Toni
+   opens that implementation lane.
+2. Greg's next support conversation has two concrete planning artifacts, but no
+   App Store, paid-ad, or public-proof action is authorized.
+3. Private engagement kit updates remain local/ignored unless a private vault
+   promotion is explicitly opened.
+
+Next review trigger:
+
+- Toni approves starting Ridgewell prototype code.
+- Cameron access or live data is requested.
+- Greg chooses App Store/TestFlight, soft-launch dashboard, or onboarding/match
+  trust as the next sendable artifact.
+
+## 2026-05-15: Glean Pattern Intelligence Pilot Produced
+
+Source:
+
+- Toni's founder email `Raw memo: Glean, business memory, and the consulting practice`.
+- Glean official product and documentation pages checked on 2026-05-15.
+- `practice-os/research/pattern-candidates/2026-05-15-glean-business-memory-company-pattern-study.md`
+- `practice-os/research/radar/2026-05-15-pattern-intelligence-ai-company-patterns.md`
+- `docs/ROADMAP_EXECUTION_BACKLOG.md`
+
+Change:
+
+- Produced the first Pattern Intelligence company-pattern study using Glean as
+  the example.
+- Extracted the transferable pattern as a business memory layer, not an
+  enterprise-search product clone.
+- Connected the study to the Business Memory OS diagnostic and internal
+  Practice OS operating model.
+- Moved the Pattern Intelligence research-to-offer loop from `Ready` to
+  `Review`.
+
+Priority impact:
+
+1. The next Pattern Intelligence move is Toni review, not more company study
+   inventory.
+2. Business Memory OS remains an internal consulting lane until a paid or
+   permissioned proof path exists.
+3. Public language should avoid "Mini-Glean" and avoid any endorsement or
+   demand-proof claim.
+
+Next review trigger:
+
+- Toni reviews whether the study fields are useful.
+- Toni asks to make a dedicated company-pattern study template.
+- A client problem matches the Business Memory OS diagnostic.
+
 ## 2026-05-15: Pattern Intelligence Added To Research Arm
 
 Source:

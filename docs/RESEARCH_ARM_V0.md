@@ -272,6 +272,11 @@ Current first Pattern Intelligence artifacts:
 - `practice-os/research/digests/2026-05-15-pattern-intelligence-research-arm.md`
 - `practice-os/research/radar/2026-05-15-pattern-intelligence-ai-company-patterns.md`
 - `practice-os/research/pattern-candidates/2026-05-15-pattern-intelligence-research-to-offer-loop.md`
+- `practice-os/research/pattern-candidates/2026-05-15-glean-business-memory-company-pattern-study.md`
+
+The first Glean study is a produced pilot, not a promoted template. It should be
+reviewed for field usefulness before Pattern Intelligence becomes a recurring
+template, public offer input, or automation lane.
 
 ## Notion Mirror Rule
 
