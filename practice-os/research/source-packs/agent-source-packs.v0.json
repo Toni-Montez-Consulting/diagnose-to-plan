@@ -144,9 +144,11 @@
       "role_name": "External Communications Agent",
       "source_pack_version": "0.1.0",
       "status": "pilot_proven",
-      "last_reviewed_at": "2026-05-10",
+      "last_reviewed_at": "2026-05-16",
       "pilot_artifacts": [
         "practice-os/steward/2026-05-10-external-communications-source-policy-pilot.md",
+        "practice-os/steward/2026-05-16-client-email-deliverable-pairing-correction.md",
+        "practice-os/steward/2026-05-16-dtp-client-delivery-engine-audit.md",
         "practice-os/comms/private/external-communications-source-policy-pilot-2026-05-10.md",
         "practice-os/comms/private/messaging-knowledge-base-2026-05-10.md"
       ],
@@ -212,11 +214,12 @@
         "executive update",
         "client education note",
         "send checklist",
-        "Gmail draft receipt only when requested"
+        "Gmail draft with attachment when drafting client/prospect/professional email and recipient/source are safe",
+        "Gmail draft receipt with draft id and attachment/source path"
       ],
       "promotion_required_for": [
         "sending",
-        "Gmail draft creation unless Toni asks",
+        "Gmail draft creation when Toni says hold, recipient is unknown, or attachment/source is unsafe",
         "public copy",
         "client-facing claims",
         "legal or finance language",

@@ -51,6 +51,12 @@ Dated receipts should stay dated and be linked from the receipt register below.
 |---|---|---|---|---|
 |  |  |  |  |  |
 
+## Meeting Notes / Context Coverage
+
+| Source | Path | Consumed for current state? | Missing or stale context | Notes |
+|---|---|---|---|---|
+|  |  |  |  |  |
+
 ## Receipt Register
 
 Receipts must be dated and easy to access. If this register is not maintained,
@@ -59,6 +65,17 @@ use dated workflow-spine filenames instead of a stable current-state filename.
 | Date | Receipt or evidence | Path | What it proves | Reliability |
 |---|---|---|---|---|
 |  |  |  |  |  |
+
+## Client Delivery Surface
+
+- Current recipient-facing packet:
+- Current Gmail draft id:
+- Draft receipt path:
+- Attachment/source path:
+- Send status: not_requested / draft_only / pending_toni_review / approved_to_send / sent_by_toni / hold
+- Relationship/tone posture:
+- Payment/scope posture:
+- Next client-facing artifact:
 
 ## Allowed Actions
 
