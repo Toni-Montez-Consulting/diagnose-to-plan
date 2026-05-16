@@ -55,11 +55,27 @@ admin cadence. `docs/INTERNAL_OFFER_REPERTOIRE_CATALOG.md` captures reusable
 capabilities from Toni's own operations and client work before they become
 public offers.
 
+The Practice Investment Roadmap is captured in
+`docs/PRACTICE_INVESTMENT_ROADMAP_2026.md`. It separates buy-now, buy-soon,
+wait, and avoid decisions for the solo consulting cockpit so hardware,
+software, cloud, security, and delivery tooling investments follow real
+practice capability rather than legitimacy theater.
+
 The Practice Intelligence Control Plane is the V0 operating layer for broad
 session rehydration and input routing. It uses
 `docs/PRACTICE_INTELLIGENCE_CONTROL_PLANE.md` to decide where new replies,
 ideas, proof claims, tool requests, assistant plans, finance/admin ideas, and
 memory candidates should land before any infrastructure expands.
+
+The Pattern Intelligence loop is now captured inside the Research Arm. It turns
+AI and workflow company observations into practical consulting assets instead
+of passive market watching. Current sources are
+`practice-os/research/digests/2026-05-15-pattern-intelligence-research-arm.md`,
+`practice-os/research/radar/2026-05-15-pattern-intelligence-ai-company-patterns.md`,
+and
+`practice-os/research/pattern-candidates/2026-05-15-pattern-intelligence-research-to-offer-loop.md`.
+It is manual and internal-only until a reviewed study proves a diagnostic,
+workflow, client explanation, or offer component should move forward.
 
 The Consulting Workspace OS V0 is captured in
 `docs/CONSULTING_WORKSPACE_OS_V0.md`. It preserves Toni's idea for an internal

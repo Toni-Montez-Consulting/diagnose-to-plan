@@ -241,6 +241,39 @@ line is:
 > figure out where AI belongs in the work, then build the operating asset
 > around it.
 
+## Emerging Business Memory OS Lens
+
+Business Memory OS is an internal offer lens first, not yet a public named
+offer.
+
+It translates the enterprise internal-intelligence-layer pattern down to small
+businesses: map the business knowledge, clean up sources of truth, decide what
+should be searchable or drafted or workflow-enabled, build the useful assistant
+or operating asset, and hand it off clearly.
+
+Use it inside Business Systems Blueprint, AI Upgrade Audit, and operating-system
+work when the real problem is scattered knowledge, owner-held context, repeated
+questions, stale sources, or messy handoff.
+
+Do not publicly position it as:
+
+- a Glean competitor;
+- a universal enterprise search product;
+- a generic chatbot;
+- a multi-tenant SaaS platform;
+- AI transformation.
+
+Possible future public offer names stay parked until diagnostics prove demand:
+
+- Business Memory OS;
+- Business Knowledge Layer;
+- Internal Search & Assistant Audit;
+- Owner's Command Center;
+- Business Memory Assistant.
+
+The first proof step is the `business-memory-os-diagnostic` template, not a
+software build.
+
 ## Proof Hierarchy
 
 Tier 1:

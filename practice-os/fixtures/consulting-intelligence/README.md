@@ -47,6 +47,10 @@ approves more detail.
 - `northline-performance-studio-blueprint-sample.md` is the first public-safe
   sample Blueprint artifact for the consulting offer. It is fictional demo
   material, not a client claim.
+- `northline-business-memory-os-diagnostic.md` is the first public-safe
+  Business Memory OS diagnostic fixture. It tests the 25-question knowledge
+  inventory, search/draft/workflow/human classification, and first assistant
+  recommendation against the same fictional local-service business.
 - The first real misfire seed is evidence-dossier depth: shallow synthesis with
   too few source/memory citations should become a correction checklist, source
   sweep, and claim ledger instead of another short summary.

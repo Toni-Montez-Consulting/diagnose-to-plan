@@ -58,6 +58,12 @@ Initial source signals came from Toni's founder-email captures on 2026-05-09:
 - Chris Hood AI governance article
 - local `2026 State of AI Agents Report.pdf`
 
+The 2026-05-15 `Research continued` founder email added the Pattern
+Intelligence loop: study strong AI and workflow companies, extract the
+underlying work pattern, and translate it into consulting diagnostics,
+workflows, templates, client explanations, skills, runbooks, or parked future
+ideas.
+
 These are source prompts for the system, not automatic proof for public claims.
 Public claims still need primary-source review, caveats, and approval.
 
@@ -220,6 +226,7 @@ These are workstreams, not new autonomous roles yet.
 |---|---|---|
 | Research Arm | collect and synthesize external AI/software/workflow signals | active V0 |
 | Practice Intelligence | translate research into offers, diagnostics, and client explanations | manual V0 |
+| Pattern Intelligence | study company/product patterns and convert them into practical consulting assets | manual V0 |
 | Pattern Extraction | turn real-world observations and research signals into reusable consulting pattern candidates | manual V0 |
 | Repo Quality | find stale docs, conflicting instructions, and drift | future/manual |
 | Roadmap Signal | suggest what should move, park, or become a template | manual V0 |
@@ -228,6 +235,48 @@ These are workstreams, not new autonomous roles yet.
 
 Do not add these as separate specialized agent roles until repeated use proves
 that the current first-wave role set cannot cover the work.
+
+## Pattern Intelligence Loop
+
+Pattern Intelligence is the company-pattern study function inside the Research
+Arm.
+
+It asks:
+
+- What is the company really doing?
+- What pain did it solve?
+- What workflow did it collapse?
+- What old way of working did it replace?
+- What part is hype or scale-specific?
+- What part could apply to small businesses?
+- What part could improve Toni's internal operating system?
+- What consulting diagnostic, workflow, assistant, runbook, template, offer
+  component, or client explanation could come from it?
+
+V0 company examples from Toni's memo:
+
+- Glean: internal knowledge layer and Business Memory OS translation.
+- Granola: meetings becoming business memory.
+- Cursor / Lovable: idea-to-build speed and the rising importance of judgment,
+  sequencing, and guardrails.
+- Harvey: vertical AI with domain context and credibility.
+- Sierra: customer communication as a managed system.
+- n8n / Lindy: repeatable work units close to existing tools.
+- Gamma: decision-ready artifacts, not just generated content.
+
+These examples are study prompts, not public proof or endorsement. Each study
+should produce one useful artifact candidate or be parked.
+
+Current first Pattern Intelligence artifacts:
+
+- `practice-os/research/digests/2026-05-15-pattern-intelligence-research-arm.md`
+- `practice-os/research/radar/2026-05-15-pattern-intelligence-ai-company-patterns.md`
+- `practice-os/research/pattern-candidates/2026-05-15-pattern-intelligence-research-to-offer-loop.md`
+- `practice-os/research/pattern-candidates/2026-05-15-glean-business-memory-company-pattern-study.md`
+
+The first Glean study is a produced pilot, not a promoted template. It should be
+reviewed for field usefulness before Pattern Intelligence becomes a recurring
+template, public offer input, or automation lane.
 
 ## Notion Mirror Rule
 

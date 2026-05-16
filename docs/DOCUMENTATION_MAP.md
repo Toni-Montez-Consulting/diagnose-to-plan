@@ -191,6 +191,11 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
 - `practice-os/research/decisions/`: reviewed research decisions created from
   source-backed signals. Use for adopt, pilot, watch, reject, or park outcomes
   that should survive beyond a digest or one-off chat.
+- `practice-os/research/digests/`: Research Arm digests that summarize what
+  changed, why it matters, hype limits, practice impact, and next action.
+- `practice-os/research/radar/`: Research Radar items that classify a signal as
+  Adopt, Pilot, Watch, or Reject with source, value hypothesis, risks, and
+  acceptance before implementation.
 - `practice-os/templates/knowledge-base-event-record.md`: simple event record
   for knowledge-base maintenance across research, memory, operations, project
   execution, client signals, proof, and agent-system misses.
@@ -227,6 +232,19 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
   and practical/ambitious path framing.
 - `practice-os/research/pattern-candidates/`: generated research and
   field-observation pattern candidates.
+- `practice-os/research/pattern-candidates/2026-05-15-business-memory-os-small-business-knowledge-layer.md`:
+  first Business Memory OS pattern candidate. Use it before turning the
+  Glean-inspired small-business knowledge-layer idea into a public offer,
+  diagnostic worksheet, client-facing copy, or software build.
+- `practice-os/research/pattern-candidates/2026-05-15-pattern-intelligence-research-to-offer-loop.md`:
+  first Pattern Intelligence research-to-offer loop candidate. Use it before
+  making company-pattern research a recurring practice function or translating
+  research observations into offers, templates, or proof claims.
+- `practice-os/research/pattern-candidates/2026-05-15-glean-business-memory-company-pattern-study.md`:
+  first Pattern Intelligence company-pattern pilot. It studies Glean as a
+  business-memory pattern, keeps enterprise search/connectors/security out of
+  scope, and translates only the SMB diagnostic and internal Practice OS
+  lessons.
 - `practice-os/research/source-freshness/`: reviewed Research source freshness
   records promoted from ignored dry-run output. Raw run output belongs under
   ignored `outputs/research-source-freshness/`.
@@ -252,9 +270,9 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
 - `docs/PRACTICE_SYSTEM_FUTURE_STATE.md`: future-state architecture for hosted DTP, steward automation, supervised learning, research radar, repo manifests, command-center planning, and gated agent activation.
 - `docs/RESEARCH_ARM_V0.md`: manual-first research and intelligence loop for
   turning AI/software/workflow signals into digests, classifications,
-  recommendations, and approval-gated practice updates. Use it before building
-  always-on research agents, scheduled digests, or research-to-roadmap
-  automation.
+  recommendations, Pattern Intelligence company-pattern studies, and
+  approval-gated practice updates. Use it before building always-on research
+  agents, scheduled digests, or research-to-roadmap automation.
 - `docs/RESEARCH_ARM_SOURCE_LIST_V0.md`: recurring, event-triggered Research
   Arm source list. Use it when Toni asks what sources to watch, forwards a
   research signal, needs evidence for an AI/platform/workflow claim, or wants
@@ -351,6 +369,23 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
 - `practice-os/steward/2026-05-14-consulting-admin-command-room-uat-receipt.md`: UAT Kit pilot receipt for the consulting `/admin` noindex/public-safe command-room boundary.
 - `practice-os/steward/2026-05-14-uat-receipt-friction-review.md`: review of the first three UAT receipts. It keeps the base receipt canonical, adds proof-readiness, boundary-only, and operator-surface operating modes, and blocks narrower templates or `tm-skills` behavior until more evidence exists.
 - `practice-os/steward/2026-05-14-workspace-os-uat-rollout-agent-flight-record.md`: first agent session/flight record for the Workspace OS and UAT rollout, including repos touched, PRs, verification, build/test sequencing lessons, and follow-up lanes.
+- `practice-os/steward/2026-05-15-business-memory-os-and-practice-cockpit-capture.md`:
+  internal receipt for Toni's self-sent Glean, Business Memory OS, practice
+  cockpit, investment-roadmap, and Claude-credit notes. It is a strategy
+  capture, not public copy, a buying plan, or a Glean-competitor build.
+- `practice-os/steward/2026-05-15-pattern-intelligence-capture.md`:
+  internal receipt for the Pattern Intelligence research arm capture. Use it
+  before expanding research-to-offer loops, scheduled research, or company
+  pattern studies beyond the manual draft stage.
+- `practice-os/steward/2026-05-15-ridgewell-org-repo-and-initialization-receipt.md`:
+  internal receipt for the private
+  `Toni-Montez-Consulting/ridgewell-marketplace-prototype` repo, guardrail-only
+  initialization, synthetic-data boundary, and blocked Cameron access.
+- `practice-os/steward/2026-05-15-greg-support-lane-receipt.md`:
+  internal receipt for the ignored Greg support artifacts covering App
+  Store/TestFlight readiness and launch-momentum dashboard planning. It does
+  not authorize public proof, client sends, mobile implementation, or raw user
+  data in tracked DTP files.
 - `docs/CONTEXTUAL_ACTIVATION_PLAYBOOK.md`: idea-to-roadmap routing contract for classifying new ideas, designs, development enhancements, project work, business moves, proof candidates, research items, and automation concepts.
 - `docs/ROADMAP_EXECUTION_BACKLOG.md`: Kanban-style epic/story execution view for the roadmap, with status, Done gates, and next actions.
 - `docs/ROADMAP_SYNTHESIS_GATE_LEDGER.md`: gate ledger for blocked/speculative synthesis candidates, including CCAAP public proof, current Hub dependency blockers, Azure readiness extraction, Hosted DTP promotion, manual availability, Architected Strength assistant pattern, and FAOS revisit.
