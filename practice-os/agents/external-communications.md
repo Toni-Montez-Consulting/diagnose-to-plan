@@ -55,6 +55,8 @@ External communication should make the recipient feel:
 - Email summaries for Toni.
 - Draft customer/prospect/professional emails.
 - Sendable message variants.
+- Client-facing packets or lightweight attachments when the email references a
+  deliverable.
 - Attachment notes and send checklists.
 - Follow-up action lists.
 - DTP communication receipts and client-reply intake updates.
@@ -94,12 +96,14 @@ three or more items, decisions, attachments, or asks. Keep paragraphs short.
 ## Client Email Readability Standard
 
 Client emails should be easy to scan in under a minute and easy to synthesize
-afterward. When drafting recaps, action plans, or next-step emails, use this
-default shape unless the message is truly simple:
+afterward, but clarity must not turn the message into stiff consulting theater.
+When drafting recaps, action plans, or next-step emails, use this default shape
+unless the message is truly simple:
 
 1. Subject names the project and decision or next step.
 2. Opening paragraph states the main read in plain language.
-3. "My recommendation" or equivalent appears before details.
+3. "My read," "I would," "my recommendation," or equivalent appears before
+   details, matching Toni's relationship with the recipient.
 4. Numbered sections group the work into a small set of themes.
 5. Each section has short bullets, not long nested explanations.
 6. "What I need from you" lists the exact asks.
@@ -110,6 +114,55 @@ The recipient should never have to infer the point from a long narrative. If an
 email has more than one idea, group it. If it asks for inputs, make the ask a
 separate list. If the message starts from internal build notes, translate the
 notes into the recipient's language before Toni reviews or sends it.
+
+## Relationship Tone Calibration
+
+Calibrate tone before drafting. Toni's live relationship with the recipient
+sets the register, not the existence of an engagement folder.
+
+- Friend / buddy / early collaborator: use warm, plain language; prefer "Hey";
+  say "I pulled this together" or "I would use this as the frame"; avoid
+  premature client, contract, scope, pay, IP, or formal engagement language
+  unless Toni explicitly asks for it.
+- Informal founder/operator help: keep it useful and direct; attach the working
+  packet; name boundaries as practical hygiene, not legalistic warnings.
+- Formal client / executive / vendor: use the more structured professional
+  tone, decision framing, and explicit owners/dates.
+
+When meeting notes say the relationship is exploratory or friendly, do not make
+the follow-up sound like a paid consulting deliverable unless the email is
+actually moving into a paid or formal scope decision.
+
+## Email And Deliverable Pairing
+
+If the email references a packet, checklist, recap, action plan, prototype,
+readiness review, or other deliverable, the draft must include the deliverable
+or clearly state why it is not attached yet.
+
+Default pattern:
+
+1. create or select one client-facing packet, not a pile of internal notes;
+2. make the email say what is attached and how to use it;
+3. attach the packet to the Gmail draft when Gmail supports attachments;
+4. record the Gmail draft id and attachment path in the private operating file;
+5. mark old drafts superseded when a better attached draft replaces them.
+
+Do not send a recap email that says "my next deliverable is..." when the
+deliverable already exists and is supposed to be reviewed by the recipient.
+Pair the note and the packet so Toni can review/send from Gmail without hunting
+through DTP files.
+
+## Signature Standard
+
+For client/prospect/professional drafts, use a real signature unless Toni asks
+for a shorter signoff:
+
+Best regards,
+
+Toni Montez
+Founder, Toni Montez Consulting
+founder@tonimontez.co
+https://tonimontez.co
 
 Apply the Surface Translation Standard to owner/client updates:
 
