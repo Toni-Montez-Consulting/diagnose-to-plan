@@ -239,6 +239,12 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
   internal draft-only communication pilot for translating reviewed AI/platform
   and consulting/business source evidence into prospect, executive, and
   client-education language without public claims or send approval.
+- `practice-os/steward/2026-05-16-dtp-client-delivery-engine-audit.md`:
+  steward receipt for the client-delivery engine correction. Use it when a
+  client/prospect follow-up must prove that meeting notes were consumed,
+  relationship tone was calibrated, the recipient-facing packet was selected,
+  the Gmail draft exists with the expected attachment, and send approval
+  remains blocked until Toni approves it.
 - `practice-os/evolution/README.md`: operator guide for `dtp evolution new`
   and `dtp evolution status`.
 - `practice-os/evolution/records/`: generated idea, collaboration, messaging,
@@ -273,7 +279,10 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
   Research Steward, External Communications, Consulting Strategy, and Software
   Architecture, Software Engineering, QA / Audit, and DevOps / Infrastructure.
   It encodes source posture, allowed web sources, blocked sources, default
-  outputs, and promotion gates without granting runtime authority.
+  outputs, and promotion gates without granting runtime authority. External
+  Communications treats Gmail draft creation with safe attachments as the
+  default for client/prospect/professional email drafting, while sending stays
+  human-approved.
 - `docs/AGENT_SOURCE_PACK_SCHEMA_V0.md`: source-pack contract doc for required
   fields, authority-boundary flags, evidence tiers, validator scope, and future
   dashboard growth.
@@ -487,8 +496,8 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
 - `practice-os/templates/memory-source-index.md`: durable topic map for frequently rediscovered context, naming authoritative sources, drift risks, refresh commands, and promotion rules.
 - `practice-os/templates/workflow-spine.md`: active current-state template for
   client/operator workflows. Use stable `active-workflow-spine.md` files with a
-  dated receipt register; switch to dated spine filenames only if receipt
-  discipline fails.
+  dated receipt register, meeting/context coverage, and client delivery surface;
+  switch to dated spine filenames only if receipt discipline fails.
 - `practice-os/policies/document-lifecycle.md`: minimal lifecycle label policy
   for `current`, `active`, `needs_stale_review`, `historical_reference`, and
   `superseded` docs.

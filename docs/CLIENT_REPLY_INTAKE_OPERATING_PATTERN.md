@@ -45,6 +45,10 @@ Do not use this pattern for raw archive dumping. The goal is extraction into ope
 
 3. Update DTP first.
    - Add a checked reply note or meeting note.
+   - Confirm the relationship/tone posture from meeting notes or Toni's latest
+     instruction.
+   - Confirm whether the reply or meeting created a recipient-facing packet,
+     checklist, action plan, prototype review, or other deliverable.
    - Update `action-extraction.md`.
    - Update `decision-log.md` only for explicit decisions.
    - Update `owner-action-items.md` for client-owned work.
@@ -52,14 +56,23 @@ Do not use this pattern for raw archive dumping. The goal is extraction into ope
    - Update `plan.md` for changed path or gates.
    - Update source, proof, handoff, COI, or data files only when relevant.
 
-4. Mirror the sanitized cockpit fields to Notion.
+4. Draft the delivery surface when a response is needed.
+   - Use the External Communications Agent pattern.
+   - Calibrate tone to the actual relationship, not the folder label.
+   - Pair the email with the packet/deliverable when one exists.
+   - Create the Gmail draft when the connector supports it, unless Toni says to
+     hold, the recipient is unknown, or the attachment/source is unsafe.
+   - Record the Gmail draft id and attachment/source path in the private kit.
+   - Do not send without Toni's explicit approval.
+
+5. Mirror the sanitized cockpit fields to Notion.
    - `next_meeting`
    - `waiting_on`
    - `next_action`
    - `blocked_by`
    - `last_updated`
 
-5. Schedule only after confirmation.
+6. Schedule only after confirmation.
    - Create internal reminders freely.
    - Create client calendar invites only after the time, attendees, and meeting title are confirmed.
 
@@ -105,4 +118,8 @@ A reply is operationally handled when:
 - Notion shows only sanitized cockpit fields;
 - scheduling is either completed or explicitly waiting on availability;
 - proof/COI/data/IP gates are unambiguous;
+- any needed recipient-facing packet is paired with the Gmail draft, or the
+  reason it is not attached is recorded;
+- the private kit records the Gmail draft id, attachment/source path,
+  relationship tone, and send/hold status;
 - the next action is visible without rereading the email thread.

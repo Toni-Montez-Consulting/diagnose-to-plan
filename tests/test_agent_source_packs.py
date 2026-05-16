@@ -44,7 +44,7 @@ def test_agent_source_packs_v0_contract(repo_root: Path) -> None:
     for pack in payload["packs"]:
         assert pack["status"] == "pilot_proven"
         assert pack["source_pack_version"]
-        assert pack["last_reviewed_at"] == "2026-05-10"
+        assert date.fromisoformat(pack["last_reviewed_at"]) >= date(2026, 5, 10)
         assert pack["pilot_artifacts"]
         assert pack["primary_sources"]
         assert pack["allowed_web_sources"]
@@ -58,7 +58,14 @@ def test_agent_source_packs_v0_contract(repo_root: Path) -> None:
         pack for pack in payload["packs"] if pack["role_id"] == "external-communications"
     )
     assert "sending" in external_comms["promotion_required_for"]
-    assert "Gmail draft creation unless Toni asks" in external_comms["promotion_required_for"]
+    assert (
+        "Gmail draft creation when Toni says hold, recipient is unknown, or "
+        "attachment/source is unsafe"
+    ) in external_comms["promotion_required_for"]
+    assert any(
+        "Gmail draft with attachment" in output
+        for output in external_comms["default_outputs"]
+    )
 
     consulting_strategy = next(
         pack for pack in payload["packs"] if pack["role_id"] == "consulting-strategy"

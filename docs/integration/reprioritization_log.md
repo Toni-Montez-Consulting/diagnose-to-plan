@@ -10,6 +10,43 @@ review_status: draft
 Use this log after meaningful Practice OS changes so backlog movement is
 deliberate and visible.
 
+## 2026-05-16: DTP Client Delivery Engine Correction
+
+Source:
+
+- `practice-os/steward/2026-05-16-dtp-client-delivery-engine-audit.md`
+- `practice-os/steward/2026-05-16-client-email-deliverable-pairing-correction.md`
+- `practice-os/agents/external-communications.md`
+- Private Greg and Cam Gmail draft receipts under ignored `engagements/`
+
+Change:
+
+- Treated the Greg/Cam follow-up issue as a process failure instead of a single
+  email-editing miss.
+- Hardened meeting, receipt, reply-intake, workflow-spine, and bridge-queue
+  templates so meeting notes, relationship tone, deliverable packet, Gmail
+  draft id, attachment path, and send/hold state stay tied together.
+- Updated the External Communications source pack so Gmail draft creation with
+  safe attachments is the default for client/prospect/professional email drafts,
+  while sending remains blocked until Toni approves it.
+
+Priority impact:
+
+1. Client recap/action-plan closeout is no longer just "write the email"; it is
+   "deliver one clear packet through a review-only Gmail draft with tone and
+   attachment state recorded."
+2. Future Greg, Cam, CCAAP, and owner follow-ups must pass the Client Delivery
+   Gate before they are called ready.
+3. Do not expand into PDF tooling, automation, Notion sync, public copy, or
+   hosted DTP from this correction yet; prove the manual gate on the next real
+   follow-up first.
+
+Next review trigger:
+
+- Toni reviews the Greg and Cam attached Gmail drafts and chooses revise, send,
+  or hold.
+- The next real client/prospect reply or meeting note requires a follow-up.
+
 ## 2026-05-16: Client Email Standard And Cam Prototype Approval
 
 Source:

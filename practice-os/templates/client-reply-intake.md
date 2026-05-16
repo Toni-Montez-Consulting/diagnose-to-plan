@@ -62,19 +62,31 @@ Default client-email summary format:
 
 - External Communications Agent used:
 - Intended audience: customer | executive | internal stakeholder | technical partner | prospect | vendor/platform support | other
+- Relationship stage: friend / buddy / early collaborator / prospect / formal client / vendor / other
 - Draft tone: warm practical | executive concise | technical precise | consultant advisory | other
+- Tone evidence from meeting notes/reply:
+- Tone or implication to avoid:
+- Payment/scope posture:
 - Draft format: email | meeting recap | sendable cover note | action-request note | support/vendor note | other
 - Headings needed:
 - Bullet list needed:
+- Recipient-facing packet needed: yes / no / hold
 - Attachments or linked files:
+- Attachment included in Gmail draft:
+- Meeting notes/transcripts consumed:
+- Missing or stale context:
 - Action items included:
 - Follow-up owner:
-- Send approval status: not_requested | draft_only | pending_toni_review | approved_to_send | sent_by_toni
+- Gmail draft status: expected | created | hold_by_toni | blocked_missing_recipient | blocked_unsafe_attachment | unavailable
 - Gmail draft id:
+- Gmail draft receipt path:
+- Send approval status: not_requested | draft_only | pending_toni_review | approved_to_send | sent_by_toni
 
 Do not send the message from this template. The External Communications Agent
-may create a Gmail draft when supported and requested, but sending requires
-explicit human approval.
+should create a Gmail draft when drafting client, prospect, or professional
+email and the connector supports it, unless Toni explicitly says to hold, the
+recipient is unknown, or the attachment/source is unsafe. Sending still
+requires explicit human approval.
 
 ## DTP Update Checklist
 
@@ -85,6 +97,9 @@ explicit human approval.
 - `diagnose.md` updated:
 - `plan.md` updated:
 - Source/material inventory updated:
+- Gmail draft receipt updated when a draft is created:
+- Attachment path recorded when a deliverable is referenced:
+- Old draft marked superseded when replaced:
 - Proof/redaction/permission checklist updated:
 - Handoff/checklist updated:
 
