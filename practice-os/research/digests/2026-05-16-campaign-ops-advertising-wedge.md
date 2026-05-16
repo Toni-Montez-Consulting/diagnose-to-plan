@@ -171,14 +171,26 @@ that ties channel signal to funnel measurement, support readiness,
 first-user trust, and weekly decision cadence before any ad account, budget, or
 public proof movement.
 
+## Greg Paid-Social Packet Follow-On
+
+The private Greg readiness packet now exists in the ignored engagement kit. It
+keeps the decision narrow: source tracking, access/code funnel, first useful
+action, no-access-state verification, support loop, event list, creative
+hypotheses, budget cap/stop-rule discussion, weekly cadence, and proof boundary.
+
+This confirms the strongest Campaign Ops shape is a readiness and learning
+loop, not ad management. Do not promote a reusable checklist, public offer,
+client-facing sample, ad account action, budget movement, or automation until
+Toni reviews the packet and a real conversation proves it useful.
+
 ## Reprioritized Next Action
 
 1. Draft and review the Greg recap/action-plan email.
 2. Draft and review the Cam recap/action-plan email.
-3. If Toni approves continuing the lane, create a Greg-specific Campaign Ops /
-   paid-social readiness packet using Motion and Meta as directional research,
-   not as promises.
-4. If useful, promote a reusable Campaign Ops checklist into Practice OS.
+3. Review the private Greg Campaign Ops / paid-social readiness packet and
+   decide whether to make it sendable, fold it into the recap, or hold it.
+4. If useful after review, promote a reusable Campaign Ops checklist into
+   Practice OS.
 5. Keep direct ad publishing, Marketing API work, ad account credentials,
    budgets, and client spend actions blocked until a separate explicit approval.
 

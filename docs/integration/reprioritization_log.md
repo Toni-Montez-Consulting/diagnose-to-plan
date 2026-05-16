@@ -10,6 +10,44 @@ review_status: draft
 Use this log after meaningful Practice OS changes so backlog movement is
 deliberate and visible.
 
+## 2026-05-16: Greg Paid-Social Readiness Packet
+
+Source:
+
+- `practice-os/steward/2026-05-16-greg-paid-social-readiness-packet.md`
+- Private Greg Campaign Ops / paid-social readiness packet in ignored
+  `engagements/`
+- `practice-os/steward/2026-05-16-greg-bos-domain-audit.md`
+- `practice-os/research/digests/2026-05-16-campaign-ops-advertising-wedge.md`
+
+Change:
+
+- Created the private Greg paid-social readiness packet as the next proof pass
+  after the BOS first domain audit.
+- Kept client-specific detail in the ignored engagement kit and added only a
+  sanitized steward receipt to tracked DTP.
+- Reframed Campaign Ops as a readiness and learning loop around source,
+  access, activation, support, creative hypotheses, and weekly decision gates,
+  not as media buying or ad automation.
+
+Priority impact:
+
+1. Greg's next useful step is Toni review of the private readiness packet beside
+   the recap/action-plan draft.
+2. Campaign Ops remains in Review with one private client-specific packet; do
+   not promote a reusable checklist, public offer, ad-account action, budget
+   movement, or automation until the packet proves useful.
+3. Missing readiness facts now drive the next Greg ask: source tracking, code
+   redemption, account creation, first useful action, support issues, and event
+   list confirmation.
+
+Next review trigger:
+
+- Toni approves a sendable Greg-facing packet, recap revision, Gmail draft,
+  send, or hold.
+- Greg confirms the missing readiness facts.
+- A second client or internal lane needs the same Campaign Ops readiness shape.
+
 ## 2026-05-16: Greg BOS First Domain Audit
 
 Source:

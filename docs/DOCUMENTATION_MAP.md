@@ -197,7 +197,9 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
   source-backed internal research note for the advertising angle. It frames
   Campaign Ops as offer, landing-page, creative testing, tracking, CRM,
   follow-up, and weekly learning workflow support, not a media-buying service,
-  automated ad-spend platform, Motion clone, or public offer claim.
+  automated ad-spend platform, Motion clone, or public offer claim. The Greg
+  private readiness packet is its first client-specific proof surface, still
+  gated from public offer movement.
 - `docs/BUSINESS_OPERATING_SYSTEM_COVERAGE_MAP.md`: internal cross-domain
   coverage map for auditing Toni's practice or a client business across
   marketing/Campaign Ops, sales/CRM, offers/pricing, delivery, support,
@@ -433,6 +435,12 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
   next safe Greg artifact toward a Campaign Ops / paid-social readiness packet
   without authorizing sends, ads, public proof, connectors, or live-system
   changes.
+- `practice-os/steward/2026-05-16-greg-paid-social-readiness-packet.md`:
+  sanitized receipt for the private Greg Campaign Ops / paid-social readiness
+  packet. It records that the packet exists in ignored `engagements/`, keeps
+  Campaign Ops in review, and blocks client sends, public proof, ad-account
+  access, budgets, pixels, CRM, analytics exports, App Store, Hub, Notion,
+  QuickBooks, and automation movement until Toni explicitly approves.
 - `docs/CONTEXTUAL_ACTIVATION_PLAYBOOK.md`: idea-to-roadmap routing contract for classifying new ideas, designs, development enhancements, project work, business moves, proof candidates, research items, and automation concepts.
 - `docs/ROADMAP_EXECUTION_BACKLOG.md`: Kanban-style epic/story execution view for the roadmap, with status, Done gates, and next actions.
 - `docs/ROADMAP_SYNTHESIS_GATE_LEDGER.md`: gate ledger for blocked/speculative synthesis candidates, including CCAAP public proof, current Hub dependency blockers, Azure readiness extraction, Hosted DTP promotion, manual availability, Architected Strength assistant pattern, and FAOS revisit.
