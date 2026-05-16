@@ -441,6 +441,12 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
   Campaign Ops in review, and blocks client sends, public proof, ad-account
   access, budgets, pixels, CRM, analytics exports, App Store, Hub, Notion,
   QuickBooks, and automation movement until Toni explicitly approves.
+- `practice-os/steward/2026-05-16-client-email-standard-and-cam-prototype-approval.md`:
+  sanitized receipt for the Greg client-email readability pass, the
+  External Communications email-standard update, the Greg/Cam meeting-context
+  check, and Toni's approval to start Cam's private mock-data Ridgewell
+  prototype lane; it also records the merged private Ridgewell PR #1 prototype
+  follow-through and verification boundary.
 - `docs/CONTEXTUAL_ACTIVATION_PLAYBOOK.md`: idea-to-roadmap routing contract for classifying new ideas, designs, development enhancements, project work, business moves, proof candidates, research items, and automation concepts.
 - `docs/ROADMAP_EXECUTION_BACKLOG.md`: Kanban-style epic/story execution view for the roadmap, with status, Done gates, and next actions.
 - `docs/ROADMAP_SYNTHESIS_GATE_LEDGER.md`: gate ledger for blocked/speculative synthesis candidates, including CCAAP public proof, current Hub dependency blockers, Azure readiness extraction, Hosted DTP promotion, manual availability, Architected Strength assistant pattern, and FAOS revisit.
