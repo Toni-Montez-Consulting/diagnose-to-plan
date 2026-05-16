@@ -51,6 +51,10 @@ approves more detail.
   Business Memory OS diagnostic fixture. It tests the 25-question knowledge
   inventory, search/draft/workflow/human classification, and first assistant
   recommendation against the same fictional local-service business.
+- `omnexus-business-memory-os-diagnostic.md` is the known-business Business
+  Memory OS diagnostic fixture. It tests whether the same lens can produce a
+  read-only release/support memory workflow for Omnexus without copying private
+  app, billing, support, analytics, or App Store evidence into tracked docs.
 - The first real misfire seed is evidence-dossier depth: shallow synthesis with
   too few source/memory citations should become a correction checklist, source
   sweep, and claim ledger instead of another short summary.

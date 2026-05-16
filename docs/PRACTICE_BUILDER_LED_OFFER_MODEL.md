@@ -274,6 +274,12 @@ Possible future public offer names stay parked until diagnostics prove demand:
 The first proof step is the `business-memory-os-diagnostic` template, not a
 software build.
 
+Current internal proof status: Northline and Omnexus diagnostic fixtures exist.
+They support the lens as an internal Blueprint/AI-workflow diagnostic, but they
+do not prove demand for a public named offer. Public naming, pricing, site
+copy, software, and `tm-skills` behavior remain blocked until Toni reviews the
+fixtures and a paid or permissioned diagnostic creates proof-safe evidence.
+
 ## Proof Hierarchy
 
 Tier 1:
