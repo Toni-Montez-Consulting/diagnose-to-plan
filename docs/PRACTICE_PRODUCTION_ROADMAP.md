@@ -55,6 +55,12 @@ admin cadence. `docs/INTERNAL_OFFER_REPERTOIRE_CATALOG.md` captures reusable
 capabilities from Toni's own operations and client work before they become
 public offers.
 
+The Practice Investment Roadmap is captured in
+`docs/PRACTICE_INVESTMENT_ROADMAP_2026.md`. It separates buy-now, buy-soon,
+wait, and avoid decisions for the solo consulting cockpit so hardware,
+software, cloud, security, and delivery tooling investments follow real
+practice capability rather than legitimacy theater.
+
 The Practice Intelligence Control Plane is the V0 operating layer for broad
 session rehydration and input routing. It uses
 `docs/PRACTICE_INTELLIGENCE_CONTROL_PLANE.md` to decide where new replies,
