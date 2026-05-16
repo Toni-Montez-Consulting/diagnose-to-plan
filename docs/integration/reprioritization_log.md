@@ -10,6 +10,42 @@ review_status: draft
 Use this log after meaningful Practice OS changes so backlog movement is
 deliberate and visible.
 
+## 2026-05-16: Greg BOS First Domain Audit
+
+Source:
+
+- `practice-os/steward/2026-05-16-greg-bos-domain-audit.md`
+- Private Greg BOS audit in ignored `engagements/`
+- `docs/BUSINESS_OPERATING_SYSTEM_COVERAGE_MAP.md`
+- `practice-os/research/digests/2026-05-16-campaign-ops-advertising-wedge.md`
+
+Change:
+
+- Applied the new Business Operating System domain audit to Greg as the first
+  real proof pass.
+- Kept detailed client facts in the ignored private engagement kit and added
+  only a sanitized steward receipt to tracked DTP.
+- Confirmed the BOS map is useful on a real lane because it routes the work to
+  paid-social readiness, funnel measurement, support readiness, and launch
+  decision cadence instead of a generic marketing, mobile, or product-polish
+  answer.
+
+Priority impact:
+
+1. The next best Greg artifact is a Campaign Ops / paid-social readiness
+   packet, if Toni wants to continue the lane.
+2. The Greg recap/action-plan email remains a separate review-only draft until
+   Toni explicitly approves revise, Gmail draft creation, send, or hold.
+3. No ad account, budget, CRM, analytics export, payment record, App Store,
+   Hub, Notion, QuickBooks, public proof, or automation action is authorized.
+
+Next review trigger:
+
+- Toni approves a Greg readiness packet.
+- Toni approves or revises the Greg recap/action-plan draft.
+- Greg provides the next wave of activation/support signal.
+- Toni asks to run the BOS audit on Cam, CCAAP, or Omnexus next.
+
 ## 2026-05-16: Business Operating System Coverage Map
 
 Source:

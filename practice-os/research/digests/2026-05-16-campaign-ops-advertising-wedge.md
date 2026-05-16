@@ -162,12 +162,22 @@ meeting produced real channel contrast:
 This should become a Greg-specific paid-social readiness/action packet first.
 Only extract a reusable Campaign Ops pattern after the Greg packet proves useful.
 
+## Greg BOS Audit Read
+
+The first Business Operating System domain audit confirmed that the Campaign
+Ops wedge is sharper when it is treated as a launch operating loop, not an ad
+service. For Greg, the next useful artifact is a paid-social readiness packet
+that ties channel signal to funnel measurement, support readiness,
+first-user trust, and weekly decision cadence before any ad account, budget, or
+public proof movement.
+
 ## Reprioritized Next Action
 
 1. Draft and review the Greg recap/action-plan email.
 2. Draft and review the Cam recap/action-plan email.
-3. Create a Greg-specific Campaign Ops / paid-social readiness packet using
-   Motion and Meta as directional research, not as promises.
+3. If Toni approves continuing the lane, create a Greg-specific Campaign Ops /
+   paid-social readiness packet using Motion and Meta as directional research,
+   not as promises.
 4. If useful, promote a reusable Campaign Ops checklist into Practice OS.
 5. Keep direct ad publishing, Marketing API work, ad account credentials,
    budgets, and client spend actions blocked until a separate explicit approval.
