@@ -65,6 +65,14 @@ fictional local-service material and Omnexus as a known-business product
 operation test. They support continued internal review, not public offer copy,
 software, hosted platform, or `tm-skills` promotion.
 
+Campaign Ops is now captured as an internal advertising-angle research lane in
+`practice-os/research/digests/2026-05-16-campaign-ops-advertising-wedge.md`.
+The current thesis is that Toni can help owner-led businesses make paid growth
+trackable, follow-up-ready, and learnable before they spend more on ads. This
+stays internal and proof-gated: no ad-account access, budget movement,
+automated ad publishing, ROAS promises, or public offer copy until a real lane,
+starting with Greg, proves the packet useful.
+
 The Practice Intelligence Control Plane is the V0 operating layer for broad
 session rehydration and input routing. It uses
 `docs/PRACTICE_INTELLIGENCE_CONTROL_PLANE.md` to decide where new replies,

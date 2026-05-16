@@ -193,6 +193,11 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
   that should survive beyond a digest or one-off chat.
 - `practice-os/research/digests/`: Research Arm digests that summarize what
   changed, why it matters, hype limits, practice impact, and next action.
+- `practice-os/research/digests/2026-05-16-campaign-ops-advertising-wedge.md`:
+  source-backed internal research note for the advertising angle. It frames
+  Campaign Ops as offer, landing-page, creative testing, tracking, CRM,
+  follow-up, and weekly learning workflow support, not a media-buying service,
+  automated ad-spend platform, Motion clone, or public offer claim.
 - `practice-os/research/radar/`: Research Radar items that classify a signal as
   Adopt, Pilot, Watch, or Reject with source, value hypothesis, risks, and
   acceptance before implementation.
@@ -401,6 +406,11 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
   fixtures. It keeps the lane internal, confirms the diagnostic shape is useful
   enough for review, and blocks public-offer, software, Pattern Intelligence
   template, and `tm-skills` promotion until Toni accepts the fixtures.
+- `practice-os/steward/2026-05-16-campaign-ops-client-followup-reprioritization.md`:
+  internal receipt for the Motion/Meta Campaign Ops research angle and the
+  Cam/Greg follow-up gap. It reprioritizes client recap/action-plan drafts
+  ahead of more internal polish while blocking sends, ad account actions,
+  public proof, and direct ad publishing.
 - `docs/CONTEXTUAL_ACTIVATION_PLAYBOOK.md`: idea-to-roadmap routing contract for classifying new ideas, designs, development enhancements, project work, business moves, proof candidates, research items, and automation concepts.
 - `docs/ROADMAP_EXECUTION_BACKLOG.md`: Kanban-style epic/story execution view for the roadmap, with status, Done gates, and next actions.
 - `docs/ROADMAP_SYNTHESIS_GATE_LEDGER.md`: gate ledger for blocked/speculative synthesis candidates, including CCAAP public proof, current Hub dependency blockers, Azure readiness extraction, Hosted DTP promotion, manual availability, Architected Strength assistant pattern, and FAOS revisit.

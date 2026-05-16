@@ -10,6 +10,44 @@ review_status: draft
 Use this log after meaningful Practice OS changes so backlog movement is
 deliberate and visible.
 
+## 2026-05-16: Campaign Ops Research And Client Follow-Up Reprioritization
+
+Source:
+
+- `practice-os/steward/2026-05-16-campaign-ops-client-followup-reprioritization.md`
+- `practice-os/research/digests/2026-05-16-campaign-ops-advertising-wedge.md`
+- Gmail messages `19e2d30133d575b5` and `19e2c664539e7e18`.
+- Private Cam/Greg engagement kits under ignored `engagements/`.
+
+Change:
+
+- Captured the advertising angle as a Campaign Ops research lane instead of a
+  generic ad-agency, media-buying, Motion-clone, or automated ad-publishing
+  direction.
+- Confirmed Cam and Greg both have May 15 follow-up/action-plan gaps and no
+  matching sent recap in the searched Gmail scope.
+- Drafted review-only follow-up emails in the private Cam and Greg engagement
+  kits.
+
+Priority impact:
+
+1. Cam/Greg recap and action-plan follow-ups move ahead of more internal polish.
+2. Greg becomes the first Campaign Ops proof lane because Facebook group signal,
+   paid-ads interest, pilot-code handling, activation tracking, and follow-up
+   workflow are all live issues.
+3. Campaign Ops stays internal/research-first until a real client lane proves
+   the packet useful; no public offer copy, ad account access, budget movement,
+   or direct ad publishing is authorized.
+4. Business Memory OS and Pattern Intelligence remain in review, but client
+   follow-up is the immediate operating gap.
+
+Next review trigger:
+
+- Toni approves or revises the Cam/Greg drafts.
+- Greg wants a paid-social readiness/action packet.
+- A campaign workflow produces proof-safe signal that can justify a reusable
+  Campaign Ops checklist.
+
 ## 2026-05-16: Business Memory OS Diagnostic Proof Lane
 
 Source:
