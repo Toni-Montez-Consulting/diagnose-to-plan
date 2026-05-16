@@ -447,6 +447,10 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
   check, and Toni's approval to start Cam's private mock-data Ridgewell
   prototype lane; it also records the merged private Ridgewell PR #1 prototype
   follow-through and verification boundary.
+- `practice-os/steward/2026-05-16-client-email-deliverable-pairing-correction.md`:
+  sanitized correction receipt for relationship-tone calibration, email +
+  deliverable pairing, attachment handling, and the revised Greg/Cam Gmail
+  draft strategy.
 - `docs/CONTEXTUAL_ACTIVATION_PLAYBOOK.md`: idea-to-roadmap routing contract for classifying new ideas, designs, development enhancements, project work, business moves, proof candidates, research items, and automation concepts.
 - `docs/ROADMAP_EXECUTION_BACKLOG.md`: Kanban-style epic/story execution view for the roadmap, with status, Done gates, and next actions.
 - `docs/ROADMAP_SYNTHESIS_GATE_LEDGER.md`: gate ledger for blocked/speculative synthesis candidates, including CCAAP public proof, current Hub dependency blockers, Azure readiness extraction, Hosted DTP promotion, manual availability, Architected Strength assistant pattern, and FAOS revisit.
