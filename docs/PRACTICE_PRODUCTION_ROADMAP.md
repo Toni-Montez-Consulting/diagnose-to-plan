@@ -55,6 +55,14 @@ admin cadence. `docs/INTERNAL_OFFER_REPERTOIRE_CATALOG.md` captures reusable
 capabilities from Toni's own operations and client work before they become
 public offers.
 
+The Business Operating System Coverage Map is now the internal cross-domain
+audit lens for Toni's practice and client businesses. It lives at
+`docs/BUSINESS_OPERATING_SYSTEM_COVERAGE_MAP.md` and routes marketing,
+sales, offers, delivery, support, finance, legal/risk, people/vendor, Business
+Memory, KPI/reporting, launch/change management, and domain-specific
+operations into one manual-first review before software, automation,
+connectors, dashboards, or public packaging are proposed.
+
 The Practice Investment Roadmap is captured in
 `docs/PRACTICE_INVESTMENT_ROADMAP_2026.md`. It separates buy-now, buy-soon,
 wait, and avoid decisions for the solo consulting cockpit so hardware,

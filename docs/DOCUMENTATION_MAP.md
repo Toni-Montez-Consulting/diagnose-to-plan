@@ -198,6 +198,16 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
   Campaign Ops as offer, landing-page, creative testing, tracking, CRM,
   follow-up, and weekly learning workflow support, not a media-buying service,
   automated ad-spend platform, Motion clone, or public offer claim.
+- `docs/BUSINESS_OPERATING_SYSTEM_COVERAGE_MAP.md`: internal cross-domain
+  coverage map for auditing Toni's practice or a client business across
+  marketing/Campaign Ops, sales/CRM, offers/pricing, delivery, support,
+  finance, legal/risk, people/vendor, Business Memory, KPI/reporting, launch,
+  and domain-specific operations before proposing software, automation,
+  dashboards, connectors, public copy, or a named offer.
+- `practice-os/templates/business-operating-system-domain-audit.md`: reusable
+  manual template for a Business Operating System domain audit. Use it when a
+  prompt asks for complete business operations coverage, a client business
+  audit, operating-system gaps, or what parts of the business are not covered.
 - `practice-os/research/radar/`: Research Radar items that classify a signal as
   Adopt, Pilot, Watch, or Reject with source, value hypothesis, risks, and
   acceptance before implementation.
@@ -411,6 +421,12 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
   Cam/Greg follow-up gap. It reprioritizes client recap/action-plan drafts
   ahead of more internal polish while blocking sends, ad account actions,
   public proof, and direct ad publishing.
+- `practice-os/steward/2026-05-16-business-operating-system-coverage-audit.md`:
+  internal receipt for the current-system BOS coverage audit. It records what
+  DTP already covers, ranks finance/cashflow, sales pipeline, customer
+  success/support, and domain-specific operations as P0 gaps, and blocks public
+  packaging, connectors, dashboards, and automation until manual use proves the
+  pattern.
 - `docs/CONTEXTUAL_ACTIVATION_PLAYBOOK.md`: idea-to-roadmap routing contract for classifying new ideas, designs, development enhancements, project work, business moves, proof candidates, research items, and automation concepts.
 - `docs/ROADMAP_EXECUTION_BACKLOG.md`: Kanban-style epic/story execution view for the roadmap, with status, Done gates, and next actions.
 - `docs/ROADMAP_SYNTHESIS_GATE_LEDGER.md`: gate ledger for blocked/speculative synthesis candidates, including CCAAP public proof, current Hub dependency blockers, Azure readiness extraction, Hosted DTP promotion, manual availability, Architected Strength assistant pattern, and FAOS revisit.
@@ -603,6 +619,7 @@ Do not update `hub-prompts` or `hub-registry` just because the roadmap changes. 
 - Use `docs/PUBLIC_PROOF_PROMOTION_RUNBOOK.md` before moving any screenshot, claim, metric, client/project artifact, internal system evidence, or proof candidate toward public consulting copy.
 - Use `docs/OFFER_LED_PRACTICE_PACKAGING.md` before updating the public consulting offer narrative.
 - Use `docs/BUSINESS_ADMIN_OPERATING_SYSTEM.md` when Google Workspace, Calendar/Meet, Apple Reminders capture, LLC readiness, EIN/banking/tax, contracts, insurance, brand assets, or business overhead need durable planning state.
+- Use `docs/BUSINESS_OPERATING_SYSTEM_COVERAGE_MAP.md` and `practice-os/templates/business-operating-system-domain-audit.md` when Toni asks for complete business operations coverage, what parts of a business are missing, a client business audit, operating-system gaps, or a domain-by-domain map across marketing, sales, finance, delivery, support, legal/risk, people/vendor, reporting, launch, and domain-specific operations. Keep it manual-first; do not infer public copy, software, Hub, Notion, QuickBooks, dashboards, connectors, or automation.
 - Use `docs/INTERNAL_OFFER_REPERTOIRE_CATALOG.md` before turning a newly delivered asset, system, logo kit, mission/vision sprint, admin room, command room, launch hardening pass, or follow-up queue into an offer candidate.
 - Use `practice-os/templates/activation-routing-map.md` when skill triggers, templates, roadmap lanes, proof gates, COI gates, research/eval artifacts, or repo touch lanes need prompt-based routing.
 - Use `practice-os/templates/research-pattern-candidate.md` when a research signal, field note, or business observation needs to become a reusable consulting pattern candidate instead of a one-off summary.

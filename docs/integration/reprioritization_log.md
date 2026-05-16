@@ -10,6 +10,43 @@ review_status: draft
 Use this log after meaningful Practice OS changes so backlog movement is
 deliberate and visible.
 
+## 2026-05-16: Business Operating System Coverage Map
+
+Source:
+
+- `docs/BUSINESS_OPERATING_SYSTEM_COVERAGE_MAP.md`
+- `practice-os/templates/business-operating-system-domain-audit.md`
+- `practice-os/steward/2026-05-16-business-operating-system-coverage-audit.md`
+
+Change:
+
+- Added a manual, internal-first Business Operating System coverage layer for
+  Toni's practice and client businesses.
+- Normalized the missing cross-domain lens across marketing/Campaign Ops,
+  sales/CRM, offers/pricing, delivery, support/retention, finance/cashflow,
+  legal/risk, people/vendor access, Business Memory, KPI/reporting,
+  launch/change management, and domain-specific operations.
+- Kept the lane as docs/templates/steward review only. No public copy,
+  software, hosted DTP, Notion sync, Hub runtime, QuickBooks OAuth, connector,
+  dashboard, or automation work is authorized.
+
+Priority impact:
+
+1. Use the BOS domain audit before claiming a business has complete operating
+   coverage or before turning a messy client ask into a tool/build request.
+2. Finance/cashflow, sales pipeline, customer success/support, and
+   domain-specific operations become the highest-value gaps to test in real
+   lanes.
+3. Apply the template to Greg, Cam, CCAAP, or Omnexus before promoting a
+   checklist, command contract, public offer component, or dashboard.
+
+Next review trigger:
+
+- A real or known-business BOS audit produces a sharper next artifact.
+- Two manual audits show the same domains, questions, and gates repeating.
+- Toni asks to turn the coverage audit into a review checklist, command
+  contract, public language, or client-facing deliverable.
+
 ## 2026-05-16: Campaign Ops Research And Client Follow-Up Reprioritization
 
 Source:
