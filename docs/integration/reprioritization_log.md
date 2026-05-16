@@ -10,6 +10,47 @@ review_status: draft
 Use this log after meaningful Practice OS changes so backlog movement is
 deliberate and visible.
 
+## 2026-05-16: Client Email Standard And Cam Prototype Approval
+
+Source:
+
+- `practice-os/steward/2026-05-16-client-email-standard-and-cam-prototype-approval.md`
+- Private Greg follow-up draft and decision context under ignored
+  `engagements/`
+- Private Cam decision context under ignored `engagements/`
+- `practice-os/agents/external-communications.md`
+
+Change:
+
+- Rewrote Greg's May 15 follow-up draft into a structured, client-readable
+  recap/action-plan format.
+- Promoted Toni's preference into the External Communications role as the
+  default Client Email Readability Standard.
+- Confirmed Greg and Cam meeting notes are represented in their private
+  decision-making context.
+- Recorded Toni's approval to move Cam from prototype-brief review into the
+  private Ridgewell mock-data visual prototype lane.
+- Built and merged the first private Ridgewell Vite/React mock-data visual
+  prototype through Ridgewell PR #1 after local build, audit, screenshot, and
+  interaction checks.
+
+Priority impact:
+
+1. Future client emails should use the structured readability format by
+   default.
+2. Greg's next action is Toni review of the revised draft and readiness packets,
+   not an automatic send.
+3. Cam's next action is private local prototype review and revision choice;
+   live data, repo invite, production deployment, public proof, and
+   compensation/IP assumptions remain blocked.
+
+Next review trigger:
+
+- Toni approves a Gmail draft/send/hold decision for Greg.
+- Toni reviews the Ridgewell mock-data prototype and chooses revise, prep a
+  client-facing review packet, or hold.
+- Cameron sends safe concept artifacts, color references, or rough mockups.
+
 ## 2026-05-16: Greg Paid-Social Readiness Packet
 
 Source:

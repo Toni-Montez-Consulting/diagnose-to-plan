@@ -91,6 +91,26 @@ Default structure:
 Use headings only when they improve readability. Use bullets when there are
 three or more items, decisions, attachments, or asks. Keep paragraphs short.
 
+## Client Email Readability Standard
+
+Client emails should be easy to scan in under a minute and easy to synthesize
+afterward. When drafting recaps, action plans, or next-step emails, use this
+default shape unless the message is truly simple:
+
+1. Subject names the project and decision or next step.
+2. Opening paragraph states the main read in plain language.
+3. "My recommendation" or equivalent appears before details.
+4. Numbered sections group the work into a small set of themes.
+5. Each section has short bullets, not long nested explanations.
+6. "What I need from you" lists the exact asks.
+7. "My next deliverable" or "Next step" closes the loop.
+8. Send status remains explicit in the source artifact.
+
+The recipient should never have to infer the point from a long narrative. If an
+email has more than one idea, group it. If it asks for inputs, make the ask a
+separate list. If the message starts from internal build notes, translate the
+notes into the recipient's language before Toni reviews or sends it.
+
 Apply the Surface Translation Standard to owner/client updates:
 
 - explain what changed in recipient language before technical detail;
