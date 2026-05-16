@@ -55,6 +55,7 @@ If a cycle does not produce evidence, a decision, a reusable pattern, a proof up
 | Hub Runtime Current-State Map | Now | `hub` | any Hub feature, runtime check, intake, console, cron, webhook, prompt/registry, or deploy question | Active now because Hub is the murkiest runtime layer |
 | Offer-Led Practice Packaging | Now | `diagnose-to-plan`, later `consulting` | public-site copy, sales conversation, client intake, offer framing | Active now before changing public copy |
 | Business Admin Operating System | Now | `diagnose-to-plan`, Notion mirror, `consulting` launcher | Google Workspace, Calendar/Meet, Apple Reminders capture, LLC readiness, banking/tax/contracts/insurance planning, brand asset administration | Active now because Toni's business overhead needs one cockpit without putting private records on the public site |
+| Business Operating System Coverage Map | Now | `diagnose-to-plan` | complete business operations, client business audit, operating-system gaps, or domain coverage questions | Active now to prevent sales, finance, support, people/vendor, legal/risk, reporting, launch, and domain-specific ops from falling between existing lanes |
 | Internal Offer Repertoire Catalog | Now | `diagnose-to-plan` | any reusable service pattern from Toni's own operations or client delivery | Active now so new capabilities become private offer inventory before public proof |
 | Kaizen Kanban Operating Loop | Now | `diagnose-to-plan`, Notion mirror | any meaningful new idea, ask, blocker, proof candidate, repo issue, client signal, correction, or process improvement | Active now to reduce document sprawl, memory drift, and queue ambiguity |
 | Client Loop Pilot | Next | `diagnose-to-plan` private kits | next real Cameron, Greg, or CCAAP reply/cadence cycle | Needs one real cycle after Clarity + Proof docs land |
@@ -92,6 +93,7 @@ Use this map before accepting broad work that touches more than one repo or one 
 | "Automate this across repos" | Workspace Operator Runbook + Workspace Command Center V0 | start read-only and repo-local |
 | "Remember/use this later" | Kaizen Kanban + Practice Memory Control Plane | capture with `dtp kaizen capture`, then decide raw, working, decision, pattern, or playbook memory |
 | "Google Workspace, Calendar/Meet, Apple Reminders, LLC, business admin, brand kit, mission/vision, offer catalog" | Business Admin OS + Internal Offer Repertoire Catalog | update DTP first, mirror sanitized status to Notion, keep `/admin` as a launcher only |
+| "What parts of this business are not covered?" | Business Operating System Coverage Map | run a manual domain audit before proposing software, connectors, dashboards, automation, or public packaging |
 | "Publish DSE/Microsoft-adjacent proof" | COI/redaction hold | stop until explicit clearance exists |
 | "Build hosted DTP" | Hosted DTP Phase 0 | require real records and separate implementation approval |
 
