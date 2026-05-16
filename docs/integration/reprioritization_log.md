@@ -10,6 +10,40 @@ review_status: draft
 Use this log after meaningful Practice OS changes so backlog movement is
 deliberate and visible.
 
+## 2026-05-16: Business Memory OS Diagnostic Proof Lane
+
+Source:
+
+- `practice-os/steward/2026-05-16-business-memory-os-diagnostic-proof-review.md`
+- `practice-os/fixtures/consulting-intelligence/northline-business-memory-os-diagnostic.md`
+- `practice-os/fixtures/consulting-intelligence/omnexus-business-memory-os-diagnostic.md`
+- `practice-os/templates/business-memory-os-diagnostic.md`
+
+Change:
+
+- Merged the Business Memory OS / Pattern Intelligence capture PR and opened a
+  narrow DTP follow-on lane for diagnostic proof.
+- Reviewed the Northline fictional diagnostic against the concrete proof
+  criteria: source map, 25 recurring questions, classification, ranked
+  opportunities, and safe first workflow recommendation.
+- Added Omnexus as the known-business diagnostic fixture using only tracked,
+  internal-safe repo facts.
+
+Priority impact:
+
+1. Business Memory OS remains an internal consulting lens and diagnostic, not
+   public offer copy, a SaaS plan, a Glean competitor, or software build.
+2. The next move is Toni review of the Northline and Omnexus fixtures before a
+   reusable diagnostic review pattern, template promotion, or public naming.
+3. Pattern Intelligence remains in review; do not create more company studies,
+   scheduled research, public claims, or `tm-skills` behavior from this lane.
+
+Next review trigger:
+
+- Toni accepts or rejects the diagnostic fixture shape.
+- A paid or permissioned diagnostic produces proof-safe evidence.
+- Toni asks to create a reusable Business Memory diagnostic review checklist.
+
 ## 2026-05-15: Ridgewell Repo Foundation And Greg Support Packets
 
 Source:

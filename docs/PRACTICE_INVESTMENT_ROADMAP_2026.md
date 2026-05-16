@@ -114,6 +114,16 @@ Only after several diagnostics show repeated demand should Toni consider:
 - hosted Business Memory workspace;
 - paid monthly support package.
 
+Current diagnostic proof status:
+
+- Northline proves the diagnostic shape on fictional local-service material.
+- Omnexus proves the same lens can produce an internal release/support memory
+  workflow from tracked known-business docs without copying private app,
+  billing, analytics, support, or App Store evidence into DTP.
+- This is useful pattern evidence, not buyer demand. Keep product, tooling, and
+  cloud investment parked until a paid or permissioned diagnostic repeats the
+  need.
+
 ## Claude Agent SDK Credit
 
 Toni received an Anthropic notice that Max 5x subscribers can claim a monthly
@@ -155,10 +165,12 @@ If the answer is mostly no, wait.
 
 ## Next Actions
 
-1. Review the first Business Memory OS diagnostic fixture:
-   `practice-os/fixtures/consulting-intelligence/northline-business-memory-os-diagnostic.md`.
-2. Run a second diagnostic against Omnexus or another known business after the
-   shape is clean.
+1. Review the two Business Memory OS diagnostic fixtures:
+   `practice-os/fixtures/consulting-intelligence/northline-business-memory-os-diagnostic.md`
+   and
+   `practice-os/fixtures/consulting-intelligence/omnexus-business-memory-os-diagnostic.md`.
+2. If both fixtures feel specific, create a lightweight diagnostic review
+   pattern; if not, keep Business Memory OS as a private Blueprint lens.
 3. Track actual friction for 30 days before buying hardware.
 4. Keep cloud investments tied to real client/demo needs.
 5. Revisit this roadmap after the next paid engagement or after the first full

@@ -262,6 +262,16 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
   dashboard growth.
 - `practice-os/fixtures/consulting-intelligence/northline-performance-studio-blueprint-sample.md`:
   public-safe fictional Blueprint sample for a wellness/performance practice.
+- `practice-os/fixtures/consulting-intelligence/northline-business-memory-os-diagnostic.md`:
+  public-safe fictional Business Memory OS diagnostic fixture. Use it to test
+  whether the 25-question source map, search/draft/workflow/human
+  classification, ranked opportunities, and first workflow recommendation are
+  specific enough before public naming or software build work.
+- `practice-os/fixtures/consulting-intelligence/omnexus-business-memory-os-diagnostic.md`:
+  known-business Business Memory OS diagnostic fixture for Omnexus. Use it to
+  test the same diagnostic against founder/operator product, launch,
+  subscription, support, and proof-memory complexity without copying private
+  app, billing, analytics, support, or App Store evidence into tracked docs.
 - `docs/OFFER_LED_PRACTICE_PACKAGING.md`: internal offer-packaging source for the first sellable practice offers. Use it before changing `consulting` public copy around offers.
 - `docs/OFFER_TO_PROOF_MATRIX.md`: maps the three V0 offers to existing proof, missing proof, public-copy eligibility, and claims that are not allowed yet.
 - `docs/BUSINESS_ADMIN_OPERATING_SYSTEM.md`: DTP-first operating lane for Toni's own Google Workspace, Calendar/Meet, Apple Reminders capture, LLC readiness, EIN/banking/tax/contract/insurance prompts, brand assets, admin cadence, and sanitized Notion mirror state.
@@ -386,6 +396,11 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
   Store/TestFlight readiness and launch-momentum dashboard planning. It does
   not authorize public proof, client sends, mobile implementation, or raw user
   data in tracked DTP files.
+- `practice-os/steward/2026-05-16-business-memory-os-diagnostic-proof-review.md`:
+  focused review of the Northline and Omnexus Business Memory OS diagnostic
+  fixtures. It keeps the lane internal, confirms the diagnostic shape is useful
+  enough for review, and blocks public-offer, software, Pattern Intelligence
+  template, and `tm-skills` promotion until Toni accepts the fixtures.
 - `docs/CONTEXTUAL_ACTIVATION_PLAYBOOK.md`: idea-to-roadmap routing contract for classifying new ideas, designs, development enhancements, project work, business moves, proof candidates, research items, and automation concepts.
 - `docs/ROADMAP_EXECUTION_BACKLOG.md`: Kanban-style epic/story execution view for the roadmap, with status, Done gates, and next actions.
 - `docs/ROADMAP_SYNTHESIS_GATE_LEDGER.md`: gate ledger for blocked/speculative synthesis candidates, including CCAAP public proof, current Hub dependency blockers, Azure readiness extraction, Hosted DTP promotion, manual availability, Architected Strength assistant pattern, and FAOS revisit.
