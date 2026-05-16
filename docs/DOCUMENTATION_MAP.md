@@ -191,6 +191,11 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
 - `practice-os/research/decisions/`: reviewed research decisions created from
   source-backed signals. Use for adopt, pilot, watch, reject, or park outcomes
   that should survive beyond a digest or one-off chat.
+- `practice-os/research/digests/`: Research Arm digests that summarize what
+  changed, why it matters, hype limits, practice impact, and next action.
+- `practice-os/research/radar/`: Research Radar items that classify a signal as
+  Adopt, Pilot, Watch, or Reject with source, value hypothesis, risks, and
+  acceptance before implementation.
 - `practice-os/templates/knowledge-base-event-record.md`: simple event record
   for knowledge-base maintenance across research, memory, operations, project
   execution, client signals, proof, and agent-system misses.
@@ -252,9 +257,9 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
 - `docs/PRACTICE_SYSTEM_FUTURE_STATE.md`: future-state architecture for hosted DTP, steward automation, supervised learning, research radar, repo manifests, command-center planning, and gated agent activation.
 - `docs/RESEARCH_ARM_V0.md`: manual-first research and intelligence loop for
   turning AI/software/workflow signals into digests, classifications,
-  recommendations, and approval-gated practice updates. Use it before building
-  always-on research agents, scheduled digests, or research-to-roadmap
-  automation.
+  recommendations, Pattern Intelligence company-pattern studies, and
+  approval-gated practice updates. Use it before building always-on research
+  agents, scheduled digests, or research-to-roadmap automation.
 - `docs/RESEARCH_ARM_SOURCE_LIST_V0.md`: recurring, event-triggered Research
   Arm source list. Use it when Toni asks what sources to watch, forwards a
   research signal, needs evidence for an AI/platform/workflow claim, or wants

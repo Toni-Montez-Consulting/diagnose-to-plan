@@ -67,6 +67,16 @@ session rehydration and input routing. It uses
 ideas, proof claims, tool requests, assistant plans, finance/admin ideas, and
 memory candidates should land before any infrastructure expands.
 
+The Pattern Intelligence loop is now captured inside the Research Arm. It turns
+AI and workflow company observations into practical consulting assets instead
+of passive market watching. Current sources are
+`practice-os/research/digests/2026-05-15-pattern-intelligence-research-arm.md`,
+`practice-os/research/radar/2026-05-15-pattern-intelligence-ai-company-patterns.md`,
+and
+`practice-os/research/pattern-candidates/2026-05-15-pattern-intelligence-research-to-offer-loop.md`.
+It is manual and internal-only until a reviewed study proves a diagnostic,
+workflow, client explanation, or offer component should move forward.
+
 The Consulting Workspace OS V0 is captured in
 `docs/CONSULTING_WORKSPACE_OS_V0.md`. It preserves Toni's idea for an internal
 operating layer that makes every build improve the next one, with consulting as

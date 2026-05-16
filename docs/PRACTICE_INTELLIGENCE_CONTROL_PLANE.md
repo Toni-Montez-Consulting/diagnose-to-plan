@@ -78,6 +78,7 @@ protects the right gate.
 | Prospect intake | prospect-intake triage plus selected Practice OS artifact and draft-only follow-up template when needed | sanitized next-action/status only | no client communication, proof, production write, or integration expansion before approval |
 | Meeting notes | private kit meeting notes plus extraction | sanitized meeting status | mark AI notes unverified until checked |
 | Rough idea | Thought Inbox or Input Studio | Idea Inbox summary | no implementation until classified |
+| Research or company-pattern signal | Research Arm digest, Research Radar item, or research-pattern candidate | sanitized topic/classification/next action only | no public claim, offer change, tool adoption, or automation until reviewed |
 | Client/source artifact | private kit source-material index | waiting/action summary only | classify sensitivity before use |
 | Proof candidate | proof packet and redaction queue | proof gate status | permission, redaction, reviewer, evidence, caveat |
 | Tool/plugin idea | Tooling Steward review | tool status summary | no OAuth/write access before accepted boundary |

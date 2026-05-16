@@ -10,6 +10,44 @@ review_status: draft
 Use this log after meaningful Practice OS changes so backlog movement is
 deliberate and visible.
 
+## 2026-05-15: Pattern Intelligence Added To Research Arm
+
+Source:
+
+- Toni's founder email `Research continued`.
+- Gmail message `19e2e2bdad7c5c27`.
+- `docs/RESEARCH_ARM_V0.md`
+- `practice-os/research/digests/2026-05-15-pattern-intelligence-research-arm.md`
+- `practice-os/research/radar/2026-05-15-pattern-intelligence-ai-company-patterns.md`
+- `practice-os/research/pattern-candidates/2026-05-15-pattern-intelligence-research-to-offer-loop.md`
+
+Change:
+
+- Added Pattern Intelligence as a manual Research Arm loop for studying AI and
+  workflow companies without copying them or turning them into public proof.
+- Captured the rule that research should produce a usable artifact candidate or
+  be parked.
+- Converted the first Research Radar item from `Ready` to `Done`.
+- Added the next story: run one reviewed company-pattern study before creating
+  more templates, automation, public copy, or offer changes.
+
+Priority impact:
+
+1. The next research move is not more market browsing; it is one company-pattern
+   study that produces a diagnostic question, artifact candidate, evidence
+   limit, and parked idea.
+2. Glean is the recommended first study because Business Memory OS already
+   proves part of the research-to-artifact loop.
+3. Public claims, offer names, pricing, scheduled research automation, and
+   client deliverables remain gated.
+
+Next review trigger:
+
+- One company-pattern study is completed.
+- Toni asks to turn Pattern Intelligence into a named offer, public content,
+  or a recurring research habit.
+- A client problem matches one of the company-pattern watchlist examples.
+
 ## 2026-05-13: Consulting Workspace OS And Requirements Gatherer V1 Added
 
 Source:
