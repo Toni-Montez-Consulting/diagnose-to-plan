@@ -470,6 +470,12 @@ For broad workspace, business-machine, offer, proof, Hub, DTP, prompt/skill, or 
   sanitized correction receipt for relationship-tone calibration, email +
   deliverable pairing, attachment handling, and the revised Greg/Cam Gmail
   draft strategy.
+- `practice-os/steward/2026-05-16-cam-ai-operating-loop-readiness.md`:
+  sanitized receipt for applying the AI Operating Loop readiness review to the
+  Cam / Ridgewell prototype-data-access lane. It keeps private review details
+  in ignored `engagements/`, confirms the pattern helps with prototype/data
+  governance, and blocks client sends, repo invites, live data, production,
+  public proof, compliance claims, runtime, connectors, FAOS, and autonomy.
 - `docs/CONTEXTUAL_ACTIVATION_PLAYBOOK.md`: idea-to-roadmap routing contract for classifying new ideas, designs, development enhancements, project work, business moves, proof candidates, research items, and automation concepts.
 - `docs/ROADMAP_EXECUTION_BACKLOG.md`: Kanban-style epic/story execution view for the roadmap, with status, Done gates, and next actions.
 - `docs/ROADMAP_SYNTHESIS_GATE_LEDGER.md`: gate ledger for blocked/speculative synthesis candidates, including CCAAP public proof, current Hub dependency blockers, Azure readiness extraction, Hosted DTP promotion, manual availability, Architected Strength assistant pattern, and FAOS revisit.
