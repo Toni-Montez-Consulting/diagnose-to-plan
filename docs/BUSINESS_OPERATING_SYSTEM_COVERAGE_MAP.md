@@ -91,7 +91,7 @@ complete operating system.
 | Legal / risk / procurement | partial | COI and issue-spotting exist; procurement and contract ops are not a reusable lane yet. |
 | People / vendor / capacity | gap | Access, delegation, vendor, and capacity reviews are not yet first-class templates. |
 | KPI / reporting cadence | partial | Proof and verification exist; management reporting cadence is underbuilt. |
-| AI governance / operating loops | review | MDASH-inspired pattern candidate and AI Operating Loop Readiness Review template exist; private Greg and Cam proof passes are recorded, but DTP delivery or Toni review is still needed before any public offer or runtime movement. |
+| AI governance / operating loops | review | MDASH-inspired pattern candidate and AI Operating Loop Readiness Review template exist; private Greg, private Cam, and internal DTP delivery proof passes are recorded, but Toni review is still needed before any public offer or runtime movement. |
 | Training / adoption | partial | Handoff/runbooks exist; adoption and training plans need a stronger standard. |
 | Domain-specific ops | gap | Active pilots contain domain knowledge, but there is no reusable domain-ops audit map yet. |
 
