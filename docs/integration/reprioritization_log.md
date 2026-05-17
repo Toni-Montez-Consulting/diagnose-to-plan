@@ -10,6 +10,80 @@ review_status: draft
 Use this log after meaningful Practice OS changes so backlog movement is
 deliberate and visible.
 
+## 2026-05-16: Greg AI Operating Loop Proof Pass
+
+Source:
+
+- `practice-os/templates/ai-operating-loop-readiness-review.md`
+- `practice-os/steward/2026-05-16-greg-ai-operating-loop-readiness.md`
+- Private Greg AI operating-loop readiness review in ignored `engagements/`
+- Existing Greg BOS, Campaign Ops, launch, App Store/TestFlight, and source
+  boundary artifacts
+
+Change:
+
+- Applied the AI Operating Loop Readiness Review to Greg as the first real
+  proof pass.
+- Kept client-specific facts private in ignored `engagements/`.
+- Captured only the sanitized operating learning in tracked DTP.
+- Confirmed the pattern is useful as a clear-lane review for launch demand,
+  AI/tool role, source boundaries, human review, validation, handoff, paid
+  traffic, support, mobile readiness, and proof gates.
+
+Priority impact:
+
+1. The AI Governance Operating Loop lane now has one private proof pass on a
+   live engagement.
+2. The lane remains in Review; one Greg proof pass is not enough for public
+   copy, compliance positioning, runtime work, connector setup, FAOS,
+   source-pack automation, or autonomy expansion.
+3. The next proof candidate should be Cam's prototype/data/review governance or
+   Toni's DTP delivery loop.
+
+Next review trigger:
+
+- Greg responds with updated funnel/support facts.
+- Toni extends Greg's packet into a weekly governed launch review.
+- Apply the same readiness review to Cam or DTP delivery.
+
+## 2026-05-16: AI Governance Operating Loop Lane
+
+Source:
+
+- Toni MDASH memo captured from Gmail message `19e319ba02ce28d6`
+- Microsoft Security Blog MDASH article checked on 2026-05-16
+- `practice-os/research/pattern-candidates/2026-05-16-mdash-ai-governance-operating-loops.md`
+- `practice-os/templates/ai-operating-loop-readiness-review.md`
+- `practice-os/steward/2026-05-16-ai-governance-operating-loop-lane.md`
+
+Change:
+
+- Captured the MDASH / multi-model orchestration idea as an internal AI
+  Governance Operating Loop pattern.
+- Added a manual readiness review for business outcome, model/tool role,
+  source/data boundary, human review, validation/proof, escalation, failure
+  modes, owner handoff, and safe first action.
+- Routed AI governance, clear lanes, human-in-the-loop AI, model orchestration,
+  and AI infrastructure prompts through the manual review before runtime,
+  automation, public copy, or compliance language.
+
+Priority impact:
+
+1. This strengthens the practice thesis that Toni does not just build AI tools;
+   he builds the workflow, validation, governance, and handoff that make them
+   useful.
+2. The lane stays in Review until applied to Greg, Cam, or the DTP delivery
+   loop.
+3. No public offer copy, compliance advice, FAOS, Hub, connector, source-pack
+   automation, or autonomy expansion is authorized.
+
+Next review trigger:
+
+- Apply the readiness review to Greg's launch/growth lane.
+- Apply it to Cam's prototype/data/review lane.
+- Apply it to DTP client delivery if follow-up/attachment/send-state friction
+  repeats.
+
 ## 2026-05-16: DTP Client Delivery Engine Correction
 
 Source:
