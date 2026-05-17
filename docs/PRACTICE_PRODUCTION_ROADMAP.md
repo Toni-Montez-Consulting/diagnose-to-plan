@@ -90,10 +90,10 @@ proof, escalation, and handoff. This stays manual and review-first through
 `practice-os/templates/ai-operating-loop-readiness-review.md`; it does not
 authorize public copy, compliance advice, runtime implementation, FAOS,
 connectors, source-pack automation, or autonomy expansion.
-Private Greg and Cam proof passes now test the pattern against launch/growth
-governance and prototype/data/access governance. The lane remains in Review
-until Toni accepts the proof passes or the review also proves useful on DTP
-delivery.
+Private Greg, private Cam, and internal DTP delivery proof passes now test the
+pattern against launch/growth governance, prototype/data/access governance, and
+note-to-deliverable delivery governance. The lane remains in Review until Toni
+accepts the proof passes.
 
 The Practice Intelligence Control Plane is the V0 operating layer for broad
 session rehydration and input routing. It uses
