@@ -10,6 +10,46 @@ review_status: draft
 Use this log after meaningful Practice OS changes so backlog movement is
 deliberate and visible.
 
+## 2026-05-16: Cam AI Operating Loop Proof Pass
+
+Source:
+
+- `practice-os/templates/ai-operating-loop-readiness-review.md`
+- `practice-os/steward/2026-05-16-cam-ai-operating-loop-readiness.md`
+- Private Cam AI operating-loop readiness review in ignored `engagements/`
+- Existing Cam active workflow spine, source index, prototype scope, data/IP,
+  repository plan, and Ridgewell private-repo guardrail artifacts
+
+Change:
+
+- Applied the AI Operating Loop Readiness Review to Cam as the second private
+  proof pass.
+- Kept client-specific facts private in ignored `engagements/`.
+- Captured only the sanitized operating learning in tracked DTP.
+- Confirmed the pattern is useful as a prototype/data/access review for
+  mock-data prototype refinement, safe artifact intake, valuation wording,
+  verification claims, repo access, live-data gates, and public-proof gates.
+
+Priority impact:
+
+1. The AI Governance Operating Loop lane now has two private proof passes:
+   Greg for launch/growth governance and Cam for prototype/data/access
+   governance.
+2. The lane remains in Review; two private proof passes are still not enough
+   for public copy, compliance positioning, runtime work, connector setup,
+   FAOS, source-pack automation, or autonomy expansion.
+3. The next proof candidate should be DTP delivery, or Toni should review the
+   Greg/Cam proof passes before a reusable checklist, proposal section, offer
+   language, or implementation lane is promoted.
+
+Next review trigger:
+
+- Cameron sends safe concept artifacts, color references, mockups, or Claude
+  output.
+- Toni refines the private Ridgewell prototype.
+- Repo access, live data, public proof, or engagement/IP terms are requested.
+- Apply the same readiness review to DTP delivery.
+
 ## 2026-05-16: Greg AI Operating Loop Proof Pass
 
 Source:
